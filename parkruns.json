@@ -1,0 +1,19 @@
+{
+    "parkruns": [
+        {
+            "coords": [51.5074, -0.1278],
+            "name": "London Parkrun",
+            "description": "A popular parkrun in the heart of London."
+        },
+        {
+            "coords": [53.483959, -2.244644],
+            "name": "Manchester Parkrun",
+            "description": "Join the fun at Manchester's local parkrun."
+        },
+        {
+            "coords": [55.953251, -3.188267],
+            "name": "Edinburgh Parkrun",
+            "description": "Scenic parkrun through the historic city of Edinburgh."
+        }
+    ]
+}
