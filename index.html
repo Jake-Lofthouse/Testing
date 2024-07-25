@@ -64,12 +64,19 @@
             .then(response => response.json())
             .then(data => {
                 data.parkruns.forEach(function(parkrun) {
+                    var parkrunName = parkrun.name.replace(/\s+/g, '').toLowerCase();
+                    var popupContent = `
+                        <b>${parkrun.name}</b><br>
+                        <a href="https://www.parkrun.org.uk/${parkrunName}/course/" target="_blank">View Course</a><br>
+                        <a href="https://www.parkrun.org.uk/${parkrunName}/futureroster/" target="_blank">View Volunteer Roster</a>
+                    `;
                     L.marker(parkrun.coords, {icon: greenIcon})
                         .addTo(map)
-                        .bindPopup(`<b>${parkrun.name}</b><br>${parkrun.description}`);
+                        .bindPopup(popupContent);
                 });
             })
             .catch(err => console.error(err));
     </script>
 </body>
 </html>
+
