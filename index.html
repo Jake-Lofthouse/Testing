@@ -94,11 +94,11 @@
 <body>
     <div class="controls">
         <label>
-            <input type="checkbox" id="fiveKCheckbox">
+            <input type="checkbox" id="fiveKCheckbox" checked>
             <span>5k</span>
         </label>
         <label>
-            <input type="checkbox" id="juniorCheckbox">
+            <input type="checkbox" id="juniorCheckbox" checked>
             <span>Junior</span>
         </label>
     </div>
@@ -193,19 +193,6 @@
             alert(e.message);
         }
 
-        function saveCheckboxState() {
-            localStorage.setItem('fiveKCheckbox', document.getElementById('fiveKCheckbox').checked);
-            localStorage.setItem('juniorCheckbox', document.getElementById('juniorCheckbox').checked);
-        }
-
-        function loadCheckboxState() {
-            var fiveKChecked = localStorage.getItem('fiveKCheckbox') === 'true';
-            var juniorChecked = localStorage.getItem('juniorCheckbox') === 'true';
-            document.getElementById('fiveKCheckbox').checked = fiveKChecked;
-            document.getElementById('juniorCheckbox').checked = juniorChecked;
-            updateMapMarkers(); // Update markers based on saved state
-        }
-
         map.on('locationfound', onLocationFound);
         map.on('locationerror', onLocationError);
 
@@ -215,16 +202,10 @@
             .then(response => response.json())
             .then(jsonData => {
                 data = jsonData;
-                loadCheckboxState(); // Load checkbox state on page load
+                updateMapMarkers();
                 
-                document.getElementById('juniorCheckbox').addEventListener('change', () => {
-                    updateMapMarkers();
-                    saveCheckboxState(); // Save state when changed
-                });
-                document.getElementById('fiveKCheckbox').addEventListener('change', () => {
-                    updateMapMarkers();
-                    saveCheckboxState(); // Save state when changed
-                });
+                document.getElementById('juniorCheckbox').addEventListener('change', updateMapMarkers);
+                document.getElementById('fiveKCheckbox').addEventListener('change', updateMapMarkers);
             })
             .catch(err => console.error('Error fetching GeoJSON:', err));
     </script>
