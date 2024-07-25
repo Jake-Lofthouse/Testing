@@ -75,8 +75,16 @@
             maxZoom: 19
         }).addTo(map);
 
-        var greenIcon = L.icon({
-            iconUrl: 'https://cdn-icons-png.flaticon.com/512/684/684908.png',
+        // Define custom icons for junior and 5k parkruns
+        var juniorIcon = L.icon({
+            iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/1.png', // Replace with URL to your custom junior icon
+            iconSize: [38, 38],
+            iconAnchor: [19, 38],
+            popupAnchor: [0, -38]
+        });
+
+        var fiveKIcon = L.icon({
+            iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/2.png', // Replace with URL to your custom 5k icon
             iconSize: [38, 38],
             iconAnchor: [19, 38],
             popupAnchor: [0, -38]
@@ -124,7 +132,8 @@
                             <a href="https://www.parkrun.org.uk/${eventname}/futureroster/" target="_blank">View Volunteer Roster</a>
                         `;
 
-                        var marker = L.marker([coordinates[1], coordinates[0]], {icon: greenIcon})
+                        var markerIcon = isJunior ? juniorIcon : fiveKIcon;
+                        var marker = L.marker([coordinates[1], coordinates[0]], {icon: markerIcon})
                             .addTo(map)
                             .bindPopup(popupContent);
 
@@ -148,4 +157,3 @@
     </script>
 </body>
 </html>
-
