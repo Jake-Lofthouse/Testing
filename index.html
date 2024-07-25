@@ -6,6 +6,7 @@
     <title>Parkrun Map</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
     <style>
         html, body {
             height: 100%;
@@ -104,6 +105,7 @@
     </div>
     <div id="map"></div>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
     <script>
         var map = L.map('map', {
             center: [51.505, -0.09],
@@ -134,12 +136,11 @@
             popupAnchor: [0, -38]
         });
 
-        var markers = [];
+        var markers = L.markerClusterGroup(); // Initialize marker cluster group
         var data = {}; // Store fetched data here
 
         function updateMapMarkers() {
-            markers.forEach(marker => map.removeLayer(marker));
-            markers = [];
+            markers.clearLayers(); // Clear existing markers
 
             if (!data.events) return;
 
@@ -165,13 +166,14 @@
 
                         var markerIcon = isJunior ? juniorIcon : fiveKIcon;
                         var marker = L.marker([coordinates[1], coordinates[0]], {icon: markerIcon})
-                            .addTo(map)
                             .bindPopup(popupContent);
-                            
-                        markers.push(marker);
+
+                        markers.addLayer(marker);
                     }
                 }
             });
+
+            map.addLayer(markers); // Add marker clusters to the map
         }
 
         function openHotelMap(lat, lon) {
