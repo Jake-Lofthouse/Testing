@@ -90,6 +90,48 @@
         .leaflet-control-attribution {
             display: none; /* Hide the default Leaflet attribution */
         }
+        /* Styles for the search icon and input box */
+        #search-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+        #search-icon {
+            font-size: 24px;
+            color: #333;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        #search-input-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+        }
+        #search-input {
+            width: 0;
+            opacity: 0;
+            transition: width 0.3s ease, opacity 0.3s ease;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #search-input.show {
+            width: 200px;
+            opacity: 1;
+        }
+        #clear-btn {
+            display: none;
+            margin-left: 10px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #333;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
@@ -104,6 +146,13 @@
         </label>
     </div>
     <div id="map"></div>
+    <div id="search-container">
+        <i id="search-icon" class="fas fa-search"></i>
+        <div id="search-input-container">
+            <input type="text" id="search-input" placeholder="Search Parkrun">
+            <button id="clear-btn"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
     <script>
@@ -210,6 +259,52 @@
                 document.getElementById('fiveKCheckbox').addEventListener('change', updateMapMarkers);
             })
             .catch(err => console.error('Error fetching GeoJSON:', err));
+
+        // Search functionality
+        document.getElementById('search-icon').addEventListener('click', function() {
+            var input = document.getElementById('search-input');
+            var clearBtn = document.getElementById('clear-btn');
+            input.classList.toggle('show');
+            clearBtn.style.display = input.classList.contains('show') ? 'block' : 'none';
+            input.focus();
+        });
+
+        document.getElementById('clear-btn').addEventListener('click', function() {
+            var input = document.getElementById('search-input');
+            input.value = '';
+            input.classList.remove('show');
+            this.style.display = 'none';
+            updateMapMarkers(); // Reset map view
+        });
+
+        document.getElementById('search-input').addEventListener('input', function() {
+            var searchValue = this.value.toLowerCase();
+            markers.clearLayers(); // Clear all markers
+            if (searchValue) {
+                data.events.features.forEach(function(feature) {
+                    if (feature.geometry.type === 'Point') {
+                        var eventLongName = feature.properties.EventLongName.toLowerCase();
+                        if (eventLongName.includes(searchValue)) {
+                            var coordinates = feature.geometry.coordinates;
+                            var popupContent = `
+                                <div>
+                                    <div class="popup-title">${feature.properties.EventLongName}</div>
+                                    <a href="https://www.parkrun.org.uk/${feature.properties.eventname}/course/" target="_blank" class="course-btn">Course</a><br>
+                                    <a href="https://www.parkrun.org.uk/${feature.properties.eventname}/futureroster/" target="_blank" class="volunteer-btn">Volunteer</a><br>
+                                    <button class="hotel-btn" onclick="openHotelMap(${coordinates[1]}, ${coordinates[0]})">Hotels</button>
+                                </div>
+                            `;
+                            var marker = L.marker([coordinates[1], coordinates[0]], {icon: feature.properties.EventLongName.toLowerCase().includes('junior') ? juniorIcon : fiveKIcon})
+                                .bindPopup(popupContent);
+                            markers.addLayer(marker);
+                        }
+                    }
+                });
+                map.addLayer(markers); // Add the filtered markers
+            } else {
+                updateMapMarkers(); // Reset markers if search input is empty
+            }
+        });
     </script>
 </body>
 </html>
