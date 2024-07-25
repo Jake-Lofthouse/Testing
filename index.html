@@ -25,7 +25,14 @@
         // Initialize the map and set its view to a default location
         var map = L.map('map', {
             center: [51.505, -0.09],
-            zoom: 2
+            zoom: 2,
+            minZoom: 2, // Lock the minimum zoom level
+            maxZoom: 19, // Set the maximum zoom level
+            maxBounds: [
+                [-90, -180],
+                [90, 180]
+            ],
+            maxBoundsViscosity: 1.0
         });
 
         // Load and display tile layers on the map with a more modern look
@@ -79,4 +86,3 @@
     </script>
 </body>
 </html>
-
