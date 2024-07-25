@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Parkrun Map</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
     <style>
         html, body {
             height: 100%;
@@ -40,9 +41,81 @@
             margin-right: 10px;
             width: 20px;
             height: 20px;
+            opacity: 0.7; /* Fade checkbox */
+            transition: opacity 0.3s ease; /* Smooth fade transition */
         }
-        .controls label span {
-            margin-left: 5px;
+        .controls input[type="checkbox"]:checked {
+            opacity: 1; /* Full opacity when checked */
+        }
+        .hotel-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            background-color: white;
+            border: 1px solid #ccc;
+            z-index: 2000;
+            display: none;
+            flex-direction: column;
+            overflow: hidden; /* Prevent content overflow */
+        }
+        .hotel-popup iframe {
+            width: 100%;
+            height: calc(100% - 50px); /* Adjust height to account for close button */
+            border: none;
+        }
+        .hotel-popup .close-btn {
+            background-color: #6200ea;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            text-align: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; /* Matching font */
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box; /* Include padding in width */
+        }
+        .hotel-btn, .course-btn, .volunteer-btn {
+            color: white;
+            padding: 12px 20px; /* Increased padding for better appearance */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px; /* Larger font size */
+            transition: background-color 0.3s ease;
+            display: block;
+            width: 100%; /* Full width of parent */
+            max-width: 300px; /* Max width for buttons */
+            margin: 0 auto; /* Center align */
+            text-align: center;
+            text-decoration: none; /* Remove underline */
+            box-sizing: border-box; /* Include padding in width */
+        }
+        .hotel-btn {
+            background-color: #6200ea;
+        }
+        .hotel-btn:hover {
+            background-color: #4500b0;
+        }
+        .course-btn {
+            background-color: #28a745;
+        }
+        .course-btn:hover {
+            background-color: #218838;
+        }
+        .volunteer-btn {
+            background-color: #e83e8c; /* Pink color */
+        }
+        .volunteer-btn:hover {
+            background-color: #d6336c;
+        }
+        .popup-title {
+            font-size: 20px; /* Slightly larger font size for Parkrun name */
+            font-weight: bold;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -58,11 +131,15 @@
         </label>
     </div>
     <div id="map"></div>
+    <div class="hotel-popup" id="hotelPopup">
+        <button class="close-btn" onclick="closeHotelPopup()">Close</button>
+        <iframe id="hotelIframe" src=""></iframe>
+    </div>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script>
         var map = L.map('map', {
             center: [51.505, -0.09],
-            zoom: 2,
+            zoom: 13, // Set a reasonable initial zoom level
             minZoom: 2,
             maxZoom: 19,
             maxBounds: L.latLngBounds(L.latLng(-60, -180), L.latLng(85, 180)),
@@ -75,36 +152,19 @@
             maxZoom: 19
         }).addTo(map);
 
-        // Define custom icons for junior and 5k parkruns
         var juniorIcon = L.icon({
-            iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/1.png', // Replace with URL to your custom junior icon
+            iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/1.png',
             iconSize: [38, 38],
             iconAnchor: [19, 38],
             popupAnchor: [0, -38]
         });
 
         var fiveKIcon = L.icon({
-            iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/2.png', // Replace with URL to your custom 5k icon
+            iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/2.png',
             iconSize: [38, 38],
             iconAnchor: [19, 38],
             popupAnchor: [0, -38]
         });
-
-        map.locate({setView: true, maxZoom: 12});
-
-        function onLocationFound(e) {
-            var radius = e.accuracy / 2;
-            L.marker(e.latlng).addTo(map)
-                .bindPopup("Your location").openPopup();
-            L.circle(e.latlng, {radius: radius}).addTo(map);
-        }
-
-        function onLocationError(e) {
-            alert(e.message);
-        }
-
-        map.on('locationfound', onLocationFound);
-        map.on('locationerror', onLocationError);
 
         var markers = [];
         var data = {}; // Store fetched data here
@@ -127,21 +187,53 @@
 
                     if (showMarker) {
                         var popupContent = `
-                            <b>${eventLongName}</b><br>
-                            <a href="https://www.parkrun.org.uk/${eventname}/course/" target="_blank">View Course</a><br>
-                            <a href="https://www.parkrun.org.uk/${eventname}/futureroster/" target="_blank">View Volunteer Roster</a>
+                            <div>
+                                <div class="popup-title">${eventLongName}</div>
+                                <a href="https://www.parkrun.org.uk/${eventname}/course/" target="_blank" class="course-btn">Course</a><br>
+                                <a href="https://www.parkrun.org.uk/${eventname}/futureroster/" target="_blank" class="volunteer-btn">Volunteer</a><br>
+                                <button class="hotel-btn" onclick="showHotels(${coordinates[1]}, ${coordinates[0]})">Hotels</button>
+                            </div>
                         `;
 
                         var markerIcon = isJunior ? juniorIcon : fiveKIcon;
                         var marker = L.marker([coordinates[1], coordinates[0]], {icon: markerIcon})
                             .addTo(map)
                             .bindPopup(popupContent);
-
+                            
                         markers.push(marker);
                     }
                 }
             });
         }
+
+        function showHotels(lat, lon) {
+            var hotelIframe = document.getElementById('hotelIframe');
+            hotelIframe.src = `https://www.google.com/maps/search/hotels/@${lat},${lon},15z`;
+            document.getElementById('hotelPopup').style.display = 'flex';
+        }
+
+        function closeHotelPopup() {
+            document.getElementById('hotelPopup').style.display = 'none';
+        }
+
+        function onLocationFound(e) {
+            var radius = e.accuracy / 2;
+            L.marker(e.latlng).addTo(map)
+                .bindPopup("Your location").openPopup();
+            L.circle(e.latlng, {radius: radius}).addTo(map);
+
+            // Zoom into user's location
+            map.setView(e.latlng, 13);
+        }
+
+        function onLocationError(e) {
+            alert(e.message);
+        }
+
+        map.on('locationfound', onLocationFound);
+        map.on('locationerror', onLocationError);
+
+        map.locate({setView: true, maxZoom: 13}); // Set initial view to user's location
 
         fetch('https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/parkruns.json')
             .then(response => response.json())
@@ -149,7 +241,6 @@
                 data = jsonData;
                 updateMapMarkers();
                 
-                // Add event listeners for checkboxes
                 document.getElementById('juniorCheckbox').addEventListener('change', updateMapMarkers);
                 document.getElementById('fiveKCheckbox').addEventListener('change', updateMapMarkers);
             })
