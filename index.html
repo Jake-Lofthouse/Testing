@@ -11,47 +11,77 @@
             margin: 0;
             padding: 0;
             overflow: hidden; /* Disable scrolling */
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; /* Apple SF font */
         }
         #map {
-            height: 100vh;
+            height: calc(100vh - 60px); /* Leave space for controls */
             width: 100vw;
+        }
+        .controls {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .controls label {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+        }
+        .controls input[type="checkbox"] {
+            accent-color: #007bff; /* Custom color for checkboxes */
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+        }
+        .controls label span {
+            margin-left: 5px;
         }
     </style>
 </head>
 <body>
+    <div class="controls">
+        <label>
+            <input type="checkbox" id="juniorCheckbox" checked>
+            <span>Junior Parkruns</span>
+        </label>
+        <label>
+            <input type="checkbox" id="fiveKCheckbox" checked>
+            <span>5k Parkruns</span>
+        </label>
+    </div>
     <div id="map"></div>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script>
-        // Define the map boundaries to exclude Antarctica and limit panning
-        var southWest = L.latLng(-60, -180);
-        var northEast = L.latLng(85, 180);
-        var bounds = L.latLngBounds(southWest, northEast);
-
-        // Initialize the map and set its view to a default location
         var map = L.map('map', {
             center: [51.505, -0.09],
             zoom: 2,
-            minZoom: 2, // Lock the minimum zoom level
-            maxZoom: 19, // Set the maximum zoom level
-            maxBounds: bounds,
-            maxBoundsViscosity: 1.0
+            minZoom: 2,
+            maxZoom: 19,
+            maxBounds: L.latLngBounds(L.latLng(-60, -180), L.latLng(85, 180)),
+            maxBoundsViscosity: 1.0,
+            zoomControl: false // Disable zoom controls
         });
 
-        // Load and display tile layers on the map with a more modern look
         L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
             attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a>',
             maxZoom: 19
         }).addTo(map);
 
-        // Custom green pointer icon
         var greenIcon = L.icon({
             iconUrl: 'https://cdn-icons-png.flaticon.com/512/684/684908.png',
-            iconSize: [38, 38], // size of the icon
-            iconAnchor: [19, 38], // point of the icon which will correspond to marker's location
-            popupAnchor: [0, -38] // point from which the popup should open relative to the iconAnchor
+            iconSize: [38, 38],
+            iconAnchor: [19, 38],
+            popupAnchor: [0, -38]
         });
 
-        // Show user's location
         map.locate({setView: true, maxZoom: 12});
 
         function onLocationFound(e) {
@@ -68,31 +98,54 @@
         map.on('locationfound', onLocationFound);
         map.on('locationerror', onLocationError);
 
-        // Load parkrun locations from GeoJSON file
-        fetch('https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/parkruns.json') // Update this path to your actual GeoJSON file URL
-            .then(response => response.json())
-            .then(data => {
-                // Process each feature in the GeoJSON
-                data.events.features.forEach(function(feature) {
-                    if (feature.geometry.type === 'Point') {
-                        var coordinates = feature.geometry.coordinates;
-                        var eventname = feature.properties.eventname;
-                        var eventLongName = feature.properties.EventLongName;
-                        var eventLocation = feature.properties.EventLocation;
+        var markers = [];
+        var data = {}; // Store fetched data here
 
+        function updateMapMarkers() {
+            markers.forEach(marker => map.removeLayer(marker));
+            markers = [];
+
+            if (!data.events) return;
+
+            data.events.features.forEach(function(feature) {
+                if (feature.geometry.type === 'Point') {
+                    var coordinates = feature.geometry.coordinates;
+                    var eventname = feature.properties.eventname;
+                    var eventLongName = feature.properties.EventLongName;
+
+                    var isJunior = eventLongName.toLowerCase().includes('junior');
+                    var showMarker = (isJunior && document.getElementById('juniorCheckbox').checked) ||
+                                     (!isJunior && document.getElementById('fiveKCheckbox').checked);
+
+                    if (showMarker) {
                         var popupContent = `
                             <b>${eventLongName}</b><br>
                             <a href="https://www.parkrun.org.uk/${eventname}/course/" target="_blank">View Course</a><br>
                             <a href="https://www.parkrun.org.uk/${eventname}/futureroster/" target="_blank">View Volunteer Roster</a>
                         `;
 
-                        L.marker([coordinates[1], coordinates[0]], {icon: greenIcon})
+                        var marker = L.marker([coordinates[1], coordinates[0]], {icon: greenIcon})
                             .addTo(map)
                             .bindPopup(popupContent);
+
+                        markers.push(marker);
                     }
-                });
+                }
+            });
+        }
+
+        fetch('https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/parkruns.json')
+            .then(response => response.json())
+            .then(jsonData => {
+                data = jsonData;
+                updateMapMarkers();
+                
+                // Add event listeners for checkboxes
+                document.getElementById('juniorCheckbox').addEventListener('change', updateMapMarkers);
+                document.getElementById('fiveKCheckbox').addEventListener('change', updateMapMarkers);
             })
             .catch(err => console.error('Error fetching GeoJSON:', err));
     </script>
 </body>
 </html>
+
