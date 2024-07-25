@@ -15,8 +15,8 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; /* Apple SF font */
         }
         #map {
-            height: calc(100vh - 60px); /* Leave space for controls */
-            width: 100vw;
+            height: 100vh; /* Full viewport height */
+            width: 100vw; /* Full viewport width */
         }
         .controls {
             background-color: white;
@@ -85,6 +85,9 @@
             font-size: 20px; /* Slightly larger font size for Parkrun name */
             font-weight: bold;
             margin-bottom: 10px;
+        }
+        .leaflet-control-attribution {
+            display: none; /* Hide the default Leaflet attribution */
         }
     </style>
 </head>
@@ -172,7 +175,7 @@
         }
 
         function openHotelMap(lat, lon) {
-            // Open Google Maps in a new tab or window
+            // Open Google Maps in a new tab or window with hotels search
             window.open(`https://www.google.com/maps/search/hotels/@${lat},${lon},15z`, '_blank');
         }
 
