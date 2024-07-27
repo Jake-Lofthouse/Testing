@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Parkrun Map</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
     <style>
         html, body {
             height: 100%;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Disable scrolling */
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; /* Apple SF font */
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
         }
         #map {
-            height: 100vh; /* Full viewport height */
-            width: 100vw; /* Full viewport width */
+            height: 100vh;
+            width: 100vw;
         }
         .controls {
             background-color: white;
@@ -38,31 +38,31 @@
             font-size: 16px;
         }
         .controls input[type="checkbox"] {
-            accent-color: #007bff; /* Custom color for checkboxes */
+            accent-color: #007bff;
             margin-right: 10px;
             width: 20px;
             height: 20px;
-            opacity: 0.7; /* Fade checkbox */
-            transition: opacity 0.3s ease; /* Smooth fade transition */
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
         }
         .controls input[type="checkbox"]:checked {
-            opacity: 1; /* Full opacity when checked */
+            opacity: 1;
         }
         .hotel-btn, .course-btn, .volunteer-btn {
             color: white;
-            padding: 12px 20px; /* Increased padding for better appearance */
+            padding: 12px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 16px; /* Larger font size */
+            font-size: 16px;
             transition: background-color 0.3s ease;
             display: block;
-            width: 100%; /* Full width of parent */
-            max-width: 300px; /* Max width for buttons */
-            margin: 0 auto; /* Center align */
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
             text-align: center;
-            text-decoration: none; /* Remove underline */
-            box-sizing: border-box; /* Include padding in width */
+            text-decoration: none;
+            box-sizing: border-box;
         }
         .hotel-btn {
             background-color: #6200ea;
@@ -77,20 +77,19 @@
             background-color: #218838;
         }
         .volunteer-btn {
-            background-color: #e83e8c; /* Pink color */
+            background-color: #e83e8c;
         }
         .volunteer-btn:hover {
             background-color: #d6336c;
         }
         .popup-title {
-            font-size: 20px; /* Slightly larger font size for Parkrun name */
+            font-size: 20px;
             font-weight: bold;
             margin-bottom: 10px;
         }
         .leaflet-control-attribution {
-            display: none; /* Hide the default Leaflet attribution */
+            display: none;
         }
-        /* Styles for the search icon and input box */
         #search-container {
             position: absolute;
             top: 10px;
@@ -120,8 +119,8 @@
             border-radius: 5px;
         }
         #search-input.show {
-            width: 40vw; /* Responsive width */
-            max-width: 300px; /* Maximum width */
+            width: 40vw;
+            max-width: 300px;
             opacity: 1;
         }
         #clear-btn {
@@ -132,6 +131,35 @@
             cursor: pointer;
             color: #333;
             font-size: 16px;
+        }
+        #hotel-widget-container {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            right: 10%;
+            bottom: 10%;
+            z-index: 1000;
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            overflow: auto;
+            display: none;
+        }
+        #hotel-search-widget {
+            height: 100%;
+            width: 100%;
+        }
+        #close-hotel-widget {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1001;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #333;
         }
     </style>
 </head>
@@ -154,17 +182,25 @@
             <button id="clear-btn"><i class="fas fa-times"></i></button>
         </div>
     </div>
+    <div id="hotel-widget-container">
+        <button id="close-hotel-widget">X</button>
+        <div data-skyscanner-widget="HotelSearchWidget"
+             data-locale="en-GB"
+             data-market="UK"
+             data-currency="GBP"
+             data-hide-powered-by="true"
+             data-button-colour="#58993D"
+             data-web-only-redirects="true"
+             id="hotel-search-widget"></div>
+    </div>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+    <script src="https://widgets.skyscanner.net/widget-server/js/loader.js" async></script>
     <script>
         var map = L.map('map', {
             center: [51.505, -0.09],
-            zoom: 13, // Set a reasonable initial zoom level
-            minZoom: 2,
-            maxZoom: 19,
-            maxBounds: L.latLngBounds(L.latLng(-60, -180), L.latLng(85, 180)),
-            maxBoundsViscosity: 1.0,
-            zoomControl: false // Disable zoom controls
+            zoom: 13,
+            zoomControl: false
         });
 
         L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
@@ -186,11 +222,11 @@
             popupAnchor: [0, -38]
         });
 
-        var markers = L.markerClusterGroup(); // Initialize marker cluster group
-        var data = {}; // Store fetched data here
+        var markers = L.markerClusterGroup();
+        var data = {};
 
         function updateMapMarkers() {
-            markers.clearLayers(); // Clear existing markers
+            markers.clearLayers();
 
             if (!data.events) return;
 
@@ -210,7 +246,7 @@
                                 <div class="popup-title">${eventLongName}</div>
                                 <a href="https://www.parkrun.org.uk/${eventname}/course/" target="_blank" class="course-btn">Course</a><br>
                                 <a href="https://www.parkrun.org.uk/${eventname}/futureroster/" target="_blank" class="volunteer-btn">Volunteer</a><br>
-                                <button class="hotel-btn" onclick="openHotelMap(${coordinates[1]}, ${coordinates[0]})">Hotels</button>
+                                <button class="hotel-btn" onclick="openHotelMap('${eventLongName}')">Hotels</button>
                             </div>
                         `;
 
@@ -223,12 +259,21 @@
                 }
             });
 
-            map.addLayer(markers); // Add marker clusters to the map
+            map.addLayer(markers);
         }
 
-        function openHotelMap(lat, lon) {
-            // Open Google Maps in a new tab or window with hotels search
-            window.open(`https://www.google.com/maps/search/hotels/@${lat},${lon},15z`, '_blank');
+        function openHotelMap(eventLongName) {
+            const hotelWidget = document.getElementById('hotel-search-widget');
+            hotelWidget.setAttribute('data-destination-name', eventLongName);
+            const hotelWidgetContainer = document.getElementById('hotel-widget-container');
+            hotelWidgetContainer.style.display = 'block';
+
+            const hotelInput = hotelWidget.querySelector('input[name="destinationName"]');
+            if (hotelInput) {
+                hotelInput.value = eventLongName;
+            }
+
+            skyscanner.load();
         }
 
         function onLocationFound(e) {
@@ -237,7 +282,6 @@
                 .bindPopup("Your location").openPopup();
             L.circle(e.latlng, {radius: radius}).addTo(map);
 
-            // Zoom into user's location
             map.setView(e.latlng, 13);
         }
 
@@ -248,20 +292,19 @@
         map.on('locationfound', onLocationFound);
         map.on('locationerror', onLocationError);
 
-        map.locate({setView: true, maxZoom: 13}); // Set initial view to user's location
+        map.locate({setView: true, maxZoom: 13});
 
         fetch('https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/parkruns.json')
             .then(response => response.json())
             .then(jsonData => {
                 data = jsonData;
                 updateMapMarkers();
-                
+
                 document.getElementById('juniorCheckbox').addEventListener('change', updateMapMarkers);
                 document.getElementById('fiveKCheckbox').addEventListener('change', updateMapMarkers);
             })
             .catch(err => console.error('Error fetching GeoJSON:', err));
 
-        // Search functionality
         document.getElementById('search-icon').addEventListener('click', function() {
             var input = document.getElementById('search-input');
             var clearBtn = document.getElementById('clear-btn');
@@ -275,12 +318,12 @@
             input.value = '';
             input.classList.remove('show');
             this.style.display = 'none';
-            updateMapMarkers(); // Reset map view
+            updateMapMarkers();
         });
 
         document.getElementById('search-input').addEventListener('input', function() {
             var searchValue = this.value.toLowerCase();
-            markers.clearLayers(); // Clear all markers
+            markers.clearLayers();
             if (searchValue) {
                 data.events.features.forEach(function(feature) {
                     if (feature.geometry.type === 'Point') {
@@ -292,7 +335,7 @@
                                     <div class="popup-title">${feature.properties.EventLongName}</div>
                                     <a href="https://www.parkrun.org.uk/${feature.properties.eventname}/course/" target="_blank" class="course-btn">Course</a><br>
                                     <a href="https://www.parkrun.org.uk/${feature.properties.eventname}/futureroster/" target="_blank" class="volunteer-btn">Volunteer</a><br>
-                                    <button class="hotel-btn" onclick="openHotelMap(${coordinates[1]}, ${coordinates[0]})">Hotels</button>
+                                    <button class="hotel-btn" onclick="openHotelMap('${feature.properties.EventLongName}')">Hotels</button>
                                 </div>
                             `;
                             var marker = L.marker([coordinates[1], coordinates[0]], {icon: feature.properties.EventLongName.toLowerCase().includes('junior') ? juniorIcon : fiveKIcon})
@@ -301,10 +344,15 @@
                         }
                     }
                 });
-                map.addLayer(markers); // Add the filtered markers
+                map.addLayer(markers);
             } else {
-                updateMapMarkers(); // Reset markers if search input is empty
+                updateMapMarkers();
             }
+        });
+
+        document.getElementById('close-hotel-widget').addEventListener('click', function() {
+            const hotelWidgetContainer = document.getElementById('hotel-widget-container');
+            hotelWidgetContainer.style.display = 'none';
         });
     </script>
 </body>
