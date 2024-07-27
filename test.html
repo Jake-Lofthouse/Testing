@@ -198,34 +198,39 @@
             color: #333;
             font-size: 16px;
         }
-        #hotel-widget-container {
-            position: absolute;
-            top: 10%;
-            left: 10%;
-            right: 10%;
-            bottom: 10%;
-            z-index: 1000;
-            background-color: white;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-            overflow: auto;
-            display: none;
-        }
+#hotel-widget-container {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
+    z-index: 1000; /* Ensure it's above the close button */
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: auto;
+    display: none;
+}
         #hotel-search-widget {
             height: 100%;
             width: 100%;
         }
-        #close-hotel-widget {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            z-index: 1001;
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #333;
+
+
+#close-hotel-widget {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 999; /* Lower than hotel-widget-container */
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+    display: none; /* Hidden by default */
+}
+olor: #333;
         }
         
         .map-overlay {
@@ -383,7 +388,8 @@ function openHotelMap(eventLongName) {
     fiveKCheckbox.disabled = true;
     juniorCheckbox.disabled = true;
 
-    closeHotelWidget.style.display = 'block'; // Show close button when hotel widget is open
+    closeHotelWidget.style.display = 'block'; // Show the close button
+    closeHotelWidget.style.zIndex = '1000';  // Ensure it's positioned correctly in the stack
 
     const hotelInput = hotelWidget.querySelector('input[name="destinationName"]');
     if (hotelInput) {
@@ -416,10 +422,12 @@ function closeHotelMap() {
     fiveKCheckbox.disabled = false;
     juniorCheckbox.disabled = false;
 
-    closeHotelWidget.style.display = 'none'; // Hide close button when hotel widget is closed
+    closeHotelWidget.style.display = 'none'; // Hide the close button
+    closeHotelWidget.style.zIndex = '999';  // Ensure it's positioned correctly in the stack
 }
 
 document.getElementById('close-hotel-widget').addEventListener('click', closeHotelMap);
+
 
 
         function onLocationFound(e) {
