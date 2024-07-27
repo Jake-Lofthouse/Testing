@@ -213,6 +213,11 @@
     <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
     <script src="https://widgets.skyscanner.net/widget-server/js/loader.js" async></script>
     <script>
+    
+        function openUrl(url) {
+            window.open(url, '_blank');
+        }
+        
         var map = L.map('map', {
             center: [51.505, -0.09],
             zoom: 13,
@@ -260,8 +265,8 @@
                         var popupContent = `
                             <div>
                                 <div class="popup-title">${eventLongName}</div>
-                                <a href="https://www.parkrun.org.uk/${eventname}/course/" target="_blank" class="course-btn">Course</a><br>
-                                <a href="https://www.parkrun.org.uk/${eventname}/futureroster/" target="_blank" class="volunteer-btn">Volunteer</a><br>
+                                <button class="course-btn" onclick="openUrl('https://www.parkrun.org.uk/${eventname}/course/')">Course</button><br>
+                                <button class="volunteer-btn" onclick="openUrl('https://www.parkrun.org.uk/${eventname}/futureroster/')">Volunteer</button><br>
                                 <button class="hotel-btn" onclick="openHotelMap('${eventLongName}')">Hotels</button>
                             </div>
                         `;
