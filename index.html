@@ -32,6 +32,9 @@
             flex-direction: column;
             gap: 10px;
         }
+        .controls.hidden {
+            display: none;
+        }
         .controls label {
             display: flex;
             align-items: center;
@@ -161,19 +164,20 @@
             font-size: 20px;
             color: #333;
         }
+        .map-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.5);
+            z-index: 900;
+            display: none;
+            cursor: not-allowed;
+        }
     </style>
 </head>
 <body>
-    <div class="controls">
-        <label>
-            <input type="checkbox" id="fiveKCheckbox" checked>
-            <span>5k</span>
-        </label>
-        <label>
-            <input type="checkbox" id="juniorCheckbox" checked>
-            <span>Junior</span>
-        </label>
-    </div>
     <div id="map"></div>
     <div id="search-container">
         <i id="search-icon" class="fas fa-search"></i>
@@ -192,6 +196,17 @@
              data-button-colour="#58993D"
              data-web-only-redirects="true"
              id="hotel-search-widget"></div>
+    </div>
+    <div id="map-overlay" class="map-overlay"></div>
+    <div class="controls">
+        <label>
+            <input type="checkbox" id="fiveKCheckbox" checked>
+            <span>5k</span>
+        </label>
+        <label>
+            <input type="checkbox" id="juniorCheckbox" checked>
+            <span>Junior</span>
+        </label>
     </div>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
@@ -249,7 +264,6 @@
                                 <button class="hotel-btn" onclick="openHotelMap('${eventLongName}')">Hotels</button>
                             </div>
                         `;
-
                         var markerIcon = isJunior ? juniorIcon : fiveKIcon;
                         var marker = L.marker([coordinates[1], coordinates[0]], {icon: markerIcon})
                             .bindPopup(popupContent);
@@ -266,7 +280,28 @@
             const hotelWidget = document.getElementById('hotel-search-widget');
             hotelWidget.setAttribute('data-destination-name', eventLongName);
             const hotelWidgetContainer = document.getElementById('hotel-widget-container');
+            const mapOverlay = document.getElementById('map-overlay');
+            const controls = document.querySelector('.controls');
+            const searchInput = document.getElementById('search-input');
+            const searchIcon = document.getElementById('search-icon');
+            const clearBtn = document.getElementById('clear-btn');
+            const fiveKCheckbox = document.getElementById('fiveKCheckbox');
+            const juniorCheckbox = document.getElementById('juniorCheckbox');
+
             hotelWidgetContainer.style.display = 'block';
+            mapOverlay.style.display = 'block';
+            map.dragging.disable();
+            map.scrollWheelZoom.disable();
+            map.touchZoom.disable();
+            map.doubleClickZoom.disable();
+
+            controls.classList.add('hidden');
+            searchInput.classList.remove('show');
+            searchInput.disabled = true;
+            searchIcon.style.pointerEvents = 'none';
+            clearBtn.style.display = 'none';
+            fiveKCheckbox.disabled = true;
+            juniorCheckbox.disabled = true;
 
             const hotelInput = hotelWidget.querySelector('input[name="destinationName"]');
             if (hotelInput) {
@@ -274,6 +309,29 @@
             }
 
             skyscanner.load();
+        }
+
+        function closeHotelMap() {
+            const hotelWidgetContainer = document.getElementById('hotel-widget-container');
+            const mapOverlay = document.getElementById('map-overlay');
+            const controls = document.querySelector('.controls');
+            const searchInput = document.getElementById('search-input');
+            const searchIcon = document.getElementById('search-icon');
+            const fiveKCheckbox = document.getElementById('fiveKCheckbox');
+            const juniorCheckbox = document.getElementById('juniorCheckbox');
+
+            hotelWidgetContainer.style.display = 'none';
+            mapOverlay.style.display = 'none';
+            map.dragging.enable();
+            map.scrollWheelZoom.enable();
+            map.touchZoom.enable();
+            map.doubleClickZoom.enable();
+
+            controls.classList.remove('hidden');
+            searchInput.disabled = false;
+            searchIcon.style.pointerEvents = 'auto';
+            fiveKCheckbox.disabled = false;
+            juniorCheckbox.disabled = false;
         }
 
         function onLocationFound(e) {
@@ -350,10 +408,7 @@
             }
         });
 
-        document.getElementById('close-hotel-widget').addEventListener('click', function() {
-            const hotelWidgetContainer = document.getElementById('hotel-widget-container');
-            hotelWidgetContainer.style.display = 'none';
-        });
+        document.getElementById('close-hotel-widget').addEventListener('click', closeHotelMap);
     </script>
 </body>
 </html>
