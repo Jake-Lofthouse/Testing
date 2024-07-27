@@ -385,34 +385,36 @@
             updateMapMarkers();
         });
 
-        document.getElementById('search-input').addEventListener('input', function() {
-            var searchValue = this.value.toLowerCase();
-            markers.clearLayers();
-            if (searchValue) {
-                data.events.features.forEach(function(feature) {
-                    if (feature.geometry.type === 'Point') {
-                        var eventLongName = feature.properties.EventLongName.toLowerCase();
-                        if (eventLongName.includes(searchValue)) {
-                            var coordinates = feature.geometry.coordinates;
-                            var popupContent = `
-                                <div>
-                                    <div class="popup-title">${feature.properties.EventLongName}</div>
-                                    <a href="https://www.parkrun.org.uk/${feature.properties.eventname}/course/" target="_blank" class="course-btn">Course</a><br>
-                                    <a href="https://www.parkrun.org.uk/${feature.properties.eventname}/futureroster/" target="_blank" class="volunteer-btn">Volunteer</a><br>
-                                    <button class="hotel-btn" onclick="openHotelMap('${feature.properties.EventLongName}')">Hotels</button>
-                                </div>
-                            `;
-                            var marker = L.marker([coordinates[1], coordinates[0]], {icon: feature.properties.EventLongName.toLowerCase().includes('junior') ? juniorIcon : fiveKIcon})
-                                .bindPopup(popupContent);
-                            markers.addLayer(marker);
-                        }
-                    }
-                });
-                map.addLayer(markers);
-            } else {
-                updateMapMarkers();
+document.getElementById('search-input').addEventListener('input', function() {
+    var searchValue = this.value.toLowerCase();
+    markers.clearLayers();
+    if (searchValue) {
+        data.events.features.forEach(function(feature) {
+            if (feature.geometry.type === 'Point') {
+                var eventLongName = feature.properties.EventLongName.toLowerCase();
+                if (eventLongName.includes(searchValue)) {
+                    var coordinates = feature.geometry.coordinates;
+                    var popupContent = `
+                        <div>
+                            <div class="popup-title">${feature.properties.EventLongName}</div>
+                            <button class="course-btn" onclick="openUrl('https://www.parkrun.org.uk/${feature.properties.eventname}/course/')">Course</button><br>
+                            <button class="volunteer-btn" onclick="openUrl('https://www.parkrun.org.uk/${feature.properties.eventname}/futureroster/')">Volunteer</button><br>
+                            <button class="hotel-btn" onclick="openHotelMap('${feature.properties.EventLongName}')">Hotels</button> 
+                        </div>
+                    `;
+                    var marker = L.marker([coordinates[1], coordinates[0]], {
+                        icon: eventLongName.includes('junior') ? juniorIcon : fiveKIcon
+                    }).bindPopup(popupContent);
+                    markers.addLayer(marker);
+                }
             }
         });
+        map.addLayer(markers);
+    } else {
+        updateMapMarkers();
+    }
+});
+
 
         document.getElementById('close-hotel-widget').addEventListener('click', closeHotelMap);
     </script>
