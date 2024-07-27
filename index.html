@@ -52,7 +52,7 @@
         .controls input[type="checkbox"]:checked {
             opacity: 1;
         }
-        .hotel-btn, .course-btn, .volunteer-btn {
+        .hotel-btn, .course-btn, .volunteer-btn, .direction-btn {
             color: white;
             padding: 12px 20px;
             border: none;
@@ -74,6 +74,14 @@
         .hotel-btn:hover {
             background-color: #4500b0;
         }
+        
+        .direction-btn {
+            background-color: #d90b26;
+        }
+        .direction-btn:hover {
+            background-color: #b71c1c;
+        }
+        
         .course-btn {
             background-color: #28a745;
         }
@@ -267,6 +275,7 @@
                                 <div class="popup-title">${eventLongName}</div>
                                 <button class="course-btn" onclick="openUrl('https://www.parkrun.org.uk/${eventname}/course/')">Course</button><br>
                                 <button class="volunteer-btn" onclick="openUrl('https://www.parkrun.org.uk/${eventname}/futureroster/')">Volunteer</button><br>
+                                <button class="direction-btn" onclick="openDirections(${coordinates[1]}, ${coordinates[0]})">Directions</button><br>
                                 <button class="hotel-btn" onclick="openHotelMap('${eventLongName}')">Hotels</button>
                             </div>
                         `;
@@ -281,6 +290,12 @@
 
             map.addLayer(markers);
         }
+        
+        function openDirections(lat, lon) {
+           const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}`;
+           window.open(url, '_blank');
+       }
+
 
         function openHotelMap(eventLongName) {
             const hotelWidget = document.getElementById('hotel-search-widget');
@@ -399,6 +414,7 @@ document.getElementById('search-input').addEventListener('input', function() {
                             <div class="popup-title">${feature.properties.EventLongName}</div>
                             <button class="course-btn" onclick="openUrl('https://www.parkrun.org.uk/${feature.properties.eventname}/course/')">Course</button><br>
                             <button class="volunteer-btn" onclick="openUrl('https://www.parkrun.org.uk/${feature.properties.eventname}/futureroster/')">Volunteer</button><br>
+                            <button class="direction-btn" onclick="openDirections(${coordinates[1]}, ${coordinates[0]})">Directions</button><br>
                             <button class="hotel-btn" onclick="openHotelMap('${feature.properties.EventLongName}')">Hotels</button> 
                         </div>
                     `;
