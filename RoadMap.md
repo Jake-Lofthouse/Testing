@@ -1,3 +1,0 @@
-- [x] Search Button
-- [ ] Alphabet Search
-- [ ] Cancellation Warning
