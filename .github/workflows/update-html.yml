@@ -1,0 +1,32 @@
+name: Update HTML File
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-html:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Fetch index.html
+        run: |
+          curl -o index.html https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/index.html
+
+      - name: Modify index.html
+        run: |
+          sed -i 's/<input type="checkbox" id="fiveKCheckbox" checked>/<input type="checkbox" id="fiveKCheckbox">/g' index.html
+          sed -i 's/<label>\s*<input type="checkbox" id="fiveKCheckbox" checked>\s*<span>5k<\/span>\s*<\/label>/<label>\n    <input type="checkbox" id="fiveKCheckbox" disabled>\n    <span>5k<\/span>\n<\/label>/g' index.html
+          cp index.html junior.html
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'actions@github.com'
+          git add junior.html
+          git commit -m 'Create junior.html with 5k markers hidden'
+          git push
