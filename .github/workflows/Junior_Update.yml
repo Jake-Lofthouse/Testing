@@ -20,10 +20,9 @@ jobs:
 
       - name: Modify index.html
         run: |
-          # Ensure only junior markers are visible
-          sed -i 's/<input type="checkbox" id="fiveKCheckbox" checked>/<input type="checkbox" id="fiveKCheckbox" disabled>/g' index.html
-          sed -i 's/<input type="checkbox" id="juniorCheckbox" checked>/<input type="checkbox" id="juniorCheckbox" checked>/g' index.html
-          # Create junior.html with updated visibility
+          # Uncheck the 5k checkbox
+          sed -i 's/<input type="checkbox" id="fiveKCheckbox" checked>/<input type="checkbox" id="fiveKCheckbox">/g' index.html
+          # Save the modified file as junior.html
           cp index.html junior.html
 
       - name: Commit and Push Changes
@@ -31,6 +30,5 @@ jobs:
           git config --global user.name 'github-actions'
           git config --global user.email 'actions@github.com'
           git add junior.html
-          git commit -m 'Create junior.html with only junior markers visible'
+          git commit -m 'Create junior.html with 5k markers unchecked'
           git push
-
