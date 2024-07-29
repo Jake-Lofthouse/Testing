@@ -19,8 +19,13 @@ jobs:
 
       - name: Modify index.html
         run: |
-          sed -i 's/<input type="checkbox" id="fiveKCheckbox" checked>/<input type="checkbox" id="fiveKCheckbox">/g' index.html
+          # Replace the checkbox input and its state
+          sed -i 's/<input type="checkbox" id="fiveKCheckbox" checked>/<input type="checkbox" id="fiveKCheckbox" disabled>/g' index.html
           sed -i 's/<label>\s*<input type="checkbox" id="fiveKCheckbox" checked>\s*<span>5k<\/span>\s*<\/label>/<label>\n    <input type="checkbox" id="fiveKCheckbox" disabled>\n    <span>5k<\/span>\n<\/label>/g' index.html
+
+          # Modify the JavaScript to ensure that the 5k markers are hidden
+          sed -i 's/if (showMarker) {/if (showMarker && !isJunior) {/g' index.html
+
           cp index.html junior.html
 
       - name: Commit and Push Changes
