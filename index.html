@@ -251,6 +251,13 @@
             iconAnchor: [19, 38],
             popupAnchor: [0, -38]
         });
+        
+        var LocationIcon = L.icon({
+            iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/3.png',
+            iconSize: [38, 38],
+            iconAnchor: [19, 38],
+            popupAnchor: [0, -38]
+        });
 
         var markers = L.markerClusterGroup();
         var data = {};
@@ -358,7 +365,7 @@
 
         function onLocationFound(e) {
             var radius = e.accuracy / 2;
-            L.marker(e.latlng).addTo(map)
+            L.marker(e.latlng, { icon: LocationIcon }).addTo(map)
                 .bindPopup("Your location").openPopup();
             L.circle(e.latlng, {radius: radius}).addTo(map);
 
