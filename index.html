@@ -198,6 +198,7 @@
     </div>
     <div id="hotel-widget-container">
         <button id="close-hotel-widget">X</button>
+        <div id="parkrun-location" class="popup-title"></div>
         <div data-skyscanner-widget="HotelSearchWidget"
              data-locale="en-GB"
              data-market="UK"
@@ -316,6 +317,10 @@
             const clearBtn = document.getElementById('clear-btn');
             const fiveKCheckbox = document.getElementById('fiveKCheckbox');
             const juniorCheckbox = document.getElementById('juniorCheckbox');
+            
+                // Set the location text
+            const parkrunLocation = document.getElementById('parkrun-location');
+               parkrunLocation.textContent = `Location: ${eventLongName}`;
 
             hotelWidgetContainer.style.display = 'block';
             mapOverlay.style.display = 'block';
