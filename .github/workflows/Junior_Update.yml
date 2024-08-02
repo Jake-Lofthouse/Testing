@@ -2,9 +2,10 @@ name: Junior Web Update
 
 
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["5k Web Update"]
+    types:
+      - completed
 
 jobs:
   update-html:
