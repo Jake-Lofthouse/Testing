@@ -197,7 +197,7 @@
         </div>
     </div>
     <div id="hotel-widget-container">
-        //<button id="close-hotel-widget">X</button>
+        <button id="close-hotel-widget">X</button>
         <div id="parkrun-location" class="popup-title"></div>
         <div data-skyscanner-widget="HotelSearchWidget"
              data-locale="en-GB"
@@ -462,21 +462,6 @@ document.getElementById('search-input').addEventListener('input', function() {
 
 
         document.getElementById('close-hotel-widget').addEventListener('click', closeHotelMap);
-        
-            document.addEventListener('DOMContentLoaded', function() {
-        // Hide the hotel widget container on page load
-        var hotelWidgetContainer = document.getElementById('hotel-widget-container');
-        if (hotelWidgetContainer) {
-            hotelWidgetContainer.style.display = 'none'; // Ensure it's hidden initially
-        }
-
-        // Optionally hide the map overlay as well
-        var mapOverlay = document.getElementById('map-overlay');
-        if (mapOverlay) {
-            mapOverlay.style.display = 'none'; // Ensure it's hidden initially
-        }
-    });
-
     </script>
 </body>
 </html>
