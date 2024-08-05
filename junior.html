@@ -373,7 +373,7 @@
             var radius = e.accuracy / 2;
             L.marker(e.latlng, { icon: LocationIcon }).addTo(map)
                 .bindPopup("Your location").openPopup();
-            L.circle(e.latlng, {radius: radius}).addTo(map);
+            
 
             map.setView(e.latlng, 13);
         }
