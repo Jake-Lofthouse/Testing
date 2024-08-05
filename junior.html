@@ -307,11 +307,44 @@
        }
 
 
-          function openHotelMap(eventName, lat, lon) {
-            var url = 'hotel_widget.html' + encodeURIComponent(eventName) + '&lat=' + lat + '&lon=' + lon;
-            window.open(url, 'Hotel Search', 'width=600,height=800');
-        }
+        function openHotelMap(eventLongName) {
+            const hotelWidget = document.getElementById('hotel-search-widget');
+            hotelWidget.setAttribute('data-destination-name', eventLongName);
+            const hotelWidgetContainer = document.getElementById('hotel-widget-container');
+            const mapOverlay = document.getElementById('map-overlay');
+            const controls = document.querySelector('.controls');
+            const searchInput = document.getElementById('search-input');
+            const searchIcon = document.getElementById('search-icon');
+            const clearBtn = document.getElementById('clear-btn');
+            const fiveKCheckbox = document.getElementById('fiveKCheckbox');
+            const juniorCheckbox = document.getElementById('juniorCheckbox');
+            
+                // Set the location text
+            const parkrunLocation = document.getElementById('parkrun-location');
+               parkrunLocation.textContent = `Location: ${eventLongName}`;
 
+            hotelWidgetContainer.style.display = 'block';
+            mapOverlay.style.display = 'block';
+            map.dragging.disable();
+            map.scrollWheelZoom.disable();
+            map.touchZoom.disable();
+            map.doubleClickZoom.disable();
+
+            controls.classList.add('hidden');
+            searchInput.classList.remove('show');
+            searchInput.disabled = true;
+            searchIcon.style.pointerEvents = 'none';
+            clearBtn.style.display = 'none';
+            fiveKCheckbox.disabled = true;
+            juniorCheckbox.disabled = true;
+
+            const hotelInput = hotelWidget.querySelector('input[name="destinationName"]');
+            if (hotelInput) {
+                hotelInput.value = eventLongName;
+            }
+
+            skyscanner.load();
+        }
 
         function closeHotelMap() {
             const hotelWidgetContainer = document.getElementById('hotel-widget-container');
