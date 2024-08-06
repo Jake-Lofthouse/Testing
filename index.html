@@ -239,9 +239,15 @@
         }
 
         var map = L.map('map', {
-            center: [51.505, -0.09],
-            zoom: 13,
-            zoomControl: false
+            center: [0, 0], // Center the map on the equator and prime meridian
+            zoom: 2, // Set an initial zoom level
+            zoomControl: true,
+            maxBounds: [
+                [-90, -180], // Southwest corner of the map
+                [90, 180]    // Northeast corner of the map
+             ],
+            maxBoundsViscosity: 1.0, // Keeps the map within these bounds
+            minZoom: 2 // Prevents zooming out too far to see the entire world multiple times
         });
 
         L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
