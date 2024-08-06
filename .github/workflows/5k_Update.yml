@@ -16,7 +16,7 @@ jobs:
 
       - name: Fetch index.html
         run: |
-          curl -o index.html https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/index.html
+          curl -o index.html https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/all.html
 
       - name: Modify index.html
         run: |
