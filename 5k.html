@@ -96,7 +96,7 @@
             background-color: #d6336c;
         }
         .popup-title {
-            font-size: 17px;
+            font-size: 16px;
             font-weight: bold;
             margin-bottom: 10px;
         }
@@ -145,35 +145,7 @@
             color: #333;
             font-size: 16px;
         }
-        #hotel-widget-container {
-            position: absolute;
-            top: 10%;
-            left: 10%;
-            right: 10%;
-            bottom: 10%;
-            z-index: 1000;
-            background-color: white;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-            display: none;
-        }
-        #hotel-search-widget {
-            height: 100%;
-            width: 100%;
-        }
-        #close-hotel-widget {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            z-index: 250;
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #333;
-        }
+
         .map-overlay {
             position: absolute;
             top: 0;
@@ -200,19 +172,6 @@
             <input type="text" id="search-input" placeholder="Search Parkrun">
             <button id="clear-btn"><i class="fas fa-times"></i></button>
         </div>
-    </div>
-    <div id="hotel-widget-container">
-        <button id="close-hotel-widget">X</button>
-        <div id="parkrun-location" class="popup-title"></div>
-        <div data-skyscanner-widget="HotelSearchWidget"
-             data-locale="en-GB"
-             data-market="UK"
-             data-currency="GBP"
-             data-hide-powered-by="true"
-             data-button-colour="#58993D"
-             data-web-only-redirects="true"
-             data-z-index="500"
-             id="hotel-search-widget"></div>
     </div>
     <div id="map-overlay" class="map-overlay"></div>
     <div class="controls">
@@ -324,68 +283,12 @@
         }
 
         function openHotelMap(lat, lon) {
-            getCityName(lat, lon).then(cityName => {
-                const hotelWidget = document.getElementById('hotel-search-widget');
-                hotelWidget.setAttribute('data-destination-name', cityName);
-                const hotelWidgetContainer = document.getElementById('hotel-widget-container');
-                const mapOverlay = document.getElementById('map-overlay');
-                const controls = document.querySelector('.controls');
-                const searchInput = document.getElementById('search-input');
-                const searchIcon = document.getElementById('search-icon');
-                const clearBtn = document.getElementById('clear-btn');
-                const fiveKCheckbox = document.getElementById('fiveKCheckbox');
-                const juniorCheckbox = document.getElementById('juniorCheckbox');
-                
-                // Set the location text
-                const parkrunLocation = document.getElementById('parkrun-location');
-                parkrunLocation.textContent = `Location: ${cityName}`;
-
-                hotelWidgetContainer.style.display = 'block';
-                mapOverlay.style.display = 'block';
-                map.dragging.disable();
-                map.scrollWheelZoom.disable();
-                map.touchZoom.disable();
-                map.doubleClickZoom.disable();
-
-                controls.classList.add('hidden');
-                searchInput.classList.remove('show');
-                searchInput.disabled = true;
-                searchIcon.style.pointerEvents = 'none';
-                clearBtn.style.display = 'none';
-                fiveKCheckbox.disabled = true;
-                juniorCheckbox.disabled = true;
-
-                const hotelInput = hotelWidget.querySelector('input[name="destinationName"]');
-                if (hotelInput) {
-                    hotelInput.value = cityName;
-                }
-
-                skyscanner.load();
-            });
+           const url = `https://www.google.com/maps/search/Hotels/@${lat},${lon},15z`;
+           window.open(url, '_blank');
         }
 
-        function closeHotelMap() {
-            const hotelWidgetContainer = document.getElementById('hotel-widget-container');
-            const mapOverlay = document.getElementById('map-overlay');
-            const controls = document.querySelector('.controls');
-            const searchInput = document.getElementById('search-input');
-            const searchIcon = document.getElementById('search-icon');
-            const fiveKCheckbox = document.getElementById('fiveKCheckbox');
-            const juniorCheckbox = document.getElementById('juniorCheckbox');
 
-            hotelWidgetContainer.style.display = 'none';
-            mapOverlay.style.display = 'none';
-            map.dragging.enable();
-            map.scrollWheelZoom.enable();
-            map.touchZoom.enable();
-            map.doubleClickZoom.enable();
-
-            controls.classList.remove('hidden');
-            searchInput.disabled = false;
-            searchIcon.style.pointerEvents = 'auto';
-            fiveKCheckbox.disabled = false;
-            juniorCheckbox.disabled = false;
-        }
+        
 
         function onLocationFound(e) {
             var radius = e.accuracy / 2;
