@@ -2,86 +2,142 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" type="image/x.icon" href="favicon.ico?">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>parkrunner tourist</title>
+    <meta name="description" content="Parkrunner Tourist App: Discover park run events worldwide and find nearby hotels with ease. Download now for a perfect park run adventure!">
+    <meta name="keywords" content="Parkrunner Tourist, park run, running app, find park run events, travel, hotels, adventure, running community">
+    <meta name="author" content="Parkrunner Tourist Team">
+    <meta property="og:title" content="Parkrunner Tourist">
+    <meta property="og:description" content="Unlock your perfect park run adventure with the Parkrunner Tourist App. Find park run events worldwide and discover nearby hotels effortlessly.">
+    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg">
+    <meta property="og:url" content="https://parkrunnertourist.co.uk">
+    <meta property="og:type" content="website">
+    <title>Parkrunner Tourist</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(135deg, #7ed957, #64af46);
+            color: #333;
         }
         .container {
-            max-width: 900px;
-            margin: 0 auto;
+            max-width: 800px;
+            margin: 20px auto;
             padding: 20px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         header {
             text-align: center;
-            background-color: #7ed957;
+            padding: 30px 0;
             color: white;
-            padding: 20px 0;
+            background: none;
+            font-size: 1.8em;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            animation: slideDown 1s ease-in-out;
+        }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         h1 {
             margin: 0;
             font-size: 2.5em;
+            font-weight: 700;
         }
         .content {
-            background-color: white;
-            padding: 20px;
             margin-top: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .download-button {
             display: flex;
             justify-content: center;
-            margin-top: 20px;
+            margin: 30px 0;
         }
-        .download-button img {
-            width: 200px;
+        .download-button a {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        .download-button a:hover {
+            transform: scale(1.05);
         }
         .info-section {
             margin-top: 20px;
-            color: #64af46
+            padding: 10px 0;
         }
         .info-section h2 {
-            color: #7ed957;
+            color: #64af46;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .info-section h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 50px;
+            height: 3px;
+            background-color: #7ed957;
         }
         .info-section p {
-            line-height: 1.6;
-            color: #64af46
+            line-height: 1.8;
+            color: #555;
+        }
+        .info-section ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .info-section ul li {
+            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Circle-check.svg/1200px-Circle-check.svg.png') no-repeat left center;
+            background-size: 20px;
+            padding-left: 30px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            .info-section h2 {
+                font-size: 1.2em;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>parkrunner tourist</h1>
+        <h1>Parkrunner Tourist</h1>
     </header>
     <div class="container">
         <div class="content">
             <div class="download-button">
                 <a href="https://play.google.com/store/apps/details?id=appinventor.ai_jlofty8.parkrunner_tourist">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" width="200">
                 </a>
             </div>
             <div class="info-section">
                 <h2>About the App</h2>
-                <p>Unlock your perfect park run adventure with the Parkrunner Tourist App! This essential tool lets you easily find park run events worldwide and discover nearby hotels, all from a user-friendly map interface.
-</p>
+                <p>Unlock your perfect park run adventure with the Parkrunner Tourist App! This essential tool lets you easily find park run events worldwide and discover nearby hotels, all from a user-friendly map interface.</p>
             </div>
             <div class="info-section">
                 <h2>Features</h2>
                 <ul>
                     <li>Easy To Use</li>
                     <li>Find Best Price Hotels</li>
-
+                    <li>Get Directions to the Event</li>
+                    <li>Instantly check the volunteer roster and course map</li>
                 </ul>
             </div>
             <div class="info-section">
                 <h2>Why Use Parkrunner Tourist?</h2>
-                <p>Exploring new locations? our app ensures you can plan your runs and accommodations with ease. Track your park run journey, find the best places to stay, and make your next run unforgettable. Download the Parkrunner Tourist App today and start your park run journey!</p>
+                <p>Exploring new locations? Our app ensures you can plan your runs and accommodations with ease. Track your park run journey, find the best places to stay, and make your next run unforgettable. Download the Parkrunner Tourist App today and start your park run journey!</p>
             </div>
         </div>
     </div>
