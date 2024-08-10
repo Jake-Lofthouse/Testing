@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>404 Error - Page Not Found</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
         * {
@@ -26,18 +26,25 @@
             background: var(--dark);
             color: var(--light);
             flex-direction: column;
+            text-align: center;
+            padding: 20px;
         }
         h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 20px;
         }
         .notifications {
             position: fixed;
-            top: 30px;
-            right: 20px;
+            top: 20px;
+            right: 10px;
+            left: 10px;
+            margin: auto;
+            width: auto;
+            max-width: 90%;
         }
         .notifications .toast {
-            width: 400px;
+            width: 100%;
+            max-width: 400px;
             position: relative;
             overflow: hidden;
             list-style: none;
@@ -47,6 +54,9 @@
             background: var(--light);
             justify-content: space-between;
             animation: show_toast 0.3s ease forwards;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
         @keyframes show_toast {
             0% {
@@ -85,6 +95,16 @@
             font-size: 1.07rem;
             margin-left: 12px;
             color: var(--dark);
+            word-wrap: break-word;
+        }
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .toast .column span {
+                font-size: 1rem;
+                margin-left: 8px;
+            }
         }
     </style>
 </head>
@@ -128,3 +148,4 @@
     </script>
 </body>
 </html>
+
