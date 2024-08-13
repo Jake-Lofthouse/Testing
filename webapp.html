@@ -163,6 +163,39 @@
              display: none;
         }
         
+.contact-btn-container {
+    position: absolute;
+    bottom: 10px; /* Position the button 10px from the bottom */
+    left: 10px; /* Position the button 10px from the left */
+    z-index: 1001;
+}
+
+.contact-btn {
+    background-color: #007bff; /* Button background color */
+    color: white;
+    width: 60px; /* Button diameter */
+    height: 60px; /* Button diameter */
+    border: none;
+    border-radius: 50%; /* Makes the button circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 24px; /* Adjust font size for the icon */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.contact-btn:hover {
+    transform: scale(1.1); /* Grow the button on hover */
+    background-color: #0056b3; /* Darken the background on hover */
+}
+
+.contact-btn i {
+    margin: 0; /* Remove margin around the icon */
+}
+
+        
     </style>
 </head>
 <body>
@@ -175,6 +208,14 @@
             <button id="clear-btn"><i class="fas fa-times"></i></button>
         </div>
     </div>
+    
+<div class="contact-btn-container">
+    <button class="contact-btn" onclick="openUrl('https://forms.office.com/r/nku1ZRB4N6')">
+        <i class="fas fa-phone"></i>
+    </button>
+</div>
+
+
     <div id="map-overlay" class="map-overlay"></div>
     <div class="controls">
         <label>
@@ -283,6 +324,7 @@
             const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}`;
             window.open(url, '_blank');
         }
+        
 
         function openHotelMap(lat, lon) {
            const url = `https://www.google.com/maps/search/Hotels/@${lat},${lon},15z`;
