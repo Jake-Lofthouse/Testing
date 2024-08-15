@@ -131,6 +131,58 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+        
+#accommodationModal .hotel-btn, 
+#accommodationModal .campsite-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 120px;
+    color: white;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+#accommodationModal .hotel-btn {
+    background-color: #6200ea;
+}
+
+#accommodationModal .hotel-btn:hover {
+    background-color: #4500b0;
+}
+
+#accommodationModal .campsite-btn {
+    background-color: #4CAF50; /* Camping green color */
+}
+
+#accommodationModal .campsite-btn:hover {
+    background-color: #388E3C;
+}
+
+#accommodationModal .exit-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 120px;
+    background-color: #aaa;
+    color: white;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+#accommodationModal .exit-btn:hover {
+    background-color: #888;
+}
+
+
+
         #search-input.show {
             width: 40vw;
             max-width: 300px;
@@ -191,6 +243,41 @@
         function openUrl(url) {
             window.open(url, '_blank');
         }
+        
+function chooseAccommodation(lat, lon) {
+    // Store the coordinates for use after the user makes a selection
+    window.accommodationLat = lat;
+    window.accommodationLon = lon;
+
+    // Show the modal popup
+    document.getElementById('accommodationModal').style.display = 'flex';
+}
+
+function handleAccommodationChoice(type) {
+    const lat = window.accommodationLat;
+    const lon = window.accommodationLon;
+
+    if (type === 'hotels') {
+        openHotelMap(lat, lon);
+    } else if (type === 'campsites') {
+        openCampsiteMap(lat, lon);
+    }
+
+    // Close the modal after selection
+    closeAccommodationModal();
+}
+
+function closeAccommodationModal() {
+    document.getElementById('accommodationModal').style.display = 'none';
+}
+
+function openCampsiteMap(lat, lon) {
+    const url = `https://www.google.com/maps/search/Campsites/@${lat},${lon},15z`;
+    window.open(url, '_blank');
+}
+
+
+
 
         function getCityName(lat, lon) {
             return fetch(`https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lon}&format=json`)
@@ -262,7 +349,7 @@
                                 <button class="course-btn" onclick="openUrl('https://www.parkrun.org.uk/${eventname}/course/')">Course</button><br>
                                 <button class="volunteer-btn" onclick="openUrl('https://www.parkrun.org.uk/${eventname}/futureroster/')">Volunteer</button><br>
                                 <button class="direction-btn" onclick="openDirections(${coordinates[1]}, ${coordinates[0]})">Directions</button><br>
-                                <button class="hotel-btn" onclick="openHotelMap(${coordinates[1]}, ${coordinates[0]})">Hotels</button>
+                                <button class="hotel-btn" onclick="chooseAccommodation(${coordinates[1]}, ${coordinates[0]})">Accommodation</button>
                             </div>
                         `;
                         var markerIcon = isJunior ? juniorIcon : fiveKIcon;
@@ -365,7 +452,7 @@ document.getElementById('search-input').addEventListener('input', function() {
                             <button class="course-btn" onclick="openUrl('https://www.parkrun.org.uk/${feature.properties.eventname}/course/')">Course</button><br>
                             <button class="volunteer-btn" onclick="openUrl('https://www.parkrun.org.uk/${feature.properties.eventname}/futureroster/')">Volunteer</button><br>
                             <button class="direction-btn" onclick="openDirections(${coordinates[1]}, ${coordinates[0]})">Directions</button><br>
-                            <button class="hotel-btn" onclick="openHotelMap(${coordinates[1]}, ${coordinates[0]})">Hotels</button> 
+                           <button class="hotel-btn" onclick="chooseAccommodation(${coordinates[1]}, ${coordinates[0]})">Accommodation</button>
                         </div>
                     `;
                     var markerIcon = isJunior ? juniorIcon : fiveKIcon;
@@ -393,5 +480,19 @@ document.getElementById('search-input').addEventListener('input', function() {
 
         document.getElementById('close-hotel-widget').addEventListener('click', closeHotelMap);
     </script>
+    
+<div id="accommodationModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1000; align-items: center; justify-content: center;">
+    <div style="background: white; padding: 20px; border-radius: 10px; text-align: center; max-width: 300px; width: 100%;">
+        <p>Select Accommodation Type:</p>
+        <div style="display: flex; justify-content: center; gap: 10px;">
+            <button class="hotel-btn" onclick="handleAccommodationChoice('hotels')">Hotels</button>
+            <button class="campsite-btn" onclick="handleAccommodationChoice('campsites')">Campsites</button>
+        </div>
+        <br>
+        <button class="exit-btn" onclick="closeAccommodationModal()">Exit</button>
+    </div>
+</div>
+
+
 </body>
 </html>
