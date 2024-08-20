@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Logs</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+        .update {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px 0;
+            padding: 15px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .update:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .update-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 0;
+            padding: 0;
+        }
+        .update-date {
+            font-size: 0.9em;
+            color: #666;
+            margin: 5px 0;
+        }
+        .update-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            font-size: 1em;
+            color: #444;
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+        .update.open .update-content {
+            max-height: 500px;
+        }
+        
+        .update-content ul {
+            padding-left: 20px; /* Indent the list */
+        }
+        
+        .update-content li {
+            margin-bottom: 10px; /* Add space between each bullet point */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="update">
+            <div class="update-header">
+                <p class="update-title">App Update 1.2.0 - New Features</p>
+                <p class="update-date">August 20, 2024</p>
+            </div>
+            <div class="update-content">
+                <p></p>
+                <ul>
+                    <li>New update release page</li>
+                    <li>Button Renaming: The "Hotel" button has been renamed to "Accommodation".</li>
+
+                    <li>New User Prompt: Upon clicking the "Accommodation" button, users will now be prompted to select either "Hotel" or "Campsites."</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- Add more updates as needed -->
+
+    </div>
+
+    <script>
+        document.querySelectorAll('.update').forEach(update => {
+            update.addEventListener('click', () => {
+                update.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>
