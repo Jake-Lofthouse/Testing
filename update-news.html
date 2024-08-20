@@ -26,9 +26,15 @@
             padding: 15px;
             transition: all 0.3s ease;
             cursor: pointer;
+            position: relative;
         }
         .update:hover {
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .update-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         .update-title {
             font-size: 1.2em;
@@ -53,13 +59,22 @@
         .update.open .update-content {
             max-height: 500px;
         }
-        
         .update-content ul {
-            padding-left: 20px; /* Indent the list */
+            padding-left: 20px;
         }
-        
         .update-content li {
-            margin-bottom: 10px; /* Add space between each bullet point */
+            margin-bottom: 10px;
+        }
+        .arrow {
+            width: 0; 
+            height: 0; 
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 6px solid #333;
+            transition: transform 0.3s ease;
+        }
+        .update.open .arrow {
+            transform: rotate(180deg);
         }
     </style>
 </head>
@@ -68,19 +83,18 @@
         <div class="update">
             <div class="update-header">
                 <p class="update-title">App Update 1.2.0 - New Features</p>
-                <p class="update-date">August 20, 2024</p>
+                <div class="arrow"></div>
             </div>
+            <p class="update-date">August 20, 2024</p>
             <div class="update-content">
                 <p></p>
                 <ul>
                     <li>New update release page</li>
                     <li>Button Renaming: The "Hotel" button has been renamed to "Accommodation".</li>
-
                     <li>New User Prompt: Upon clicking the "Accommodation" button, users will now be prompted to select either "Hotel" or "Campsites."</li>
                 </ul>
             </div>
         </div>
-
 
         <!-- Add more updates as needed -->
 
