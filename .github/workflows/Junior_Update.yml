@@ -6,7 +6,7 @@ on:
     workflows: ["5k Web Update"]
     types:
       - completed
-
+  workflow_dispatch:
 jobs:
   update-html:
     runs-on: ubuntu-latest
