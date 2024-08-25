@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parkrun Finder Chat</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 10px;
+        }
+        #chatbox {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #messages {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+            max-height: 300px;
+            overflow-y: auto;
+            border-bottom: 1px solid #ddd;
+        }
+        .message {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .user-message {
+            background: #dfe6e9;
+            text-align: right;
+        }
+        .bot-message {
+            background: #74b9ff;
+            color: #fff;
+        }
+        #user-input {
+            width: calc(100% - 50px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        #clear-history {
+            background: #ff7675;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #map {
+            width: 100%;
+            height: 300px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        @media (max-width: 600px) {
+            #user-input {
+                width: calc(100% - 60px);
+                margin-bottom: 10px;
+            }
+            #clear-history {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="chatbox">
+        <ul id="messages"></ul>
+        <input type="text" id="user-input" placeholder="Ask me about parkruns..." onkeydown="if(event.key === 'Enter') sendMessage()">
+        <button id="clear-history" onclick="clearHistory()">Clear History</button>
+        <div id="map"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        let parkrunEvents = [];
+
+        // Fetch the parkrun data from the JSON file
+        fetch('parkruns.json')
+            .then(response => response.json())
+            .then(data => {
+                parkrunEvents = data.features;
+            });
+
+        let map = L.map('map').setView([51.505, -0.09], 13); // Default location (London)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        function sendMessage() {
+            const input = document.getElementById('user-input').value.trim();
+            if (input === "") return;
+
+            addMessage(input, 'user-message');
+            processMessage(input);
+            document.getElementById('user-input').value = "";
+        }
+
+        function addMessage(text, className) {
+            const messages = document.getElementById('messages');
+            const message = document.createElement('li');
+            message.className = `message ${className}`;
+            message.textContent = text;
+            messages.appendChild(message);
+            messages.scrollTop = messages.scrollHeight;
+        }
+
+        function processMessage(query) {
+            let results = [];
+
+            if (query.toLowerCase().includes("start with letter")) {
+                const letter = query.split("letter")[1].trim().toUpperCase();
+                results = parkrunEvents.filter(event => event.properties.EventLongName.startsWith(letter));
+            } else if (query.toLowerCase().includes("all downhill") || query.toLowerCase().includes("easiest")) {
+                // Assuming "easiest" might relate to a specific property in your data, filter accordingly
+            } else if (query.toLowerCase().includes("hardest")) {
+                // Assuming "hardest" might relate to a specific property in your data, filter accordingly
+            } else if (query.toLowerCase().includes("beach")) {
+                // Assuming "beach" might relate to a specific feature in your data, filter accordingly
+            } else if (query.toLowerCase().includes("woods")) {
+                // Assuming "woods" might relate to a specific feature in your data, filter accordingly
+            } else if (query.toLowerCase().includes("flat")) {
+                // Assuming "flat" might relate to a specific feature in your data, filter accordingly
+            } else {
+                addMessage("Sorry, I didn't understand your request. Please try again.", 'bot-message');
+                return;
+            }
+
+            if (results.length > 0) {
+                const response = results.map(event => `${event.properties.EventLongName} (${event.properties.EventLocation}) - [Visit](https://www.parkrun.org.uk/${event.properties.eventname})`).join("\n");
+                addMessage("Here are some parkruns that match your request:\n" + response, 'bot-message');
+                updateMap(results);
+            } else {
+                addMessage("No parkruns found that match your request.", 'bot-message');
+            }
+        }
+
+        function updateMap(events) {
+            map.eachLayer(layer => {
+                if (layer.options && !layer.options.attribution) {
+                    map.removeLayer(layer);
+                }
+            });
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            if (events.length > 0) {
+                const bounds = [];
+                events.forEach(event => {
+                    const marker = L.marker([event.geometry.coordinates[1], event.geometry.coordinates[0]]).addTo(map)
+                        .bindPopup(`<b>${event.properties.EventLongName}</b><br>${event.properties.EventLocation}<br><a href="https://www.parkrun.org.uk/${event.properties.eventname}" target="_blank">Visit Event</a>`);
+                    bounds.push([event.geometry.coordinates[1], event.geometry.coordinates[0]]);
+                });
+                map.fitBounds(bounds);
+            } else {
+                map.setView([51.505, -0.09], 13); // Reset to default location
+            }
+        }
+
+        function clearHistory() {
+            const messages = document.getElementById('messages');
+            while (messages.firstChild) {
+                messages.removeChild(messages.firstChild);
+            }
+        }
+    </script>
+</body>
+</html>
