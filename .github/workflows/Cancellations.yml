@@ -22,7 +22,7 @@ jobs:
       run: pip install requests beautifulsoup4
 
     - name: Run cancellation scraper
-      run: python scripts/scrape_parkrun_cancellations.py  # Updated path
+      run: python "scripts/python scrape_parkrun_cancellations.py"  # Path with quotes
 
     - name: Commit and push changes
       run: |
