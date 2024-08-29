@@ -1,6 +1,16 @@
 import requests
 from bs4 import BeautifulSoup
 import datetime
+import json
+
+def get_this_weekend_range():
+    today = datetime.datetime.now()
+    # Find the next Saturday
+    days_until_saturday = (5 - today.weekday()) % 7
+    saturday = today + datetime.timedelta(days=days_until_saturday)
+    # Find the next Sunday
+    sunday = saturday + datetime.timedelta(days=1)
+    return saturday.date(), sunday.date()
 
 def get_cancellations():
     url = 'https://www.parkrun.com/cancellations/'
@@ -18,6 +28,9 @@ def get_cancellations():
     soup = BeautifulSoup(response.text, 'html.parser')
     cancellations = []
 
+    # Get this weekend's date range
+    this_weekend_start, this_weekend_end = get_this_weekend_range()
+
     # Find the section that contains the cancellation information
     section = soup.find('section', class_='clearfix')
     if section:
@@ -27,27 +40,32 @@ def get_cancellations():
             date_str = header.text.strip()
             try:
                 # Extract the date from <h2> tags
-                event_date = datetime.datetime.strptime(date_str, "%A, %B %d, %Y")
+                event_date = datetime.datetime.strptime(date_str, "%A, %B %d, %Y").date()
             except ValueError as e:
                 print(f"Date format issue: {e}")
                 continue
             
-            # Find all <li> tags within the <ul> under this date header
-            ul = header.find_next_sibling('ul')
-            if ul:
-                for li in ul.find_all('li'):
-                    link = li.find('a')
-                    if link:
-                        name = link.text.strip()
-                        reason = li.text.replace(name, '').strip().strip(': ')
-                        cancellations.append(f"{name} - {reason} ({event_date.strftime('%Y-%m-%d')})")
+            # Check if the event_date falls within this weekend's range
+            if this_weekend_start <= event_date <= this_weekend_end:
+                # Find all <li> tags within the <ul> under this date header
+                ul = header.find_next_sibling('ul')
+                if ul:
+                    for li in ul.find_all('li'):
+                        link = li.find('a')
+                        if link:
+                            name = link.text.strip()
+                            reason = li.text.replace(name, '').strip().strip(': ')
+                            cancellations.append({
+                                "name": name,
+                                "reason": reason,
+                                "date": event_date.strftime('%Y-%m-%d')
+                            })
 
     return cancellations
 
-def save_cancellations_to_file(cancellations, filename='cancellations.txt'):
+def save_cancellations_to_file(cancellations, filename='cancellations.json'):
     with open(filename, 'w') as f:
-        for cancellation in cancellations:
-            f.write(f"{cancellation}\n")
+        json.dump(cancellations, f, indent=4)
 
 if __name__ == "__main__":
     cancellations = get_cancellations()
