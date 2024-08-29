@@ -1,30 +1,31 @@
-# scrape_parkrun_cancellations.py
-
 import requests
 from bs4 import BeautifulSoup
 import datetime
 
 def get_cancellations():
-    # Set the URL for the Parkrun cancellations page
     url = 'https://www.parkrun.com/cancellations/'
-
-    # Send a GET request to the URL
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'html.parser')
 
-    # Find the cancellation list
     cancellations = []
 
-    # Parse the page to find cancellation entries
+    # Debug: Print the raw HTML or specific elements
+    print(soup.prettify())  # This prints the entire HTML for inspection
+
+    # Example of parsing logic: you might need to adjust these selectors
     for event in soup.find_all('div', class_='event-cancellation'):
         name = event.find('h2').text.strip()
         date = event.find('p', class_='event-date').text.strip()
-        
-        # Filter by upcoming weekend
+
+        # Convert date string to a datetime object
         event_date = datetime.datetime.strptime(date, "%d %B %Y")
         today = datetime.datetime.today()
+        
+        # Debug: Print each event's name and date
+        print(f"Found event: {name}, Date: {date}")
+
+        # Filter for upcoming weekend cancellations
         if event_date.weekday() == 5:  # Saturday
-            # Only include if event is within the upcoming weekend
             if event_date >= today and event_date < today + datetime.timedelta(days=7):
                 cancellations.append(f"{name} - {date}")
 
@@ -37,4 +38,5 @@ def save_cancellations_to_file(cancellations, filename='cancellations.txt'):
 
 if __name__ == "__main__":
     cancellations = get_cancellations()
+    print(f"Cancellations found: {cancellations}")  # Debug: Print cancellations found
     save_cancellations_to_file(cancellations)
