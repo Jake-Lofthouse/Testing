@@ -4,20 +4,25 @@ import datetime
 
 def get_cancellations():
     url = 'https://www.parkrun.com/cancellations/'
-    response = requests.get(url)
+    
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+    }
+    
+    response = requests.get(url, headers=headers)
+    
+    if response.status_code == 403:
+        print("Access denied: 403 Forbidden")
+        return []
+    
     soup = BeautifulSoup(response.text, 'html.parser')
-
     cancellations = []
-
-    # Debug: Print the raw HTML or specific elements
-    print(soup.prettify())  # This prints the entire HTML for inspection
 
     # Example of parsing logic: you might need to adjust these selectors
     for event in soup.find_all('div', class_='event-cancellation'):
         name = event.find('h2').text.strip()
         date = event.find('p', class_='event-date').text.strip()
 
-        # Convert date string to a datetime object
         event_date = datetime.datetime.strptime(date, "%d %B %Y")
         today = datetime.datetime.today()
         
