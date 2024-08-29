@@ -27,8 +27,8 @@ jobs:
 
     - name: Commit and push changes
       run: |
-        git config --global user.email "your-email@example.com"
-        git config --global user.name "Your GitHub Username"
+        git config --global user.name 'github-actions'
+        git config --global user.email 'actions@github.com'
         git add cancellations.txt
         git commit -m "Update Parkrun cancellations for the upcoming weekend"
         git push
