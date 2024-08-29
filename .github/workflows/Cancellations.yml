@@ -2,10 +2,8 @@ name: Cancellations
 
 on:
   schedule:
-    - cron: "0 6 * * 5"  # Runs at 6 AM every Friday UTC
-
-
-workflow_dispatch: 
+    - cron: "0 6 * * *"  # Runs at 6 AM UTC every day
+  workflow_dispatch:
     
 
 jobs:
