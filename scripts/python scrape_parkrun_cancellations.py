@@ -18,14 +18,31 @@ def get_cancellations():
     soup = BeautifulSoup(response.text, 'html.parser')
     cancellations = []
 
-    # Example of parsing logic: you might need to adjust these selectors
-    for event in soup.find_all('div', class_='event-cancellation'):
-        name = event.find('h2').text.strip()
-        date = event.find('p', class_='event-date').text.strip()
+    # Debug: Print the raw HTML or specific elements
+    print(soup.prettify())  # Print the entire HTML for inspection
 
-        event_date = datetime.datetime.strptime(date, "%d %B %Y")
+    # Example of parsing logic: you might need to adjust these selectors
+    # Assuming the cancellations are listed within specific tags and classes
+    for event in soup.find_all('div', class_='event-cancellation'):
+        name_tag = event.find('h2')
+        date_tag = event.find('p', class_='event-date')
+
+        if not name_tag or not date_tag:
+            print("Could not find the expected tags.")
+            continue
+
+        name = name_tag.text.strip()
+        date = date_tag.text.strip()
+
+        try:
+            # Adjust the date format as needed
+            event_date = datetime.datetime.strptime(date, "%A, %B %d, %Y")
+        except ValueError as e:
+            print(f"Date format issue: {e}")
+            continue
+
         today = datetime.datetime.today()
-        
+
         # Debug: Print each event's name and date
         print(f"Found event: {name}, Date: {date}")
 
