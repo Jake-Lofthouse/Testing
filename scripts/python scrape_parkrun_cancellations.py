@@ -14,42 +14,33 @@ def get_cancellations():
     if response.status_code == 403:
         print("Access denied: 403 Forbidden")
         return []
-    
+
     soup = BeautifulSoup(response.text, 'html.parser')
     cancellations = []
 
-    # Debug: Print the raw HTML or specific elements
-    print(soup.prettify())  # Print the entire HTML for inspection
-
-    # Example of parsing logic: you might need to adjust these selectors
-    # Assuming the cancellations are listed within specific tags and classes
-    for event in soup.find_all('div', class_='event-cancellation'):
-        name_tag = event.find('h2')
-        date_tag = event.find('p', class_='event-date')
-
-        if not name_tag or not date_tag:
-            print("Could not find the expected tags.")
-            continue
-
-        name = name_tag.text.strip()
-        date = date_tag.text.strip()
-
-        try:
-            # Adjust the date format as needed
-            event_date = datetime.datetime.strptime(date, "%A, %B %d, %Y")
-        except ValueError as e:
-            print(f"Date format issue: {e}")
-            continue
-
-        today = datetime.datetime.today()
-
-        # Debug: Print each event's name and date
-        print(f"Found event: {name}, Date: {date}")
-
-        # Filter for upcoming weekend cancellations
-        if event_date.weekday() == 5:  # Saturday
-            if event_date >= today and event_date < today + datetime.timedelta(days=7):
-                cancellations.append(f"{name} - {date}")
+    # Find the section that contains the cancellation information
+    section = soup.find('section', class_='clearfix')
+    if section:
+        # Find all <h2> tags to identify dates
+        date_headers = section.find_all('h2')
+        for header in date_headers:
+            date_str = header.text.strip()
+            try:
+                # Extract the date from <h2> tags
+                event_date = datetime.datetime.strptime(date_str, "%A, %B %d, %Y")
+            except ValueError as e:
+                print(f"Date format issue: {e}")
+                continue
+            
+            # Find all <li> tags within the <ul> under this date header
+            ul = header.find_next_sibling('ul')
+            if ul:
+                for li in ul.find_all('li'):
+                    link = li.find('a')
+                    if link:
+                        name = link.text.strip()
+                        reason = li.text.replace(name, '').strip().strip(': ')
+                        cancellations.append(f"{name} - {reason} ({event_date.strftime('%Y-%m-%d')})")
 
     return cancellations
 
