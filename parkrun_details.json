@@ -1,0 +1,62 @@
+[
+    {
+        "eventname": "bushy",
+        "EventLongName": "Bushy parkrun",
+        "EventLocation": "Bushy Park, Teddington",
+        "url": "https://www.parkrun.org.uk/bushy/course",
+        "description": "Description not found",
+        "terrain": "unknown",
+        "coordinates": [
+            -0.335791,
+            51.410992
+        ]
+    },
+    {
+        "eventname": "wimbledon",
+        "EventLongName": "Wimbledon Common parkrun",
+        "EventLocation": "Wimbledon Common",
+        "url": "https://www.parkrun.org.uk/wimbledon/course",
+        "description": "Description not found",
+        "terrain": "unknown",
+        "coordinates": [
+            -0.232215,
+            51.442078
+        ]
+    },
+    {
+        "eventname": "banstead",
+        "EventLongName": "Banstead Woods parkrun",
+        "EventLocation": "Banstead Woods, Coulsdon",
+        "url": "https://www.parkrun.org.uk/banstead/course",
+        "description": "Description not found",
+        "terrain": "unknown",
+        "coordinates": [
+            -0.184225,
+            51.307648
+        ]
+    },
+    {
+        "eventname": "richmond",
+        "EventLongName": "Richmond parkrun",
+        "EventLocation": "Richmond Park, Richmond upon Thames",
+        "url": "https://www.parkrun.org.uk/richmond/course",
+        "description": "Description not found",
+        "terrain": "unknown",
+        "coordinates": [
+            -0.292886,
+            51.451962
+        ]
+    },
+    {
+        "eventname": "woodhousemoor",
+        "EventLongName": "Woodhouse Moor parkrun",
+        "EventLocation": "Woodhouse Moor, Leeds",
+        "url": "https://www.parkrun.org.uk/woodhousemoor/course",
+        "description": "Description not found",
+        "terrain": "unknown",
+        "coordinates": [
+            -1.560059,
+            53.808582
+        ]
+    }
+]
