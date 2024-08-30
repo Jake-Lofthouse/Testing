@@ -145,6 +145,11 @@
         "date": "2024-08-31"
     },
     {
+        "name": "Jeffreys Bay parkrun",
+        "reason": "Local health restrictions",
+        "date": "2024-08-31"
+    },
+    {
         "name": "Kate Reed parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-08-31"
@@ -225,6 +230,11 @@
         "date": "2024-08-31"
     },
     {
+        "name": "Ome kyuryo parkrun",
+        "reason": "Weather",
+        "date": "2024-08-31"
+    },
+    {
         "name": "Oyodogawa shiminryokuchi parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-08-31"
@@ -232,6 +242,11 @@
     {
         "name": "Pongola parkrun",
         "reason": "Inniriet Festival Fun Run taking place",
+        "date": "2024-08-31"
+    },
+    {
+        "name": "Railton parkrun",
+        "reason": "Weather",
         "date": "2024-08-31"
     },
     {
