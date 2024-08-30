@@ -16,11 +16,17 @@ def scrape_event_info(url):
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'html.parser')
 
-    # Example scraping logic; needs to be adapted based on the actual page structure
-    description = soup.find('div', {'class': 'c-event-description'}).text.strip()
-    terrain = 'unknown'  # Default, until found
+    # Find the description element
+    description_element = soup.find('div', {'class': 'c-event-description'})
     
-    # Logic to determine terrain type, e.g., by checking for keywords
+    # Check if the description element exists
+    if description_element:
+        description = description_element.text.strip()
+    else:
+        description = "Description not found"
+
+    # Determine terrain type based on keywords
+    terrain = 'unknown'
     if 'beach' in description.lower():
         terrain = 'beach'
     elif 'hilly' in description.lower():
