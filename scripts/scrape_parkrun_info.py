@@ -40,7 +40,8 @@ for event in events:
     country_code = event['properties']['countrycode']
     country_info = countries[str(country_code)]
     
-    event_url = f"{country_info['url']}/{event['properties']['eventname']}"
+    # Ensure the URL is complete and append /course
+    event_url = f"https://{country_info['url']}/{event['properties']['eventname']}/course"
     event_info = scrape_event_info(event_url)
     
     event_data = {
