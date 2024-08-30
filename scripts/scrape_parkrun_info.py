@@ -16,8 +16,8 @@ def scrape_event_info(url):
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'html.parser')
 
-    # Find the description element
-    description_element = soup.find('div', {'class': 'c-course-description'})
+    # Update the tag and class based on your inspection
+    description_element = soup.find('p', {'class': 'c-course-description'})  # Adjust as necessary
     
     # Check if the description element exists
     if description_element:
