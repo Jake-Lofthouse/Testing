@@ -20,6 +20,11 @@
         "date": "2024-08-31"
     },
     {
+        "name": "Bells Parade parkrun",
+        "reason": "Weather",
+        "date": "2024-08-31"
+    },
+    {
         "name": "Bournemouth parkrun",
         "reason": "Venue unavailable",
         "date": "2024-08-31"
@@ -95,6 +100,11 @@
         "date": "2024-08-31"
     },
     {
+        "name": "Gyodashi sogokoen parkrun",
+        "reason": "Weather",
+        "date": "2024-08-31"
+    },
+    {
         "name": "Harayama koen parkrun",
         "reason": "\u53f0\u98a810\u53f7\u63a5\u8fd1\u306e\u305f\u3081",
         "date": "2024-08-31"
@@ -117,6 +127,16 @@
     {
         "name": "Holkham parkrun",
         "reason": "North Norfolk Food & Drink Festival",
+        "date": "2024-08-31"
+    },
+    {
+        "name": "Hondajima parkrun",
+        "reason": "Weather",
+        "date": "2024-08-31"
+    },
+    {
+        "name": "Horinouchi koen parkrun",
+        "reason": "Weather",
         "date": "2024-08-31"
     },
     {
@@ -200,8 +220,23 @@
         "date": "2024-08-31"
     },
     {
+        "name": "Oiso undokoen parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-08-31"
+    },
+    {
+        "name": "Oyodogawa shiminryokuchi parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-08-31"
+    },
+    {
         "name": "Pongola parkrun",
         "reason": "Inniriet Festival Fun Run taking place",
+        "date": "2024-08-31"
+    },
+    {
+        "name": "Risdon Brook parkrun",
+        "reason": "Weather",
         "date": "2024-08-31"
     },
     {
@@ -280,8 +315,18 @@
         "date": "2024-08-31"
     },
     {
+        "name": "Toboshane Valley Estate parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-08-31"
+    },
+    {
         "name": "Tokoinranta parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-08-31"
+    },
+    {
+        "name": "Tsujido kaihin koen parkrun",
+        "reason": "Weather",
         "date": "2024-08-31"
     },
     {
@@ -290,7 +335,17 @@
         "date": "2024-08-31"
     },
     {
+        "name": "Tynwald Park parkrun",
+        "reason": "Weather",
+        "date": "2024-08-31"
+    },
+    {
         "name": "Urayasushi sogo koen parkrun",
+        "reason": "Weather",
+        "date": "2024-08-31"
+    },
+    {
+        "name": "Westbury Town Common parkrun",
         "reason": "Weather",
         "date": "2024-08-31"
     },
