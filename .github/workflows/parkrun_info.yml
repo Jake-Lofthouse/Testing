@@ -1,9 +1,9 @@
-name: Parkrun Info
+name: Scrape Parkrun Info
 
 on:
   schedule:
     - cron: '0 0 * * 0' # Runs every Sunday at midnight UTC
-  workflow_dispatch:
+  workflow_dispatch: # Allows manual triggering of the workflow
 
 jobs:
   scrape:
@@ -24,12 +24,14 @@ jobs:
         pip install requests beautifulsoup4
 
     - name: Run the scraper
-      run: python scrape_parkrun_info.py
+      run: python scripts/scrape_parkrun_info.py
 
     - name: Commit and push the results
       run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git config --global user.name 'github-actions'
+        git config --global user.email 'actions@github.com'
         git add parkrun_details.json
         git commit -m "Updated parkrun details"
         git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
