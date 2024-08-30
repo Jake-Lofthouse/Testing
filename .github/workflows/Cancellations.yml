@@ -2,9 +2,9 @@ name: Cancellations
 
 on:
   schedule:
-    - cron: "0 6 * * *"  # Runs at 6 AM UTC every day
-  workflow_dispatch:  # Allows for manual triggering
-
+    - cron: "0 */2 * * *"  # Runs every 2 hours
+  workflow_dispatch: # Allows manual triggering of the workflow
+  
 jobs:
   scrape:
     runs-on: ubuntu-latest
@@ -22,7 +22,7 @@ jobs:
       run: pip install requests beautifulsoup4
 
     - name: Run cancellation scraper
-      run: python "scripts/python scrape_parkrun_cancellations.py"
+      run: python "scripts/python scrape_cancellations.py"
 
     - name: Commit and push changes
       run: |
