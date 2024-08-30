@@ -68,7 +68,7 @@
             line-height: 1.5;
         }
         .update.open .update-content {
-            max-height: 500px;
+            max-height: 500px; /* Adjust as needed */
         }
         .update-content ul {
             padding-left: 20px;
@@ -127,9 +127,18 @@
     </div>
 
     <script>
-        document.querySelectorAll('.update').forEach(update => {
+        const updates = document.querySelectorAll('.update');
+        updates.forEach(update => {
             update.addEventListener('click', () => {
-                update.classList.toggle('open');
+                const isOpen = update.classList.contains('open');
+
+                // Close all updates
+                updates.forEach(u => u.classList.remove('open'));
+
+                // Toggle the clicked update
+                if (!isOpen) {
+                    update.classList.add('open');
+                }
             });
         });
     </script>
