@@ -10,6 +10,11 @@
         "date": "2024-08-31"
     },
     {
+        "name": "Beach Strip parkrun",
+        "reason": "Weather",
+        "date": "2024-08-31"
+    },
+    {
         "name": "Bedworth parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-08-31"
@@ -417,6 +422,11 @@
     {
         "name": "Wataraseyusuichi parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-08-31"
+    },
+    {
+        "name": "Welland Canals Trail parkrun",
+        "reason": "Weather",
         "date": "2024-08-31"
     },
     {
