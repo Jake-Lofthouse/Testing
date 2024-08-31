@@ -20,6 +20,11 @@
         "date": "2024-08-31"
     },
     {
+        "name": "Bellerive parkrun",
+        "reason": "Weather",
+        "date": "2024-08-31"
+    },
+    {
         "name": "Bells Parade parkrun",
         "reason": "Weather",
         "date": "2024-08-31"
@@ -90,8 +95,18 @@
         "date": "2024-08-31"
     },
     {
+        "name": "George Town parkrun",
+        "reason": "Weather",
+        "date": "2024-08-31"
+    },
+    {
         "name": "Gnoll parkrun",
         "reason": "Course unavailable due to works",
+        "date": "2024-08-31"
+    },
+    {
+        "name": "Gongendo 2gou kouen parkrun",
+        "reason": "Weather",
         "date": "2024-08-31"
     },
     {
@@ -155,6 +170,11 @@
         "date": "2024-08-31"
     },
     {
+        "name": "Jindabyne parkrun",
+        "reason": "Weather",
+        "date": "2024-08-31"
+    },
+    {
         "name": "Kate Reed parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-08-31"
@@ -162,6 +182,11 @@
     {
         "name": "Kathu parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2024-08-31"
+    },
+    {
+        "name": "Kingston Park parkrun",
+        "reason": "Weather",
         "date": "2024-08-31"
     },
     {
@@ -250,8 +275,18 @@
         "date": "2024-08-31"
     },
     {
+        "name": "O\u2019Connors Beach parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-08-31"
+    },
+    {
         "name": "Pongola parkrun",
         "reason": "Inniriet Festival Fun Run taking place",
+        "date": "2024-08-31"
+    },
+    {
+        "name": "Queens Domain parkrun",
+        "reason": "Weather",
         "date": "2024-08-31"
     },
     {
@@ -292,6 +327,11 @@
     {
         "name": "Seven Fields parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-08-31"
+    },
+    {
+        "name": "Shawnigan Hills parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2024-08-31"
     },
     {
@@ -367,6 +407,11 @@
     {
         "name": "Urayasushi sogo koen parkrun",
         "reason": "Weather",
+        "date": "2024-08-31"
+    },
+    {
+        "name": "Wataraseyusuichi parkrun",
+        "reason": "Venue unavailable",
         "date": "2024-08-31"
     },
     {
@@ -527,6 +572,11 @@
     {
         "name": "King George V junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-09-01"
+    },
+    {
+        "name": "King\u2019s Lynn junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2024-09-01"
     },
     {
