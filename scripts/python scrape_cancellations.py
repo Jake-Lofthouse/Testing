@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import datetime
 import json
+import os
 
 def get_this_weekend_range():
     today = datetime.datetime.now()
@@ -63,11 +64,39 @@ def get_cancellations():
 
     return cancellations
 
+def delete_old_cancellations(cancellations, current_date):
+    # Remove any cancellation older than today
+    cancellations = [c for c in cancellations if datetime.datetime.strptime(c["date"], "%Y-%m-%d").date() >= current_date.date()]
+    return cancellations
+
 def save_cancellations_to_file(cancellations, filename='cancellations.json'):
     with open(filename, 'w') as f:
         json.dump(cancellations, f, indent=4)
 
+def load_cancellations_from_file(filename='cancellations.json'):
+    if os.path.exists(filename):
+        with open(filename, 'r') as f:
+            return json.load(f)
+    return []
+
+def sync_cancellations():
+    current_time = datetime.datetime.now()
+    # Load existing cancellations
+    existing_cancellations = load_cancellations_from_file()
+
+    # Delete old cancellations
+    existing_cancellations = delete_old_cancellations(existing_cancellations, current_time)
+
+    # Get new cancellations
+    new_cancellations = get_cancellations()
+
+    # Combine existing and new cancellations, avoiding duplicates
+    all_cancellations = {f"{c['name']}-{c['date']}": c for c in existing_cancellations + new_cancellations}
+    all_cancellations = list(all_cancellations.values())
+
+    # Save updated list of cancellations
+    save_cancellations_to_file(all_cancellations)
+
 if __name__ == "__main__":
-    cancellations = get_cancellations()
-    print(f"Cancellations found: {cancellations}")  # Debug: Print cancellations found
-    save_cancellations_to_file(cancellations)
+    sync_cancellations()
+    print("Cancellations have been synced and updated.")
