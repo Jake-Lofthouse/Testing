@@ -475,6 +475,13 @@ fetch('https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/parkruns
     })
     .catch(err => console.error('Error fetching GeoJSON:', err));
 
+        window.addEventListener('load', () => {
+    const consentButton = document.querySelector('.VfPpkd-RLmnJb');
+    if (consentButton) {
+        consentButton.click();
+    }
+});
+
 
         function openDirections(lat, lon) {
             const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}`;
