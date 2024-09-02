@@ -9,21 +9,21 @@
     <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/logo.png">
 
     <!-- General Meta Tags -->
-<meta name="description" content="Explore our interactive map to discover all parkrun events and nearby hotels. Get directions and enjoy an intuitive interface for a seamless experience.">
-<meta name="keywords" content="interactive map, parkruns, hotels, directions, user-friendly, travel, running events">
-<meta name="author" content="Parkrunner Tourist Team">
+    <meta name="description" content="Explore our interactive map to discover all parkrun events and nearby hotels. Get directions and enjoy an intuitive interface for a seamless experience.">
+    <meta name="keywords" content="interactive map, parkruns, hotels, directions, user-friendly, travel, running events">
+    <meta name="author" content="Parkrunner Tourist Team">
 
-<!-- Open Graph Meta Tags -->
-<meta property="og:title" content="Parkrunner Tourist Map">
-<meta property="og:description" content="Navigate through our interactive map to find parkrun events, locate nearby hotels, and get directions. Designed for an easy and enjoyable experience.">
-<meta property="og:url" content="https://parkrunnertourist.co.uk/webapp"> <!-- Update with the specific URL for this page -->
-<meta property="og:type" content="website">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Parkrunner Tourist Map">
+    <meta property="og:description" content="Navigate through our interactive map to find parkrun events, locate nearby hotels, and get directions. Designed for an easy and enjoyable experience.">
+    <meta property="og:url" content="https://parkrunnertourist.co.uk/webapp">
+    <meta property="og:type" content="website">
 
-<!-- Twitter Card Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Parkrunner Tourist Map">
-<meta name="twitter:description" content="Use our interactive map to find parkrun events and nearby hotels with ease. Get directions and enjoy a smooth user experience.">
-    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Parkrunner Tourist Map">
+    <meta name="twitter:description" content="Use our interactive map to find parkrun events and nearby hotels with ease. Get directions and enjoy a smooth user experience.">
+
     <style>
         html, body {
             height: 100%;
@@ -118,16 +118,40 @@
         }
 
         .controls input[type="checkbox"] {
-            accent-color: #007bff;
-            margin-right: 10px;
+            appearance: none; /* Remove default checkbox styling */
             width: 20px;
             height: 20px;
-            opacity: 0.7;
-            transition: opacity 0.3s ease;
+            border-radius: 3px;
+            border: 2px solid #58993d;
+            background-color: #fff;
+            cursor: pointer;
+            position: relative;
+            outline: none;
+            margin-right: 10px;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
         }
 
         .controls input[type="checkbox"]:checked {
-            opacity: 1;
+            background-color: #58993d;
+            border-color: #58993d;
+        }
+
+        .controls input[type="checkbox"]::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            font-size: 14px;
+            color: white;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.3s ease;
+        }
+
+        .controls input[type="checkbox"]:checked::after {
+            content: '\f00c'; /* Font Awesome checkmark */
+            transform: translate(-50%, -50%) scale(1);
         }
     </style>
 </head>
