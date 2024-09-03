@@ -210,6 +210,11 @@
         "date": "2024-09-07"
     },
     {
+        "name": "Ziegelwiese parkrun",
+        "reason": "AED unavailable",
+        "date": "2024-09-07"
+    },
+    {
         "name": "parkrun Zamek w Malborku",
         "reason": "Zawody na trasie parkun - Castle Triathlon 2024",
         "date": "2024-09-07"
@@ -257,6 +262,11 @@
     {
         "name": "Albert Park junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-09-08"
+    },
+    {
+        "name": "Battery Park junior parkrun",
+        "reason": "No Run Directors available",
         "date": "2024-09-08"
     },
     {
