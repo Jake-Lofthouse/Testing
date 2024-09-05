@@ -110,6 +110,11 @@
         "date": "2024-09-07"
     },
     {
+        "name": "Kroonstad parkrun",
+        "reason": "Venue unavailable",
+        "date": "2024-09-07"
+    },
+    {
         "name": "Largs Prom parkrun",
         "reason": "Viking festival",
         "date": "2024-09-07"
@@ -332,6 +337,11 @@
     {
         "name": "Queen\u2019s Park junior parkrun, Bolton",
         "reason": "Venue unavailable",
+        "date": "2024-09-08"
+    },
+    {
+        "name": "Rossmere junior parkrun",
+        "reason": "Almost all core team attending Great North Run",
         "date": "2024-09-08"
     },
     {
