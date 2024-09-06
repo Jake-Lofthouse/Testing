@@ -185,6 +185,11 @@
         "date": "2024-09-07"
     },
     {
+        "name": "Shongweni parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-09-07"
+    },
+    {
         "name": "Snowden Field parkrun",
         "reason": "Venue unavailable",
         "date": "2024-09-07"
@@ -207,6 +212,11 @@
     {
         "name": "Tamworth Castle Grounds parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-09-07"
+    },
+    {
+        "name": "Toboshane Valley Estate parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-09-07"
     },
     {
