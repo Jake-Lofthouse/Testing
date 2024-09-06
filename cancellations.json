@@ -165,6 +165,11 @@
         "date": "2024-09-07"
     },
     {
+        "name": "Red Star parkrun",
+        "reason": "Venue unavailable",
+        "date": "2024-09-07"
+    },
+    {
         "name": "Rheinpark parkrun",
         "reason": "Venue unavailable",
         "date": "2024-09-07"
@@ -187,6 +192,11 @@
     {
         "name": "Sandhurst Memorial parkrun",
         "reason": "Both of our courses are flooded after the rain",
+        "date": "2024-09-07"
+    },
+    {
+        "name": "Shepton Mallet parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2024-09-07"
     },
     {
@@ -267,6 +277,11 @@
     {
         "name": "Ziegelwiese parkrun",
         "reason": "AED unavailable",
+        "date": "2024-09-07"
+    },
+    {
+        "name": "parkrun Grudzi\u0105dz",
+        "reason": "Shortage of volunteers",
         "date": "2024-09-07"
     },
     {
