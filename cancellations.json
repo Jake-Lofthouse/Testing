@@ -55,6 +55,11 @@
         "date": "2024-09-07"
     },
     {
+        "name": "Charleston parkrun, West Virginia",
+        "reason": "Venue unavailable",
+        "date": "2024-09-07"
+    },
+    {
         "name": "Chipping Norton School parkrun",
         "reason": "Core Team Unavailable",
         "date": "2024-09-07"
@@ -162,6 +167,11 @@
     {
         "name": "Norm-Hudlin Trails parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-09-07"
+    },
+    {
+        "name": "Orleans parkrun",
+        "reason": "Weather",
         "date": "2024-09-07"
     },
     {
@@ -352,6 +362,11 @@
     {
         "name": "Albert Park junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-09-08"
+    },
+    {
+        "name": "Arklow Duck Pond junior parkrun",
+        "reason": "Regular volunteers unavailable due to other events",
         "date": "2024-09-08"
     },
     {
