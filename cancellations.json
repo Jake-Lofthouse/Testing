@@ -25,6 +25,11 @@
         "date": "2024-09-14"
     },
     {
+        "name": "Burgess parkrun",
+        "reason": "Venue unavailable",
+        "date": "2024-09-14"
+    },
+    {
         "name": "Caledon Golf Course parkrun",
         "reason": "Venue unavailable",
         "date": "2024-09-14"
@@ -107,6 +112,11 @@
     {
         "name": "Mattilanniemi parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-09-14"
+    },
+    {
+        "name": "Moreletapark Gemeente parkrun",
+        "reason": "Due to \"It's A Girl Thing\" conference.",
         "date": "2024-09-14"
     },
     {
