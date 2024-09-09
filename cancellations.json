@@ -70,6 +70,11 @@
         "date": "2024-09-14"
     },
     {
+        "name": "Greenpoint parkrun",
+        "reason": "Major event taking place on the parkrun course.",
+        "date": "2024-09-14"
+    },
+    {
         "name": "Heslington parkrun",
         "reason": "Parking/access unavailable - student moving in day",
         "date": "2024-09-14"
@@ -186,6 +191,11 @@
     },
     {
         "name": "Voortrekker Monument parkrun, Pretoria",
+        "reason": "Venue unavailable",
+        "date": "2024-09-14"
+    },
+    {
+        "name": "Warwick Racecourse parkrun",
         "reason": "Venue unavailable",
         "date": "2024-09-14"
     },
