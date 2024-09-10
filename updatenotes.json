@@ -1,0 +1,22 @@
+[
+    {
+        "title": "App Update 1.1.4 - Bug Fixes",
+        "date": "September 6, 2024",
+        "content": ["Directions Button Now Working!"]
+    },
+    {
+        "title": "App Update 1.1.2 - Map Update",
+        "date": "September 3, 2024",
+        "content": ["The Google Consent Page has been removed, as Google Maps now opens directly within the app."]
+    },
+    {
+        "title": "App Update 1.1.1 - New Features",
+        "date": "August 30, 2024",
+        "content": ["Event Cancellations - Displays a hazard marker and cancellation reason in pop-up.", "\"Always on Display\" option is available in settings."]
+    },
+    {
+        "title": "App Update 1.1.0 - New Features",
+        "date": "August 22, 2024",
+        "content": ["New update release page", "Button Renaming: The \"Hotel\" button has been renamed to \"Accommodation\".", "New User Prompt: Upon clicking the \"Accommodation\" button, users will now be prompted to select either \"Hotel\" or \"Campsites.\""]
+    }
+]
