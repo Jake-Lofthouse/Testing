@@ -30,11 +30,6 @@
         "date": "2024-09-14"
     },
     {
-        "name": "Caledon Golf Course parkrun",
-        "reason": "Venue unavailable",
-        "date": "2024-09-14"
-    },
-    {
         "name": "Cannon Hill parkrun, Birmingham",
         "reason": "Venue unavailable",
         "date": "2024-09-14"
@@ -161,6 +156,11 @@
     },
     {
         "name": "Russborough parkrun",
+        "reason": "Venue unavailable",
+        "date": "2024-09-14"
+    },
+    {
+        "name": "Settlers Park parkrun",
         "reason": "Venue unavailable",
         "date": "2024-09-14"
     },
