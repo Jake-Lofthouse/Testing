@@ -168,24 +168,32 @@
                             container.appendChild(toggleButton); // Re-append button to keep position
                             toggleButton.textContent = 'Show More';
                         }
+
+                        // Reattach event listeners to all update elements
+                        attachUpdateListeners();
                     });
                 }
 
-                // Add event listeners to dynamically added update elements
-                const updates = document.querySelectorAll('.update');
-                updates.forEach(update => {
-                    update.addEventListener('click', () => {
-                        const isOpen = update.classList.contains('open');
+                // Function to attach click event listeners to update elements
+                function attachUpdateListeners() {
+                    const updates = document.querySelectorAll('.update');
+                    updates.forEach(update => {
+                        update.addEventListener('click', () => {
+                            const isOpen = update.classList.contains('open');
 
-                        // Close all updates
-                        updates.forEach(u => u.classList.remove('open'));
+                            // Close all updates
+                            updates.forEach(u => u.classList.remove('open'));
 
-                        // Toggle the clicked update
-                        if (!isOpen) {
-                            update.classList.add('open');
-                        }
+                            // Toggle the clicked update
+                            if (!isOpen) {
+                                update.classList.add('open');
+                            }
+                        });
                     });
-                });
+                }
+
+                // Initial attachment of event listeners
+                attachUpdateListeners();
             } catch (error) {
                 console.error('Error fetching update notes:', error);
             }
