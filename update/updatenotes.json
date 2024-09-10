@@ -1,6 +1,13 @@
 {
   "updates": [
     {
+      "title": "App Update 1.1.5 - New Features",
+      "date": "September 10, 2024",
+      "content": [
+        "On volunteer page new volunteer at this parkrun. when clicked will open your email with the selected parkrun email adress autofilled in the send to"
+      ]
+    },
+    {
       "title": "App Update 1.1.4 - Bug Fixes",
       "date": "September 6, 2024",
       "content": [
