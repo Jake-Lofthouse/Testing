@@ -120,6 +120,11 @@
         "date": "2024-09-14"
     },
     {
+        "name": "Montrose Foreshore parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-09-14"
+    },
+    {
         "name": "Moreletapark Gemeente parkrun",
         "reason": "Due to \"It's A Girl Thing\" conference.",
         "date": "2024-09-14"
@@ -263,6 +268,11 @@
         "name": "parkrun du Lac de Divonne",
         "reason": "parkrun est actuellement suspendu en France",
         "date": "2024-09-14"
+    },
+    {
+        "name": "Blickling junior parkrun",
+        "reason": "No Run Director available due to RNR event",
+        "date": "2024-09-15"
     },
     {
         "name": "Boston Road Rec junior parkrun",
