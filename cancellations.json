@@ -130,6 +130,11 @@
         "date": "2024-09-14"
     },
     {
+        "name": "Millennium parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-09-14"
+    },
+    {
         "name": "Montrose Foreshore parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-09-14"
@@ -291,6 +296,16 @@
     },
     {
         "name": "parkrun Gosty\u0144",
+        "reason": "Weather",
+        "date": "2024-09-14"
+    },
+    {
+        "name": "parkrun Jelenia G\u00f3ra",
+        "reason": "Weather",
+        "date": "2024-09-14"
+    },
+    {
+        "name": "parkrun M\u0142yn\u00f3wka Kr\u00f3lewska",
         "reason": "Weather",
         "date": "2024-09-14"
     },
