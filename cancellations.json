@@ -335,6 +335,11 @@
         "date": "2024-09-14"
     },
     {
+        "name": "parkrun Park Zdrojowy, Kudowa-Zdr\u00f3j",
+        "reason": "Weather",
+        "date": "2024-09-14"
+    },
+    {
         "name": "parkrun de Fontainebleau",
         "reason": "parkrun est actuellement suspendu en France",
         "date": "2024-09-14"
@@ -390,6 +395,11 @@
         "date": "2024-09-15"
     },
     {
+        "name": "Carmarthen junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-09-15"
+    },
+    {
         "name": "Dartford junior parkrun",
         "reason": "Dartford Half Marathon takes place on our course",
         "date": "2024-09-15"
@@ -402,6 +412,11 @@
     {
         "name": "Griffeen junior parkrun",
         "reason": "event defunct",
+        "date": "2024-09-15"
+    },
+    {
+        "name": "King George Playing Fields junior parkrun, Hull",
+        "reason": "Shortage of volunteers",
         "date": "2024-09-15"
     },
     {
