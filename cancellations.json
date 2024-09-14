@@ -110,6 +110,16 @@
         "date": "2024-09-14"
     },
     {
+        "name": "Lews Castle parkrun",
+        "reason": "Weather",
+        "date": "2024-09-14"
+    },
+    {
+        "name": "Luitpold parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-09-14"
+    },
+    {
         "name": "Lytham Hall parkrun",
         "reason": "Venue unavailable",
         "date": "2024-09-14"
@@ -215,6 +225,11 @@
         "date": "2024-09-14"
     },
     {
+        "name": "Stadtpark parkrun",
+        "reason": "Weather",
+        "date": "2024-09-14"
+    },
+    {
         "name": "Strokestown parkrun",
         "reason": "Annual Strokestown Agricultural Show",
         "date": "2024-09-14"
@@ -287,6 +302,11 @@
     {
         "name": "Ziegelwiese parkrun",
         "reason": "AED unavailable",
+        "date": "2024-09-14"
+    },
+    {
+        "name": "parkrun Bulwar nad Wis\u0142\u0105",
+        "reason": "Weather",
         "date": "2024-09-14"
     },
     {
