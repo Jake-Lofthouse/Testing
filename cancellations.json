@@ -60,6 +60,11 @@
         "date": "2024-09-21"
     },
     {
+        "name": "Hazelmere Dam parkrun",
+        "reason": "Weather",
+        "date": "2024-09-21"
+    },
+    {
         "name": "Jock Trail parkrun",
         "reason": "Venue unavailable due to colour run taking place",
         "date": "2024-09-21"
@@ -167,6 +172,11 @@
     {
         "name": "Stilbaai West Beach parkrun",
         "reason": "Another running event scheduled on same route.",
+        "date": "2024-09-21"
+    },
+    {
+        "name": "Warragul parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-09-21"
     },
     {
