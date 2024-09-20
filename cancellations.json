@@ -1,5 +1,10 @@
 [
     {
+        "name": "Ballito parkrun",
+        "reason": "Weather",
+        "date": "2024-09-21"
+    },
+    {
         "name": "Beeston parkrun",
         "reason": "Flood damaged paths",
         "date": "2024-09-21"
@@ -35,6 +40,11 @@
         "date": "2024-09-21"
     },
     {
+        "name": "Chuo koen parkrun",
+        "reason": "Weather",
+        "date": "2024-09-21"
+    },
+    {
         "name": "Cowpasture Reserve parkrun, Camden",
         "reason": "Course unsafe or blocked",
         "date": "2024-09-21"
@@ -42,6 +52,11 @@
     {
         "name": "Danehy Park parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-09-21"
+    },
+    {
+        "name": "Dlinza Forest parkrun",
+        "reason": "Weather",
         "date": "2024-09-21"
     },
     {
@@ -75,6 +90,11 @@
         "date": "2024-09-21"
     },
     {
+        "name": "Kitanagase Mirai Fureai Sogokoen parkrun",
+        "reason": "\u4ed6\u30a4\u30d9\u30f3\u30c8\u958b\u50ac\u306b\u3088\u308a\u3001\u5b89\u5168\u9762\u3092\u8003\u616e\u3057\u305f\u305f\u3081\u3002",
+        "date": "2024-09-21"
+    },
+    {
         "name": "Lavender Mill parkrun",
         "reason": "Venue unavailable",
         "date": "2024-09-21"
@@ -90,6 +110,11 @@
         "date": "2024-09-21"
     },
     {
+        "name": "Mtunzini parkrun",
+        "reason": "Weather",
+        "date": "2024-09-21"
+    },
+    {
         "name": "Naas parkrun",
         "reason": "Venue unavailable",
         "date": "2024-09-21"
@@ -97,6 +122,11 @@
     {
         "name": "Nepean River parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-09-21"
+    },
+    {
+        "name": "Noordwyk parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2024-09-21"
     },
     {
@@ -145,6 +175,11 @@
         "date": "2024-09-21"
     },
     {
+        "name": "Red Star parkrun",
+        "reason": "Weather",
+        "date": "2024-09-21"
+    },
+    {
         "name": "Riverside parkrun, Grand Rapids",
         "reason": "Venue unavailable",
         "date": "2024-09-21"
@@ -157,6 +192,11 @@
     {
         "name": "Roberts Park parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-09-21"
+    },
+    {
+        "name": "Sasolburg Stadium parkrun",
+        "reason": "Another event taking place & bad weather",
         "date": "2024-09-21"
     },
     {
@@ -175,6 +215,26 @@
         "date": "2024-09-21"
     },
     {
+        "name": "Storeys Field parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-09-21"
+    },
+    {
+        "name": "Teignmouth Promenade parkrun",
+        "reason": "Weather",
+        "date": "2024-09-21"
+    },
+    {
+        "name": "Tinley Manor parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-09-21"
+    },
+    {
+        "name": "Toboshane Valley Estate parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-09-21"
+    },
+    {
         "name": "Warragul parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-09-21"
@@ -182,6 +242,11 @@
     {
         "name": "Warwick Racecourse parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-09-21"
+    },
+    {
+        "name": "White Rock parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2024-09-21"
     },
     {
