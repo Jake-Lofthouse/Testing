@@ -20,6 +20,11 @@
         "date": "2024-09-21"
     },
     {
+        "name": "Bethlehem parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-09-21"
+    },
+    {
         "name": "Birchwood Trails parkrun",
         "reason": "Conflicting event",
         "date": "2024-09-21"
@@ -47,6 +52,11 @@
     {
         "name": "Burnham-on-Crouch parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-09-21"
+    },
+    {
+        "name": "Central parkrun, Plymouth",
+        "reason": "Lightning risk & not enough volunteers",
         "date": "2024-09-21"
     },
     {
@@ -85,7 +95,17 @@
         "date": "2024-09-21"
     },
     {
+        "name": "Harrismith parkrun",
+        "reason": "Weather",
+        "date": "2024-09-21"
+    },
+    {
         "name": "Hazelmere Dam parkrun",
+        "reason": "Weather",
+        "date": "2024-09-21"
+    },
+    {
+        "name": "Hluhluwe parkrun",
         "reason": "Weather",
         "date": "2024-09-21"
     },
@@ -105,6 +125,21 @@
         "date": "2024-09-21"
     },
     {
+        "name": "Komani parkrun",
+        "reason": "Course wet and unsafe",
+        "date": "2024-09-21"
+    },
+    {
+        "name": "Kralinbergh parkrun",
+        "reason": "Weather",
+        "date": "2024-09-21"
+    },
+    {
+        "name": "Ladysmith parkrun",
+        "reason": "Weather",
+        "date": "2024-09-21"
+    },
+    {
         "name": "Lavender Mill parkrun",
         "reason": "Venue unavailable",
         "date": "2024-09-21"
@@ -112,6 +147,11 @@
     {
         "name": "Lochiel parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2024-09-21"
+    },
+    {
+        "name": "Mapule Sindane School parkrun",
+        "reason": "Weather",
         "date": "2024-09-21"
     },
     {
@@ -175,6 +215,11 @@
         "date": "2024-09-21"
     },
     {
+        "name": "Piet Retief parkrun",
+        "reason": "Weather",
+        "date": "2024-09-21"
+    },
+    {
         "name": "Pirates Sport Club parkrun",
         "reason": "Weather",
         "date": "2024-09-21"
@@ -230,6 +275,11 @@
         "date": "2024-09-21"
     },
     {
+        "name": "Springbok parkrun",
+        "reason": "Weather",
+        "date": "2024-09-21"
+    },
+    {
         "name": "Stilbaai West Beach parkrun",
         "reason": "Another running event scheduled on same route.",
         "date": "2024-09-21"
@@ -255,6 +305,21 @@
         "date": "2024-09-21"
     },
     {
+        "name": "Traumschleife B\u00e4renbachpfad parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-09-21"
+    },
+    {
+        "name": "Umfolozi parkrun",
+        "reason": "Weather",
+        "date": "2024-09-21"
+    },
+    {
+        "name": "Vryheid parkrun",
+        "reason": "Weather",
+        "date": "2024-09-21"
+    },
+    {
         "name": "Warragul parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-09-21"
@@ -272,6 +337,11 @@
     {
         "name": "York parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-09-21"
+    },
+    {
+        "name": "Zastron Commons parkrun",
+        "reason": "No stock of snow boots",
         "date": "2024-09-21"
     },
     {
