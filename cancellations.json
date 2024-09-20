@@ -1,5 +1,15 @@
 [
     {
+        "name": "Ankerskogen parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-09-21"
+    },
+    {
+        "name": "Ashington Community Woodland parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-09-21"
+    },
+    {
         "name": "Ballito parkrun",
         "reason": "Weather",
         "date": "2024-09-21"
@@ -165,8 +175,18 @@
         "date": "2024-09-21"
     },
     {
+        "name": "Pirates Sport Club parkrun",
+        "reason": "Weather",
+        "date": "2024-09-21"
+    },
+    {
         "name": "Pokkinen parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-09-21"
+    },
+    {
+        "name": "Presint 18 parkrun, Putrajaya",
+        "reason": "due to another event taking place in the park",
         "date": "2024-09-21"
     },
     {
