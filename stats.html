@@ -37,7 +37,7 @@
         .carousel {
             position: relative;
             width: 100%;
-            height: 400px; /* Fixed height for the carousel */
+            height: 50vh; /* Set height to 50% of the viewport height */
             max-width: 600px;
             background-color: white;
             border-radius: 10px;
@@ -118,8 +118,7 @@
             }
 
             .carousel {
-                max-width: 100%; /* Full width for smaller screens */
-                height: 300px; /* Adjust height for mobile */
+                height: 40vh; /* Adjust height for smaller screens */
             }
         }
     </style>
@@ -195,23 +194,31 @@
                     }
                 });
 
-                createCharts(reasons, juniorCancellations, regularCancellations);
+                // Filter reasons to include only those with 2 or more cancellations
+                const filteredReasons = Object.entries(reasons)
+                    .filter(([reason, count]) => count >= 2)
+                    .sort((a, b) => a[1] - b[1]); // Sort from smallest to largest
+
+                const sortedLabels = filteredReasons.map(entry => entry[0]);
+                const sortedData = filteredReasons.map(entry => entry[1]);
+
+                createCharts(sortedLabels, sortedData, juniorCancellations, regularCancellations);
             } catch (error) {
                 console.error('Error fetching or processing data:', error);
             }
         }
 
-        function createCharts(reasons, juniorCancellations, regularCancellations) {
+        function createCharts(labels, data, juniorCancellations, regularCancellations) {
             const ctxReason = document.getElementById('cancellationsByReason').getContext('2d');
             new Chart(ctxReason, {
                 type: 'bar',
                 data: {
-                    labels: Object.keys(reasons),
+                    labels: labels,
                     datasets: [{
                         label: 'Cancellations by Reason',
-                        data: Object.values(reasons),
-                        backgroundColor: 'rgba(75, 192, 192, 0.6)',
-                        borderColor: 'rgba(75, 192, 192, 1)',
+                        data: data,
+                        backgroundColor: 'rgba(75, 192, 75, 0.6)', // Green background color
+                        borderColor: 'rgba(75, 192, 75, 1)', // Green border color
                         borderWidth: 1
                     }]
                 },
@@ -229,9 +236,9 @@
             new Chart(ctxType, {
                 type: 'pie',
                 data: {
-                    labels: ['Junior parkruns', 'Regular 5k parkruns'],
+                    labels: ['Junior parkruns', '5k parkruns'],
                     datasets: [{
-                        label: 'Cancellations by Parkrun Type',
+                        label: 'Cancellations',
                         data: [juniorCancellations, regularCancellations],
                         backgroundColor: ['rgba(106, 13, 173, 0.6)', 'rgba(54, 162, 235, 0.6)'],
                         borderColor: ['rgba(106, 13, 173, 1)', 'rgba(54, 162, 235, 1)'],
@@ -280,4 +287,4 @@
     </script>
 </body>
 
-</html
+</html>
