@@ -560,6 +560,11 @@
         "date": "2024-09-22"
     },
     {
+        "name": "Carmarthen junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-09-22"
+    },
+    {
         "name": "Eastbourne junior parkrun",
         "reason": "Venue unavailable",
         "date": "2024-09-22"
@@ -582,6 +587,16 @@
     {
         "name": "Hogmoor Inclosure junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-09-22"
+    },
+    {
+        "name": "Kingsgrove Woodland junior parkrun",
+        "reason": "Transport issues due to road closures",
+        "date": "2024-09-22"
+    },
+    {
+        "name": "Peoples Park junior parkrun",
+        "reason": "Weather",
         "date": "2024-09-22"
     },
     {
