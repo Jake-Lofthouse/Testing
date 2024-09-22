@@ -1,9 +1,163 @@
-<script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parkrunner Tourist</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #7ed957, #64af46);
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border: 1px solid #e1e1e1;
+            text-align: center; /* Center-align text and elements */
+        }
+        h1 {
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        p, ul {
+            color: #555;
+            line-height: 1.6;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .bb-icon-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            gap: 10px; /* Space between icons */
+        }
+        .bb-icon {
+            width: auto; /* Maintain aspect ratio */
+            height: 100px; /* Set a consistent height */
+            cursor: pointer; /* Indicate that the icon is clickable */
+            transition: transform 0.3s ease;
+        }
+        .bb-icon:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+        .stripe-button {
+            margin: 20px auto;
+            padding: 15px 25px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            font-size: 1.1em;
+            display: inline-block; /* Center the button */
+        }
+        .stripe-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+        @media (max-width: 600px) {
+            .bb-icon {
+                height: 80px; /* Adjust size for mobile */
+            }
+        }
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            margin: 20px;
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
 
-<stripe-buy-button
-  buy-button-id="buy_btn_1Q1YPBDIdMDZicrDejGM8ek1"
-  publishable-key="pk_live_51Q1XmuDIdMDZicrDwxgQySrmfGTVj2JvSDa77SFTl71o2CR71ogAvMbyhaUbBEWIYvUSwwItWX1ELJdyYAMBZYnj00oAM3h7ww"
->
-</stripe-buy-button>
+<div class="container">
+    <h1>Join the parkrunner tourist App Community!</h1>
+    <p>Are you a proud owner of a charming B&B? Attract more guests and boost your visibility by adding your establishment to the parkrunner tourist App for just a one-time admin fee of £5! Our platform connects avid runners with welcoming accommodations, creating a perfect match for those seeking a delightful stay after a rewarding run.</p>
+    <p><strong>Why Join Us?</strong></p>
+    <ul>
+        <li>Reach New Customers: Be discovered by a community of dedicated park runners.</li>
+        <li>Enhance Your Visibility: Stand out in a niche market that values comfort and convenience.</li>
+        <li>Simple Requirement: Just serve breakfast until 11:30 AM and you’re in!</li>
+    </ul>
+    
+    <div class="bb-icon-container">
+        <img src="https://raw.githubusercontent.com/ALD-Models/Testing/main/Images/BBIcon.png" class="bb-icon" alt="B&B Icon" id="closedIcon">
+        <img src="https://raw.githubusercontent.com/ALD-Models/Testing/main/Images/BBIconOpen.png" class="bb-icon" alt="B&B Icon Open" id="openIcon">
+    </div>
+    
+    <div class="stripe-button-container">
+        <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+        <stripe-buy-button
+            buy-button-id="buy_btn_1Q1YPBDIdMDZicrDejGM8ek1"
+            publishable-key="pk_live_51Q1XmuDIdMDZicrDwxgQySrmfGTVj2JvSDa77SFTl71o2CR71ogAvMbyhaUbBEWIYvUSwwItWX1ELJdyYAMBZYnj00oAM3h7ww">
+        </stripe-buy-button>
+    </div>
+
+    <!-- Modal for image preview -->
+    <div id="myModal" class="modal">
+        <span class="close" id="closeModal">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <script>
+        const icons = document.querySelectorAll('.bb-icon');
+        const modal = document.getElementById("myModal");
+        const modalImg = document.getElementById("img01");
+        const closeModal = document.getElementById("closeModal");
+
+        icons.forEach(icon => {
+            icon.addEventListener('click', function() {
+                modal.style.display = "flex";
+                modalImg.src = this.src; // Set the modal image source
+            });
+        });
+
+        closeModal.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</div>
+
+</body>
+</html>
