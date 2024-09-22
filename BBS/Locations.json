@@ -8,7 +8,7 @@
       "image_link": "https://thermohouse.co.uk/wp-content/uploads/2019/04/hero-image.jpg",
       "address": "123 Main St, Example City",
       "coordinates": {
-        "latitude": 53.37185392166244
+        "latitude": 53.37185392166244,
         "longitude": -1.517024213230913
       }
     },
@@ -26,3 +26,4 @@
     }
   ]
 }
+
