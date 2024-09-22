@@ -1,8 +1,8 @@
 {
   "locations": [
     {
-      "name": "Sample B&B",
-      "description": "A cozy Bed and Breakfast in the heart of the city.",
+      "name": "Your B&B Name",
+      "description": "Your B&B Description",
       "phone": "+123456789",
       "website": "https://samplebandb.com",
       "image_link": "https://thermohouse.co.uk/wp-content/uploads/2019/04/hero-image.jpg",
