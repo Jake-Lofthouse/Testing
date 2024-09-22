@@ -391,10 +391,13 @@ function openCampsiteMap(lat, lon) {
            iconAnchor: [19, 38],
            popupAnchor: [0, -38]
         });
+        
+        //here
 
-        var markers = L.markerClusterGroup();
-        var data = {};
-        var cancellations = {};
+var bbMarkers = []; // Array to store BB markers
+var data = {};
+var cancellations = {};
+var markers = L.markerClusterGroup(); // Cluster for other markers
 
 // Function to normalize event names
 function normalizeEventName(name) {
@@ -402,24 +405,22 @@ function normalizeEventName(name) {
     return name.toLowerCase().replace(/\s+/g, '').replace('parkrun', '');
 }
 
- // Function to fetch location data
-    async function fetchLocationData() {
-        const url = 'https://raw.githubusercontent.com/ALD-Models/Testing/refs/heads/main/BBS/Locations.json';
-        try {
-            const response = await fetch(url);
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            const data = await response.json();
-            return data.locations; // Access the locations array
-        } catch (error) {
-            console.error('Failed to fetch the location data:', error);
-            return null;
+// Function to fetch location data
+async function fetchLocationData() {
+    const url = 'https://raw.githubusercontent.com/ALD-Models/Testing/refs/heads/main/BBS/Locations.json';
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
         }
+        const data = await response.json();
+        return data.locations; // Access the locations array
+    } catch (error) {
+        console.error('Failed to fetch the location data:', error);
+        return null;
     }
-    
-    
-    
+}
+
 function addMarkersToMap(locations) {
     locations.forEach(location => {
         const lat = location.coordinates.latitude;
@@ -430,31 +431,65 @@ function addMarkersToMap(locations) {
         const website = location.website;
         const image = location.image_link;
 
-        // Check if the map is zoomed in enough
-        if (map.getZoom() >= 10) {
-            // Create marker with BB icon
-            L.marker([lat, lon], { icon: bbIcon })
-                .addTo(map)
-                .bindPopup(
-                    `<div style="width: 200px;">
-                        <img src="${image}" alt="${name}" style="width: 100%; height: auto; border-top-left-radius: 10px; border-top-right-radius: 10px;">
-                        <div style="padding: 10px;">
-                            <b>${name}</b><br>
-                            ${description}<br>
-                            <a href="${website}" target="_blank" style="text-decoration: none;">
-                                <button class="hotel-btn" style="background-color: #f67d00; color: white; width: 100%; margin: 5px 0; border: none; border-radius: 5px; cursor: pointer;">
-                                    <i class="fas fa-globe"></i> Visit Website
-                                </button>
-                            </a>
-                            <button class="hotel-btn" style="background-color: #f67d00; color: white; width: 100%; margin: 5px 0; border: none; border-radius: 5px; cursor: pointer;" onclick="window.location.href='tel:${phone}'">
-                                <i class="fas fa-phone"></i> ${phone}
+        // Create marker with BB icon
+        const bbMarker = L.marker([lat, lon], { icon: bbIcon })
+            .bindPopup(
+                `<div style="width: 200px;">
+                    <img src="${image}" alt="${name}" style="width: 100%; height: auto; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                    <div style="padding: 10px;">
+                        <b>${name}</b><br>
+                        ${description}<br>
+                        <a href="${website}" target="_blank" style="text-decoration: none;">
+                            <button class="hotel-btn" style="background-color: #f67d00; color: white; width: 100%; margin: 5px 0; border: none; border-radius: 5px; cursor: pointer;">
+                                <i class="fas fa-globe"></i> Visit Website
                             </button>
-                        </div>
-                    </div>`
-                );
-        }
+                        </a>
+                        <button class="hotel-btn" style="background-color: #f67d00; color: white; width: 100%; margin: 5px 0; border: none; border-radius: 5px; cursor: pointer;" onclick="window.location.href='tel:${phone}'">
+                            <i class="fas fa-phone"></i> ${phone}
+                        </button>
+                    </div>
+                </div>`
+            );
+
+        // Store the BB marker
+        bbMarkers.push(bbMarker);
+        
+        // Add other markers to the cluster (if you have them)
+        markers.addLayer(bbMarker); // Optionally, you can skip this if not needed
     });
+    
+    updateMarkerVisibility(); // Check visibility after adding markers
 }
+
+// Function to update BB marker visibility based on zoom level
+function updateMarkerVisibility() {
+    if (map.getZoom() < 13) {
+        bbMarkers.forEach(marker => {
+            map.removeLayer(marker); // Remove BB markers when zoomed out
+        });
+    } else {
+        bbMarkers.forEach(marker => {
+            map.addLayer(marker); // Add BB markers when zoomed in
+        });
+    }
+}
+
+// Add other markers to the map (if any)
+function addOtherMarkersToMap(otherLocations) {
+    otherLocations.forEach(location => {
+        const lat = location.coordinates.latitude;
+        const lon = location.coordinates.longitude;
+        const marker = L.marker([lat, lon]); // Other markers without specific icon
+        markers.addLayer(marker); // Add to cluster
+    });
+    map.addLayer(markers); // Add the cluster to the map
+}
+
+// Event listener for zoom change
+map.on('zoomend', updateMarkerVisibility);
+
+
+//to here
 
 
 
