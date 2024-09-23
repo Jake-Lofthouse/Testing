@@ -453,9 +453,6 @@ function addMarkersToMap(locations) {
 
         // Store the BB marker
         bbMarkers.push(bbMarker);
-        
-        // Add other markers to the cluster (if you have them)
-        markers.addLayer(bbMarker); // Optionally, you can skip this if not needed
     });
     
     updateMarkerVisibility(); // Check visibility after adding markers
@@ -487,6 +484,7 @@ function addOtherMarkersToMap(otherLocations) {
 
 // Event listener for zoom change
 map.on('zoomend', updateMarkerVisibility);
+
 
 
 //to here
@@ -638,7 +636,7 @@ fetch('https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/parkruns
             })
             .catch(err => console.error('Error fetching GeoJSON:', err));
 
-        document.getElementById('search-icon').addEventListener('click', function() {
+    document.getElementById('search-icon').addEventListener('click', function() {
     var input = document.getElementById('search-input');
     var clearBtn = document.getElementById('clear-btn');
     var searchIcon = document.getElementById('search-icon');
