@@ -14,7 +14,7 @@
             margin: 0;
             padding: 0;
             background: linear-gradient(135deg, #7ed957, #64af46);
-            overflow-x: hidden; /* Prevent horizontal scrolling */
+            overflow-x: hidden;
         }
 
         .container {
@@ -23,59 +23,70 @@
             background: white;
             padding: 30px;
             border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            border: 1px solid #e1e1e1;
-            text-align: center; /* Center-align text and elements */
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
         }
 
         h1 {
             color: #333;
-            font-size: 1.8em;
+            font-size: 2em;
             margin-bottom: 20px;
+            font-weight: bold;
         }
 
-        p,
+        p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 1em;
+            margin-bottom: 15px; /* Add spacing between paragraphs */
+        }
+
+        strong {
+            color: #333; /* Strong text color for emphasis */
+            font-weight: bold;
+        }
+
         ul {
             color: #555;
             line-height: 1.6;
+            padding: 0;
+            list-style: none;
+            margin: 20px 0; /* Add spacing above and below the list */
         }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
+        li {
+            margin: 10px 0; /* Space between list items */
+            text-align: left; /* Align list items to the left */
         }
 
         .bb-icon-container {
             display: flex;
             justify-content: center;
             margin: 20px 0;
-            gap: 10px; /* Space between icons */
+            gap: 15px;
         }
 
         .bb-icon {
-            width: auto; /* Maintain aspect ratio */
-            height: 100px; /* Set a consistent height */
-            cursor: pointer; /* Indicate that the icon is clickable */
-            transition: transform 0.3s ease;
+            height: 100px;
+            cursor: pointer;
+            transition: transform 0.3s ease, filter 0.3s ease;
         }
 
         .bb-icon:hover {
-            transform: scale(1.05); /* Slightly enlarge on hover */
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
         }
 
         .stripe-button {
             margin: 20px auto;
-            padding: 15px 25px;
+            padding: 15px 30px;
             background-color: #007bff;
             color: white;
             border: none;
-            border-radius: 8px;
-            text-align: center;
+            border-radius: 25px;
+            font-size: 1.1em;
             cursor: pointer;
             transition: background-color 0.3s, transform 0.3s;
-            font-size: 1.1em;
-            display: inline-block; /* Center the button */
         }
 
         .stripe-button:hover {
@@ -85,11 +96,18 @@
 
         @media (max-width: 600px) {
             .bb-icon {
-                height: 80px; /* Adjust size for mobile */
+                height: 80px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            p {
+                font-size: 0.9em;
             }
         }
 
-        /* Modal styles */
         .modal {
             display: none;
             position: fixed;
@@ -98,7 +116,6 @@
             top: 0;
             width: 100%;
             height: 100%;
-            overflow: auto;
             background-color: rgba(0, 0, 0, 0.8);
             justify-content: center;
             align-items: center;
@@ -108,6 +125,8 @@
             margin: 20px;
             max-width: 90%;
             max-height: 90%;
+            border-radius: 10px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
         }
 
         .close {
@@ -125,19 +144,23 @@
 <body>
 
     <div class="container">
-        <h1>Join the parkrunner tourist App Community!</h1>
+        <h1>Join the Parkrunner Tourist App Community!</h1>
+        <p><strong>Are you a proud owner of a parkrun-friendly B&B?</strong></p>
         <p>
-            <strong>Are you a proud owner of a parkrun friendly B&B?</strong> Attract more guests and boost your visibility by adding your establishment to the parkrunner tourist App. Our platform connects parkrunners with welcoming accommodations, for those seeking a delightful stay before/after a rewarding run.
+            Attract more guests and boost your visibility by adding your establishment to the Parkrunner Tourist App. 
+            Our platform connects parkrunners with welcoming accommodations for a delightful stay before or after a rewarding run.
         </p>
         <p><strong>The cost?</strong> A one-time admin fee of £5!</p>
+        
         <p><strong>Why Join Us?</strong></p>
         <ul>
-            <li>Reach New Customers: Be discovered by a community of dedicated park runners.</li>
-            <li>Enhance Your Visibility: Accommodation is displayed near to parkrun events.</li>
+            <li><strong>Reach New Customers:</strong> Be discovered by a community of dedicated park runners.</li>
+            <li><strong>Enhance Your Visibility:</strong> Your accommodation will be shown near parkrun events.</li>
         </ul>
 
+        <p><strong>Our Simple Requirements:</strong></p>
         <p>
-            <strong>Our Simple Requirements are:</strong> For you to be within a 20min walk/drive of a parkrun event and allow time for people to have a shower after & serve breakfast until 11:30am and you’re in!
+            Be within a 20-minute walk or drive of a parkrun event, allow time for guests to shower after, and serve breakfast until 11:30 AM, and you're in!
         </p>
 
         <div class="bb-icon-container">
@@ -168,7 +191,7 @@
             icons.forEach(icon => {
                 icon.addEventListener('click', function () {
                     modal.style.display = "flex";
-                    modalImg.src = this.src; // Set the modal image source
+                    modalImg.src = this.src;
                 });
             });
 
