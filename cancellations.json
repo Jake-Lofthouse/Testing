@@ -1,5 +1,10 @@
 [
     {
+        "name": "Aylesbury parkrun",
+        "reason": "parts of both normal and alternate course flooded",
+        "date": "2024-09-28"
+    },
+    {
         "name": "Bangor parkrun, Northern Ireland",
         "reason": "Bangor 10K uses part of the course",
         "date": "2024-09-28"
@@ -42,6 +47,11 @@
     {
         "name": "Downsview parkrun",
         "reason": "YMCA Charity 5K event using the same event route",
+        "date": "2024-09-28"
+    },
+    {
+        "name": "Ebotse parkrun",
+        "reason": "Venue unavailable",
         "date": "2024-09-28"
     },
     {
