@@ -70,6 +70,11 @@
         "date": "2024-09-28"
     },
     {
+        "name": "Jeffreys Bay parkrun",
+        "reason": "Local health restrictions",
+        "date": "2024-09-28"
+    },
+    {
         "name": "Kingdom parkrun",
         "reason": "Triathlon taking place",
         "date": "2024-09-28"
@@ -106,6 +111,11 @@
     },
     {
         "name": "Morrinsville Recreation Ground parkrun",
+        "reason": "Venue unavailable",
+        "date": "2024-09-28"
+    },
+    {
+        "name": "New Earswick parkrun",
         "reason": "Venue unavailable",
         "date": "2024-09-28"
     },
