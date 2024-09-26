@@ -250,6 +250,11 @@
         "date": "2024-09-28"
     },
     {
+        "name": "Watermead Country Park parkrun",
+        "reason": "Course is flooded",
+        "date": "2024-09-28"
+    },
+    {
         "name": "Watermeadows parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-09-28"
@@ -300,6 +305,11 @@
         "date": "2024-09-29"
     },
     {
+        "name": "Evesham junior parkrun",
+        "reason": "Weather",
+        "date": "2024-09-29"
+    },
+    {
         "name": "Forest Rec junior parkrun",
         "reason": "Goose Fair on at Forest Rec",
         "date": "2024-09-29"
@@ -317,6 +327,11 @@
     {
         "name": "Pitshanger junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-09-29"
+    },
+    {
+        "name": "Riverside junior parkrun, St Neots",
+        "reason": "Weather",
         "date": "2024-09-29"
     },
     {
