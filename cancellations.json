@@ -60,6 +60,11 @@
         "date": "2024-09-28"
     },
     {
+        "name": "Great Denham parkrun",
+        "reason": "Weather",
+        "date": "2024-09-28"
+    },
+    {
         "name": "Hasenheide parkrun",
         "reason": "Berlin Marathon - Zu hohe Teilnehmerzahl erwartet.",
         "date": "2024-09-28"
@@ -72,6 +77,11 @@
     {
         "name": "Henlow Bridge Lakes parkrun",
         "reason": "Course is flooded with more rain forecast",
+        "date": "2024-09-28"
+    },
+    {
+        "name": "Higginson parkrun, Marlow",
+        "reason": "Course flooded",
         "date": "2024-09-28"
     },
     {
