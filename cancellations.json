@@ -10,6 +10,11 @@
         "date": "2024-09-28"
     },
     {
+        "name": "Ballina Coast parkrun",
+        "reason": "Weather",
+        "date": "2024-09-28"
+    },
+    {
         "name": "Banbury parkrun",
         "reason": "Bad Weather and Course Waterlogged in places",
         "date": "2024-09-28"
@@ -35,13 +40,28 @@
         "date": "2024-09-28"
     },
     {
+        "name": "Buckingham parkrun",
+        "reason": "The whole park is one big lake!!",
+        "date": "2024-09-28"
+    },
+    {
         "name": "Burnham-on-Crouch parkrun",
         "reason": "Venue unavailable",
         "date": "2024-09-28"
     },
     {
+        "name": "California Country parkrun",
+        "reason": "Weather",
+        "date": "2024-09-28"
+    },
+    {
         "name": "Chichester parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-09-28"
+    },
+    {
+        "name": "Coffs Harbour parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-09-28"
     },
     {
@@ -67,6 +87,11 @@
     {
         "name": "Ebotse parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-09-28"
+    },
+    {
+        "name": "Evesham parkrun",
+        "reason": "Weather",
         "date": "2024-09-28"
     },
     {
@@ -225,6 +250,11 @@
         "date": "2024-09-28"
     },
     {
+        "name": "Sunset Hills Shitasanbashi parkrun",
+        "reason": "Weather",
+        "date": "2024-09-28"
+    },
+    {
         "name": "Temple Newsam parkrun",
         "reason": "Other event in the park",
         "date": "2024-09-28"
@@ -265,6 +295,11 @@
         "date": "2024-09-28"
     },
     {
+        "name": "Warragul parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-09-28"
+    },
+    {
         "name": "Watermead Country Park parkrun",
         "reason": "Course is flooded",
         "date": "2024-09-28"
@@ -272,6 +307,11 @@
     {
         "name": "Watermeadows parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2024-09-28"
+    },
+    {
+        "name": "Wolford Wood parkrun",
+        "reason": "Course flooded",
         "date": "2024-09-28"
     },
     {
@@ -320,6 +360,11 @@
         "date": "2024-09-28"
     },
     {
+        "name": "Buckingham junior parkrun",
+        "reason": "The entire park is under water!",
+        "date": "2024-09-29"
+    },
+    {
         "name": "Calne Recreation Ground junior parkrun",
         "reason": "Another event on part of course",
         "date": "2024-09-29"
@@ -332,6 +377,11 @@
     {
         "name": "Forest Rec junior parkrun",
         "reason": "Goose Fair on at Forest Rec",
+        "date": "2024-09-29"
+    },
+    {
+        "name": "Great Denham junior parkrun",
+        "reason": "Aquaman has taken up residence in the country park",
         "date": "2024-09-29"
     },
     {
