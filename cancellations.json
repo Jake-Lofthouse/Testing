@@ -35,6 +35,11 @@
         "date": "2024-09-28"
     },
     {
+        "name": "Brockwell parkrun, Herne Hill",
+        "reason": "Weather",
+        "date": "2024-09-28"
+    },
+    {
         "name": "Bryn Bach parkrun",
         "reason": "Another event taking place at the park",
         "date": "2024-09-28"
@@ -60,6 +65,11 @@
         "date": "2024-09-28"
     },
     {
+        "name": "Cirencester parkrun",
+        "reason": "Extensive flooding",
+        "date": "2024-09-28"
+    },
+    {
         "name": "Coffs Harbour parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-09-28"
@@ -77,6 +87,11 @@
     {
         "name": "Deep Run parkrun",
         "reason": "Other 5k in the park",
+        "date": "2024-09-28"
+    },
+    {
+        "name": "Depot Park parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-09-28"
     },
     {
@@ -160,6 +175,11 @@
         "date": "2024-09-28"
     },
     {
+        "name": "Millennium Country parkrun, Forest of Marston Vale",
+        "reason": "Asked to cancel by land owners",
+        "date": "2024-09-28"
+    },
+    {
         "name": "Milton Keynes parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-09-28"
@@ -235,6 +255,11 @@
         "date": "2024-09-28"
     },
     {
+        "name": "Sandhurst Memorial parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-09-28"
+    },
+    {
         "name": "Scarborough parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-09-28"
@@ -250,6 +275,11 @@
         "date": "2024-09-28"
     },
     {
+        "name": "Stratford-upon-Avon parkrun",
+        "reason": "1\u00bdm puddles forecast - too much even 4 Leamington",
+        "date": "2024-09-28"
+    },
+    {
         "name": "Sunset Hills Shitasanbashi parkrun",
         "reason": "Weather",
         "date": "2024-09-28"
@@ -257,6 +287,11 @@
     {
         "name": "Temple Newsam parkrun",
         "reason": "Other event in the park",
+        "date": "2024-09-28"
+    },
+    {
+        "name": "Tewkesbury parkrun",
+        "reason": "Course is flooded",
         "date": "2024-09-28"
     },
     {
@@ -317,6 +352,16 @@
     {
         "name": "parkrun Bulwar nad Wis\u0142\u0105",
         "reason": "Stan kl\u0119ski \u017cywio\u0142owej na \u015al\u0105sku",
+        "date": "2024-09-28"
+    },
+    {
+        "name": "parkrun Park Miejski, Wejherowo",
+        "reason": "Weather",
+        "date": "2024-09-28"
+    },
+    {
+        "name": "parkrun Wroc\u0142aw",
+        "reason": "Venue unavailable",
         "date": "2024-09-28"
     },
     {
