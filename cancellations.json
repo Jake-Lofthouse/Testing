@@ -60,6 +60,11 @@
         "date": "2024-09-28"
     },
     {
+        "name": "Canons Park parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-09-28"
+    },
+    {
         "name": "Chichester parkrun",
         "reason": "Venue unavailable",
         "date": "2024-09-28"
@@ -110,6 +115,11 @@
         "date": "2024-09-28"
     },
     {
+        "name": "George Lane Memorial parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-09-28"
+    },
+    {
         "name": "Gloucester City parkrun",
         "reason": "Shortage of volunteers",
         "date": "2024-09-28"
@@ -152,6 +162,16 @@
     {
         "name": "Kingdom parkrun",
         "reason": "Triathlon taking place",
+        "date": "2024-09-28"
+    },
+    {
+        "name": "Kingsbury Water parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-09-28"
+    },
+    {
+        "name": "Kirra parkrun",
+        "reason": "Weather",
         "date": "2024-09-28"
     },
     {
@@ -270,6 +290,11 @@
         "date": "2024-09-28"
     },
     {
+        "name": "Sixfields Upton parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-09-28"
+    },
+    {
         "name": "Spanish Banks Beach parkrun",
         "reason": "Venue unavailable",
         "date": "2024-09-28"
@@ -342,6 +367,11 @@
     {
         "name": "Watermeadows parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2024-09-28"
+    },
+    {
+        "name": "Weedon Island Preserve parkrun",
+        "reason": "Hurricane Helene Storm Surge Preventing Access",
         "date": "2024-09-28"
     },
     {
@@ -430,6 +460,11 @@
         "date": "2024-09-29"
     },
     {
+        "name": "Mallow Castle junior parkrun",
+        "reason": "Weather",
+        "date": "2024-09-29"
+    },
+    {
         "name": "Norfolk Heritage Park junior parkrun",
         "reason": "Shortage of volunteers",
         "date": "2024-09-29"
@@ -457,6 +492,11 @@
     {
         "name": "Shrewsbury junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-09-29"
+    },
+    {
+        "name": "St Mary\u2019s Campus junior parkrun",
+        "reason": "Weather",
         "date": "2024-09-29"
     },
     {
