@@ -515,6 +515,11 @@
         "date": "2024-09-29"
     },
     {
+        "name": "Clashduv junior parkrun",
+        "reason": "Weather",
+        "date": "2024-09-29"
+    },
+    {
         "name": "Croyland Park junior parkrun",
         "reason": "Weather",
         "date": "2024-09-29"
@@ -540,6 +545,16 @@
         "date": "2024-09-29"
     },
     {
+        "name": "Haulbowline Island junior parkrun",
+        "reason": "Weather",
+        "date": "2024-09-29"
+    },
+    {
+        "name": "Heritage Park junior parkrun",
+        "reason": "Weather",
+        "date": "2024-09-29"
+    },
+    {
         "name": "Mallow Castle junior parkrun",
         "reason": "Weather",
         "date": "2024-09-29"
@@ -557,6 +572,11 @@
     {
         "name": "Park Hill Recreation Ground junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-09-29"
+    },
+    {
+        "name": "Park View junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-09-29"
     },
     {
@@ -602,6 +622,11 @@
     {
         "name": "Vicarstown junior parkrun",
         "reason": "Juvenile Cross Country Championships taking place",
+        "date": "2024-09-29"
+    },
+    {
+        "name": "Watermead Country Park junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-09-29"
     }
 ]
