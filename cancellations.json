@@ -35,6 +35,11 @@
         "date": "2024-09-28"
     },
     {
+        "name": "Bill Rose Sports Complex parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-09-28"
+    },
+    {
         "name": "Brockwell parkrun, Herne Hill",
         "reason": "Weather",
         "date": "2024-09-28"
@@ -80,8 +85,18 @@
         "date": "2024-09-28"
     },
     {
+        "name": "Cormorant Bay parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-09-28"
+    },
+    {
         "name": "Crawfordsburn Country parkrun",
         "reason": "Bangor 10k same day, leading to shortage volunteer",
+        "date": "2024-09-28"
+    },
+    {
+        "name": "Creekside parkrun",
+        "reason": "Storm aftermath",
         "date": "2024-09-28"
     },
     {
@@ -127,6 +142,11 @@
     {
         "name": "Great Denham parkrun",
         "reason": "Weather",
+        "date": "2024-09-28"
+    },
+    {
+        "name": "Halsema Trailhead parkrun",
+        "reason": "Unsafe Course. Divert 2 Ed Austin Regional parkrun",
         "date": "2024-09-28"
     },
     {
@@ -220,8 +240,18 @@
         "date": "2024-09-28"
     },
     {
+        "name": "Nathan Road Sports Ground parkrun",
+        "reason": "Weather",
+        "date": "2024-09-28"
+    },
+    {
         "name": "New Earswick parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-09-28"
+    },
+    {
+        "name": "Northside Beltline parkrun",
+        "reason": "Weather",
         "date": "2024-09-28"
     },
     {
@@ -297,6 +327,11 @@
     {
         "name": "Spanish Banks Beach parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-09-28"
+    },
+    {
+        "name": "Stones Corner parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-09-28"
     },
     {
@@ -380,6 +415,11 @@
         "date": "2024-09-28"
     },
     {
+        "name": "Yamba parkrun",
+        "reason": "Weather",
+        "date": "2024-09-28"
+    },
+    {
         "name": "parkrun Bulwar nad Wis\u0142\u0105",
         "reason": "Stan kl\u0119ski \u017cywio\u0142owej na \u015al\u0105sku",
         "date": "2024-09-28"
@@ -442,6 +482,11 @@
     {
         "name": "Calne Recreation Ground junior parkrun",
         "reason": "Another event on part of course",
+        "date": "2024-09-29"
+    },
+    {
+        "name": "Croyland Park junior parkrun",
+        "reason": "Weather",
         "date": "2024-09-29"
     },
     {
