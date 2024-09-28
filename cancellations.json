@@ -130,6 +130,11 @@
         "date": "2024-09-28"
     },
     {
+        "name": "Ferry Meadows parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-09-28"
+    },
+    {
         "name": "George Lane Memorial parkrun",
         "reason": "Shortage of volunteers",
         "date": "2024-09-28"
@@ -245,6 +250,11 @@
         "date": "2024-09-28"
     },
     {
+        "name": "Mthatha parkrun",
+        "reason": "Venue unavailable",
+        "date": "2024-09-28"
+    },
+    {
         "name": "Nathan Road Sports Ground parkrun",
         "reason": "Weather",
         "date": "2024-09-28"
@@ -347,6 +357,11 @@
     {
         "name": "Sunset Hills Shitasanbashi parkrun",
         "reason": "Weather",
+        "date": "2024-09-28"
+    },
+    {
+        "name": "Tamworth Castle Grounds parkrun",
+        "reason": "Them pesky Whales and Dolphins have moved back in",
         "date": "2024-09-28"
     },
     {
@@ -480,6 +495,16 @@
         "date": "2024-09-28"
     },
     {
+        "name": "Ballincollig Regional junior parkrun",
+        "reason": "Status orange rainfall warning on Sunday",
+        "date": "2024-09-29"
+    },
+    {
+        "name": "Billingham junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-09-29"
+    },
+    {
         "name": "Buckingham junior parkrun",
         "reason": "The entire park is under water!",
         "date": "2024-09-29"
@@ -502,6 +527,11 @@
     {
         "name": "Forest Rec junior parkrun",
         "reason": "Goose Fair on at Forest Rec",
+        "date": "2024-09-29"
+    },
+    {
+        "name": "Gedling junior parkrun",
+        "reason": "No DBS checked RD available",
         "date": "2024-09-29"
     },
     {
