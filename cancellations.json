@@ -75,6 +75,11 @@
         "date": "2024-10-05"
     },
     {
+        "name": "Nagaragawa koen parkrun",
+        "reason": "Venue unavailable",
+        "date": "2024-10-05"
+    },
+    {
         "name": "Nathalia Showgrounds parkrun",
         "reason": "Nathalia Agricultural Show will be using all roads",
         "date": "2024-10-05"
@@ -122,6 +127,11 @@
     {
         "name": "Walvis Bay parkrun",
         "reason": "Bachmus Coastal 5km on route",
+        "date": "2024-10-05"
+    },
+    {
+        "name": "Watermeadows parkrun",
+        "reason": "The river keeps eating the path.",
         "date": "2024-10-05"
     },
     {
