@@ -1,5 +1,10 @@
 [
     {
+        "name": "Aylesbury parkrun",
+        "reason": "Weather",
+        "date": "2024-10-05"
+    },
+    {
         "name": "Bathurst parkrun",
         "reason": "Venue unavailable",
         "date": "2024-10-05"
