@@ -100,6 +100,11 @@
         "date": "2024-10-05"
     },
     {
+        "name": "Pittsworth parkrun",
+        "reason": "Venue unavailable",
+        "date": "2024-10-05"
+    },
+    {
         "name": "Pocket parkrun",
         "reason": "Flooding",
         "date": "2024-10-05"
@@ -162,6 +167,11 @@
     {
         "name": "parkrun B\u0142onie",
         "reason": "Lokalny Bieg Zamoyskiego. Brak Wolontariuszy",
+        "date": "2024-10-05"
+    },
+    {
+        "name": "parkrun Wroc\u0142aw",
+        "reason": "Venue unavailable",
         "date": "2024-10-05"
     },
     {
