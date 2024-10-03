@@ -10,11 +10,11 @@
             font-family: 'SF Pro Display';
             src: url('https://developer.apple.com/fonts/SF-Pro-Display/SF-Pro-Display-Regular.otf') format('opentype');
         }
+
         body {
             font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            
             text-align: center;
-            padding: 20px;
+            padding: 5% 2%;
             margin: 0;
             color: #fff;
             background-size: cover;
@@ -22,37 +22,44 @@
             background-repeat: no-repeat;
             transition: background 0.5s ease;
         }
+
         h1 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
+            font-size: 6vw; /* Responsive font size */
+            margin-bottom: 5%;
             color: #fff;
         }
+
         #weather {
-            font-size: 1.4rem;
-            margin-top: 20px;
+            font-size: 4vw; /* Responsive font size */
+            margin-top: 5%;
             color: #fff;
         }
+
         img {
-            margin-top: 10px;
+            margin-top: 2%;
+            max-width: 50%; /* Ensures image is responsive */
+            height: auto; /* Maintains aspect ratio */
         }
 
         /* Responsive Design */
         @media (max-width: 600px) {
             h1 {
-                font-size: 1.5rem;
+                font-size: 8vw; /* Increased size for small screens */
             }
             #weather {
-                font-size: 1.2rem;
+                font-size: 5vw; /* Increased size for small screens */
             }
         }
 
         /* Additional styles for container */
         .container {
             border: 2px solid rgba(255, 255, 255, 0.5); /* Light border around the weather info */
-            padding: 15px;
+            padding: 5%;
             border-radius: 10px;
             background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
             display: inline-block; /* Center the container */
+            max-width: 90%; /* Responsive container width */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Optional shadow for depth */
         }
     </style>
 </head>
@@ -105,10 +112,8 @@
                 
                 const iconUrl = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
 
-                weatherElement.innerHTML = `
-                    The temperature will be ${temp}°C with ${weatherDescription}.<br>
-                    <img src="${iconUrl}" alt="${weatherDescription}">
-                `;
+                weatherElement.innerHTML = `The temperature will be ${temp}°C with ${weatherDescription}.<br>
+                    <img src="${iconUrl}" alt="${weatherDescription}">`;
 
                 // Change background based on weather condition
                 const body = document.body;
