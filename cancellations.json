@@ -1,5 +1,10 @@
 [
     {
+        "name": "Abingdon parkrun",
+        "reason": "Flooding on the course",
+        "date": "2024-10-05"
+    },
+    {
         "name": "Aylesbury parkrun",
         "reason": "Weather",
         "date": "2024-10-05"
@@ -172,6 +177,11 @@
     {
         "name": "Waterfall parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-10-05"
+    },
+    {
+        "name": "Watermead Country Park parkrun",
+        "reason": "Course underwater",
         "date": "2024-10-05"
     },
     {
