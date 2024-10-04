@@ -230,12 +230,14 @@
              display: none;
         }
         
-        iframe {
-            width: 100%;  /* Full width */
-            border: none; /* Remove border */
-            overflow: hidden; /* Disable scrollbars */
-        }
-        
+    iframe {
+        width: 100%;  /* Full width */
+        border: none; /* Remove border */
+        overflow: hidden; /* Disable scrollbars */
+        border-radius: 5px; /* Rounded corners */
+       }
+
+
     </style>
 </head>
 <body>
@@ -383,16 +385,27 @@ function openCampsiteMap(lat, lon) {
             popupAnchor: [0, -38]
         });
         
-        var canceledIcon = L.icon({
-    iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/Icons/Cancel.png',
-    iconSize: [38, 38],
-    iconAnchor: [19, 38],
-    popupAnchor: [0, -38]
-});
+        var bbIcon = L.icon({
+           iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/Icons/BB.png',  // Replace with actual icon URL
+           iconSize: [38, 38],
+           iconAnchor: [19, 38],
+           popupAnchor: [0, -38]
+        });
 
-        var markers = L.markerClusterGroup();
-        var data = {};
+        
+        var canceledIcon = L.icon({
+           iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/Icons/Cancel.png',
+           iconSize: [38, 38],
+           iconAnchor: [19, 38],
+           popupAnchor: [0, -38]
+        });
+        
+        //here
+
+var bbMarkers = []; // Array to store BB markers
+var data = {};
 var cancellations = {};
+var markers = L.markerClusterGroup(); // Cluster for other markers
 
 // Function to normalize event names
 function normalizeEventName(name) {
@@ -400,6 +413,106 @@ function normalizeEventName(name) {
     return name.toLowerCase().replace(/\s+/g, '').replace('parkrun', '');
 }
 
+// Function to fetch location data
+async function fetchLocationData() {
+    const url = 'https://raw.githubusercontent.com/ALD-Models/Testing/refs/heads/main/BBS/Locations.json';
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const data = await response.json();
+        return data.locations; // Access the locations array
+    } catch (error) {
+        console.error('Failed to fetch the location data:', error);
+        return null;
+    }
+}
+
+function addMarkersToMap(locations) {
+    locations.forEach(location => {
+        const lat = location.coordinates.latitude;
+        const lon = location.coordinates.longitude;
+        const name = location.name;
+        const description = location.description;
+        const phone = location.phone;
+        const website = location.website;
+        const image = location.image_link;
+
+        // Create marker with BB icon
+        const bbMarker = L.marker([lat, lon], { icon: bbIcon })
+            .bindPopup(
+                `<div style="width: 200px;">
+                    <img src="${image}" alt="${name}" style="width: 100%; height: auto; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                    <div style="padding: 10px;">
+                        <b>${name}</b><br>
+                        ${description}<br>
+                        <a href="${website}" target="_blank" style="text-decoration: none;">
+                            <button class="hotel-btn" style="background-color: #f67d00; color: white; width: 100%; margin: 5px 0; border: none; border-radius: 5px; cursor: pointer;">
+                                <i class="fas fa-globe"></i> Visit Website
+                            </button>
+                        </a>
+                        <button class="hotel-btn" style="background-color: #f67d00; color: white; width: 100%; margin: 5px 0; border: none; border-radius: 5px; cursor: pointer;" onclick="window.location.href='tel:${phone}'">
+                            <i class="fas fa-phone"></i> ${phone}
+                        </button>
+                    </div>
+                </div>`
+            );
+
+        // Store the BB marker
+        bbMarkers.push(bbMarker);
+    });
+    
+    updateMarkerVisibility(); // Check visibility after adding markers
+}
+
+// Function to update BB marker visibility based on zoom level
+function updateMarkerVisibility() {
+    if (map.getZoom() < 13) {
+        bbMarkers.forEach(marker => {
+            map.removeLayer(marker); // Remove BB markers when zoomed out
+        });
+    } else {
+        bbMarkers.forEach(marker => {
+            map.addLayer(marker); // Add BB markers when zoomed in
+        });
+    }
+}
+
+// Add other markers to the map (if any)
+function addOtherMarkersToMap(otherLocations) {
+    otherLocations.forEach(location => {
+        const lat = location.coordinates.latitude;
+        const lon = location.coordinates.longitude;
+        const marker = L.marker([lat, lon]); // Other markers without specific icon
+        markers.addLayer(marker); // Add to cluster
+    });
+    map.addLayer(markers); // Add the cluster to the map
+}
+
+// Event listener for zoom change
+map.on('zoomend', updateMarkerVisibility);
+
+
+
+//to here
+
+
+
+
+
+
+    // Fetch location data and add to the map
+    fetchLocationData().then(data => {
+        if (data && Array.isArray(data)) {
+            addMarkersToMap(data);
+        } else {
+            console.error('Invalid location data');
+        }
+    });
+
+
+ 
 // Fetch cancellation data
 fetch('https://raw.githubusercontent.com/ALD-Models/Testing/main/cancellations.json')
     .then(response => response.json())
@@ -436,7 +549,7 @@ function updateMapMarkers() {
                 var popupContent = `
                     <div>
                         <div class="popup-title">${eventLongName}</div>
-                          <iframe id="weatherIframe" src="https://parkrunnertourist.co.uk/weather?lat=${coordinates[1]}&lon=${coordinates[0]}" scrolling="no"></iframe>
+                        <iframe id="weatherIframe" src="https://parkrunnertourist.co.uk/weather?lat=${coordinates[1]}&lon=${coordinates[0]}" scrolling="no"></iframe>
                         <button class="course-btn" onclick="openUrl('${countryUrl}/${eventname}/course/')">Course</button><br>
                         <button class="volunteer-btn" onclick="openUrl('${countryUrl}/${eventname}/futureroster/')">Volunteer</button><br>
                         <button class="direction-btn" onclick="openDirections(${coordinates[1]}, ${coordinates[0]})">Directions</button><br>
@@ -532,7 +645,7 @@ fetch('https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/parkruns
             })
             .catch(err => console.error('Error fetching GeoJSON:', err));
 
-        document.getElementById('search-icon').addEventListener('click', function() {
+    document.getElementById('search-icon').addEventListener('click', function() {
     var input = document.getElementById('search-input');
     var clearBtn = document.getElementById('clear-btn');
     var searchIcon = document.getElementById('search-icon');
@@ -543,7 +656,7 @@ fetch('https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/parkruns
             
         });
 
-        document.getElementById('clear-btn').addEventListener('click', function() {
+document.getElementById('clear-btn').addEventListener('click', function() {
     var input = document.getElementById('search-input');
     var searchIcon = document.getElementById('search-icon');
     input.value = '';
@@ -577,6 +690,7 @@ document.getElementById('search-input').addEventListener('input', function() {
                     var popupContent = `
                         <div>
                             <div class="popup-title">${feature.properties.EventLongName}</div>
+                            <iframe id="weatherIframe" src="https://parkrunnertourist.co.uk/weather?lat=${coordinates[1]}&lon=${coordinates[0]}" scrolling="no"></iframe>
                             <button class="course-btn" onclick="openUrl('https://www.parkrun.org.uk/${eventname}/course/')">Course</button><br>
                             <button class="volunteer-btn" onclick="openUrl('https://www.parkrun.org.uk/${eventname}/futureroster/')">Volunteer</button><br>
                             <button class="direction-btn" onclick="openDirections(${coordinates[1]}, ${coordinates[0]})">Directions</button><br>
@@ -596,7 +710,7 @@ document.getElementById('search-input').addEventListener('input', function() {
                                 <button class="hotel-btn" onclick="chooseAccommodation(${coordinates[1]}, ${coordinates[0]})">Accommodation</button>
                             </div>
                         `;
-                        markerIcon = L.icon({ iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/4.png', iconSize: [38, 38] }); // Adjust path and size as needed
+                        markerIcon = L.icon({ iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/Icons/Cancel.png', iconSize: [38, 38] }); // Adjust path and size as needed
                     } else {
                         markerIcon = isJunior ? juniorIcon : fiveKIcon;
                     }
