@@ -250,6 +250,11 @@
         "date": "2024-10-05"
     },
     {
+        "name": "Wascana parkrun",
+        "reason": "Venue unavailable",
+        "date": "2024-10-05"
+    },
+    {
         "name": "Waterfall parkrun",
         "reason": "Venue unavailable",
         "date": "2024-10-05"
@@ -323,6 +328,11 @@
         "name": "parkrun du Lac de Divonne",
         "reason": "parkrun est actuellement suspendu en France",
         "date": "2024-10-05"
+    },
+    {
+        "name": "Alyn Waters junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-10-06"
     },
     {
         "name": "Bryn Bach junior parkrun",
