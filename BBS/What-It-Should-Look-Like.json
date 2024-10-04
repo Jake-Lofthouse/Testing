@@ -1,1 +1,29 @@
+{
+  "locations": [
+    {
+      "name": "Your B&B Name",
+      "description": "Your B&B Description",
+      "phone": "07895 542610",
+      "website": "https://samplebandb.com",
+      "image_link": "https://thermohouse.co.uk/wp-content/uploads/2019/04/hero-image.jpg",
+      "address": "123 Main St, Example City",
+      "coordinates": {
+        "latitude": 53.37185392166244,
+        "longitude": -1.517024213230913
+      }
+    },
+    {
+      "name": "Seaside Retreat",
+      "description": "Enjoy a peaceful stay by the ocean.",
+      "phone": "+987654321",
+      "website": "https://seasideretreat.com",
+      "image_link": "https://seasideretreat.com/image.jpg",
+      "address": "456 Coastal Rd, Beach Town",
+      "coordinates": {
+        "latitude": 36.778259,
+        "longitude": -119.417931
+      }
+    }
+  ]
+}
 
