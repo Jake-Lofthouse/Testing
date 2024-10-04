@@ -75,6 +75,11 @@
         "date": "2024-10-05"
     },
     {
+        "name": "Ferry Meadows parkrun",
+        "reason": "Flooding. Swans have taken over the course.",
+        "date": "2024-10-05"
+    },
+    {
         "name": "Ford parkrun",
         "reason": "Building work in Park",
         "date": "2024-10-05"
@@ -177,6 +182,11 @@
     {
         "name": "Tsujido kaihin koen parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-10-05"
+    },
+    {
+        "name": "Urayasushi sogo koen parkrun",
+        "reason": "Weather",
         "date": "2024-10-05"
     },
     {
