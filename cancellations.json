@@ -45,6 +45,11 @@
         "date": "2024-10-05"
     },
     {
+        "name": "Camperdown parkrun, Dundee",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-10-05"
+    },
+    {
         "name": "Chichibu Muse Park parkrun",
         "reason": "Venue unavailable",
         "date": "2024-10-05"
@@ -52,6 +57,11 @@
     {
         "name": "Coler Mountain Bike Preserve parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-10-05"
+    },
+    {
+        "name": "Coober Pedy Oval parkrun",
+        "reason": "ED refusal (as per social media)",
         "date": "2024-10-05"
     },
     {
@@ -90,6 +100,11 @@
         "date": "2024-10-05"
     },
     {
+        "name": "Great Denham parkrun",
+        "reason": "Course still underwater.",
+        "date": "2024-10-05"
+    },
+    {
         "name": "Greenpoint parkrun",
         "reason": "Major sporting event in the precinct",
         "date": "2024-10-05"
@@ -110,8 +125,33 @@
         "date": "2024-10-05"
     },
     {
+        "name": "Karoola Park parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-10-05"
+    },
+    {
+        "name": "Kathu parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-10-05"
+    },
+    {
+        "name": "Mallow Castle parkrun",
+        "reason": "Weather",
+        "date": "2024-10-05"
+    },
+    {
         "name": "Millennium parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-10-05"
+    },
+    {
+        "name": "Miyagawa koen parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-10-05"
+    },
+    {
+        "name": "Moana parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2024-10-05"
     },
     {
@@ -145,6 +185,11 @@
         "date": "2024-10-05"
     },
     {
+        "name": "Reading parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-10-05"
+    },
+    {
         "name": "Riverside parkrun, Kamloops",
         "reason": "Venue unavailable",
         "date": "2024-10-05"
@@ -170,6 +215,11 @@
         "date": "2024-10-05"
     },
     {
+        "name": "The Grand Canal Way parkrun, Tullamore",
+        "reason": "Insurance clarification",
+        "date": "2024-10-05"
+    },
+    {
         "name": "The Terrace parkrun",
         "reason": "Venue unavailable",
         "date": "2024-10-05"
@@ -177,6 +227,11 @@
     {
         "name": "Third Creek Greenway parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-10-05"
+    },
+    {
+        "name": "Toboshane Valley Estate parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-10-05"
     },
     {
@@ -207,6 +262,11 @@
     {
         "name": "Watermeadows parkrun",
         "reason": "The river keeps eating the path.",
+        "date": "2024-10-05"
+    },
+    {
+        "name": "Weedon Island Preserve parkrun",
+        "reason": "Hurricane Helene Storm Damage",
         "date": "2024-10-05"
     },
     {
