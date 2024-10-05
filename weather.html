@@ -11,9 +11,15 @@
             src: url('https://developer.apple.com/fonts/SF-Pro-Display/SF-Pro-Display-Regular.otf') format('opentype');
         }
 
+        /* Ensure html and body take full height */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0; /* Remove all padding */
+        }
+
         body {
             font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            margin: 0;
             color: #fff;
             background-size: cover;
             background-position: center;
@@ -23,7 +29,6 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            padding: 0;
             overflow: hidden; /* Prevents overflow on small screens */
         }
 
@@ -33,11 +38,10 @@
             flex-direction: column;
             justify-content: space-between; /* Space elements evenly */
             align-items: center;
-            padding: 5%;
+            padding: 0; /* Remove padding */
             background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-            width: 100%;
+            width: 100%; /* Full width */
             height: 100%; /* Full height */
-            max-width: 100%;
             box-sizing: border-box; /* Ensure padding is included in total width/height */
         }
 
@@ -59,10 +63,9 @@
             white-space: normal;
         }
 
-        /* Padding and small-screen adjustments */
+        /* Remove all padding from body and container */
         body, .container {
-            padding-left: 5%;
-            padding-right: 5%;
+            padding: 0;
         }
 
         /* Media query for screens smaller than 300px */
