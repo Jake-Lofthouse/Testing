@@ -10,6 +10,11 @@
         "date": "2024-10-05"
     },
     {
+        "name": "Barnstaple parkrun",
+        "reason": "AED unavailable",
+        "date": "2024-10-05"
+    },
+    {
         "name": "Bathurst parkrun",
         "reason": "Venue unavailable",
         "date": "2024-10-05"
@@ -232,6 +237,11 @@
     {
         "name": "Toboshane Valley Estate parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2024-10-05"
+    },
+    {
+        "name": "Tremorfa parkrun",
+        "reason": "Horses loose in the park.",
         "date": "2024-10-05"
     },
     {
