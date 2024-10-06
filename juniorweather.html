@@ -152,7 +152,8 @@
                     body.style.backgroundColor = '#3b5998'; // Default background if no matching condition
                 }
             } else {
-                document.getElementById('weather').innerHTML = "No data.";
+                // Display the new "Weather coming from Tuesday" message when no forecast is found
+                document.getElementById('weather').innerHTML = "Weather coming from Tuesday.";
             }
         }
 
