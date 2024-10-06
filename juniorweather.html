@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>Weather for Event</title>
+    
+    <style>
+        @font-face {
+            font-family: 'SF Pro Display';
+            src: url('https://developer.apple.com/fonts/SF-Pro-Display/SF-Pro-Display-Regular.otf') format('opentype');
+        }
+
+        /* Ensure html and body take full height */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0; /* Remove all padding */
+        }
+
+        body {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #fff;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: background 0.5s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden; /* Prevents overflow on small screens */
+        }
+
+        /* Flexbox container to evenly space the content */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Space elements evenly */
+            align-items: center;
+            padding: 0; /* Remove padding */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            box-sizing: border-box; /* Ensure padding is included in total width/height */
+        }
+
+        h1 {
+            font-size: 5vw; /* Dynamic font size */
+            margin: 0;
+            color: #fff;
+            text-align: center;
+            word-wrap: break-word; /* Ensure long text breaks properly */
+            white-space: normal;
+        }
+
+        #weather {
+            font-size: 4vw; /* Dynamic font size for weather */
+            margin: 0;
+            color: #fff;
+            text-align: center;
+            word-wrap: break-word;
+            white-space: normal;
+        }
+
+        /* Remove all padding from body and container */
+        body, .container {
+            padding: 0;
+        }
+
+        /* Media query for screens smaller than 300px */
+        @media (max-width: 300px) {
+            h1 {
+                font-size: 10vw; /* Larger font for tiny screens */
+            }
+
+            #weather {
+                font-size: 8vw; /* Increase font for weather info */
+            }
+        }
+
+        /* Media query for screens smaller than 150px */
+        @media (max-width: 150px), (max-height: 150px) {
+            h1 {
+                font-size: 12vw; /* Prioritize readable font size */
+            }
+
+            #weather {
+                font-size: 10vw; /* Larger font */
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Weather Forecast for This Event</h1>
+        <div id="weather">Loading...</div>
+    </div>
+
+    <script>
+        const apiKey = "363c7db4a209fe68a8f4cf01c380c328";
+
+        // Get latitude and longitude from URL parameters
+        const params = new URLSearchParams(window.location.search);
+        const latitude = params.get('lat') || 51.5074; // Default to London
+        const longitude = params.get('lon') || -0.1278; // Default to London
+
+        // Function to get the upcoming Sunday's date at 9 AM (in UTC)
+        function getNextSundayAt9AM() {
+            const today = new Date();
+            const dayOfWeek = today.getDay();
+            const daysUntilSunday = (7 - dayOfWeek) % 7 || 7; // Calculate how many days until the next Sunday
+            const nextSunday = new Date(today.getTime() + daysUntilSunday * 24 * 60 * 60 * 1000); // Add the days until next Sunday
+            nextSunday.setUTCHours(9, 0, 0, 0); // Set time to 9 AM UTC
+            return nextSunday;
+        }
+
+        async function getWeatherForSunday() {
+            const nextSundayAt9AM = getNextSundayAt9AM();
+            const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+            const response = await fetch(url);
+            const data = await response.json();
+
+            // Find the closest forecast to 9 AM UTC on the upcoming Sunday
+            const forecast = data.list.find(item => {
+                const forecastDate = new Date(item.dt * 1000); // Convert UNIX timestamp to date
+                return forecastDate.getUTCDate() === nextSundayAt9AM.getUTCDate() &&
+                       (forecastDate.getUTCHours() === 9); // Look for forecast at 9 AM UTC
+            });
+
+            // Update the HTML with the weather data
+            if (forecast) {
+                const temp = Math.round(forecast.main.temp);
+                const weatherDescription = forecast.weather[0].description;
+                const weatherElement = document.getElementById('weather');
+
+                weatherElement.innerHTML = `Temp: ${temp}°C, ${weatherDescription}.`;
+
+                // Change background based on weather condition
+                const body = document.body;
+                if (weatherDescription.includes("clear")) {
+                    body.style.backgroundImage = 'url("https://media.istockphoto.com/id/1007768414/photo/blue-sky-with-bright-sun-and-clouds.jpg?s=612x612&w=0&k=20&c=MGd2-v42lNF7Ie6TtsYoKnohdCfOPFSPQt5XOz4uOy4=")'; // Clear sky background
+                } else if (weatherDescription.includes("cloud")) {
+                    body.style.backgroundImage = 'url("https://s.err.ee/photo/crop/2024/07/09/2467729h04e7t2.jpg")'; // Cloudy background
+                } else if (weatherDescription.includes("rain")) {
+                    body.style.backgroundImage = 'url("https://img.freepik.com/free-photo/weather-effects-composition_23-2149853295.jpg")'; // Rainy background
+                } else if (weatherDescription.includes("snow")) {
+                    body.style.backgroundImage = 'url("https://wjla.com/resources/media/be94f27f-c70a-4e6c-b3cc-9a448da929b8-large16x9_SnowfallsinEllicottCityVeronicaJohnson.JPG?1637506983305")'; // Snowy background
+                } else {
+                    body.style.backgroundColor = '#3b5998'; // Default background if no matching condition
+                }
+            } else {
+                document.getElementById('weather').innerHTML = "No data.";
+            }
+        }
+
+        // Call the function when the page loads
+        getWeatherForSunday();
+    </script>
+
+</body>
+</html>
