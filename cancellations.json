@@ -60,6 +60,11 @@
         "date": "2024-10-12"
     },
     {
+        "name": "Henlow Bridge Lakes parkrun",
+        "reason": "Course still waterlogged",
+        "date": "2024-10-12"
+    },
+    {
         "name": "Horinouchi koen parkrun",
         "reason": "Venue unavailable",
         "date": "2024-10-12"
@@ -105,6 +110,11 @@
         "date": "2024-10-12"
     },
     {
+        "name": "New Earswick parkrun",
+        "reason": "Venue unavailable",
+        "date": "2024-10-12"
+    },
+    {
         "name": "Ohio and Erie Canal Reservation parkrun",
         "reason": "Venue unavailable",
         "date": "2024-10-12"
@@ -132,6 +142,11 @@
     {
         "name": "Sunny Hill parkrun",
         "reason": "Religious festival",
+        "date": "2024-10-12"
+    },
+    {
+        "name": "Ury Riverside parkrun",
+        "reason": "path upgrade work means route blocked in places.",
         "date": "2024-10-12"
     },
     {
