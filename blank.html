@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>404 Error - Page Not Found</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+
+      <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-REFFZSK4XK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-REFFZSK4XK');
+</script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        :root {
+            --dark: #34495E;
+            --light: #ffffff;
+            --error: #E24D4C;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: var(--dark);
+            color: var(--light);
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .notifications {
+            position: fixed;
+            top: 20px;
+            right: 20px; /* Position to the right */
+            width: auto;
+            max-width: 400px; /* Set a fixed max width */
+        }
+
+        .notifications .toast {
+            width: 100%;
+            max-width: 400px;
+            position: relative;
+            overflow: hidden;
+            list-style: none;
+            border-radius: 4px;
+            padding: 16px 17px;
+            margin-bottom: 10px;
+            background: var(--light);
+            justify-content: space-between;
+            animation: show_toast 0.3s ease forwards;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        @keyframes show_toast {
+            0% {
+                transform: translateX(100%);
+            }
+            40% {
+                transform: translateX(-5%);
+            }
+            80% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(-10px);
+            }
+        }
+        .toast::before {
+            position: absolute;
+            content: "";
+            height: 3px;
+            width: 100%;
+            bottom: 0px;
+            left: 0px;
+            animation: progress 2s linear forwards;
+            background: var(--error);
+        }
+        @keyframes progress {
+            100% {
+                width: 0%;
+            }
+        }
+        .toast .column i {
+            font-size: 1.75rem;
+            color: var(--error);
+        }
+        .toast .column span {
+            font-size: 1.07rem;
+            margin-left: 12px;
+            color: var(--dark);
+            word-wrap: break-word;
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Select the Marker Selection checkbox to continue.</h1>
+    <ul class="notifications"></ul>
+
+    <script>
+        const notifications = document.querySelector(".notifications");
+
+        const toastDetails = {
+            timer: 2000, // 5 seconds timer
+            error: {
+                icon: 'fa-circle-xmark',
+                text: '404 Error',
+            }
+        };
+
+        const removeToast = (toast) => {
+            toast.classList.add("hide");
+            setTimeout(() => toast.remove(), 500);
+        }
+
+        const createToast = () => {
+            const { icon, text } = toastDetails.error;
+            const toast = document.createElement("li");
+            toast.className = `toast error`;
+            toast.innerHTML = `<div class="column">
+                                 <i class="fa-solid ${icon}"></i>
+                                 <span>${text}</span>
+                              </div>`;
+            notifications.appendChild(toast);
+            setTimeout(() => {
+                removeToast(toast);
+            }, toastDetails.timer);
+        }
+
+        // Create toast on page load
+        window.onload = createToast;
+    </script>
+</body>
+</html>
