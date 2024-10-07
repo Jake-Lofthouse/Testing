@@ -50,6 +50,11 @@
         "date": "2024-10-12"
     },
     {
+        "name": "Ford parkrun",
+        "reason": "Building work in park",
+        "date": "2024-10-12"
+    },
+    {
         "name": "Garvey Park parkrun",
         "reason": "Venue unavailable",
         "date": "2024-10-12"
@@ -267,6 +272,11 @@
     {
         "name": "Wardown junior parkrun",
         "reason": "Love Luton Run Fest taking place",
+        "date": "2024-10-13"
+    },
+    {
+        "name": "Washingbay Wetlands junior parkrun",
+        "reason": "Event in community center, and can\u2019t close carpark",
         "date": "2024-10-13"
     },
     {
