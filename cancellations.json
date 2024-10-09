@@ -65,6 +65,11 @@
         "date": "2024-10-12"
     },
     {
+        "name": "Halsema Trailhead parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-10-12"
+    },
+    {
         "name": "Henlow Bridge Lakes parkrun",
         "reason": "Course still waterlogged",
         "date": "2024-10-12"
@@ -176,6 +181,11 @@
     },
     {
         "name": "York parkrun",
+        "reason": "Venue unavailable",
+        "date": "2024-10-12"
+    },
+    {
+        "name": "parkrun Wroc\u0142aw",
         "reason": "Venue unavailable",
         "date": "2024-10-12"
     },
