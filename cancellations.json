@@ -95,6 +95,11 @@
         "date": "2024-10-12"
     },
     {
+        "name": "Jeune Park parkrun",
+        "reason": "Weather",
+        "date": "2024-10-12"
+    },
+    {
         "name": "Kitanagase Mirai Fureai Sogokoen parkrun",
         "reason": "Venue unavailable",
         "date": "2024-10-12"
@@ -202,6 +207,11 @@
     {
         "name": "York parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-10-12"
+    },
+    {
+        "name": "Ziegelwiese parkrun",
+        "reason": "AED unavailable",
         "date": "2024-10-12"
     },
     {
