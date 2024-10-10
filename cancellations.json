@@ -65,6 +65,11 @@
         "date": "2024-10-12"
     },
     {
+        "name": "Great Yarmouth North Beach parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-10-12"
+    },
+    {
         "name": "Guildford parkrun",
         "reason": "Oktoberfest",
         "date": "2024-10-12"
@@ -190,6 +195,11 @@
         "date": "2024-10-12"
     },
     {
+        "name": "Traumschleife B\u00e4renbachpfad parkrun",
+        "reason": "Weather",
+        "date": "2024-10-12"
+    },
+    {
         "name": "Ury Riverside parkrun",
         "reason": "path upgrade work means route blocked in places.",
         "date": "2024-10-12"
@@ -302,6 +312,11 @@
     {
         "name": "King George Playing Fields junior parkrun, Hull",
         "reason": "Shortage of volunteers",
+        "date": "2024-10-13"
+    },
+    {
+        "name": "Riverside junior parkrun, St Neots",
+        "reason": "Course unsafe or blocked",
         "date": "2024-10-13"
     },
     {
