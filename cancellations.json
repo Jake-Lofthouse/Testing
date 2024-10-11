@@ -50,6 +50,11 @@
         "date": "2024-10-12"
     },
     {
+        "name": "Ecco Ripley parkrun",
+        "reason": "Equipment unavailable",
+        "date": "2024-10-12"
+    },
+    {
         "name": "Egweni River Lodge parkrun",
         "reason": "Different event on the same day",
         "date": "2024-10-12"
@@ -190,7 +195,22 @@
         "date": "2024-10-12"
     },
     {
+        "name": "Ross-on-Wye parkrun",
+        "reason": "It's totes Muddy #dontwanttocleanmyshoes",
+        "date": "2024-10-12"
+    },
+    {
+        "name": "Scarborough parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-10-12"
+    },
+    {
         "name": "Sheringham parkrun",
+        "reason": "Venue unavailable",
+        "date": "2024-10-12"
+    },
+    {
+        "name": "Strathcona Island parkrun",
         "reason": "Venue unavailable",
         "date": "2024-10-12"
     },
@@ -227,6 +247,11 @@
     {
         "name": "Watermeadows parkrun",
         "reason": "The river has eaten the pathway",
+        "date": "2024-10-12"
+    },
+    {
+        "name": "Weedon Island Preserve parkrun",
+        "reason": "Hurricane Milton Storm Damage",
         "date": "2024-10-12"
     },
     {
