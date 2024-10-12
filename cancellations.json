@@ -135,6 +135,11 @@
         "date": "2024-10-12"
     },
     {
+        "name": "Merrymeeting parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-10-12"
+    },
+    {
         "name": "Millennium parkrun",
         "reason": "Venue unavailable",
         "date": "2024-10-12"
@@ -333,6 +338,11 @@
         "name": "parkrun du Lac de Divonne",
         "reason": "parkrun est actuellement suspendu en France",
         "date": "2024-10-12"
+    },
+    {
+        "name": "Barnsley junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-10-13"
     },
     {
         "name": "Bramley junior parkrun",
