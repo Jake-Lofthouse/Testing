@@ -30,6 +30,7 @@
             align-items: center;
             height: 100vh;
             overflow: hidden; /* Prevents overflow on small screens */
+            user-select: none; /* Disable text selection */
         }
 
         /* Flexbox container to evenly space the content */
@@ -101,6 +102,19 @@
 
     <script>
         const apiKey = "363c7db4a209fe68a8f4cf01c380c328";
+
+        // Disable right-click, text selection, and touch-hold actions
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+        });
 
         // Get latitude and longitude from URL parameters
         const params = new URLSearchParams(window.location.search);
