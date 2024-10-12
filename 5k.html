@@ -32,6 +32,19 @@
             width: 100vw;
         }
         
+         * {
+            user-select: none; /* Disable text selection */
+            -webkit-user-select: none; /* Disable text selection in Safari */
+            -ms-user-select: none; /* Disable text selection in Internet Explorer/Edge */
+            -moz-user-select: none; /* Disable text selection in Firefox */
+        }
+
+        /* Disable dragging of images and links */
+        img, a {
+            -webkit-user-drag: none; /* Disable dragging in Safari */
+            user-drag: none; /* Standard property */
+        }
+        
 
         .controls {
             background-color: white;
@@ -337,6 +350,34 @@ function openCampsiteMap(lat, lon) {
     const url = `https://www.google.com/maps/search/Campsites/@${lat},${lon},18.5z`;
     window.open(url, '_blank');
 }
+
+  // Disable right-click across the entire page
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        // Disable touch-and-hold context menus on mobile devices
+        document.addEventListener('touchstart', function(e) {
+            if (e.touches.length > 1) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+
+        document.addEventListener('touchend', function(e) {
+            if (e.timeStamp - e.targetTouches[0].startTime > 500) {
+                e.preventDefault();
+            }
+        });
+
+        // Prevent holding mouse down or dragging with the mouse
+        document.addEventListener('mousedown', function(e) {
+            e.preventDefault();
+        });
+
+        // Prevent image dragging
+        document.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+        });
 
 
 
