@@ -31,26 +31,46 @@
             margin-top: 20px;
             color: #2c3e50;
         }
+        .toggle-container {
+            margin: 20px;
+        }
+        .toggle-container button {
+            padding: 15px 30px; /* Increased padding */
+            margin: 0 5px;
+            font-size: 18px; /* Larger font size */
+            border: none;
+            border-radius: 8px; /* Rounded corners */
+            background-color: #64af46; /* Theme color */
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        }
+        .toggle-container button.active {
+            background-color: #559d3b; /* Darker shade for active */
+            font-weight: bold; /* Highlight active button */
+        }
         .search-container {
             display: flex;
             justify-content: center;
             width: 100%;
             max-width: 600px;
             margin: 20px auto;
+            flex-wrap: wrap;
         }
         .search-container input {
-            width: 100%;
-            padding: 15px;
+            width: calc(100% - 130px); /* Responsive width minus button width */
+            padding: 10px;
             font-size: 16px;
             border: 1px solid #ccc;
             border-radius: 4px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             margin-right: 10px;
-            height: 50px; /* Consistent height for input */
+            height: 40px; /* Consistent height for input */
             box-sizing: border-box; /* Include padding and border in the element's total width and height */
         }
         .search-container button {
-            padding: 15px;
+            padding: 10px;
             background-color: #64af46; /* Theme color */
             color: #fff;
             border: none;
@@ -59,18 +79,22 @@
             border-radius: 4px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s ease;
-            height: 50px; /* Consistent height for button */
+            height: 40px; /* Consistent height for button */
         }
         .search-container button:hover {
             background-color: #559d3b; /* Darker shade for hover */
         }
-        #map {
-            height: calc(100% - 340px); /* Adjust map height dynamically */
+        #map, #results {
+            height: calc(100% - 260px); /* Adjust height dynamically */
             width: 100%;
             max-width: 1200px;
             margin-top: 20px;
             border-radius: 10px;
             overflow: hidden;
+            display: none; /* Start hidden, will be toggled */
+        }
+        #map.active, #results.active {
+            display: block; /* Show when active */
         }
         .result-container {
             width: 100%;
@@ -105,7 +129,7 @@
                 margin-bottom: 10px;
             }
             #map {
-                height: 300px;
+                height: 300px; /* Adjusted for mobile */
             }
         }
         /* Prevent screen zoom and scroll on mobile devices */
@@ -116,15 +140,20 @@
 </head>
 <body>
 
-    <h1>Event Finder</h1>
+    <h1>Event Finder BETA</h1>
+
+    <div class="toggle-container">
+        <button id="mapButton" class="active" onclick="toggleView('map')">Map View</button>
+        <button id="listButton" onclick="toggleView('list')">List View</button>
+    </div>
 
     <div class="search-container">
         <input type="text" id="searchInput" placeholder="Describe in one word..." maxlength="20">
         <button onclick="fetchAndFilterEvents()">Search</button>
     </div>
 
-    <div id="map"></div>
-    <div class="result-container" id="results"></div>
+    <div id="map" class="active"></div>
+    <div id="results" class="result-container"></div>
 
     <!-- Leaflet JS for the map -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
@@ -198,51 +227,54 @@
                 return eventDescription.includes(query);
             });
 
-            // Display the results
-            displayResults(matchingEvents);
-        }
-
-        // Function to display the matching events on the map and as a list
-        function displayResults(events) {
+            // Clear previous markers
+            markersLayer.clearLayers(); 
             const resultsDiv = document.getElementById("results");
-            resultsDiv.innerHTML = ''; // Clear previous results
+            resultsDiv.innerHTML = ""; // Clear previous results
 
-            // Clear previous map markers
-            markersLayer.clearLayers();
-
-            if (events.length === 0) {
-                displayNoResults();
+            // No results found
+            if (matchingEvents.length === 0) {
+                NoResults();
                 return;
             }
 
-            // Display results on the map and in the list
-            events.forEach(event => {
-                const { coordinates } = event.geometry;
-                const { EventLongName, EventLocation } = event.properties;
-
-                // Add marker to map with clustering
-                const marker = L.marker([coordinates[1], coordinates[0]])
-                    .bindPopup(`<strong>${EventLongName}</strong><br>${EventLocation}`);
+            // Add markers to the map and create a list
+            matchingEvents.forEach(event => {
+                const coords = event.geometry.coordinates;
+                const marker = L.marker([coords[1], coords[0]]);
+                marker.bindPopup(`<b>${event.properties.EventLongName}</b><br>${event.properties.EventLocation}`);
                 markersLayer.addLayer(marker);
 
-                // Add event to the results list
-                const eventItem = document.createElement('div');
-                eventItem.innerHTML = `<strong>${EventLongName}</strong> - ${EventLocation}`;
-                eventItem.onclick = () => {
-                    map.setView([coordinates[1], coordinates[0]], 13); // Zoom to the event's location on the map
-                };
-                resultsDiv.appendChild(eventItem);
+                // Append to the results list
+                const eventDiv = document.createElement("div");
+                eventDiv.textContent = `${event.properties.EventLongName} - ${event.properties.EventLocation}`;
+                eventDiv.onclick = () => map.setView([coords[1], coords[0]], 15); // Zoom to marker on click
+                resultsDiv.appendChild(eventDiv);
             });
 
-            // Zoom to the first result
-            if (events.length > 0) {
-                const firstResultCoords = events[0].geometry.coordinates;
-                map.setView([firstResultCoords[1], firstResultCoords[0]], 10);
+            map.fitBounds(markersLayer.getBounds()); // Adjust map view to fit markers
+        }
+
+        function toggleView(view) {
+            const mapDiv = document.getElementById("map");
+            const resultsDiv = document.getElementById("results");
+            const mapButton = document.getElementById("mapButton");
+            const listButton = document.getElementById("listButton");
+
+            if (view === 'map') {
+                mapDiv.classList.add('active');
+                resultsDiv.classList.remove('active');
+                mapButton.classList.add('active');
+                listButton.classList.remove('active');
+            } else {
+                resultsDiv.classList.add('active');
+                mapDiv.classList.remove('active');
+                listButton.classList.add('active');
+                mapButton.classList.remove('active');
             }
         }
 
-        // Function to handle no results case
-        function displayNoResults() {
+        function NoResults() {
             const resultsDiv = document.getElementById("results");
             resultsDiv.innerHTML = '<div>No matching events found.</div>';
         }
