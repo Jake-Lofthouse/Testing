@@ -23,8 +23,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            overflow: hidden; /* Prevent scrolling on body */
             height: 100vh; /* Full height */
+            overflow: hidden; /* Prevent scrolling on body */
         }
         h1 {
             text-align: center;
@@ -53,10 +53,11 @@
         .search-container {
             display: flex;
             justify-content: center;
-            width: 100%;
+            width: calc(100% - 40px); /* Full width minus padding */
             max-width: 600px;
             margin: 20px auto;
             flex-wrap: wrap;
+            padding: 0 20px; /* Even padding on left and right */
         }
         .search-container input {
             width: calc(100% - 130px); /* Responsive width minus button width */
@@ -86,7 +87,7 @@
         }
         #map, #results {
             height: calc(100% - 260px); /* Adjust height dynamically */
-            width: 100%;
+            width: calc(100% - 40px); /* Full width minus padding */
             max-width: 1200px;
             margin-top: 20px;
             border-radius: 10px;
@@ -119,6 +120,17 @@
         .result-container div:hover {
             background-color: #bdc3c7;
         }
+        .empty-message {
+            text-align: center;
+            font-size: 18px;
+            color: #7f8c8d;
+            margin-top: 50px;
+        }
+        
+        .leaflet-control-attribution {
+            display: none;
+        }
+        
         @media (max-width: 768px) {
             .search-container {
                 flex-direction: column;
@@ -154,6 +166,7 @@
 
     <div id="map" class="active"></div>
     <div id="results" class="result-container"></div>
+    <div id="emptyMessage" class="empty-message" style="display: none;">Nothing to show :)</div>
 
     <!-- Leaflet JS for the map -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
@@ -167,6 +180,13 @@
             zoomControl: true, // Enable zoom controls
             scrollWheelZoom: true // Enable scroll wheel zooming
         }).setView([51.505, -0.09], 13); // Default view over London
+        
+        var LocationIcon = L.icon({
+            iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/Icons/Me.png',
+            iconSize: [38, 38],
+            iconAnchor: [19, 38],
+            popupAnchor: [0, -38]
+        });
 
         // Use Carto's Voyager tiles
         L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png', {
@@ -185,7 +205,7 @@
                     const userLon = position.coords.longitude;
 
                     map.setView([userLat, userLon], 13); // Set map view to user's location
-                    L.marker([userLat, userLon]).addTo(map)
+                    L.marker([userLat, userLon], { icon: LocationIcon }).addTo(map)
                         .bindPopup("You are here")
                         .openPopup();
                 }, () => {
@@ -221,16 +241,16 @@
             const data = await response.json();
             const events = data.events.features; // Extracting the events
 
-            // Filter events based on the single word input
+            // Filter events based on the query
             const matchingEvents = events.filter(event => {
-                const eventDescription = `${event.properties.EventLongName} ${event.properties.EventLocation}`.toLowerCase();
-                return eventDescription.includes(query);
+                return event.properties.EventLongName.toLowerCase().includes(query);
             });
 
             // Clear previous markers
-            markersLayer.clearLayers(); 
+            markersLayer.clearLayers();
             const resultsDiv = document.getElementById("results");
             resultsDiv.innerHTML = ""; // Clear previous results
+            document.getElementById("emptyMessage").style.display = "none"; // Hide empty message
 
             // No results found
             if (matchingEvents.length === 0) {
@@ -252,7 +272,9 @@
                 resultsDiv.appendChild(eventDiv);
             });
 
-            map.fitBounds(markersLayer.getBounds()); // Adjust map view to fit markers
+            // Show results and adjust map view to fit markers
+            map.fitBounds(markersLayer.getBounds());
+            document.getElementById("results").classList.add('active');
         }
 
         function toggleView(view) {
@@ -276,7 +298,8 @@
 
         function NoResults() {
             const resultsDiv = document.getElementById("results");
-            resultsDiv.innerHTML = '<div>No matching events found.</div>';
+            resultsDiv.innerHTML = ''; // Clear previous results
+            document.getElementById("emptyMessage").style.display = "block"; // Show empty message
         }
     </script>
 </body>
