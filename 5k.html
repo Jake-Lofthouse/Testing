@@ -32,6 +32,20 @@
             width: 100vw;
         }
         
+                /* Disable text selection for all elements except #search-container */
+        *:not(#search-container) {
+            user-select: none; /* Disable text selection */
+            -webkit-user-select: none; /* Disable text selection in Safari */
+            -ms-user-select: none; /* Disable text selection in Internet Explorer/Edge */
+            -moz-user-select: none; /* Disable text selection in Firefox */
+        }
+
+        /* Disable dragging of images and links except #search-container */
+        img:not(#search-container img), a:not(#search-container a) {
+            -webkit-user-drag: none; /* Disable dragging in Safari */
+            user-drag: none; /* Standard property */
+        }
+        
          * {
             user-select: none; /* Disable text selection */
             -webkit-user-select: none; /* Disable text selection in Safari */
@@ -351,32 +365,45 @@ function openCampsiteMap(lat, lon) {
     window.open(url, '_blank');
 }
 
-  // Disable right-click across the entire page
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
+   document.addEventListener('contextmenu', function(e) {
+            // Allow right-click on #search-container and its children
+            if (!e.target.closest('#search-container')) {
+                e.preventDefault();
+            }
         });
 
-        // Disable touch-and-hold context menus on mobile devices
+        // Disable touch-and-hold context menus on mobile devices except for #search-container
         document.addEventListener('touchstart', function(e) {
-            if (e.touches.length > 1) {
+            if (!e.target.closest('#search-container') && e.touches.length > 1) {
                 e.preventDefault();
             }
         }, { passive: false });
 
         document.addEventListener('touchend', function(e) {
-            if (e.timeStamp - e.targetTouches[0].startTime > 500) {
+            if (!e.target.closest('#search-container') && e.timeStamp - e.targetTouches[0].startTime > 500) {
                 e.preventDefault();
             }
         });
 
-        // Prevent holding mouse down or dragging with the mouse
+        // Prevent holding mouse down or dragging with the mouse except on #search-container
         document.addEventListener('mousedown', function(e) {
-            e.preventDefault();
+            if (!e.target.closest('#search-container')) {
+                e.preventDefault();
+            }
         });
 
-        // Prevent image dragging
+        // Prevent image dragging except on #search-container
         document.addEventListener('dragstart', function(e) {
-            e.preventDefault();
+            if (!e.target.closest('#search-container')) {
+                e.preventDefault();
+            }
+        });
+
+        // Disable right-click in Leaflet popups specifically, but allow on #search-container
+        document.addEventListener('contextmenu', function(e) {
+            if (e.target.closest('.leaflet-popup-content') && !e.target.closest('#search-container')) {
+                e.preventDefault(); // Prevent right-click in popups
+            }
         });
 
 
