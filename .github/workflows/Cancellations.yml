@@ -2,8 +2,8 @@ name: Cancellations
 
 on:
   schedule:
-    - cron: "0 */1 * * *"  # Runs every hour
-  workflow_dispatch: # Allows manual triggering of the workflow
+    - cron: "0 */2 * * *" 
+  workflow_dispatch:
   
 jobs:
   scrape:
