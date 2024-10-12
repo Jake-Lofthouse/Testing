@@ -210,6 +210,11 @@
         "date": "2024-10-12"
     },
     {
+        "name": "Strathclyde parkrun",
+        "reason": "Venue unavailable",
+        "date": "2024-10-12"
+    },
+    {
         "name": "Strathcona Island parkrun",
         "reason": "Venue unavailable",
         "date": "2024-10-12"
@@ -235,6 +240,11 @@
         "date": "2024-10-12"
     },
     {
+        "name": "University Parks parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-10-12"
+    },
+    {
         "name": "Ury Riverside parkrun",
         "reason": "path upgrade work means route blocked in places.",
         "date": "2024-10-12"
@@ -252,6 +262,11 @@
     {
         "name": "Weedon Island Preserve parkrun",
         "reason": "Hurricane Milton Storm Damage",
+        "date": "2024-10-12"
+    },
+    {
+        "name": "Winchester parkrun",
+        "reason": "Emergency services incident",
         "date": "2024-10-12"
     },
     {
