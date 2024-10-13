@@ -86,13 +86,12 @@
             background-color: #559d3b; /* Darker shade for hover */
         }
         #map, #results {
-            height: calc(100% - 260px); /* Adjust height dynamically */
-            width: calc(100% - 40px); /* Full width minus padding */
-            max-width: 1200px;
-            margin-top: 20px;
-            border-radius: 10px;
-            overflow: hidden;
-            display: none; /* Start hidden, will be toggled */
+                height: calc(100vh - 100px); /* Larger map height */
+    width: 100vw; /* Full width of the viewport */
+    margin: 0;
+    padding: 0;
+    border-radius: 0; /* Remove border-radius for full-screen feel */
+    display: none; /* Start hidden, will be toggled */
         }
         #map.active, #results.active {
             display: block; /* Show when active */
@@ -131,6 +130,8 @@
             display: none;
         }
         
+        
+        
         @media (max-width: 768px) {
             .search-container {
                 flex-direction: column;
@@ -141,7 +142,7 @@
                 margin-bottom: 10px;
             }
             #map {
-                height: 300px; /* Adjusted for mobile */
+                height: calc(100vh - 120px); /* Adjust height for mobile screens */
             }
         }
         /* Prevent screen zoom and scroll on mobile devices */
@@ -177,7 +178,7 @@
     <script>
         // Initialize the map
         const map = L.map('map', {
-            zoomControl: true, // Enable zoom controls
+            zoomControl: false,  // Disable zoom controls
             scrollWheelZoom: true // Enable scroll wheel zooming
         }).setView([51.505, -0.09], 13); // Default view over London
         
@@ -226,56 +227,62 @@
             }
         });
 
-        // Function to analyze user input, extract potential keywords, and filter events
-        async function fetchAndFilterEvents() {
-            const query = document.getElementById("searchInput").value.toLowerCase().trim();
-            
-            // If the search input is empty, focus on user location
-            if (query === '') {
-                centerMapOnUserLocation();
-                return;
-            }
+async function fetchAndFilterEvents() {
+    const query = document.getElementById("searchInput").value.toLowerCase().trim();
+    
+    // If the search input is empty, focus on user location
+    if (query === '') {
+        centerMapOnUserLocation();
+        return;
+    }
 
-            // Fetch data from the raw GitHub URL
-            const response = await fetch("https://raw.githubusercontent.com/ALD-Models/Testing/refs/heads/main/parkruns.json");
-            const data = await response.json();
-            const events = data.events.features; // Extracting the events
+    // Fetch data from the raw GitHub URL
+    const response = await fetch("https://raw.githubusercontent.com/ALD-Models/Testing/refs/heads/main/parkruns.json");
+    const data = await response.json();
+    const events = data.events.features; // Extracting the events
 
-            // Filter events based on the query
-            const matchingEvents = events.filter(event => {
-                return event.properties.EventLongName.toLowerCase().includes(query);
-            });
+    // Filter events based on the query
+    const matchingEvents = events.filter(event => {
+        return event.properties.EventLongName.toLowerCase().includes(query);
+    });
 
-            // Clear previous markers
-            markersLayer.clearLayers();
-            const resultsDiv = document.getElementById("results");
-            resultsDiv.innerHTML = ""; // Clear previous results
-            document.getElementById("emptyMessage").style.display = "none"; // Hide empty message
+    // Clear previous markers
+    markersLayer.clearLayers();
+    const resultsDiv = document.getElementById("results");
+    resultsDiv.innerHTML = ""; // Clear previous results
+    document.getElementById("emptyMessage").style.display = "none"; // Hide empty message
 
-            // No results found
-            if (matchingEvents.length === 0) {
-                NoResults();
-                return;
-            }
+    // No results found
+    if (matchingEvents.length === 0) {
+        NoResults();
+        return;
+    }
 
-            // Add markers to the map and create a list
-            matchingEvents.forEach(event => {
-                const coords = event.geometry.coordinates;
-                const marker = L.marker([coords[1], coords[0]]);
-                marker.bindPopup(`<b>${event.properties.EventLongName}</b><br>${event.properties.EventLocation}`);
-                markersLayer.addLayer(marker);
+    // Add markers to the map and create a list
+    matchingEvents.forEach(event => {
+        const coords = event.geometry.coordinates;
+        const marker = L.marker([coords[1], coords[0]]);
+        marker.bindPopup(`<b>${event.properties.EventLongName}</b><br>${event.properties.EventLocation}`);
+        markersLayer.addLayer(marker);
 
-                // Append to the results list
-                const eventDiv = document.createElement("div");
-                eventDiv.textContent = `${event.properties.EventLongName} - ${event.properties.EventLocation}`;
-                eventDiv.onclick = () => map.setView([coords[1], coords[0]], 15); // Zoom to marker on click
-                resultsDiv.appendChild(eventDiv);
-            });
+        // Append to the results list
+        const eventDiv = document.createElement("div");
+        eventDiv.textContent = `${event.properties.EventLongName} - ${event.properties.EventLocation}`;
+        eventDiv.onclick = () => map.setView([coords[1], coords[0]], 15); // Zoom to marker on click
+        resultsDiv.appendChild(eventDiv);
+    });
 
-            // Show results and adjust map view to fit markers
-            map.fitBounds(markersLayer.getBounds());
-            document.getElementById("results").classList.add('active');
-        }
+    // Show results only if the list view is active
+    if (document.getElementById("listButton").classList.contains('active')) {
+        document.getElementById("results").classList.add('active');
+    } else {
+        document.getElementById("results").classList.remove('active');
+    }
+
+    // Adjust map view to fit markers
+    map.fitBounds(markersLayer.getBounds());
+}
+
 
         function toggleView(view) {
             const mapDiv = document.getElementById("map");
