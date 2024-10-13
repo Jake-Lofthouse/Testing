@@ -37,24 +37,34 @@ jobs:
           const countriesData = JSON.parse(fs.readFileSync('parkruns.json'));
           const combinedData = { countries: {}, events: [] };
 
+          // Use Promise.all to fetch data concurrently
+          const fetchPromises = [];
+
           for (const [key, country] of Object.entries(countriesData.countries)) {
             const countryCode = country.url ? country.url.split('.')[1] : null; // Ensure there's a URL
             const eventShortNames = Object.values(countriesData.events.features).map(event => event.properties.EventShortName.toLowerCase());
             
             for (const eventName of eventShortNames) {
-              try {
-                const response = await axios.get(\`https://parkrun-map.com/page-data/parkruns/\${countryCode}/\${eventName}/page-data.json\`);
-                const eventData = response.data.result.data.internalParkruns;
+              const fetchPromise = (async () => {
+                try {
+                  const response = await axios.get(\`https://parkrun-map.com/page-data/parkruns/\${countryCode}/\${eventName}/page-data.json\`);
+                  const eventData = response.data.result.data.internalParkruns;
 
-                combinedData.events.push({
-                  ...countriesData.events.features.find(e => e.properties.eventname === eventName),
-                  additionalData: eventData
-                });
-              } catch (error) {
-                console.error(\`Failed to fetch data for event: \${eventName}, Error: \${error.message}\`);
-              }
+                  combinedData.events.push({
+                    ...countriesData.events.features.find(e => e.properties.EventShortName.toLowerCase() === eventName),
+                    additionalData: eventData
+                  });
+                } catch (error) {
+                  console.error(\`Failed to fetch data for event: \${eventName}, Error: \${error.message}\`);
+                }
+              })();
+
+              fetchPromises.push(fetchPromise);
             }
           }
+
+          // Wait for all fetches to complete
+          await Promise.all(fetchPromises);
 
           // Log the combined data
           console.log('Combined Data:', JSON.stringify(combinedData, null, 2));
