@@ -1,0 +1,77 @@
+name: Combine Parkruns Data
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: 
+
+jobs:
+  combine_data:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'  # Adjust Node version as needed
+
+    - name: Fetch Parkruns JSON
+      run: |
+        curl -o parkruns.json https://raw.githubusercontent.com/ALD-Models/Testing/main/parkruns.json
+
+    - name: Process and Combine Data
+      run: |
+        # Load necessary Node.js packages
+        npm install axios fs
+
+        # Create a Node.js script to process the data
+        echo "
+        const axios = require('axios');
+        const fs = require('fs');
+
+        async function fetchData() {
+          // Load the countries and events data
+          const countriesData = JSON.parse(fs.readFileSync('parkruns.json'));
+          const combinedData = { countries: {}, events: [] };
+
+          for (const [key, country] of Object.entries(countriesData.countries)) {
+            const countryCode = country.url.split('.')[1]; // Assuming URL follows a specific format
+            const eventShortNames = Object.values(countriesData.events.features).map(event => event.properties.EventShortName.toLowerCase());
+            
+            for (const eventName of eventShortNames) {
+              try {
+                const response = await axios.get(\`https://parkrun-map.com/page-data/parkruns/\${countryCode}/\${eventName}/page-data.json\`);
+                const eventData = response.data.result.data.internalParkruns;
+
+                combinedData.events.push({
+                  ...countriesData.events.features.find(e => e.properties.eventname === eventName),
+                  additionalData: eventData
+                });
+              } catch (error) {
+                console.error(\`Failed to fetch data for event: \${eventName}, Error: \${error.message}\`);
+              }
+            }
+          }
+
+          // Save combined data to a new file
+          fs.writeFileSync('combined_parkruns.json', JSON.stringify(combinedData, null, 2));
+        }
+
+        fetchData().catch(console.error);
+        " > combine-parkruns.js
+
+        # Run the Node.js script
+        node combine-parkruns.js
+
+    - name: Commit combined data
+      run: |
+        git config --local user.email "you@example.com"
+        git config --local user.name "Your Name"
+        git add combined_parkruns.json
+        git commit -m "Add combined parkruns data"
+        git push
+
