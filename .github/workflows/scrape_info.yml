@@ -1,0 +1,130 @@
+name: Scrape Parkruns
+
+on:
+  workflow_dispatch:  # Manual triggering
+
+jobs:
+  scrape_parkruns:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout the repository
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    # Step 2: Set up Python
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.10
+
+    # Step 3: Install dependencies (geopy for reverse geocoding, requests, etc.)
+    - name: Install dependencies
+      run: |
+        python -m pip install requests beautifulsoup4 geopy
+
+    # Step 4: Download and Parse parkruns.json
+    - name: Download and Parse parkruns.json
+      id: parse_parkruns
+      run: |
+        import json
+
+        # Load the parkruns.json file
+        with open('parkruns.json', 'r') as f:
+            data = json.load(f)
+
+        # Parse country URLs and event data
+        country_data = data['countries']
+        events = data['events']['features']
+
+        # Extract event coordinates and URLs (max 5 events for testing)
+        event_data = []
+        for event in events[:5]:  # Limit to first 5 events
+            country_code = event['properties']['countrycode']
+            short_name = event['properties']['eventname']
+            coordinates = event['geometry']['coordinates']
+            
+            # Get country base URL
+            country_url = country_data[str(country_code)]['url']
+            if country_url:
+                event_url = f"{country_url}/{short_name}/course"
+                event_data.append({
+                    'name': short_name,
+                    'url': event_url,
+                    'coordinates': coordinates
+                })
+
+        # Save the event data to a JSON file for the next step
+        with open('event_data.json', 'w') as f:
+            json.dump(event_data, f, indent=2)
+
+    # Step 5: Use OpenStreetMap and geopy to get tags from coordinates
+    - name: Scrape and Analyze Parkrun Locations
+      run: |
+        import json
+        from geopy.geocoders import Nominatim
+        import time
+
+        # OpenStreetMap geocoder via geopy
+        geolocator = Nominatim(user_agent="parkrun-scraper")
+
+        # Load the event data from the previous step
+        with open('event_data.json', 'r') as f:
+            event_data = json.load(f)
+
+        results = []
+
+        # Loop through each event, reverse-geocode coordinates (max 5 events for testing)
+        for event in event_data:
+            event_name = event['name']
+            event_url = event['url']
+            coordinates = event['coordinates']
+
+            try:
+                # Reverse-geocode coordinates to get location details
+                location = geolocator.reverse(coordinates[::-1], exactly_one=True)
+                tags = []
+
+                if location:
+                    # Extract relevant tags from OpenStreetMap location data
+                    address = location.raw['address']
+
+                    if 'park' in address:
+                        tags.append('park')
+                    if 'forest' in address:
+                        tags.append('forest')
+                    if 'beach' in address:
+                        tags.append('beach')
+                    if 'river' in address:
+                        tags.append('river')
+                    if 'city' in address:
+                        tags.append('city')
+                    if 'mountain' in address:
+                        tags.append('mountain')
+
+                # Store the result for each event
+                results.append({
+                    'name': event_name,
+                    'url': event_url,
+                    'coordinates': coordinates,
+                    'tags': tags
+                })
+
+                # Avoid making too many requests in a short time
+                time.sleep(1)
+
+            except Exception as e:
+                print(f"Error processing event {event_name}: {e}")
+
+        # Save the results to a JSON file
+        with open('event_analysis.json', 'w') as f:
+            json.dump(results, f, indent=2)
+
+    # Step 6: Commit the resulting JSON file to the repository
+    - name: Commit Results
+      run: |
+        git config --local user.email "actions@github.com"
+        git config --local user.name "GitHub Actions"
+        git add event_analysis.json
+        git commit -m "Add event analysis with tags (limited to 5 events for testing)"
+        git push
