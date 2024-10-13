@@ -69,8 +69,8 @@ jobs:
 
     - name: Commit combined data
       run: |
-        git config --local user.email "you@example.com"
-        git config --local user.name "Your Name"
+        git config --global user.name 'github-actions'
+        git config --global user.email 'actions@github.com'
         git add combined_parkruns.json
         git commit -m "Add combined parkruns data"
         git push
