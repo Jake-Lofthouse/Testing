@@ -34,12 +34,11 @@ jobs:
         const fs = require('fs');
 
         async function fetchData() {
-          // Load the countries and events data
           const countriesData = JSON.parse(fs.readFileSync('parkruns.json'));
           const combinedData = { countries: {}, events: [] };
 
           for (const [key, country] of Object.entries(countriesData.countries)) {
-            const countryCode = country.url.split('.')[1]; // Assuming URL follows a specific format
+            const countryCode = country.url ? country.url.split('.')[1] : null; // Ensure there's a URL
             const eventShortNames = Object.values(countriesData.events.features).map(event => event.properties.EventShortName.toLowerCase());
             
             for (const eventName of eventShortNames) {
@@ -57,8 +56,16 @@ jobs:
             }
           }
 
-          // Save combined data to a new file
-          fs.writeFileSync('combined_parkruns.json', JSON.stringify(combinedData, null, 2));
+          // Log the combined data
+          console.log('Combined Data:', JSON.stringify(combinedData, null, 2));
+          
+          // Save combined data to a new file if there are events
+          if (combinedData.events.length > 0) {
+            fs.writeFileSync('combined_parkruns.json', JSON.stringify(combinedData, null, 2));
+            console.log('Successfully created combined_parkruns.json');
+          } else {
+            console.error('No events found; combined_parkruns.json was not created.');
+          }
         }
 
         fetchData().catch(console.error);
@@ -71,7 +78,12 @@ jobs:
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'actions@github.com'
-        git add combined_parkruns.json
-        git commit -m "Add combined parkruns data"
-        git push
-
+        
+        # Check if the combined_parkruns.json file exists
+        if [ -f combined_parkruns.json ]; then
+          git add combined_parkruns.json
+          git commit -m "Add combined parkruns data"
+          git push
+        else
+          echo "combined_parkruns.json not found; skipping commit."
+        fi
