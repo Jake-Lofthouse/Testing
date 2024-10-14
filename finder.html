@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Finder</title>
     
     <!-- Leaflet CSS for the map -->
@@ -235,18 +235,26 @@
     <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
 
     <script>
-        // Initialize the map
+        // Initialize the map with specified options
         const map = L.map('map', {
-            zoomControl: false,  // Disable zoom controls
-            scrollWheelZoom: true // Enable scroll wheel zooming
-        }).setView([51.505, -0.09], 13); // Default view over London
-        
-        // User Location Marker Icon
+            center: [0, 0], // Center the map on the equator and prime meridian
+            zoom: 2, // Set an initial zoom level
+            zoomControl: false,
+            maxBounds: [
+                [-90, -180], // Southwest corner of the map
+                [90, 180]    // Northeast corner of the map
+            ],
+            maxBoundsViscosity: 1.0, // Keeps the map within these bounds
+            minZoom: 2, // Prevents zooming out too far to see the entire world multiple times
+            worldCopyJump: false // Prevents world wrapping
+        });
+
+        // User Location Icon
         var userLocationIcon = L.icon({
-            iconUrl: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Icons/Me.png', // User location icon URL
-            iconSize: [38, 38],
-            iconAnchor: [19, 38],
-            popupAnchor: [0, -28]
+            iconUrl: 'https://github.com/ALD-Models/Testing/blob/main/Icons/Me.png?raw=true', // Original user location icon URL
+            iconSize: [30, 30], // Adjust the size as needed
+            iconAnchor: [15, 30], // Position the icon correctly
+            popupAnchor: [0, -28] // Position the popup above the icon
         });
 
         // Event Marker Icon
