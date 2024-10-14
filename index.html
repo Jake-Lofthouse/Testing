@@ -100,6 +100,27 @@
         .web-app-button:hover {
             transform: scale(1.05);
         }
+        /* Responsive layout for download buttons */
+        @media (max-width: 600px) {
+            .download-button {
+                flex-direction: column; /* Stack buttons vertically on mobile */
+                align-items: center; /* Keep buttons centered horizontally */
+            }
+            .download-button a, .web-app-button {
+                width: 200px; /* Match the width of the Google Play image */
+                height: auto; /* Auto height to fit button content */
+            }
+            .web-app-button {
+                line-height: normal; /* Adjust line height */
+                padding: 15px 0; /* Add padding for better alignment */
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .info-section h2 {
+                font-size: 1.2em;
+            }
+        }
         .info-section {
             margin-top: 20px;
             padding: 10px 0;
@@ -153,14 +174,6 @@
             width: 100%;
             height: 100%;
         }
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2em;
-            }
-            .info-section h2 {
-                font-size: 1.2em;
-            }
-        }
         .footer {
             text-align: center;
             padding: 20px;
@@ -190,6 +203,9 @@
                 <a href="https://parkrunnertourist.co.uk/webapp" class="web-app-button">
                     Web App
                 </a>
+                <a href="#">
+                    <img src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/res/images/amazon-appstore-badge-english-black.png" alt="Get it on Amazon Store">
+                </a>
             </div>
 
             <!-- Responsive YouTube Video -->
@@ -206,20 +222,14 @@
                 <ul>
                     <li>Easy to Use</li>
                     <li>Find Best Price Hotels/Campsites</li>
-                    <li>Get Directions to the Event</li>
-                    <li>Quickly Check the Weather Forecast for the Event</li>
-                    <li>Shows Event Cancellations</li>
-                    <li>Instantly Check the Volunteer Roster and Course Map</li>
+                    <li>Get Directions Easily</li>
+                    <li>Plan Your Parkrun Journey</li>
                 </ul>
-            </div>
-            <div class="info-section">
-                <h2>Why Use parkrunner tourist?</h2>
-                <p>Exploring new locations? Our app ensures you can plan your runs and accommodations with ease. Track your park run journey, find the best places to stay, and make your next run unforgettable. Download the parkrunner tourist App today and start your park run journey!</p>
             </div>
         </div>
     </div>
-    <footer class="footer">
-        <p>&copy; <script>document.write(new Date().getFullYear());</script> Jake Lofthouse. <a href="https://parkrunnertourist.co.uk/Privacy">Privacy Policy</a></p>
-    </footer>
+    <div class="footer">
+        <p>© 2024 Parkrunner Tourist | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
 </body>
 </html>
