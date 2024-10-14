@@ -21,7 +21,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-REFFZSK4XK');
     </script>
     
@@ -33,18 +32,16 @@
             background: linear-gradient(135deg, #7ed957, #64af46);
             color: #333;
         }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 1s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        /* Add the hidden-nav class */
+        .hidden-nav {
+            position: absolute; 
+            width: 1px;         
+            height: 1px;        
+            margin: -1px;       
+            padding: 0;         
+            overflow: hidden;   
+            clip: rect(0, 0, 0, 0); 
+            border: 0;          
         }
         header {
             text-align: center;
@@ -53,19 +50,19 @@
             background: none;
             font-size: 1.8em;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            animation: slideDown 1s ease-in-out;
-        }
-        @keyframes slideDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
         }
         h1 {
             margin: 0;
             font-size: 2.5em;
             font-weight: 700;
         }
-        .content {
-            margin-top: 20px;
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
         .download-button {
             display: flex;
@@ -99,27 +96,6 @@
         }
         .web-app-button:hover {
             transform: scale(1.05);
-        }
-        /* Responsive layout for download buttons */
-        @media (max-width: 600px) {
-            .download-button {
-                flex-direction: column; /* Stack buttons vertically on mobile */
-                align-items: center; /* Keep buttons centered horizontally */
-            }
-            .download-button a, .web-app-button {
-                width: 200px; /* Match the width of the Google Play image */
-                height: auto; /* Auto height to fit button content */
-            }
-            .web-app-button {
-                line-height: normal; /* Adjust line height */
-                padding: 15px 0; /* Add padding for better alignment */
-            }
-            h1 {
-                font-size: 2em;
-            }
-            .info-section h2 {
-                font-size: 1.2em;
-            }
         }
         .info-section {
             margin-top: 20px;
@@ -155,7 +131,6 @@
             margin-bottom: 10px;
             color: #555;
         }
-        /* Responsive YouTube video embed */
         .video-container {
             position: relative;
             padding-bottom: 56.25%; /* 16:9 aspect ratio */
@@ -193,7 +168,7 @@
 <body>
     <header>
         <h1>parkrunner tourist</h1>
-        <nav>
+        <nav class="hidden-nav">
             <ul>
                 <li><a href="https://parkrunnertourist.co.uk/webapp" target="_blank">Web App</a></li>
                 <li><a href="https://play.google.com/store/apps/details?id=appinventor.ai_jlofty8.parkrunner_tourist" target="_blank">Google Play</a></li>
@@ -203,37 +178,35 @@
         </nav>
     </header>
     <div class="container">
-        <div class="content">
-            <div class="download-button">
-                <a href="https://play.google.com/store/apps/details?id=appinventor.ai_jlofty8.parkrunner_tourist">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
-                </a>
-                <a href="https://parkrunnertourist.co.uk/webapp" class="web-app-button">
-                    Web App
-                </a>
-                <a href="https://www.amazon.co.uk/gp/product/B0DJYF61SK">
-                    <img src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/res/images/amazon-appstore-badge-english-black.png" alt="Get it on Amazon Store">
-                </a>
-            </div>
+        <div class="download-button">
+            <a href="https://play.google.com/store/apps/details?id=appinventor.ai_jlofty8.parkrunner_tourist">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
+            </a>
+            <a href="https://parkrunnertourist.co.uk/webapp" class="web-app-button">
+                Web App
+            </a>
+            <a href="https://www.amazon.co.uk/gp/product/B0DJYF61SK">
+                <img src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/res/images/amazon-appstore-badge-english-black.png" alt="Get it on Amazon Store">
+            </a>
+        </div>
 
-            <!-- Responsive YouTube Video -->
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/lSVbFS0eWXA" frameborder="0" allowfullscreen></iframe>
-            </div>
+        <!-- Responsive YouTube Video -->
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/lSVbFS0eWXA" frameborder="0" allowfullscreen></iframe>
+        </div>
 
-            <div class="info-section">
-                <h2>About the App</h2>
-                <p>Unlock your perfect park run adventure with the parkrunner tourist App! This essential tool lets you easily find park run events worldwide and discover nearby hotels, all from a user-friendly map interface.</p>
-            </div>
-            <div class="info-section">
-                <h2>Features</h2>
-                <ul>
-                    <li>Easy to Use</li>
-                    <li>Find Best Price Hotels/Campsites</li>
-                    <li>Get Directions Easily</li>
-                    <li>Plan Your Parkrun Journey</li>
-                </ul>
-            </div>
+        <div class="info-section">
+            <h2>About the App</h2>
+            <p>Unlock your perfect park run adventure with the parkrunner tourist App! This essential tool lets you easily find park run events worldwide and discover nearby hotels, all from a user-friendly map interface.</p>
+        </div>
+        <div class="info-section">
+            <h2>Features</h2>
+            <ul>
+                <li>Easy to Use</li>
+                <li>Find Best Price Hotels/Campsites</li>
+                <li>Get Directions Easily</li>
+                <li>Plan Your Parkrun Journey</li>
+            </ul>
         </div>
     </div>
     <footer class="footer">
