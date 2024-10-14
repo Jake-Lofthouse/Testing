@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Event Finder</title>
     
     <!-- Leaflet CSS for the map -->
@@ -420,14 +420,6 @@ async function fetchAndFilterEvents() {
             }
         }
         
-        // Disable right-click on the entire document
-document.addEventListener('contextmenu', function(event) {
-    event.preventDefault();
-});
-
-
-
-
 
 // Select buttons and text elements you want to disable long press on
 const buttons = document.querySelectorAll('button, .disable-long-press'); // Add your specific classes or IDs
