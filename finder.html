@@ -426,12 +426,8 @@ document.addEventListener('contextmenu', function(event) {
 });
 
 
-// Function to disable long press actions on specific elements
-function disableLongPress(element) {
-    element.addEventListener('touchstart', function(event) {
-        event.preventDefault(); // Prevent long press
-    });
-}
+
+
 
 // Select buttons and text elements you want to disable long press on
 const buttons = document.querySelectorAll('button, .disable-long-press'); // Add your specific classes or IDs
