@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Finder</title>
+    
+    <!-- Leaflet CSS for the map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    
+    <!-- MarkerCluster CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh; /* Full height */
+            overflow: hidden; /* Prevent scrolling on body */
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #2c3e50;
+        }
+        .toggle-container {
+            margin: 20px;
+        }
+        .toggle-container button {
+            padding: 15px 30px; /* Increased padding */
+            margin: 0 5px;
+            font-size: 18px; /* Larger font size */
+            border: none;
+            border-radius: 8px; /* Rounded corners */
+            background-color: #64af46; /* Theme color */
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        }
+        .toggle-container button.active {
+            background-color: #559d3b; /* Darker shade for active */
+            font-weight: bold; /* Highlight active button */
+        }
+        .search-container {
+            display: flex;
+            justify-content: center;
+            width: calc(100% - 40px); /* Full width minus padding */
+            max-width: 600px;
+            margin: 20px auto;
+            flex-wrap: wrap;
+            padding: 0 20px; /* Even padding on left and right */
+        }
+        .search-container input {
+            width: calc(100% - 130px); /* Responsive width minus button width */
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-right: 10px;
+            height: 40px; /* Consistent height for input */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
+        .search-container button {
+            padding: 10px;
+            background-color: #64af46; /* Theme color */
+            color: #fff;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+            height: 40px; /* Consistent height for button */
+        }
+        .search-container button:hover {
+            background-color: #559d3b; /* Darker shade for hover */
+        }
+        #map, #results {
+            height: calc(100vh - 100px); /* Larger map height */
+            width: 100vw; /* Full width of the viewport */
+            margin: 0;
+            padding: 0;
+            border-radius: 0; /* Remove border-radius for full-screen feel */
+            display: none; /* Start hidden, will be toggled */
+        }
+        #map.active, #results.active {
+            display: block; /* Show when active */
+        }
+        .result-container {
+            width: 100%;
+            max-width: 600px;
+            height: 200px;
+            overflow-y: auto;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .result-container div {
+            margin-bottom: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #ecf0f1;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .result-container div:hover {
+            background-color: #bdc3c7;
+        }
+        
+        /* Notification styles */
+        .notifications {
+            position: fixed;
+            top: 20px;
+            right: 10px;
+            left: 10px;
+            margin: auto;
+            width: auto;
+            max-width: 90%;
+        }
+        .notifications .toast {
+            width: 100%;
+            max-width: 400px;
+            position: relative;
+            overflow: hidden;
+            list-style: none;
+            border-radius: 4px;
+            padding: 16px 17px;
+            margin-bottom: 10px;
+            background: #f8d7da; /* Light error background */
+            justify-content: space-between;
+            animation: show_toast 0.3s ease forwards;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        @keyframes show_toast {
+            0% {
+                transform: translateX(100%);
+            }
+            40% {
+                transform: translateX(-5%);
+            }
+            80% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(-10px);
+            }
+        }
+        .toast::before {
+            position: absolute;
+            content: "";
+            height: 3px;
+            width: 100%;
+            bottom: 0px;
+            left: 0px;
+            animation: progress 5s linear forwards;
+            background: #c82333; /* Error color */
+        }
+        @keyframes progress {
+            100% {
+                width: 0%;
+            }
+        }
+        .toast .column i {
+            font-size: 1.75rem;
+            color: #c82333; /* Error color */
+        }
+        .toast .column span {
+            font-size: 1.07rem;
+            margin-left: 12px;
+            color: #721c24; /* Dark text color */
+            word-wrap: break-word;
+        }
+        
+        .leaflet-control-attribution {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .search-container {
+                flex-direction: column;
+                padding: 10px;
+            }
+            .search-container input, .search-container button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            #map {
+                height: calc(100vh - 120px); /* Adjust height for mobile screens */
+            }
+        }
+        /* Prevent screen zoom and scroll on mobile devices */
+        html, body {
+            touch-action: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Event Finder BETA</h1>
+
+    <div class="toggle-container">
+        <button id="mapButton" class="active" onclick="toggleView('map')">Map View</button>
+        <button id="listButton" onclick="toggleView('list')">List View</button>
+    </div>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Describe in one word..." maxlength="20" onkeypress="checkEnter(event)">
+        <button onclick="fetchAndFilterEvents()">Search</button>
+    </div>
+
+    <div id="map" class="active"></div>
+    <div id="results" class="result-container"></div>
+
+    <div class="notifications" id="notifications"></div>
+
+    <!-- Leaflet JS for the map -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    
+    <!-- MarkerCluster JS -->
+    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+
+    <script>
+        // Initialize the map
+        const map = L.map('map', {
+            zoomControl: false,  // Disable zoom controls
+            scrollWheelZoom: true // Enable scroll wheel zooming
+        }).setView([51.505, -0.09], 13); // Default view over London
+        
+        // User Location Marker Icon
+        var userLocationIcon = L.icon({
+            iconUrl: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Icons/Me.png', // User location icon URL
+            iconSize: [38, 38],
+            iconAnchor: [19, 38],
+            popupAnchor: [0, -28]
+        });
+
+        // Event Marker Icon (you can replace this URL with the desired icon for event markers)
+        var eventMarkerIcon = L.icon({
+            iconUrl: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Icons/Chat.png', // Default event icon URL
+            iconSize: [30, 30], // Adjust the size as needed
+            iconAnchor: [15, 30], // Position the icon correctly
+            popupAnchor: [0, -28] // Position the popup above the icon
+        });
+
+        // Add Carto tiles (Voyager)
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png', {
+            maxZoom: 20,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+        }).addTo(map);
+
+        // MarkerCluster Group
+        const markersLayer = L.markerClusterGroup();
+        map.addLayer(markersLayer);
+
+        // Get user location
+        navigator.geolocation.getCurrentPosition(async (position) => {
+            const userCoords = [position.coords.latitude, position.coords.longitude];
+            L.marker(userCoords, { icon: userLocationIcon }).addTo(map).bindPopup("You are here").openPopup();
+            await zoomToUserCountry(userCoords); // Zoom to user's country
+        }, () => {
+            alert("Could not get your location.");
+        });
+
+        // Function to zoom to the user's country
+        async function zoomToUserCountry(userCoords) {
+            const response = await fetch(`https://nominatim.openstreetmap.org/reverse?lat=${userCoords[0]}&lon=${userCoords[1]}&format=json`);
+            const data = await response.json();
+            const country = data.address.country;
+
+            // Set map view to the country level (adjust zoom level as needed)
+            if (country) {
+                map.setView(userCoords, 5); // Change zoom level as necessary for country view
+            }
+        }
+
+        // Fetch and filter events based on the search input
+        async function fetchAndFilterEvents() {
+            const query = document.getElementById("searchInput").value.trim();
+            const searchWords = query.split(" ").filter(Boolean); // Filter out empty strings
+
+            // Fetch data from the raw GitHub URL
+            const response = await fetch("https://raw.githubusercontent.com/ALD-Models/Testing/refs/heads/main/parkruns.json");
+            const data = await response.json();
+            const events = data.events.features; // Extracting the events
+
+            // Filter events based on multiple search words
+            const matchingEvents = events.filter(event => {
+                const eventName = event.properties.EventLongName.toLowerCase();
+                return searchWords.every(word => eventName.includes(word)); // Ensure all words are found
+            });
+
+            // Clear previous markers
+            markersLayer.clearLayers();
+            const resultsDiv = document.getElementById("results");
+            resultsDiv.innerHTML = ""; // Clear previous results
+
+            // Clear notifications
+            const notificationsDiv = document.getElementById("notifications");
+            notificationsDiv.innerHTML = ""; // Clear previous notifications
+
+            // No results found
+            if (matchingEvents.length === 0) {
+                showNoResultsNotification();
+                return;
+            }
+
+            // Add markers to the map and create a list
+            matchingEvents.forEach(event => {
+                const coords = event.geometry.coordinates;
+                const marker = L.marker([coords[1], coords[0]], { icon: eventMarkerIcon }); // Use the event marker icon
+                marker.bindPopup(`<b>${event.properties.EventLongName}</b><br>${event.properties.EventLocation}`);
+                markersLayer.addLayer(marker);
+
+                // Add to the results list
+                const resultItem = document.createElement("div");
+                resultItem.innerHTML = `<b>${event.properties.EventLongName}</b><br>${event.properties.EventLocation}`;
+                resultItem.onclick = () => {
+                    map.setView([coords[1], coords[0]], 13); // Zoom into the event on click
+                };
+                resultsDiv.appendChild(resultItem);
+            });
+
+            // Zoom to the user's country after fetching results
+            const userCoords = await getUserLocation();
+            await zoomToUserCountry(userCoords);
+        }
+
+        // Get user's current location for zooming
+        async function getUserLocation() {
+            return new Promise((resolve) => {
+                navigator.geolocation.getCurrentPosition((position) => {
+                    resolve([position.coords.latitude, position.coords.longitude]);
+                });
+            });
+        }
+
+        // Show "Nothing to show" notification
+        function showNoResultsNotification() {
+            const notificationsDiv = document.getElementById("notifications");
+            const toast = document.createElement("div");
+            toast.className = "toast";
+            toast.innerHTML = `
+                <div class="column">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span>No results found</span>
+                </div>
+            `;
+            notificationsDiv.appendChild(toast);
+
+            // Automatically remove the toast after a few seconds
+            setTimeout(() => {
+                notificationsDiv.removeChild(toast);
+            }, 5000); // Adjust the time as necessary
+        }
+
+        // Toggle between map and list view
+        function toggleView(view) {
+            const mapButton = document.getElementById('mapButton');
+            const listButton = document.getElementById('listButton');
+            const mapDiv = document.getElementById('map');
+            const resultsDiv = document.getElementById('results');
+
+            if (view === 'map') {
+                mapButton.classList.add('active');
+                listButton.classList.remove('active');
+                mapDiv.classList.add('active');
+                resultsDiv.classList.remove('active');
+            } else {
+                listButton.classList.add('active');
+                mapButton.classList.remove('active');
+                resultsDiv.classList.add('active');
+                mapDiv.classList.remove('active');
+            }
+        }
+
+        // Check if the Enter key is pressed
+        function checkEnter(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault(); // Prevent form submission
+                fetchAndFilterEvents(); // Trigger search
+            }
+        }
+    </script>
+    
+</body>
+</html>
