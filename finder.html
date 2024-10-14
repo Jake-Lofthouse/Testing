@@ -249,9 +249,9 @@
             popupAnchor: [0, -28]
         });
 
-        // Event Marker Icon (you can replace this URL with the desired icon for event markers)
+        // Event Marker Icon
         var eventMarkerIcon = L.icon({
-            iconUrl: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Icons/Chat.png', // Default event icon URL
+            iconUrl: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Icons/Chat.png', // Updated event icon URL
             iconSize: [30, 30], // Adjust the size as needed
             iconAnchor: [15, 30], // Position the icon correctly
             popupAnchor: [0, -28] // Position the popup above the icon
@@ -290,7 +290,7 @@
 
         // Fetch and filter events based on the search input
         async function fetchAndFilterEvents() {
-            const query = document.getElementById("searchInput").value.trim();
+            const query = document.getElementById("searchInput").value.trim().toLowerCase(); // Convert to lowercase for case-insensitivity
             const searchWords = query.split(" ").filter(Boolean); // Filter out empty strings
 
             // Fetch data from the raw GitHub URL
@@ -300,7 +300,7 @@
 
             // Filter events based on multiple search words
             const matchingEvents = events.filter(event => {
-                const eventName = event.properties.EventLongName.toLowerCase();
+                const eventName = event.properties.EventLongName.toLowerCase(); // Convert event name to lowercase
                 return searchWords.every(word => eventName.includes(word)); // Ensure all words are found
             });
 
