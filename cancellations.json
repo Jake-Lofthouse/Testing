@@ -15,6 +15,11 @@
         "date": "2024-10-19"
     },
     {
+        "name": "Australian Standing Stones parkrun",
+        "reason": "Weather",
+        "date": "2024-10-19"
+    },
+    {
         "name": "Aylesbury parkrun",
         "reason": "Flooding",
         "date": "2024-10-19"
@@ -135,6 +140,11 @@
         "date": "2024-10-19"
     },
     {
+        "name": "Millom parkrun",
+        "reason": "Venue unavailable",
+        "date": "2024-10-19"
+    },
+    {
         "name": "Montalto Estate parkrun",
         "reason": "Venue unavailable",
         "date": "2024-10-19"
@@ -175,6 +185,11 @@
         "date": "2024-10-19"
     },
     {
+        "name": "Red Point Church parkrun",
+        "reason": "Venue unavailable",
+        "date": "2024-10-19"
+    },
+    {
         "name": "Riverside Walk parkrun",
         "reason": "Weather",
         "date": "2024-10-19"
@@ -210,8 +225,18 @@
         "date": "2024-10-19"
     },
     {
+        "name": "The Grand Canal Way parkrun, Tullamore",
+        "reason": "Insurance clarification",
+        "date": "2024-10-19"
+    },
+    {
         "name": "Traumschleife B\u00e4renbachpfad parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2024-10-19"
+    },
+    {
+        "name": "Uditore parkrun",
+        "reason": "Venue unavailable",
         "date": "2024-10-19"
     },
     {
