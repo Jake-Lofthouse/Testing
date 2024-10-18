@@ -1,5 +1,15 @@
 [
     {
+        "name": "Achill Greenway parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-10-19"
+    },
+    {
+        "name": "Alderford Lake parkrun",
+        "reason": "Course flooded",
+        "date": "2024-10-19"
+    },
+    {
         "name": "Alness parkrun",
         "reason": "run directors unavailable",
         "date": "2024-10-19"
@@ -52,6 +62,11 @@
     {
         "name": "Epworth Equestrian parkrun",
         "reason": "Event permanently closed",
+        "date": "2024-10-19"
+    },
+    {
+        "name": "Etna parkrun",
+        "reason": "Weather",
         "date": "2024-10-19"
     },
     {
@@ -135,6 +150,11 @@
         "date": "2024-10-19"
     },
     {
+        "name": "New Earswick parkrun",
+        "reason": "Course too wet and soft",
+        "date": "2024-10-19"
+    },
+    {
         "name": "New York Central Fitness Trail parkrun",
         "reason": "Russell Run",
         "date": "2024-10-19"
@@ -175,6 +195,11 @@
         "date": "2024-10-19"
     },
     {
+        "name": "Traumschleife B\u00e4renbachpfad parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-10-19"
+    },
+    {
         "name": "University of Northampton parkrun",
         "reason": "Uni open day - course congested",
         "date": "2024-10-19"
@@ -212,6 +237,11 @@
     {
         "name": "Wolford Wood parkrun",
         "reason": "Weather",
+        "date": "2024-10-19"
+    },
+    {
+        "name": "Worcester Pitchcroft parkrun",
+        "reason": "Course flooded",
         "date": "2024-10-19"
     },
     {
@@ -297,6 +327,11 @@
     {
         "name": "Eastney junior parkrun",
         "reason": "Great South Run affecting parking and access.",
+        "date": "2024-10-20"
+    },
+    {
+        "name": "Haulbowline Island junior parkrun",
+        "reason": "Weather",
         "date": "2024-10-20"
     },
     {
