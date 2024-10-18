@@ -175,6 +175,11 @@
         "date": "2024-10-19"
     },
     {
+        "name": "Riverside Walk parkrun",
+        "reason": "Weather",
+        "date": "2024-10-19"
+    },
+    {
         "name": "Robelle Domain parkrun",
         "reason": "Permission issue",
         "date": "2024-10-19"
@@ -190,8 +195,18 @@
         "date": "2024-10-19"
     },
     {
+        "name": "Shrewsbury parkrun",
+        "reason": "Part of course flooded",
+        "date": "2024-10-19"
+    },
+    {
         "name": "Somerset East parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-10-19"
+    },
+    {
+        "name": "Tewkesbury parkrun",
+        "reason": "Course is flooded",
         "date": "2024-10-19"
     },
     {
@@ -300,8 +315,18 @@
         "date": "2024-10-19"
     },
     {
+        "name": "Antrim Castle Gardens junior parkrun",
+        "reason": "Venue unavailable",
+        "date": "2024-10-20"
+    },
+    {
         "name": "Ballincollig Regional junior parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2024-10-20"
+    },
+    {
+        "name": "Belfast Victoria junior parkrun",
+        "reason": "Weather",
         "date": "2024-10-20"
     },
     {
