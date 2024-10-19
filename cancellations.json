@@ -75,6 +75,11 @@
         "date": "2024-10-19"
     },
     {
+        "name": "Enniskillen parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-10-19"
+    },
+    {
         "name": "Epworth Equestrian parkrun",
         "reason": "Event permanently closed",
         "date": "2024-10-19"
@@ -110,6 +115,11 @@
         "date": "2024-10-19"
     },
     {
+        "name": "Henley-on-Thames parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-10-19"
+    },
+    {
         "name": "Hull parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-10-19"
@@ -132,6 +142,11 @@
     {
         "name": "Lewis Park Reserve parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2024-10-19"
+    },
+    {
+        "name": "Lightning Ridge parkrun",
+        "reason": "Weather",
         "date": "2024-10-19"
     },
     {
@@ -275,6 +290,11 @@
         "date": "2024-10-19"
     },
     {
+        "name": "University Parks parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-10-19"
+    },
+    {
         "name": "University of Northampton parkrun",
         "reason": "Uni open day - course congested",
         "date": "2024-10-19"
@@ -405,6 +425,11 @@
         "date": "2024-10-20"
     },
     {
+        "name": "Brayton Academy junior parkrun",
+        "reason": "Weather",
+        "date": "2024-10-20"
+    },
+    {
         "name": "Broadmeadow junior parkrun",
         "reason": "Weather",
         "date": "2024-10-20"
@@ -420,12 +445,22 @@
         "date": "2024-10-20"
     },
     {
+        "name": "Eastbourne junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-10-20"
+    },
+    {
         "name": "Eastney junior parkrun",
         "reason": "Great South Run affecting parking and access.",
         "date": "2024-10-20"
     },
     {
         "name": "Haulbowline Island junior parkrun",
+        "reason": "Weather",
+        "date": "2024-10-20"
+    },
+    {
+        "name": "Larne junior parkrun",
         "reason": "Weather",
         "date": "2024-10-20"
     },
@@ -445,8 +480,28 @@
         "date": "2024-10-20"
     },
     {
+        "name": "Millbank Boating Pond junior parkrun",
+        "reason": "Weather",
+        "date": "2024-10-20"
+    },
+    {
+        "name": "Norris Green Park junior parkrun",
+        "reason": "Weather",
+        "date": "2024-10-20"
+    },
+    {
         "name": "Park View junior parkrun",
         "reason": "Green Drive 5 and Junior Mile - making use of park",
+        "date": "2024-10-20"
+    },
+    {
+        "name": "Plas Newydd junior parkrun",
+        "reason": "Weather",
+        "date": "2024-10-20"
+    },
+    {
+        "name": "Rogiet junior parkrun",
+        "reason": "Weather",
         "date": "2024-10-20"
     },
     {
