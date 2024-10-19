@@ -130,6 +130,11 @@
         "date": "2024-10-19"
     },
     {
+        "name": "Jeune Park parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-10-19"
+    },
+    {
         "name": "Kitanagase Mirai Fureai Sogokoen parkrun",
         "reason": "Venue unavailable",
         "date": "2024-10-19"
@@ -435,8 +440,23 @@
         "date": "2024-10-20"
     },
     {
+        "name": "Carmarthen junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-10-20"
+    },
+    {
         "name": "Clacton junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-10-20"
+    },
+    {
+        "name": "Cobb Gate junior parkrun",
+        "reason": "Weather",
+        "date": "2024-10-20"
+    },
+    {
+        "name": "Collett Park junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-10-20"
     },
     {
@@ -465,6 +485,11 @@
         "date": "2024-10-20"
     },
     {
+        "name": "Longrun Meadow junior parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-10-20"
+    },
+    {
         "name": "Lough Moss junior parkrun",
         "reason": "Weather",
         "date": "2024-10-20"
@@ -485,6 +510,11 @@
         "date": "2024-10-20"
     },
     {
+        "name": "Netley Abbey junior parkrun",
+        "reason": "Weather",
+        "date": "2024-10-20"
+    },
+    {
         "name": "Norris Green Park junior parkrun",
         "reason": "Weather",
         "date": "2024-10-20"
@@ -500,6 +530,11 @@
         "date": "2024-10-20"
     },
     {
+        "name": "Queen\u2019s Park junior parkrun, Brighton",
+        "reason": "Weather",
+        "date": "2024-10-20"
+    },
+    {
         "name": "Rogiet junior parkrun",
         "reason": "Weather",
         "date": "2024-10-20"
@@ -510,13 +545,28 @@
         "date": "2024-10-20"
     },
     {
+        "name": "Shelbourne junior parkrun",
+        "reason": "Weather",
+        "date": "2024-10-20"
+    },
+    {
         "name": "Southern Town junior parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-10-20"
     },
     {
+        "name": "St Mary\u2019s Campus junior parkrun",
+        "reason": "Weather",
+        "date": "2024-10-20"
+    },
+    {
         "name": "Stevenage junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-10-20"
+    },
+    {
+        "name": "The Waterfront junior parkrun",
+        "reason": "Weather",
         "date": "2024-10-20"
     }
 ]
