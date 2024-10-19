@@ -405,6 +405,11 @@
         "date": "2024-10-19"
     },
     {
+        "name": "Anchorsholme junior parkrun",
+        "reason": "Storm Ashley - will make kids into kites!",
+        "date": "2024-10-20"
+    },
+    {
         "name": "Antrim Castle Gardens junior parkrun",
         "reason": "Venue unavailable",
         "date": "2024-10-20"
@@ -412,6 +417,11 @@
     {
         "name": "Ballincollig Regional junior parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2024-10-20"
+    },
+    {
+        "name": "Basingstoke junior parkrun",
+        "reason": "Weather",
         "date": "2024-10-20"
     },
     {
@@ -465,6 +475,11 @@
         "date": "2024-10-20"
     },
     {
+        "name": "Duthie junior parkrun",
+        "reason": "Weather",
+        "date": "2024-10-20"
+    },
+    {
         "name": "Eastbourne junior parkrun",
         "reason": "Shortage of volunteers",
         "date": "2024-10-20"
@@ -475,7 +490,27 @@
         "date": "2024-10-20"
     },
     {
+        "name": "Evesham junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-10-20"
+    },
+    {
+        "name": "Eyemouth Primary Playing Fields junior parkrun",
+        "reason": "Weather",
+        "date": "2024-10-20"
+    },
+    {
         "name": "Haulbowline Island junior parkrun",
+        "reason": "Weather",
+        "date": "2024-10-20"
+    },
+    {
+        "name": "Jordanstown junior parkrun",
+        "reason": "Weather",
+        "date": "2024-10-20"
+    },
+    {
+        "name": "King George V junior parkrun",
         "reason": "Weather",
         "date": "2024-10-20"
     },
@@ -505,7 +540,17 @@
         "date": "2024-10-20"
     },
     {
+        "name": "Medina I.O.W junior parkrun",
+        "reason": "Weather",
+        "date": "2024-10-20"
+    },
+    {
         "name": "Millbank Boating Pond junior parkrun",
+        "reason": "Weather",
+        "date": "2024-10-20"
+    },
+    {
+        "name": "Musgrave junior parkrun",
         "reason": "Weather",
         "date": "2024-10-20"
     },
@@ -530,7 +575,17 @@
         "date": "2024-10-20"
     },
     {
+        "name": "Porthcawl Promenade junior parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-10-20"
+    },
+    {
         "name": "Queen\u2019s Park junior parkrun, Brighton",
+        "reason": "Weather",
+        "date": "2024-10-20"
+    },
+    {
+        "name": "Ringsend junior parkrun",
         "reason": "Weather",
         "date": "2024-10-20"
     },
@@ -565,7 +620,27 @@
         "date": "2024-10-20"
     },
     {
+        "name": "The Great Field junior parkrun",
+        "reason": "Weather",
+        "date": "2024-10-20"
+    },
+    {
         "name": "The Waterfront junior parkrun",
+        "reason": "Weather",
+        "date": "2024-10-20"
+    },
+    {
+        "name": "Waterworks junior parkrun",
+        "reason": "Weather",
+        "date": "2024-10-20"
+    },
+    {
+        "name": "Westside Playing Fields junior parkrun",
+        "reason": "Weather",
+        "date": "2024-10-20"
+    },
+    {
+        "name": "Weymouth junior parkrun",
         "reason": "Weather",
         "date": "2024-10-20"
     }
