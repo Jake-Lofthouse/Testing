@@ -55,6 +55,11 @@
         "date": "2024-10-19"
     },
     {
+        "name": "Cranbrook Country Park parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-10-19"
+    },
+    {
         "name": "Crinan Canal parkrun",
         "reason": "Sunk by a sinkhole on the canal towpath",
         "date": "2024-10-19"
@@ -195,6 +200,11 @@
         "date": "2024-10-19"
     },
     {
+        "name": "Reading parkrun",
+        "reason": "Weather",
+        "date": "2024-10-19"
+    },
+    {
         "name": "Red Point Church parkrun",
         "reason": "Venue unavailable",
         "date": "2024-10-19"
@@ -215,6 +225,16 @@
         "date": "2024-10-19"
     },
     {
+        "name": "Sharpham Road Playing Fields parkrun",
+        "reason": "Playing fields waterlogged after overnight rain",
+        "date": "2024-10-19"
+    },
+    {
+        "name": "Shepton Mallet parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-10-19"
+    },
+    {
         "name": "Shirahama koen parkrun",
         "reason": "Venue unavailable",
         "date": "2024-10-19"
@@ -222,6 +242,11 @@
     {
         "name": "Shrewsbury parkrun",
         "reason": "Part of course flooded",
+        "date": "2024-10-19"
+    },
+    {
+        "name": "Somerdale Pavilion parkrun",
+        "reason": "Wet wet wet world tour debuting today",
         "date": "2024-10-19"
     },
     {
@@ -406,6 +431,16 @@
     },
     {
         "name": "Lough Moss junior parkrun",
+        "reason": "Weather",
+        "date": "2024-10-20"
+    },
+    {
+        "name": "Lurgan junior parkrun",
+        "reason": "Weather",
+        "date": "2024-10-20"
+    },
+    {
+        "name": "Magherafelt junior parkrun",
         "reason": "Weather",
         "date": "2024-10-20"
     },
