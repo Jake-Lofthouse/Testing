@@ -120,6 +120,11 @@
         "date": "2024-10-19"
     },
     {
+        "name": "Lewis Park Reserve parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-10-19"
+    },
+    {
         "name": "Ludlow parkrun",
         "reason": "Forestry operations and road closure at Hazel Copp",
         "date": "2024-10-19"
@@ -290,6 +295,11 @@
         "date": "2024-10-19"
     },
     {
+        "name": "Yuuka Family Road parkrun",
+        "reason": "Weather",
+        "date": "2024-10-19"
+    },
+    {
         "name": "Ziegelwiese parkrun",
         "reason": "AED unavailable",
         "date": "2024-10-19"
@@ -365,6 +375,11 @@
         "date": "2024-10-20"
     },
     {
+        "name": "Broadmeadow junior parkrun",
+        "reason": "Weather",
+        "date": "2024-10-20"
+    },
+    {
         "name": "Clacton junior parkrun",
         "reason": "Venue unavailable",
         "date": "2024-10-20"
@@ -381,6 +396,11 @@
     },
     {
         "name": "Haulbowline Island junior parkrun",
+        "reason": "Weather",
+        "date": "2024-10-20"
+    },
+    {
+        "name": "Lough Moss junior parkrun",
         "reason": "Weather",
         "date": "2024-10-20"
     },
