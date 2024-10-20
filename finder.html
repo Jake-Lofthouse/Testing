@@ -392,14 +392,21 @@ const synonymDictionary = {
 
 };
 
+async function getUserCountry(userCoords) {
+    const [lat, lon] = userCoords;
+    const response = await fetch(`https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lon}&format=json`);
+    return response.json();
+}
+
+
 
 async function fetchAndFilterEvents() {
     const query = document.getElementById("searchInput").value.trim().toLowerCase();
     const translatedWord = synonymDictionary[query] || query;
 
-    // Show spinner with "Loading" text
+    // Show the spinner while loading
     const spinnerContainer = document.getElementById("spinnerContainer");
-    spinnerContainer.style.display = 'flex'; // Show spinner
+    spinnerContainer.style.display = "flex"; // Show spinner
 
     const response = await fetch("https://raw.githubusercontent.com/ALD-Models/Testing/refs/heads/main/parkruns.json");
     const data = await response.json();
@@ -413,12 +420,37 @@ async function fetchAndFilterEvents() {
     // Initialize and reset progress bar
     const progressBarContainer = document.getElementById("progressBarContainer");
     const progressBar = document.getElementById("progressBar");
-
     progressBar.style.width = "0%"; // Reset the progress bar
     progressBarContainer.style.display = "block"; // Show the progress bar
 
+    let userCountry = null;
+
+    // Try to get user's country based on their location
+    try {
+        const userCoords = await getUserLocation();
+        const locationData = await getUserCountry(userCoords);
+        userCountry = locationData.address.country;
+    } catch (error) {
+        console.error("User location could not be found. Proceeding with all events.");
+    }
+
+    // Separate events by user's country first and others later
+    const userCountryEvents = [];
+    const otherEvents = [];
+
+    events.forEach(event => {
+        if (event.properties.Country === userCountry) {
+            userCountryEvents.push(event);
+        } else {
+            otherEvents.push(event);
+        }
+    });
+
+    // Merge user country events first, followed by other events
+    const prioritizedEvents = [...userCountryEvents, ...otherEvents];
+
     // Create an array of fetch promises
-    const fetchPromises = events.map(async (event, i) => {
+    const fetchPromises = prioritizedEvents.map(async (event, i) => {
         const coords = event.geometry.coordinates;
         const features = await fetchGeographicalFeatures(coords);
 
@@ -441,24 +473,25 @@ async function fetchAndFilterEvents() {
         }
 
         // Update progress bar based on completion
-        const progress = ((i + 1) / events.length) * 100;
+        const progress = ((i + 1) / prioritizedEvents.length) * 100;
         progressBar.style.width = `${progress}%`;
     });
 
     // Wait for all fetch promises to complete
     await Promise.all(fetchPromises);
 
-    // Optionally, hide progress bar after a short delay
+    // Hide progress bar and spinner after fetching is done
     progressBar.style.width = "100%";
     setTimeout(() => {
         progressBarContainer.style.display = "none"; // Hide the progress bar
+        spinnerContainer.style.display = "none"; // Hide spinner
     }, 500);
 
-    // Hide the spinner after all events have been fetched
-    spinnerContainer.style.display = 'none'; // Hide spinner
-
-    const userCoords = await getUserLocation();
-    await zoomToUserCountry(userCoords);
+    // Optionally, zoom to user's country if location is available
+    if (userCountry) {
+        const userCoords = await getUserLocation();
+        await zoomToUserCountry(userCoords);
+    }
 }
 
 
