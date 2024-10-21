@@ -55,6 +55,11 @@
         "date": "2024-10-26"
     },
     {
+        "name": "Horinouchi koen parkrun",
+        "reason": "Venue unavailable",
+        "date": "2024-10-26"
+    },
+    {
         "name": "Hull parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-10-26"
@@ -227,11 +232,6 @@
     {
         "name": "Albert College junior parkrun",
         "reason": "Volunteers double jobbing at DCM",
-        "date": "2024-10-27"
-    },
-    {
-        "name": "Ballachulish Quarry junior parkrun",
-        "reason": "No run director available",
         "date": "2024-10-27"
     },
     {
