@@ -257,6 +257,20 @@
                 height: calc(100vh - 120px); /* Adjust height for mobile screens */
             }
         }
+        .description {
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    padding: 0 15px; /* Adds padding to the left and right */
+    margin: 20px auto; /* Centers the div and adds vertical margin */
+    max-width: 600px; /* Sets a maximum width for larger screens */
+}
+
+.description p {
+    text-align: center; /* Centers the text within the paragraph */
+    font-size: 1rem; /* Sets a base font size */
+    line-height: 1.5; /* Improves readability */
+}
+
         /* Prevent screen zoom and scroll on mobile devices */
         html, body {
             touch-action: none;
@@ -266,6 +280,18 @@
 <body>
 
     <h1>Event Finder BETA</h1>
+    
+
+<div class="description">
+    <p>Simply enter your preferred terrain, such as "beach" or "woods," into the search bar, and you’ll discover nearby parkrun events tailored to your choice. Please note that with over 3,780 options available, it may take a moment to find the perfect event for you!</p>
+</div>
+
+
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Describe in one word..." maxlength="20" onkeypress="checkEnter(event)">
+        <button onclick="fetchAndFilterEvents()">Search</button>
+    </div>
     
 
 <div class="spinner-container" id="spinnerContainer">
@@ -285,10 +311,6 @@
         <button id="listButton" onclick="toggleView('list')">List View</button>
     </div>
 
-    <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Describe in one word..." maxlength="20" onkeypress="checkEnter(event)">
-        <button onclick="fetchAndFilterEvents()">Search</button>
-    </div>
 
     <div id="map" class="active"></div>
     <div id="results" class="result-container"></div>
@@ -398,9 +420,14 @@ async function getUserCountry(userCoords) {
     return response.json();
 }
 
+const description = document.querySelector('.description');
+
 
 
 async function fetchAndFilterEvents() {
+    
+    description.style.display = 'none';
+    
     const query = document.getElementById("searchInput").value.trim().toLowerCase();
     const translatedWord = synonymDictionary[query] || query;
 
