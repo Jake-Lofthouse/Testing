@@ -1,0 +1,44 @@
+name: Generate Parkrun Tags
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  generate_parkrun_tags:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+
+    - name: Install dependencies
+      run: npm install node-fetch@2
+
+    - name: Run generate_parkrun_tags.js
+      run: node .github/workflows/generate_parkrun_tags.js
+
+  - name: Commit and push
+  run: |
+    git config --global user.name 'github-actions'
+    git config --global user.email 'actions@github.com'
+    
+    # Ensure that the file exists before adding
+    if [ -f "parkruns_with_terrain.json" ]; then
+      git add parkruns_with_terrain.json
+      git commit -m "Auto-update parkruns_with_terrain.json"
+      git push
+    else
+      echo "File parkruns_with_terrain.json does not exist."
+      exit 1
+    fi
+  env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
