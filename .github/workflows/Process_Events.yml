@@ -1,0 +1,34 @@
+name: Process Events
+
+on:
+
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'  # Specify the version of Node.js you need
+
+      - name: Install dependencies
+        run: |
+          npm install
+
+      - name: Fetch and process event data
+        run: |
+          node scripts/fetchAndProcessEvents.js
+
+      - name: Commit and push processed events
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add ./path/to/your/processedEvents.json
+          git commit -m "Update processed events"
+          git push
