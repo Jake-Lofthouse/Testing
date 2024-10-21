@@ -15,6 +15,11 @@
         "date": "2024-10-26"
     },
     {
+        "name": "Chuo koen parkrun",
+        "reason": "\u30de\u30e9\u30bd\u30f3\u30a4\u30d9\u30f3\u30c8\u306e\u305f\u3081",
+        "date": "2024-10-26"
+    },
+    {
         "name": "Coober Pedy Oval parkrun",
         "reason": "Shortage of volunteers",
         "date": "2024-10-26"
@@ -126,6 +131,11 @@
     },
     {
         "name": "Sandhurst Memorial parkrun",
+        "reason": "Venue unavailable",
+        "date": "2024-10-26"
+    },
+    {
+        "name": "Shawnigan Hills parkrun",
         "reason": "Venue unavailable",
         "date": "2024-10-26"
     },
