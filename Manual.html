@@ -27,12 +27,11 @@
                 4: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Manual/4.png'
             };
 
-            // Get the current URL path
-            const path = window.location.pathname;
-            // Extract the last part (1, 2, 3, or 4)
-            const imageNumber = path.split('/').pop();
+            // Extract query string parameter (e.g., ?img=1)
+            const urlParams = new URLSearchParams(window.location.search);
+            const imageNumber = urlParams.get('img');
 
-            // Set the default image if the path is not valid
+            // Set the default image (image 1) if no valid parameter is passed
             const imageUrl = images[imageNumber] || images[1];
 
             // Set the image source
