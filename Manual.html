@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> <!-- Locks zoom control -->
+    <title>Parkrunner Tourist</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #58993dff; /* Updated background color */
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+    <script>
+        function loadImage() {
+            const images = {
+                1: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Manual/1.png',
+                2: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Manual/2.png',
+                3: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Manual/3.png',
+                4: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Manual/4.png'
+            };
+
+            // Get the current URL path
+            const path = window.location.pathname;
+            // Extract the last part (1, 2, 3, or 4)
+            const imageNumber = path.split('/').pop();
+
+            // Set the default image if the path is not valid
+            const imageUrl = images[imageNumber] || images[1];
+
+            // Set the image source
+            document.getElementById('image').src = imageUrl;
+        }
+
+        window.onload = loadImage;
+    </script>
+</head>
+<body>
+    <img id="image" src="" alt="Parkrunner Image">
+</body>
+</html>
