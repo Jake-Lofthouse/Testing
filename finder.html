@@ -486,9 +486,16 @@ async function fetchAndFilterEvents() {
 
         if (isFeatureNearby) {
             // Add marker and event to results
-            const marker = L.marker([coords[1], coords[0]], { icon: eventMarkerIcon });
-            marker.bindPopup(`<b>${event.properties.EventLongName}</b><br>${event.properties.EventLocation}`);
-            markersLayer.addLayer(marker);
+const marker = L.marker([coords[1], coords[0]], { icon: eventMarkerIcon });
+marker.bindPopup(`
+  <b style="font-family: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; font-size: 15px; color: #333;">
+    ${event.properties.EventLongName}
+  </b>
+  <br>${event.properties.EventLocation}
+`);
+markersLayer.addLayer(marker);
+
+
 
             // Add event to results list
             const resultItem = document.createElement("div");
