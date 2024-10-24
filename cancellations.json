@@ -55,6 +55,11 @@
         "date": "2024-10-26"
     },
     {
+        "name": "Greenpoint parkrun",
+        "reason": "Permission issue",
+        "date": "2024-10-26"
+    },
+    {
         "name": "Hastings High School parkrun",
         "reason": "Venue unavailable",
         "date": "2024-10-26"
@@ -152,6 +157,11 @@
     {
         "name": "Robelle Domain parkrun",
         "reason": "Permission issue",
+        "date": "2024-10-26"
+    },
+    {
+        "name": "Sale Water parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-10-26"
     },
     {
