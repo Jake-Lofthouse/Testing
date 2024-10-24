@@ -145,6 +145,11 @@
         "date": "2024-10-26"
     },
     {
+        "name": "Red Star parkrun",
+        "reason": "Venue unavailable",
+        "date": "2024-10-26"
+    },
+    {
         "name": "Robelle Domain parkrun",
         "reason": "Permission issue",
         "date": "2024-10-26"
@@ -207,6 +212,11 @@
     {
         "name": "Windhoek parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-10-26"
+    },
+    {
+        "name": "Worcester Pitchcroft parkrun",
+        "reason": "Flooding on parts of the course",
         "date": "2024-10-26"
     },
     {
