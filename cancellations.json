@@ -1,5 +1,10 @@
 [
     {
+        "name": "Aylesbury parkrun",
+        "reason": "Flooding.  Both courses remain under water.",
+        "date": "2024-10-26"
+    },
+    {
         "name": "Beeston parkrun",
         "reason": "Flood damaged paths",
         "date": "2024-10-26"
