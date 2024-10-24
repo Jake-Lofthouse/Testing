@@ -23,6 +23,7 @@
             justify-content: center;
             font-family: 'Arial', sans-serif;
             position: relative;
+            flex-direction: column;
         }
 
         /* "Coming Soon" text style */
@@ -34,6 +35,14 @@
             letter-spacing: 0.3rem;
             animation: glow 2s infinite ease-in-out;
             z-index: 10;
+        }
+
+        /* Countdown timer style */
+        .countdown {
+            color: #ffffff;
+            font-size: 3rem;
+            margin-top: 20px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
         }
 
         @keyframes glow {
@@ -72,6 +81,9 @@
             .coming-soon {
                 font-size: 3rem;
             }
+            .countdown {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
@@ -80,7 +92,45 @@
     <!-- Coming soon text -->
     <div class="coming-soon">Coming Soon...</div>
 
+    <!-- Countdown timer -->
+    <div class="countdown" id="countdown">Loading countdown...</div>
+
     <script>
+        function updateCountdown() {
+            const targetDate = getNextFridayAt8PM(); // Function to get next Friday at 8 PM
+            const now = new Date().getTime();
+            const timeLeft = targetDate - now;
+
+            if (timeLeft < 0) {
+                document.getElementById("countdown").innerHTML = "Event has started!";
+                return;
+            }
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        function getNextFridayAt8PM() {
+            const now = new Date();
+            const dayOfWeek = now.getDay();
+            const daysUntilFriday = (5 - dayOfWeek + 7) % 7; // Friday is the 5th day of the week
+            let nextFriday = new Date(now);
+            nextFriday.setDate(now.getDate() + daysUntilFriday);
+            nextFriday.setHours(20, 0, 0, 0); // 20:00:00 (8 PM)
+
+            if (nextFriday < now) {
+                nextFriday.setDate(nextFriday.getDate() + 7);
+            }
+
+            return nextFriday.getTime();
+        }
+
+        setInterval(updateCountdown, 1000); // Update every second
+
         const body = document.body;
 
         // Function to generate random sparks
