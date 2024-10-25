@@ -30,6 +30,11 @@
         "date": "2024-10-26"
     },
     {
+        "name": "Cloncurry parkrun",
+        "reason": "Bushfires",
+        "date": "2024-10-26"
+    },
+    {
         "name": "Coober Pedy Oval parkrun",
         "reason": "Shortage of volunteers",
         "date": "2024-10-26"
@@ -57,6 +62,11 @@
     {
         "name": "Greenpoint parkrun",
         "reason": "Permission issue",
+        "date": "2024-10-26"
+    },
+    {
+        "name": "Hanmer Forest parkrun",
+        "reason": "Weather",
         "date": "2024-10-26"
     },
     {
