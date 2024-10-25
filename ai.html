@@ -343,6 +343,20 @@
         font-size: 1rem;
         line-height: 1.5;
     }
+    
+     #searchInput::placeholder {
+            color: #888; /* Change placeholder color */
+            opacity: 1; /* Ensure the placeholder is visible */
+            transition: opacity 0.5s ease; /* Transition for fading */
+        }
+
+        .fade-out::placeholder {
+            opacity: 0; /* Fade out placeholder */
+        }
+
+        .fade-in::placeholder {
+            opacity: 1; /* Fade in placeholder */
+        }
 
     /* Prevent screen zoom and scroll on mobile devices */
     html, body {
@@ -358,7 +372,7 @@
     <div class="modal-content">
         <span class="close-btn">&times;</span>
         <img src="https://raw.githubusercontent.com/ALD-Models/Testing/refs/heads/main/Images/Ai.png" alt="Event Image">
-        <p>Simply enter your preferred terrain, such as "beach" or "woods," into the search bar, and you’ll discover nearby parkrun events tailored to your choice. Please note that with over 3,780 options available, it may take a moment to find the perfect event for you!</p>
+        <p>Simply enter your preferred terrain, such as "beach" or "woods," into the search bar, and you’ll discover nearby parkrun events tailored to your choice. Please note that with over 3,780 options available, it may take a moment to find the perfect event for you! Keep in mind that this feature is still in beta and a work in progress. Some terms may not function as expected, but we are actively working to improve the experience.</p>
     </div>
 </div>
 
@@ -367,7 +381,8 @@
     
 
     <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Beach" maxlength="9" onkeypress="checkEnter(event)" oninput="removeSpaces(this)">
+        <input type="text" id="searchInput" placeholder="Describe in one word..." maxlength="20" 
+               onkeypress="checkEnter(event)" oninput="removeSpaces(this)">
         <button onclick="fetchAndFilterEvents()">Search</button>
     </div>
     
@@ -489,166 +504,28 @@
 const synonymDictionary = {
     // Natural Environments
     'seaside': 'beach',
-    'beach': 'shore',
-    'coast': 'shoreline',
-    'cliff': 'rock face',
-    'mountain': 'peak',
-    'hill': 'knoll',
-    'highland': 'upland',
+    'beach': 'beach',
+    'cliff': 'rock',
+    'mountain': 'hill',
+    'hill': 'hill',
     'valley': 'lowland',
-    'plain': 'flatland',
     'forest': 'woodland',
-    'woods': 'forest',
-    'jungle': 'rainforest',
+    'jungle': 'forest',
     'desert': 'arid region',
     'swamp': 'wetland',
-    'marsh': 'bog',
-    'wetland': 'swamp',
+    'marsh': 'wetland',
     'canyon': 'gorge',
     'river': 'waterway',
     'lake': 'waterbody',
     'ocean': 'sea',
-    'bay': 'harbor', // British spelling
+    'bay': 'harbor',
     'island': 'landmass',
     'volcano': 'mountain',
     'prairie': 'grassland',
     'tundra': 'cold land',
     'plateau': 'highland',
-    'glen': 'vale', // British term
-    'steppe': 'savannah',
-    'moor': 'heath',
-    'floodplain': 'bottomland',
-    'delta': 'wetlands',
-    'fjord': 'inlet',
-    'peninsula': 'cape',
-    'archipelago': 'island chain',
-    'butte': 'hill',
-    'mesa': 'tableland',
-    'savannah': 'grassland',
-    'barrens': 'open land',
-    'cove': 'nook',
-    'tidepool': 'rockpool', // British term
-    'ridge': 'crest',
-    'outcrop': 'rock formation',
-    'karst': 'sinkhole region',
-    'bayou': 'marshland',
-    'moorland': 'upland',
-    'dune': 'sandhill',
-    'scrubland': 'bushland',
-    'heathland': 'moorland', // British term
-    'ridgeway': 'pathway',
-    'pampas': 'grassland',
-    'down': 'hillside', // British term
-    'bluff': 'cliff',
-    'coppice': 'thicket',
-    'wood': 'forest', // British term
-    'alpine': 'mountainous',
-    'hollow': 'depression',
-    'fells': 'mountains', // British term
-    'lough': 'lake', // Irish term
-    'loch': 'lake', // Scottish term
-    'crag': 'rocky hill',
-    'wold': 'upland',
-    'cape': 'headland',
-    'tidewater': 'estuary',
-    'pothole': 'depression',
-    'karoo': 'semi-desert',
-    'moor': 'peatland',
-    'bight': 'bay',
-    'fen': 'marsh',
-    'alvar': 'flat limestone',
-    'polder': 'reclaimed land',
-    'shingle': 'pebbled beach',
-    'escarpment': 'steep slope',
-    'overlook': 'viewpoint',
-    'scree': 'talus slope',
-    'badlands': 'eroded terrain',
-    'outwash': 'glacial deposit',
-    'tarn': 'mountain lake',
-    'moraine': 'glacial deposit',
-    'palisade': 'cliff',
-    'delta': 'river mouth',
-    'bluff': 'promontory',
-    'swale': 'depression',
-    'chasm': 'deep gorge',
-    'barrage': 'dammed river',
-    'cairn': 'rock pile',
-    'crater': 'bowl-shaped depression',
-    'dry lake': 'salina',
-    'oxbow': 'curved lake',
-    'silt': 'fine sediment',
-    'skerries': 'rocky islets',
-    'napa': 'valley',
-    'tor': 'hilltop rock',
-    'wynd': 'path',
-    'fell': 'hill', // British term
-    'firth': 'estuary',
-    'dingle': 'small valley',
-    'ravine': 'narrow valley',
-    'hummock': 'small hill',
-    'saddle': 'low point between hills',
-    'canyonette': 'small canyon',
-    'gorge': 'narrow valley',
-    'pennant': 'rocky outcrop',
-    'pockmark': 'small depression',
-    'bocage': 'hedgerow landscape',
-    'dune field': 'group of sand dunes',
-    'littoral': 'shoreline',
-    'vlei': 'wetland',
-    'pantechnicon': 'slope',
-    'neap': 'low tide area',
-    'saltern': 'salt marsh',
-    'tide pool': 'rockpool',
-    'embankment': 'raised bank',
-    'sandbar': 'shallow water',
-    'spit': 'narrow point of land',
-    'quagmire': 'wet, muddy area',
-    'sump': 'wet depression',
-    'knoll': 'small hill',
-    'ridge': 'elevated landform',
-    'geosyncline': 'large-scale sedimentary basin',
-    'meander': 'curving river',
-    'estuary': 'river mouth',
-    'tide flat': 'intertidal zone',
-    'point': 'land jutting into water',
-    'shore': 'coastal land',
-    'jib': 'cliffside',
-    'sprawl': 'wide land',
-    'floodplain': 'area prone to flooding',
-    'badlands': 'rugged terrain',
-    'catena': 'soil profile along a slope',
-    'slough': 'wetland',
-    'drainage basin': 'water catchment area',
-    'mangrove': 'coastal wetland',
-    'upland': 'high land',
-    'bowl': 'depression',
-    'knickpoint': 'break in slope',
-    'backswamp': 'recessed area',
-    'coulee': 'deep ravine',
-    'plunge pool': 'deep area at base of waterfall',
-    'woodland': 'forest area',
-    'marshland': 'wetland area',
-    'riparian': 'riverbank area',
-    'karst landscape': 'dissolved limestone features',
-    'cliffs': 'steep rock face',
-    'floodplain': 'land next to a river',
-    'isthmus': 'narrow land connecting two larger areas',
-    'slope': 'inclined land',
-    'plateau': 'flat elevated area',
-    'grassy knoll': 'small grassy hill',
-    'saline flat': 'salt flats',
-    'tundra': 'cold, treeless plain',
-    'desert pavement': 'rocky desert surface',
-    'pampas': 'grasslands in South America',
-    'savanna': 'tropical grassland',
-    'steppe': 'dry grassland region',
-    'moraine': 'glacially deposited landform',
-    'dry valley': 'valley without a stream',
-    'glen': 'narrow valley',
-    'loma': 'low hill',
-    'pockmark': 'depression caused by erosion',
-    'sinuous': 'winding terrain',
-    'barren land': 'uncultivated land'
+    'glen': 'valley',
+
 };
 
 
@@ -771,6 +648,38 @@ markersLayer.addLayer(marker);
 
 
 ////here
+
+ // Placeholder cycling functionality
+        const placeholders = ['Beach', 'Hill', 'Woodland', 'Forest', 'Lake', 'Grassland'];
+        let currentPlaceholderIndex = 0;
+        const searchInput = document.getElementById('searchInput');
+
+        function changePlaceholder() {
+            // Fade out effect
+            searchInput.classList.add('fade-out');
+            
+            // Wait for the fade-out effect to finish
+            setTimeout(() => {
+                // Change the placeholder text
+                currentPlaceholderIndex = (currentPlaceholderIndex + 1) % placeholders.length;
+                searchInput.placeholder = placeholders[currentPlaceholderIndex];
+
+                // Fade in effect
+                searchInput.classList.remove('fade-out');
+                searchInput.classList.add('fade-in');
+            }, 500); // Wait for 500ms (same duration as fade-out)
+
+            // Fade out again after a timeout
+            setTimeout(() => {
+                searchInput.classList.remove('fade-in');
+            }, 2000); // Fade in lasts for 2 seconds before fading out
+        }
+
+        // Change the placeholder every 3 seconds
+        setInterval(changePlaceholder, 3000);
+        
+        // Initial placeholder setup
+        searchInput.placeholder = 'Describe in one word...'; // Start with this placeholder
         
         
 
@@ -857,6 +766,7 @@ buttons.forEach(disableLongPress);
         function removeSpaces(input) {
             input.value = input.value.replace(/\s+/g, '');  // Remove all spaces
         }
+        
     </script>
     
 </body>
