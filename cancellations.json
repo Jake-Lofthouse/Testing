@@ -1,5 +1,10 @@
 [
     {
+        "name": "Abingdon parkrun",
+        "reason": "Far field flooded unexpectedly",
+        "date": "2024-10-26"
+    },
+    {
         "name": "Alderford Lake parkrun",
         "reason": "Venue unavailable",
         "date": "2024-10-26"
@@ -17,6 +22,11 @@
     {
         "name": "Braidwood Showground parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-10-26"
+    },
+    {
+        "name": "Brunswick Park parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2024-10-26"
     },
     {
@@ -175,8 +185,18 @@
         "date": "2024-10-26"
     },
     {
+        "name": "Pegasus parkrun",
+        "reason": "Weather",
+        "date": "2024-10-26"
+    },
+    {
         "name": "Pirates Sport Club parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2024-10-26"
+    },
+    {
+        "name": "Queenstown parkrun",
+        "reason": "Weather",
         "date": "2024-10-26"
     },
     {
