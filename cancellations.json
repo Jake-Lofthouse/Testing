@@ -1,5 +1,10 @@
 [
     {
+        "name": "Alderford Lake parkrun",
+        "reason": "Venue unavailable",
+        "date": "2024-10-26"
+    },
+    {
         "name": "Aylesbury parkrun",
         "reason": "Flooding.  Both courses remain under water.",
         "date": "2024-10-26"
@@ -316,6 +321,11 @@
     },
     {
         "name": "Bretton Park junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-10-27"
+    },
+    {
+        "name": "Carmarthen junior parkrun",
         "reason": "Shortage of volunteers",
         "date": "2024-10-27"
     },
