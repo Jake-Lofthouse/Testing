@@ -1,6 +1,13 @@
 {
   "updates": [
     {
+      "title": "App Update 1.2.0 & 1.2.1",
+      "date": "October 25, 2024",
+      "content": [
+        "We are excited to introduce our new user interface along with the launch of our AI Search feature! Please note that this feature is currently in beta and is a work in progress. Some terms may not function as expected, but we are actively working to enhance the experience. Thank you for your understanding and support as we continue to improve!"
+      ]
+    },
+    {
       "title": "App Update 1.1.9 & 1.1.8",
       "date": "October 15, 2024",
       "content": [
