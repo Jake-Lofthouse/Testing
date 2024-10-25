@@ -367,7 +367,7 @@
     
 
     <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Describe in one word..." maxlength="20" onkeypress="checkEnter(event)">
+        <input type="text" id="searchInput" placeholder="Describe in one word..." maxlength="20" onkeypress="checkEnter(event)" oninput="removeSpaces(this)">
         <button onclick="fetchAndFilterEvents()">Search</button>
     </div>
     
@@ -656,6 +656,9 @@ markersLayer.addLayer(marker);
 }
 
 
+
+
+
         // Toggle between map and list view
         function toggleView(view) {
             const mapButton = document.getElementById('mapButton');
@@ -703,12 +706,17 @@ const buttons = document.querySelectorAll('button, .disable-long-press'); // Add
 buttons.forEach(disableLongPress);
 
 
-        // Check if the Enter key is pressed
+        // Function to handle Enter key press
         function checkEnter(event) {
-            if (event.key === 'Enter') {
-                event.preventDefault(); // Prevent form submission
-                fetchAndFilterEvents(); // Trigger search
+            if (event.keyCode === 13) {  // Check if Enter key (key code 13) is pressed
+                event.preventDefault();  // Prevent default form submission (if any)
+                fetchAndFilterEvents();  // Call the search function
             }
+        }
+
+        // Function to remove spaces as the user types
+        function removeSpaces(input) {
+            input.value = input.value.replace(/\s+/g, '');  // Remove all spaces
         }
     </script>
     
