@@ -165,8 +165,18 @@
         "date": "2024-10-26"
     },
     {
+        "name": "Otago Central Rail Trail parkrun, Alexandra",
+        "reason": "Weather",
+        "date": "2024-10-26"
+    },
+    {
         "name": "PE Hobie Beach parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-10-26"
+    },
+    {
+        "name": "Pirates Sport Club parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-10-26"
     },
     {
@@ -207,6 +217,11 @@
     {
         "name": "Tewkesbury parkrun",
         "reason": "Still flooded",
+        "date": "2024-10-26"
+    },
+    {
+        "name": "The Grand Canal Way parkrun, Tullamore",
+        "reason": "Insurance clarification",
         "date": "2024-10-26"
     },
     {
