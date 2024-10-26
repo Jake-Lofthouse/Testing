@@ -70,6 +70,11 @@
         "date": "2024-10-26"
     },
     {
+        "name": "Fulwell Quarry parkrun",
+        "reason": "Equipment unavailable",
+        "date": "2024-10-26"
+    },
+    {
         "name": "Glenfarne Wood parkrun",
         "reason": "Venue unavailable",
         "date": "2024-10-26"
@@ -377,6 +382,11 @@
     {
         "name": "Cherry Orchard junior parkrun",
         "reason": "Some of core team volunteering for DCM",
+        "date": "2024-10-27"
+    },
+    {
+        "name": "Great Cornard junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2024-10-27"
     },
     {
