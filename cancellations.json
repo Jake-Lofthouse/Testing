@@ -120,6 +120,11 @@
         "date": "2024-11-02"
     },
     {
+        "name": "Lightning Ridge parkrun",
+        "reason": "Venue unavailable",
+        "date": "2024-11-02"
+    },
+    {
         "name": "Long Eaton parkrun",
         "reason": "Due to Bonfire event on West Park",
         "date": "2024-11-02"
@@ -182,6 +187,11 @@
     {
         "name": "Riverside parkrun, Kamloops",
         "reason": "Venue unavailable",
+        "date": "2024-11-02"
+    },
+    {
+        "name": "Robelle Domain parkrun",
+        "reason": "Permission issue",
         "date": "2024-11-02"
     },
     {
