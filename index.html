@@ -24,6 +24,9 @@
       gtag('config', 'G-REFFZSK4XK');
     </script>
     
+    <!-- ElfSight Widget -->
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -32,7 +35,6 @@
             background: linear-gradient(135deg, #7ed957, #64af46);
             color: #333;
         }
-        /* Add the hidden-nav class */
         .hidden-nav {
             position: absolute; 
             width: 1px;         
@@ -68,7 +70,7 @@
             display: flex;
             justify-content: center;
             margin: 30px 0;
-            gap: 20px; /* Space between buttons */
+            gap: 20px;
         }
         .download-button a {
             display: inline-block;
@@ -92,7 +94,7 @@
             color: #ffffff;
             font-weight: 500;
             text-decoration: none;
-            line-height: 60px; /* Vertically center the text */
+            line-height: 60px;
         }
         .web-app-button:hover {
             transform: scale(1.05);
@@ -133,7 +135,7 @@
         }
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
             max-width: 100%;
@@ -148,6 +150,13 @@
             left: 0;
             width: 100%;
             height: 100%;
+        }
+        .widget-container {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
         .footer {
             text-align: center;
@@ -186,7 +195,6 @@
             </a>
         </div>
 
-        <!-- Responsive YouTube Video -->
         <div class="video-container">
             <iframe src="https://www.youtube.com/embed/lSVbFS0eWXA" frameborder="0" allowfullscreen></iframe>
         </div>
@@ -205,7 +213,13 @@
                 <li>Instantly Check the Volunteer Roster and Course Map</li>
             </ul>
         </div>
+
+        <!-- ElfSight Widget Integration -->
+        <div class="widget-container">
+            <div class="elfsight-app-b5b8fcbe-9576-4fd2-aaf8-d198520a834a" data-elfsight-app-lazy></div>
+        </div>
     </div>
+
     <footer class="footer">
         <p>&copy; <script>document.write(new Date().getFullYear());</script> Jake Lofthouse. <a href="https://parkrunnertourist.co.uk/Privacy">Privacy Policy</a></p>
     </footer>
