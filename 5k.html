@@ -151,12 +151,55 @@
             display: flex;
             align-items: center;
         }
-        #search-icon {
-            font-size: 24px;
-            color: #333;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
+#search-icon {
+    font-size: 21px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    background-color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.location-button {
+  position: absolute;
+  top: 60px;
+  right: 32px;
+  z-index: 1000;
+  background-color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+
+  /* Flex properties to center both vertically and horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 0; /* Remove any padding */
+}
+
+/* Ensure the icon is centered */
+.location-button i {
+  font-size: 21px; /* Adjust as needed */
+  line-height: 1; /* Reset line-height to remove any extra spacing */
+  height: 100%; /* Take full height of the parent container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
         #search-input-container {
             position: relative;
             display: flex;
@@ -172,6 +215,7 @@
             border-radius: 5px;
         }
         
+
         
 #accommodationModal .hotel-btn, 
 #accommodationModal .campsite-btn {
@@ -270,6 +314,9 @@
 </head>
 <body>
     <div id="map"></div>
+    <div id="locationButton" class="location-button" onclick="returnToLocation()">
+  <i class="fas fa-crosshairs"></i>
+</div>
     <div id="search-container">
         <i id="search-icon" class="fas fa-search"></i>
         <div id="search-input-container">
@@ -291,6 +338,8 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
     <script>
+        
+        
     
     function getCountryUrl(lat, lon) {
     const countries = {
@@ -341,6 +390,10 @@ function chooseAccommodation(lat, lon) {
     // Show the modal popup
     document.getElementById('accommodationModal').style.display = 'flex';
 }
+
+ function returnToLocation() {
+    map.locate({ setView: true, maxZoom: 16 });
+  }
 
 function handleAccommodationChoice(type) {
     const lat = window.accommodationLat;
@@ -565,9 +618,35 @@ map.on('zoomend', updateMarkerVisibility);
 
 
 //to here
+var userLocationMarker; // Variable to hold the user's location marker
+  var locationButton = document.getElementById("locationButton");
 
+  // Automatically locate the user on map load
+  map.locate({ setView: true, maxZoom: 13 });
 
+  // Function to relocate to the user's current location
+  function returnToLocation() {
+    map.locate({ setView: true, maxZoom: 13 });
+  }
 
+  
+
+  // Event handler for location errors
+  map.on('locationerror', function() {
+    alert("Location access denied.");
+  });
+
+  // Show the button when the map moves away from the user's location
+  map.on('moveend', function() {
+    if (userLocationMarker) {
+      // Check if the user's location is within the current view
+      var bounds = map.getBounds();
+      var isUserLocationVisible = bounds.contains(userLocationMarker.getLatLng());
+
+      // Show the button only if the user's location is not visible
+      locationButton.style.display = isUserLocationVisible ? "none" : "block";
+    }
+  });
 
 
 
@@ -693,13 +772,34 @@ fetch('https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/parkruns
 
         
 
-        function onLocationFound(e) {
-            var radius = e.accuracy / 2;
-            L.marker(e.latlng, { icon: LocationIcon }).addTo(map)
-                .bindPopup("Your location").openPopup();
+// Assuming userLocationMarker is defined globally to store the user's location marker
+var userLocationMarker = null;
+var locationCircle = null; // To show accuracy radius circle around the user location
 
-            map.setView(e.latlng, 13);
-        }
+function onLocationFound(e) {
+    var radius = e.accuracy / 2; // Half the accuracy radius for better accuracy indication
+
+    if (!userLocationMarker) {
+        // Create marker and add accuracy circle if they don't exist
+        userLocationMarker = L.marker(e.latlng, { icon: LocationIcon }).addTo(map)
+            .bindPopup("You are here")
+            .openPopup();
+
+    } else {
+        // Update marker and circle if they already exist
+        userLocationMarker.setLatLng(e.latlng);
+    }
+
+    // Set map view to user's location with zoom level 13
+    map.setView(e.latlng, 13);
+
+    // Hide the location button if user's location is shown
+    locationButton.style.display = "none";
+}
+
+// Use the merged function in the location found event
+map.on('locationfound', onLocationFound);
+
 
         function onLocationError(e) {
             alert(e.message);
@@ -811,9 +911,6 @@ document.getElementById('search-input').addEventListener('input', function() {
         updateMapMarkers();
     }
 });
-
-
-
 
         document.getElementById('close-hotel-widget').addEventListener('click', closeHotelMap);
     </script>
