@@ -151,12 +151,37 @@
             display: flex;
             align-items: center;
         }
-        #search-icon {
-            font-size: 24px;
-            color: #333;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
+#search-icon {
+    font-size: 21px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    background-color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .location-button {
+  position: absolute;
+  top: 60px;
+  right: 32px;
+  z-index: 1000;
+  background: white;
+  width: 36px;          /* Smaller width */
+  height: 36px;         /* Smaller height */
+  border-radius: 50%;   /* Full circle */
+  display: none;        /* Hide initially */
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  font-size: 22px;      /* Adjust font size to fit */
+  line-height: 30px;    /* Center icon vertically */
+  text-align: center;   /* Center icon horizontally */
+}
         #search-input-container {
             position: relative;
             display: flex;
@@ -172,24 +197,7 @@
             border-radius: 5px;
         }
         
-        .location-button {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  z-index: 1000;
-  background: white;
-  width: 30px;          /* Smaller width */
-  height: 30px;         /* Smaller height */
-  border-radius: 50%;   /* Full circle */
-  display: none;        /* Hide initially */
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  font-size: 16px;      /* Adjust font size to fit */
-  line-height: 30px;    /* Center icon vertically */
-  text-align: center;   /* Center icon horizontally */
-}
 
-        
         
 #accommodationModal .hotel-btn, 
 #accommodationModal .campsite-btn {
