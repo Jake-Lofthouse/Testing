@@ -418,5 +418,10 @@
         "name": "West Lothian Cycle Circuit junior parkrun",
         "reason": "Venue unavailable",
         "date": "2024-11-03"
+    },
+    {
+        "name": "Wicksteed junior parkrun",
+        "reason": "Fireworks display in the park the night before.",
+        "date": "2024-11-03"
     }
 ]
