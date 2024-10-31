@@ -23,14 +23,14 @@
             margin: 5px 0;      /* Spacing for buttons */
             border: none;       /* Remove border */
             border-radius: 5px; /* Rounded corners */
-            background-color: #531f59; /* Bootstrap primary color */
+            background-color: #531f59; /* Primary color */
             color: white;       /* Text color */
             cursor: pointer;    /* Pointer on hover */
             font-size: 14px;    /* Font size */
             transition: background-color 0.3s; /* Smooth transition */
         }
         .hotel-popup button:hover {
-            background-color: #0056b3; /* Darker blue on hover */
+            background-color: #6f2c91; /* Darker purple on hover */
         }
     </style>
 </head>
@@ -45,6 +45,7 @@
     <script>
         let map; // Declare map variable
         const minZoomLevel = 15; // Set minimum zoom level to show hotels
+        const markers = []; // Array to hold markers
 
         // Initialize the map
         function initMap() {
@@ -70,6 +71,8 @@
             map.on('moveend', () => {
                 if (map.getZoom() >= minZoomLevel) {
                     fetchHotelsInView(service, hotelIcon);
+                } else {
+                    clearMarkers(); // Clear markers when zooming out
                 }
             });
 
@@ -94,39 +97,75 @@
             };
 
             service.nearbySearch(request, (results, status) => {
-                // Clear previous markers (optional)
-                map.eachLayer(layer => {
-                    if (layer instanceof L.Marker) {
-                        map.removeLayer(layer);
-                    }
-                });
+                // Clear previous markers
+                clearMarkers();
 
                 if (status === google.maps.places.PlacesServiceStatus.OK) {
                     results.forEach(hotel => {
-                        const marker = L.marker([hotel.geometry.location.lat(), hotel.geometry.location.lng()], { icon: hotelIcon }).addTo(map);
-                        const photoReference = hotel.photos ? hotel.photos[0].photo_reference : null;
-                        const imageUrl = photoReference
-                            ? `https://maps.googleapis.com/maps/api/place/photo?maxwidth=100&photoreference=${photoReference}&key=AIzaSyDuAmJEMc8wvbYL6YUz-6imL6JtYmlCZf8`
-                            : null;
-
-                        marker.bindPopup(`
-                            <div class="hotel-popup">
-                                <h3>${hotel.name}</h3>
-                                ${imageUrl ? `<img src="${imageUrl}" alt="${hotel.name} Image" />` : ""}
-                                <br />
-                                <a href="${hotel.website || '#'}" target="_blank">
-                                    <button>Visit Website</button>
-                                </a>
-                                <a href="tel:${hotel.international_phone_number || 'N/A'}">
-                                    <button>Call</button>
-                                </a>
-                            </div>
-                        `);
+                        // Fetch detailed info for each hotel
+                        fetchPlaceDetails(service, hotel, hotelIcon);
                     });
                 } else {
                     console.error('Error fetching hotels:', status);
                 }
             });
+        }
+
+        // Function to fetch place details for each hotel
+        function fetchPlaceDetails(service, hotel, hotelIcon) {
+            const placeRequest = {
+                placeId: hotel.place_id,
+                fields: ['name', 'website', 'international_phone_number', 'photos']
+            };
+
+            service.getDetails(placeRequest, (place, status) => {
+                if (status === google.maps.places.PlacesServiceStatus.OK) {
+                    const marker = L.marker([hotel.geometry.location.lat(), hotel.geometry.location.lng()], { icon: hotelIcon }).addTo(map);
+                    markers.push(marker); // Store marker in the array
+                    const photoReference = place.photos ? place.photos[0].photo_reference : null;
+                    const imageUrl = photoReference
+                        ? `https://maps.googleapis.com/maps/api/place/photo?maxwidth=100&photoreference=${photoReference}&key=AIzaSyDuAmJEMc8wvbYL6YUz-6imL6JtYmlCZf8`
+                        : null;
+
+                    // Ensure valid URLs
+                    const websiteUrl = place.website && isValidUrl(place.website) ? place.website : '#';
+                    const phoneNumber = place.international_phone_number ? place.international_phone_number : 'N/A';
+
+                    marker.bindPopup(`
+                        <div class="hotel-popup">
+                            <h3>${place.name}</h3>
+                            ${imageUrl ? `<img src="${imageUrl}" alt="${place.name} Image" />` : ""}
+                            <br />
+                            <a href="${websiteUrl}" target="_blank">
+                                <button>Visit Website</button>
+                            </a>
+                            <a href="tel:${phoneNumber}">
+                                <button>Call</button>
+                            </a>
+                        </div>
+                    `);
+                } else {
+                    console.error('Error fetching place details:', status);
+                }
+            });
+        }
+
+        // Function to validate URLs
+        function isValidUrl(string) {
+            try {
+                new URL(string);
+                return true;
+            } catch (_) {
+                return false;  
+            }
+        }
+
+        // Function to clear markers from the map
+        function clearMarkers() {
+            markers.forEach(marker => {
+                map.removeLayer(marker);
+            });
+            markers.length = 0; // Clear the markers array
         }
     </script>
 </body>
