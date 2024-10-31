@@ -314,14 +314,14 @@
             margin: 5px 0;      /* Spacing for buttons */
             border: none;       /* Remove border */
             border-radius: 5px; /* Rounded corners */
-            background-color: #531f59; /* Primary color */
+            background-color: #c8a367; /* Primary color */
             color: white;       /* Text color */
             cursor: pointer;    /* Pointer on hover */
             font-size: 14px;    /* Font size */
             transition: background-color 0.3s; /* Smooth transition */
         }
         .hotel-popup button:hover {
-            background-color: #6f2c91; /* Darker purple on hover */
+            background-color: #b0874e; /* Darker purple on hover */
         }
         
     iframe {
@@ -483,8 +483,7 @@
 
                         marker.bindPopup(`
                             <div class="hotel-popup">
-                                <h3>${place.name}</h3>
-
+                                <div class="popup-title">${place.name}</div>
                                 <a href="${websiteUrl}" target="_blank"><button>Visit Website</button></a>
                                 <a href="tel:${phoneNumber}"><button>Call</button></a>
                             </div>
