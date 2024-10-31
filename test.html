@@ -44,7 +44,8 @@
     </script>
     <script>
         let map; // Declare map variable
-        const minZoomLevel = 15; // Set minimum zoom level to show hotels
+        const minZoomLevel = 13; // Set minimum zoom level to show hotels
+        const maxZoomLevel = 15; // Set maximum zoom level to hide hotels
         const markers = []; // Array to hold markers
 
         // Initialize the map
@@ -69,10 +70,11 @@
 
             // Fetch hotels when the map is moved
             map.on('moveend', () => {
-                if (map.getZoom() >= minZoomLevel) {
+                const currentZoom = map.getZoom();
+                if (currentZoom >= minZoomLevel && currentZoom <= maxZoomLevel) {
                     fetchHotelsInView(service, hotelIcon);
                 } else {
-                    clearMarkers(); // Clear markers when zooming out
+                    clearMarkers(); // Clear markers when zooming out or too far in
                 }
             });
 
