@@ -255,6 +255,11 @@
         "date": "2024-11-02"
     },
     {
+        "name": "The Grand Canal Way parkrun, Tullamore",
+        "reason": "GCW parkrun restarting on 9th November",
+        "date": "2024-11-02"
+    },
+    {
         "name": "Thorp Perrow parkrun",
         "reason": "Venue unavailable",
         "date": "2024-11-02"
@@ -436,6 +441,11 @@
     },
     {
         "name": "Strathaven junior parkrun",
+        "reason": "Venue unavailable",
+        "date": "2024-11-03"
+    },
+    {
+        "name": "Sutton Lawn junior parkrun",
         "reason": "Venue unavailable",
         "date": "2024-11-03"
     },
