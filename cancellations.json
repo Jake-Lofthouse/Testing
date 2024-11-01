@@ -35,6 +35,11 @@
         "date": "2024-11-02"
     },
     {
+        "name": "Belair National Park parkrun",
+        "reason": "Weather",
+        "date": "2024-11-02"
+    },
+    {
         "name": "Bexley parkrun",
         "reason": "Fireworks display preparation - no access",
         "date": "2024-11-02"
@@ -110,6 +115,11 @@
         "date": "2024-11-02"
     },
     {
+        "name": "Heiwa koen Kurashino mori parkrun",
+        "reason": "Weather",
+        "date": "2024-11-02"
+    },
+    {
         "name": "Horinouchi koen parkrun",
         "reason": "Venue unavailable",
         "date": "2024-11-02"
@@ -170,6 +180,11 @@
         "date": "2024-11-02"
     },
     {
+        "name": "Miyagawa koen parkrun",
+        "reason": "\u5927\u96e8\u306e\u5f71\u97ff\u3067\u30b3\u30fc\u30b9\u304c\u6ed1\u308a\u3084\u3059\u304f\u5371\u967a\u306a\u305f\u3081",
+        "date": "2024-11-02"
+    },
+    {
         "name": "Momoi harappa koen parkrun",
         "reason": "Venue unavailable",
         "date": "2024-11-02"
@@ -191,6 +206,11 @@
     },
     {
         "name": "Myponga Reservoir parkrun",
+        "reason": "Weather",
+        "date": "2024-11-02"
+    },
+    {
+        "name": "Nagaragawa koen parkrun",
         "reason": "Weather",
         "date": "2024-11-02"
     },
