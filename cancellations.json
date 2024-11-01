@@ -55,6 +55,11 @@
         "date": "2024-11-02"
     },
     {
+        "name": "Botanical Garden parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-11-02"
+    },
+    {
         "name": "Bramshall Road parkrun",
         "reason": "Venue unavailable",
         "date": "2024-11-02"
@@ -265,6 +270,16 @@
         "date": "2024-11-02"
     },
     {
+        "name": "Shingashigawa Ukima parkrun",
+        "reason": "\u964d\u6c342mm\u4e88\u5831\u306e\u70ba",
+        "date": "2024-11-02"
+    },
+    {
+        "name": "Shirahama koen parkrun",
+        "reason": "Weather",
+        "date": "2024-11-02"
+    },
+    {
         "name": "Sixmilewater parkrun",
         "reason": "Park booked for alternative event",
         "date": "2024-11-02"
@@ -351,6 +366,11 @@
     },
     {
         "name": "Yodogawa kasenkoen Hirakata chiku parkrun",
+        "reason": "Weather",
+        "date": "2024-11-02"
+    },
+    {
+        "name": "Yuuka Family Road parkrun",
         "reason": "Weather",
         "date": "2024-11-02"
     },
