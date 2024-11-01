@@ -130,6 +130,11 @@
         "date": "2024-11-02"
     },
     {
+        "name": "Huddle parkrun",
+        "reason": "Another event in the park blocking start & parking",
+        "date": "2024-11-02"
+    },
+    {
         "name": "Hull parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-11-02"
@@ -312,6 +317,11 @@
     {
         "name": "Tamworth Castle Grounds parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-11-02"
+    },
+    {
+        "name": "Temple Newsam parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-11-02"
     },
     {
