@@ -20,6 +20,11 @@
         "date": "2024-11-02"
     },
     {
+        "name": "Anstey Hill Recreation parkrun",
+        "reason": "Weather",
+        "date": "2024-11-02"
+    },
+    {
         "name": "Battersea parkrun",
         "reason": "Another event in the park",
         "date": "2024-11-02"
@@ -62,6 +67,11 @@
     {
         "name": "Chichibu Muse Park parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-11-02"
+    },
+    {
+        "name": "Cleland parkrun",
+        "reason": "Weather",
         "date": "2024-11-02"
     },
     {
@@ -180,6 +190,11 @@
         "date": "2024-11-02"
     },
     {
+        "name": "Myponga Reservoir parkrun",
+        "reason": "Weather",
+        "date": "2024-11-02"
+    },
+    {
         "name": "Odakaryokuchi parkrun",
         "reason": "Venue unavailable",
         "date": "2024-11-02"
@@ -240,6 +255,11 @@
         "date": "2024-11-02"
     },
     {
+        "name": "South Para Reservoir parkrun",
+        "reason": "Total Fire Ban",
+        "date": "2024-11-02"
+    },
+    {
         "name": "Stutterheim parkrun",
         "reason": "Venue unavailable",
         "date": "2024-11-02"
@@ -257,6 +277,11 @@
     {
         "name": "Tamworth Castle Grounds parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-11-02"
+    },
+    {
+        "name": "The Avenues parkrun",
+        "reason": "Total Fire Ban",
         "date": "2024-11-02"
     },
     {
