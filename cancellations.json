@@ -115,6 +115,11 @@
         "date": "2024-11-02"
     },
     {
+        "name": "Gongendo 2gou kouen parkrun",
+        "reason": "Weather",
+        "date": "2024-11-02"
+    },
+    {
         "name": "Guildford parkrun",
         "reason": "Firework Fiesta in Stoke Park",
         "date": "2024-11-02"
@@ -122,6 +127,11 @@
     {
         "name": "Heiwa koen Kurashino mori parkrun",
         "reason": "Weather",
+        "date": "2024-11-02"
+    },
+    {
+        "name": "Hondajima parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-11-02"
     },
     {
@@ -227,6 +237,11 @@
     {
         "name": "Odakaryokuchi parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-11-02"
+    },
+    {
+        "name": "Ome kyuryo parkrun",
+        "reason": "Weather",
         "date": "2024-11-02"
     },
     {
