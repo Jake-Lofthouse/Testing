@@ -417,8 +417,8 @@
         //hotels from here
         
         function initHotelFinder(map) {
-    const minZoomLevel = 13;
-    const maxZoomLevel = 18; // Increased max zoom level for better visibility
+    const minZoomLevel = 13; // Minimum zoom level to show markers
+    const maxZoomLevel = 18; // Maximum zoom level for detail
     const hotelMarkers = []; // Array to hold hotel markers
     const campsiteMarkers = []; // Array to hold campsite markers
     let openPopupMarker = null; // Variable to store the marker with an open popup
@@ -443,8 +443,15 @@
 
     // Fetch hotels and campsites when the map is moved
     map.on('moveend', () => {
-        // Always fetch places in view regardless of zoom level
-        fetchPlacesInView(service, hotelIcon, campsiteIcon);
+        const currentZoom = map.getZoom();
+        
+        if (currentZoom >= minZoomLevel) {
+            // Fetch places in view only if zoom is above the minimum level
+            fetchPlacesInView(service, hotelIcon, campsiteIcon);
+        } else {
+            // Clear all markers if zoom is below the minimum level
+            clearMarkers();
+        }
     });
 
     // Function to fetch nearby hotels and campsites
@@ -503,21 +510,27 @@
 
         service.getDetails(placeRequest, (placeDetails, status) => {
             if (status === google.maps.places.PlacesServiceStatus.OK) {
-                const marker = L.marker([place.geometry.location.lat(), place.geometry.location.lng()], { icon }).addTo(map);
+                // Check if the name contains "camp" (case insensitive)
+                const isCampsite = /camp/i.test(placeDetails.name);
+
+                // Decide the icon based on whether it's a campsite
+                const markerIcon = isCampsite ? campsiteIcon : hotelIcon;
+
+                const marker = L.marker([place.geometry.location.lat(), place.geometry.location.lng()], { icon: markerIcon }).addTo(map);
 
                 // Add to respective marker array
-                if (placeType === 'hotel') {
-                    hotelMarkers.push(marker);
-                } else if (placeType === 'campsite') {
+                if (isCampsite) {
                     campsiteMarkers.push(marker);
+                } else {
+                    hotelMarkers.push(marker);
                 }
 
                 const websiteUrl = placeDetails.website || '#';
                 const phoneNumber = placeDetails.international_phone_number || 'N/A';
 
                 // Set button colors based on place type
-                const buttonColor = placeType === 'campsite' ? '#0d7640' : '#c8a367';
-                const buttonHoverColor = placeType === 'campsite' ? '#0a5a30' : '#b0874e';
+                const buttonColor = isCampsite ? '#0d7640' : '#c8a367';
+                const buttonHoverColor = isCampsite ? '#0a5a30' : '#b0874e';
 
                 // Popup content with style variables for different colors
                 const popupContent = `
@@ -557,6 +570,13 @@
             map.removeLayer(marker);
         });
         campsiteMarkers.length = 0;
+    }
+
+    // Function to clear all markers
+    function clearMarkers() {
+        clearHotelMarkers();
+        clearCampsiteMarkers();
+        openPopupMarker = null; // Clear the reference to the last open popup
     }
 }
 
