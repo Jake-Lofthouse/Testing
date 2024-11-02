@@ -301,28 +301,33 @@
              display: none;
         }
         
-        .hotel-popup img {
-            max-width: 100%; /* Responsive image */
-            height: auto;    /* Maintain aspect ratio */
-        }
-        .hotel-popup {
-            text-align: center; /* Center align text */
-        }
-        .hotel-popup button {
-            width: 100%;        /* Full width buttons */
-            padding: 10px 0;    /* Padding for buttons */
-            margin: 5px 0;      /* Spacing for buttons */
-            border: none;       /* Remove border */
-            border-radius: 5px; /* Rounded corners */
-            background-color: #c8a367; /* Primary color */
-            color: white;       /* Text color */
-            cursor: pointer;    /* Pointer on hover */
-            font-size: 14px;    /* Font size */
-            transition: background-color 0.3s; /* Smooth transition */
-        }
-        .hotel-popup button:hover {
-            background-color: #b0874e; /* Darker purple on hover */
-        }
+.hotel-popup img {
+    max-width: 100%; /* Responsive image */
+    height: auto;    /* Maintain aspect ratio */
+}
+
+.hotel-popup {
+    text-align: center; /* Center align text */
+}
+
+.hotel-popup button {
+    width: 100%;        /* Full width buttons */
+    padding: 10px 0;    /* Padding for buttons */
+    margin: 5px 0;      /* Spacing for buttons */
+    border: none;       /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: var(--button-color); /* Primary color using CSS variable */
+    color: white;       /* Text color */
+    cursor: pointer;    /* Pointer on hover */
+    font-size: 14px;    /* Font size */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Hover styles based on button color */
+.hotel-popup button:hover {
+    background-color: var(--button-hover-color); /* Hover color */
+}
+
         
     iframe {
         width: 100%;  /* Full width */
@@ -409,97 +414,154 @@
             window.open(url, '_blank');
         }
         
-         // Hotel Finder Module
+        //hotels from here
+        
         function initHotelFinder(map) {
-            const minZoomLevel = 13;
-            const maxZoomLevel = 15;
-            const hotelMarkers = []; // Separate array to hold hotel markers
+    const minZoomLevel = 13;
+    const maxZoomLevel = 18; // Increased max zoom level for better visibility
+    const hotelMarkers = []; // Array to hold hotel markers
+    const campsiteMarkers = []; // Array to hold campsite markers
+    let openPopupMarker = null; // Variable to store the marker with an open popup
 
-            // Create a custom hotel icon
-            const hotelIcon = L.icon({
-                iconUrl: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Icons/Hotel.png',
-                iconSize: [38, 38],
-                iconAnchor: [19, 38],
-                popupAnchor: [0, -38]
-            });
+    // Create custom hotel and campsite icons
+    const hotelIcon = L.icon({
+        iconUrl: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Icons/Hotel.png',
+        iconSize: [38, 38],
+        iconAnchor: [19, 38],
+        popupAnchor: [0, -38]
+    });
 
-            // Create a Places service
-            const service = new google.maps.places.PlacesService(document.createElement('div'));
+    const campsiteIcon = L.icon({
+        iconUrl: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Icons/Camp.png',
+        iconSize: [38, 38],
+        iconAnchor: [19, 38],
+        popupAnchor: [0, -38]
+    });
 
-            // Fetch hotels when the map is moved
-            map.on('moveend', () => {
-                const currentZoom = map.getZoom();
-                if (currentZoom >= minZoomLevel && currentZoom <= maxZoomLevel) {
-                    fetchHotelsInView(service, hotelIcon);
-                } else {
-                    clearHotelMarkers(); // Clear hotel markers when zooming out or too far in
+    // Create a Places service
+    const service = new google.maps.places.PlacesService(document.createElement('div'));
+
+    // Fetch hotels and campsites when the map is moved
+    map.on('moveend', () => {
+        // Always fetch places in view regardless of zoom level
+        fetchPlacesInView(service, hotelIcon, campsiteIcon);
+    });
+
+    // Function to fetch nearby hotels and campsites
+    function fetchPlacesInView(service, hotelIcon, campsiteIcon) {
+        const bounds = map.getBounds();
+        const location = new google.maps.LatLng(
+            (bounds.getSouthWest().lat + bounds.getNorthEast().lat) / 2,
+            (bounds.getSouthWest().lng + bounds.getNorthEast().lng) / 2
+        );
+        const radius = 5000;
+
+        // Search for nearby hotels and campsites
+        const hotelRequest = {
+            location: location,
+            radius: radius,
+            type: ['lodging']
+        };
+
+        const campsiteRequest = {
+            location: location,
+            radius: radius,
+            type: ['campground']
+        };
+
+        // Fetch hotels
+        service.nearbySearch(hotelRequest, (results, status) => {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+                clearHotelMarkers(); // Clear previous hotel markers
+                results.forEach(hotel => {
+                    fetchPlaceDetails(service, hotel, hotelIcon, 'hotel');
+                });
+            } else {
+                console.error('Error fetching hotels:', status);
+            }
+        });
+
+        // Fetch campsites
+        service.nearbySearch(campsiteRequest, (results, status) => {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+                clearCampsiteMarkers(); // Clear previous campsite markers
+                results.forEach(campsite => {
+                    fetchPlaceDetails(service, campsite, campsiteIcon, 'campsite');
+                });
+            } else {
+                console.error('Error fetching campsites:', status);
+            }
+        });
+    }
+
+    // Function to fetch place details (for both hotels and campsites)
+    function fetchPlaceDetails(service, place, icon, placeType) {
+        const placeRequest = {
+            placeId: place.place_id,
+            fields: ['name', 'website', 'international_phone_number', 'photos']
+        };
+
+        service.getDetails(placeRequest, (placeDetails, status) => {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+                const marker = L.marker([place.geometry.location.lat(), place.geometry.location.lng()], { icon }).addTo(map);
+
+                // Add to respective marker array
+                if (placeType === 'hotel') {
+                    hotelMarkers.push(marker);
+                } else if (placeType === 'campsite') {
+                    campsiteMarkers.push(marker);
                 }
-            });
 
-            // Function to fetch nearby hotels
-            function fetchHotelsInView(service, hotelIcon) {
-                const bounds = map.getBounds();
-                const location = new google.maps.LatLng(
-                    (bounds.getSouthWest().lat + bounds.getNorthEast().lat) / 2,
-                    (bounds.getSouthWest().lng + bounds.getNorthEast().lng) / 2
-                );
-                const radius = 5000;
+                const websiteUrl = placeDetails.website || '#';
+                const phoneNumber = placeDetails.international_phone_number || 'N/A';
 
-                // Search for nearby hotels
-                const request = {
-                    location: location,
-                    radius: radius,
-                    type: ['lodging']
-                };
+                // Set button colors based on place type
+                const buttonColor = placeType === 'campsite' ? '#0d7640' : '#c8a367';
+                const buttonHoverColor = placeType === 'campsite' ? '#0a5a30' : '#b0874e';
 
-                service.nearbySearch(request, (results, status) => {
-                    clearHotelMarkers();
+                // Popup content with style variables for different colors
+                const popupContent = `
+                    <div class="hotel-popup" style="--button-color: ${buttonColor}; --button-hover-color: ${buttonHoverColor}">
+                        <div class="popup-title">${placeDetails.name}</div>
+                        <a href="${websiteUrl}" target="_blank"><button>Visit Website</button></a>
+                        <a href="tel:${phoneNumber}"><button>Call</button></a>
+                    </div>
+                `;
 
-                    if (status === google.maps.places.PlacesServiceStatus.OK) {
-                        results.forEach(hotel => {
-                            fetchHotelDetails(service, hotel, hotelIcon);
-                        });
-                    } else {
-                        console.error('Error fetching hotels:', status);
-                    }
+                marker.bindPopup(popupContent);
+
+                marker.on('popupopen', () => {
+                    openPopupMarker = marker; // Track the marker with an open popup
                 });
-            }
 
-            // Function to fetch hotel details
-            function fetchHotelDetails(service, hotel, hotelIcon) {
-                const placeRequest = {
-                    placeId: hotel.place_id,
-                    fields: ['name', 'website', 'international_phone_number', 'photos']
-                };
-
-                service.getDetails(placeRequest, (place, status) => {
-                    if (status === google.maps.places.PlacesServiceStatus.OK) {
-                        const marker = L.marker([hotel.geometry.location.lat(), hotel.geometry.location.lng()], { icon: hotelIcon }).addTo(map);
-                        hotelMarkers.push(marker); // Store only hotel markers in this array
-                        const imageUrl = place.photos ? `https://maps.googleapis.com/maps/api/place/photo?maxwidth=100&photoreference=${place.photos[0].photo_reference}&key=AIzaSyDuAmJEMc8wvbYL6YUz-6imL6JtYmlCZf8` : null;
-
-                        const websiteUrl = place.website || '#';
-                        const phoneNumber = place.international_phone_number || 'N/A';
-
-                        marker.bindPopup(`
-                            <div class="hotel-popup">
-                                <div class="popup-title">${place.name}</div>
-                                <a href="${websiteUrl}" target="_blank"><button>Visit Website</button></a>
-                                <a href="tel:${phoneNumber}"><button>Call</button></a>
-                            </div>
-                        `);
-                    }
+                marker.on('popupclose', () => {
+                    openPopupMarker = null; // Reset openPopupMarker when the popup is closed
                 });
+            } else {
+                console.error('Error fetching place details:', status);
             }
+        });
+    }
 
-            // Function to clear hotel markers only
-            function clearHotelMarkers() {
-                hotelMarkers.forEach(marker => {
-                    map.removeLayer(marker);
-                });
-                hotelMarkers.length = 0;
-            }
-        }
+    // Function to clear only hotel markers
+    function clearHotelMarkers() {
+        hotelMarkers.forEach(marker => {
+            map.removeLayer(marker);
+        });
+        hotelMarkers.length = 0;
+    }
+
+    // Function to clear only campsite markers
+    function clearCampsiteMarkers() {
+        campsiteMarkers.forEach(marker => {
+            map.removeLayer(marker);
+        });
+        campsiteMarkers.length = 0;
+    }
+}
+
+         
+        //hotels to here
         
 function chooseAccommodation(lat, lon) {
     // Store the coordinates for use after the user makes a selection
