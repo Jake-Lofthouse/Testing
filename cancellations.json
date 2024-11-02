@@ -70,6 +70,11 @@
         "date": "2024-11-02"
     },
     {
+        "name": "Cape Pembroke Lighthouse parkrun",
+        "reason": "Weather",
+        "date": "2024-11-02"
+    },
+    {
         "name": "Cassiobury parkrun",
         "reason": "Venue unavailable",
         "date": "2024-11-02"
@@ -97,6 +102,11 @@
     {
         "name": "Dartford parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-11-02"
+    },
+    {
+        "name": "Deerpark Forest parkrun, Virginia",
+        "reason": "Course unsafe or blocked",
         "date": "2024-11-02"
     },
     {
@@ -232,6 +242,11 @@
     {
         "name": "Nagaragawa koen parkrun",
         "reason": "Weather",
+        "date": "2024-11-02"
+    },
+    {
+        "name": "Nostell parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-11-02"
     },
     {
@@ -467,6 +482,11 @@
     {
         "name": "Carlisle junior parkrun",
         "reason": "Carlisle Fireshow impacts course",
+        "date": "2024-11-03"
+    },
+    {
+        "name": "Castle Playing Fields junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2024-11-03"
     },
     {
