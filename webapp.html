@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>parkrunner tourist</title>
-    <link rel="shortcut icon" type="image/x.icon" href="favicon.ico?">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Parkrunner Tourist</title>
+    <link rel="shortcut icon" type="image/x.icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/logo.png">
 
     <!-- General Meta Tags -->
@@ -30,7 +30,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-REFFZSK4XK');
     </script>
 
@@ -43,26 +42,12 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
         }
 
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            position: relative;
-        }
-
         .iframe-container {
             position: absolute;
             top: 0;
             left: 0;
             bottom: 0;
             right: 0;
-            width: 100%;
-            height: 100%;
             overflow: hidden;
         }
 
@@ -72,147 +57,187 @@
             border: none;
         }
 
-        .contact-btn-container {
+        .menu-bar {
             position: absolute;
-            bottom: 18px;
-            left: 18px;
-            z-index: 1001;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .contact-btn {
-            background-color: #58993d;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border: none;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 24px;
-            transition: transform 0.3s ease, background-color 0.3s ease;
-            box-sizing: border-box;
-        }
-
-        .contact-btn:hover {
-            transform: scale(1.1);
-        }
-
-        .contact-btn i {
-            margin: 0;
-        }
-
-        .controls {
-            background-color: white;
-            padding: 15px;
-            border-radius: 10px;
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            z-index: 1000;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .controls.hidden {
-            display: none;
-        }
-
-        .controls label {
-            display: flex;
-            align-items: center;
-            font-size: 16px;
-        }
-
-        .controls input[type="checkbox"] {
-            appearance: none; /* Remove default checkbox styling */
-            width: 20px;
-            height: 20px;
-            border-radius: 3px;
-            border: 2px solid #58993d;
-            background-color: #fff;
-            cursor: pointer;
-            position: relative;
-            outline: none;
-            margin-right: 10px;
-            transition: background-color 0.3s ease, border-color 0.3s ease;
-        }
-
-        .controls input[type="checkbox"]:checked {
-            background-color: #58993d;
-            border-color: #58993d;
-        }
-
-        .controls input[type="checkbox"]::after {
-            content: '';
-            position: absolute;
-            top: 50%;
+            bottom: 10px;
             left: 50%;
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            font-size: 14px;
-            color: white;
-            transform: translate(-50%, -50%) scale(0);
-            transition: transform 0.3s ease;
+            transform: translateX(-50%);
+            height: 50px;
+            width: 90%;
+            background-color: #58993d;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 25px;
         }
 
-        .controls input[type="checkbox"]:checked::after {
-            content: '\f00c'; /* Font Awesome checkmark */
-            transform: translate(-50%, -50%) scale(1);
+        .menu-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+            position: relative; /* Positioning for the dropdown */
+            cursor: pointer; /* Pointer cursor for all items */
+        }
+
+        .menu-item .material-icons {
+            font-size: 24px;
+            color: white;
+        }
+
+        .menu-item:hover {
+            color: #c0e9a4; /* Light color on hover */
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: absolute;
+            bottom: 60px; /* Position above the menu */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            display: none; /* Initially hidden */
+            z-index: 1000;
+            width: 100px; /* Set a fixed width for the dropdown */
+        }
+
+        .dropdown-item {
+            padding: 10px;
+            color: #58993d; /* Green text for items */
+            cursor: pointer;
+            text-align: center;
+            border-radius: 10px; /* Add round edges */
+            transition: background-color 0.2s, color 0.2s; /* Smooth background change */
+        }
+
+        .dropdown-item.selected {
+            background-color: #7abf7e; /* Darker light green for the selected item */
+            color: white; /* White text on selected item */
+        }
+
+        .dropdown-item:hover {
+            background-color: #f0f0f0; /* Light grey on hover */
+            color: #58993d; /* Green text on hover */
+        }
+
+        /* Show dropdown when active */
+        .dropdown.active {
+            display: block; /* Show dropdown */
+        }
+
+        .current-selection {
+            display: flex;
+            align-items: center; /* Align icon and text vertically */
+            color: white;
+            font-size: 14px; /* Slightly larger font for visibility */
+            padding: 5px 10px; /* Add padding for better touch target */
+            cursor: pointer; /* Pointer cursor */
+            transition: background-color 0.2s; /* Smooth background change */
+        }
+
+        .current-selection:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+        }
+
+        .rotate {
+            transition: transform 0.3s ease; /* Smooth rotation transition */
+        }
+
+        .rotate-down {
+            transform: rotate(180deg); /* Downward arrow */
         }
     </style>
 </head>
 <body>
-    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="jlofthouse" data-description="Support me on Buy me a coffee!" data-message="Support The APP!" data-color="#58993d" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
-
-    <div class="controls">
-        <label>
-            <input type="checkbox" id="5kCheckbox" checked onchange="updateIframeSrc()"> 5k
-        </label>
-        <label>
-            <input type="checkbox" id="juniorCheckbox" onchange="updateIframeSrc()"> Junior
-        </label>
-    </div>
-
     <div class="iframe-container">
         <iframe id="parkrunIframe" src="https://parkrunnertourist.co.uk/5k" allow="geolocation; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
     </div>
 
-    <div class="contact-btn-container">
-        <button class="contact-btn" onclick="openUrl('https://parkrunnertourist.co.uk/finder')">
-            <i class="fas fa-robot"></i>
-        </button>
-        <button class="contact-btn" onclick="openUrl('https://forms.office.com/r/nku1ZRB4N6')">
-            <i class="fas fa-envelope"></i>
-        </button>
+    <div class="menu-bar">
+        <div class="menu-item" onclick="toggleDropdown()">
+            <span id="arrow" class="material-icons rotate">expand_more</span>
+            <span class="current-selection" id="currentSelection">Showing 5k</span>
+            <div id="dropdownMenu" class="dropdown">
+                <div class="dropdown-item selected" id="5kItem" onclick="setIframeSrc('5k', this)">5k</div>
+                <div class="dropdown-item" id="juniorItem" onclick="setIframeSrc('junior', this)">Junior</div>
+                <div class="dropdown-item" id="allItem" onclick="setIframeSrc('all', this)">All</div>
+            </div>
+        </div>
+        <a href="#" class="menu-item" onclick="openUrl('https://www.buymeacoffee.com/jlofthouse')">
+            <span class="material-icons">favorite</span>
+            Support
+        </a>
+        <a href="https://parkrunnertourist.co.uk/finder" class="menu-item">
+            <span class="material-icons">search</span>
+            AI Search
+        </a>
     </div>
 
     <script>
-        function updateIframeSrc() {
-            var is5kChecked = document.getElementById('5kCheckbox').checked;
-            var isJuniorChecked = document.getElementById('juniorCheckbox').checked;
+        let currentType = '5k'; // Track the current type
 
+        function setIframeSrc(type, selectedItem) {
             var iframe = document.getElementById('parkrunIframe');
+            var currentSelection = document.getElementById('currentSelection');
+            var dropdownItems = document.querySelectorAll('.dropdown-item');
 
-            if (is5kChecked && isJuniorChecked) {
-                iframe.src = 'https://parkrunnertourist.co.uk/all';
-            } else if (is5kChecked) {
-                iframe.src = 'https://parkrunnertourist.co.uk/5k';
-            } else if (isJuniorChecked) {
-                iframe.src = 'https://parkrunnertourist.co.uk/junior';
-            } else {
-                iframe.src = 'https://parkrunnertourist.co.uk/blank';
+            currentType = type; // Update current type
+
+            switch (type) {
+                case 'junior':
+                    iframe.src = 'https://parkrunnertourist.co.uk/junior';
+                    currentSelection.textContent = "Showing Junior"; // Update selection text
+                    break;
+                case 'all':
+                    iframe.src = 'https://parkrunnertourist.co.uk/all';
+                    currentSelection.textContent = "Showing All"; // Update selection text
+                    break;
+                default: // '5k'
+                    iframe.src = 'https://parkrunnertourist.co.uk/5k';
+                    currentSelection.textContent = "Showing 5k"; // Update selection text
+                    break;
             }
+
+            // Highlight the selected item and reset others
+            dropdownItems.forEach(item => {
+                item.classList.remove('selected'); // Remove selected class from all
+            });
+            selectedItem.classList.add('selected'); // Add selected class to the current item
+
+            // Close the dropdown after selection
+            closeDropdown();
         }
 
         function openUrl(url) {
             window.open(url, '_blank');
+        }
+
+        function toggleDropdown() {
+            const dropdown = document.getElementById('dropdownMenu');
+            const arrow = document.getElementById('arrow');
+            dropdown.classList.toggle('active'); // Toggle dropdown visibility
+            arrow.classList.toggle('rotate-down'); // Rotate arrow
+        }
+
+        function closeDropdown() {
+            const dropdown = document.getElementById('dropdownMenu');
+            const arrow = document.getElementById('arrow');
+            dropdown.classList.remove('active'); // Hide dropdown
+            arrow.classList.remove('rotate-down'); // Reset arrow rotation
+        }
+
+        // Close dropdown when clicking outside
+        window.onclick = function(event) {
+            const dropdown = document.getElementById('dropdownMenu');
+            const arrow = document.getElementById('arrow');
+            if (!event.target.closest('.menu-item') && dropdown.classList.contains('active')) {
+                closeDropdown();
+            }
         }
     </script>
 </body>
