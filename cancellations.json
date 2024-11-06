@@ -25,12 +25,22 @@
         "date": "2024-11-09"
     },
     {
+        "name": "Hull parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-11-09"
+    },
+    {
         "name": "Jakes Point parkrun",
         "reason": "Shortage of volunteers",
         "date": "2024-11-09"
     },
     {
         "name": "Jeffreys Bay parkrun",
+        "reason": "Venue unavailable",
+        "date": "2024-11-09"
+    },
+    {
+        "name": "Millennium parkrun",
         "reason": "Venue unavailable",
         "date": "2024-11-09"
     },
