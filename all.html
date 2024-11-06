@@ -361,15 +361,17 @@
         }
         
         //hotels from here
-        
+ 
 function initHotelFinder(map) {
     const minZoomLevel = 13; // Minimum zoom level to show markers
     const maxZoomLevel = 18; // Maximum zoom level for detail
     const hotelMarkers = new Set(); // Set to hold hotel markers
     const campsiteMarkers = new Set(); // Set to hold campsite markers
     let openPopupMarker = null; // Variable to store the marker with an open popup
+    let lastFetchTime = 0; // Throttle API requests on map movement
+    const cache = {}; // Cache for storing places data by bounds
 
-    // Create custom hotel and campsite icons
+    // Custom hotel and campsite icons
     const hotelIcon = L.icon({
         iconUrl: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Icons/Hotel.png',
         iconSize: [38, 38],
@@ -392,7 +394,11 @@ function initHotelFinder(map) {
         const currentZoom = map.getZoom();
         
         if (currentZoom >= minZoomLevel) {
-            // Fetch places in view only if zoom is above the minimum level
+            // Throttle requests: only fetch every 5 seconds
+            const now = Date.now();
+            if (now - lastFetchTime < 5000) return;
+            lastFetchTime = now;
+
             fetchPlacesInView(service);
         } else {
             // Clear all markers if zoom is below the minimum level
@@ -403,13 +409,21 @@ function initHotelFinder(map) {
     // Function to fetch nearby hotels and campsites
     function fetchPlacesInView(service) {
         const bounds = map.getBounds();
+        const boundsKey = `${bounds.getSouthWest().toString()}_${bounds.getNorthEast().toString()}`;
+        
+        // Use cached results if available for the current bounds
+        if (cache[boundsKey]) {
+            displayMarkersFromCache(cache[boundsKey]);
+            return;
+        }
+
         const location = new google.maps.LatLng(
             (bounds.getSouthWest().lat + bounds.getNorthEast().lat) / 2,
             (bounds.getSouthWest().lng + bounds.getNorthEast().lng) / 2
         );
-        const radius = 5000;
+        const radius = 10000; // Larger radius to cover broader area
 
-        // Search for nearby hotels and campsites
+        // Define requests for hotels and campsites
         const hotelRequest = {
             location: location,
             radius: radius,
@@ -425,9 +439,10 @@ function initHotelFinder(map) {
         // Fetch hotels
         service.nearbySearch(hotelRequest, (results, status) => {
             if (status === google.maps.places.PlacesServiceStatus.OK) {
-                results.forEach(hotel => {
-                    fetchPlaceDetails(service, hotel, hotelIcon, 'hotel');
-                });
+                const data = results.map(hotel => ({ place: hotel, type: 'hotel' }));
+                cache[boundsKey] = cache[boundsKey] || [];
+                cache[boundsKey].push(...data); // Cache results
+                displayMarkers(data, hotelIcon);
             } else {
                 console.error('Error fetching hotels:', status);
             }
@@ -436,52 +451,60 @@ function initHotelFinder(map) {
         // Fetch campsites
         service.nearbySearch(campsiteRequest, (results, status) => {
             if (status === google.maps.places.PlacesServiceStatus.OK) {
-                results.forEach(campsite => {
-                    fetchPlaceDetails(service, campsite, campsiteIcon, 'campsite');
-                });
+                const data = results.map(campsite => ({ place: campsite, type: 'campsite' }));
+                cache[boundsKey] = cache[boundsKey] || [];
+                cache[boundsKey].push(...data); // Cache results
+                displayMarkers(data, campsiteIcon);
             } else {
                 console.error('Error fetching campsites:', status);
             }
         });
     }
 
-    // Function to fetch place details (for both hotels and campsites)
-    function fetchPlaceDetails(service, place, icon, placeType) {
+    // Function to display markers from cached data
+    function displayMarkers(data, icon) {
+        data.forEach(({ place, type }) => {
+            // Create a marker
+            const marker = L.marker([place.geometry.location.lat(), place.geometry.location.lng()], { icon });
+            const markerKey = place.place_id + "_" + type;
+
+            // Only add if the marker is not already on the map
+            if (type === 'hotel' && !hotelMarkers.has(markerKey)) {
+                marker.addTo(map);
+                hotelMarkers.add(markerKey);
+            } else if (type === 'campsite' && !campsiteMarkers.has(markerKey)) {
+                marker.addTo(map);
+                campsiteMarkers.add(markerKey);
+            }
+
+            // Fetch details only when marker is clicked
+            marker.on('click', () => {
+                if (!marker.detailsFetched) {
+                    fetchPlaceDetails(service, place, marker, type);
+                    marker.detailsFetched = true; // Mark as details fetched
+                }
+            });
+        });
+    }
+
+    // Function to fetch place details and set up popups
+    function fetchPlaceDetails(service, place, marker, placeType) {
         const placeRequest = {
             placeId: place.place_id,
-            fields: ['name', 'website', 'international_phone_number', 'photos']
+            fields: ['name', 'website', 'international_phone_number']
         };
 
         service.getDetails(placeRequest, (placeDetails, status) => {
             if (status === google.maps.places.PlacesServiceStatus.OK) {
-                // Check if the name contains "camp" (case insensitive)
-                const isCampsite = /camp/i.test(placeDetails.name);
-
-                // Decide the icon based on whether it's a campsite
-                const markerIcon = isCampsite ? campsiteIcon : hotelIcon;
-
-                // Create a marker
-                const marker = L.marker([place.geometry.location.lat(), place.geometry.location.lng()], { icon: markerIcon });
-
-                // Check if the marker already exists before adding
-                const markerKey = placeDetails.name + (isCampsite ? "_campsite" : "_hotel");
-                if (placeType === 'hotel' && !hotelMarkers.has(markerKey)) {
-                    marker.addTo(map);
-                    hotelMarkers.add(markerKey);
-                } else if (placeType === 'campsite' && !campsiteMarkers.has(markerKey)) {
-                    marker.addTo(map);
-                    campsiteMarkers.add(markerKey);
-                }
-
-                // Set up popup
+                // Determine popup content
                 const websiteUrl = placeDetails.website || '#';
                 const phoneNumber = placeDetails.international_phone_number || 'N/A';
 
-                // Set button colors based on place type
-                const buttonColor = isCampsite ? '#0d7640' : '#c8a367';
-                const buttonHoverColor = isCampsite ? '#0a5a30' : '#b0874e';
+                // Style button colors based on place type
+                const buttonColor = placeType === 'campsite' ? '#0d7640' : '#c8a367';
+                const buttonHoverColor = placeType === 'campsite' ? '#0a5a30' : '#b0874e';
 
-                // Popup content with style variables for different colors
+                // Construct popup HTML
                 const popupContent = `
                     <div class="hotel-popup" style="--button-color: ${buttonColor}; --button-hover-color: ${buttonHoverColor}">
                         <div class="popup-title">${placeDetails.name}</div>
@@ -490,15 +513,7 @@ function initHotelFinder(map) {
                     </div>
                 `;
 
-                marker.bindPopup(popupContent);
-
-                marker.on('popupopen', () => {
-                    openPopupMarker = marker; // Track the marker with an open popup
-                });
-
-                marker.on('popupclose', () => {
-                    openPopupMarker = null; // Reset openPopupMarker when the popup is closed
-                });
+                marker.bindPopup(popupContent).openPopup(); // Open popup on first load
             } else {
                 console.error('Error fetching place details:', status);
             }
@@ -507,16 +522,13 @@ function initHotelFinder(map) {
 
     // Function to clear all markers
     function clearMarkers() {
-        // Clear hotel markers
         hotelMarkers.clear();
-        // Clear campsite markers
         campsiteMarkers.clear();
-        openPopupMarker = null; // Clear the reference to the last open popup
+        openPopupMarker = null;
     }
 }
 
 
-         
         //hotels to here
         
 function chooseAccommodation(lat, lon) {
