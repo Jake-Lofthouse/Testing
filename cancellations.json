@@ -85,6 +85,11 @@
         "date": "2024-11-09"
     },
     {
+        "name": "Sale Water parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-11-09"
+    },
+    {
         "name": "Secunda parkrun",
         "reason": "Venue unavailable",
         "date": "2024-11-09"
@@ -247,6 +252,11 @@
     {
         "name": "Mowbray Park junior parkrun",
         "reason": "Remembrance Sunday Parade in Park",
+        "date": "2024-11-10"
+    },
+    {
+        "name": "Norris Green Park junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2024-11-10"
     },
     {
