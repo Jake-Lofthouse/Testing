@@ -155,6 +155,11 @@
         "date": "2024-11-09"
     },
     {
+        "name": "Wolford Wood parkrun",
+        "reason": "Course waterlogged",
+        "date": "2024-11-09"
+    },
+    {
         "name": "parkrun de Fontainebleau",
         "reason": "parkrun est actuellement suspendu en France",
         "date": "2024-11-09"
@@ -207,6 +212,11 @@
     {
         "name": "Coronation Park junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-11-10"
+    },
+    {
+        "name": "Des Connor Park junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2024-11-10"
     },
     {
