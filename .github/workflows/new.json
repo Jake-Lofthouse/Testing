@@ -1,10 +1,10 @@
 name: Update
 
 on:
-  schedule:
-    # Adjust the cron schedule as needed (e.g., every 7 days)
-    - cron: '0 0 */7 * *'  # Runs every 7 days at midnight UTC
-  workflow_dispatch:  # Allows manual triggering of the workflow
+  push:
+    branches:
+      - main
+  workflow_dispatch: 
 
 jobs:
   update-file:
