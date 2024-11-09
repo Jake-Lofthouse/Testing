@@ -1,4 +1,4 @@
-name: Update parkrun1.json
+name: Update
 
 on:
   schedule:
