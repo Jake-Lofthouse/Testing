@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Fetch full history to allow diff comparison
 
       - name: Download parkrun1.json
         run: curl -o parkrun1.json https://images.parkrun.com/events.json
@@ -26,6 +28,7 @@ jobs:
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'actions@github.com'
+          git reset --hard  # Discards any unstaged changes
           git add parkrun1.json
           git commit -m "Update parkrun1.json"
           git push
