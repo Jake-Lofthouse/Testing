@@ -1,10 +1,9 @@
-name: Update
+name: Update Events
 
 on:
-  push:
-    branches:
-      - main
-  workflow_dispatch: 
+  schedule:
+    - cron: '0 0 */7 * *'  # Adjust the cron schedule as needed
+  workflow_dispatch:  # Allows manual triggering of the workflow
 
 jobs:
   update-file:
