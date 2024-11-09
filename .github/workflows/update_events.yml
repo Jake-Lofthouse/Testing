@@ -15,8 +15,13 @@ jobs:
           fetch-depth: 0  # Fetch full history for diff comparison
           ref: main       # Ensures actions run on the main branch
 
-      - name: Download parkrun1.json
-        run: curl -o parkrun1.json https://images.parkrun.com/events.json
+      - name: Download page HTML
+        run: curl -o page.html https://images.parkrun.com/events.json
+
+      - name: Extract JSON data from HTML
+        run: |
+          # Extract JSON embedded in HTML using grep and sed
+          cat page.html | grep -oP '(?<=<script type="application/json">).*?(?=</script>)' > parkrun1.json
 
       - name: Check if parkrun1.json has changed
         id: check_changes
