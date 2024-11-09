@@ -21,14 +21,18 @@ jobs:
         id: check_changes
         run: |
           git fetch origin
-          git diff --exit-code --quiet parkrun1.json || echo "changed=true" >> $GITHUB_ENV
+          if git diff --exit-code --quiet parkrun1.json; then
+            echo "No changes in parkrun1.json"
+            exit 0  # Exit early if there are no changes
+          else
+            echo "changed=true" >> $GITHUB_ENV
+          fi
 
       - name: Commit and push changes
         if: env.changed == 'true'
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'actions@github.com'
-          git reset --hard  # Discards any unstaged changes
           git add parkrun1.json
           git commit -m "Update parkrun1.json"
           git push
