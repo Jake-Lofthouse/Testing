@@ -1,0 +1,37 @@
+name: Update parkrun1.json
+
+on:
+  schedule:
+    # Adjust the cron schedule as needed (e.g., every 7 days)
+    - cron: '0 0 */7 * *'  # Runs every 7 days at midnight
+  workflow_dispatch:  # Allows manual triggering of the workflow
+
+jobs:
+  update-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Download parkrun1.json
+        run: curl -o parkrun1.json https://images.parkrun.com/events.json
+
+      - name: Check if parkrun1.json has changed
+        id: check_changes
+        run: |
+          if git diff --exit-code --quiet parkrun1.json; then
+            echo "No changes in parkrun1.json"
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "Changes detected in parkrun1.json"
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add parkrun1.json
+          git commit -m "Update parkrun1.json"
+          git push
