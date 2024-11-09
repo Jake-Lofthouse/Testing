@@ -2,7 +2,7 @@ name: Update Events
 
 on:
   schedule:
-    - cron: '0 0 */7 * *'  # Adjust the cron schedule as needed
+    - cron: '0 0 */7 * *'  # Runs every 7 days
   workflow_dispatch:  # Allows manual triggering of the workflow
 
 jobs:
@@ -12,7 +12,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Fetch full history to allow diff comparison
+          fetch-depth: 0  # Fetch full history for diff comparison
+          ref: main       # Ensures actions run on the main branch
 
       - name: Download parkrun1.json
         run: curl -o parkrun1.json https://images.parkrun.com/events.json
@@ -20,7 +21,7 @@ jobs:
       - name: Check if parkrun1.json has changed
         id: check_changes
         run: |
-          git fetch origin
+          git fetch origin main
           if git diff --exit-code --quiet parkrun1.json; then
             echo "No changes in parkrun1.json"
             exit 0  # Exit early if there are no changes
@@ -28,11 +29,11 @@ jobs:
             echo "changed=true" >> $GITHUB_ENV
           fi
 
-      - name: Commit and push changes
+      - name: Commit and push changes to main
         if: env.changed == 'true'
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'actions@github.com'
           git add parkrun1.json
           git commit -m "Update parkrun1.json"
-          git push
+          git push origin main
