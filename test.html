@@ -256,15 +256,24 @@
              display: none;
         }
         
-.hotel-popup img {
-    max-width: 100%; /* Responsive image */
+/* Styles for hotel popup image */
+.hotel-popup-image {
+    max-width: 100%; /* Ensure the image is responsive */
     height: auto;    /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between the image and the iframe */
 }
 
+/* Mapilly iframe container styling */
+.mapilly-container {
+    margin-bottom: 10px; /* Space between the iframe and the buttons */
+}
+
+/* Popup container for hotel details */
 .hotel-popup {
     text-align: center; /* Center align text */
 }
 
+/* Buttons styles */
 .hotel-popup button {
     width: 100%;        /* Full width buttons */
     padding: 10px 0;    /* Padding for buttons */
@@ -500,7 +509,7 @@ function initHotelFinder(map) {
 function fetchPlaceDetails(service, place, marker, placeType) {
     const placeRequest = {
         placeId: place.place_id,
-        fields: ['name', 'website', 'international_phone_number', 'geometry']
+        fields: ['name', 'website', 'international_phone_number', 'photos', 'geometry']
     };
 
     service.getDetails(placeRequest, (placeDetails, status) => {
@@ -522,13 +531,20 @@ function fetchPlaceDetails(service, place, marker, placeType) {
                     if (data.isLocationAvailable) {
                         // If location is available on Mapilly, embed the Mapilly map
                         mapillyContent = `
-                            <div style="width: 100%; height: 200px;">
+                            <div class="mapilly-container" style="width: 100%; height: 200px; margin-bottom: 10px;">
                                 <iframe src="https://www.mapilly.com/embed?lat=${lat}&lng=${lng}" width="100%" height="100%" style="border: none;"></iframe>
                             </div>
                         `;
                     }
                 })
                 .catch(error => console.error('Error fetching Mapilly data:', error));
+
+            // Handle image if available
+            const imageUrl = placeDetails.photos && placeDetails.photos[0] ? placeDetails.photos[0].getUrl({ maxWidth: 400, maxHeight: 300 }) : null;
+            let imageContent = '';
+            if (imageUrl) {
+                imageContent = `<img src="${imageUrl}" alt="${placeDetails.name}" class="hotel-popup-image" />`;
+            }
 
             // Style button colors based on place type
             const buttonColor = placeType === 'campsite' ? '#0d7640' : '#c8a367';
@@ -538,9 +554,10 @@ function fetchPlaceDetails(service, place, marker, placeType) {
             const popupContent = `
                 <div class="hotel-popup" style="--button-color: ${buttonColor}; --button-hover-color: ${buttonHoverColor}">
                     <div class="popup-title">${placeDetails.name}</div>
+                    ${imageContent} <!-- Display hotel image if available -->
+                    ${mapillyContent}  <!-- Add Mapilly content if available -->
                     <a href="${websiteUrl}" target="_blank"><button><i class="fas fa-globe"></i> Visit Website</button></a>
                     <a href="tel:${phoneNumber}"><button><i class="fas fa-phone"></i> Call</button></a>
-                    ${mapillyContent}  <!-- Add Mapilly content if available -->
                 </div>
             `;
 
@@ -550,6 +567,8 @@ function fetchPlaceDetails(service, place, marker, placeType) {
         }
     });
 }
+
+
 
 
     // Function to clear all markers
