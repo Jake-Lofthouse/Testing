@@ -28,7 +28,7 @@ jobs:
       - name: Run cancellation scraper
         id: run_scraper
         run: |
-          python "scripts/scrape_cancellations.py"
+          python "scripts/cancellations.py"
           echo "exit_code=$?" >> $GITHUB_ENV  # Save exit code to environment variable
 
       - name: Commit and push changes
