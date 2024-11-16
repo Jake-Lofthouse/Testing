@@ -50,6 +50,11 @@
         "date": "2024-11-16"
     },
     {
+        "name": "Coal Creek Trail parkrun",
+        "reason": "Weather",
+        "date": "2024-11-16"
+    },
+    {
         "name": "Croxteth Hall parkrun",
         "reason": "Venue unavailable",
         "date": "2024-11-16"
@@ -127,6 +132,11 @@
     {
         "name": "Lightning Ridge parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2024-11-16"
+    },
+    {
+        "name": "Loftsgardsbrua parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-11-16"
     },
     {
@@ -302,6 +312,11 @@
     {
         "name": "Conwy Nature Reserve junior parkrun",
         "reason": "Conwy Half Marathon",
+        "date": "2024-11-17"
+    },
+    {
+        "name": "Cotlands Park junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2024-11-17"
     },
     {
