@@ -256,15 +256,32 @@
              display: none;
         }
         
-.hotel-popup img {
-    max-width: 100%; /* Responsive image */
-    height: auto;    /* Maintain aspect ratio */
+/* Styles for hotel popup image */
+.hotel-popup-image {
+    max-width: 80%;      /* Slightly smaller width (80% of the popup) */
+    height: auto;        /* Maintain aspect ratio */
+    border-radius: 15px; /* Rounded corners */
+    margin-bottom: 10px; /* Space between the image and the iframe */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a modern look */
+    transition: transform 0.3s ease; /* Smooth zoom effect on hover */
 }
 
+/* Image hover effect for a modern touch */
+.hotel-popup-image:hover {
+    transform: scale(1.05); /* Slight zoom-in effect when hovering */
+}
+
+/* Mapilly iframe container styling */
+.mapilly-container {
+    margin-bottom: 10px; /* Space between the iframe and the buttons */
+}
+
+/* Popup container for hotel details */
 .hotel-popup {
     text-align: center; /* Center align text */
 }
 
+/* Buttons styles */
 .hotel-popup button {
     width: 100%;        /* Full width buttons */
     padding: 10px 0;    /* Padding for buttons */
@@ -282,6 +299,7 @@
 .hotel-popup button:hover {
     background-color: var(--button-hover-color); /* Hover color */
 }
+
 
         
     iframe {
@@ -496,38 +514,71 @@ function initHotelFinder(map) {
         });
     }
 
-    // Function to fetch place details and set up popups
-    function fetchPlaceDetails(service, place, marker, placeType) {
-        const placeRequest = {
-            placeId: place.place_id,
-            fields: ['name', 'website', 'international_phone_number']
-        };
+// Function to fetch place details and set up popups
+function fetchPlaceDetails(service, place, marker, placeType) {
+    const placeRequest = {
+        placeId: place.place_id,
+        fields: ['name', 'website', 'international_phone_number', 'photos', 'geometry']
+    };
 
-        service.getDetails(placeRequest, (placeDetails, status) => {
-            if (status === google.maps.places.PlacesServiceStatus.OK) {
-                // Determine popup content
-                const websiteUrl = placeDetails.website || '#';
-                const phoneNumber = placeDetails.international_phone_number || 'N/A';
+    service.getDetails(placeRequest, (placeDetails, status) => {
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+            // Determine popup content
+            const websiteUrl = placeDetails.website || '#';
+            const phoneNumber = placeDetails.international_phone_number || 'N/A';
+            const lat = placeDetails.geometry.location.lat();
+            const lng = placeDetails.geometry.location.lng();
 
-                // Style button colors based on place type
-                const buttonColor = placeType === 'campsite' ? '#0d7640' : '#c8a367';
-                const buttonHoverColor = placeType === 'campsite' ? '#0a5a30' : '#b0874e';
+            // Mapilly URL integration (replace with your actual Mapilly endpoint if you have one)
+            const mapillyUrl = `https://api.mapilly.com/getLocationDetails?lat=${lat}&lng=${lng}`;
+            let mapillyContent = '';
 
-                // Construct popup HTML
-                const popupContent = `
-                    <div class="hotel-popup" style="--button-color: ${buttonColor}; --button-hover-color: ${buttonHoverColor}">
-                        <div class="popup-title">${placeDetails.name}</div>
-                        <a href="${websiteUrl}" target="_blank"><button><i class="fas fa-globe"></i> Visit Website</button></a>
-                        <a href="tel:${phoneNumber}"><button><i class="fas fa-phone"></i> Call</button></a>
-                    </div>
-                `;
+            // Fetch Mapilly data (this is a basic fetch example, adjust based on your real Mapilly API)
+            fetch(mapillyUrl)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.isLocationAvailable) {
+                        // If location is available on Mapilly, embed the Mapilly map
+                        mapillyContent = `
+                            <div class="mapilly-container" style="width: 100%; height: 200px; margin-bottom: 10px;">
+                                <iframe src="https://www.mapilly.com/embed?lat=${lat}&lng=${lng}" width="100%" height="100%" style="border: none;"></iframe>
+                            </div>
+                        `;
+                    }
+                })
+                .catch(error => console.error('Error fetching Mapilly data:', error));
 
-                marker.bindPopup(popupContent).openPopup(); // Open popup on first load
-            } else {
-                console.error('Error fetching place details:', status);
+            // Handle image if available
+            const imageUrl = placeDetails.photos && placeDetails.photos[0] ? placeDetails.photos[0].getUrl({ maxWidth: 400, maxHeight: 300 }) : null;
+            let imageContent = '';
+            if (imageUrl) {
+                imageContent = `<img src="${imageUrl}" alt="${placeDetails.name}" class="hotel-popup-image" />`;
             }
-        });
-    }
+
+            // Style button colors based on place type
+            const buttonColor = placeType === 'campsite' ? '#0d7640' : '#c8a367';
+            const buttonHoverColor = placeType === 'campsite' ? '#0a5a30' : '#b0874e';
+
+            // Construct popup HTML
+            const popupContent = `
+                <div class="hotel-popup" style="--button-color: ${buttonColor}; --button-hover-color: ${buttonHoverColor}">
+                    <div class="popup-title">${placeDetails.name}</div>
+                    ${imageContent} <!-- Display hotel image if available -->
+                    ${mapillyContent}  <!-- Add Mapilly content if available -->
+                    <a href="${websiteUrl}" target="_blank"><button><i class="fas fa-globe"></i> Visit Website</button></a>
+                    <a href="tel:${phoneNumber}"><button><i class="fas fa-phone"></i> Call</button></a>
+                </div>
+            `;
+
+            marker.bindPopup(popupContent).openPopup(); // Open popup on first load
+        } else {
+            console.error('Error fetching place details:', status);
+        }
+    });
+}
+
+
+
 
     // Function to clear all markers
     function clearMarkers() {
