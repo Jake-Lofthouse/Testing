@@ -16,7 +16,7 @@
         <priority>0.8</priority>
     </url>
     
-    <!-- Google Play -->
+    <!-- Google Play (fixed '&' to '&amp;') -->
     <url>
         <loc>https://play.google.com/store/apps/details?id=appinventor.ai_jlofty8.parkrunner_tourist</loc>
         <lastmod>2024-11-19</lastmod>
