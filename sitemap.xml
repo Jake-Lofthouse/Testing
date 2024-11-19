@@ -24,9 +24,9 @@
         <priority>0.6</priority>
     </url>
     
-    <!-- B&B -->
+    <!-- B&B (fixed '&' to '&amp;') -->
     <url>
-        <loc>https://www.parkrunnertourist.co.uk/B&B</loc>
+        <loc>https://www.parkrunnertourist.co.uk/B&amp;B</loc>
         <lastmod>2024-11-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
