@@ -40,6 +40,11 @@
         "date": "2024-11-23"
     },
     {
+        "name": "Favorita parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-11-23"
+    },
+    {
         "name": "Flegg High parkrun",
         "reason": "Santa's elves are holding a market at the school",
         "date": "2024-11-23"
@@ -117,6 +122,11 @@
     {
         "name": "Pakapakanthi parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Prestelsee parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2024-11-23"
     },
     {
