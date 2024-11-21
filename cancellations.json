@@ -25,8 +25,18 @@
         "date": "2024-11-23"
     },
     {
+        "name": "Bolberry Down parkrun",
+        "reason": "Yellow weather warning rain and gales",
+        "date": "2024-11-23"
+    },
+    {
         "name": "Burswood Peninsula parkrun",
         "reason": "Cancelled for Australia v India Test Match",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Clonmel parkrun",
+        "reason": "Flood barriers up across parkrun course",
         "date": "2024-11-23"
     },
     {
@@ -70,6 +80,11 @@
         "date": "2024-11-23"
     },
     {
+        "name": "Hazlehead parkrun, Aberdeen",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-11-23"
+    },
+    {
         "name": "Holyrood parkrun",
         "reason": "Venue unavailable",
         "date": "2024-11-23"
@@ -82,6 +97,11 @@
     {
         "name": "Horinouchi koen parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Jeune Park parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-11-23"
     },
     {
@@ -112,6 +132,16 @@
     {
         "name": "Montalto Estate parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Moors Valley parkrun",
+        "reason": "Venue unavailable",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Newport parkrun",
+        "reason": "Forecast for high winds - landowner request cancel",
         "date": "2024-11-23"
     },
     {
@@ -147,6 +177,16 @@
     {
         "name": "Robelle Domain parkrun",
         "reason": "Permission issue",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Settlers Park parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Sheringham parkrun",
+        "reason": "Weather",
         "date": "2024-11-23"
     },
     {
@@ -197,6 +237,11 @@
     {
         "name": "Waterfall parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Waterloo Plains parkrun",
+        "reason": "Weather",
         "date": "2024-11-23"
     },
     {
@@ -267,6 +312,11 @@
     {
         "name": "Iveagh Sports Ground junior parkrun",
         "reason": "Event Closed",
+        "date": "2024-11-24"
+    },
+    {
+        "name": "Moors Valley junior parkrun",
+        "reason": "Weather",
         "date": "2024-11-24"
     },
     {
