@@ -25,6 +25,11 @@
         "date": "2024-11-23"
     },
     {
+        "name": "Blickling parkrun",
+        "reason": "Weather",
+        "date": "2024-11-23"
+    },
+    {
         "name": "Bolberry Down parkrun",
         "reason": "Yellow weather warning rain and gales",
         "date": "2024-11-23"
@@ -45,6 +50,11 @@
         "date": "2024-11-23"
     },
     {
+        "name": "Colby parkrun",
+        "reason": "Weather",
+        "date": "2024-11-23"
+    },
+    {
         "name": "Constantia Greenbelt parkrun",
         "reason": "Venue unavailable",
         "date": "2024-11-23"
@@ -52,6 +62,11 @@
     {
         "name": "Exploration Place parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Faskally Forest parkrun",
+        "reason": "Weather",
         "date": "2024-11-23"
     },
     {
@@ -160,6 +175,11 @@
         "date": "2024-11-23"
     },
     {
+        "name": "Osterley parkrun",
+        "reason": "Weather",
+        "date": "2024-11-23"
+    },
+    {
         "name": "Pakapakanthi parkrun",
         "reason": "Venue unavailable",
         "date": "2024-11-23"
@@ -215,6 +235,11 @@
         "date": "2024-11-23"
     },
     {
+        "name": "Trelissick parkrun",
+        "reason": "Weather",
+        "date": "2024-11-23"
+    },
+    {
         "name": "Uditore parkrun",
         "reason": "Shortage of volunteers",
         "date": "2024-11-23"
@@ -247,6 +272,11 @@
     {
         "name": "Whitley Bay parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Wimpole Estate parkrun",
+        "reason": "Landowner request due to high winds and heavy rain",
         "date": "2024-11-23"
     },
     {
@@ -310,12 +340,22 @@
         "date": "2024-11-24"
     },
     {
+        "name": "Blickling junior parkrun",
+        "reason": "Weather",
+        "date": "2024-11-24"
+    },
+    {
         "name": "Iveagh Sports Ground junior parkrun",
         "reason": "Event Closed",
         "date": "2024-11-24"
     },
     {
         "name": "Moors Valley junior parkrun",
+        "reason": "Weather",
+        "date": "2024-11-24"
+    },
+    {
+        "name": "Osterley junior parkrun",
         "reason": "Weather",
         "date": "2024-11-24"
     },
