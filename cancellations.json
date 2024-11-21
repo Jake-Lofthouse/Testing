@@ -40,6 +40,11 @@
         "date": "2024-11-23"
     },
     {
+        "name": "Carrickfergus parkrun",
+        "reason": "Weather",
+        "date": "2024-11-23"
+    },
+    {
         "name": "Clonmel parkrun",
         "reason": "Flood barriers up across parkrun course",
         "date": "2024-11-23"
@@ -155,6 +160,11 @@
         "date": "2024-11-23"
     },
     {
+        "name": "Mount Stuart parkrun",
+        "reason": "Weather",
+        "date": "2024-11-23"
+    },
+    {
         "name": "Newport parkrun",
         "reason": "Forecast for high winds - landowner request cancel",
         "date": "2024-11-23"
@@ -162,6 +172,11 @@
     {
         "name": "North Harbour parkrun",
         "reason": "weather conditions made course unusable",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Nostell parkrun",
+        "reason": "Weather",
         "date": "2024-11-23"
     },
     {
@@ -182,6 +197,11 @@
     {
         "name": "Pakapakanthi parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Penryn Campus parkrun",
+        "reason": "Weather",
         "date": "2024-11-23"
     },
     {
@@ -222,6 +242,11 @@
     {
         "name": "St Francis parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Stonehouse parkrun",
+        "reason": "Weather",
         "date": "2024-11-23"
     },
     {
@@ -291,6 +316,11 @@
     },
     {
         "name": "Wolford Wood parkrun",
+        "reason": "Weather",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Wollaton Hall parkrun",
         "reason": "Weather",
         "date": "2024-11-23"
     },
