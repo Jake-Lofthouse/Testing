@@ -110,6 +110,11 @@
         "date": "2024-11-23"
     },
     {
+        "name": "North Harbour parkrun",
+        "reason": "weather conditions made course unusable",
+        "date": "2024-11-23"
+    },
+    {
         "name": "Oiso undokoen parkrun",
         "reason": "No participants",
         "date": "2024-11-23"
@@ -202,6 +207,11 @@
     {
         "name": "Witton parkrun",
         "reason": "Cross country",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Wolford Wood parkrun",
+        "reason": "Weather",
         "date": "2024-11-23"
     },
     {
