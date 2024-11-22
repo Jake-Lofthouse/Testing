@@ -10,6 +10,11 @@
         "date": "2024-11-23"
     },
     {
+        "name": "Aviemore parkrun",
+        "reason": "Weather",
+        "date": "2024-11-23"
+    },
+    {
         "name": "Battersea parkrun",
         "reason": "Another event in the park",
         "date": "2024-11-23"
@@ -25,6 +30,11 @@
         "date": "2024-11-23"
     },
     {
+        "name": "Berrinba parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-11-23"
+    },
+    {
         "name": "Blickling parkrun",
         "reason": "Weather",
         "date": "2024-11-23"
@@ -32,6 +42,11 @@
     {
         "name": "Bolberry Down parkrun",
         "reason": "Yellow weather warning rain and gales",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Brockenhurst parkrun",
+        "reason": "Weather",
         "date": "2024-11-23"
     },
     {
@@ -45,6 +60,11 @@
         "date": "2024-11-23"
     },
     {
+        "name": "Chipping Norton School parkrun",
+        "reason": "Weather",
+        "date": "2024-11-23"
+    },
+    {
         "name": "Clonmel parkrun",
         "reason": "Flood barriers up across parkrun course",
         "date": "2024-11-23"
@@ -52,6 +72,11 @@
     {
         "name": "Clumber Park parkrun",
         "reason": "Christmas Fayre being held in the park",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Coed Cefn-pwll-du parkrun",
+        "reason": "Weather",
         "date": "2024-11-23"
     },
     {
@@ -67,6 +92,16 @@
     {
         "name": "Dalby parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Delamere parkrun",
+        "reason": "Forest will be closed due to high winds",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Eastleigh parkrun",
+        "reason": "Storm Bert and Ernie are in town!",
         "date": "2024-11-23"
     },
     {
@@ -92,6 +127,16 @@
     {
         "name": "Fuldaaue parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Ganavan Sands parkrun",
+        "reason": "Weather",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Girvan Prom parkrun",
+        "reason": "Weather",
         "date": "2024-11-23"
     },
     {
@@ -145,8 +190,18 @@
         "date": "2024-11-23"
     },
     {
+        "name": "Lanark Moor parkrun",
+        "reason": "Weather",
+        "date": "2024-11-23"
+    },
+    {
         "name": "Lavender Mill parkrun",
         "reason": "Race in Middelburg. Shortage of volunteers.",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Lews Castle parkrun",
+        "reason": "Weather",
         "date": "2024-11-23"
     },
     {
@@ -155,8 +210,18 @@
         "date": "2024-11-23"
     },
     {
+        "name": "Milford Waterfront parkrun",
+        "reason": "Weather",
+        "date": "2024-11-23"
+    },
+    {
         "name": "Millennium parkrun",
         "reason": "Seasonal Cancellation",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Millhouses parkrun",
+        "reason": "VERY icy conditions throughout the course",
         "date": "2024-11-23"
     },
     {
@@ -176,6 +241,11 @@
     },
     {
         "name": "Mount Stuart parkrun",
+        "reason": "Weather",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Mudgeeraba parkrun",
         "reason": "Weather",
         "date": "2024-11-23"
     },
@@ -225,6 +295,11 @@
         "date": "2024-11-23"
     },
     {
+        "name": "Pavilion Gardens parkrun",
+        "reason": "Weather",
+        "date": "2024-11-23"
+    },
+    {
         "name": "Penrhyn parkrun",
         "reason": "Tywydd garw - Weather",
         "date": "2024-11-23"
@@ -236,6 +311,11 @@
     },
     {
         "name": "Petrie parkrun",
+        "reason": "Weather",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Plymvalley parkrun",
         "reason": "Weather",
         "date": "2024-11-23"
     },
@@ -255,8 +335,18 @@
         "date": "2024-11-23"
     },
     {
+        "name": "Seaford Beach parkrun",
+        "reason": "Weather",
+        "date": "2024-11-23"
+    },
+    {
         "name": "Settlers Park parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Severn Bridge parkrun",
+        "reason": "Storm Bert paying us a visit",
         "date": "2024-11-23"
     },
     {
@@ -267,6 +357,11 @@
     {
         "name": "Shongweni parkrun",
         "reason": "Another event happening at the venue",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Silloth Promenade parkrun",
+        "reason": "Weather",
         "date": "2024-11-23"
     },
     {
@@ -285,8 +380,18 @@
         "date": "2024-11-23"
     },
     {
+        "name": "Stones Corner parkrun",
+        "reason": "Weather",
+        "date": "2024-11-23"
+    },
+    {
         "name": "Swanley parkrun",
         "reason": "Kent Cross Country event in the park",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Temple Newsam parkrun",
+        "reason": "Weather",
         "date": "2024-11-23"
     },
     {
@@ -296,6 +401,11 @@
     },
     {
         "name": "Trelissick parkrun",
+        "reason": "Weather",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Troon parkrun",
         "reason": "Weather",
         "date": "2024-11-23"
     },
@@ -335,6 +445,11 @@
         "date": "2024-11-23"
     },
     {
+        "name": "White Rock parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-11-23"
+    },
+    {
         "name": "Whitley Bay parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-11-23"
@@ -362,6 +477,11 @@
     {
         "name": "Wollaton Hall parkrun",
         "reason": "Weather",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Zillmere parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-11-23"
     },
     {
@@ -411,6 +531,11 @@
     },
     {
         "name": "Blickling junior parkrun",
+        "reason": "Weather",
+        "date": "2024-11-24"
+    },
+    {
+        "name": "Des Connor Park junior parkrun",
         "reason": "Weather",
         "date": "2024-11-24"
     },
