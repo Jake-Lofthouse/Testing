@@ -50,6 +50,11 @@
         "date": "2024-11-23"
     },
     {
+        "name": "Ancholme Valley Way parkrun",
+        "reason": "Weather",
+        "date": "2024-11-23"
+    },
+    {
         "name": "Antrim parkrun",
         "reason": "Enchanted Winter Wonderland",
         "date": "2024-11-23"
@@ -61,6 +66,11 @@
     },
     {
         "name": "Aviemore parkrun",
+        "reason": "Weather",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Ayr parkrun",
         "reason": "Weather",
         "date": "2024-11-23"
     },
@@ -231,6 +241,11 @@
     },
     {
         "name": "Chadderton Hall parkrun",
+        "reason": "Weather",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Chain of Lakes parkrun",
         "reason": "Weather",
         "date": "2024-11-23"
     },
@@ -570,8 +585,18 @@
         "date": "2024-11-23"
     },
     {
+        "name": "Hamsterley Forest parkrun",
+        "reason": "Amber weather warning of snow",
+        "date": "2024-11-23"
+    },
+    {
         "name": "Hastings parkrun",
         "reason": "Weather",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Haverfordwest parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2024-11-23"
     },
     {
@@ -582,6 +607,11 @@
     {
         "name": "Hazlehead parkrun, Aberdeen",
         "reason": "Course unsafe or blocked",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Hillsborough Forest parkrun",
+        "reason": "Weather",
         "date": "2024-11-23"
     },
     {
@@ -770,6 +800,11 @@
         "date": "2024-11-23"
     },
     {
+        "name": "Mallards Pike parkrun",
+        "reason": "Weather",
+        "date": "2024-11-23"
+    },
+    {
         "name": "Mallow Castle parkrun",
         "reason": "Weather",
         "date": "2024-11-23"
@@ -881,6 +916,11 @@
     },
     {
         "name": "Muncaster Castle parkrun",
+        "reason": "Weather",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Myrtle parkrun",
         "reason": "Weather",
         "date": "2024-11-23"
     },
@@ -1017,6 +1057,11 @@
     {
         "name": "Penryn Campus parkrun",
         "reason": "Weather",
+        "date": "2024-11-23"
+    },
+    {
+        "name": "Perrigo parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-11-23"
     },
     {
@@ -1540,6 +1585,11 @@
         "date": "2024-11-24"
     },
     {
+        "name": "Bude Marshes junior parkrun",
+        "reason": "Weather",
+        "date": "2024-11-24"
+    },
+    {
         "name": "Cambridge junior parkrun",
         "reason": "Weather",
         "date": "2024-11-24"
@@ -1562,6 +1612,11 @@
     {
         "name": "Dukeries junior parkrun",
         "reason": "Weather",
+        "date": "2024-11-24"
+    },
+    {
+        "name": "Great Cornard junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2024-11-24"
     },
     {
