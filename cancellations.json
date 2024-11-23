@@ -280,6 +280,11 @@
         "date": "2024-11-23"
     },
     {
+        "name": "Buncrana parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-11-23"
+    },
+    {
         "name": "Bundoran Promenade parkrun",
         "reason": "Weather",
         "date": "2024-11-23"
@@ -1762,11 +1767,6 @@
     {
         "name": "Redcar parkrun",
         "reason": "Weather",
-        "date": "2024-11-23"
-    },
-    {
-        "name": "Rinko Park parkrun",
-        "reason": "Venue unavailable",
         "date": "2024-11-23"
     },
     {
