@@ -4,22 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>parkrunner tourist</title>
+    <meta name="description" content="parkrunner tourist App: Sign up your parkrun-friendly B&B or Airbnb. Reach a community of parkrunners and boost your visibility.">
+    <meta name="keywords" content="parkrun, b&b, airbnb, parkrunner, tourist, accommodations, parkrun-friendly, bed and breakfast, lodging near parkrun, host signup">
+    <title>parkrunner tourist | B&Bs and Airbnbs Sign Up</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <meta name="theme-color" content="#64af46" />
+    <meta property="og:title" content="parkrunner tourist | Sign Up Your B&B or Airbnb">
+    <meta property="og:description" content="List your parkrun-friendly B&B or Airbnb on the parkrunner tourist App. Connect with the parkrunner community and increase bookings.">
     <meta property="og:url" content="https://parkrunnertourist.co.uk">
     <meta property="og:type" content="website">
-    <meta name="author" content="Parkrunner Tourist Team">
+    <meta name="author" content="parkrunner tourist Team">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-REFFZSK4XK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-REFFZSK4XK');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-REFFZSK4XK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-REFFZSK4XK');
+    </script>
 
     <style>
         body {
@@ -28,6 +31,25 @@
             padding: 0;
             background: linear-gradient(135deg, #7ed957, #64af46);
             overflow-x: hidden;
+        }
+
+        .navbar {
+            background-color: #64af46;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            font-size: 1.2em;
+            transition: transform 0.2s ease;
+        }
+
+        .navbar a:hover {
+            transform: scale(1.1); /* Enlarge text when hovered */
         }
 
         .container {
@@ -51,11 +73,11 @@
             color: #555;
             line-height: 1.6;
             font-size: 1em;
-            margin-bottom: 15px; /* Add spacing between paragraphs */
+            margin-bottom: 15px;
         }
 
         strong {
-            color: #333; /* Strong text color for emphasis */
+            color: #333;
             font-weight: bold;
         }
 
@@ -64,13 +86,13 @@
             line-height: 1.6;
             padding: 0;
             list-style: none;
-            margin: 20px 0; /* Add spacing above and below the list */
+            margin: 20px 0;
         }
 
         li {
-            margin: 10px 0; /* Space between list items */
-            text-align: left; /* Align list items to the left */
-            font-size: 1em; /* Set the same font-size as <p> */
+            margin: 10px 0;
+            text-align: left;
+            font-size: 1em;
         }
 
         .bb-icon-container {
@@ -89,6 +111,41 @@
         .bb-icon:hover {
             transform: scale(1.1);
             filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .stripe-button-container {
+            margin: 20px auto;
+            text-align: center;
         }
 
         .stripe-button {
@@ -118,70 +175,43 @@
             }
 
             p, li {
-                font-size: 0.9em; /* Reduce font size for both <p> and <li> on mobile */
+                font-size: 0.9em;
             }
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-content {
-            margin: 20px;
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 10px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: white;
-            font-size: 30px;
-            font-weight: bold;
-            cursor: pointer;
         }
     </style>
 </head>
 
 <body>
+    <div class="navbar">
+        <a href="https://www.parkrunnertourist.co.uk">Home</a>
+        <a href="https://buy.stripe.com/eVa8zj8Xh8ff6v6aEE?locale=en-GB&__embed_source=buy_btn_1Q1YPBDIdMDZicrDejGM8ek1">Sign Up</a>
+    </div>
 
     <div class="container">
-        <h1>Join the parkrunner tourist App Community!</h1>
-        <p><strong>Are you a proud owner of a parkrun-friendly B&B?</strong></p>
+        <h1>Sign Up Your parkrunner-Friendly B&B or Airbnb</h1>
+        <p><strong>Are you a proud owner of a parkrun-friendly B&B or Airbnb?</strong></p>
         <p>
-            Attract more guests and boost your visibility by adding your establishment to the parkrunner tourist App. 
-            Our platform connects parkrunners with welcoming accommodations for a delightful stay before or after a rewarding run.
+            Attract more guests and boost your visibility by listing your property on the parkrunner tourist App. Our platform connects parkrunners with accommodations near parkrun events for a delightful stay.
         </p>
         <p><strong>The cost?</strong> A one-time admin fee of £5!</p>
         
         <p><strong>Why Join Us?</strong></p>
         <ul>
-            <li><strong>Reach New Customers:</strong> Be discovered by a community of dedicated park runners.</li>
-            <li><strong>Enhance Your Visibility:</strong> Your accommodation will be shown near parkrun events.</li>
+            <li><strong>Reach New Guests:</strong> Be discovered by a growing community of parkrunners.</li>
+            <li><strong>Enhance Your Visibility:</strong> Your property will appear near parkrun events.</li>
         </ul>
 
-        <p><strong>Our Simple Requirements:</strong></p>
+        <p><strong>Requirements:</strong></p>
         <p>
-            Be within a 20-minute walk or drive of a parkrun event, allow time for guests to shower after, and serve breakfast until 11:30 AM, and you're in!
+            Your property must be within a 20-minute walk or drive of a parkrun event, allow time for guests to shower after the run, and serve breakfast until 11:30 AM. That's it!
         </p>
 
         <div class="bb-icon-container">
             <img src="https://raw.githubusercontent.com/ALD-Models/Testing/main/Images/BBIcon.png" class="bb-icon" alt="B&B Icon" id="closedIcon">
-            <img src="https://raw.githubusercontent.com/ALD-Models/Testing/main/Images/BBIconOpen.png" class="bb-icon" alt="B&B Icon Open" id="openIcon">
+            <img src="https://raw.githubusercontent.com/ALD-Models/Testing/main/Images/BBIconOpen.png" class="bb-icon" alt="Airbnb Icon" id="openIcon">
         </div>
 
+        <!-- Stripe button embedded -->
         <div class="stripe-button-container">
             <script async src="https://js.stripe.com/v3/buy-button.js"></script>
             <stripe-buy-button
@@ -196,31 +226,32 @@
             <img class="modal-content" id="img01">
         </div>
 
-        <script>
-            const icons = document.querySelectorAll('.bb-icon');
-            const modal = document.getElementById("myModal");
-            const modalImg = document.getElementById("img01");
-            const closeModal = document.getElementById("closeModal");
 
-            icons.forEach(icon => {
-                icon.addEventListener('click', function () {
-                    modal.style.display = "flex";
-                    modalImg.src = this.src;
-                });
-            });
+<script>
+    // Get all B&B icons and modal elements
+    const icons = document.querySelectorAll('.bb-icon'); // Select all B&B icons
+    const modal = document.getElementById("myModal"); // The modal element
+    const modalImg = document.getElementById("img01"); // Image element inside the modal
+    const closeModal = document.getElementById("closeModal"); // The close (X) button
 
-            closeModal.onclick = function () {
-                modal.style.display = "none";
-            }
+    // Add click event listeners to each icon
+    icons.forEach(icon => {
+        icon.addEventListener('click', function () {
+            modal.style.display = "flex"; // Show the modal
+            modalImg.src = this.src; // Set modal image source to clicked icon's source
+        });
+    });
 
-            window.onclick = function (event) {
-                if (event.target === modal) {
-                    modal.style.display = "none";
-                }
-            }
-        </script>
-    </div>
+    // Close the modal when the "X" button is clicked
+    closeModal.onclick = function () {
+        modal.style.display = "none"; // Hide the modal
+    };
 
-</body>
+    // Close the modal when clicking anywhere outside the modal image
+    window.onclick = function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none"; // Hide the modal
+        }
+    };
+</script>
 
-</html>
