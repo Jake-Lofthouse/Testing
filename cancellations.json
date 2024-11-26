@@ -10,6 +10,11 @@
         "date": "2024-11-30"
     },
     {
+        "name": "Banbury parkrun",
+        "reason": "Storm Bert flooded the park",
+        "date": "2024-11-30"
+    },
+    {
         "name": "Bay East Garden parkrun",
         "reason": "Clash with another non-parkrun event",
         "date": "2024-11-30"
@@ -57,6 +62,11 @@
     {
         "name": "Ho\u00ebrskool Ben Viljoen parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-11-30"
+    },
+    {
+        "name": "Lackawanna Rail Trail parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2024-11-30"
     },
     {
