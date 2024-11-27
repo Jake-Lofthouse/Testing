@@ -170,6 +170,11 @@
         "date": "2024-11-30"
     },
     {
+        "name": "Tewkesbury parkrun",
+        "reason": "Flooded course",
+        "date": "2024-11-30"
+    },
+    {
         "name": "The Plens parkrun",
         "reason": "Venue unavailable",
         "date": "2024-11-30"
@@ -197,6 +202,11 @@
     {
         "name": "Wolford Wood parkrun",
         "reason": "Weather",
+        "date": "2024-11-30"
+    },
+    {
+        "name": "Worcester Pitchcroft parkrun",
+        "reason": "Course flooded",
         "date": "2024-11-30"
     },
     {
