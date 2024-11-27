@@ -10,6 +10,11 @@
         "date": "2024-11-30"
     },
     {
+        "name": "Aylesbury parkrun",
+        "reason": "Main course and alternatives all flooded",
+        "date": "2024-11-30"
+    },
+    {
         "name": "Banbury parkrun",
         "reason": "Storm Bert flooded the park",
         "date": "2024-11-30"
@@ -37,6 +42,11 @@
     {
         "name": "Chichibu Muse Park parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-11-30"
+    },
+    {
+        "name": "Chipping Sodbury parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-11-30"
     },
     {
@@ -172,6 +182,11 @@
     {
         "name": "Whitley Bay parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2024-11-30"
+    },
+    {
+        "name": "Wolford Wood parkrun",
+        "reason": "Weather",
         "date": "2024-11-30"
     },
     {
