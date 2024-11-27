@@ -65,6 +65,11 @@
         "date": "2024-11-30"
     },
     {
+        "name": "Evesham parkrun",
+        "reason": "Currently flooded, course won't be safe to run",
+        "date": "2024-11-30"
+    },
+    {
         "name": "Hanley parkrun",
         "reason": "Venue unavailable",
         "date": "2024-11-30"
@@ -132,6 +137,11 @@
     {
         "name": "Robelle Domain parkrun",
         "reason": "Permission issue",
+        "date": "2024-11-30"
+    },
+    {
+        "name": "Ross-on-Wye parkrun",
+        "reason": "Hosts to the Atlantean Olympics",
         "date": "2024-11-30"
     },
     {
@@ -312,6 +322,11 @@
     {
         "name": "Spiceball Country Park junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-12-01"
+    },
+    {
+        "name": "St Mary\u2019s Campus junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2024-12-01"
     }
 ]
