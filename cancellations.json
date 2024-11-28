@@ -45,6 +45,11 @@
         "date": "2024-11-30"
     },
     {
+        "name": "Charlton parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-11-30"
+    },
+    {
         "name": "Chichibu Muse Park parkrun",
         "reason": "Venue unavailable",
         "date": "2024-11-30"
@@ -202,6 +207,11 @@
     {
         "name": "Ury Riverside parkrun",
         "reason": "Path upgrade work means course blocked in places",
+        "date": "2024-11-30"
+    },
+    {
+        "name": "Watermeadows parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-11-30"
     },
     {
