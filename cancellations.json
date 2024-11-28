@@ -1,5 +1,10 @@
 [
     {
+        "name": "Abingdon parkrun",
+        "reason": "Severe flooding",
+        "date": "2024-11-30"
+    },
+    {
         "name": "Alderley Park parkrun",
         "reason": "Venue unavailable",
         "date": "2024-11-30"
