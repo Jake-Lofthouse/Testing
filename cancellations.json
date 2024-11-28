@@ -15,6 +15,11 @@
         "date": "2024-11-30"
     },
     {
+        "name": "Ankerskogen parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-11-30"
+    },
+    {
         "name": "Aylesbury parkrun",
         "reason": "Main course and alternatives all flooded",
         "date": "2024-11-30"
@@ -110,6 +115,11 @@
         "date": "2024-11-30"
     },
     {
+        "name": "Loftsgardsbrua parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-11-30"
+    },
+    {
         "name": "Lyme Park parkrun",
         "reason": "Request by landowner",
         "date": "2024-11-30"
@@ -137,6 +147,11 @@
     {
         "name": "Mt Penang parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-11-30"
+    },
+    {
+        "name": "Pocket parkrun",
+        "reason": "Course flooded",
         "date": "2024-11-30"
     },
     {
@@ -342,6 +357,11 @@
     {
         "name": "Pontypridd junior parkrun",
         "reason": "Park closed for flood recovery.",
+        "date": "2024-12-01"
+    },
+    {
+        "name": "Riverside junior parkrun, St Neots",
+        "reason": "Course unsafe or blocked",
         "date": "2024-12-01"
     },
     {
