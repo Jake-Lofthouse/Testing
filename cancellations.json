@@ -45,6 +45,11 @@
         "date": "2024-11-30"
     },
     {
+        "name": "Bicester parkrun",
+        "reason": "Finish area has lots of standing water",
+        "date": "2024-11-30"
+    },
+    {
         "name": "Blaise Castle parkrun",
         "reason": "Venue unavailable",
         "date": "2024-11-30"
@@ -95,8 +100,18 @@
         "date": "2024-11-30"
     },
     {
+        "name": "Ferry Meadows parkrun",
+        "reason": "It's rather wet, most of route underwater.",
+        "date": "2024-11-30"
+    },
+    {
         "name": "Festningen parkrun",
         "reason": "For mye is rundt l\u00f8ypet",
+        "date": "2024-11-30"
+    },
+    {
+        "name": "Graham Andrews parkrun",
+        "reason": "Weather",
         "date": "2024-11-30"
     },
     {
@@ -185,6 +200,11 @@
         "date": "2024-11-30"
     },
     {
+        "name": "O\u2019Connors Beach parkrun",
+        "reason": "Weather",
+        "date": "2024-11-30"
+    },
+    {
         "name": "Pocket parkrun",
         "reason": "Course flooded",
         "date": "2024-11-30"
@@ -192,6 +212,11 @@
     {
         "name": "Pontypridd parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-11-30"
+    },
+    {
+        "name": "Reading parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-11-30"
     },
     {
@@ -342,6 +367,11 @@
     {
         "name": "Barshaw junior parkrun",
         "reason": "Event on in the park",
+        "date": "2024-12-01"
+    },
+    {
+        "name": "Cambourne junior parkrun",
+        "reason": "Equipment unavailable",
         "date": "2024-12-01"
     },
     {
