@@ -20,6 +20,16 @@
         "date": "2024-11-30"
     },
     {
+        "name": "Ashgrove parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-11-30"
+    },
+    {
+        "name": "Australian Botanic Garden Mount Annan parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-11-30"
+    },
+    {
         "name": "Aylesbury parkrun",
         "reason": "Main course and alternatives all flooded",
         "date": "2024-11-30"
@@ -45,6 +55,11 @@
         "date": "2024-11-30"
     },
     {
+        "name": "Benalla Botanical Gardens parkrun",
+        "reason": "Weather",
+        "date": "2024-11-30"
+    },
+    {
         "name": "Bicester parkrun",
         "reason": "Finish area has lots of standing water",
         "date": "2024-11-30"
@@ -60,6 +75,11 @@
         "date": "2024-11-30"
     },
     {
+        "name": "Canyon Rim Trail parkrun",
+        "reason": "Weather",
+        "date": "2024-11-30"
+    },
+    {
         "name": "Charlton parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-11-30"
@@ -72,6 +92,11 @@
     {
         "name": "Chipping Sodbury parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2024-11-30"
+    },
+    {
+        "name": "Clifton parkrun",
+        "reason": "Weather",
         "date": "2024-11-30"
     },
     {
@@ -125,6 +150,11 @@
         "date": "2024-11-30"
     },
     {
+        "name": "Grove Fields parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-11-30"
+    },
+    {
         "name": "Hanley parkrun",
         "reason": "Venue unavailable",
         "date": "2024-11-30"
@@ -141,6 +171,11 @@
     },
     {
         "name": "Jeune Park parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-11-30"
+    },
+    {
+        "name": "Kedron parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-11-30"
     },
@@ -205,6 +240,21 @@
         "date": "2024-11-30"
     },
     {
+        "name": "Nansenparken parkrun",
+        "reason": "Sv\u00e6rt glatt i parken / Course is covered with ice",
+        "date": "2024-11-30"
+    },
+    {
+        "name": "Nathan Road Sports Ground parkrun",
+        "reason": "Weather",
+        "date": "2024-11-30"
+    },
+    {
+        "name": "North Harbour parkrun",
+        "reason": "weather conditions made course unusable",
+        "date": "2024-11-30"
+    },
+    {
         "name": "Odakaryokuchi parkrun",
         "reason": "Shortage of volunteers",
         "date": "2024-11-30"
@@ -265,6 +315,11 @@
         "date": "2024-11-30"
     },
     {
+        "name": "Samford Parklands parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-11-30"
+    },
+    {
         "name": "Shirahama koen parkrun",
         "reason": "Venue unavailable",
         "date": "2024-11-30"
@@ -285,6 +340,11 @@
         "date": "2024-11-30"
     },
     {
+        "name": "Stones Corner parkrun",
+        "reason": "Weather",
+        "date": "2024-11-30"
+    },
+    {
         "name": "Tewkesbury parkrun",
         "reason": "Flooded course",
         "date": "2024-11-30"
@@ -300,6 +360,11 @@
         "date": "2024-11-30"
     },
     {
+        "name": "Uppsala parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-11-30"
+    },
+    {
         "name": "Urayasushi sogo koen parkrun",
         "reason": "Venue unavailable",
         "date": "2024-11-30"
@@ -312,6 +377,11 @@
     {
         "name": "Wangaratta parkrun",
         "reason": "Water over closed pathway, weather forecast poor.",
+        "date": "2024-11-30"
+    },
+    {
+        "name": "Waterloo Plains parkrun",
+        "reason": "Weather",
         "date": "2024-11-30"
     },
     {
@@ -347,6 +417,16 @@
     {
         "name": "Worden parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-11-30"
+    },
+    {
+        "name": "Yackandandah Rail Trail parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-11-30"
+    },
+    {
+        "name": "Zillmere parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-11-30"
     },
     {
@@ -417,6 +497,11 @@
     {
         "name": "Cassiobury junior parkrun",
         "reason": "Mencap Santa run clashing with course",
+        "date": "2024-12-01"
+    },
+    {
+        "name": "Central Park junior parkrun, Boston",
+        "reason": "Santa Run scheduled on the same day.",
         "date": "2024-12-01"
     },
     {
