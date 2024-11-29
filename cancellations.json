@@ -25,6 +25,11 @@
         "date": "2024-11-30"
     },
     {
+        "name": "Ball Park parkrun",
+        "reason": "Weather",
+        "date": "2024-11-30"
+    },
+    {
         "name": "Banbury parkrun",
         "reason": "Storm Bert flooded the park",
         "date": "2024-11-30"
@@ -90,6 +95,16 @@
         "date": "2024-11-30"
     },
     {
+        "name": "Festningen parkrun",
+        "reason": "For mye is rundt l\u00f8ypet",
+        "date": "2024-11-30"
+    },
+    {
+        "name": "Great Denham parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-11-30"
+    },
+    {
         "name": "Hanley parkrun",
         "reason": "Venue unavailable",
         "date": "2024-11-30"
@@ -122,6 +137,11 @@
     {
         "name": "Laytown Beach parkrun",
         "reason": "High tide",
+        "date": "2024-11-30"
+    },
+    {
+        "name": "Lightning Ridge parkrun",
+        "reason": "Weather",
         "date": "2024-11-30"
     },
     {
@@ -207,6 +227,11 @@
     {
         "name": "Somerdale Pavilion parkrun",
         "reason": "course under water-ferry to the start, not running",
+        "date": "2024-11-30"
+    },
+    {
+        "name": "Somerset West parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-11-30"
     },
     {
