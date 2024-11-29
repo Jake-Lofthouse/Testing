@@ -80,6 +80,11 @@
         "date": "2024-11-30"
     },
     {
+        "name": "Didcot parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-11-30"
+    },
+    {
         "name": "Evesham parkrun",
         "reason": "Currently flooded, course won't be safe to run",
         "date": "2024-11-30"
@@ -97,6 +102,11 @@
     {
         "name": "Ho\u00ebrskool Ben Viljoen parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-11-30"
+    },
+    {
+        "name": "Jeune Park parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-11-30"
     },
     {
@@ -322,6 +332,11 @@
     {
         "name": "Dixton junior parkrun, Monmouth",
         "reason": "Ho Ho Ho.. Monmouth Santa Fun Run",
+        "date": "2024-12-01"
+    },
+    {
+        "name": "Eynesbury Heritage Trail junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2024-12-01"
     },
     {
