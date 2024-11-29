@@ -110,6 +110,11 @@
         "date": "2024-11-30"
     },
     {
+        "name": "George Lane Memorial parkrun",
+        "reason": "Weather",
+        "date": "2024-11-30"
+    },
+    {
         "name": "Graham Andrews parkrun",
         "reason": "Weather",
         "date": "2024-11-30"
@@ -200,6 +205,11 @@
         "date": "2024-11-30"
     },
     {
+        "name": "Odakaryokuchi parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-11-30"
+    },
+    {
         "name": "O\u2019Connors Beach parkrun",
         "reason": "Weather",
         "date": "2024-11-30"
@@ -225,8 +235,18 @@
         "date": "2024-11-30"
     },
     {
+        "name": "Riverside parkrun, Grand Rapids",
+        "reason": "Weather",
+        "date": "2024-11-30"
+    },
+    {
         "name": "Robelle Domain parkrun",
         "reason": "Permission issue",
+        "date": "2024-11-30"
+    },
+    {
+        "name": "Roding Valley parkrun",
+        "reason": "Weather",
         "date": "2024-11-30"
     },
     {
@@ -295,6 +315,11 @@
         "date": "2024-11-30"
     },
     {
+        "name": "Watermead Country Park parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-11-30"
+    },
+    {
         "name": "Watermeadows parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-11-30"
@@ -302,6 +327,11 @@
     {
         "name": "Whitley Bay parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2024-11-30"
+    },
+    {
+        "name": "Witney parkrun",
+        "reason": "Course too wet in parts",
         "date": "2024-11-30"
     },
     {
