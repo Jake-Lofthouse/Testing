@@ -20,6 +20,7 @@
 </script>
 
 
+
 <!-- Cronitor RUM -->
 <script async src="https://rum.cronitor.io/script.js"></script>
 <script>
@@ -946,8 +947,8 @@ function updateMapMarkers() {
 }
 
 
-// Initial fetch for parkrun data and event listener setup
-fetch('https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/parkruns.json')
+// Initial fetch for data and event listener setup
+fetch('https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/events1.json')
     .then(response => response.json())
     .then(jsonData => {
         data = jsonData;
