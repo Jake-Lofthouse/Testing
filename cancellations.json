@@ -55,6 +55,11 @@
         "date": "2024-11-30"
     },
     {
+        "name": "Bellevue parkrun",
+        "reason": "Weather",
+        "date": "2024-11-30"
+    },
+    {
         "name": "Benalla Botanical Gardens parkrun",
         "reason": "Weather",
         "date": "2024-11-30"
@@ -72,6 +77,11 @@
     {
         "name": "Botanical Garden parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-11-30"
+    },
+    {
+        "name": "Bowen parkrun",
+        "reason": "Weather",
         "date": "2024-11-30"
     },
     {
@@ -95,6 +105,11 @@
         "date": "2024-11-30"
     },
     {
+        "name": "Chuo koen parkrun",
+        "reason": "Weather",
+        "date": "2024-11-30"
+    },
+    {
         "name": "Clifton parkrun",
         "reason": "Weather",
         "date": "2024-11-30"
@@ -115,6 +130,11 @@
         "date": "2024-11-30"
     },
     {
+        "name": "Courthouse Lake parkrun",
+        "reason": "Weather",
+        "date": "2024-11-30"
+    },
+    {
         "name": "Didcot parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-11-30"
@@ -122,6 +142,11 @@
     {
         "name": "Evesham parkrun",
         "reason": "Currently flooded, course won't be safe to run",
+        "date": "2024-11-30"
+    },
+    {
+        "name": "Exeter Riverside parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2024-11-30"
     },
     {
@@ -237,6 +262,11 @@
     {
         "name": "Mt Penang parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-11-30"
+    },
+    {
+        "name": "Nagaragawa koen parkrun",
+        "reason": "Weather",
         "date": "2024-11-30"
     },
     {
