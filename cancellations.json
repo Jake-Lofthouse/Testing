@@ -570,6 +570,11 @@
         "date": "2024-12-01"
     },
     {
+        "name": "Clacton junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-12-01"
+    },
+    {
         "name": "Des Connor Park junior parkrun",
         "reason": "Weather",
         "date": "2024-12-01"
@@ -646,6 +651,11 @@
     },
     {
         "name": "St Mary\u2019s Campus junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-12-01"
+    },
+    {
+        "name": "The Old Rail Trail junior parkrun",
         "reason": "Shortage of volunteers",
         "date": "2024-12-01"
     },
