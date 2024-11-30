@@ -540,6 +540,11 @@
         "date": "2024-12-01"
     },
     {
+        "name": "Carmarthen junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-12-01"
+    },
+    {
         "name": "Cassiobury junior parkrun",
         "reason": "Mencap Santa run clashing with course",
         "date": "2024-12-01"
@@ -626,6 +631,11 @@
     },
     {
         "name": "St Mary\u2019s Campus junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-12-01"
+    },
+    {
+        "name": "Wimpole Estate junior parkrun",
         "reason": "Shortage of volunteers",
         "date": "2024-12-01"
     }
