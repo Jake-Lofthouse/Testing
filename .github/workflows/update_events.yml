@@ -1,8 +1,8 @@
-name: Update Events
+name: Fetch and Process Events JSON
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Runs daily at midnight UTC
+    - cron: '0 18 * * 4' # Runs every Monday at midnight UTC
   workflow_dispatch: # Allows manual triggering of the workflow
 
 jobs:
@@ -16,14 +16,14 @@ jobs:
       - name: Fetch events.json from developer source
         run: |
           curl -sSL "https://images.parkrun.com/events.json" -o events.json
-          jq '.' events.json > events.json
+          jq '.' events.json > events1.json
 
       - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add events1.json
-          git commit -m "Update events.json file"
+          git commit -m "Update events1.json file"
           git push
         env:
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
