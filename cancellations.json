@@ -240,6 +240,11 @@
         "date": "2024-11-30"
     },
     {
+        "name": "Mapule Sindane School parkrun",
+        "reason": "No participants",
+        "date": "2024-11-30"
+    },
+    {
         "name": "Markeaton parkrun",
         "reason": "Permission issue",
         "date": "2024-11-30"
@@ -350,6 +355,11 @@
         "date": "2024-11-30"
     },
     {
+        "name": "Seaton parkrun",
+        "reason": "Police incident",
+        "date": "2024-11-30"
+    },
+    {
         "name": "Shirahama koen parkrun",
         "reason": "Venue unavailable",
         "date": "2024-11-30"
@@ -372,6 +382,11 @@
     {
         "name": "Stones Corner parkrun",
         "reason": "Weather",
+        "date": "2024-11-30"
+    },
+    {
+        "name": "Teignmouth Promenade parkrun",
+        "reason": "Equipment unavailable",
         "date": "2024-11-30"
     },
     {
