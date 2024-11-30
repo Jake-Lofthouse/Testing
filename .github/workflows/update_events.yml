@@ -16,13 +16,13 @@ jobs:
       - name: Fetch events.json from developer source
         run: |
           curl -sSL "https://images.parkrun.com/events.json" -o events.json
-          jq '.' events.json > events.json # Pretty-print the file and overwrite it
+          jq '.' events.json > events.json
 
       - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add events.json
+          git add events1.json
           git commit -m "Update events.json file"
           git push
         env:
