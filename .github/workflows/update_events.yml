@@ -1,4 +1,4 @@
-name: Fetch and Process Events JSON
+name: Update Locations
 
 on:
   schedule:
