@@ -946,8 +946,8 @@ function updateMapMarkers() {
 }
 
 
-// Initial fetch for parkrun data and event listener setup
-fetch('https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/parkruns.json')
+// Initial fetch for data and event listener setup
+fetch('https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/events1.json')
     .then(response => response.json())
     .then(jsonData => {
         data = jsonData;
