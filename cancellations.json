@@ -85,6 +85,11 @@
         "date": "2024-11-30"
     },
     {
+        "name": "Canton Lower Rouge Trail parkrun",
+        "reason": "Weather",
+        "date": "2024-11-30"
+    },
+    {
         "name": "Canyon Rim Trail parkrun",
         "reason": "Weather",
         "date": "2024-11-30"
@@ -550,6 +555,11 @@
         "date": "2024-12-01"
     },
     {
+        "name": "Castle Playing Fields junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-12-01"
+    },
+    {
         "name": "Central Park junior parkrun, Boston",
         "reason": "Santa Run scheduled on the same day.",
         "date": "2024-12-01"
@@ -577,6 +587,11 @@
     {
         "name": "Falinge Park junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-12-01"
+    },
+    {
+        "name": "Great Denham junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-12-01"
     },
     {
