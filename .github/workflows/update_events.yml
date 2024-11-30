@@ -1,43 +1,29 @@
-name: Update Events
+name: Fetch and Process Events JSON
 
 on:
   schedule:
-    - cron: '0 0 */7 * *'  # Runs every 7 days
-  workflow_dispatch:  # Allows manual triggering of the workflow
+    - cron: '0 0 * * *' # Runs daily at midnight UTC
+  workflow_dispatch: # Allows manual triggering of the workflow
 
 jobs:
-  update-file:
+  fetch-json:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0  # Fetch full history for diff comparison
-          ref: main       # Ensures actions run on the main branch
 
-      - name: Download events.json
+      - name: Fetch events.json from developer source
         run: |
-          curl -o events.json https://images.parkrun.com/events.json || { echo "Failed to download events.json"; exit 1; }
+          curl -sSL "https://images.parkrun.com/events.json" -o events.json
+          jq '.' events.json > events1.json
 
-      - name: Rename downloaded file to parkrun1.json
-        run: mv events.json parkrun1.json
-
-      - name: Check if parkrun1.json has changed
-        id: check_changes
+      - name: Commit and push changes
         run: |
-          git fetch origin main
-          if git diff --exit-code --quiet parkrun1.json; then
-            echo "No changes in parkrun1.json"
-            exit 0  # Exit early if there are no changes
-          else
-            echo "changed=true" >> $GITHUB_ENV
-          fi
-
-      - name: Commit and push changes to main
-        if: env.changed == 'true'
-        run: |
-          git config --global user.name 'github-actions'
-          git config --global user.email 'actions@github.com'
-          git add parkrun1.json
-          git commit -m "Update parkrun1.json"
-          git push origin main
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add events1.json
+          git commit -m "Update events1.json file"
+          git push
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
