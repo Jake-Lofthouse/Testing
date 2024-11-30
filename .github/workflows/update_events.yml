@@ -1,4 +1,4 @@
-name: Fetch and Update Events JSON
+name: Update Events
 
 on:
   schedule:
