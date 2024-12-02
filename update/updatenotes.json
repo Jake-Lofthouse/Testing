@@ -1,6 +1,14 @@
 {
   "updates": [
-{
+
+    {
+      "title": "App Update 1.2.4",
+      "date": "December 2, 2024",
+      "content": [
+        "Enjoy a festive new look for your app this December with our Christmas theme! If you'd prefer the standard design, you can disable Christmas Mode anytime in Settings.",
+      ]
+    },
+    {
       "title": "App Update 1.2.3",
       "date": "November 14, 2024",
       "content": [
