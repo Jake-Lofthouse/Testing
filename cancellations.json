@@ -25,6 +25,11 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Colby parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Corner Brook Stream Trail parkrun",
         "reason": "Conflicting city event",
         "date": "2024-12-07"
@@ -82,6 +87,11 @@
     {
         "name": "Millennium parkrun",
         "reason": "Seasonal Cancellation",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Miyagawa koen parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-12-07"
     },
     {
@@ -242,6 +252,11 @@
     {
         "name": "Markeaton junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-12-08"
+    },
+    {
+        "name": "Westside Playing Fields junior parkrun",
+        "reason": "Safeguarding compliance (paperwork)",
         "date": "2024-12-08"
     },
     {
