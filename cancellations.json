@@ -65,8 +65,23 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Fell Foot parkrun, Newby Bridge",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Forest of Dean parkrun",
+        "reason": "Darragh has gatecrashed our 700th celebrations!",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Groe parkrun",
         "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Grove Fields parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-12-07"
     },
     {
@@ -77,6 +92,11 @@
     {
         "name": "Ho\u00ebrskool Ben Viljoen parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Itchen Valley Country parkrun",
+        "reason": "Weather",
         "date": "2024-12-07"
     },
     {
@@ -125,6 +145,11 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Ludlow parkrun",
+        "reason": "Permission issue",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Marine Parade parkrun",
         "reason": "Weather",
         "date": "2024-12-07"
@@ -150,8 +175,18 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Moors Valley parkrun",
+        "reason": "Venue closed - thanks big blustery Storm Darragh!",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Mthatha parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Narin Beach parkrun",
+        "reason": "High Tides & Storm Darragh",
         "date": "2024-12-07"
     },
     {
@@ -180,6 +215,11 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Old Railway Trail parkrun, Llangollen",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Osterley parkrun",
         "reason": "Weather",
         "date": "2024-12-07"
@@ -192,6 +232,11 @@
     {
         "name": "Philips Park parkrun",
         "reason": "No RD available",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Plymvalley parkrun",
+        "reason": "Weather",
         "date": "2024-12-07"
     },
     {
@@ -215,6 +260,11 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Sandy Water parkrun",
+        "reason": "Storm Darragh is blowing our way.",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Sence Valley Forest Park parkrun",
         "reason": "Forestry England have closed the park to visitors",
         "date": "2024-12-07"
@@ -225,6 +275,16 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Shepton Mallet parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Somerdale Pavilion parkrun",
+        "reason": "handful of middle-class women of a certain age",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Somerset West parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-12-07"
@@ -232,6 +292,11 @@
     {
         "name": "Spanish Banks Beach parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Stonehouse parkrun",
+        "reason": "Weather",
         "date": "2024-12-07"
     },
     {
@@ -255,8 +320,18 @@
         "date": "2024-12-07"
     },
     {
+        "name": "The Fisherman\u2018s Walk parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "The Plens parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Thorp Perrow parkrun",
+        "reason": "The Arboretum is closed due to high winds.",
         "date": "2024-12-07"
     },
     {
@@ -280,6 +355,11 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Wallace parkrun, Lisburn",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Watermeadows parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-12-07"
@@ -297,6 +377,11 @@
     {
         "name": "Wolford Wood parkrun",
         "reason": "Course waterlogged",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Worcester Pitchcroft parkrun",
+        "reason": "Flooding on the course",
         "date": "2024-12-07"
     },
     {
@@ -345,6 +430,11 @@
         "date": "2024-12-08"
     },
     {
+        "name": "Cambourne junior parkrun",
+        "reason": "Weather",
+        "date": "2024-12-08"
+    },
+    {
         "name": "Derry City junior parkrun",
         "reason": "Venue unavailable",
         "date": "2024-12-08"
@@ -357,6 +447,11 @@
     {
         "name": "Fife Cycle Park junior parkrun",
         "reason": "Cancelled as mark of respect to death of RD",
+        "date": "2024-12-08"
+    },
+    {
+        "name": "Forest of Dean junior parkrun",
+        "reason": "Storm Darragh has Mocked the Weekend",
         "date": "2024-12-08"
     },
     {
@@ -377,6 +472,16 @@
     {
         "name": "Markeaton junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-12-08"
+    },
+    {
+        "name": "Moors Valley junior parkrun",
+        "reason": "Weather",
+        "date": "2024-12-08"
+    },
+    {
+        "name": "Pontypridd junior parkrun",
+        "reason": "Flood recovery in park and weather.",
         "date": "2024-12-08"
     },
     {
