@@ -1,5 +1,15 @@
 [
     {
+        "name": "Abingdon parkrun",
+        "reason": "Parts of the course remain flooded.",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Aylesbury parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Bedok Reservoir parkrun",
         "reason": "Event Closed",
         "date": "2024-12-07"
@@ -47,6 +57,16 @@
     {
         "name": "Dean Castle Country Park parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Delamere parkrun",
+        "reason": "Forest will be closed due to expected weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Groe parkrun",
+        "reason": "Weather",
         "date": "2024-12-07"
     },
     {
@@ -105,6 +125,16 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Marine Parade parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Markshall Estate parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Milford Waterfront parkrun",
         "reason": "Weather",
         "date": "2024-12-07"
@@ -125,13 +155,38 @@
         "date": "2024-12-07"
     },
     {
+        "name": "New Earswick parkrun",
+        "reason": "Ground is too wet",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Newport parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Normanby Hall parkrun",
         "reason": "Venue unavailable",
         "date": "2024-12-07"
     },
     {
+        "name": "Nostell parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Oakwell Hall parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Osterley parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Penrhyn parkrun",
+        "reason": "Weather",
         "date": "2024-12-07"
     },
     {
@@ -145,6 +200,11 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Quakers Walk parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Reading parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-12-07"
@@ -152,6 +212,11 @@
     {
         "name": "Robelle Domain parkrun",
         "reason": "Permission issue",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Sence Valley Forest Park parkrun",
+        "reason": "Forestry England have closed the park to visitors",
         "date": "2024-12-07"
     },
     {
@@ -170,6 +235,11 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Stormont parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Teifi Marshes Nature Reserve parkrun",
         "reason": "Weather",
         "date": "2024-12-07"
@@ -177,6 +247,11 @@
     {
         "name": "Tetbury Goods Shed parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Tewkesbury parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-12-07"
     },
     {
@@ -200,6 +275,11 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Wakehurst parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Watermeadows parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-12-07"
@@ -212,6 +292,11 @@
     {
         "name": "Witton parkrun",
         "reason": "Cross Country",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Wolford Wood parkrun",
+        "reason": "Course waterlogged",
         "date": "2024-12-07"
     },
     {
