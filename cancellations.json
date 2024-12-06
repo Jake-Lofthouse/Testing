@@ -1,5 +1,20 @@
 [
     {
+        "name": "Aberbeeg parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Aberfields parkrun",
+        "reason": "Amber wind warning. Flying rabbits on fields",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Aberystwyth parkrun",
+        "reason": "Red wind warning: high chance of flying under 11s.",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Abingdon parkrun",
         "reason": "Parts of the course remain flooded.",
         "date": "2024-12-07"
@@ -25,7 +40,37 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Ally Pally parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Ankerskogen parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Antrim parkrun",
+        "reason": "Storm Darragh Wind",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Avondale Forest parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Aylesbury parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Barnstaple parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Barrow parkrun",
         "reason": "Weather",
         "date": "2024-12-07"
     },
@@ -45,6 +90,21 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Bideford parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Birkenhead parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Black Park parkrun",
+        "reason": "Park closed - forecast high winds over safe limit",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Bolberry Down parkrun",
         "reason": "Weather",
         "date": "2024-12-07"
@@ -60,13 +120,63 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Brockenhurst parkrun",
+        "reason": "Storm Darragh",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Brynaman parkrun",
         "reason": "Weather",
         "date": "2024-12-07"
     },
     {
+        "name": "Bug Hunter Waters parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Burnham and Highbridge parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Burnham-on-Crouch parkrun",
+        "reason": "Strong breeze expected",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Bushy parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Bushy parkrun, Dublin",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Cardiff parkrun",
+        "reason": "Red weather warning",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Carlisle Park parkrun, Morpeth",
         "reason": "Venue unavailable",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Carrickfergus parkrun",
+        "reason": "Local authority closed the venue due to weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Castleblayney parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Castlerea parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-12-07"
     },
     {
@@ -85,7 +195,42 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Chippenham Playing Fields parkrun, Monmouth",
+        "reason": "Darragh is taking part & throwing our cones around",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Chipping Norton School parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Cirencester parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Clarence parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Clarisford parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Clevedon Salthouse Fields parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Clifton parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Clonbur Woods parkrun",
         "reason": "Weather",
         "date": "2024-12-07"
     },
@@ -95,7 +240,17 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Coed Cefn-pwll-du parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Colby parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Conwy parkrun",
         "reason": "Weather",
         "date": "2024-12-07"
     },
@@ -110,12 +265,37 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Cosmeston Lakes parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Cranbrook Country Park parkrun",
         "reason": "Venue unavailable",
         "date": "2024-12-07"
     },
     {
         "name": "Crinan Canal parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Crosby parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Croxteth Hall parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Cwmbran parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Cycle Route 43 parkrun, Ystalyfera",
         "reason": "Weather",
         "date": "2024-12-07"
     },
@@ -135,7 +315,27 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Didcot parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Dolgellau parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Eastleigh parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Eastville parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Eden Project parkrun",
         "reason": "Weather",
         "date": "2024-12-07"
     },
@@ -147,6 +347,16 @@
     {
         "name": "Erddig parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Evesham parkrun",
+        "reason": "River expected to flood and strong winds expected",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Exeter Riverside parkrun",
+        "reason": "Weather",
         "date": "2024-12-07"
     },
     {
@@ -165,13 +375,38 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Fountains Abbey parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Garvagh Forest parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Girvan Prom parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Gnoll parkrun",
         "reason": "Amber warnings for wind",
         "date": "2024-12-07"
     },
     {
+        "name": "Gorey parkrun",
+        "reason": "Orange weather warning in place",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Greenbank parkrun",
         "reason": "Slippery wet and flooded",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Greenfield Valley parkrun",
+        "reason": "Weather",
         "date": "2024-12-07"
     },
     {
@@ -182,6 +417,31 @@
     {
         "name": "Grove Fields parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Hafan Pwllheli parkrun",
+        "reason": "Unsafe conditions due to Storm Darragh",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Haldon Forest parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Hamsterley Forest parkrun",
+        "reason": "Storm Darragh - very high forecast winds in forest",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Havant parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Haverfordwest parkrun",
+        "reason": "Weather",
         "date": "2024-12-07"
     },
     {
@@ -205,12 +465,32 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Horspath parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Hove Promenade parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Ho\u00ebrskool Ben Viljoen parkrun",
         "reason": "Venue unavailable",
         "date": "2024-12-07"
     },
     {
+        "name": "Irchester Country parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Itchen Valley Country parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Jersey parkrun",
         "reason": "Weather",
         "date": "2024-12-07"
     },
@@ -225,12 +505,27 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Kilkenny parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Killarney House parkrun",
         "reason": "Weather",
         "date": "2024-12-07"
     },
     {
+        "name": "Killerton parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Kingdom parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Kingsbury Water parkrun",
         "reason": "Weather",
         "date": "2024-12-07"
     },
@@ -245,6 +540,16 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Knockanacree Woods parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Knowsley parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Lackawanna Rail Trail parkrun",
         "reason": "Shortage of volunteers",
         "date": "2024-12-07"
@@ -255,12 +560,42 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Landesgartenschau Park parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Larne parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Leazes parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Lees Road parkrun",
+        "reason": "Orange Wind Warning during Event",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Lightning Ridge parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-12-07"
     },
     {
         "name": "Lillsj\u00f6n parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Limepark Playing Fields parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Linford Wood parkrun",
         "reason": "Weather",
         "date": "2024-12-07"
     },
@@ -280,8 +615,33 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Longrun Meadow parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Ludlow parkrun",
         "reason": "Permission issue",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Lyme Park parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Lytham Hall parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Maesteg parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Maldon Prom parkrun",
+        "reason": "Landowner decision due to weather",
         "date": "2024-12-07"
     },
     {
@@ -291,6 +651,11 @@
     },
     {
         "name": "Marine Parade parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Market Bosworth Country Park parkrun",
         "reason": "Weather",
         "date": "2024-12-07"
     },
@@ -305,13 +670,38 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Marlborough Common parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Marple parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Maryport Prom parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Milford Waterfront parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Millennium Country parkrun, Forest of Marston Vale",
         "reason": "Weather",
         "date": "2024-12-07"
     },
     {
         "name": "Millennium parkrun",
         "reason": "Seasonal Cancellation",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Milton Country parkrun",
+        "reason": "Weather",
         "date": "2024-12-07"
     },
     {
@@ -340,13 +730,43 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Nant y Pandy parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Narin Beach parkrun",
         "reason": "High Tides & Storm Darragh",
         "date": "2024-12-07"
     },
     {
+        "name": "Netley Abbey parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "New Earswick parkrun",
         "reason": "Ground is too wet",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "New Ross parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Newark parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Newborough Forest parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Newent parkrun",
+        "reason": "Weather",
         "date": "2024-12-07"
     },
     {
@@ -365,6 +785,11 @@
         "date": "2024-12-07"
     },
     {
+        "name": "North Shore parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Northwich parkrun",
         "reason": "Weather",
         "date": "2024-12-07"
@@ -380,6 +805,11 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Oaklands parkrun",
+        "reason": "Weather: Met Office warning for high winds",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Oakwell Hall parkrun",
         "reason": "Venue unavailable",
         "date": "2024-12-07"
@@ -390,6 +820,11 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Omagh parkrun",
+        "reason": "Park closed due to weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Ormeau parkrun",
         "reason": "Weather",
         "date": "2024-12-07"
@@ -397,6 +832,16 @@
     {
         "name": "Osterley parkrun",
         "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Parke parkrun",
+        "reason": "Weather. Storm Darragh.",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Peel parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-12-07"
     },
     {
@@ -420,7 +865,17 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Phoenix parkrun",
+        "reason": "Storm Darragh is on the way ?",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Plymvalley parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Pont y Bala parkrun",
         "reason": "Weather",
         "date": "2024-12-07"
     },
@@ -435,13 +890,48 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Porthcawl parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Portumna parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Princes parkrun, Liverpool",
+        "reason": "70mph wind and wetter than an otters pocket",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Quakers Walk parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Queen Elizabeth parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Raphael parkrun",
         "reason": "Weather",
         "date": "2024-12-07"
     },
     {
         "name": "Reading parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Richmond parkrun",
+        "reason": "Forecasted (50mph+) winds Richmond Park is closed",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Riverfront parkrun",
+        "reason": "Weather",
         "date": "2024-12-07"
     },
     {
@@ -455,13 +945,48 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Rogiet parkrun",
+        "reason": "Parkrunners risk being \"Mary Poppins\"-ed away",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Ross-on-Wye parkrun",
         "reason": "EDs having a bath, a sight no-one should suffer.",
         "date": "2024-12-07"
     },
     {
+        "name": "Rugby parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Rushmere parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Russborough parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Ruthin Memorial Playing Fields parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Sandy Water parkrun",
         "reason": "Storm Darragh is blowing our way.",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Seaford Beach parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Seaton parkrun",
+        "reason": "Weather",
         "date": "2024-12-07"
     },
     {
@@ -476,6 +1001,16 @@
     },
     {
         "name": "Severn Bridge parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Sharpham Estate parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Sharpham Road Playing Fields parkrun",
         "reason": "Weather",
         "date": "2024-12-07"
     },
@@ -495,6 +1030,21 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Simmons Park parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Sixmilewater parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Sligo parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Somerdale Pavilion parkrun",
         "reason": "Waterlogged course",
         "date": "2024-12-07"
@@ -502,6 +1052,11 @@
     {
         "name": "Somerset West parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "South Manchester parkrun",
+        "reason": "Flooded paths and weather forecast",
         "date": "2024-12-07"
     },
     {
@@ -515,12 +1070,42 @@
         "date": "2024-12-07"
     },
     {
+        "name": "St Anne\u2019s parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "St Helens parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Stonehouse parkrun",
         "reason": "Weather",
         "date": "2024-12-07"
     },
     {
         "name": "Stormont parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Stratford Park parkrun, Stroud",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Street parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Sunny Hill parkrun",
+        "reason": "Weather warnings - old and unstable trees risk",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Sutton Park parkrun",
         "reason": "Weather",
         "date": "2024-12-07"
     },
@@ -560,8 +1145,18 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Trelai Park parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Trelissick parkrun",
         "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Trentham Gardens parkrun",
+        "reason": "Course unavailable as the gardens will be closed.",
         "date": "2024-12-07"
     },
     {
@@ -595,6 +1190,11 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Watermead Country Park parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Watermeadows parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-12-07"
@@ -607,6 +1207,16 @@
     {
         "name": "Whitley Bay parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Widnes parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Wimpole Estate parkrun",
+        "reason": "Weather",
         "date": "2024-12-07"
     },
     {
@@ -625,12 +1235,27 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Woodhouse Moor parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Woolacombe Dunes parkrun",
+        "reason": "Severe high tides forecast with Storm Darragh",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Worcester Pitchcroft parkrun",
         "reason": "Flooding on the course",
         "date": "2024-12-07"
     },
     {
         "name": "Wyre Forest parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Y Promen\u00e2d parkrun, Aberhonddu",
         "reason": "Weather",
         "date": "2024-12-07"
     },
@@ -680,6 +1305,11 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Antrim Castle Gardens junior parkrun",
+        "reason": "Weather",
+        "date": "2024-12-08"
+    },
+    {
         "name": "Arklow Duck Pond junior parkrun",
         "reason": "Shortage of volunteers",
         "date": "2024-12-08"
@@ -690,7 +1320,27 @@
         "date": "2024-12-08"
     },
     {
+        "name": "Burnham Riverside junior parkrun",
+        "reason": "Landowner Decision",
+        "date": "2024-12-08"
+    },
+    {
         "name": "Cambourne junior parkrun",
+        "reason": "Weather",
+        "date": "2024-12-08"
+    },
+    {
+        "name": "Chichester junior parkrun",
+        "reason": "Weather",
+        "date": "2024-12-08"
+    },
+    {
+        "name": "Clough Hall junior parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-08"
+    },
+    {
+        "name": "Derby Park junior parkrun",
         "reason": "Weather",
         "date": "2024-12-08"
     },
@@ -715,6 +1365,11 @@
         "date": "2024-12-08"
     },
     {
+        "name": "Golden Valley Playing Field junior parkrun",
+        "reason": "Unable guarantee safety of course after storm",
+        "date": "2024-12-08"
+    },
+    {
         "name": "Guildford junior parkrun",
         "reason": "Santa Run",
         "date": "2024-12-08"
@@ -730,6 +1385,16 @@
         "date": "2024-12-08"
     },
     {
+        "name": "Lurgan junior parkrun",
+        "reason": "Weather",
+        "date": "2024-12-08"
+    },
+    {
+        "name": "Maldon Prom junior parkrun",
+        "reason": "Weather",
+        "date": "2024-12-08"
+    },
+    {
         "name": "Markeaton junior parkrun",
         "reason": "Venue unavailable",
         "date": "2024-12-08"
@@ -740,8 +1405,38 @@
         "date": "2024-12-08"
     },
     {
+        "name": "Newport junior parkrun",
+        "reason": "Weather",
+        "date": "2024-12-08"
+    },
+    {
+        "name": "Osterley junior parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-08"
+    },
+    {
+        "name": "Peoples Park junior parkrun",
+        "reason": "Weather",
+        "date": "2024-12-08"
+    },
+    {
+        "name": "Plas Newydd junior parkrun",
+        "reason": "Weather",
+        "date": "2024-12-08"
+    },
+    {
         "name": "Pontypridd junior parkrun",
         "reason": "Flood recovery in park and weather.",
+        "date": "2024-12-08"
+    },
+    {
+        "name": "Queen\u2019s Park junior parkrun, London",
+        "reason": "Weather",
+        "date": "2024-12-08"
+    },
+    {
+        "name": "Ramsbottom junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-12-08"
     },
     {
@@ -752,6 +1447,11 @@
     {
         "name": "Westside Playing Fields junior parkrun",
         "reason": "Safeguarding compliance (paperwork)",
+        "date": "2024-12-08"
+    },
+    {
+        "name": "Wimpole Estate junior parkrun",
+        "reason": "Weather",
         "date": "2024-12-08"
     },
     {
