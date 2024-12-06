@@ -40,6 +40,11 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Chasewater parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Clumber Park parkrun",
         "reason": "Christmas Fayre on in park",
         "date": "2024-12-07"
@@ -110,6 +115,11 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Henley Wood parkrun, Oswestry",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Homestead Lake parkrun",
         "reason": "Venue unavailable",
         "date": "2024-12-07"
@@ -135,6 +145,11 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Killarney House parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Kitanagase Mirai Fureai Sogokoen parkrun",
         "reason": "Venue unavailable",
         "date": "2024-12-07"
@@ -157,6 +172,11 @@
     {
         "name": "Lightning Ridge parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Lillsj\u00f6n parkrun",
+        "reason": "Weather",
         "date": "2024-12-07"
     },
     {
@@ -270,6 +290,11 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Penryn Campus parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Philips Park parkrun",
         "reason": "No RD available",
         "date": "2024-12-07"
@@ -312,6 +337,11 @@
     {
         "name": "Settlers Park parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Severn Bridge parkrun",
+        "reason": "Weather",
         "date": "2024-12-07"
     },
     {
@@ -522,6 +552,11 @@
     {
         "name": "Pontypridd junior parkrun",
         "reason": "Flood recovery in park and weather.",
+        "date": "2024-12-08"
+    },
+    {
+        "name": "Sutton Lawn junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2024-12-08"
     },
     {
