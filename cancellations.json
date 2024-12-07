@@ -75,6 +75,11 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Armagh parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Arrow Valley parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-12-07"
@@ -1011,11 +1016,6 @@
     },
     {
         "name": "Henley-on-Thames parkrun",
-        "reason": "Weather",
-        "date": "2024-12-07"
-    },
-    {
-        "name": "Henlow Bridge Lakes parkrun",
         "reason": "Weather",
         "date": "2024-12-07"
     },
@@ -2135,11 +2135,6 @@
         "date": "2024-12-07"
     },
     {
-        "name": "The Grand Canal Way parkrun, Tullamore",
-        "reason": "Weather",
-        "date": "2024-12-07"
-    },
-    {
         "name": "The Old Showfield parkrun",
         "reason": "Weather",
         "date": "2024-12-07"
@@ -2237,6 +2232,11 @@
     {
         "name": "Vicarstown parkrun",
         "reason": "Storm Darragh - course will be unsafe",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Victoria parkrun, Truro",
+        "reason": "Course unsafe or blocked",
         "date": "2024-12-07"
     },
     {
