@@ -150,11 +150,6 @@
         "date": "2024-12-07"
     },
     {
-        "name": "Battersea parkrun",
-        "reason": "Darragh auditioning for Wizard of Oz level winds",
-        "date": "2024-12-07"
-    },
-    {
         "name": "Beacon Hill Country Park parkrun",
         "reason": "Weather",
         "date": "2024-12-07"
@@ -301,11 +296,6 @@
     },
     {
         "name": "Bug Hunter Waters parkrun",
-        "reason": "Weather",
-        "date": "2024-12-07"
-    },
-    {
-        "name": "Bundoran Promenade parkrun",
         "reason": "Weather",
         "date": "2024-12-07"
     },
@@ -515,7 +505,17 @@
         "date": "2024-12-07"
     },
     {
+        "name": "Colin Glen parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
         "name": "Comber parkrun",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Con Smith parkrun",
         "reason": "Weather",
         "date": "2024-12-07"
     },
@@ -941,6 +941,11 @@
     },
     {
         "name": "Hazlehead parkrun, Aberdeen",
+        "reason": "Weather",
+        "date": "2024-12-07"
+    },
+    {
+        "name": "Heartlands parkrun",
         "reason": "Weather",
         "date": "2024-12-07"
     },
@@ -1931,11 +1936,6 @@
     },
     {
         "name": "Silloth Promenade parkrun",
-        "reason": "Weather",
-        "date": "2024-12-07"
-    },
-    {
-        "name": "Simmons Park parkrun",
         "reason": "Weather",
         "date": "2024-12-07"
     },
