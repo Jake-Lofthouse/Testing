@@ -1,5 +1,10 @@
 [
     {
+        "name": "Aggeneys parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-12-14"
+    },
+    {
         "name": "Aspen parkrun",
         "reason": "Weather",
         "date": "2024-12-14"
@@ -120,6 +125,11 @@
         "date": "2024-12-14"
     },
     {
+        "name": "Seotlong Agriculture School parkrun",
+        "reason": "Festive Season, low volunteer and participats",
+        "date": "2024-12-14"
+    },
+    {
         "name": "Taup\u014d parkrun",
         "reason": "Venue unavailable",
         "date": "2024-12-14"
@@ -127,6 +137,11 @@
     {
         "name": "Ury Riverside parkrun",
         "reason": "Path upgrade work means course blocked in places",
+        "date": "2024-12-14"
+    },
+    {
+        "name": "Wells Estate parkrun",
+        "reason": "Venue unavailable",
         "date": "2024-12-14"
     },
     {
