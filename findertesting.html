@@ -564,7 +564,7 @@ async function fetchAndFilterEvents() {
     const spinnerContainer = document.getElementById("spinnerContainer");
     spinnerContainer.style.display = "flex"; // Show spinner
 
-    const response = await fetch("https://raw.githubusercontent.com/ALD-Models/Testing/refs/heads/main/parkruns.json");
+    const response = await fetch("https://raw.githubusercontent.com/ALD-Models/Testing/refs/heads/main/events1.json");
     const data = await response.json();
     const events = data.events.features;
 
