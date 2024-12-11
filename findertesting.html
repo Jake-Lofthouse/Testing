@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Event Finder</title>
+    <title>AI Search</title>
     
     <!-- Leaflet CSS for the map -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
@@ -11,17 +11,6 @@
     <!-- MarkerCluster CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
-
-
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-REFFZSK4XK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-REFFZSK4XK');
-</script>
     
     <!-- Custom Styles -->
    <style>
@@ -388,7 +377,7 @@
 </div>
 
 
-    <h1>Event Finder V1 BETA</h1>
+    <h1>AI Search V1 BETA</h1>
     
 
     <div class="search-container">
@@ -428,6 +417,18 @@
     <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
 
     <script>
+         document.addEventListener("DOMContentLoaded", () => {
+        // Check if the URL ends with "/christmas"
+        if (window.location.pathname.endsWith("/christmas")) {
+            // Change the theme color
+            document.body.style.backgroundColor = "#c30f16"; // Update to the Christmas theme
+            const buttons = document.querySelectorAll(".toggle-container button, .search-container button");
+            buttons.forEach(button => {
+                button.style.backgroundColor = "#c30f16"; // Change button color
+            });
+            document.querySelector("h1").style.color = "#c30f16"; // Update header text color
+        }
+    });
         // Initialize the map with specified options
         const map = L.map('map', {
             center: [0, 0], // Center the map on the equator and prime meridian
