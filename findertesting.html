@@ -418,8 +418,9 @@
 
     <script>
          document.addEventListener("DOMContentLoaded", () => {
-        // Check if the URL ends with "/christmas"
-        if (window.location.pathname.endsWith("/christmas")) {
+        // Check if the URL contains the query "?theme=christmas"
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('theme') === 'christmas') {
             // Change the theme color
             document.body.style.backgroundColor = "#c30f16"; // Update to the Christmas theme
             const buttons = document.querySelectorAll(".toggle-container button, .search-container button");
