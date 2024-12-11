@@ -417,28 +417,20 @@
     <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
 
     <script>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        // Check if the URL contains the query "?theme=christmas"
-        const urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.get('theme') === 'christmas') {
-            // Change the theme color
-            document.body.style.backgroundColor = "#c30f16"; // Update to the Christmas theme
-            const buttons = document.querySelectorAll(".toggle-container button, .search-container button");
-            buttons.forEach(button => {
-                button.style.backgroundColor = "#c30f16"; // Change button color
-            });
-            document.querySelector("h1").style.color = "#ffffff"; // Set header text color to white
-            
-            // Update the title color by injecting CSS
-            const styleElement = document.createElement("style");
-            styleElement.textContent = "title { color: #ffffff !important; }";
-            document.head.appendChild(styleElement);
-        }
-    });
-</script>
-
-        
+        document.addEventListener("DOMContentLoaded", () => {
+    // Check if the URL contains the query "?theme=christmas"
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('theme') === 'christmas') {
+        // Change the theme color
+        document.body.style.backgroundColor = "#c30f16"; // Update to the Christmas theme
+        const buttons = document.querySelectorAll(".toggle-container button, .search-container button");
+        buttons.forEach(button => {
+            button.style.backgroundColor = "#c30f16"; // Change button color
+        });
+        const header = document.querySelector("h1");
+        header.style.color = "#ffffff"; // Update header text color to white
+    }
+});
         // Initialize the map with specified options
         const map = L.map('map', {
             center: [0, 0], // Center the map on the equator and prime meridian
