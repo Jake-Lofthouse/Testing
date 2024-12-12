@@ -55,6 +55,11 @@
         "date": "2024-12-14"
     },
     {
+        "name": "Dalby Forest parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-14"
+    },
+    {
         "name": "Flatts Lane parkrun",
         "reason": "At the request of Flatts Lane due to other event",
         "date": "2024-12-14"
@@ -82,6 +87,11 @@
     {
         "name": "Laytown Beach parkrun",
         "reason": "High tide",
+        "date": "2024-12-14"
+    },
+    {
+        "name": "Lillsj\u00f6n parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-12-14"
     },
     {
@@ -152,6 +162,11 @@
     {
         "name": "Pontypridd parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-12-14"
+    },
+    {
+        "name": "Reading parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-12-14"
     },
     {
