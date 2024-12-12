@@ -1,5 +1,10 @@
 [
     {
+        "name": "Abingdon parkrun",
+        "reason": "Flooding",
+        "date": "2024-12-14"
+    },
+    {
         "name": "Aggeneys parkrun",
         "reason": "Shortage of volunteers",
         "date": "2024-12-14"
@@ -27,6 +32,11 @@
     {
         "name": "Bellevue parkrun",
         "reason": "Weather",
+        "date": "2024-12-14"
+    },
+    {
+        "name": "Brynaman parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-12-14"
     },
     {
@@ -107,6 +117,11 @@
     {
         "name": "Montalto Estate parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-12-14"
+    },
+    {
+        "name": "Moreletapark Gemeente parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-12-14"
     },
     {
@@ -215,6 +230,11 @@
         "date": "2024-12-14"
     },
     {
+        "name": "parkrun Bulwar nad Wis\u0142\u0105",
+        "reason": "Zawody na trasie.",
+        "date": "2024-12-14"
+    },
+    {
         "name": "parkrun de Fontainebleau",
         "reason": "parkrun est actuellement suspendu en France",
         "date": "2024-12-14"
@@ -277,6 +297,11 @@
     {
         "name": "Northallerton junior parkrun",
         "reason": "Support local charity run",
+        "date": "2024-12-15"
+    },
+    {
+        "name": "Ramsbottom junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-12-15"
     },
     {
