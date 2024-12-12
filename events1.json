@@ -5668,8 +5668,8 @@
         "geometry": {
           "type": "Point",
           "coordinates": [
-            -0.327908,
-            51.06651
+            -0.348578,
+            51.022415
           ]
         },
         "properties": {
@@ -52740,6 +52740,46 @@
           "countrycode": 74,
           "seriesid": 1,
           "EventLocation": "Zalew Borki"
+        }
+      },
+      {
+        "id": 3594,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            29.433666,
+            -23.937042
+          ]
+        },
+        "properties": {
+          "eventname": "ivydale",
+          "EventLongName": "Ivydale parkrun",
+          "EventShortName": "Ivydale",
+          "LocalisedEventLongName": null,
+          "countrycode": 85,
+          "seriesid": 1,
+          "EventLocation": "Ivydale"
+        }
+      },
+      {
+        "id": 3595,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -1.60786,
+            54.701027
+          ]
+        },
+        "properties": {
+          "eventname": "victoriajubilee-juniors",
+          "EventLongName": "Victoria Jubilee junior parkrun",
+          "EventShortName": "Victoria Jubilee juniors",
+          "LocalisedEventLongName": null,
+          "countrycode": 97,
+          "seriesid": 2,
+          "EventLocation": "Victoria Jubilee juniors"
         }
       }
     ]
