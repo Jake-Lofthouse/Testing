@@ -75,6 +75,11 @@
         "date": "2024-12-14"
     },
     {
+        "name": "Llanerchaeron parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-14"
+    },
+    {
         "name": "Loftsgardsbrua parkrun",
         "reason": "Weather",
         "date": "2024-12-14"
@@ -167,6 +172,11 @@
     {
         "name": "Ury Riverside parkrun",
         "reason": "Path upgrade work means course blocked in places",
+        "date": "2024-12-14"
+    },
+    {
+        "name": "Victory Heights Trail parkrun",
+        "reason": "Venue unavailable",
         "date": "2024-12-14"
     },
     {
