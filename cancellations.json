@@ -10,6 +10,11 @@
         "date": "2024-12-14"
     },
     {
+        "name": "Ankerskogen parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-14"
+    },
+    {
         "name": "Aspen parkrun",
         "reason": "Weather",
         "date": "2024-12-14"
@@ -105,6 +110,11 @@
         "date": "2024-12-14"
     },
     {
+        "name": "Fr\u00e9d\u00e9ric Back parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-14"
+    },
+    {
         "name": "Grangemoor parkrun",
         "reason": "Shortage of volunteers",
         "date": "2024-12-14"
@@ -162,6 +172,11 @@
     {
         "name": "Judarskogen parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2024-12-14"
+    },
+    {
+        "name": "Kathu parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2024-12-14"
     },
     {
@@ -247,6 +262,11 @@
     {
         "name": "New Earswick parkrun",
         "reason": "Ground is too wet",
+        "date": "2024-12-14"
+    },
+    {
+        "name": "Ohio and Erie Canal Reservation parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-12-14"
     },
     {
