@@ -35,6 +35,11 @@
         "date": "2024-12-14"
     },
     {
+        "name": "Brunswick Park parkrun",
+        "reason": "Tree hurdles not an agreed part of parkrun course",
+        "date": "2024-12-14"
+    },
+    {
         "name": "Brynaman parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-12-14"
@@ -47,6 +52,11 @@
     {
         "name": "Chasewater parkrun",
         "reason": "Major sailing event taking place",
+        "date": "2024-12-14"
+    },
+    {
+        "name": "Clifton parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-12-14"
     },
     {
@@ -80,6 +90,16 @@
         "date": "2024-12-14"
     },
     {
+        "name": "Erddig parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-14"
+    },
+    {
+        "name": "Festningen parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-14"
+    },
+    {
         "name": "Flatts Lane parkrun",
         "reason": "At the request of Flatts Lane due to other event",
         "date": "2024-12-14"
@@ -95,8 +115,23 @@
         "date": "2024-12-14"
     },
     {
+        "name": "Grove Fields parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-14"
+    },
+    {
         "name": "Haga parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2024-12-14"
+    },
+    {
+        "name": "Henley-on-Thames parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-14"
+    },
+    {
+        "name": "Higginson parkrun, Marlow",
+        "reason": "River is still flooding part of the course",
         "date": "2024-12-14"
     },
     {
@@ -217,6 +252,11 @@
     {
         "name": "Onderstepoort Campus parkrun",
         "reason": "Holiday on Campus - No Students",
+        "date": "2024-12-14"
+    },
+    {
+        "name": "Ottawa-Carleton Trailway parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-12-14"
     },
     {
