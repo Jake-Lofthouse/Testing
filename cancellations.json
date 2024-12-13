@@ -70,6 +70,16 @@
         "date": "2024-12-14"
     },
     {
+        "name": "Greenbank parkrun",
+        "reason": "Track conditions are fit for toads not fit for par",
+        "date": "2024-12-14"
+    },
+    {
+        "name": "Haga parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-14"
+    },
+    {
         "name": "Holkham parkrun",
         "reason": "Christmas Market",
         "date": "2024-12-14"
@@ -165,6 +175,11 @@
         "date": "2024-12-14"
     },
     {
+        "name": "Naturlehrpfad parkrun, Wetzlar",
+        "reason": "Shortage of volunteers",
+        "date": "2024-12-14"
+    },
+    {
         "name": "New Earswick parkrun",
         "reason": "Ground is too wet",
         "date": "2024-12-14"
@@ -192,6 +207,11 @@
     {
         "name": "Robelle Domain parkrun",
         "reason": "Permission issue",
+        "date": "2024-12-14"
+    },
+    {
+        "name": "Roding Valley parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2024-12-14"
     },
     {
@@ -242,6 +262,11 @@
     {
         "name": "Willow parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-12-14"
+    },
+    {
+        "name": "Wolford Wood parkrun",
+        "reason": "Course waterlogged",
         "date": "2024-12-14"
     },
     {
@@ -327,6 +352,11 @@
     {
         "name": "Clough Hall junior parkrun",
         "reason": "park remains closed due to fallen trees.",
+        "date": "2024-12-15"
+    },
+    {
+        "name": "Longford junior parkrun",
+        "reason": "Equipment unavailable",
         "date": "2024-12-15"
     },
     {
