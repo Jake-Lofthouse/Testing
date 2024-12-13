@@ -55,6 +55,11 @@
         "date": "2024-12-14"
     },
     {
+        "name": "Colby parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-14"
+    },
+    {
         "name": "Cranbrook Country Park parkrun",
         "reason": "Venue unavailable",
         "date": "2024-12-14"
@@ -70,8 +75,18 @@
         "date": "2024-12-14"
     },
     {
+        "name": "Deerpark Forest parkrun, Virginia",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-14"
+    },
+    {
         "name": "Flatts Lane parkrun",
         "reason": "At the request of Flatts Lane due to other event",
+        "date": "2024-12-14"
+    },
+    {
+        "name": "Grangemoor parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2024-12-14"
     },
     {
@@ -107,6 +122,11 @@
     {
         "name": "Joe Creason parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-12-14"
+    },
+    {
+        "name": "Judarskogen parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-12-14"
     },
     {
@@ -352,6 +372,11 @@
     {
         "name": "Barry junior parkrun",
         "reason": "Other event",
+        "date": "2024-12-15"
+    },
+    {
+        "name": "Cambourne junior parkrun",
+        "reason": "Poor ground conditions",
         "date": "2024-12-15"
     },
     {
