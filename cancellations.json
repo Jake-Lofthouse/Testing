@@ -60,6 +60,11 @@
         "date": "2024-12-14"
     },
     {
+        "name": "City Park parkrun, Iowa",
+        "reason": "Weather",
+        "date": "2024-12-14"
+    },
+    {
         "name": "Clifton parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-12-14"
@@ -350,6 +355,11 @@
         "date": "2024-12-14"
     },
     {
+        "name": "T\u00f8yen parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-14"
+    },
+    {
         "name": "Ury Riverside parkrun",
         "reason": "Path upgrade work means course blocked in places",
         "date": "2024-12-14"
@@ -467,6 +477,11 @@
     {
         "name": "Clough Hall junior parkrun",
         "reason": "park remains closed due to fallen trees.",
+        "date": "2024-12-15"
+    },
+    {
+        "name": "Des Connor Park junior parkrun",
+        "reason": "Weather",
         "date": "2024-12-15"
     },
     {
