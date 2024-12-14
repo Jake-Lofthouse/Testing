@@ -95,6 +95,11 @@
         "date": "2024-12-14"
     },
     {
+        "name": "Derrynoid Forest parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-12-14"
+    },
+    {
         "name": "Erddig parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-12-14"
@@ -160,6 +165,11 @@
         "date": "2024-12-14"
     },
     {
+        "name": "ITC Community Sports parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-14"
+    },
+    {
         "name": "Jeune Park parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-12-14"
@@ -192,6 +202,11 @@
     {
         "name": "Laytown Beach parkrun",
         "reason": "High tide",
+        "date": "2024-12-14"
+    },
+    {
+        "name": "Lightning Ridge parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2024-12-14"
     },
     {
@@ -262,6 +277,11 @@
     {
         "name": "New Earswick parkrun",
         "reason": "Ground is too wet",
+        "date": "2024-12-14"
+    },
+    {
+        "name": "New York Central Fitness Trail parkrun",
+        "reason": "Weather",
         "date": "2024-12-14"
     },
     {
@@ -447,6 +467,11 @@
     {
         "name": "Clough Hall junior parkrun",
         "reason": "park remains closed due to fallen trees.",
+        "date": "2024-12-15"
+    },
+    {
+        "name": "Hucknall junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-12-15"
     },
     {
