@@ -2,37 +2,172 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Locked OpenStreetMap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+
     <style>
         html, body {
+            height: 100%;
             margin: 0;
             padding: 0;
-            height: 100%;
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
         }
         #map {
-            width: 100%;
-            height: 100%;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .controls {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: -100;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .controls label {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+        }
+        .controls input[type="checkbox"] {
+            accent-color: #007bff;
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+        }
+
+        .course-btn, .direction-btn {
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 10px auto;
+            text-decoration: none;
+        }
+        .course-btn { background-color: #28a745; }
+        .direction-btn { background-color: #d90b26; }
+        .course-btn:hover { background-color: #218838; }
+        .direction-btn:hover { background-color: #b71c1c; }
+
+        .popup-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .location-button {
+            position: absolute;
+            top: 60px;
+            right: 32px;
+            z-index: 1000;
+            background-color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
         }
     </style>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
     <div id="map"></div>
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script>
-        // Initialize the map
-        const map = L.map('map', {
-            scrollWheelZoom: false, // Disable scroll wheel zoom
-            dragging: false,       // Disable map dragging
-            zoomControl: false     // Hide zoom controls
-        }).setView([51.505, -0.09], 13); // Center map on London, UK with zoom level 13
+    <div class="controls">
+        <label>
+            <input type="checkbox" id="fiveKCheckbox" checked>
+            <span>5k</span>
+        </label>
+        <label>
+            <input type="checkbox" id="juniorCheckbox" checked>
+            <span>Junior</span>
+        </label>
+    </div>
 
-        // Add OpenStreetMap tiles
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '© OpenStreetMap contributors'
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+    <script>
+        
+var map = L.map('map', {
+         center: [0, 0], // Center the map on the equator and prime meridian
+         zoom: 2, // Set an initial zoom level
+         zoomControl: false,
+         maxBounds: [
+          [-90, -180], // Southwest corner of the map
+          [90, 180]    // Northeast corner of the map
+     ],
+          maxBoundsViscosity: 1.0, // Keeps the map within these bounds
+          minZoom: 2, // Prevents zooming out too far to see the entire world multiple times
+          worldCopyJump: false // Prevents world wrapping
+        });
+
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a>',
+            maxZoom: 19
         }).addTo(map);
+
+        // Marker icons
+        var juniorIcon = L.icon({
+            iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/Icons/Junior.png',
+            iconSize: [38, 38],
+            iconAnchor: [19, 38]
+        });
+        var fiveKIcon = L.icon({
+            iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/Icons/5k.png',
+            iconSize: [38, 38],
+            iconAnchor: [19, 38]
+        });
+
+        var markers = L.markerClusterGroup();
+
+        // Normalize event name
+        function normalizeEventName(name) {
+            return name.toLowerCase().replace(/\s+/g, '').replace('parkrun', '');
+        }
+
+        // Fetch location data and add markers
+        fetch('https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/events1.json')
+            .then(response => response.json())
+            .then(data => {
+                data.events.features.forEach(function(feature) {
+                    if (feature.geometry.type === 'Point') {
+                        var coords = feature.geometry.coordinates;
+                        var eventName = normalizeEventName(feature.properties.eventname);
+                        var eventLongName = feature.properties.EventLongName;
+                        var isJunior = eventLongName.toLowerCase().includes('junior');
+                        var showMarker = (isJunior && document.getElementById('juniorCheckbox').checked) ||
+                                         (!isJunior && document.getElementById('fiveKCheckbox').checked);
+
+                        if (showMarker) {
+                            var popupContent = `
+                                <div>
+                                    <div class="popup-title">${eventLongName}</div>
+                                    <button class="course-btn" onclick="window.open('https://www.parkrun.org.uk/${eventName}/course/', '_blank')">Course</button>
+                                    <button class="direction-btn" onclick="window.open('https://www.google.com/maps/dir/?api=1&destination=${coords[1]},${coords[0]}', '_blank')">Directions</button>
+                                </div>
+                            `;
+                            var markerIcon = isJunior ? juniorIcon : fiveKIcon;
+                            var marker = L.marker([coords[1], coords[0]], { icon: markerIcon }).bindPopup(popupContent);
+                            markers.addLayer(marker);
+                        }
+                    }
+                });
+                map.addLayer(markers);
+            });
+
+        // Update markers on checkbox change
+        document.getElementById('juniorCheckbox').addEventListener('change', () => markers.clearLayers());
+        document.getElementById('fiveKCheckbox').addEventListener('change', () => markers.clearLayers());
     </script>
 </body>
 </html>
