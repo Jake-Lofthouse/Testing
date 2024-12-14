@@ -50,6 +50,11 @@
         "date": "2024-12-14"
     },
     {
+        "name": "Carlisle parkrun",
+        "reason": "Weather",
+        "date": "2024-12-14"
+    },
+    {
         "name": "Carrickfergus parkrun",
         "reason": "Someone dug a damn great hole across the start!",
         "date": "2024-12-14"
@@ -102,6 +107,21 @@
     {
         "name": "Derrynoid Forest parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2024-12-14"
+    },
+    {
+        "name": "Drumpellier Country parkrun",
+        "reason": "Weather",
+        "date": "2024-12-14"
+    },
+    {
+        "name": "Dunfermline parkrun",
+        "reason": "Peacocks ? wearing ice skates! Course too icy",
+        "date": "2024-12-14"
+    },
+    {
+        "name": "Ecos parkrun, Ballymena",
+        "reason": "Course unsafe or blocked",
         "date": "2024-12-14"
     },
     {
@@ -335,8 +355,28 @@
         "date": "2024-12-14"
     },
     {
+        "name": "Ruchill parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-14"
+    },
+    {
         "name": "Seotlong Agriculture School parkrun",
         "reason": "Festive Season, low volunteer and participats",
+        "date": "2024-12-14"
+    },
+    {
+        "name": "Sixmilewater parkrun",
+        "reason": "Weather",
+        "date": "2024-12-14"
+    },
+    {
+        "name": "South Shields parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-14"
+    },
+    {
+        "name": "Strathclyde parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-12-14"
     },
     {
