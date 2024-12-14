@@ -385,6 +385,11 @@
         "date": "2024-12-14"
     },
     {
+        "name": "Spanish Banks Beach parkrun",
+        "reason": "Weather",
+        "date": "2024-12-14"
+    },
+    {
         "name": "Stadtpark parkrun, Graz",
         "reason": "Course unsafe or blocked",
         "date": "2024-12-14"
@@ -472,6 +477,11 @@
     {
         "name": "parkrun Bulwar nad Wis\u0142\u0105",
         "reason": "Zawody na trasie.",
+        "date": "2024-12-14"
+    },
+    {
+        "name": "parkrun Park Lipowy",
+        "reason": "Shortage of volunteers",
         "date": "2024-12-14"
     },
     {
