@@ -3,26 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>parkrunner tourist</title>
-    <link rel="shortcut icon" type="image/x.icon" href="favicon.ico">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/logo.png">
+<title>parkrunner tourist - Web App</title>
+<link rel="shortcut icon" type="image/x.icon" href="favicon.ico">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="apple-touch-icon" href="https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/logo.png">
 
-    <!-- General Meta Tags -->
-    <meta name="description" content="Explore our interactive map to discover all parkrun events and nearby hotels. Get directions and enjoy an intuitive interface for a seamless experience.">
-    <meta name="keywords" content="interactive map, parkruns, hotels, directions, user-friendly, travel, running events">
-    <meta name="author" content="parkrunner tourist Team">
+<!-- General Meta Tags -->
+<meta name="description" content="Discover all parkrun events, nearby hotels, and campsites with our interactive web app. Navigate easily, get directions, and plan your parkrun travels effortlessly.">
+<meta name="keywords" content="parkrun map, parkrun events, interactive map, parkrun hotel finder, campsites, travel planning, running events map, parkrun directions">
+<meta name="author" content="parkrunner tourist Team">
+<meta name="robots" content="ALL">
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="parkrunner tourist Map">
-    <meta property="og:description" content="Navigate through our interactive map to find parkrun events, locate nearby hotels, and get directions. Designed for an easy and enjoyable experience.">
-    <meta property="og:url" content="https://parkrunnertourist.co.uk/webapp">
-    <meta property="og:type" content="website">
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="parkrunner tourist - Your Ultimate parkrun Map, Hotels & Campsites">
+<meta property="og:description" content="Plan your parkrun journeys with our interactive map. Find events, locate nearby hotels and campsites, and get precise directions effortlessly.">
+<meta property="og:url" content="https://parkrunnertourist.co.uk/webapp">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/logo.png">
 
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="parkrunner tourist Map">
-    <meta name="twitter:description" content="Use our interactive map to find parkrun events and nearby hotels with ease. Get directions and enjoy a smooth user experience.">
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="parkrunner tourist - Explore parkrun Events, Hotels & Campsites">
+<meta name="twitter:description" content="Use our web app to explore parkrun events, hotels, and campsites easily. Plan your travels with directions and a user-friendly interface.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/logo.png">
+
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-REFFZSK4XK"></script>
@@ -159,24 +163,29 @@
     </div>
 
     <div class="menu-bar">
-        <div class="menu-item" onclick="toggleDropdown()">
-            <span id="arrow" class="material-icons rotate">expand_more</span>
-            <span class="current-selection" id="currentSelection">Showing 5k</span>
-            <div id="dropdownMenu" class="dropdown">
-                <div class="dropdown-item selected" id="5kItem" onclick="setIframeSrc('5k', this)">5k</div>
-                <div class="dropdown-item" id="juniorItem" onclick="setIframeSrc('junior', this)">Junior</div>
-                <div class="dropdown-item" id="allItem" onclick="setIframeSrc('all', this)">All</div>
-            </div>
+    <a href="https://www.parkrunnertourist.co.uk" class="menu-item">
+        <span class="material-icons">home</span>
+        Home
+    </a>
+    <div class="menu-item" onclick="toggleDropdown()">
+        <span id="arrow" class="material-icons rotate">expand_more</span>
+        <span class="current-selection" id="currentSelection">Showing 5k</span>
+        <div id="dropdownMenu" class="dropdown">
+            <div class="dropdown-item selected" id="5kItem" onclick="setIframeSrc('5k', this)">5k</div>
+            <div class="dropdown-item" id="juniorItem" onclick="setIframeSrc('junior', this)">Junior</div>
+            <div class="dropdown-item" id="allItem" onclick="setIframeSrc('all', this)">All</div>
         </div>
-        <a href="#" class="menu-item" onclick="openUrl('https://www.buymeacoffee.com/jlofthouse')">
-            <span class="material-icons">favorite</span>
-            Support
-        </a>
-        <a href="https://parkrunnertourist.co.uk/finder" class="menu-item">
-            <span class="material-icons">search</span>
-            AI Search
-        </a>
     </div>
+    <a href="https://parkrunnertourist.co.uk/finder" class="menu-item">
+        <span class="material-icons">search</span>
+        AI Search
+    </a>
+    <a href="#" class="menu-item" onclick="openUrl('https://www.buymeacoffee.com/jlofthouse')">
+        <span class="material-icons">favorite</span>
+        Support
+    </a>
+</div>
+
 
     <script>
         let currentType = '5k'; // Track the current type
