@@ -27,7 +27,7 @@
             position: absolute;
             top: 10px;
             left: 10px;
-            z-index: -100;
+            z-index: -1000;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
         }
         .controls label {
@@ -79,6 +79,21 @@
             justify-content: center;
             cursor: pointer;
         }
+
+        .logo-container {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            z-index: 1000;
+        }
+        .logo-container img {
+            width: 60px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .logo-container img:hover {
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
@@ -94,29 +109,30 @@
         </label>
     </div>
 
+    <div class="logo-container">
+        <img src="https://raw.githubusercontent.com/ALD-Models/Testing/main/logo.png" alt="Parkrunner Tourist" onclick="window.open('https://parkrun.com', '_blank')">
+    </div>
+
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
     <script>
-        
-var map = L.map('map', {
-         center: [0, 0], // Center the map on the equator and prime meridian
-         zoom: 2, // Set an initial zoom level
-         zoomControl: false,
-         maxBounds: [
-          [-90, -180], // Southwest corner of the map
-          [90, 180]    // Northeast corner of the map
-     ],
-          maxBoundsViscosity: 1.0, // Keeps the map within these bounds
-          minZoom: 2, // Prevents zooming out too far to see the entire world multiple times
-          worldCopyJump: false // Prevents world wrapping
+        var map = L.map('map', {
+            center: [0, 0],
+            zoom: 2,
+            zoomControl: false,
+            maxBounds: [
+                [-90, -180],
+                [90, 180]
+            ],
+            maxBoundsViscosity: 1.0,
+            minZoom: 2,
+            worldCopyJump: false
         });
 
         L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-            attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a>',
             maxZoom: 19
         }).addTo(map);
 
-        // Marker icons
         var juniorIcon = L.icon({
             iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/Icons/Junior.png',
             iconSize: [38, 38],
@@ -130,12 +146,10 @@ var map = L.map('map', {
 
         var markers = L.markerClusterGroup();
 
-        // Normalize event name
         function normalizeEventName(name) {
             return name.toLowerCase().replace(/\s+/g, '').replace('parkrun', '');
         }
 
-        // Fetch location data and add markers
         fetch('https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/events1.json')
             .then(response => response.json())
             .then(data => {
@@ -165,9 +179,21 @@ var map = L.map('map', {
                 map.addLayer(markers);
             });
 
-        // Update markers on checkbox change
         document.getElementById('juniorCheckbox').addEventListener('change', () => markers.clearLayers());
         document.getElementById('fiveKCheckbox').addEventListener('change', () => markers.clearLayers());
+
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            const lat = parseFloat(params.get('lat'));
+            const lng = parseFloat(params.get('lng'));
+            return { lat, lng };
+        }
+
+        const { lat, lng } = getQueryParams();
+        if (!isNaN(lat) && !isNaN(lng)) {
+            const marker = L.marker([lat, lng]).addTo(map).bindPopup('You are here!').openPopup();
+            map.setView([lat, lng], 14);
+        }
     </script>
 </body>
 </html>
