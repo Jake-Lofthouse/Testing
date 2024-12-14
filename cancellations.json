@@ -85,6 +85,11 @@
         "date": "2024-12-14"
     },
     {
+        "name": "Courthouse Lake parkrun",
+        "reason": "Weather",
+        "date": "2024-12-14"
+    },
+    {
         "name": "Cranbrook Country Park parkrun",
         "reason": "Venue unavailable",
         "date": "2024-12-14"
@@ -227,6 +232,11 @@
     {
         "name": "Laytown Beach parkrun",
         "reason": "High tide",
+        "date": "2024-12-14"
+    },
+    {
+        "name": "Leamington parkrun",
+        "reason": "Incident in park",
         "date": "2024-12-14"
     },
     {
@@ -375,6 +385,11 @@
         "date": "2024-12-14"
     },
     {
+        "name": "Stadtpark parkrun, Graz",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-14"
+    },
+    {
         "name": "Strathclyde parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-12-14"
@@ -507,6 +522,11 @@
     {
         "name": "Cambourne junior parkrun",
         "reason": "Poor ground conditions",
+        "date": "2024-12-15"
+    },
+    {
+        "name": "Castle Playing Fields junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2024-12-15"
     },
     {
