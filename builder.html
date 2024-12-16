@@ -198,6 +198,27 @@
             <label for="background-color">Demo Zone Background:</label>
             <input type="color" id="background-color" value="#ffffff">
         </div>
+        <div class="control-group">
+            <label for="address">Address:</label>
+            <input type="text" id="address" placeholder="Enter an address">
+            <button id="get-coordinates">Get Coordinates</button>
+        </div>
+        <div class="control-group">
+            <label for="marker-lat">Marker Latitude:</label>
+            <input type="text" id="marker-lat" placeholder="e.g., 51.5074">
+        </div>
+        <div class="control-group">
+            <label for="marker-lng">Marker Longitude:</label>
+            <input type="text" id="marker-lng" placeholder="e.g., -0.1278">
+        </div>
+        <div class="control-group">
+            <label for="marker-text">Marker Text:</label>
+            <input type="text" id="marker-text" placeholder="e.g., Welcome to London">
+        </div>
+        <div class="control-group">
+            <label for="marker-icon-url">Marker Icon URL:</label>
+            <input type="text" id="marker-icon-url" placeholder="e.g., https://example.com/icon.png">
+        </div>
     </div>
 
     <div class="demo-container">
@@ -221,23 +242,64 @@
         const widthUnitSelect = document.getElementById('width-unit');
         const heightInput = document.getElementById('height');
         const heightUnitSelect = document.getElementById('height-unit');
+        const backgroundColorInput = document.getElementById('background-color');
+
+        const markerLatInput = document.getElementById('marker-lat');
+        const markerLngInput = document.getElementById('marker-lng');
+        const markerTextInput = document.getElementById('marker-text');
+        const markerIconInput = document.getElementById('marker-icon-url');
+        const addressInput = document.getElementById('address');
+        const getCoordinatesButton = document.getElementById('get-coordinates');
+
         const demoZone = document.getElementById('demo-zone');
         const demoZoneTitle = document.getElementById('demo-zone-title');
-        const iframeContainer = document.getElementById('iframe-container');
-        const backgroundColorInput = document.getElementById('background-color');
+        const iframe = document.getElementById('iframe');
         const codeSnippet = document.getElementById('code-snippet');
         const copyButton = document.getElementById('copy-button');
         const mobileMessage = document.getElementById('mobile-message');
         const controls = document.querySelector('.controls');
         const demoContainer = document.querySelector('.demo-container');
 
-        // Device detection
         if (/Mobi|Android/i.test(navigator.userAgent)) {
             mobileMessage.style.display = 'block';
         } else {
             controls.style.display = 'flex';
             demoContainer.style.display = 'flex';
         }
+
+        const updateIframeSrc = () => {
+            const lat = markerLatInput.value.trim();
+            const lng = markerLngInput.value.trim();
+            const text = encodeURIComponent(markerTextInput.value.trim());
+            const iconUrl = encodeURIComponent(markerIconInput.value.trim());
+
+            let src = 'https://parkrunnertourist.co.uk/mapping';
+
+            if (lat && lng) {
+                src += `?lat=${lat}&lng=${lng}`;
+                if (text) src += `&text=${text}`;
+                if (iconUrl) src += `&iconUrl=${iconUrl}`;
+            }
+
+            iframe.src = src;
+            updateCodeSnippet();
+        };
+
+        const updateCodeSnippet = () => {
+            const borderRadius = `${borderRadiusInput.value}px`;
+            const shadowStrength = shadowStrengthInput.value;
+            const boxShadow = shadowStrength === '0' ? 'none' : `0px 4px ${shadowStrength * 2}px rgba(0, 0, 0, 0.${shadowStrength})`;
+            const width = `${widthInput.value}${widthUnitSelect.value}`;
+            const height = `${heightInput.value}${heightUnitSelect.value}`;
+
+            const src = iframe.src;
+
+            const code = `<div style="width: ${width}; height: ${height}; border-radius: ${borderRadius}; box-shadow: ${boxShadow}; overflow: hidden;">
+    <iframe src='${src}' style='width: 100%; height: 100%; border: none;'></iframe>
+</div>`;
+
+            codeSnippet.textContent = code;
+        };
 
         const updateStyles = () => {
             const borderRadius = `${borderRadiusInput.value}px`;
@@ -253,27 +315,44 @@
                 parseInt(backgroundColor.slice(5, 7), 16) * 0.114) / 255;
             demoZoneTitle.style.color = luminance > 0.5 ? '#000' : '#fff';
 
-            iframeContainer.style.borderRadius = borderRadius;
-            iframeContainer.style.boxShadow = boxShadow;
-            iframeContainer.style.width = width;
-            iframeContainer.style.height = height;
+            iframe.style.borderRadius = borderRadius;
+            iframe.style.boxShadow = boxShadow;
+            iframe.style.width = width;
+            iframe.style.height = height;
 
-            updateCodeSnippet();
+            updateIframeSrc();
         };
 
-        const updateCodeSnippet = () => {
-            const borderRadius = `${borderRadiusInput.value}px`;
-            const shadowStrength = shadowStrengthInput.value;
-            const boxShadow = shadowStrength === '0' ? 'none' : `0px 4px ${shadowStrength * 2}px rgba(0, 0, 0, 0.${shadowStrength})`;
-            const width = `${widthInput.value}${widthUnitSelect.value}`;
-            const height = `${heightInput.value}${heightUnitSelect.value}`;
+        const fetchCoordinates = () => {
+            const address = addressInput.value.trim();
 
-            const code = `<div style="width: ${width}; height: ${height}; border-radius: ${borderRadius}; box-shadow: ${boxShadow}; overflow: hidden;">
-    <iframe src='https://parkrunnertourist.co.uk/mapping' style='width: 100%; height: 100%; border: none;'></iframe>
-</div>`;
+            if (address === "") {
+                alert("Please enter an address.");
+                return;
+            }
 
-            codeSnippet.textContent = code;
+            fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(address)}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.length > 0) {
+                        const lat = data[0].lat;
+                        const lon = data[0].lon;
+
+                        markerLatInput.value = lat;
+                        markerLngInput.value = lon;
+
+                        updateIframeSrc();
+                    } else {
+                        alert("Address not found. Please try another one.");
+                    }
+                })
+                .catch(error => {
+                    alert("Error fetching coordinates. Please try again.");
+                    console.error(error);
+                });
         };
+
+        getCoordinatesButton.addEventListener('click', fetchCoordinates);
 
         copyButton.addEventListener('click', () => {
             navigator.clipboard.writeText(codeSnippet.textContent)
@@ -295,6 +374,11 @@
         heightInput.addEventListener('input', updateStyles);
         heightUnitSelect.addEventListener('change', updateStyles);
         backgroundColorInput.addEventListener('input', updateStyles);
+
+        markerLatInput.addEventListener('input', updateIframeSrc);
+        markerLngInput.addEventListener('input', updateIframeSrc);
+        markerTextInput.addEventListener('input', updateIframeSrc);
+        markerIconInput.addEventListener('input', updateIframeSrc);
 
         updateStyles();
     </script>
