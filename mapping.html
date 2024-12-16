@@ -166,7 +166,7 @@
 
                     if (showMarker) {
                         var popupContent = `
-                            <div>
+                            <div style="text-align: left;">
                                 <div class="popup-title">${eventLongName}</div>
                                 <button class="course-btn" onclick="window.open('https://www.parkrun.org.uk/${eventName}/course/', '_blank')">Course</button>
                                 <button class="direction-btn" onclick="window.open('https://www.google.com/maps/dir/?api=1&destination=${coords[1]},${coords[0]}', '_blank')">Directions</button>
@@ -189,7 +189,7 @@
         const params = new URLSearchParams(window.location.search);
         const lat = parseFloat(params.get('lat'));
         const lng = parseFloat(params.get('lng'));
-        const text = params.get('text') || 'You are here!';
+        const text = params.get('text')?.trim(); // Trim whitespace
         const iconUrl = params.get('iconUrl');
         return { lat, lng, text, iconUrl };
     }
@@ -200,19 +200,26 @@
         if (iconUrl) {
             customIcon = L.icon({
                 iconUrl: iconUrl,
-                iconSize: [38, 38], // Adjust size as needed
-                iconAnchor: [19, 38]
+                iconSize: [30, 30], // Dynamically adjust size for custom icons
+                iconAnchor: [15, 30]
             });
         }
 
+        // Only bind the popup if text is provided
+        const popupOptions = {};
+        if (text) {
+            popupOptions.content = `<div style="text-align: left;">${text}</div>`;
+        }
+
         const marker = L.marker([lat, lng], customIcon ? { icon: customIcon } : {})
-            .addTo(map)
-            .bindPopup(text)
-            .openPopup();
+            .addTo(map);
+
+        if (text) marker.bindPopup(popupOptions.content).openPopup();
 
         map.setView([lat, lng], 14);
     }
 </script>
+
 
 </body>
 </html>
