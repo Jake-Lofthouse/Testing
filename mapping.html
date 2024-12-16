@@ -20,66 +20,7 @@
             width: 100vw;
         }
 
-        .controls {
-            background-color: white;
-            padding: 15px;
-            border-radius: 10px;
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            z-index: -1000;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-        }
-        .controls label {
-            display: flex;
-            align-items: center;
-            font-size: 16px;
-        }
-        .controls input[type="checkbox"] {
-            accent-color: #007bff;
-            margin-right: 10px;
-            width: 20px;
-            height: 20px;
-        }
-
-        .course-btn, .direction-btn {
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            display: block;
-            margin: 10px auto;
-            text-decoration: none;
-        }
-        .course-btn { background-color: #28a745; }
-        .direction-btn { background-color: #d90b26; }
-        .course-btn:hover { background-color: #218838; }
-        .direction-btn:hover { background-color: #b71c1c; }
-
-        .popup-title {
-            font-size: 16px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .location-button {
-            position: absolute;
-            top: 60px;
-            right: 32px;
-            z-index: 1000;
-            background-color: white;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-        }
-
+        /* Updated controls styling */
         .logo-container {
             position: absolute;
             bottom: 10px;
@@ -87,140 +28,147 @@
             z-index: 1000;
         }
         .logo-container img {
-            width: 50px; /* Reduced size */
+            width: 50px;
             cursor: pointer;
             transition: transform 0.3s;
         }
         .logo-container img:hover {
             transform: scale(1.1);
         }
+
+        /* Popup styling */
+        .popup-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .popup-content {
+            text-align: left;
+            line-height: 1.4;
+            font-size: 14px;
+            font-weight: normal;
+            padding: 5px;
+        }
     </style>
 </head>
 <body>
+    <!-- Map container -->
     <div id="map"></div>
-    <div class="controls">
-        <label>
-            <input type="checkbox" id="fiveKCheckbox" checked>
-            <span>5k</span>
-        </label>
-        <label>
-            <input type="checkbox" id="juniorCheckbox" checked>
-            <span>Junior</span>
-        </label>
-    </div>
 
+    <!-- Logo at the bottom -->
     <div class="logo-container">
         <img src="https://raw.githubusercontent.com/ALD-Models/Testing/main/logo.png" alt="parkrunner tourist" onclick="window.open('https://parkrunnertourist.co.uk', '_blank')">
     </div>
 
+    <!-- Scripts -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
-<script>
-    var map = L.map('map', {
-        center: [0, 0],
-        zoom: 2,
-        zoomControl: false,
-        maxBounds: [
-            [-90, -180],
-            [90, 180]
-        ],
-        maxBoundsViscosity: 1.0,
-        minZoom: 2,
-        worldCopyJump: false,
-        attributionControl: false // Removed Carto text
-    });
 
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-        maxZoom: 19
-    }).addTo(map);
+    <script>
+        // Initialize map
+        var map = L.map('map', {
+            center: [0, 0],
+            zoom: 2,
+            zoomControl: false,
+            maxBounds: [
+                [-90, -180],
+                [90, 180]
+            ],
+            maxBoundsViscosity: 1.0,
+            minZoom: 2,
+            worldCopyJump: false,
+            attributionControl: false // Remove attribution text
+        });
 
-    var juniorIcon = L.icon({
-        iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/Icons/Junior.png',
-        iconSize: [38, 38],
-        iconAnchor: [19, 38]
-    });
+        // Tile Layer
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+            maxZoom: 19
+        }).addTo(map);
 
-    var fiveKIcon = L.icon({
-        iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/Icons/5k.png',
-        iconSize: [38, 38],
-        iconAnchor: [19, 38]
-    });
+        // Custom Icons
+        var juniorIcon = L.icon({
+            iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/Icons/Junior.png',
+            iconSize: [38, 38],
+            iconAnchor: [19, 38]
+        });
 
-    var markers = L.markerClusterGroup();
+        var fiveKIcon = L.icon({
+            iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/Icons/5k.png',
+            iconSize: [38, 38],
+            iconAnchor: [19, 38]
+        });
 
-    function normalizeEventName(name) {
-        return name.toLowerCase().replace(/\s+/g, '').replace('parkrun', '');
-    }
+        // Marker Cluster Group
+        var markers = L.markerClusterGroup();
 
-    fetch('https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/events1.json')
-        .then(response => response.json())
-        .then(data => {
-            data.events.features.forEach(function(feature) {
-                if (feature.geometry.type === 'Point') {
-                    var coords = feature.geometry.coordinates;
-                    var eventName = normalizeEventName(feature.properties.eventname);
-                    var eventLongName = feature.properties.EventLongName;
-                    var isJunior = eventLongName.toLowerCase().includes('junior');
-                    var showMarker = (isJunior && document.getElementById('juniorCheckbox').checked) ||
-                                     (!isJunior && document.getElementById('fiveKCheckbox').checked);
+        // Normalize Event Names (utility function)
+        function normalizeEventName(name) {
+            return name.toLowerCase().replace(/\s+/g, '').replace('parkrun', '');
+        }
 
-                    if (showMarker) {
+        // Fetch and Render Markers
+        fetch('https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/events1.json')
+            .then(response => response.json())
+            .then(data => {
+                data.events.features.forEach(function(feature) {
+                    if (feature.geometry.type === 'Point') {
+                        var coords = feature.geometry.coordinates;
+                        var eventName = normalizeEventName(feature.properties.eventname);
+                        var eventLongName = feature.properties.EventLongName;
+
+                        var isJunior = eventLongName.toLowerCase().includes('junior');
                         var popupContent = `
-                            <div style="text-align: left;">
+                            <div class="popup-content">
                                 <div class="popup-title">${eventLongName}</div>
-                                <button class="course-btn" onclick="window.open('https://www.parkrun.org.uk/${eventName}/course/', '_blank')">Course</button>
-                                <button class="direction-btn" onclick="window.open('https://www.google.com/maps/dir/?api=1&destination=${coords[1]},${coords[0]}', '_blank')">Directions</button>
+                                <button class="course-btn" style="background-color:#28a745; color:white; border:none; padding:8px 12px; border-radius:5px; cursor:pointer; margin-bottom:5px;"
+                                    onclick="window.open('https://www.parkrun.org.uk/${eventName}/course/', '_blank')">Course</button>
+                                <button class="direction-btn" style="background-color:#d90b26; color:white; border:none; padding:8px 12px; border-radius:5px; cursor:pointer;"
+                                    onclick="window.open('https://www.google.com/maps/dir/?api=1&destination=${coords[1]},${coords[0]}', '_blank')">Directions</button>
                             </div>
                         `;
+
                         var markerIcon = isJunior ? juniorIcon : fiveKIcon;
                         var marker = L.marker([coords[1], coords[0]], { icon: markerIcon }).bindPopup(popupContent);
                         markers.addLayer(marker);
                     }
-                }
+                });
+                map.addLayer(markers);
             });
-            map.addLayer(markers);
-        });
 
-    document.getElementById('juniorCheckbox').addEventListener('change', () => markers.clearLayers());
-    document.getElementById('fiveKCheckbox').addEventListener('change', () => markers.clearLayers());
+        // Custom Query Params for Markers
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            const lat = parseFloat(params.get('lat'));
+            const lng = parseFloat(params.get('lng'));
+            const text = params.get('text')?.trim(); // Optional
+            const iconUrl = params.get('iconUrl');
+            return { lat, lng, text, iconUrl };
+        }
 
-    // Custom Marker Logic
-    function getQueryParams() {
-        const params = new URLSearchParams(window.location.search);
-        const lat = parseFloat(params.get('lat'));
-        const lng = parseFloat(params.get('lng'));
-        const text = params.get('text')?.trim(); // Trim whitespace
-        const iconUrl = params.get('iconUrl');
-        return { lat, lng, text, iconUrl };
-    }
-
-    const { lat, lng, text, iconUrl } = getQueryParams();
-    if (!isNaN(lat) && !isNaN(lng)) {
-        let customIcon;
-        if (iconUrl) {
-            customIcon = L.icon({
+        const { lat, lng, text, iconUrl } = getQueryParams();
+        if (!isNaN(lat) && !isNaN(lng)) {
+            // Define custom marker if icon URL exists
+            let customIcon = iconUrl ? L.icon({
                 iconUrl: iconUrl,
-                iconSize: [30, 30], // Dynamically adjust size for custom icons
+                iconSize: [30, 30],
                 iconAnchor: [15, 30]
-            });
+            }) : null;
+
+            const markerOptions = customIcon ? { icon: customIcon } : {};
+            const marker = L.marker([lat, lng], markerOptions).addTo(map);
+
+            // Add popup only if text exists
+            if (text) {
+                const popupContent = `
+                    <div style="text-align: left; line-height: 1.4; font-size: 14px;">
+                        ${text}
+                    </div>
+                `;
+                marker.bindPopup(popupContent).openPopup();
+            }
+
+            map.setView([lat, lng], 14);
         }
-
-        // Only bind the popup if text is provided
-        const popupOptions = {};
-        if (text) {
-            popupOptions.content = `<div style="text-align: left;">${text}</div>`;
-        }
-
-        const marker = L.marker([lat, lng], customIcon ? { icon: customIcon } : {})
-            .addTo(map);
-
-        if (text) marker.bindPopup(popupOptions.content).openPopup();
-
-        map.setView([lat, lng], 14);
-    }
-</script>
-
-
+    </script>
 </body>
 </html>
-
