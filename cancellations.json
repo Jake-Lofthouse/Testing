@@ -45,6 +45,11 @@
         "date": "2024-12-21"
     },
     {
+        "name": "Eldorado Park parkrun",
+        "reason": "Festive season break",
+        "date": "2024-12-21"
+    },
+    {
         "name": "Gateshead parkrun",
         "reason": "Saltwell Harriers\u2019 10k race taking place in park",
         "date": "2024-12-21"
@@ -102,6 +107,11 @@
     {
         "name": "Onderstepoort Campus parkrun",
         "reason": "Holiday on Campus - No Students",
+        "date": "2024-12-21"
+    },
+    {
+        "name": "Petrie parkrun",
+        "reason": "Weather",
         "date": "2024-12-21"
     },
     {
