@@ -1,5 +1,10 @@
 [
     {
+        "name": "Abingdon parkrun",
+        "reason": "Course has not yet recovered after recent flooding",
+        "date": "2024-12-21"
+    },
+    {
         "name": "Aspen parkrun",
         "reason": "Weather",
         "date": "2024-12-21"
@@ -22,6 +27,11 @@
     {
         "name": "Blue Lagoon parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-12-21"
+    },
+    {
+        "name": "Bressay parkrun",
+        "reason": "Weather",
         "date": "2024-12-21"
     },
     {
@@ -215,6 +225,11 @@
         "date": "2024-12-21"
     },
     {
+        "name": "Ziegelwiese parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-12-21"
+    },
+    {
         "name": "Zuurfontein parkrun",
         "reason": "Venue unavailable",
         "date": "2024-12-21"
@@ -272,6 +287,11 @@
     {
         "name": "Helix junior parkrun",
         "reason": "Storm damage to parts of the park - limited access",
+        "date": "2024-12-22"
+    },
+    {
+        "name": "Millbank Boating Pond junior parkrun",
+        "reason": "Weather",
         "date": "2024-12-22"
     },
     {
