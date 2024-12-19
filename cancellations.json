@@ -90,6 +90,11 @@
         "date": "2024-12-21"
     },
     {
+        "name": "Kastanienallee parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-12-21"
+    },
+    {
         "name": "Lackawanna Rail Trail parkrun",
         "reason": "Shortage of volunteers",
         "date": "2024-12-21"
@@ -155,6 +160,11 @@
         "date": "2024-12-21"
     },
     {
+        "name": "Reading parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-21"
+    },
+    {
         "name": "Richards Bay parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-12-21"
@@ -182,6 +192,11 @@
     {
         "name": "The Plens parkrun",
         "reason": "Groundworks make course look like a music festival",
+        "date": "2024-12-21"
+    },
+    {
+        "name": "Thorp Perrow parkrun",
+        "reason": "Arboretum is closed - high winds forecast.",
         "date": "2024-12-21"
     },
     {
