@@ -162,6 +162,10 @@
             margin: auto;
             color: #333;
         }
+        .hidden {
+    display: none;
+}
+
     </style>
 </head>
 <body>
@@ -201,13 +205,14 @@
         <div class="control-group">
             <label for="address">Address:</label>
             <input type="text" id="address" placeholder="Enter an address">
-            <button id="get-coordinates">Get Coordinates</button>
+            <button id="get-coordinates">Submit</button>
         </div>
-        <div class="control-group">
-            <label for="marker-lat">Marker Latitude:</label>
-            <input type="text" id="marker-lat" placeholder="e.g., 51.5074">
-        </div>
-        <div class="control-group">
+        <div class="control-group hidden">
+    <label for="marker-lat">Marker Latitude:</label>
+    <input type="text" id="marker-lat" placeholder="e.g., 51.5074">
+</div>
+
+        <div class="control-group hidden">
             <label for="marker-lng">Marker Longitude:</label>
             <input type="text" id="marker-lng" placeholder="e.g., -0.1278">
         </div>
