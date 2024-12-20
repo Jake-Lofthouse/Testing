@@ -45,6 +45,11 @@
         "date": "2024-12-21"
     },
     {
+        "name": "Colby parkrun",
+        "reason": "Weather",
+        "date": "2024-12-21"
+    },
+    {
         "name": "Coober Pedy Oval parkrun",
         "reason": "Shortage of volunteers",
         "date": "2024-12-21"
@@ -110,8 +115,18 @@
         "date": "2024-12-21"
     },
     {
+        "name": "Lahden satama parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-21"
+    },
+    {
         "name": "Lews Castle parkrun",
         "reason": "Weather",
+        "date": "2024-12-21"
+    },
+    {
+        "name": "Lightning Ridge parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2024-12-21"
     },
     {
@@ -155,8 +170,23 @@
         "date": "2024-12-21"
     },
     {
+        "name": "Mount Stuart parkrun",
+        "reason": "Weather",
+        "date": "2024-12-21"
+    },
+    {
         "name": "New Earswick parkrun",
         "reason": "Water logged course",
+        "date": "2024-12-21"
+    },
+    {
+        "name": "North Shore parkrun",
+        "reason": "Weather",
+        "date": "2024-12-21"
+    },
+    {
+        "name": "Nostell parkrun",
+        "reason": "Weather",
         "date": "2024-12-21"
     },
     {
@@ -215,6 +245,11 @@
         "date": "2024-12-21"
     },
     {
+        "name": "South Manchester parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-21"
+    },
+    {
         "name": "St Francis parkrun",
         "reason": "Venue unavailable",
         "date": "2024-12-21"
@@ -222,6 +257,11 @@
     {
         "name": "Stones Corner parkrun",
         "reason": "Flooding of the Cornwall St underpass",
+        "date": "2024-12-21"
+    },
+    {
+        "name": "The Fisherman\u2018s Walk parkrun",
+        "reason": "Weather",
         "date": "2024-12-21"
     },
     {
@@ -242,6 +282,11 @@
     {
         "name": "Victory Heights Trail parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-12-21"
+    },
+    {
+        "name": "V\u00e4\u00e4ksyn kanava parkrun",
+        "reason": "Weather",
         "date": "2024-12-21"
     },
     {
@@ -351,6 +396,11 @@
     },
     {
         "name": "Osterley junior parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-22"
+    },
+    {
+        "name": "Riverside junior parkrun, St Neots",
         "reason": "Course unsafe or blocked",
         "date": "2024-12-22"
     },
