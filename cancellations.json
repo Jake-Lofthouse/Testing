@@ -5,6 +5,11 @@
         "date": "2024-12-21"
     },
     {
+        "name": "Alness parkrun",
+        "reason": "Weather",
+        "date": "2024-12-21"
+    },
+    {
         "name": "Ankerskogen parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-12-21"
@@ -50,6 +55,21 @@
         "date": "2024-12-21"
     },
     {
+        "name": "Chain of Lakes parkrun",
+        "reason": "Weather",
+        "date": "2024-12-21"
+    },
+    {
+        "name": "Chevin Forest parkrun",
+        "reason": "Yellow wind warning, gusts of over 50mph forecast",
+        "date": "2024-12-21"
+    },
+    {
+        "name": "Clifton parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-21"
+    },
+    {
         "name": "Colby parkrun",
         "reason": "Weather",
         "date": "2024-12-21"
@@ -66,6 +86,11 @@
     },
     {
         "name": "Derrynoid Forest parkrun",
+        "reason": "Weather",
+        "date": "2024-12-21"
+    },
+    {
+        "name": "Downsview parkrun",
         "reason": "Weather",
         "date": "2024-12-21"
     },
@@ -97,6 +122,11 @@
     {
         "name": "Gateshead parkrun",
         "reason": "Saltwell Harriers\u2019 10k race taking place in park",
+        "date": "2024-12-21"
+    },
+    {
+        "name": "Glossop parkrun",
+        "reason": "Weather",
         "date": "2024-12-21"
     },
     {
@@ -157,6 +187,11 @@
     {
         "name": "Lahden satama parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2024-12-21"
+    },
+    {
+        "name": "Lancaster parkrun",
+        "reason": "Weather",
         "date": "2024-12-21"
     },
     {
@@ -250,6 +285,11 @@
         "date": "2024-12-21"
     },
     {
+        "name": "New York Central Fitness Trail parkrun",
+        "reason": "Weather",
+        "date": "2024-12-21"
+    },
+    {
         "name": "Newport parkrun",
         "reason": "Weather",
         "date": "2024-12-21"
@@ -272,6 +312,11 @@
     {
         "name": "Onderstepoort Campus parkrun",
         "reason": "Holiday on Campus - No Students",
+        "date": "2024-12-21"
+    },
+    {
+        "name": "Penistone parkrun",
+        "reason": "Weather",
         "date": "2024-12-21"
     },
     {
@@ -352,6 +397,11 @@
     {
         "name": "Susquehanna Riverwalk parkrun",
         "reason": "Snow and ice on the path will be unsafe",
+        "date": "2024-12-21"
+    },
+    {
+        "name": "Tampere parkrun",
+        "reason": "Weather",
         "date": "2024-12-21"
     },
     {
@@ -510,6 +560,11 @@
         "date": "2024-12-22"
     },
     {
+        "name": "Lough Key junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-12-22"
+    },
+    {
         "name": "Magherafelt junior parkrun",
         "reason": "Weather",
         "date": "2024-12-22"
@@ -532,6 +587,11 @@
     {
         "name": "Osterley junior parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2024-12-22"
+    },
+    {
+        "name": "Pontypridd junior parkrun",
+        "reason": "Weather",
         "date": "2024-12-22"
     },
     {
