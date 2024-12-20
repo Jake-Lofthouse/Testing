@@ -50,6 +50,11 @@
         "date": "2024-12-21"
     },
     {
+        "name": "Dalby parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-21"
+    },
+    {
         "name": "Duffins Trail parkrun",
         "reason": "Weather",
         "date": "2024-12-21"
@@ -90,6 +95,11 @@
         "date": "2024-12-21"
     },
     {
+        "name": "Jeune Park parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-21"
+    },
+    {
         "name": "Kastanienallee parkrun",
         "reason": "Shortage of volunteers",
         "date": "2024-12-21"
@@ -110,6 +120,11 @@
         "date": "2024-12-21"
     },
     {
+        "name": "Llanerchaeron parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-21"
+    },
+    {
         "name": "Loftsgardsbrua parkrun",
         "reason": "Shortage of volunteers",
         "date": "2024-12-21"
@@ -117,6 +132,11 @@
     {
         "name": "Mapule Sindane School parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2024-12-21"
+    },
+    {
+        "name": "Melksham parkrun",
+        "reason": "Landowner permission issue",
         "date": "2024-12-21"
     },
     {
@@ -312,6 +332,11 @@
     {
         "name": "Norris Green Park junior parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2024-12-22"
+    },
+    {
+        "name": "Osterley junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-12-22"
     },
     {
