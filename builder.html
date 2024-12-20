@@ -230,7 +230,7 @@
         <div class="demo-zone" id="demo-zone">
             <div class="demo-zone-title" id="demo-zone-title">Demo Zone</div>
             <div class="iframe-container" id="iframe-container">
-                <iframe id="iframe" src="https://parkrunnertourist.co.uk/mapping"></iframe>
+                <iframe id="iframe" src="https://parkrunnertourist.co.uk/embed"></iframe>
             </div>
         </div>
 
@@ -278,7 +278,7 @@
             const text = encodeURIComponent(markerTextInput.value.trim());
             const iconUrl = encodeURIComponent(markerIconInput.value.trim());
 
-            let src = 'https://parkrunnertourist.co.uk/mapping';
+            let src = 'https://parkrunnertourist.co.uk/embed';
 
             if (lat && lng) {
                 src += `?lat=${lat}&lng=${lng}`;
