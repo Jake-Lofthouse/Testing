@@ -145,6 +145,11 @@
         "date": "2024-12-21"
     },
     {
+        "name": "Miyagawa koen parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-12-21"
+    },
+    {
         "name": "Montalto Estate parkrun",
         "reason": "Venue unavailable",
         "date": "2024-12-21"
@@ -166,6 +171,11 @@
     },
     {
         "name": "Petrie parkrun",
+        "reason": "Weather",
+        "date": "2024-12-21"
+    },
+    {
+        "name": "Plantation parkrun",
         "reason": "Weather",
         "date": "2024-12-21"
     },
