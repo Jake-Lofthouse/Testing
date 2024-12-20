@@ -150,6 +150,11 @@
         "date": "2024-12-21"
     },
     {
+        "name": "Marple parkrun",
+        "reason": "Unsafe overhead loose tree branches & high winds",
+        "date": "2024-12-21"
+    },
+    {
         "name": "Melksham parkrun",
         "reason": "Landowner permission issue",
         "date": "2024-12-21"
@@ -260,6 +265,11 @@
         "date": "2024-12-21"
     },
     {
+        "name": "Stormont parkrun",
+        "reason": "Estate closed due to weather warning",
+        "date": "2024-12-21"
+    },
+    {
         "name": "The Fisherman\u2018s Walk parkrun",
         "reason": "Weather",
         "date": "2024-12-21"
@@ -282,6 +292,11 @@
     {
         "name": "Victory Heights Trail parkrun",
         "reason": "Venue unavailable",
+        "date": "2024-12-21"
+    },
+    {
+        "name": "Vogrie parkrun",
+        "reason": "Extreme winds due,  likely to close the park",
         "date": "2024-12-21"
     },
     {
