@@ -80,6 +80,11 @@
         "date": "2024-12-21"
     },
     {
+        "name": "Crawfordsburn Country parkrun",
+        "reason": "Weather",
+        "date": "2024-12-21"
+    },
+    {
         "name": "Dalby parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-12-21"
@@ -152,6 +157,11 @@
     {
         "name": "Jacobsdal parkrun",
         "reason": "No volunteers available",
+        "date": "2024-12-21"
+    },
+    {
+        "name": "Jamaica Pond parkrun",
+        "reason": "Weather",
         "date": "2024-12-21"
     },
     {
@@ -320,6 +330,11 @@
         "date": "2024-12-21"
     },
     {
+        "name": "Penrhyn parkrun",
+        "reason": "Tywydd garw - Weather",
+        "date": "2024-12-21"
+    },
+    {
         "name": "Petrie parkrun",
         "reason": "Weather",
         "date": "2024-12-21"
@@ -452,6 +467,11 @@
     {
         "name": "V\u00e4\u00e4ksyn kanava parkrun",
         "reason": "Weather",
+        "date": "2024-12-21"
+    },
+    {
+        "name": "Waterloo Plains parkrun",
+        "reason": "No runners",
         "date": "2024-12-21"
     },
     {
