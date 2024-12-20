@@ -60,7 +60,17 @@
         "date": "2024-12-21"
     },
     {
+        "name": "Derrynoid Forest parkrun",
+        "reason": "Weather",
+        "date": "2024-12-21"
+    },
+    {
         "name": "Duffins Trail parkrun",
+        "reason": "Weather",
+        "date": "2024-12-21"
+    },
+    {
+        "name": "Dungannon Park parkrun",
         "reason": "Weather",
         "date": "2024-12-21"
     },
@@ -72,6 +82,11 @@
     {
         "name": "Eldorado Park parkrun",
         "reason": "Festive season break",
+        "date": "2024-12-21"
+    },
+    {
+        "name": "Fountains Abbey parkrun",
+        "reason": "Weather",
         "date": "2024-12-21"
     },
     {
@@ -105,7 +120,22 @@
         "date": "2024-12-21"
     },
     {
+        "name": "Jock Trail parkrun",
+        "reason": "Weather",
+        "date": "2024-12-21"
+    },
+    {
+        "name": "Judarskogen parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-21"
+    },
+    {
         "name": "Kastanienallee parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-12-21"
+    },
+    {
+        "name": "Kathu parkrun",
         "reason": "Shortage of volunteers",
         "date": "2024-12-21"
     },
@@ -182,6 +212,11 @@
     {
         "name": "New Earswick parkrun",
         "reason": "Water logged course",
+        "date": "2024-12-21"
+    },
+    {
+        "name": "Newport parkrun",
+        "reason": "Weather",
         "date": "2024-12-21"
     },
     {
@@ -270,6 +305,11 @@
         "date": "2024-12-21"
     },
     {
+        "name": "Tewkesbury parkrun",
+        "reason": "Course is flooded",
+        "date": "2024-12-21"
+    },
+    {
         "name": "The Fisherman\u2018s Walk parkrun",
         "reason": "Weather",
         "date": "2024-12-21"
@@ -290,6 +330,11 @@
         "date": "2024-12-21"
     },
     {
+        "name": "Victoria parkrun, Truro",
+        "reason": "Weather",
+        "date": "2024-12-21"
+    },
+    {
         "name": "Victory Heights Trail parkrun",
         "reason": "Venue unavailable",
         "date": "2024-12-21"
@@ -302,6 +347,11 @@
     {
         "name": "V\u00e4\u00e4ksyn kanava parkrun",
         "reason": "Weather",
+        "date": "2024-12-21"
+    },
+    {
+        "name": "Watermead Country Park parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-12-21"
     },
     {
@@ -401,6 +451,11 @@
     },
     {
         "name": "Millbank Boating Pond junior parkrun",
+        "reason": "Weather",
+        "date": "2024-12-22"
+    },
+    {
+        "name": "Newport junior parkrun",
         "reason": "Weather",
         "date": "2024-12-22"
     },
