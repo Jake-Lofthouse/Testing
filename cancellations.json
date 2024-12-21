@@ -60,6 +60,11 @@
         "date": "2024-12-21"
     },
     {
+        "name": "Buncrana parkrun",
+        "reason": "Weather",
+        "date": "2024-12-21"
+    },
+    {
         "name": "Bundoran Promenade parkrun",
         "reason": "Weather",
         "date": "2024-12-21"
@@ -142,6 +147,11 @@
     {
         "name": "Eldorado Park parkrun",
         "reason": "Venue not available",
+        "date": "2024-12-21"
+    },
+    {
+        "name": "Erskine Waterfront parkrun",
+        "reason": "Weather",
         "date": "2024-12-21"
     },
     {
@@ -236,6 +246,11 @@
     },
     {
         "name": "Lahden satama parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-21"
+    },
+    {
+        "name": "Lanark Moor parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-12-21"
     },
@@ -645,6 +660,11 @@
         "date": "2024-12-22"
     },
     {
+        "name": "Bude Marshes junior parkrun",
+        "reason": "Weather",
+        "date": "2024-12-22"
+    },
+    {
         "name": "Clough Hall junior parkrun",
         "reason": "Park closed - Storm Darragh damage",
         "date": "2024-12-22"
@@ -712,6 +732,11 @@
     {
         "name": "Walton Park junior parkrun",
         "reason": "Christmas Break",
+        "date": "2024-12-22"
+    },
+    {
+        "name": "Watermead Country Park junior parkrun",
+        "reason": "Weather",
         "date": "2024-12-22"
     },
     {
