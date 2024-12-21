@@ -70,6 +70,11 @@
         "date": "2024-12-21"
     },
     {
+        "name": "Clarence parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-21"
+    },
+    {
         "name": "Clifton parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2024-12-21"
@@ -207,6 +212,11 @@
     {
         "name": "Kathu parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2024-12-21"
+    },
+    {
+        "name": "Kingsbury Water parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-12-21"
     },
     {
@@ -382,6 +392,11 @@
     {
         "name": "Port Hedland parkrun",
         "reason": "No event team available.",
+        "date": "2024-12-21"
+    },
+    {
+        "name": "Puolarmaari parkrun",
+        "reason": "Weather",
         "date": "2024-12-21"
     },
     {
@@ -605,8 +620,18 @@
         "date": "2024-12-22"
     },
     {
+        "name": "Eyemouth Primary Playing Fields junior parkrun",
+        "reason": "Weather",
+        "date": "2024-12-22"
+    },
+    {
         "name": "Helix junior parkrun",
         "reason": "Storm damage to parts of the park - limited access",
+        "date": "2024-12-22"
+    },
+    {
+        "name": "Levengrove junior parkrun",
+        "reason": "Weather",
         "date": "2024-12-22"
     },
     {
