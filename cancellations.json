@@ -70,6 +70,11 @@
         "date": "2024-12-21"
     },
     {
+        "name": "Butter Trail parkrun",
+        "reason": "Weather",
+        "date": "2024-12-21"
+    },
+    {
         "name": "Chaffey Park parkrun",
         "reason": "Weather",
         "date": "2024-12-21"
@@ -695,6 +700,11 @@
         "date": "2024-12-22"
     },
     {
+        "name": "Cannock Chase Forest junior parkrun",
+        "reason": "Weather",
+        "date": "2024-12-22"
+    },
+    {
         "name": "Clough Hall junior parkrun",
         "reason": "Park closed - Storm Darragh damage",
         "date": "2024-12-22"
@@ -711,6 +721,11 @@
     },
     {
         "name": "King\u2019s Lynn junior parkrun",
+        "reason": "Weather",
+        "date": "2024-12-22"
+    },
+    {
+        "name": "Larne junior parkrun",
         "reason": "Weather",
         "date": "2024-12-22"
     },
@@ -755,12 +770,22 @@
         "date": "2024-12-22"
     },
     {
+        "name": "Plas Newydd junior parkrun",
+        "reason": "Weather",
+        "date": "2024-12-22"
+    },
+    {
         "name": "Pontypridd junior parkrun",
         "reason": "Weather",
         "date": "2024-12-22"
     },
     {
         "name": "Porthcawl Promenade junior parkrun",
+        "reason": "Weather",
+        "date": "2024-12-22"
+    },
+    {
+        "name": "Queen\u2019s Park junior parkrun, London",
         "reason": "Weather",
         "date": "2024-12-22"
     },
