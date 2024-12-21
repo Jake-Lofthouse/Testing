@@ -710,6 +710,16 @@
         "date": "2024-12-22"
     },
     {
+        "name": "Collett Park junior parkrun",
+        "reason": "Weather",
+        "date": "2024-12-22"
+    },
+    {
+        "name": "Cross Flatts junior parkrun",
+        "reason": "Weather",
+        "date": "2024-12-22"
+    },
+    {
         "name": "Eyemouth Primary Playing Fields junior parkrun",
         "reason": "Weather",
         "date": "2024-12-22"
@@ -717,6 +727,11 @@
     {
         "name": "Helix junior parkrun",
         "reason": "Storm damage to parts of the park - limited access",
+        "date": "2024-12-22"
+    },
+    {
+        "name": "Jacks Road junior parkrun",
+        "reason": "Weather",
         "date": "2024-12-22"
     },
     {
@@ -770,6 +785,16 @@
         "date": "2024-12-22"
     },
     {
+        "name": "Pavilion Gardens junior parkrun",
+        "reason": "Weather",
+        "date": "2024-12-22"
+    },
+    {
+        "name": "Phear Park junior parkrun",
+        "reason": "Weather",
+        "date": "2024-12-22"
+    },
+    {
         "name": "Plas Newydd junior parkrun",
         "reason": "Weather",
         "date": "2024-12-22"
@@ -800,12 +825,37 @@
         "date": "2024-12-22"
     },
     {
+        "name": "Stopline Way junior parkrun",
+        "reason": "Weather",
+        "date": "2024-12-22"
+    },
+    {
+        "name": "The Great Field junior parkrun",
+        "reason": "Another Sunday of high winds, rain and very cold!",
+        "date": "2024-12-22"
+    },
+    {
+        "name": "The Mystery junior parkrun, Wavertree",
+        "reason": "Weather",
+        "date": "2024-12-22"
+    },
+    {
+        "name": "Torvean junior parkrun",
+        "reason": "Weather",
+        "date": "2024-12-22"
+    },
+    {
         "name": "Walton Park junior parkrun",
         "reason": "Christmas Break",
         "date": "2024-12-22"
     },
     {
         "name": "Watermead Country Park junior parkrun",
+        "reason": "Weather",
+        "date": "2024-12-22"
+    },
+    {
+        "name": "Weymouth junior parkrun",
         "reason": "Weather",
         "date": "2024-12-22"
     },
