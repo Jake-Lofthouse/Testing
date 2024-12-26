@@ -5,7 +5,7 @@
       "bounds": [
         -141.002,
         -47.29,
-        153.639,
+        180,
         83.1132
       ]
     },
@@ -131,7 +131,7 @@
       "bounds": [
         166.724,
         -47.29,
-        -180,
+        180,
         -34.3928
       ]
     },
@@ -52840,6 +52840,86 @@
           "countrycode": 97,
           "seriesid": 2,
           "EventLocation": "Bowling Park juniors"
+        }
+      },
+      {
+        "id": 3603,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            16.992279,
+            52.512206
+          ]
+        },
+        "properties": {
+          "eventname": "akwentropicana",
+          "EventLongName": "parkrun Akwen Tropicana",
+          "EventShortName": "Akwen Tropicana",
+          "LocalisedEventLongName": null,
+          "countrycode": 74,
+          "seriesid": 1,
+          "EventLocation": "Akwen Tropicana"
+        }
+      },
+      {
+        "id": 3607,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            9.87603,
+            53.625176
+          ]
+        },
+        "properties": {
+          "eventname": "krupundersee",
+          "EventLongName": "Krupunder See parkrun",
+          "EventShortName": "Krupunder See",
+          "LocalisedEventLongName": null,
+          "countrycode": 32,
+          "seriesid": 1,
+          "EventLocation": "Krupunder See"
+        }
+      },
+      {
+        "id": 3609,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -3.162076,
+            51.51203
+          ]
+        },
+        "properties": {
+          "eventname": "niac-juniors",
+          "EventLongName": "NIAC junior parkrun",
+          "EventShortName": "NIAC juniors",
+          "LocalisedEventLongName": null,
+          "countrycode": 97,
+          "seriesid": 2,
+          "EventLocation": "NIAC juniors"
+        }
+      },
+      {
+        "id": 3610,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            18.72741,
+            -31.607828
+          ]
+        },
+        "properties": {
+          "eventname": "letsatsilodge",
+          "EventLongName": "Letsatsi Lodge parkrun",
+          "EventShortName": "Letsatsi Lodge",
+          "LocalisedEventLongName": null,
+          "countrycode": 85,
+          "seriesid": 1,
+          "EventLocation": "Letsatsi Lodge"
         }
       }
     ]
