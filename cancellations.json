@@ -375,6 +375,11 @@
         "date": "2024-12-28"
     },
     {
+        "name": "University of Northampton parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-12-28"
+    },
+    {
         "name": "Ury Riverside parkrun",
         "reason": "path upgrade works still ongoing.",
         "date": "2024-12-28"
@@ -397,6 +402,11 @@
     {
         "name": "Windhoek parkrun",
         "reason": "No participants",
+        "date": "2024-12-28"
+    },
+    {
+        "name": "Witney parkrun",
+        "reason": "Too many reindeer footprints in the mud.",
         "date": "2024-12-28"
     },
     {
