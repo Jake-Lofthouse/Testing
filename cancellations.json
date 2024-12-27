@@ -80,6 +80,11 @@
         "date": "2024-12-28"
     },
     {
+        "name": "Clifton parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2024-12-28"
+    },
+    {
         "name": "Colby parkrun",
         "reason": "Permission issue",
         "date": "2024-12-28"
@@ -142,6 +147,11 @@
     {
         "name": "Garvagh Forest parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2024-12-28"
+    },
+    {
+        "name": "Gilloolys parkrun",
+        "reason": "The venue is too dirty and littered from day visit",
         "date": "2024-12-28"
     },
     {
@@ -387,6 +397,11 @@
     {
         "name": "Strokestown parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2024-12-28"
+    },
+    {
+        "name": "Terra Nova parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-12-28"
     },
     {
