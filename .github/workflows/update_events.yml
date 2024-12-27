@@ -15,7 +15,7 @@ jobs:
 
       # Notify Cronitor at the start of the workflow
       - name: Notify Cronitor start
-        run: curl -m 10 --retry 5 -o /dev/null -s "https://cronitor.link/p/your-cronitor-code/Event-Location-Feed/run"
+        run: curl -m 10 --retry 5 -o /dev/null -s "https://cronitor.link/p/6c06f2554fc841ccb0b0928481a03ed1/fBAIJ5/run"
 
       - name: Fetch events.json from developer source
         run: |
@@ -37,9 +37,8 @@ jobs:
         run: |
           if [ $? -eq 0 ]; then
             # Success
-            curl -m 10 --retry 5 -o /dev/null -s "https://cronitor.link/p/your-cronitor-code/Event-Location-Feed/complete?msg=Success"
+            curl -m 10 --retry 5 -o /dev/null -s "https://cronitor.link/p/6c06f2554fc841ccb0b0928481a03ed1/fBAIJ5/complete?msg=Success"
           else
             # Failure
-            curl -m 10 --retry 5 -o /dev/null -s "https://cronitor.link/p/your-cronitor-code/Event-Location-Feed/fail?msg=Failure"
+            curl -m 10 --retry 5 -o /dev/null -s "https://cronitor.link/p/6c06f2554fc841ccb0b0928481a03ed1/fBAIJ5/fail?msg=Failure"
           fi
-
