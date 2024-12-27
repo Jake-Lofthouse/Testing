@@ -13,6 +13,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      # Notify Cronitor at the start of the workflow
+      - name: Notify Cronitor start
+        run: curl -m 10 --retry 5 -o /dev/null -s "https://cronitor.link/p/your-cronitor-code/Event-Location-Feed/run"
+
       - name: Fetch events.json from developer source
         run: |
           curl -sSL "https://images.parkrun.com/events.json" -o events.json
@@ -27,3 +31,15 @@ jobs:
           git push
         env:
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Notify Cronitor based on exit status with conditions for success/failure
+      - name: Notify Cronitor on exit status
+        run: |
+          if [ $? -eq 0 ]; then
+            # Success
+            curl -m 10 --retry 5 -o /dev/null -s "https://cronitor.link/p/your-cronitor-code/Event-Location-Feed/complete?msg=Success"
+          else
+            # Failure
+            curl -m 10 --retry 5 -o /dev/null -s "https://cronitor.link/p/your-cronitor-code/Event-Location-Feed/fail?msg=Failure"
+          fi
+
