@@ -105,6 +105,11 @@
         "date": "2024-12-28"
     },
     {
+        "name": "Creekside parkrun",
+        "reason": "Weather",
+        "date": "2024-12-28"
+    },
+    {
         "name": "Cutler Park parkrun",
         "reason": "Weather",
         "date": "2024-12-28"
@@ -165,8 +170,23 @@
         "date": "2024-12-28"
     },
     {
+        "name": "Eramosa River Trail parkrun",
+        "reason": "Icy conditions on the course",
+        "date": "2024-12-28"
+    },
+    {
+        "name": "Evergreen parkrun",
+        "reason": "Icy conditions make the course unsafe.",
+        "date": "2024-12-28"
+    },
+    {
         "name": "Garvagh Forest parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2024-12-28"
+    },
+    {
+        "name": "Gillies Lake parkrun",
+        "reason": "Weather",
         "date": "2024-12-28"
     },
     {
@@ -755,17 +775,17 @@
         "date": "2024-12-29"
     },
     {
-        "name": "North Marine junior parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2024-12-29"
-    },
-    {
         "name": "Nursery Drive junior parkrun, Ballinlough",
         "reason": "Shortage of volunteers",
         "date": "2024-12-29"
     },
     {
         "name": "Peoples Park junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2024-12-29"
+    },
+    {
+        "name": "Phoenix junior parkrun",
         "reason": "Shortage of volunteers",
         "date": "2024-12-29"
     },
@@ -832,6 +852,11 @@
     {
         "name": "Walton Park junior parkrun",
         "reason": "Christmas Break",
+        "date": "2024-12-29"
+    },
+    {
+        "name": "Westside Playing Fields junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2024-12-29"
     },
     {
