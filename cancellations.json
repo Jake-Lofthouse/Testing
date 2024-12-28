@@ -245,6 +245,11 @@
         "date": "2024-12-28"
     },
     {
+        "name": "Kwanele parkrun",
+        "reason": "Weather",
+        "date": "2024-12-28"
+    },
+    {
         "name": "Lackawanna Rail Trail parkrun",
         "reason": "Shortage of volunteers",
         "date": "2024-12-28"
@@ -347,6 +352,11 @@
     {
         "name": "Onderstepoort Campus parkrun",
         "reason": "Holiday on Campus - No Students",
+        "date": "2024-12-28"
+    },
+    {
+        "name": "Piet Retief parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2024-12-28"
     },
     {
@@ -457,6 +467,11 @@
     {
         "name": "Ury Riverside parkrun",
         "reason": "path upgrade works still ongoing.",
+        "date": "2024-12-28"
+    },
+    {
+        "name": "Vryheid parkrun",
+        "reason": "Weather",
         "date": "2024-12-28"
     },
     {
