@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parkrun Event Locations</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 600px;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 16px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Parkrun Event Locations</h1>
+    <div id="map"></div>
+    <div id="message"></div> <!-- Display messages like no locations found -->
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script>
+        // Initialize the map
+        const map = L.map('map').setView([51.410992, -0.335791], 6);  // Default to UK area
+
+        // Add tile layer to the map (OpenStreetMap tiles)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Function to get event names from the URL query
+        function getEventNamesFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const eventsParam = urlParams.get('events'); // Get the 'events' parameter
+            if (!eventsParam) return [];
+            return eventsParam.split(',').map(event => event.trim().toLowerCase()); // Split by comma, trim, and convert to lowercase
+        }
+
+        // Fetch the JSON data from the raw GitHub link
+        fetch('https://raw.githubusercontent.com/ALD-Models/Testing/refs/heads/main/events1.json')
+            .then(response => response.json())
+            .then(data => {
+                const eventNames = getEventNamesFromURL();  // Extract event names from URL
+                console.log('Events from URL:', eventNames);  // Debugging output
+
+                // If no events are provided in the URL, show an alert
+                if (eventNames.length === 0) {
+                    alert('Please provide event names in the URL query.');
+                    return;
+                }
+
+                let locationsFound = false; // Flag to check if any locations were found
+
+                // Iterate over the features and check if the event matches any of the provided event names
+                data.events.features.forEach(event => {
+                    const { coordinates } = event.geometry;
+                    const { EventLongName, EventLocation, EventShortName } = event.properties;
+
+                    // Construct the full event name (normalize to lowercase for matching)
+                    const eventDisplayName = `${EventShortName.toLowerCase()}`; // Short name is typically more concise
+
+                    console.log('Checking event:', eventDisplayName);  // Debugging output
+
+                    // Compare event name to the provided names from the URL
+                    eventNames.forEach(eventName => {
+                        if (eventDisplayName.includes(eventName)) {
+                            console.log('Event matched:', eventDisplayName);  // Debugging output
+                            // Create a marker for each matching event
+                            const marker = L.marker([coordinates[1], coordinates[0]]).addTo(map);
+
+                            // Bind a popup with the event's information
+                            marker.bindPopup(`
+                                <strong>${EventLongName}</strong><br>
+                                Location: ${EventLocation}
+                            `);
+                            
+                            locationsFound = true; // Set flag to true if a match is found
+                        }
+                    });
+                });
+
+                // If no matching locations were found, display a message
+                if (!locationsFound) {
+                    document.getElementById('message').innerText = 'No matching parkrun locations found.';
+                } else {
+                    document.getElementById('message').innerText = ''; // Clear any previous message
+                }
+            })
+            .catch(error => {
+                console.error('Error loading the JSON data:', error);
+                document.getElementById('message').innerText = 'Error loading event data.';
+            });
+    </script>
+
+</body>
+</html>
