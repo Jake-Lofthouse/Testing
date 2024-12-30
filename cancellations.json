@@ -45,11 +45,6 @@
         "date": "2025-01-04"
     },
     {
-        "name": "Camp Bastion parkrun",
-        "reason": "EMS-143 test",
-        "date": "2025-01-04"
-    },
-    {
         "name": "Chuo koen parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-01-04"
@@ -201,6 +196,11 @@
     },
     {
         "name": "St Francis parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Tennogawa koen parkrun",
         "reason": "Venue unavailable",
         "date": "2025-01-04"
     },
