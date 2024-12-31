@@ -28,48 +28,6 @@
       --secondary-hover-color: #444;
     }
 
-    .light_mode {
-      /* Light mode colors */
-      --text-color: #222;
-      --subheading-color: #A0A0A0;
-      --placeholder-color: #6C6C6C;
-      --primary-color: #FFF;
-      --secondary-color: #E9EEF6;
-      --secondary-hover-color: #DBE1EA;
-    }
-
-    body {
-      background: var(--primary-color);
-    }
-
-     /* Include your existing CSS styles here */    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-    }
-
-    :root {
-      /* Dark mode colors */
-      --text-color: #E3E3E3;
-      --subheading-color: #828282;
-      --placeholder-color: #A6A6A6;
-      --primary-color: #242424;
-      --secondary-color: #383838;
-      --secondary-hover-color: #444;
-    }
-
-    .light_mode {
-      /* Light mode colors */
-      --text-color: #222;
-      --subheading-color: #A0A0A0;
-      --placeholder-color: #6C6C6C;
-      --primary-color: #FFF;
-      --secondary-color: #E9EEF6;
-      --secondary-hover-color: #DBE1EA;
-    }
-
     body {
       background: var(--primary-color);
     }
@@ -385,6 +343,7 @@
       }
     }
 
+
   </style>
 </head>
 
@@ -421,9 +380,6 @@
         <input type="text" name="question" placeholder="Enter a prompt here" class="typing-input" required />
         <button id="send-message-button" class="icon material-symbols-rounded">send</button>
       </div>
-      <div class="action-buttons">
-        <span id="theme-toggle-button" class="icon material-symbols-rounded">light_mode</span>
-      </div>
     </form>
     <p class="disclaimer-text">
       Grace may display inaccurate info, so double-check its responses.
@@ -431,13 +387,6 @@
   </div>
 
   <script>
-    const toggleThemeButton = document.querySelector("#theme-toggle-button");
-
-    // Toggle between light and dark mode
-    toggleThemeButton.addEventListener("click", () => {
-      document.body.classList.toggle("light_mode");
-      toggleThemeButton.innerText = document.body.classList.contains("light_mode") ? "dark_mode" : "light_mode";
-    });
 
     // Populate input field with the 'question' query parameter
     const populateInputFromQuery = () => {
