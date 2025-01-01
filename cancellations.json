@@ -165,6 +165,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "New Earswick parkrun",
+        "reason": "It\u2019s a swamp",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Ocean Grove parkrun",
         "reason": "Permission issue",
         "date": "2025-01-04"
@@ -192,6 +197,11 @@
     {
         "name": "Red Star parkrun",
         "reason": "Venue closed for Festive Season",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Ross-on-Wye parkrun",
+        "reason": "Clashs with ED's annual bath time.",
         "date": "2025-01-04"
     },
     {
