@@ -120,6 +120,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Jeune Park parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Judarskogen parkrun",
         "reason": "Vinteruppeh\u00e5ll",
         "date": "2025-01-04"
@@ -327,6 +332,11 @@
     {
         "name": "Clashduv junior parkrun",
         "reason": "Christmas break",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "Clough Hall junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-05"
     },
     {
