@@ -275,6 +275,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Wetherby parkrun",
+        "reason": "Course is flooded",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Whitley Bay parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-04"
