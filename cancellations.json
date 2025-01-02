@@ -50,6 +50,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Bygholm parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Chuo koen parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-01-04"
@@ -67,6 +72,11 @@
     {
         "name": "Corner Brook Stream Trail parkrun",
         "reason": "Winter Pause",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Didcot parkrun",
+        "reason": "course preservation after more rain",
         "date": "2025-01-04"
     },
     {
