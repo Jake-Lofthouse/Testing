@@ -55,6 +55,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Centre Vale parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Chuo koen parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-01-04"
@@ -95,8 +100,18 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Elgin parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Fletcher Moss parkrun",
         "reason": "Course being used for temporary aquarium",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Garvagh Forest parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-04"
     },
     {
@@ -242,6 +257,11 @@
     {
         "name": "St Francis parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Stamford Park parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-04"
     },
     {
