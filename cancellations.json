@@ -120,6 +120,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Ho\u00ebrskool Ben Viljoen parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Huddinge parkrun",
         "reason": "Vinteruppeh\u00e5ll",
         "date": "2025-01-04"
@@ -287,6 +292,11 @@
     {
         "name": "Witton parkrun",
         "reason": "Cross Country",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Wolford Wood parkrun",
+        "reason": "Course waterlogged",
         "date": "2025-01-04"
     },
     {
