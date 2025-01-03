@@ -25,6 +25,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Ancholme Valley Way parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Ankerskogen parkrun",
         "reason": "Vinterpause",
         "date": "2025-01-04"
@@ -37,6 +42,11 @@
     {
         "name": "Aspen parkrun",
         "reason": "Winter Pause",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Athlone RSC parkrun",
+        "reason": "Weather",
         "date": "2025-01-04"
     },
     {
@@ -57,6 +67,11 @@
     {
         "name": "Aylesbury parkrun",
         "reason": "2 Icy areas which make the path too narrow.",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Bangor parkrun, Northern Ireland",
+        "reason": "Weather",
         "date": "2025-01-04"
     },
     {
@@ -85,8 +100,18 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Blackhill parkrun",
+        "reason": "Ice on course",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Blue Lagoon parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Blyth Links parkrun",
+        "reason": "Weather",
         "date": "2025-01-04"
     },
     {
@@ -102,6 +127,11 @@
     {
         "name": "Bramhall parkrun",
         "reason": "Ice on course",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Bramley parkrun",
+        "reason": "Weather",
         "date": "2025-01-04"
     },
     {
@@ -165,8 +195,23 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Carlow Town parkrun",
+        "reason": "Weather - icy patches on track and paths",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Castlebar parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Centre Vale parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Chevin Forest parkrun",
+        "reason": "Unavoidable ice across the course",
         "date": "2025-01-04"
     },
     {
@@ -257,6 +302,11 @@
     {
         "name": "Dodder Valley parkrun",
         "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Downham Market Academy parkrun",
+        "reason": "Site too unsafe for running or walking due to ice",
         "date": "2025-01-04"
     },
     {
@@ -352,6 +402,11 @@
     {
         "name": "Garvagh Forest parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Gayndah River Walk parkrun",
+        "reason": "Weather",
         "date": "2025-01-04"
     },
     {
@@ -515,8 +570,18 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Llyn Llech Owain parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Loftsgardsbrua parkrun",
         "reason": "Vinterpause",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Long Eaton parkrun",
+        "reason": "Icy conditions making the course unsafe",
         "date": "2025-01-04"
     },
     {
@@ -575,8 +640,18 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Navan parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
         "name": "New Earswick parkrun",
         "reason": "It\u2019s a swamp",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "New York Central Fitness Trail parkrun",
+        "reason": "Weather",
         "date": "2025-01-04"
     },
     {
@@ -587,6 +662,11 @@
     {
         "name": "North Yorkshire Water Park parkrun",
         "reason": "Ice on the course",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Northallerton parkrun",
+        "reason": "Weather",
         "date": "2025-01-04"
     },
     {
@@ -677,6 +757,11 @@
     {
         "name": "Poppintree parkrun",
         "reason": "Icy paths",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Porch Field parkrun",
+        "reason": "Weather",
         "date": "2025-01-04"
     },
     {
@@ -1102,6 +1187,11 @@
     {
         "name": "Millbank Boating Pond junior parkrun",
         "reason": "No RD\u2019s available",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "Pontypridd junior parkrun",
+        "reason": "Amber weather warning",
         "date": "2025-01-05"
     },
     {
