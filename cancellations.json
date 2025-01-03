@@ -25,8 +25,18 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Aviemore parkrun",
+        "reason": "Weather. It's just too icy to be safe for all.",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Avondale Forest parkrun",
         "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Aylesbury parkrun",
+        "reason": "2 Icy areas which make the path too narrow.",
         "date": "2025-01-04"
     },
     {
@@ -62,6 +72,11 @@
     {
         "name": "Bower Park parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Bramhall parkrun",
+        "reason": "Ice on course",
         "date": "2025-01-04"
     },
     {
@@ -135,6 +150,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Corkagh parkrun",
+        "reason": "Icy/Frosty conditions - paths unsafe in places",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Corner Brook Stream Trail parkrun",
         "reason": "Winter Pause",
         "date": "2025-01-04"
@@ -151,6 +171,11 @@
     },
     {
         "name": "Dean Castle Country Park parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Dewsbury parkrun",
         "reason": "Weather",
         "date": "2025-01-04"
     },
@@ -175,6 +200,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Durbanville parkrun",
+        "reason": "Permission issue",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Ecos parkrun, Ballymena",
         "reason": "Weather",
         "date": "2025-01-04"
@@ -187,6 +217,11 @@
     {
         "name": "Edenbrook Country parkrun",
         "reason": "Cow field is ice rink",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Elder Park parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-04"
     },
     {
@@ -315,6 +350,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Levengrove parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Lightning Ridge parkrun",
         "reason": "Venue unavailable",
         "date": "2025-01-04"
@@ -332,6 +372,21 @@
     {
         "name": "Loftsgardsbrua parkrun",
         "reason": "Vinterpause",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Longrun Meadow parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Malling Rec parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Marple parkrun",
+        "reason": "Weather",
         "date": "2025-01-04"
     },
     {
@@ -365,8 +420,18 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Oakwell Hall parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Ocean Grove parkrun",
         "reason": "Permission issue",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Ohio and Erie Canal Reservation parkrun",
+        "reason": "Windchill and Unsafe Course (Icy)",
         "date": "2025-01-04"
     },
     {
@@ -392,6 +457,11 @@
     {
         "name": "Polkemmet Country parkrun",
         "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Pollok parkrun, Glasgow",
+        "reason": "Paths are very icy and will not be safe before eve",
         "date": "2025-01-04"
     },
     {
@@ -435,6 +505,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Sence Valley Forest Park parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Seotlong Agriculture School parkrun",
         "reason": "Festive Season, low volunteer and participats",
         "date": "2025-01-04"
@@ -447,6 +522,11 @@
     {
         "name": "Shirahama koen parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Silksworth parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-04"
     },
     {
@@ -485,6 +565,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Sutton Park parkrun",
+        "reason": "Lots of icy patches on our route.",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Tennogawa koen parkrun",
         "reason": "Venue unavailable",
         "date": "2025-01-04"
@@ -500,6 +585,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "The Fisherman\u2018s Walk parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-04"
+    },
+    {
         "name": "The Plens parkrun",
         "reason": "New Year's Wish to have our course back not heard",
         "date": "2025-01-04"
@@ -512,6 +602,11 @@
     {
         "name": "Thurso parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Tollcross parkrun, Glasgow",
+        "reason": "Weather",
         "date": "2025-01-04"
     },
     {
@@ -537,6 +632,11 @@
     {
         "name": "Vogrie parkrun",
         "reason": "We\u2019re too ice ice baby",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Warwick Racecourse parkrun",
+        "reason": "Weather",
         "date": "2025-01-04"
     },
     {
@@ -655,6 +755,11 @@
         "date": "2025-01-05"
     },
     {
+        "name": "Cooper Park junior parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Dukeries junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
@@ -677,6 +782,11 @@
     {
         "name": "Millbank Boating Pond junior parkrun",
         "reason": "No RD\u2019s available",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "Seymour Park junior parkrun",
+        "reason": "Weather",
         "date": "2025-01-05"
     },
     {
