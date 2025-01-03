@@ -20,6 +20,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Baysgarth Park parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Bedok Reservoir parkrun",
         "reason": "Event Closed",
         "date": "2025-01-04"
@@ -70,6 +75,16 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Clarence parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Cleland parkrun",
+        "reason": "Total fire ban",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Colby parkrun",
         "reason": "Permission issue",
         "date": "2025-01-04"
@@ -86,6 +101,11 @@
     },
     {
         "name": "Dalby parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Darndale parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-04"
     },
@@ -122,6 +142,11 @@
     {
         "name": "Garvagh Forest parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Glenfarne Wood parkrun",
+        "reason": "Weather",
         "date": "2025-01-04"
     },
     {
@@ -280,6 +305,16 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Somerdale Pavilion parkrun",
+        "reason": "Course too icy to ensure safety of participants",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "South Manchester parkrun",
+        "reason": "Course icy in parts, insufficient volunteers",
+        "date": "2025-01-04"
+    },
+    {
         "name": "South Para Reservoir parkrun",
         "reason": "Weather",
         "date": "2025-01-04"
@@ -292,6 +327,11 @@
     {
         "name": "Stamford Park parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Sunny Hill parkrun",
+        "reason": "Weather & team sickness",
         "date": "2025-01-04"
     },
     {
