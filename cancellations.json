@@ -25,6 +25,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Avondale Forest parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Barton Trail parkrun",
         "reason": "Winter Pause",
         "date": "2025-01-04"
@@ -55,7 +60,17 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Bower Park parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Bramshall Road parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Breakwater parkrun",
         "reason": "Weather",
         "date": "2025-01-04"
     },
@@ -67,6 +82,11 @@
     {
         "name": "Broparken parkrun",
         "reason": "Vinteruppeh\u00e5ll",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Brundall parkrun",
+        "reason": "Course frozen, with icy patches, so unsafe.",
         "date": "2025-01-04"
     },
     {
@@ -130,6 +150,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Dean Castle Country Park parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Didcot parkrun",
         "reason": "course preservation after more rain",
         "date": "2025-01-04"
@@ -137,6 +162,11 @@
     {
         "name": "Drumblade parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Duffins Trail parkrun",
+        "reason": "Weather",
         "date": "2025-01-04"
     },
     {
@@ -155,8 +185,23 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Edenbrook Country parkrun",
+        "reason": "Cow field is ice rink",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Elgin parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Festningen parkrun",
+        "reason": "Too much snow and weather conditions",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Fig Tree parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-01-04"
     },
     {
@@ -225,6 +270,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Ifield Mill Pond parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Jacobsdal parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-01-04"
@@ -275,6 +325,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Limepark Playing Fields parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Loftsgardsbrua parkrun",
         "reason": "Vinterpause",
         "date": "2025-01-04"
@@ -305,6 +360,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Northwich parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Ocean Grove parkrun",
         "reason": "Permission issue",
         "date": "2025-01-04"
@@ -317,6 +377,11 @@
     {
         "name": "Onderstepoort Campus parkrun",
         "reason": "Holiday on Campus - No Students",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Penistone parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-04"
     },
     {
@@ -340,6 +405,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Reading parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Red Star parkrun",
         "reason": "Venue closed for Festive Season",
         "date": "2025-01-04"
@@ -357,6 +427,11 @@
     {
         "name": "Saint-Paulin parkrun",
         "reason": "Winter Pause",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Sale Water parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-04"
     },
     {
@@ -400,6 +475,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Strathclyde parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Sunny Hill parkrun",
         "reason": "Weather & team sickness",
         "date": "2025-01-04"
@@ -422,6 +502,21 @@
     {
         "name": "The Plens parkrun",
         "reason": "New Year's Wish to have our course back not heard",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Three Brooks parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Thurso parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Torvean parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-04"
     },
     {
@@ -460,6 +555,16 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Wilmslow parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Wimpole Estate parkrun",
+        "reason": "Landowner Request: Waterlogged Course.",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Witton parkrun",
         "reason": "Cross Country",
         "date": "2025-01-04"
@@ -470,6 +575,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Woodbank parkrun",
+        "reason": "Ice on course.",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Yackandandah Rail Trail parkrun",
         "reason": "Venue unavailable",
         "date": "2025-01-04"
@@ -477,6 +587,11 @@
     {
         "name": "Zuurfontein parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "parkrun Park Miejski, Wejherowo",
+        "reason": "Weather",
         "date": "2025-01-04"
     },
     {
@@ -540,6 +655,11 @@
         "date": "2025-01-05"
     },
     {
+        "name": "Dukeries junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Hemlington Lake junior parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-05"
@@ -557,6 +677,11 @@
     {
         "name": "Millbank Boating Pond junior parkrun",
         "reason": "No RD\u2019s available",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "St Mary\u2019s Campus junior parkrun",
+        "reason": "Weather",
         "date": "2025-01-05"
     }
 ]
