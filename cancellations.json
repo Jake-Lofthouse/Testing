@@ -5,6 +5,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Anstey Hill Recreation parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Aspen parkrun",
         "reason": "Winter Pause",
         "date": "2025-01-04"
@@ -160,6 +165,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Jock Trail parkrun",
+        "reason": "Localised flooding",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Judarskogen parkrun",
         "reason": "Vinteruppeh\u00e5ll",
         "date": "2025-01-04"
@@ -195,8 +205,18 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Myponga Reservoir parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Nagaragawa koen parkrun",
         "reason": "\u30dc\u30e9\u30f3\u30c6\u30a3\u30a2\u306e\u90fd\u5408",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Nathan Road Sports Ground parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-04"
     },
     {
@@ -260,6 +280,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "South Para Reservoir parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
         "name": "St Francis parkrun",
         "reason": "Venue unavailable",
         "date": "2025-01-04"
@@ -277,6 +302,11 @@
     {
         "name": "Tetbury Goods Shed parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "The Avenues parkrun",
+        "reason": "Total Fire Ban",
         "date": "2025-01-04"
     },
     {
