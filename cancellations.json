@@ -1855,6 +1855,11 @@
         "date": "2025-01-05"
     },
     {
+        "name": "Alyn Waters junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Arklow Duck Pond junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
@@ -1916,6 +1921,11 @@
     },
     {
         "name": "Bramley junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "Bray junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
     },
@@ -2095,6 +2105,11 @@
         "date": "2025-01-05"
     },
     {
+        "name": "Holmebrook Valley junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Hucknall junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
@@ -2105,16 +2120,6 @@
         "date": "2025-01-05"
     },
     {
-        "name": "Iveagh Sports Ground junior parkrun",
-        "reason": "Weather",
-        "date": "2025-01-05"
-    },
-    {
-        "name": "Kellands Park junior parkrun",
-        "reason": "Weather",
-        "date": "2025-01-05"
-    },
-    {
         "name": "Kilkenny Countryside Park junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
@@ -2122,11 +2127,6 @@
     {
         "name": "Killarney House junior parkrun",
         "reason": "Christmas Break",
-        "date": "2025-01-05"
-    },
-    {
-        "name": "King\u2019s Park junior parkrun",
-        "reason": "Weather",
         "date": "2025-01-05"
     },
     {
@@ -2195,6 +2195,11 @@
         "date": "2025-01-05"
     },
     {
+        "name": "Mowbray Park junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Northala Fields junior parkrun",
         "reason": "Ice on the course",
         "date": "2025-01-05"
@@ -2211,11 +2216,6 @@
     },
     {
         "name": "Omagh Leisure Complex junior parkrun",
-        "reason": "Weather",
-        "date": "2025-01-05"
-    },
-    {
-        "name": "Pavilion Gardens junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
     },
@@ -2265,7 +2265,22 @@
         "date": "2025-01-05"
     },
     {
+        "name": "Rush junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "Salford junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Saltaire junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "Saltwell junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
     },
@@ -2345,6 +2360,11 @@
         "date": "2025-01-05"
     },
     {
+        "name": "The Wirral Way junior parkrun, Parkgate",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Tolson junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
@@ -2362,11 +2382,6 @@
     {
         "name": "Vicarstown junior parkrun",
         "reason": "Bad Weather",
-        "date": "2025-01-05"
-    },
-    {
-        "name": "Victoria Jubilee junior parkrun",
-        "reason": "Dangerously icy - launch postponed to next week.",
         "date": "2025-01-05"
     },
     {
@@ -2405,6 +2420,16 @@
         "date": "2025-01-05"
     },
     {
+        "name": "West Lothian Cycle Circuit junior parkrun",
+        "reason": "Better conditions for skating than running",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "Westside Playing Fields junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Whaley Bridge junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
@@ -2427,11 +2452,6 @@
     {
         "name": "Wirral Country Park junior parkrun",
         "reason": "Sleet and snow forecast tonight. Safety first!",
-        "date": "2025-01-05"
-    },
-    {
-        "name": "Witton Park junior parkrun",
-        "reason": "It's only going to be fit for Torvill and Dean!",
         "date": "2025-01-05"
     },
     {
