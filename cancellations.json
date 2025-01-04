@@ -40,6 +40,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Ashford parkrun",
+        "reason": "To much black ice",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Aspen parkrun",
         "reason": "Winter Pause",
         "date": "2025-01-04"
@@ -175,6 +180,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Bryn Bach parkrun",
+        "reason": "Icey conditions",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Burnage parkrun",
         "reason": "Course flooded",
         "date": "2025-01-04"
@@ -191,6 +201,11 @@
     },
     {
         "name": "Bygholm parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Carlisle Park parkrun, Morpeth",
         "reason": "Weather",
         "date": "2025-01-04"
     },
@@ -220,6 +235,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Chippenham Playing Fields parkrun, Monmouth",
+        "reason": "Ice on course. Unsafe to run event",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Chuo koen parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-01-04"
@@ -236,6 +256,11 @@
     },
     {
         "name": "Clevedon Salthouse Fields parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Cliffe Castle parkrun",
         "reason": "Weather",
         "date": "2025-01-04"
     },
@@ -277,6 +302,11 @@
     {
         "name": "Crathes Castle parkrun",
         "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Crawfordsburn Country parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-04"
     },
     {
@@ -470,6 +500,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Groe parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Halifax parkrun",
         "reason": "Ice is not nice, course unsafe",
         "date": "2025-01-04"
@@ -487,6 +522,11 @@
     {
         "name": "Hampton Oval parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Haverfordwest parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-04"
     },
     {
@@ -710,6 +750,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Millhouses parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Mount Stuart parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-04"
@@ -747,6 +792,11 @@
     {
         "name": "New York Central Fitness Trail parkrun",
         "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Newcastle West parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-04"
     },
     {
@@ -795,6 +845,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Oldham parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Ome kyuryo parkrun",
         "reason": "\u5e74\u672b\u5e74\u59cb\u306e\u305f\u3081",
         "date": "2025-01-04"
@@ -822,6 +877,16 @@
     {
         "name": "Penistone parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Penrith parkrun",
+        "reason": "Black ice all over the course,  unsafe to run",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Perry Hall parkrun",
+        "reason": "Icy conditions making the course unsafe",
         "date": "2025-01-04"
     },
     {
@@ -880,6 +945,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Quakers Walk parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Queen\u2019s parkrun, Glasgow",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-04"
@@ -935,6 +1005,16 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Schwanenteich parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Scunthorpe parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Sence Valley Forest Park parkrun",
         "reason": "Weather",
         "date": "2025-01-04"
@@ -970,6 +1050,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Sligo parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Somerdale Pavilion parkrun",
         "reason": "Course too icy to ensure safety of participants",
         "date": "2025-01-04"
@@ -992,6 +1077,16 @@
     {
         "name": "St Francis parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Stadspark parkrun, Groningen",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Stadtpark parkrun, Chemnitz",
+        "reason": "Weather",
         "date": "2025-01-04"
     },
     {
@@ -1190,6 +1285,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "parkrun Jezioro Swarz\u0119dzkie",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-04"
+    },
+    {
         "name": "parkrun Park Miejski, Wejherowo",
         "reason": "Weather",
         "date": "2025-01-04"
@@ -1266,6 +1366,11 @@
     },
     {
         "name": "Dukeries junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "Eynesbury Heritage Trail junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
     },
