@@ -395,6 +395,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Ennerdale Stadium parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Erskine Waterfront parkrun",
         "reason": "Weather",
         "date": "2025-01-04"
@@ -676,6 +681,11 @@
     },
     {
         "name": "Malm\u00f6 Ribersborg parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Mansfield parkrun",
         "reason": "Weather",
         "date": "2025-01-04"
     },
