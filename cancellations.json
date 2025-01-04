@@ -115,6 +115,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Bolton parkrun",
+        "reason": "Bambi on ice seems like a bad idea",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Bower Park parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-04"
@@ -240,6 +245,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Clonmel parkrun",
+        "reason": "Icy weather conditions forecast",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Colby parkrun",
         "reason": "Permission issue",
         "date": "2025-01-04"
@@ -257,6 +267,11 @@
     {
         "name": "Corner Brook Stream Trail parkrun",
         "reason": "Winter Pause",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Courthouse Lake parkrun",
+        "reason": "Weather",
         "date": "2025-01-04"
     },
     {
@@ -380,13 +395,28 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Fairview parkrun",
+        "reason": "Low temperature/ice/snow weather alert",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Festningen parkrun",
         "reason": "Too much snow and weather conditions",
         "date": "2025-01-04"
     },
     {
+        "name": "Fethard Town parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Fig Tree parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Five Arches parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-04"
     },
     {
@@ -410,6 +440,16 @@
         "date": "2025-01-04"
     },
     {
+        "name": "George Lane Memorial parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Gladstone parkrun",
+        "reason": "Too much ice on the course unsafe",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Glenfarne Wood parkrun",
         "reason": "Weather",
         "date": "2025-01-04"
@@ -417,6 +457,16 @@
     {
         "name": "Grahamstown parkrun",
         "reason": "No RDs available and insufficient volunteers",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Halifax parkrun",
+        "reason": "Ice is not nice, course unsafe",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Hamlet Park parkrun",
+        "reason": "Weather",
         "date": "2025-01-04"
     },
     {
@@ -505,6 +555,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Kanata parkrun, Ottawa",
+        "reason": "Combination weather and course conditions",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Kathu parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-01-04"
@@ -570,6 +625,16 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Lister Park parkrun, Bradford",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Livingston parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Llyn Llech Owain parkrun",
         "reason": "Weather",
         "date": "2025-01-04"
@@ -615,6 +680,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Merthyr parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Middleton Woods parkrun",
         "reason": "Weather",
         "date": "2025-01-04"
@@ -622,6 +692,16 @@
     {
         "name": "Millennium parkrun",
         "reason": "Seasonal Cancellation",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Mount Stuart parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Mullingar parkrun",
+        "reason": "Weather",
         "date": "2025-01-04"
     },
     {
@@ -671,6 +751,11 @@
     },
     {
         "name": "Northwich parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Nose Hill parkrun",
         "reason": "Weather",
         "date": "2025-01-04"
     },
@@ -845,6 +930,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Sheriff Creek Wildlife Sanctuary parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Shipley Country parkrun",
         "reason": "Venue unavailable",
         "date": "2025-01-04"
@@ -900,6 +990,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Strokestown parkrun",
+        "reason": "No Run Director",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Sunny Hill parkrun",
         "reason": "Weather & team sickness",
         "date": "2025-01-04"
@@ -930,6 +1025,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "The Grand Canal Way parkrun, Tullamore",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
         "name": "The Plens parkrun",
         "reason": "New Year's Wish to have our course back not heard",
         "date": "2025-01-04"
@@ -942,6 +1042,11 @@
     {
         "name": "Thurso parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Tolka Valley parkrun",
+        "reason": "Weather",
         "date": "2025-01-04"
     },
     {
@@ -1142,6 +1247,11 @@
     {
         "name": "Dukeries junior parkrun",
         "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "Great Cornard junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-01-05"
     },
     {
