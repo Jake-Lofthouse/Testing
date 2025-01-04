@@ -355,6 +355,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Eagan parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Ecos parkrun, Ballymena",
         "reason": "Weather",
         "date": "2025-01-04"
@@ -997,6 +1002,11 @@
     {
         "name": "Sunny Hill parkrun",
         "reason": "Weather & team sickness",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Susquehanna Riverwalk parkrun",
+        "reason": "snow and icy conditions on the course.",
         "date": "2025-01-04"
     },
     {
