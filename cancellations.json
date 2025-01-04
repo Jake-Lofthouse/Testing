@@ -1905,7 +1905,7 @@
         "date": "2025-01-05"
     },
     {
-        "name": "Berry Hill junior parkrun",
+        "name": "Betteshanger junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
     },
@@ -1926,6 +1926,11 @@
     },
     {
         "name": "Bray junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "Broadmeadow junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
     },
@@ -1961,11 +1966,6 @@
     },
     {
         "name": "Clevedon Seafront junior parkrun",
-        "reason": "Weather",
-        "date": "2025-01-05"
-    },
-    {
-        "name": "Cleveragh junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
     },
@@ -2035,6 +2035,11 @@
         "date": "2025-01-05"
     },
     {
+        "name": "Durham City junior parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Duthie junior parkrun",
         "reason": "Ice on large sections of the course",
         "date": "2025-01-05"
@@ -2060,11 +2065,6 @@
         "date": "2025-01-05"
     },
     {
-        "name": "Fethard junior parkrun",
-        "reason": "Orange weather warning",
-        "date": "2025-01-05"
-    },
-    {
         "name": "Fife Cycle Park junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
@@ -2080,18 +2080,13 @@
         "date": "2025-01-05"
     },
     {
+        "name": "Gordon Park junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Great Cornard junior parkrun",
         "reason": "Shortage of volunteers",
-        "date": "2025-01-05"
-    },
-    {
-        "name": "Harold Park junior parkrun",
-        "reason": "Weather",
-        "date": "2025-01-05"
-    },
-    {
-        "name": "Haulbowline Island junior parkrun",
-        "reason": "Weather",
         "date": "2025-01-05"
     },
     {
@@ -2105,7 +2100,7 @@
         "date": "2025-01-05"
     },
     {
-        "name": "Holmebrook Valley junior parkrun",
+        "name": "Horsforth Hall junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
     },
@@ -2117,11 +2112,6 @@
     {
         "name": "Huddersfield junior parkrun",
         "reason": "Weather - currently icy & more snow forecast",
-        "date": "2025-01-05"
-    },
-    {
-        "name": "Kilkenny Countryside Park junior parkrun",
-        "reason": "Weather",
         "date": "2025-01-05"
     },
     {
@@ -2200,6 +2190,11 @@
         "date": "2025-01-05"
     },
     {
+        "name": "Musgrave junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Northala Fields junior parkrun",
         "reason": "Ice on the course",
         "date": "2025-01-05"
@@ -2215,12 +2210,22 @@
         "date": "2025-01-05"
     },
     {
-        "name": "Omagh Leisure Complex junior parkrun",
+        "name": "Oranmore junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
     },
     {
         "name": "Penallta junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "Peter Pan junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "Pontypool junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
     },
@@ -2231,11 +2236,6 @@
     },
     {
         "name": "Prudhoe Riverside junior parkrun",
-        "reason": "Weather",
-        "date": "2025-01-05"
-    },
-    {
-        "name": "Queen\u2019s Park junior parkrun, Brighton",
         "reason": "Weather",
         "date": "2025-01-05"
     },
@@ -2340,11 +2340,6 @@
         "date": "2025-01-05"
     },
     {
-        "name": "Strathaven junior parkrun",
-        "reason": "Weather",
-        "date": "2025-01-05"
-    },
-    {
         "name": "Sutton Lawn junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
@@ -2355,8 +2350,18 @@
         "date": "2025-01-05"
     },
     {
+        "name": "Temple Newsam junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
         "name": "The Old Rail Trail junior parkrun",
         "reason": "Ice on course: unsafe",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "The Station Yard junior parkrun",
+        "reason": "Weather",
         "date": "2025-01-05"
     },
     {
@@ -2390,7 +2395,7 @@
         "date": "2025-01-05"
     },
     {
-        "name": "Victoria junior parkrun, Stretford",
+        "name": "Victoria junior parkrun, Macclesfield",
         "reason": "Weather",
         "date": "2025-01-05"
     },
@@ -2405,17 +2410,12 @@
         "date": "2025-01-05"
     },
     {
-        "name": "Washingbay Wetlands junior parkrun",
+        "name": "Waterloo Park junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
     },
     {
         "name": "Wednesfield junior parkrun",
-        "reason": "Weather",
-        "date": "2025-01-05"
-    },
-    {
-        "name": "Wepre junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
     },
