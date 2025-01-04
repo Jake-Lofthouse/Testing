@@ -270,6 +270,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Canton Lower Rouge Trail parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Carlingwark Loch parkrun",
         "reason": "Weather",
         "date": "2025-01-04"
@@ -327,6 +332,11 @@
     {
         "name": "Chuo koen parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-01-04"
+    },
+    {
+        "name": "Churchill Parkway parkrun",
+        "reason": "Weather",
         "date": "2025-01-04"
     },
     {
@@ -1725,6 +1735,11 @@
         "date": "2025-01-04"
     },
     {
+        "name": "Wezenlanden parkrun",
+        "reason": "Weather",
+        "date": "2025-01-04"
+    },
+    {
         "name": "Whitley Bay parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-04"
@@ -1835,6 +1850,11 @@
         "date": "2025-01-05"
     },
     {
+        "name": "Avenham Park junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Balbriggan junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
@@ -1850,6 +1870,11 @@
         "date": "2025-01-05"
     },
     {
+        "name": "Beaumont Park junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Beechpark junior parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-01-05"
@@ -1860,7 +1885,17 @@
         "date": "2025-01-05"
     },
     {
+        "name": "Billingham junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Bodington junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "Carlisle junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
     },
@@ -1887,6 +1922,11 @@
     {
         "name": "Cooper Park junior parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "Cotlands Park junior parkrun",
+        "reason": "Ice on course - weather warnings in place",
         "date": "2025-01-05"
     },
     {
@@ -1920,6 +1960,11 @@
         "date": "2025-01-05"
     },
     {
+        "name": "Gardenhurst Estate junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Gedling junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
@@ -1945,6 +1990,11 @@
         "date": "2025-01-05"
     },
     {
+        "name": "Heritage Park junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Hucknall junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
@@ -1961,6 +2011,11 @@
     },
     {
         "name": "King\u2019s Park junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "Lea Bridges junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
     },
@@ -2005,6 +2060,11 @@
         "date": "2025-01-05"
     },
     {
+        "name": "Northala Fields junior parkrun",
+        "reason": "Ice on the course",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Northallerton junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
@@ -2025,12 +2085,22 @@
         "date": "2025-01-05"
     },
     {
+        "name": "Queen\u2019s Park junior parkrun, Brighton",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Ramsbottom junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
     },
     {
         "name": "Roundhay junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "Saltaire junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
     },
@@ -2070,6 +2140,11 @@
         "date": "2025-01-05"
     },
     {
+        "name": "St Nicholas junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Strathaven junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
@@ -2085,8 +2160,18 @@
         "date": "2025-01-05"
     },
     {
+        "name": "The Old Rail Trail junior parkrun",
+        "reason": "Ice on course: unsafe",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Torvean junior parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "Uppermill junior parkrun",
+        "reason": "Forecast of 30cms snow. Get ready for tobogganing.",
         "date": "2025-01-05"
     },
     {
@@ -2105,6 +2190,16 @@
         "date": "2025-01-05"
     },
     {
+        "name": "Washingbay Wetlands junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "Wepre junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Whaley Bridge junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
@@ -2117,6 +2212,11 @@
     {
         "name": "Wilton Park junior parkrun",
         "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "Witton Park junior parkrun",
+        "reason": "It's only going to be fit for Torvill and Dean!",
         "date": "2025-01-05"
     },
     {
