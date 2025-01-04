@@ -1920,6 +1920,11 @@
         "date": "2025-01-05"
     },
     {
+        "name": "Brumby Wood Rec Ground junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Bryn Bach junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
@@ -1935,8 +1940,18 @@
         "date": "2025-01-05"
     },
     {
+        "name": "Cherry Orchard junior parkrun",
+        "reason": "Freezing conditions -icy paths",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Clashduv junior parkrun",
         "reason": "Christmas break",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "Clevedon Seafront junior parkrun",
+        "reason": "Weather",
         "date": "2025-01-05"
     },
     {
@@ -1970,6 +1985,11 @@
         "date": "2025-01-05"
     },
     {
+        "name": "Cross Flatts junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Croyland Park junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
@@ -1985,13 +2005,28 @@
         "date": "2025-01-05"
     },
     {
+        "name": "Drumpellier junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Dukeries junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "Duloch junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
     },
     {
         "name": "Dundalk IT junior parkrun",
         "reason": "Snow & Ice warning..stay safe.",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "Duthie junior parkrun",
+        "reason": "Ice on large sections of the course",
         "date": "2025-01-05"
     },
     {
@@ -2017,6 +2052,11 @@
     {
         "name": "Fethard junior parkrun",
         "reason": "Orange weather warning",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "Fife Cycle Park junior parkrun",
+        "reason": "Weather",
         "date": "2025-01-05"
     },
     {
@@ -2060,6 +2100,21 @@
         "date": "2025-01-05"
     },
     {
+        "name": "Huddersfield junior parkrun",
+        "reason": "Weather - currently icy & more snow forecast",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "Iveagh Sports Ground junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "Kellands Park junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Kilkenny Countryside Park junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
@@ -2071,6 +2126,11 @@
     },
     {
         "name": "King\u2019s Park junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "Larne junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
     },
@@ -2115,6 +2175,11 @@
         "date": "2025-01-05"
     },
     {
+        "name": "Markeaton junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Marple junior parkrun",
         "reason": "Weather a bit iffy",
         "date": "2025-01-05"
@@ -2145,6 +2210,11 @@
         "date": "2025-01-05"
     },
     {
+        "name": "Omagh Leisure Complex junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Pavilion Gardens junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
@@ -2160,6 +2230,11 @@
         "date": "2025-01-05"
     },
     {
+        "name": "Prudhoe Riverside junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Queen\u2019s Park junior parkrun, Brighton",
         "reason": "Weather",
         "date": "2025-01-05"
@@ -2170,8 +2245,18 @@
         "date": "2025-01-05"
     },
     {
+        "name": "Riverside Gardens junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Riverside junior parkrun",
         "reason": "Weather expected to worsen overnight",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "Rogiet junior parkrun",
+        "reason": "Weather",
         "date": "2025-01-05"
     },
     {
@@ -2215,6 +2300,11 @@
         "date": "2025-01-05"
     },
     {
+        "name": "Springburn junior parkrun",
+        "reason": "Route is too icy",
+        "date": "2025-01-05"
+    },
+    {
         "name": "St Anne\u2019s junior parkrun",
         "reason": "Yellow weather warnings",
         "date": "2025-01-05"
@@ -2227,6 +2317,11 @@
     {
         "name": "St Nicholas junior parkrun",
         "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "Stevens Park junior parkrun, Wollescote",
+        "reason": "Snow and winter condition forecast",
         "date": "2025-01-05"
     },
     {
@@ -2280,6 +2375,11 @@
         "date": "2025-01-05"
     },
     {
+        "name": "Victoria junior parkrun, Stretford",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Wakefield Thornes junior parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-05"
@@ -2325,12 +2425,27 @@
         "date": "2025-01-05"
     },
     {
+        "name": "Wirral Country Park junior parkrun",
+        "reason": "Sleet and snow forecast tonight. Safety first!",
+        "date": "2025-01-05"
+    },
+    {
         "name": "Witton Park junior parkrun",
         "reason": "It's only going to be fit for Torvill and Dean!",
         "date": "2025-01-05"
     },
     {
         "name": "Wood Green junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "Worksop College junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-05"
+    },
+    {
+        "name": "Yatton Recreation junior parkrun",
         "reason": "Weather",
         "date": "2025-01-05"
     }
