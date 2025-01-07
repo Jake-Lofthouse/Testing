@@ -45,6 +45,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Burnage parkrun",
+        "reason": "Flooding: The course looks more like a water park!",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Butter Trail parkrun",
         "reason": "Winter Pause",
         "date": "2025-01-11"
@@ -147,6 +152,11 @@
     {
         "name": "Onderstepoort Campus parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Pavilion Gardens parkrun",
+        "reason": "Weather",
         "date": "2025-01-11"
     },
     {
