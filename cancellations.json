@@ -95,6 +95,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Killarney House parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Laytown Beach parkrun",
         "reason": "High tide",
         "date": "2025-01-11"
@@ -112,6 +117,11 @@
     {
         "name": "Loftsgardsbrua parkrun",
         "reason": "Vinterpause",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Melton Mowbray parkrun",
+        "reason": "Bridge on course is broken from floods",
         "date": "2025-01-11"
     },
     {
