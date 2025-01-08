@@ -70,6 +70,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Ellesmere Port parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Fletcher Moss parkrun",
         "reason": "Course flooded",
         "date": "2025-01-11"
@@ -273,6 +278,11 @@
         "name": "parkrun du Lac de Divonne",
         "reason": "parkrun est actuellement suspendu en France",
         "date": "2025-01-11"
+    },
+    {
+        "name": "Clough Hall junior parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-12"
     },
     {
         "name": "Hereford Leisure Centre junior parkrun",
