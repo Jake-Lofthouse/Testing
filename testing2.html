@@ -405,60 +405,6 @@ function initHotelFinder() {
         popupAnchor: [0, -38],
     });
 
-function findNearbyPlaces(lat, lng) {
-    const service = new google.maps.places.PlacesService(document.createElement('div'));
-    const radius = 10000; // 10 km radius
-
-    const hotelIcon = L.icon({
-        iconUrl: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Icons/Hotel.png',
-        iconSize: [38, 38],
-        iconAnchor: [19, 38],
-        popupAnchor: [0, -38],
-    });
-
-    const campsiteIcon = L.icon({
-        iconUrl: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Icons/Camp.png',
-        iconSize: [38, 38],
-        iconAnchor: [19, 38],
-        popupAnchor: [0, -38],
-    });
-
-    const location = new google.maps.LatLng(lat, lng);
-
-    // Fetch hotels
-    const hotelRequest = { location, radius, type: ['lodging'] };
-    service.nearbySearch(hotelRequest, (results, status) => {
-        if (status === google.maps.places.PlacesServiceStatus.OK) {
-            results.forEach((place) => {
-                const marker = L.marker(
-                    [place.geometry.location.lat(), place.geometry.location.lng()],
-                    { icon: hotelIcon }
-                );
-                marker.bindPopup(`<b>${place.name}</b><br>${place.vicinity}`).addTo(map);
-            });
-        } else {
-            console.error('Error fetching hotels:', status);
-        }
-    });
-
-    // Fetch campsites
-    const campsiteRequest = { location, radius, type: ['campground'] };
-    service.nearbySearch(campsiteRequest, (results, status) => {
-        if (status === google.maps.places.PlacesServiceStatus.OK) {
-            results.forEach((place) => {
-                const marker = L.marker(
-                    [place.geometry.location.lat(), place.geometry.location.lng()],
-                    { icon: campsiteIcon }
-                );
-                marker.bindPopup(`<b>${place.name}</b><br>${place.vicinity}`).addTo(map);
-            });
-        } else {
-            console.error('Error fetching campsites:', status);
-        }
-    });
-}
-
-
 }
 
 
@@ -828,6 +774,62 @@ function updateMapMarkers() {
     map.addLayer(markers);
 }
 
+function findNearbyPlaces(lat, lng) {
+    const service = new google.maps.places.PlacesService(document.createElement('div'));
+    const radius = 10000; // 10 km radius
+
+    const hotelIcon = L.icon({
+        iconUrl: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Icons/Hotel.png',
+        iconSize: [38, 38],
+        iconAnchor: [19, 38],
+        popupAnchor: [0, -38],
+    });
+
+    const campsiteIcon = L.icon({
+        iconUrl: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Icons/Camp.png',
+        iconSize: [38, 38],
+        iconAnchor: [19, 38],
+        popupAnchor: [0, -38],
+    });
+
+    const location = new google.maps.LatLng(lat, lng);
+
+    // Fetch hotels
+    const hotelRequest = { location, radius, type: ['lodging'] };
+    service.nearbySearch(hotelRequest, (results, status) => {
+        console.log("Hotel API Call Status:", status);
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+            console.log("Hotels Found:", results);
+            results.forEach((place) => {
+                const marker = L.marker(
+                    [place.geometry.location.lat(), place.geometry.location.lng()],
+                    { icon: hotelIcon }
+                );
+                marker.bindPopup(`<b>${place.name}</b><br>${place.vicinity}`).addTo(map);
+            });
+        } else {
+            console.error("Error fetching hotels:", status);
+        }
+    });
+
+    // Fetch campsites
+    const campsiteRequest = { location, radius, type: ['campground'] };
+    service.nearbySearch(campsiteRequest, (results, status) => {
+        console.log("Campsite API Call Status:", status);
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+            console.log("Campsites Found:", results);
+            results.forEach((place) => {
+                const marker = L.marker(
+                    [place.geometry.location.lat(), place.geometry.location.lng()],
+                    { icon: campsiteIcon }
+                );
+                marker.bindPopup(`<b>${place.name}</b><br>${place.vicinity}`).addTo(map);
+            });
+        } else {
+            console.error("Error fetching campsites:", status);
+        }
+    });
+}
 
 
 
