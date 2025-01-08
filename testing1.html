@@ -405,43 +405,59 @@ function initHotelFinder() {
         popupAnchor: [0, -38],
     });
 
-    function findNearbyPlaces(lat, lng) {
-        const location = new google.maps.LatLng(lat, lng);
-        const radius = 10000; // 10 km radius
+function findNearbyPlaces(lat, lng) {
+    const service = new google.maps.places.PlacesService(document.createElement('div'));
+    const radius = 10000; // 10 km radius
 
-        const hotelRequest = { location, radius, type: ['lodging'] };
-        const campsiteRequest = { location, radius, type: ['campground'] };
+    const hotelIcon = L.icon({
+        iconUrl: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Icons/Hotel.png',
+        iconSize: [38, 38],
+        iconAnchor: [19, 38],
+        popupAnchor: [0, -38],
+    });
 
-        // Fetch hotels
-        service.nearbySearch(hotelRequest, (results, status) => {
-            if (status === google.maps.places.PlacesServiceStatus.OK) {
-                results.forEach((place) => {
-                    const marker = L.marker(
-                        [place.geometry.location.lat(), place.geometry.location.lng()],
-                        { icon: hotelIcon }
-                    );
-                    marker.bindPopup(`<b>${place.name}</b><br>${place.vicinity}`).addTo(map);
-                });
-            } else {
-                console.error('Error fetching hotels:', status);
-            }
-        });
+    const campsiteIcon = L.icon({
+        iconUrl: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Icons/Camp.png',
+        iconSize: [38, 38],
+        iconAnchor: [19, 38],
+        popupAnchor: [0, -38],
+    });
 
-        // Fetch campsites
-        service.nearbySearch(campsiteRequest, (results, status) => {
-            if (status === google.maps.places.PlacesServiceStatus.OK) {
-                results.forEach((place) => {
-                    const marker = L.marker(
-                        [place.geometry.location.lat(), place.geometry.location.lng()],
-                        { icon: campsiteIcon }
-                    );
-                    marker.bindPopup(`<b>${place.name}</b><br>${place.vicinity}`).addTo(map);
-                });
-            } else {
-                console.error('Error fetching campsites:', status);
-            }
-        });
-    }
+    const location = new google.maps.LatLng(lat, lng);
+
+    // Fetch hotels
+    const hotelRequest = { location, radius, type: ['lodging'] };
+    service.nearbySearch(hotelRequest, (results, status) => {
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+            results.forEach((place) => {
+                const marker = L.marker(
+                    [place.geometry.location.lat(), place.geometry.location.lng()],
+                    { icon: hotelIcon }
+                );
+                marker.bindPopup(`<b>${place.name}</b><br>${place.vicinity}`).addTo(map);
+            });
+        } else {
+            console.error('Error fetching hotels:', status);
+        }
+    });
+
+    // Fetch campsites
+    const campsiteRequest = { location, radius, type: ['campground'] };
+    service.nearbySearch(campsiteRequest, (results, status) => {
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+            results.forEach((place) => {
+                const marker = L.marker(
+                    [place.geometry.location.lat(), place.geometry.location.lng()],
+                    { icon: campsiteIcon }
+                );
+                marker.bindPopup(`<b>${place.name}</b><br>${place.vicinity}`).addTo(map);
+            });
+        } else {
+            console.error('Error fetching campsites:', status);
+        }
+    });
+}
+
 
 }
 
@@ -762,15 +778,9 @@ function updateMapMarkers() {
             if (showMarker) {
                 var countryUrl = getCountryUrl(coordinates[1], coordinates[0]);
 
-                // Conditionally set the weather URL based on whether the event is junior or not
-                var weatherUrl = isJunior
-                    ? `https://parkrunnertourist.co.uk/juniorweather?lat=${coordinates[1]}&lon=${coordinates[0]}`
-                    : `https://parkrunnertourist.co.uk/weather?lat=${coordinates[1]}&lon=${coordinates[0]}`;
-
                 var popupContent = `
                     <div>
                         <div class="popup-title">${eventLongName}</div>
-                        <iframe id="weatherIframe" src="${weatherUrl}" scrolling="no"></iframe>
                         <button class="course-btn" onclick="openUrl('${countryUrl}/${eventname}/course/')">Course</button><br>
                         <button class="volunteer-btn" onclick="openUrl('${countryUrl}/${eventname}/futureroster/')">Volunteer</button><br>
                         <button class="direction-btn" onclick="openDirections(${coordinates[1]}, ${coordinates[0]})">Directions</button><br>
@@ -787,14 +797,13 @@ function updateMapMarkers() {
                             <button class="direction-btn" onclick="openDirections(${coordinates[1]}, ${coordinates[0]})">Directions</button><br>
                         </div>
                     `;
-                    var marker = L.marker([coordinates[1], coordinates[0]], { icon: canceledIcon })
-                        .bindPopup(popupContent);
-                } else {
-                    var markerIcon = isJunior ? juniorIcon : fiveKIcon;
-                    var marker = L.marker([coordinates[1], coordinates[0]], { icon: markerIcon })
-                        .bindPopup(popupContent);
                 }
 
+                var markerIcon = isJunior ? juniorIcon : fiveKIcon;
+                var marker = L.marker([coordinates[1], coordinates[0]], { icon: markerIcon })
+                    .bindPopup(popupContent);
+
+                // Add the click event to fetch nearby places
                 marker.on('click', function () {
                     findNearbyPlaces(coordinates[1], coordinates[0]);
                 });
@@ -806,6 +815,7 @@ function updateMapMarkers() {
 
     map.addLayer(markers);
 }
+
 
 
 
