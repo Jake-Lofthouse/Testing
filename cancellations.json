@@ -50,6 +50,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Brierley Forest parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Broparken parkrun",
         "reason": "Vinteruppeh\u00e5ll",
         "date": "2025-01-11"
@@ -90,6 +95,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Dishley parkrun, Loughborough",
+        "reason": "Course Flooded",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Ellesmere Port parkrun",
         "reason": "Weather",
         "date": "2025-01-11"
@@ -112,6 +122,11 @@
     {
         "name": "Holy Cross College parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Horton Park parkrun",
+        "reason": "Weather",
         "date": "2025-01-11"
     },
     {
@@ -155,8 +170,18 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Lister Park parkrun, Bradford",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Loftsgardsbrua parkrun",
         "reason": "Vinterpause",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Macclesfield parkrun",
+        "reason": "Weather",
         "date": "2025-01-11"
     },
     {
@@ -177,6 +202,11 @@
     {
         "name": "Morrinsville Recreation Ground parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Nostell parkrun",
+        "reason": "Weather",
         "date": "2025-01-11"
     },
     {
@@ -235,8 +265,18 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Sutton Manor parkrun",
+        "reason": "Even Eddie the Eagle wouldn't attempt our hills,",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Telford parkrun",
         "reason": "Icy course and poor weather conditions",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Temple Newsam parkrun",
+        "reason": "Weather",
         "date": "2025-01-11"
     },
     {
@@ -328,6 +368,11 @@
         "name": "parkrun du Lac de Divonne",
         "reason": "parkrun est actuellement suspendu en France",
         "date": "2025-01-11"
+    },
+    {
+        "name": "Bowling Park junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-12"
     },
     {
         "name": "Clough Hall junior parkrun",
