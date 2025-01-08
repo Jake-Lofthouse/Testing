@@ -45,6 +45,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Bowling Park parkrun",
+        "reason": "Park being used for sledging and building snowmen",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Broparken parkrun",
         "reason": "Vinteruppeh\u00e5ll",
         "date": "2025-01-11"
@@ -160,6 +165,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Millhouses parkrun",
+        "reason": "Black Ice only suitable for Penguins",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Montrose Foreshore parkrun",
         "reason": "No access due to another event.",
         "date": "2025-01-11"
@@ -247,6 +257,11 @@
     {
         "name": "Victoria parkrun, Truro",
         "reason": "Winter Pause",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Vogrie parkrun",
+        "reason": "Risk of polar bears on the course due to ice.",
         "date": "2025-01-11"
     },
     {
