@@ -25,6 +25,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Barnsley parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Barton Trail parkrun",
         "reason": "Winter Pause",
         "date": "2025-01-11"
@@ -60,6 +65,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Clonmel parkrun",
+        "reason": "Flood barriers up preventing access to course",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Corner Brook Stream Trail parkrun",
         "reason": "Winter Pause",
         "date": "2025-01-11"
@@ -77,6 +87,11 @@
     {
         "name": "Fletcher Moss parkrun",
         "reason": "Course flooded",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Fountains Abbey parkrun",
+        "reason": "Weather",
         "date": "2025-01-11"
     },
     {
@@ -202,6 +217,11 @@
     {
         "name": "Stamford Park parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Telford parkrun",
+        "reason": "Icy course and poor weather conditions",
         "date": "2025-01-11"
     },
     {
