@@ -75,6 +75,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Chevin Forest parkrun",
+        "reason": "Trees down, deep snow & freezing conditions",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Cliffe Castle parkrun",
         "reason": "Weather",
         "date": "2025-01-11"
@@ -227,6 +232,11 @@
     {
         "name": "Port Hedland parkrun",
         "reason": "Event team unavailable.",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Potternewton parkrun",
+        "reason": "Weather",
         "date": "2025-01-11"
     },
     {
