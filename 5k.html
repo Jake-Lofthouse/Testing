@@ -390,204 +390,23 @@
         
         //hotels from here
  
-function initHotelFinder(map) {
-    const minZoomLevel = 13; // Minimum zoom level to show markers
-    const maxZoomLevel = 18; // Maximum zoom level for detail
-    const hotelMarkers = new Set(); // Set to hold hotel markers
-    const campsiteMarkers = new Set(); // Set to hold campsite markers
-    let openPopupMarker = null; // Variable to store the marker with an open popup
-    let lastFetchTime = 0; // Throttle API requests on map movement
-    const cache = {}; // Cache for storing places data by bounds
-
-    // Custom hotel and campsite icons
+function initHotelFinder() {
+    const service = new google.maps.places.PlacesService(document.createElement('div'));
     const hotelIcon = L.icon({
         iconUrl: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Icons/Hotel.png',
         iconSize: [38, 38],
         iconAnchor: [19, 38],
-        popupAnchor: [0, -38]
+        popupAnchor: [0, -38],
     });
-
     const campsiteIcon = L.icon({
         iconUrl: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Icons/Camp.png',
         iconSize: [38, 38],
         iconAnchor: [19, 38],
-        popupAnchor: [0, -38]
+        popupAnchor: [0, -38],
     });
 
-    // Create a Places service
-    const service = new google.maps.places.PlacesService(document.createElement('div'));
-
-    // Fetch hotels and campsites when the map is moved
-    map.on('moveend', () => {
-        const currentZoom = map.getZoom();
-        
-        if (currentZoom >= minZoomLevel) {
-            // Throttle requests: only fetch every 5 seconds
-            const now = Date.now();
-            if (now - lastFetchTime < 5000) return;
-            lastFetchTime = now;
-
-            fetchPlacesInView(service);
-        } else {
-            // Clear all markers if zoom is below the minimum level
-            clearMarkers();
-        }
-    });
-
-    // Function to fetch nearby hotels and campsites
-    function fetchPlacesInView(service) {
-        const bounds = map.getBounds();
-        const boundsKey = `${bounds.getSouthWest().toString()}_${bounds.getNorthEast().toString()}`;
-        
-        // Use cached results if available for the current bounds
-        if (cache[boundsKey]) {
-            displayMarkersFromCache(cache[boundsKey]);
-            return;
-        }
-
-        const location = new google.maps.LatLng(
-            (bounds.getSouthWest().lat + bounds.getNorthEast().lat) / 2,
-            (bounds.getSouthWest().lng + bounds.getNorthEast().lng) / 2
-        );
-        const radius = 10000; // Larger radius to cover broader area
-
-        // Define requests for hotels and campsites
-        const hotelRequest = {
-            location: location,
-            radius: radius,
-            type: ['lodging']
-        };
-
-        const campsiteRequest = {
-            location: location,
-            radius: radius,
-            type: ['campground']
-        };
-
-        // Fetch hotels
-        service.nearbySearch(hotelRequest, (results, status) => {
-            if (status === google.maps.places.PlacesServiceStatus.OK) {
-                const data = results.map(hotel => ({ place: hotel, type: 'hotel' }));
-                cache[boundsKey] = cache[boundsKey] || [];
-                cache[boundsKey].push(...data); // Cache results
-                displayMarkers(data, hotelIcon);
-            } else {
-                console.error('Error fetching hotels:', status);
-            }
-        });
-
-        // Fetch campsites
-        service.nearbySearch(campsiteRequest, (results, status) => {
-            if (status === google.maps.places.PlacesServiceStatus.OK) {
-                const data = results.map(campsite => ({ place: campsite, type: 'campsite' }));
-                cache[boundsKey] = cache[boundsKey] || [];
-                cache[boundsKey].push(...data); // Cache results
-                displayMarkers(data, campsiteIcon);
-            } else {
-                console.error('Error fetching campsites:', status);
-            }
-        });
-    }
-
-    // Function to display markers from cached data
-    function displayMarkers(data, icon) {
-        data.forEach(({ place, type }) => {
-            // Create a marker
-            const marker = L.marker([place.geometry.location.lat(), place.geometry.location.lng()], { icon });
-            const markerKey = place.place_id + "_" + type;
-
-            // Only add if the marker is not already on the map
-            if (type === 'hotel' && !hotelMarkers.has(markerKey)) {
-                marker.addTo(map);
-                hotelMarkers.add(markerKey);
-            } else if (type === 'campsite' && !campsiteMarkers.has(markerKey)) {
-                marker.addTo(map);
-                campsiteMarkers.add(markerKey);
-            }
-
-            // Fetch details only when marker is clicked
-            marker.on('click', () => {
-                if (!marker.detailsFetched) {
-                    fetchPlaceDetails(service, place, marker, type);
-                    marker.detailsFetched = true; // Mark as details fetched
-                }
-            });
-        });
-    }
-
-// Function to fetch place details and set up popups
-function fetchPlaceDetails(service, place, marker, placeType) {
-    const placeRequest = {
-        placeId: place.place_id,
-        fields: ['name', 'website', 'international_phone_number', 'photos', 'geometry']
-    };
-
-    service.getDetails(placeRequest, (placeDetails, status) => {
-        if (status === google.maps.places.PlacesServiceStatus.OK) {
-            // Determine popup content
-            const websiteUrl = placeDetails.website || '#';
-            const phoneNumber = placeDetails.international_phone_number || 'N/A';
-            const lat = placeDetails.geometry.location.lat();
-            const lng = placeDetails.geometry.location.lng();
-
-            // Mapilly URL integration (replace with your actual Mapilly endpoint if you have one)
-            const mapillyUrl = `https://api.mapilly.com/getLocationDetails?lat=${lat}&lng=${lng}`;
-            let mapillyContent = '';
-
-            // Fetch Mapilly data (this is a basic fetch example, adjust based on your real Mapilly API)
-            fetch(mapillyUrl)
-                .then(response => response.json())
-                .then(data => {
-                    if (data.isLocationAvailable) {
-                        // If location is available on Mapilly, embed the Mapilly map
-                        mapillyContent = `
-                            <div class="mapilly-container" style="width: 100%; height: 200px; margin-bottom: 10px;">
-                                <iframe src="https://www.mapilly.com/embed?lat=${lat}&lng=${lng}" width="100%" height="100%" style="border: none;"></iframe>
-                            </div>
-                        `;
-                    }
-                })
-                .catch(error => console.error('Error fetching Mapilly data:', error));
-
-            // Handle image if available
-            const imageUrl = placeDetails.photos && placeDetails.photos[0] ? placeDetails.photos[0].getUrl({ maxWidth: 400, maxHeight: 300 }) : null;
-            let imageContent = '';
-            if (imageUrl) {
-                imageContent = `<img src="${imageUrl}" alt="${placeDetails.name}" class="hotel-popup-image" />`;
-            }
-
-            // Style button colors based on place type
-            const buttonColor = placeType === 'campsite' ? '#0d7640' : '#c8a367';
-            const buttonHoverColor = placeType === 'campsite' ? '#0a5a30' : '#b0874e';
-
-            // Construct popup HTML
-            const popupContent = `
-                <div class="hotel-popup" style="--button-color: ${buttonColor}; --button-hover-color: ${buttonHoverColor}">
-                    <div class="popup-title">${placeDetails.name}</div>
-                    ${imageContent} <!-- Display hotel image if available -->
-                    ${mapillyContent}  <!-- Add Mapilly content if available -->
-                    <a href="${websiteUrl}" target="_blank"><button><i class="fas fa-globe"></i> Visit Website</button></a>
-                    <a href="tel:${phoneNumber}"><button><i class="fas fa-phone"></i> Call</button></a>
-                </div>
-            `;
-
-            marker.bindPopup(popupContent).openPopup(); // Open popup on first load
-        } else {
-            console.error('Error fetching place details:', status);
-        }
-    });
 }
 
-
-
-
-    // Function to clear all markers
-    function clearMarkers() {
-        hotelMarkers.clear();
-        campsiteMarkers.clear();
-        openPopupMarker = null;
-    }
-}
 
 
         //hotels to here
@@ -890,26 +709,27 @@ function updateMapMarkers() {
 
     if (!data.events) return;
 
-    data.events.features.forEach(function(feature) {
+    data.events.features.forEach(function (feature) {
         if (feature.geometry.type === 'Point') {
             var coordinates = feature.geometry.coordinates;
             var eventname = normalizeEventName(feature.properties.eventname);
             var eventLongName = feature.properties.EventLongName;
 
-            console.log('Processing event:', eventname); // Debugging line
+            console.log('Processing event:', eventname);
 
             var isJunior = eventLongName.toLowerCase().includes('junior');
             var showMarker = (isJunior && document.getElementById('juniorCheckbox').checked) ||
-                             (!isJunior && document.getElementById('fiveKCheckbox').checked);
+                (!isJunior && document.getElementById('fiveKCheckbox').checked);
 
             if (showMarker) {
                 var countryUrl = getCountryUrl(coordinates[1], coordinates[0]);
-                
-                // Conditionally set the weather URL based on whether the event is junior or not
-                var weatherUrl = isJunior 
+
+                // Determine weather URL
+                var weatherUrl = isJunior
                     ? `https://parkrunnertourist.co.uk/juniorweather?lat=${coordinates[1]}&lon=${coordinates[0]}`
                     : `https://parkrunnertourist.co.uk/weather?lat=${coordinates[1]}&lon=${coordinates[0]}`;
 
+                // Create popup content with weather iframe
                 var popupContent = `
                     <div>
                         <div class="popup-title">${eventLongName}</div>
@@ -920,6 +740,7 @@ function updateMapMarkers() {
                     </div>
                 `;
 
+                // Handle cancellations
                 if (cancellations[eventname]) {
                     popupContent = `
                         <div>
@@ -930,13 +751,20 @@ function updateMapMarkers() {
                             <button class="direction-btn" onclick="openDirections(${coordinates[1]}, ${coordinates[0]})">Directions</button><br>
                         </div>
                     `;
-                    var marker = L.marker([coordinates[1], coordinates[0]], { icon: canceledIcon })
-                        .bindPopup(popupContent);
-                } else {
-                    var markerIcon = isJunior ? juniorIcon : fiveKIcon;
-                    var marker = L.marker([coordinates[1], coordinates[0]], { icon: markerIcon })
-                        .bindPopup(popupContent);
                 }
+
+                // Choose appropriate icon
+                var markerIcon = isJunior ? juniorIcon : fiveKIcon;
+
+                // Create marker and bind popup
+                var marker = L.marker([coordinates[1], coordinates[0]], { icon: markerIcon })
+                    .bindPopup(popupContent);
+
+                // Attach the click handler to find nearby places
+                marker.on('click', function () {
+                    console.log(`Marker clicked at: ${coordinates[1]}, ${coordinates[0]}`);
+                    findNearbyPlaces(coordinates[1], coordinates[0]);
+                });
 
                 markers.addLayer(marker);
             }
@@ -945,6 +773,99 @@ function updateMapMarkers() {
 
     map.addLayer(markers);
 }
+
+function findNearbyPlaces(lat, lng) {
+    const service = new google.maps.places.PlacesService(document.createElement('div'));
+    const radius = 9000; // 9 km radius
+
+    const hotelIcon = L.icon({
+        iconUrl: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Icons/Hotel.png',
+        iconSize: [38, 38],
+        iconAnchor: [19, 38],
+        popupAnchor: [0, -38],
+    });
+
+    const campsiteIcon = L.icon({
+        iconUrl: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Icons/Camp.png',
+        iconSize: [38, 38],
+        iconAnchor: [19, 38],
+        popupAnchor: [0, -38],
+    });
+
+    const location = new google.maps.LatLng(lat, lng);
+
+    // Fetch hotels
+    const hotelRequest = { location, radius, type: ['lodging'] };
+    service.nearbySearch(hotelRequest, (results, status) => {
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+            results.forEach((place) => {
+                const popupContent = generatePopupContent(place, "hotel");
+                const marker = L.marker(
+                    [place.geometry.location.lat(), place.geometry.location.lng()],
+                    { icon: hotelIcon }
+                );
+                marker.bindPopup(popupContent).addTo(map);
+            });
+        } else {
+            console.error("Error fetching hotels:", status);
+        }
+    });
+
+    // Fetch campsites
+    const campsiteRequest = { location, radius, type: ['campground'] };
+    service.nearbySearch(campsiteRequest, (results, status) => {
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+            results.forEach((place) => {
+                const popupContent = generatePopupContent(place, "campsite");
+                const marker = L.marker(
+                    [place.geometry.location.lat(), place.geometry.location.lng()],
+                    { icon: campsiteIcon }
+                );
+                marker.bindPopup(popupContent).addTo(map);
+            });
+        } else {
+            console.error("Error fetching campsites:", status);
+        }
+    });
+}
+
+/**
+ * Generates styled popup content for hotels and campsites.
+ */
+function generatePopupContent(place, type) {
+    const name = place.name || "No Name Available";
+    const address = place.vicinity || "Address not available";
+    const phoneNumber = place.international_phone_number || "N/A";
+    const websiteUrl = place.website || "#";
+    const imageUrl =
+        place.photos && place.photos.length > 0
+            ? place.photos[0].getUrl({ maxWidth: 400, maxHeight: 300 })
+            : "https://via.placeholder.com/400x300?text=No+Image";
+
+    // Style button colors based on place type
+    const buttonColor = type === "campsite" ? "#0d7640" : "#c8a367";
+    const buttonHoverColor = type === "campsite" ? "#0a5a30" : "#b0874e";
+
+    return `
+        <div class="hotel-popup" style="--button-color: ${buttonColor}; --button-hover-color: ${buttonHoverColor}">
+            <div class="popup-title">${name}</div>
+            <img src="${imageUrl}" alt="${name}" class="hotel-popup-image" />
+            <div><b>Address:</b> ${address}</div>
+            <a href="${websiteUrl}" target="_blank">
+                <button><i class="fas fa-globe"></i> Visit Website</button>
+            </a>
+            <a href="tel:${phoneNumber}">
+                <button><i class="fas fa-phone"></i> Call</button>
+            </a>
+        </div>
+    `;
+}
+
+
+
+
+
+
 
 
 // Initial fetch for data and event listener setup
