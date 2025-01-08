@@ -65,6 +65,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Cliffe Castle parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Clonmel parkrun",
         "reason": "Flood barriers up preventing access to course",
         "date": "2025-01-11"
@@ -250,6 +255,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Watergrove parkrun, Rochdale",
+        "reason": "Snow and ice on the course",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Wells Estate parkrun",
         "reason": "Venue unavailable during Festive Season",
         "date": "2025-01-11"
@@ -257,6 +267,11 @@
     {
         "name": "Whitley Bay parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Worcester Pitchcroft parkrun",
+        "reason": "Course flooded",
         "date": "2025-01-11"
     },
     {
@@ -302,6 +317,11 @@
     {
         "name": "Clough Hall junior parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-12"
+    },
+    {
+        "name": "Dewsbury junior parkrun",
+        "reason": "The park would be better suited to polar bears!",
         "date": "2025-01-12"
     },
     {
