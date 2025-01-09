@@ -10,6 +10,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Armley parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Aspen parkrun",
         "reason": "Winter Pause",
         "date": "2025-01-11"
@@ -130,6 +135,16 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Glossop parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Haigh Woodland parkrun",
+        "reason": "Unsafe route with ice and snow",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Hamsterley Forest parkrun",
         "reason": "Venue unavailable - other event being hosted",
         "date": "2025-01-11"
@@ -142,6 +157,11 @@
     {
         "name": "Horton Park parkrun",
         "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Huddersfield parkrun",
+        "reason": "Thick snow & ice over most of course.",
         "date": "2025-01-11"
     },
     {
@@ -235,6 +255,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Oldham parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Onderstepoort Campus parkrun",
         "reason": "Venue unavailable",
         "date": "2025-01-11"
@@ -242,6 +267,11 @@
     {
         "name": "Pavilion Gardens parkrun",
         "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Penistone parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-11"
     },
     {
@@ -340,6 +370,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Wakefield Thornes parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Warwick Racecourse parkrun",
         "reason": "Venue unavailable",
         "date": "2025-01-11"
@@ -410,6 +445,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Barnsley junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-12"
+    },
+    {
         "name": "Bowling Park junior parkrun",
         "reason": "Weather",
         "date": "2025-01-12"
@@ -432,6 +472,16 @@
     {
         "name": "Killarney House junior parkrun",
         "reason": "Permission issue",
+        "date": "2025-01-12"
+    },
+    {
+        "name": "Pavilion Gardens junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-12"
+    },
+    {
+        "name": "Wakefield Thornes junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-12"
     },
     {
