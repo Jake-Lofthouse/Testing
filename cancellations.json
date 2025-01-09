@@ -110,6 +110,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Clitheroe Castle parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Clonmel parkrun",
         "reason": "Flood barriers up preventing access to course",
         "date": "2025-01-11"
@@ -117,6 +122,11 @@
     {
         "name": "Corner Brook Stream Trail parkrun",
         "reason": "Winter Pause",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Crewe parkrun",
+        "reason": "Weather",
         "date": "2025-01-11"
     },
     {
@@ -155,8 +165,23 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Emmerwiesen parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Evesham parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Fell Foot parkrun, Newby Bridge",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Fethard Town parkrun",
+        "reason": "Weather",
         "date": "2025-01-11"
     },
     {
@@ -190,8 +215,18 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Hay Lodge parkrun",
+        "reason": "Still v icy paths which will not thaw before Sat",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Higginson parkrun, Marlow",
         "reason": "Course flooded",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Hillsborough parkrun",
+        "reason": "Very icy course due to prolonged snow and ice.",
         "date": "2025-01-11"
     },
     {
@@ -215,6 +250,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Hyndburn parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Jacobsdal parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-01-11"
@@ -222,6 +262,11 @@
     {
         "name": "Jeune Park parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Joe Creason parkrun",
+        "reason": "Weather",
         "date": "2025-01-11"
     },
     {
@@ -237,6 +282,11 @@
     {
         "name": "Kleinplaas parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Knowsley parkrun",
+        "reason": "Weather",
         "date": "2025-01-11"
     },
     {
@@ -280,6 +330,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Millfield parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Millhouses parkrun",
         "reason": "Black Ice only suitable for Penguins",
         "date": "2025-01-11"
@@ -295,7 +350,17 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Muncaster Castle parkrun",
+        "reason": "Dangerously slippery due to snow and Ice",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Nostell parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Oakwell Hall parkrun",
         "reason": "Weather",
         "date": "2025-01-11"
     },
@@ -345,6 +410,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Quakers Walk parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Rother Valley parkrun",
         "reason": "Weather",
         "date": "2025-01-11"
@@ -372,6 +442,11 @@
     {
         "name": "Somerdale Pavilion parkrun",
         "reason": "Waterlogged course",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "St Helens parkrun",
+        "reason": "Extreme Icy Course only fit for skiing",
         "date": "2025-01-11"
     },
     {
@@ -445,6 +520,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Wetherby parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Whitley Bay parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-11"
@@ -502,6 +582,11 @@
     {
         "name": "Barnsley junior parkrun",
         "reason": "Weather",
+        "date": "2025-01-12"
+    },
+    {
+        "name": "Bodington junior parkrun",
+        "reason": "Venue unavailable",
         "date": "2025-01-12"
     },
     {
