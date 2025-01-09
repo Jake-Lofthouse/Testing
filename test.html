@@ -747,17 +747,24 @@ function updateMapMarkers() {
                 `;
 
                 // Handle cancellations
-                if (cancellations[eventname]) {
-                    popupContent = `
-                        <div>
-                            <div class="popup-title">${eventLongName}</div>
-                            <div style="color: red; font-weight: bold;">Cancelled: ${cancellations[eventname]}</div>
-                            <button class="course-btn" onclick="openUrl('${countryUrl}/${eventname}/course/')">Course</button><br>
-                            <button class="volunteer-btn" onclick="openUrl('${countryUrl}/${eventname}/futureroster/')">Volunteer</button><br>
-                            <button class="direction-btn" onclick="openDirections(${coordinates[1]}, ${coordinates[0]})">Directions</button><br>
-                        </div>
-                    `;
-                }
+if (cancellations[eventname]) {
+    popupContent = `
+        <div>
+            <div class="popup-title">${eventLongName}</div>
+            <div style="color: red; font-weight: bold;">Cancelled: ${cancellations[eventname]}</div>
+            <button class="course-btn" onclick="openUrl('${countryUrl}/${eventname}/course/')">Course</button><br>
+            <button class="volunteer-btn" onclick="openUrl('${countryUrl}/${eventname}/futureroster/')">Volunteer</button><br>
+            <button class="direction-btn" onclick="openDirections(${coordinates[1]}, ${coordinates[0]})">Directions</button><br>
+        </div>
+    `;
+
+    var marker = L.marker([coordinates[1], coordinates[0]], { icon: canceledIcon })
+        .bindPopup(popupContent);
+
+    // Add the marker to the map
+    markers.addLayer(marker);
+}
+
 
                 // Choose appropriate icon
                 var markerIcon = isJunior ? juniorIcon : fiveKIcon;
