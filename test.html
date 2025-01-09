@@ -709,11 +709,21 @@ fetch('https://raw.githubusercontent.com/ALD-Models/Testing/main/cancellations.j
     })
     .catch(err => console.error('Error fetching cancellation data:', err));
 
+function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+}
+
+
 // Function to update map markers
 function updateMapMarkers() {
     markers.clearLayers();
 
     if (!data.events) return;
+
+    // Get the query parameter
+    const show5k = window.location.search.includes('?5k');
+    const showJunior = window.location.search.includes('?junior');
 
     data.events.features.forEach(function (feature) {
         if (feature.geometry.type === 'Point') {
@@ -724,8 +734,9 @@ function updateMapMarkers() {
             console.log('Processing event:', eventname);
 
             var isJunior = eventLongName.toLowerCase().includes('junior');
-            var showMarker = (isJunior && document.getElementById('juniorCheckbox').checked) ||
-                (!isJunior && document.getElementById('fiveKCheckbox').checked);
+            var showMarker = (!show5k && !showJunior) || // Show all markers if no query
+                             (show5k && !isJunior) ||   // Show only 5k if ?5k
+                             (showJunior && isJunior);  // Show only juniors if ?junior
 
             if (showMarker) {
                 var countryUrl = getCountryUrl(coordinates[1], coordinates[0]);
@@ -773,6 +784,7 @@ function updateMapMarkers() {
 
     map.addLayer(markers);
 }
+
 
 
 
