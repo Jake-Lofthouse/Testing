@@ -176,6 +176,12 @@
     justify-content: center;
 }
 
+.hotel-popup button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+
 .location-button {
   position: absolute;
   top: 60px;
@@ -837,8 +843,8 @@ function generatePopupContent(place, type) {
     const address = place.vicinity || "Address not available";
     const lat = place.geometry.location.lat();
     const lng = place.geometry.location.lng();
-    const websiteUrl = place.website || "#";
-    const phoneNumber = place.international_phone_number || place.formatted_phone_number || "N/A";
+    const phoneNumber = place.international_phone_number || place.formatted_phone_number || null;
+    const websiteUrl = place.website || null;
     const imageUrl =
         place.photos && place.photos.length > 0
             ? place.photos[0].getUrl({ maxWidth: 400, maxHeight: 300 })
@@ -848,6 +854,7 @@ function generatePopupContent(place, type) {
     const buttonColor = type === "campsite" ? "#0d7640" : "#c8a367";
     const buttonHoverColor = type === "campsite" ? "#0a5a30" : "#b0874e";
 
+    // Build popup content
     return `
         <div class="hotel-popup" style="--button-color: ${buttonColor}; --button-hover-color: ${buttonHoverColor}">
             <div class="popup-title">${name}</div>
@@ -855,15 +862,24 @@ function generatePopupContent(place, type) {
             <a href="https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}" target="_blank">
                 <button><i class="fas fa-map-marker-alt"></i> Directions</button>
             </a>
-            <a href="${websiteUrl}" target="_blank">
-                <button><i class="fas fa-globe"></i> Visit Website</button>
-            </a>
-            <a href="tel:${phoneNumber}">
-                <button><i class="fas fa-phone"></i> Call</button>
-            </a>
+            ${websiteUrl ? `
+                <a href="${websiteUrl}" target="_blank">
+                    <button><i class="fas fa-globe"></i> Visit Website</button>
+                </a>
+            ` : `
+                <button disabled><i class="fas fa-globe"></i> No Website</button>
+            `}
+            ${phoneNumber ? `
+                <a href="tel:${phoneNumber}">
+                    <button><i class="fas fa-phone"></i> Call</button>
+                </a>
+            ` : `
+                <button disabled><i class="fas fa-phone"></i> No Phone</button>
+            `}
         </div>
     `;
 }
+
 
 
 
