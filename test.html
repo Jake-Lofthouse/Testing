@@ -721,7 +721,7 @@ function updateMapMarkers() {
             var eventname = normalizeEventName(feature.properties.eventname);
             var eventLongName = feature.properties.EventLongName;
 
-            console.log('Processing event:', eventname); // Debugging line
+            console.log('Processing event:', eventname);
 
             var isJunior = eventLongName.toLowerCase().includes('junior');
             var showMarker = (isJunior && document.getElementById('juniorCheckbox').checked) ||
@@ -760,13 +760,20 @@ function updateMapMarkers() {
                 var marker = L.marker([coordinates[1], coordinates[0]], { icon: markerIcon })
                     .bindPopup(popupContent);
 
-                markers.addLayer(marker); // Add to the map
+                // Attach the click event to find nearby hotels and campsites
+                marker.on('click', function () {
+                    console.log(`Marker clicked at: ${coordinates[1]}, ${coordinates[0]}`);
+                    findNearbyPlaces(coordinates[1], coordinates[0]); // Show hotels and campsites
+                });
+
+                markers.addLayer(marker);
             }
         }
     });
 
     map.addLayer(markers);
 }
+
 
 
 function findNearbyPlaces(lat, lng) {
