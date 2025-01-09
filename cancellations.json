@@ -130,6 +130,16 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Clumber Park parkrun",
+        "reason": "Dangerous icy conditions on course",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Congleton parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Corner Brook Stream Trail parkrun",
         "reason": "Winter Pause",
         "date": "2025-01-11"
@@ -152,6 +162,11 @@
     {
         "name": "Dishley parkrun, Loughborough",
         "reason": "Course Flooded",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Downham Market Academy parkrun",
+        "reason": "Protecting volunteers turning into ICE -3",
         "date": "2025-01-11"
     },
     {
@@ -216,6 +231,11 @@
     },
     {
         "name": "Graves parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Greenfield Valley parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-11"
     },
@@ -340,6 +360,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Lyme Park parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Macclesfield parkrun",
         "reason": "Weather",
         "date": "2025-01-11"
@@ -382,6 +407,11 @@
     {
         "name": "Muncaster Castle parkrun",
         "reason": "Dangerously slippery due to snow and Ice",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Northwich parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-11"
     },
     {
@@ -655,6 +685,11 @@
         "date": "2025-01-12"
     },
     {
+        "name": "Dukeries junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-12"
+    },
+    {
         "name": "Hereford Leisure Centre junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-01-12"
@@ -662,6 +697,11 @@
     {
         "name": "Killarney House junior parkrun",
         "reason": "Permission issue",
+        "date": "2025-01-12"
+    },
+    {
+        "name": "Norris Green Park junior parkrun",
+        "reason": "Weather",
         "date": "2025-01-12"
     },
     {
