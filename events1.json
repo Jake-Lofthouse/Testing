@@ -47843,26 +47843,6 @@
         }
       },
       {
-        "id": 3336,
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -76.806334,
-            42.100364
-          ]
-        },
-        "properties": {
-          "eventname": "lackawannarailtrail",
-          "EventLongName": "Lackawanna Rail Trail parkrun",
-          "EventShortName": "Lackawanna Rail Trail",
-          "LocalisedEventLongName": null,
-          "countrycode": 98,
-          "seriesid": 1,
-          "EventLocation": "Lackawanna Rail Trail"
-        }
-      },
-      {
         "id": 3337,
         "type": "Feature",
         "geometry": {
@@ -52803,23 +52783,23 @@
         }
       },
       {
-        "id": 3595,
+        "id": 3596,
         "type": "Feature",
         "geometry": {
           "type": "Point",
           "coordinates": [
-            -1.60786,
-            54.701027
+            153.120471,
+            -26.74229
           ]
         },
         "properties": {
-          "eventname": "victoriajubilee-juniors",
-          "EventLongName": "Victoria Jubilee junior parkrun",
-          "EventShortName": "Victoria Jubilee juniors",
+          "eventname": "birtinyaisland",
+          "EventLongName": "Birtinya Island parkrun",
+          "EventShortName": "Birtinya Island",
           "LocalisedEventLongName": null,
-          "countrycode": 97,
-          "seriesid": 2,
-          "EventLocation": "Victoria Jubilee juniors"
+          "countrycode": 3,
+          "seriesid": 1,
+          "EventLocation": "Birtinya Island"
         }
       },
       {
@@ -52840,6 +52820,26 @@
           "countrycode": 97,
           "seriesid": 2,
           "EventLocation": "Bowling Park juniors"
+        }
+      },
+      {
+        "id": 3599,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            151.822113,
+            -32.759748
+          ]
+        },
+        "properties": {
+          "eventname": "grahamstownaquaticcentremedowie",
+          "EventLongName": "Grahamstown Aquatic Centre parkrun, Medowie",
+          "EventShortName": "Grahamstown Aquatic Centre, Medowie",
+          "LocalisedEventLongName": null,
+          "countrycode": 3,
+          "seriesid": 1,
+          "EventLocation": "Grahamstown Aquatic Centre, Medowie"
         }
       },
       {
@@ -52960,6 +52960,66 @@
           "countrycode": 4,
           "seriesid": 1,
           "EventLocation": "Europapark"
+        }
+      },
+      {
+        "id": 3616,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            170.720595,
+            -45.479897
+          ]
+        },
+        "properties": {
+          "eventname": "eastotagohighschool",
+          "EventLongName": "East Otago High School parkrun",
+          "EventShortName": "East Otago High School",
+          "LocalisedEventLongName": null,
+          "countrycode": 65,
+          "seriesid": 1,
+          "EventLocation": "East Otago High School"
+        }
+      },
+      {
+        "id": 3618,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -2.840853,
+            53.36741
+          ]
+        },
+        "properties": {
+          "eventname": "halewood-juniors",
+          "EventLongName": "Halewood junior parkrun",
+          "EventShortName": "Halewood juniors",
+          "LocalisedEventLongName": null,
+          "countrycode": 97,
+          "seriesid": 2,
+          "EventLocation": "Halewood juniors"
+        }
+      },
+      {
+        "id": 3619,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -8.174868,
+            51.921387
+          ]
+        },
+        "properties": {
+          "eventname": "midletongreenway",
+          "EventLongName": "Midleton Greenway parkrun",
+          "EventShortName": "Midleton Greenway",
+          "LocalisedEventLongName": null,
+          "countrycode": 42,
+          "seriesid": 1,
+          "EventLocation": "Midleton Greenway"
         }
       }
     ]
