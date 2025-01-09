@@ -805,17 +805,12 @@ function findNearbyPlaces(lat, lng) {
         location,
         radius,
         type: ['lodging'],
-        fields: ['name', 'vicinity', 'geometry', 'website', 'international_phone_number', 'formatted_phone_number']
     };
+
     service.nearbySearch(hotelRequest, (results, status) => {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             results.forEach((place) => {
-                const popupContent = generatePopupContent(place, "hotel");
-                const marker = L.marker(
-                    [place.geometry.location.lat(), place.geometry.location.lng()],
-                    { icon: hotelIcon }
-                );
-                marker.bindPopup(popupContent).addTo(map);
+                fetchPlaceDetails(service, place, "hotel", hotelIcon);
             });
         } else {
             console.error("Error fetching hotels:", status);
@@ -827,22 +822,35 @@ function findNearbyPlaces(lat, lng) {
         location,
         radius,
         type: ['campground'],
-        fields: ['name', 'vicinity', 'geometry', 'website', 'international_phone_number', 'formatted_phone_number']
     };
+
     service.nearbySearch(campsiteRequest, (results, status) => {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             results.forEach((place) => {
-                const popupContent = generatePopupContent(place, "campsite");
-                const marker = L.marker(
-                    [place.geometry.location.lat(), place.geometry.location.lng()],
-                    { icon: campsiteIcon }
-                );
-                marker.bindPopup(popupContent).addTo(map);
+                fetchPlaceDetails(service, place, "campsite", campsiteIcon);
             });
         } else {
             console.error("Error fetching campsites:", status);
         }
     });
+}
+
+function fetchPlaceDetails(service, place, type, icon) {
+    service.getDetails(
+        { placeId: place.place_id, fields: ['name', 'vicinity', 'website', 'formatted_phone_number', 'geometry', 'photos'] },
+        (details, status) => {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+                const popupContent = generatePopupContent(details, type);
+                const marker = L.marker(
+                    [details.geometry.location.lat(), details.geometry.location.lng()],
+                    { icon }
+                );
+                marker.bindPopup(popupContent).addTo(map);
+            } else {
+                console.error("Error fetching place details:", status);
+            }
+        }
+    );
 }
 
 
