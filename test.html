@@ -801,7 +801,12 @@ function findNearbyPlaces(lat, lng) {
     const location = new google.maps.LatLng(lat, lng);
 
     // Fetch hotels
-    const hotelRequest = { location, radius, type: ['lodging'] };
+    const hotelRequest = {
+        location,
+        radius,
+        type: ['lodging'],
+        fields: ['name', 'vicinity', 'geometry', 'website', 'international_phone_number', 'formatted_phone_number']
+    };
     service.nearbySearch(hotelRequest, (results, status) => {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             results.forEach((place) => {
@@ -818,7 +823,12 @@ function findNearbyPlaces(lat, lng) {
     });
 
     // Fetch campsites
-    const campsiteRequest = { location, radius, type: ['campground'] };
+    const campsiteRequest = {
+        location,
+        radius,
+        type: ['campground'],
+        fields: ['name', 'vicinity', 'geometry', 'website', 'international_phone_number', 'formatted_phone_number']
+    };
     service.nearbySearch(campsiteRequest, (results, status) => {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             results.forEach((place) => {
@@ -834,6 +844,7 @@ function findNearbyPlaces(lat, lng) {
         }
     });
 }
+
 
 /**
  * Generates styled popup content for hotels and campsites.
