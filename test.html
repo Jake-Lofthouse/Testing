@@ -833,7 +833,7 @@ function findNearbyPlaces(lat, lng) {
 
 function fetchPlaceDetails(service, place, type, icon) {
     service.getDetails(
-        { placeId: place.place_id, fields: ['name', 'vicinity', 'website', 'formatted_phone_number', 'geometry'] },
+        { placeId: place.place_id, fields: ['name', 'vicinity', 'website', 'formatted_phone_number', 'geometry', 'photos'] },
         (details, status) => {
             if (status === google.maps.places.PlacesServiceStatus.OK) {
                 const popupContent = generatePopupContent(details, type);
