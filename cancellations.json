@@ -1,5 +1,10 @@
 [
     {
+        "name": "Alexandra parkrun, Moss Side",
+        "reason": "0% chance of staying upright (Ice)",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Alice Holt parkrun",
         "reason": "Venue unavailable",
         "date": "2025-01-11"
@@ -80,6 +85,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Centre Vale parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Charleston parkrun, South Australia",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-11"
@@ -115,13 +125,38 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Dewsbury parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Dishley parkrun, Loughborough",
         "reason": "Course Flooded",
         "date": "2025-01-11"
     },
     {
+        "name": "Dudley parkrun",
+        "reason": "Course an ice rink, couldn't source enough skates",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Ehrenbreitstein parkrun",
+        "reason": "Hochwasser vom Rhein",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Elgin parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Ellesmere Port parkrun",
         "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Evesham parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-11"
     },
     {
@@ -140,6 +175,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Graves parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Haigh Woodland parkrun",
         "reason": "Unsafe route with ice and snow",
         "date": "2025-01-11"
@@ -147,6 +187,11 @@
     {
         "name": "Hamsterley Forest parkrun",
         "reason": "Venue unavailable - other event being hosted",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Higginson parkrun, Marlow",
+        "reason": "Course flooded",
         "date": "2025-01-11"
     },
     {
@@ -187,6 +232,11 @@
     {
         "name": "Killarney House parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Kleinplaas parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-11"
     },
     {
@@ -345,6 +395,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Tewkesbury parkrun",
+        "reason": "Park flooded, suitable for swimmers only",
+        "date": "2025-01-11"
+    },
+    {
         "name": "The Plens parkrun",
         "reason": "Pigs and hippos more likely to be seen than runner",
         "date": "2025-01-11"
@@ -476,6 +531,11 @@
     },
     {
         "name": "Pavilion Gardens junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-12"
+    },
+    {
+        "name": "People\u2019s Park junior parkrun, Halifax",
         "reason": "Weather",
         "date": "2025-01-12"
     },
