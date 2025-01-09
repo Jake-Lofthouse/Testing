@@ -838,6 +838,7 @@ function generatePopupContent(place, type) {
     const lat = place.geometry.location.lat();
     const lng = place.geometry.location.lng();
     const websiteUrl = place.website || "#";
+    const phoneNumber = place.international_phone_number || place.formatted_phone_number || "N/A";
     const imageUrl =
         place.photos && place.photos.length > 0
             ? place.photos[0].getUrl({ maxWidth: 400, maxHeight: 300 })
@@ -857,9 +858,13 @@ function generatePopupContent(place, type) {
             <a href="${websiteUrl}" target="_blank">
                 <button><i class="fas fa-globe"></i> Visit Website</button>
             </a>
+            <a href="tel:${phoneNumber}">
+                <button><i class="fas fa-phone"></i> Call</button>
+            </a>
         </div>
     `;
 }
+
 
 
 
