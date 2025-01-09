@@ -5,6 +5,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Abingdon parkrun",
+        "reason": "Course blocked by frozen flooding",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Alby G\u00e5rd parkrun",
         "reason": "Weather",
         "date": "2025-01-11"
@@ -47,6 +52,11 @@
     {
         "name": "Aspen parkrun",
         "reason": "Winter Pause",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Auldcathie District parkrun",
+        "reason": "Weather",
         "date": "2025-01-11"
     },
     {
@@ -160,6 +170,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Chasewater parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Chevin Forest parkrun",
         "reason": "Trees down, deep snow & freezing conditions",
         "date": "2025-01-11"
@@ -172,6 +187,11 @@
     {
         "name": "Cliffe Castle parkrun",
         "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Clifton parkrun",
+        "reason": "More acceptable for a parkiceskate or parkswim",
         "date": "2025-01-11"
     },
     {
@@ -217,6 +237,11 @@
     {
         "name": "Cyclopark parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Darlington South Park parkrun",
+        "reason": "Weather",
         "date": "2025-01-11"
     },
     {
@@ -505,6 +530,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "North Harbour parkrun",
+        "reason": "localised flooding making course unsafe",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Northwich parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-11"
@@ -660,6 +690,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Talkin Tarn Country Park parkrun",
+        "reason": "Course too icy to be safe",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Tawd Valley parkrun",
         "reason": "Frozen terrain & Simon due to be RD in his kilt",
         "date": "2025-01-11"
@@ -687,6 +722,11 @@
     {
         "name": "The Wammy parkrun",
         "reason": "Too icy.",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Torvean parkrun",
+        "reason": "Weather",
         "date": "2025-01-11"
     },
     {
@@ -762,6 +802,11 @@
     {
         "name": "Worcester Pitchcroft parkrun",
         "reason": "Course flooded",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Wynyard Woodland parkrun",
+        "reason": "Course more suitable for ice skating",
         "date": "2025-01-11"
     },
     {
@@ -881,6 +926,16 @@
     },
     {
         "name": "Phoenix junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-12"
+    },
+    {
+        "name": "Sandall Park junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-12"
+    },
+    {
+        "name": "South Park junior parkrun",
         "reason": "Weather",
         "date": "2025-01-12"
     },
