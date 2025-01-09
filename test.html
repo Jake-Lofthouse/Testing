@@ -721,7 +721,7 @@ function updateMapMarkers() {
             var eventname = normalizeEventName(feature.properties.eventname);
             var eventLongName = feature.properties.EventLongName;
 
-            console.log('Processing event:', eventname);
+            console.log('Processing event:', eventname); // Debugging line
 
             var isJunior = eventLongName.toLowerCase().includes('junior');
             var showMarker = (isJunior && document.getElementById('juniorCheckbox').checked) ||
@@ -730,62 +730,44 @@ function updateMapMarkers() {
             if (showMarker) {
                 var countryUrl = getCountryUrl(coordinates[1], coordinates[0]);
 
-                // Determine weather URL
-                var weatherUrl = isJunior
-                    ? `https://parkrunnertourist.co.uk/juniorweather?lat=${coordinates[1]}&lon=${coordinates[0]}`
-                    : `https://parkrunnertourist.co.uk/weather?lat=${coordinates[1]}&lon=${coordinates[0]}`;
-
-                // Create popup content with weather iframe
+                // Default popup content
                 var popupContent = `
                     <div>
                         <div class="popup-title">${eventLongName}</div>
-                        <iframe id="weatherIframe" src="${weatherUrl}" scrolling="no"></iframe>
+                        <iframe id="weatherIframe" src="https://parkrunnertourist.co.uk/weather?lat=${coordinates[1]}&lon=${coordinates[0]}" scrolling="no"></iframe>
                         <button class="course-btn" onclick="openUrl('${countryUrl}/${eventname}/course/')">Course</button><br>
                         <button class="volunteer-btn" onclick="openUrl('${countryUrl}/${eventname}/futureroster/')">Volunteer</button><br>
                         <button class="direction-btn" onclick="openDirections(${coordinates[1]}, ${coordinates[0]})">Directions</button><br>
                     </div>
                 `;
 
-                // Handle cancellations
-if (cancellations[eventname]) {
-    popupContent = `
-        <div>
-            <div class="popup-title">${eventLongName}</div>
-            <div style="color: red; font-weight: bold;">Cancelled: ${cancellations[eventname]}</div>
-            <button class="course-btn" onclick="openUrl('${countryUrl}/${eventname}/course/')">Course</button><br>
-            <button class="volunteer-btn" onclick="openUrl('${countryUrl}/${eventname}/futureroster/')">Volunteer</button><br>
-            <button class="direction-btn" onclick="openDirections(${coordinates[1]}, ${coordinates[0]})">Directions</button><br>
-        </div>
-    `;
+                // Check if the event is canceled
+                var markerIcon = isJunior ? juniorIcon : fiveKIcon; // Default icon
+                if (cancellations[eventname]) {
+                    popupContent = `
+                        <div>
+                            <div class="popup-title">${eventLongName}</div>
+                            <div style="color: red; font-weight: bold;">Cancelled: ${cancellations[eventname]}</div>
+                            <button class="course-btn" onclick="openUrl('${countryUrl}/${eventname}/course/')">Course</button><br>
+                            <button class="volunteer-btn" onclick="openUrl('${countryUrl}/${eventname}/futureroster/')">Volunteer</button><br>
+                            <button class="direction-btn" onclick="openDirections(${coordinates[1]}, ${coordinates[0]})">Directions</button><br>
+                        </div>
+                    `;
+                    markerIcon = canceledIcon; // Change to canceled icon
+                }
 
-    var marker = L.marker([coordinates[1], coordinates[0]], { icon: canceledIcon })
-        .bindPopup(popupContent);
-
-    // Add the marker to the map
-    markers.addLayer(marker);
-}
-
-
-                // Choose appropriate icon
-                var markerIcon = isJunior ? juniorIcon : fiveKIcon;
-
-                // Create marker and bind popup
+                // Create the marker
                 var marker = L.marker([coordinates[1], coordinates[0]], { icon: markerIcon })
                     .bindPopup(popupContent);
 
-                // Attach the click handler to find nearby places
-                marker.on('click', function () {
-                    console.log(`Marker clicked at: ${coordinates[1]}, ${coordinates[0]}`);
-                    findNearbyPlaces(coordinates[1], coordinates[0]);
-                });
-
-                markers.addLayer(marker);
+                markers.addLayer(marker); // Add to the map
             }
         }
     });
 
     map.addLayer(markers);
 }
+
 
 function findNearbyPlaces(lat, lng) {
     const service = new google.maps.places.PlacesService(document.createElement('div'));
