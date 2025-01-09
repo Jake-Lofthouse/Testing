@@ -713,9 +713,8 @@ fetch('https://raw.githubusercontent.com/ALD-Models/Testing/main/cancellations.j
 function updateMapMarkers() {
     markers.clearLayers();
 
-    // Get the filter type from the URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const filterType = urlParams.get('filter') || ''; // Get 'filter' parameter or default to both
+    // Get the filter type from the URL hash
+    const filterType = window.location.hash.replace('#', '') || ''; // Extract hash fragment (e.g., "#5k" or "#junior")
 
     // Original map marker logic with the filter applied
     data.events.features.forEach(function (feature) {
@@ -766,6 +765,7 @@ function updateMapMarkers() {
 
     map.addLayer(markers);
 }
+
 
 
 
