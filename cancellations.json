@@ -45,6 +45,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Blackhill parkrun",
+        "reason": "Course covered with compacted ice and snow.",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Bowling Park parkrun",
         "reason": "Park being used for sledging and building snowmen",
         "date": "2025-01-11"
@@ -72,6 +77,11 @@
     {
         "name": "Charleston parkrun, South Australia",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Charleston parkrun, West Virginia",
+        "reason": "Weather",
         "date": "2025-01-11"
     },
     {
@@ -190,6 +200,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Mansfield parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Melton Mowbray parkrun",
         "reason": "Bridge on course is broken from floods",
         "date": "2025-01-11"
@@ -247,6 +262,11 @@
     {
         "name": "Puolarmaari parkrun",
         "reason": "Talvitauko",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Rother Valley parkrun",
+        "reason": "Weather",
         "date": "2025-01-11"
     },
     {
@@ -332,6 +352,11 @@
     {
         "name": "Whitley Bay parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Wolford Wood parkrun",
+        "reason": "Weather",
         "date": "2025-01-11"
     },
     {
