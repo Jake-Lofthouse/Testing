@@ -193,7 +193,7 @@
   border-radius: 50%;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
 
-  /* Flex properties to center both vertically and horizontally */
+  /* Flex properties to center both verticy and horizonty */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -256,7 +256,7 @@
             background: rgba(255, 255, 255, 0.5);
             z-index: 900;
             display: none;
-            cursor: not-allowed;
+            cursor: not-owed;
         }
         
         #search-icon.hidden {
@@ -265,7 +265,7 @@
         
 /* Styles for hotel popup image */
 .hotel-popup-image {
-    max-width: 80%;      /* Slightly smaller width (80% of the popup) */
+    max-width: 80%;      /* Slightly smer width (80% of the popup) */
     height: auto;        /* Maintain aspect ratio */
     border-radius: 15px; /* Rounded corners */
     margin-bottom: 10px; /* Space between the image and the iframe */
@@ -454,7 +454,7 @@ function openCampsiteMap(lat, lon) {
 }
 
    document.addEventListener('contextmenu', function(e) {
-            // Allow right-click on #search-container and its children
+            // ow right-click on #search-container and its children
             if (!e.target.closest('#search-container')) {
                 e.preventDefault();
             }
@@ -487,7 +487,7 @@ function openCampsiteMap(lat, lon) {
             }
         });
 
-        // Disable right-click in Leaflet popups specifically, but allow on #search-container
+        // Disable right-click in Leaflet popups specificy, but ow on #search-container
         document.addEventListener('contextmenu', function(e) {
             if (e.target.closest('.leaflet-popup-content') && !e.target.closest('#search-container')) {
                 e.preventDefault(); // Prevent right-click in popups
@@ -656,7 +656,7 @@ map.on('zoomend', updateMarkerVisibility);
 var userLocationMarker; // Variable to hold the user's location marker
   var locationButton = document.getElementById("locationButton");
 
-  // Automatically locate the user on map load
+  // Automaticy locate the user on map load
   map.locate({ setView: true, maxZoom: 13 });
 
   // Function to relocate to the user's current location
@@ -725,7 +725,7 @@ function updateMapMarkers() {
     }
 
     // Update the URL without reloading the page
-    const baseUrl = "https://parkrunnertourist.co.uk/all/";
+    const baseUrl = "https://parkrunnertourist.co.uk/test/";
     const newUrl = filterType ? `${baseUrl}?${filterType}` : baseUrl;
     window.history.replaceState({}, "", newUrl);
 
