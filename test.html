@@ -709,39 +709,38 @@ fetch('https://raw.githubusercontent.com/ALD-Models/Testing/main/cancellations.j
     })
     .catch(err => console.error('Error fetching cancellation data:', err));
 
-function getQueryParam(param) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(param);
-}
-
-
 // Function to update map markers
 function updateMapMarkers() {
     markers.clearLayers();
 
-    if (!data.events) return;
+    // Determine the filter type based on conditions (e.g., visibility)
+    let filterType = '';
+    const show5k = document.getElementById('fiveKCheckbox')?.checked;
+    const showJunior = document.getElementById('juniorCheckbox')?.checked;
 
-    // Get the query parameter
-    const show5k = window.location.search.includes('?5k');
-    const showJunior = window.location.search.includes('?junior');
+    if (show5k && !showJunior) {
+        filterType = '5k';
+    } else if (!show5k && showJunior) {
+        filterType = 'junior';
+    }
 
+    // Update the URL without reloading the page
+    const baseUrl = "https://parkrunnertourist.co.uk/all/";
+    const newUrl = filterType ? `${baseUrl}?${filterType}` : baseUrl;
+    window.history.replaceState({}, "", newUrl);
+
+    // Original map marker logic
     data.events.features.forEach(function (feature) {
         if (feature.geometry.type === 'Point') {
             var coordinates = feature.geometry.coordinates;
             var eventname = normalizeEventName(feature.properties.eventname);
             var eventLongName = feature.properties.EventLongName;
 
-            console.log('Processing event:', eventname);
-
             var isJunior = eventLongName.toLowerCase().includes('junior');
-            var showMarker = (!show5k && !showJunior) || // Show all markers if no query
-                             (show5k && !isJunior) ||   // Show only 5k if ?5k
-                             (showJunior && isJunior);  // Show only juniors if ?junior
+            var showMarker = (isJunior && showJunior) || (!isJunior && show5k);
 
             if (showMarker) {
                 var countryUrl = getCountryUrl(coordinates[1], coordinates[0]);
-
-                // Default popup content
                 var popupContent = `
                     <div>
                         <div class="popup-title">${eventLongName}</div>
@@ -751,9 +750,7 @@ function updateMapMarkers() {
                         <button class="direction-btn" onclick="openDirections(${coordinates[1]}, ${coordinates[0]})">Directions</button><br>
                     </div>
                 `;
-
-                // Check if the event is canceled
-                var markerIcon = isJunior ? juniorIcon : fiveKIcon; // Default icon
+                var markerIcon = isJunior ? juniorIcon : fiveKIcon;
                 if (cancellations[eventname]) {
                     popupContent = `
                         <div>
@@ -764,18 +761,10 @@ function updateMapMarkers() {
                             <button class="direction-btn" onclick="openDirections(${coordinates[1]}, ${coordinates[0]})">Directions</button><br>
                         </div>
                     `;
-                    markerIcon = canceledIcon; // Change to canceled icon
+                    markerIcon = canceledIcon;
                 }
-
-                // Create the marker
                 var marker = L.marker([coordinates[1], coordinates[0]], { icon: markerIcon })
                     .bindPopup(popupContent);
-
-                // Attach the click event to find nearby hotels and campsites
-                marker.on('click', function () {
-                    console.log(`Marker clicked at: ${coordinates[1]}, ${coordinates[0]}`);
-                    findNearbyPlaces(coordinates[1], coordinates[0]); // Show hotels and campsites
-                });
 
                 markers.addLayer(marker);
             }
