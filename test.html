@@ -6,7 +6,7 @@
     <title>parkrunner tourist</title>
     <link rel="shortcut icon" type="image/x.icon" href="favicon.ico?">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
 
 <!-- Google tag (gtag.js) -->
@@ -193,7 +193,7 @@
   border-radius: 50%;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
 
-  /* Flex properties to center both verticy and horizonty */
+  /* Flex properties to center both vertically and horizontally */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -256,7 +256,7 @@
             background: rgba(255, 255, 255, 0.5);
             z-index: 900;
             display: none;
-            cursor: not-owed;
+            cursor: not-allowed;
         }
         
         #search-icon.hidden {
@@ -265,7 +265,7 @@
         
 /* Styles for hotel popup image */
 .hotel-popup-image {
-    max-width: 80%;      /* Slightly smer width (80% of the popup) */
+    max-width: 80%;      /* Slightly smaller width (80% of the popup) */
     height: auto;        /* Maintain aspect ratio */
     border-radius: 15px; /* Rounded corners */
     margin-bottom: 10px; /* Space between the image and the iframe */
@@ -307,6 +307,62 @@
     background-color: var(--button-hover-color); /* Hover color */
 }
 
+        .notifications {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 90%;
+            z-index: 9999;
+        }
+        .notifications .toast {
+            max-width: 400px;
+            border-radius: 4px;
+            padding: 16px;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: show_toast 0.3s ease forwards;
+        }
+        @keyframes show_toast {
+            0% {
+                transform: translateY(100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        .toast::before {
+            content: "";
+            height: 3px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: progress 5s linear forwards;
+            background: #E24D4C;
+        }
+        @keyframes progress {
+            100% {
+                width: 0%;
+            }
+        }
+        .toast .column {
+            display: flex;
+            align-items: center;
+        }
+        .toast .column i {
+            font-size: 1.5rem;
+            color: #E24D4C;
+        }
+        .toast .column span {
+            margin-left: 12px;
+            font-size: 1rem;
+            color: #34495E;
+        }
+
 
         
     iframe {
@@ -336,6 +392,7 @@
             <button id="clear-btn"><i class="fas fa-times"></i></button>
         </div>
     </div>
+    <ul class="notifications"></ul>
     <div id="map-overlay" class="map-overlay"></div>
     <div class="controls">
         <label>
@@ -454,7 +511,7 @@ function openCampsiteMap(lat, lon) {
 }
 
    document.addEventListener('contextmenu', function(e) {
-            // ow right-click on #search-container and its children
+            // Allow right-click on #search-container and its children
             if (!e.target.closest('#search-container')) {
                 e.preventDefault();
             }
@@ -487,7 +544,7 @@ function openCampsiteMap(lat, lon) {
             }
         });
 
-        // Disable right-click in Leaflet popups specificy, but ow on #search-container
+        // Disable right-click in Leaflet popups specifically, but allow on #search-container
         document.addEventListener('contextmenu', function(e) {
             if (e.target.closest('.leaflet-popup-content') && !e.target.closest('#search-container')) {
                 e.preventDefault(); // Prevent right-click in popups
@@ -656,7 +713,7 @@ map.on('zoomend', updateMarkerVisibility);
 var userLocationMarker; // Variable to hold the user's location marker
   var locationButton = document.getElementById("locationButton");
 
-  // Automaticy locate the user on map load
+  // Automatically locate the user on map load
   map.locate({ setView: true, maxZoom: 13 });
 
   // Function to relocate to the user's current location
@@ -666,10 +723,18 @@ var userLocationMarker; // Variable to hold the user's location marker
 
   
 
-  // Event handler for location errors
-  map.on('locationerror', function() {
-    alert("Location access denied.");
-  });
+let canCreateToast = true;
+
+map.on('locationerror', function() {
+  if (canCreateToast) {
+    createToast();
+    canCreateToast = false;
+    setTimeout(function() {
+      canCreateToast = true;
+    }, 10000); // 10 seconds
+  }
+});
+
 
   // Show the button when the map moves away from the user's location
   map.on('moveend', function() {
@@ -683,6 +748,34 @@ var userLocationMarker; // Variable to hold the user's location marker
     }
   });
 
+        const notifications = document.querySelector(".notifications");
+
+        const toastDetails = {
+            timer: 5000, // 5 seconds timer
+            error: {
+                icon: 'fa-triangle-exclamation',
+                text: 'Unable to find your location',
+            }
+        };
+
+        const removeToast = (toast) => {
+            toast.classList.add("hide");
+            setTimeout(() => toast.remove(), 500);
+        }
+
+        const createToast = () => {
+            const { icon, text } = toastDetails.error;
+            const toast = document.createElement("li");
+            toast.className = `toast`;
+            toast.innerHTML = `<div class="column">
+                                 <i class="fa-solid ${icon}"></i>
+                                 <span>${text}</span>
+                              </div>`;
+            notifications.appendChild(toast);
+            setTimeout(() => {
+                removeToast(toast);
+            }, toastDetails.timer);
+        }
 
 
     // Fetch location data and add to the map
@@ -713,25 +806,25 @@ fetch('https://raw.githubusercontent.com/ALD-Models/Testing/main/cancellations.j
 function updateMapMarkers() {
     markers.clearLayers();
 
-    // Get the filter type from the URL hash
-    const filterType = window.location.hash.replace('#', '') || ''; // Extract hash fragment (e.g., "#5k" or "#junior")
+    if (!data.events) return;
 
-    // Original map marker logic with the filter applied
     data.events.features.forEach(function (feature) {
         if (feature.geometry.type === 'Point') {
-            const coordinates = feature.geometry.coordinates;
-            const eventname = normalizeEventName(feature.properties.eventname);
-            const eventLongName = feature.properties.EventLongName;
+            var coordinates = feature.geometry.coordinates;
+            var eventname = normalizeEventName(feature.properties.eventname);
+            var eventLongName = feature.properties.EventLongName;
 
-            const isJunior = eventLongName.toLowerCase().includes('junior');
-            const showMarker = 
-                (filterType === '5k' && !isJunior) || 
-                (filterType === 'junior' && isJunior) || 
-                (!filterType); // Show all if no filterType
+            console.log('Processing event:', eventname);
+
+            var isJunior = eventLongName.toLowerCase().includes('junior');
+            var showMarker = (isJunior && document.getElementById('juniorCheckbox').checked) ||
+                (!isJunior && document.getElementById('fiveKCheckbox').checked);
 
             if (showMarker) {
-                const countryUrl = getCountryUrl(coordinates[1], coordinates[0]);
-                let popupContent = `
+                var countryUrl = getCountryUrl(coordinates[1], coordinates[0]);
+
+                // Default popup content
+                var popupContent = `
                     <div>
                         <div class="popup-title">${eventLongName}</div>
                         <iframe id="weatherIframe" src="https://parkrunnertourist.co.uk/weather?lat=${coordinates[1]}&lon=${coordinates[0]}" scrolling="no"></iframe>
@@ -741,7 +834,8 @@ function updateMapMarkers() {
                     </div>
                 `;
 
-                let markerIcon = isJunior ? juniorIcon : fiveKIcon;
+                // Check if the event is canceled
+                var markerIcon = isJunior ? juniorIcon : fiveKIcon; // Default icon
                 if (cancellations[eventname]) {
                     popupContent = `
                         <div>
@@ -752,11 +846,18 @@ function updateMapMarkers() {
                             <button class="direction-btn" onclick="openDirections(${coordinates[1]}, ${coordinates[0]})">Directions</button><br>
                         </div>
                     `;
-                    markerIcon = canceledIcon;
+                    markerIcon = canceledIcon; // Change to canceled icon
                 }
 
-                const marker = L.marker([coordinates[1], coordinates[0]], { icon: markerIcon })
+                // Create the marker
+                var marker = L.marker([coordinates[1], coordinates[0]], { icon: markerIcon })
                     .bindPopup(popupContent);
+
+                // Attach the click event to find nearby hotels and campsites
+                marker.on('click', function () {
+                    console.log(`Marker clicked at: ${coordinates[1]}, ${coordinates[0]}`);
+                    findNearbyPlaces(coordinates[1], coordinates[0]); // Show hotels and campsites
+                });
 
                 markers.addLayer(marker);
             }
@@ -765,10 +866,6 @@ function updateMapMarkers() {
 
     map.addLayer(markers);
 }
-
-
-
-
 
 
 
@@ -958,7 +1055,7 @@ map.on('locationfound', onLocationFound);
 
 
         function onLocationError(e) {
-            alert(e.message);
+           // alert(e.message);
         }
 
         map.on('locationfound', onLocationFound);
@@ -975,7 +1072,8 @@ map.on('locationfound', onLocationFound);
                 document.getElementById('juniorCheckbox').addEventListener('change', updateMapMarkers);
                 document.getElementById('fiveKCheckbox').addEventListener('change', updateMapMarkers);
             })
-            .catch(err => console.error('Error fetching GeoJSON:', err));
+          
+         .catch(err => console.error('Error fetching GeoJSON:', err));
 
     document.getElementById('search-icon').addEventListener('click', function() {
     var input = document.getElementById('search-input');
