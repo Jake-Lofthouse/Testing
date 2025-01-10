@@ -55,6 +55,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Alvaston parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Ancholme Valley Way parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-11"
@@ -115,6 +120,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Bartley Park parkrun",
+        "reason": "Currently being used as a penguin ice-rink",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Barton Trail parkrun",
         "reason": "Winter Pause",
         "date": "2025-01-11"
@@ -122,6 +132,11 @@
     {
         "name": "Baysgarth Park parkrun",
         "reason": "Team not up to Sarajevo 1984 standards!",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Beacon Hill Country Park parkrun",
+        "reason": "ICE!",
         "date": "2025-01-11"
     },
     {
@@ -240,6 +255,16 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Canons Park parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Carlingwark Loch parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Carlisle parkrun",
         "reason": "Weather",
         "date": "2025-01-11"
@@ -260,6 +285,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Chadderton Hall parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Charleston parkrun, South Australia",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-11"
@@ -272,6 +302,11 @@
     {
         "name": "Chasewater parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Cheadle Hulme parkrun",
+        "reason": "Snow covered ice in multiple areas",
         "date": "2025-01-11"
     },
     {
@@ -575,6 +610,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Goole parkrun",
+        "reason": "Ice patches on both courses making unsafe.",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Graves parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-11"
@@ -607,6 +647,11 @@
     {
         "name": "Haigh Woodland parkrun",
         "reason": "Unsafe route with ice and snow",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Haldon Forest parkrun",
+        "reason": "Snow and Ice on the course",
         "date": "2025-01-11"
     },
     {
@@ -697,6 +742,11 @@
     {
         "name": "Huntingdon parkrun",
         "reason": "Black ice on the course",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Hyde parkrun",
+        "reason": "Weather",
         "date": "2025-01-11"
     },
     {
@@ -895,6 +945,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Markeaton parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Market Bosworth Country Park parkrun",
         "reason": "Weather",
         "date": "2025-01-11"
@@ -960,6 +1015,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Narin Beach parkrun",
+        "reason": "Access routes to Narin in Treacherous Condition.",
+        "date": "2025-01-11"
+    },
+    {
         "name": "New Earswick parkrun",
         "reason": "Ground conditions",
         "date": "2025-01-11"
@@ -970,13 +1030,28 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Newtown parkrun",
+        "reason": "The ice is only suitable for penguins.",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Nordre F\u00e6lled parkrun, Randers",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-11"
     },
     {
+        "name": "Normanby Hall parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
         "name": "North Harbour parkrun",
         "reason": "localised flooding making course unsafe",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Northallerton parkrun",
+        "reason": "thick ice",
         "date": "2025-01-11"
     },
     {
@@ -992,6 +1067,11 @@
     {
         "name": "Oakey parkrun",
         "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Oaklands parkrun",
+        "reason": "Icy paths",
         "date": "2025-01-11"
     },
     {
@@ -1110,6 +1190,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Poolsbrook parkrun",
+        "reason": "Surface only suitable for penguins or ice skates",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Port Hedland parkrun",
         "reason": "Event team unavailable.",
         "date": "2025-01-11"
@@ -1155,6 +1240,16 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Redcar parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Rheinpark parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Riverside Walk parkrun",
         "reason": "Ice - Only possible for Jane Torvill, Eddie the Ea",
         "date": "2025-01-11"
@@ -1166,6 +1261,11 @@
     },
     {
         "name": "Roberts Park parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Roosevelt Island DC parkrun",
         "reason": "Weather",
         "date": "2025-01-11"
     },
@@ -1245,6 +1345,21 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Shepton Mallet parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Shorne Woods parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Silksworth parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Sixfields Upton parkrun",
         "reason": "Weather",
         "date": "2025-01-11"
@@ -1280,6 +1395,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Stadspark parkrun, Sittard",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Stamford Park parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-11"
@@ -1287,6 +1407,11 @@
     {
         "name": "Standerton parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Stewart parkrun, Middlesbrough",
+        "reason": "Too icy & cold for participants and volunteers",
         "date": "2025-01-11"
     },
     {
@@ -1380,6 +1505,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Tonbridge parkrun",
+        "reason": "Flooding of course",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Tooting Common parkrun",
         "reason": "Even icier than last week \u2744\ufe0f",
         "date": "2025-01-11"
@@ -1435,6 +1565,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Vryheid parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Wakefield Thornes parkrun",
         "reason": "Weather",
         "date": "2025-01-11"
@@ -1467,6 +1602,11 @@
     {
         "name": "Wells Estate parkrun",
         "reason": "Venue unavailable during Festive Season",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Wepre parkrun",
+        "reason": "Paths are all covered in ice.",
         "date": "2025-01-11"
     },
     {
@@ -1570,6 +1710,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Wyre Forest parkrun",
+        "reason": "Icy conditions",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Wythenshawe parkrun",
         "reason": "Weather",
         "date": "2025-01-11"
@@ -1577,6 +1722,16 @@
     {
         "name": "Y Promen\u00e2d parkrun, Aberhonddu",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Yarborough Leisure Centre parkrun",
+        "reason": "Course only suitable for polar bears.",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "parkrun Park Miejski, Wejherowo",
+        "reason": "Weather",
         "date": "2025-01-11"
     },
     {
@@ -1685,6 +1840,11 @@
         "date": "2025-01-12"
     },
     {
+        "name": "Hafan Yr Afon junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-12"
+    },
+    {
         "name": "Hereford Leisure Centre junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-01-12"
@@ -1775,6 +1935,11 @@
         "date": "2025-01-12"
     },
     {
+        "name": "Sheffield Olympic Legacy Park junior parkrun",
+        "reason": "lack of volunteers and Weather",
+        "date": "2025-01-12"
+    },
+    {
         "name": "Skelmersdale junior parkrun",
         "reason": "Weather",
         "date": "2025-01-12"
@@ -1800,6 +1965,11 @@
         "date": "2025-01-12"
     },
     {
+        "name": "Torvean junior parkrun",
+        "reason": "Course more suited to polar bears than parkrunners",
+        "date": "2025-01-12"
+    },
+    {
         "name": "Victoria junior parkrun, Stretford",
         "reason": "Weather",
         "date": "2025-01-12"
@@ -1822,6 +1992,11 @@
     {
         "name": "Widnes junior parkrun",
         "reason": "Weather",
+        "date": "2025-01-12"
+    },
+    {
+        "name": "Wilmslow junior parkrun",
+        "reason": "outbreak of synchronized penguin ice-dancing",
         "date": "2025-01-12"
     },
     {
