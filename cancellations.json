@@ -95,6 +95,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Baysgarth Park parkrun",
+        "reason": "Team not up to Sarajevo 1984 standards!",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Bedok Reservoir parkrun",
         "reason": "Event Closed",
         "date": "2025-01-11"
@@ -155,6 +160,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Burnley parkrun",
+        "reason": "Cross country skiing only due to ice and snow",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Butter Trail parkrun",
         "reason": "Winter Pause",
         "date": "2025-01-11"
@@ -182,6 +192,11 @@
     {
         "name": "Chasewater parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Chester parkrun",
+        "reason": "Ice on the paths.",
         "date": "2025-01-11"
     },
     {
@@ -250,7 +265,22 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Crinan Canal parkrun",
+        "reason": "Course unsafe due to ice",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Crosby parkrun",
+        "reason": "Torville and Dean are using the car park to practi",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Cross Flatts parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Croxteth Hall parkrun",
         "reason": "Weather",
         "date": "2025-01-11"
     },
@@ -297,6 +327,11 @@
     {
         "name": "Durbanville parkrun",
         "reason": "Permission issue",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Edenbrook Country parkrun",
+        "reason": "Don't call ice, we'll call you",
         "date": "2025-01-11"
     },
     {
@@ -365,6 +400,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Gedling parkrun",
+        "reason": "Icy paths",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Glossop parkrun",
         "reason": "Weather",
         "date": "2025-01-11"
@@ -375,8 +415,18 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Great Denham parkrun",
+        "reason": "Just one of froze things (+course flooded in part)",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Greenfield Valley parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Guildford parkrun",
+        "reason": "Sports cancelled in park due to frozen ground",
         "date": "2025-01-11"
     },
     {
@@ -445,6 +495,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Ifield Mill Pond parkrun",
+        "reason": "Ice ice baby!! Too much slippery",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Inis Me\u00e1in parkrun",
         "reason": "Funeral services",
         "date": "2025-01-11"
@@ -452,6 +507,11 @@
     {
         "name": "Jacobsdal parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Jesmond Dene parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-11"
     },
     {
@@ -521,6 +581,11 @@
     },
     {
         "name": "Macclesfield parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Maleny Trail parkrun",
         "reason": "Weather",
         "date": "2025-01-11"
     },
@@ -605,6 +670,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Old Railway Trail parkrun, Llangollen",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Oldham parkrun",
         "reason": "Weather",
         "date": "2025-01-11"
@@ -635,6 +705,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Philips Park parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Phoenix parkrun",
         "reason": "Jamaican bob sled team have booked the course!",
         "date": "2025-01-11"
@@ -642,6 +717,11 @@
     {
         "name": "Picnic Point Parklands parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Pokkinen parkrun",
+        "reason": "Kova pakkanen / extreme cold (-21\u00b0C)",
         "date": "2025-01-11"
     },
     {
@@ -700,6 +780,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Rothwell parkrun",
+        "reason": "Both courses are unsafe and too icy \u2744\ufe0f",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Saint-Paulin parkrun",
         "reason": "Winter Pause",
         "date": "2025-01-11"
@@ -740,6 +825,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "South Manchester parkrun",
+        "reason": "Course is a slippy Winter Wonderland",
+        "date": "2025-01-11"
+    },
+    {
         "name": "St Helens parkrun",
         "reason": "Extreme Icy Course only fit for skiing",
         "date": "2025-01-11"
@@ -747,6 +837,11 @@
     {
         "name": "Stamford Park parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Stratford-upon-Avon parkrun",
+        "reason": "Very icy",
         "date": "2025-01-11"
     },
     {
@@ -797,6 +892,11 @@
     {
         "name": "The Wammy parkrun",
         "reason": "Too icy.",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Tooting Common parkrun",
+        "reason": "Even icier than last week \u2744\ufe0f",
         "date": "2025-01-11"
     },
     {
@@ -887,6 +987,11 @@
     {
         "name": "Widnes parkrun",
         "reason": "Jack Frost - First Finisher",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Wilmslow parkrun",
+        "reason": "Weather",
         "date": "2025-01-11"
     },
     {
@@ -1046,6 +1151,11 @@
     },
     {
         "name": "Telford junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-12"
+    },
+    {
+        "name": "Victoria junior parkrun, Stretford",
         "reason": "Weather",
         "date": "2025-01-12"
     },
