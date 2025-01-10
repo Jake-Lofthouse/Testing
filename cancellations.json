@@ -230,6 +230,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Creekside parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Crewe parkrun",
         "reason": "Weather",
         "date": "2025-01-11"
@@ -377,6 +382,11 @@
     {
         "name": "Holy Cross College parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Horspath parkrun",
+        "reason": "Ice and mud - not safe for a gallop",
         "date": "2025-01-11"
     },
     {
@@ -615,6 +625,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Purcell parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Quakers Walk parkrun",
         "reason": "Weather",
         "date": "2025-01-11"
@@ -770,12 +785,22 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Watermead Country Park parkrun",
+        "reason": "Flooding and frozen water",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Wells Estate parkrun",
         "reason": "Venue unavailable during Festive Season",
         "date": "2025-01-11"
     },
     {
         "name": "Wetherby parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "White Lick Creek parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-11"
     },
@@ -931,6 +956,11 @@
     },
     {
         "name": "Sandall Park junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-12"
+    },
+    {
+        "name": "Seymour Park junior parkrun",
         "reason": "Weather",
         "date": "2025-01-12"
     },
