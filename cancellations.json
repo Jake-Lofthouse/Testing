@@ -250,6 +250,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Deep Run parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Dewsbury parkrun",
         "reason": "Weather",
         "date": "2025-01-11"
@@ -317,6 +322,16 @@
     {
         "name": "Fletcher Moss parkrun",
         "reason": "Course flooded",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Fletcher\u2019s Cove parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Ford parkrun",
+        "reason": "Weather",
         "date": "2025-01-11"
     },
     {
