@@ -667,9 +667,9 @@ var userLocationMarker; // Variable to hold the user's location marker
   
 
   // Event handler for location errors
-  map.on('locationerror', function() {
+ /*map.on('locationerror', function() {
     alert("Location access denied.");
-  });
+  });*/
 
   // Show the button when the map moves away from the user's location
   map.on('moveend', function() {
@@ -962,7 +962,7 @@ map.on('locationfound', onLocationFound);
 
 
         function onLocationError(e) {
-            alert(e.message);
+           // alert(e.message);
         }
 
         map.on('locationfound', onLocationFound);
@@ -979,7 +979,8 @@ map.on('locationfound', onLocationFound);
                 document.getElementById('juniorCheckbox').addEventListener('change', updateMapMarkers);
                 document.getElementById('fiveKCheckbox').addEventListener('change', updateMapMarkers);
             })
-            .catch(err => console.error('Error fetching GeoJSON:', err));
+          
+         .catch(err => console.error('Error fetching GeoJSON:', err));
 
     document.getElementById('search-icon').addEventListener('click', function() {
     var input = document.getElementById('search-input');
