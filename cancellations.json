@@ -90,6 +90,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Aplins Weir parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Armley parkrun",
         "reason": "Weather",
         "date": "2025-01-11"
@@ -441,6 +446,11 @@
     },
     {
         "name": "Chopwell Wood parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Citypark parkrun, Craigavon",
         "reason": "Weather",
         "date": "2025-01-11"
     },
@@ -965,6 +975,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Hondajima parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Horsham parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-11"
@@ -1070,8 +1085,18 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Kensington parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Keswick parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Kettering parkrun",
+        "reason": "Weather",
         "date": "2025-01-11"
     },
     {
@@ -1127,6 +1152,11 @@
     {
         "name": "Lancaster parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Larne parkrun",
+        "reason": "Ice throughout course and shortage of volunteers",
         "date": "2025-01-11"
     },
     {
@@ -1427,6 +1457,11 @@
     {
         "name": "North Harbour parkrun",
         "reason": "localised flooding making course unsafe",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "North Shore parkrun",
+        "reason": "Weather",
         "date": "2025-01-11"
     },
     {
@@ -2015,6 +2050,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "The Leas parkrun, Minster",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
         "name": "The Old Showfield parkrun",
         "reason": "Weather",
         "date": "2025-01-11"
@@ -2100,6 +2140,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Vicarstown parkrun",
+        "reason": "Packed snow, still very slippery and dangerous.",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Victoria parkrun, Truro",
         "reason": "Winter Pause",
         "date": "2025-01-11"
@@ -2112,6 +2157,11 @@
     {
         "name": "Vogrie parkrun",
         "reason": "Risk of polar bears on the course due to ice.",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Volksgarten parkrun",
+        "reason": "Weather",
         "date": "2025-01-11"
     },
     {
@@ -2340,18 +2390,8 @@
         "date": "2025-01-11"
     },
     {
-        "name": "Alyn Waters junior parkrun",
-        "reason": "Weather",
-        "date": "2025-01-12"
-    },
-    {
         "name": "Barnsley junior parkrun",
         "reason": "Weather",
-        "date": "2025-01-12"
-    },
-    {
-        "name": "Bodington junior parkrun",
-        "reason": "Venue unavailable",
         "date": "2025-01-12"
     },
     {
@@ -2400,47 +2440,12 @@
         "date": "2025-01-12"
     },
     {
-        "name": "Milnrow Memorial Park junior parkrun",
-        "reason": "Weather",
-        "date": "2025-01-12"
-    },
-    {
-        "name": "Northallerton junior parkrun",
-        "reason": "Weather",
-        "date": "2025-01-12"
-    },
-    {
-        "name": "Pontefract junior parkrun",
-        "reason": "Weather",
-        "date": "2025-01-12"
-    },
-    {
         "name": "Queen\u2019s Park junior parkrun, Bolton",
         "reason": "Course unsafe due to extensive ice coverage.",
         "date": "2025-01-12"
     },
     {
-        "name": "Sedgefield junior parkrun",
-        "reason": "Weather",
-        "date": "2025-01-12"
-    },
-    {
-        "name": "Seymour Park junior parkrun",
-        "reason": "Weather",
-        "date": "2025-01-12"
-    },
-    {
         "name": "Skelmersdale junior parkrun",
-        "reason": "Weather",
-        "date": "2025-01-12"
-    },
-    {
-        "name": "South Park junior parkrun",
-        "reason": "Weather",
-        "date": "2025-01-12"
-    },
-    {
-        "name": "Staveley junior parkrun",
         "reason": "Weather",
         "date": "2025-01-12"
     },
@@ -2452,11 +2457,6 @@
     {
         "name": "Temple Newsam junior parkrun",
         "reason": "Icy paths",
-        "date": "2025-01-12"
-    },
-    {
-        "name": "Wakefield Thornes junior parkrun",
-        "reason": "Course unsafe or blocked",
         "date": "2025-01-12"
     },
     {
