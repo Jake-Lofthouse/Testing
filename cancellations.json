@@ -570,6 +570,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Oakey parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Oakwell Hall parkrun",
         "reason": "Weather",
         "date": "2025-01-11"
@@ -650,7 +655,17 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Riviera on Vaal parkrun",
+        "reason": "Course flooded due to heavy rain",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Roberts Park parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Ros Gregor Trail parkrun",
         "reason": "Weather",
         "date": "2025-01-11"
     },
