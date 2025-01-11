@@ -530,6 +530,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Cootehill parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Crawfordsburn Country parkrun",
         "reason": "Too icy",
         "date": "2025-01-11"
@@ -1887,11 +1892,6 @@
     {
         "name": "Selby parkrun",
         "reason": "Weather",
-        "date": "2025-01-11"
-    },
-    {
-        "name": "Seotlong Agriculture School parkrun",
-        "reason": "Festive Season, low volunteer and participats",
         "date": "2025-01-11"
     },
     {
