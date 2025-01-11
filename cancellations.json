@@ -195,6 +195,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Beatrixpark parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Bedfont Lakes parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-11"
@@ -701,6 +706,11 @@
     },
     {
         "name": "Eglinton parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Egweni River Lodge parkrun",
         "reason": "Weather",
         "date": "2025-01-11"
     },
@@ -1267,6 +1277,11 @@
     {
         "name": "Lough Key parkrun",
         "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Louis Trichardt parkrun",
+        "reason": "Course Wet and slippery & unsafe.",
         "date": "2025-01-11"
     },
     {
@@ -2070,6 +2085,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Terra Nova parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Tewkesbury parkrun",
         "reason": "Park flooded, suitable for swimmers only",
         "date": "2025-01-11"
@@ -2285,6 +2305,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Winthrop Trailhead parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Wisbech parkrun",
         "reason": "Weather",
         "date": "2025-01-11"
@@ -2420,11 +2445,6 @@
         "date": "2025-01-11"
     },
     {
-        "name": "Barnsley junior parkrun",
-        "reason": "Weather",
-        "date": "2025-01-12"
-    },
-    {
         "name": "Bramley junior parkrun",
         "reason": "Weather",
         "date": "2025-01-12"
@@ -2440,21 +2460,6 @@
         "date": "2025-01-12"
     },
     {
-        "name": "Evesham junior parkrun",
-        "reason": "Weather",
-        "date": "2025-01-12"
-    },
-    {
-        "name": "Markeaton junior parkrun",
-        "reason": "Weather",
-        "date": "2025-01-12"
-    },
-    {
-        "name": "Marple junior parkrun",
-        "reason": "Weather and unsafe course",
-        "date": "2025-01-12"
-    },
-    {
         "name": "Queen\u2019s Park junior parkrun, Bolton",
         "reason": "Course unsafe due to extensive ice coverage.",
         "date": "2025-01-12"
@@ -2462,11 +2467,6 @@
     {
         "name": "Skelmersdale junior parkrun",
         "reason": "Weather",
-        "date": "2025-01-12"
-    },
-    {
-        "name": "Temple Newsam junior parkrun",
-        "reason": "Icy paths",
         "date": "2025-01-12"
     },
     {
