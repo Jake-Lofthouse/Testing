@@ -320,6 +320,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Buncrana parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Burgess parkrun",
         "reason": "Weather",
         "date": "2025-01-11"
@@ -2332,11 +2337,6 @@
     {
         "name": "Witton parkrun",
         "reason": "So much Ice on the 1st hill. See you next week",
-        "date": "2025-01-11"
-    },
-    {
-        "name": "Wolford Wood parkrun",
-        "reason": "Weather",
         "date": "2025-01-11"
     },
     {
