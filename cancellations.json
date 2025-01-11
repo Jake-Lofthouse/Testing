@@ -365,11 +365,6 @@
         "date": "2025-01-11"
     },
     {
-        "name": "Canton Lower Rouge Trail parkrun",
-        "reason": "Weather",
-        "date": "2025-01-11"
-    },
-    {
         "name": "Canyon Rim Trail parkrun",
         "reason": "Weather",
         "date": "2025-01-11"
@@ -600,11 +595,6 @@
         "date": "2025-01-11"
     },
     {
-        "name": "Denton Dene parkrun",
-        "reason": "Weather",
-        "date": "2025-01-11"
-    },
-    {
         "name": "Derry City parkrun",
         "reason": "Weather",
         "date": "2025-01-11"
@@ -735,11 +725,6 @@
         "date": "2025-01-11"
     },
     {
-        "name": "Emmerwiesen parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-01-11"
-    },
-    {
         "name": "Endcliffe parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-11"
@@ -752,6 +737,11 @@
     {
         "name": "Erskine Waterfront parkrun",
         "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Evergreen parkrun",
+        "reason": "Evergreen Park closed due to snow and ice",
         "date": "2025-01-11"
     },
     {
@@ -1077,11 +1067,6 @@
     {
         "name": "Ifield Mill Pond parkrun",
         "reason": "Ice ice baby!! Too much slippery",
-        "date": "2025-01-11"
-    },
-    {
-        "name": "Inis Me\u00e1in parkrun",
-        "reason": "Funeral services",
         "date": "2025-01-11"
     },
     {
@@ -2065,6 +2050,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Susquehanna Riverwalk parkrun",
+        "reason": "fresh snow on the path, will be unsafe, roads too!",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Sutton Manor parkrun",
         "reason": "Even Eddie the Eagle wouldn't attempt our hills,",
         "date": "2025-01-11"
@@ -2142,6 +2132,11 @@
     {
         "name": "The Wammy parkrun",
         "reason": "Too icy.",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Third Creek Greenway parkrun",
+        "reason": "Weather",
         "date": "2025-01-11"
     },
     {
@@ -2372,11 +2367,6 @@
     {
         "name": "Wycombe Rye parkrun",
         "reason": "Icy: Torvill and Dean are using the ice to skate",
-        "date": "2025-01-11"
-    },
-    {
-        "name": "Wynyard Woodland parkrun",
-        "reason": "Course more suitable for ice skating",
         "date": "2025-01-11"
     },
     {
