@@ -370,6 +370,16 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Canton Lower Rouge Trail parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Canyon Rim Trail parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Carlingwark Loch parkrun",
         "reason": "Weather",
         "date": "2025-01-11"
@@ -657,6 +667,11 @@
     {
         "name": "Durbanville parkrun",
         "reason": "Permission issue",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Durham NC parkrun",
+        "reason": "Weather",
         "date": "2025-01-11"
     },
     {
@@ -1162,6 +1177,11 @@
     {
         "name": "Laytown Beach parkrun",
         "reason": "High tide",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Leakin Park parkrun",
+        "reason": "Weather",
         "date": "2025-01-11"
     },
     {
@@ -1935,6 +1955,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Spring Rock parkrun",
+        "reason": "Weather",
+        "date": "2025-01-11"
+    },
+    {
         "name": "St Andrews parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-11"
@@ -2420,16 +2445,6 @@
         "date": "2025-01-12"
     },
     {
-        "name": "Guildford junior parkrun",
-        "reason": "Request from Council - freezing conditions",
-        "date": "2025-01-12"
-    },
-    {
-        "name": "Long Eaton junior parkrun",
-        "reason": "Weather",
-        "date": "2025-01-12"
-    },
-    {
         "name": "Markeaton junior parkrun",
         "reason": "Weather",
         "date": "2025-01-12"
@@ -2450,28 +2465,13 @@
         "date": "2025-01-12"
     },
     {
-        "name": "Telford junior parkrun",
-        "reason": "Weather",
-        "date": "2025-01-12"
-    },
-    {
         "name": "Temple Newsam junior parkrun",
         "reason": "Icy paths",
         "date": "2025-01-12"
     },
     {
-        "name": "Whaley Bridge junior parkrun",
-        "reason": "Weather",
-        "date": "2025-01-12"
-    },
-    {
         "name": "Widnes junior parkrun",
         "reason": "Weather",
-        "date": "2025-01-12"
-    },
-    {
-        "name": "Wilmslow junior parkrun",
-        "reason": "outbreak of synchronized penguin ice-dancing",
         "date": "2025-01-12"
     }
 ]
