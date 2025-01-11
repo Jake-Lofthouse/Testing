@@ -120,11 +120,6 @@
         "date": "2025-01-11"
     },
     {
-        "name": "Auldcathie District parkrun",
-        "reason": "Weather",
-        "date": "2025-01-11"
-    },
-    {
         "name": "Aylesbury parkrun",
         "reason": "All courses badly flooded \ud83d\ude41",
         "date": "2025-01-11"
@@ -752,6 +747,11 @@
     {
         "name": "Evesham parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
+        "name": "Exploration Place parkrun",
+        "reason": "Weather",
         "date": "2025-01-11"
     },
     {
