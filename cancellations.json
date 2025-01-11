@@ -2035,6 +2035,11 @@
         "date": "2025-01-11"
     },
     {
+        "name": "Strathcona Island parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-11"
+    },
+    {
         "name": "Stretford parkrun",
         "reason": "Weather",
         "date": "2025-01-11"
@@ -2377,11 +2382,6 @@
     {
         "name": "Wythenshawe parkrun",
         "reason": "Weather",
-        "date": "2025-01-11"
-    },
-    {
-        "name": "Yarborough Leisure Centre parkrun",
-        "reason": "Course only suitable for polar bears.",
         "date": "2025-01-11"
     },
     {
