@@ -4,5 +4,7 @@ Disallow: /stats/
 Disallow: /test/
 Disallow: /5k/
 Disallow: /junior/
+Disallow: /Grace/
+Disallow: /embed/
 Crawl-delay: 10
 Sitemap: https://www.parkrunnertourist.co.uk/sitemap.xml
