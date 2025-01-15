@@ -5,6 +5,11 @@
         "date": "2025-01-18"
     },
     {
+        "name": "Amsterdamse Bos parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-01-18"
+    },
+    {
         "name": "Ankerskogen parkrun",
         "reason": "Vinterpause",
         "date": "2025-01-18"
@@ -102,6 +107,11 @@
     {
         "name": "Millennium Country parkrun, Forest of Marston Vale",
         "reason": "Venue unavailable",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Millennium parkrun",
+        "reason": "Weather",
         "date": "2025-01-18"
     },
     {
