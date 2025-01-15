@@ -40,8 +40,18 @@
         "date": "2025-01-18"
     },
     {
+        "name": "Clifton parkrun",
+        "reason": "No insurance for a slip and slide",
+        "date": "2025-01-18"
+    },
+    {
         "name": "Corner Brook Stream Trail parkrun",
         "reason": "Winter Pause",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Fletcher Moss parkrun",
+        "reason": "River Mersey 3 -  0",
         "date": "2025-01-18"
     },
     {
@@ -57,6 +67,11 @@
     {
         "name": "Huddinge parkrun",
         "reason": "Vinteruppeh\u00e5ll",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Jeune Park parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-18"
     },
     {
@@ -152,6 +167,11 @@
     {
         "name": "Watermead Country Park parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Wetherby parkrun",
+        "reason": "Course still flooded and saturated",
         "date": "2025-01-18"
     },
     {
