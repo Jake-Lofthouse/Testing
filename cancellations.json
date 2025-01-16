@@ -20,6 +20,11 @@
         "date": "2025-01-18"
     },
     {
+        "name": "Baltimore and Annapolis Trail parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-18"
+    },
+    {
         "name": "Barton Trail parkrun",
         "reason": "Winter Pause",
         "date": "2025-01-18"
@@ -120,6 +125,11 @@
         "date": "2025-01-18"
     },
     {
+        "name": "Lousberg parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-18"
+    },
+    {
         "name": "Millennium Country parkrun, Forest of Marston Vale",
         "reason": "Venue unavailable",
         "date": "2025-01-18"
@@ -215,6 +225,11 @@
         "date": "2025-01-18"
     },
     {
+        "name": "Wolford Wood parkrun",
+        "reason": "Course waterlogged",
+        "date": "2025-01-18"
+    },
+    {
         "name": "parkrun de Fontainebleau",
         "reason": "parkrun est actuellement suspendu en France",
         "date": "2025-01-18"
@@ -253,6 +268,11 @@
         "name": "parkrun du Lac de Divonne",
         "reason": "parkrun est actuellement suspendu en France",
         "date": "2025-01-18"
+    },
+    {
+        "name": "Harold Park junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-19"
     },
     {
         "name": "NIAC junior parkrun",
