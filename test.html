@@ -1103,15 +1103,10 @@ map.on('locationfound', onLocationFound);
             
         });
 
-document.getElementById('clear-btn').addEventListener('click', function() {
-    var input = document.getElementById('search-input');
-    var searchIcon = document.getElementById('search-icon');
-    input.value = '';
-    input.classList.remove('show');
-    this.style.display = 'none';
-    searchIcon.classList.remove('hidden'); // Ensure the icon is visible
-    updateMapMarkers();
-        });
+
+
+
+
         
 function debounce(func, delay) {
     let timer;
@@ -1140,6 +1135,11 @@ document.getElementById('search-input').addEventListener(
                     data.events.features.forEach(feature => {
                         if (feature.geometry.type === 'Point') {
                             const [lonEvent, latEvent] = feature.geometry.coordinates;
+                            const eventLongName = feature.properties.EventLongName.toLowerCase();
+
+                            // Determine if the event is a junior parkrun
+                            const isJunior = eventLongName.includes('junior');
+                            const markerIcon = isJunior ? juniorIcon : fiveKIcon; // Use appropriate marker icon
 
                             if (
                                 latEvent >= south &&
@@ -1159,7 +1159,7 @@ document.getElementById('search-input').addEventListener(
                                     </div>
                                 `;
 
-                                const marker = L.marker([latEvent, lonEvent], { icon: fiveKIcon })
+                                const marker = L.marker([latEvent, lonEvent], { icon: markerIcon })
                                     .bindPopup(popupContent)
                                     .on('click', function () {
                                         // Trigger nearby places search on marker click
@@ -1184,19 +1184,22 @@ document.getElementById('search-input').addEventListener(
                 .catch(err => {
                     console.warn("Location not found:", err);
 
+                    // Step 2: Fallback to event name search
                     const matchingEvents = [];
                     data.events.features.forEach(function (feature) {
                         if (feature.geometry.type === 'Point') {
                             const eventLongName = feature.properties.EventLongName.toLowerCase();
+                            const isJunior = eventLongName.includes('junior');
+                            const markerIcon = isJunior ? juniorIcon : fiveKIcon; // Use appropriate marker icon
 
                             if (eventLongName.includes(searchValue)) {
-                                matchingEvents.push(feature);
+                                matchingEvents.push({ feature, markerIcon });
                             }
                         }
                     });
 
                     if (matchingEvents.length > 0) {
-                        const filteredMarkers = matchingEvents.map(feature => {
+                        const filteredMarkers = matchingEvents.map(({ feature, markerIcon }) => {
                             const [lonEvent, latEvent] = feature.geometry.coordinates;
                             const eventname = feature.properties.eventname;
 
@@ -1210,7 +1213,7 @@ document.getElementById('search-input').addEventListener(
                                 </div>
                             `;
 
-                            const marker = L.marker([latEvent, lonEvent], { icon: fiveKIcon })
+                            const marker = L.marker([latEvent, lonEvent], { icon: markerIcon })
                                 .bindPopup(popupContent)
                                 .on('click', function () {
                                     findNearbyPlaces(latEvent, lonEvent);
@@ -1223,7 +1226,7 @@ document.getElementById('search-input').addEventListener(
                         map.addLayer(markers);
 
                         if (matchingEvents.length === 1) {
-                            const [lon, lat] = matchingEvents[0].geometry.coordinates;
+                            const [lon, lat] = matchingEvents[0].feature.geometry.coordinates;
                             map.setView([lat, lon], 15);
                         } else {
                             const group = L.featureGroup(filteredMarkers);
@@ -1239,13 +1242,13 @@ document.getElementById('search-input').addEventListener(
     }, 500)
 );
 
+
 function displayNoResultsMessage() {
     const input = document.getElementById('search-input');
-
-    // Apply JCB-orange border styling
-    input.style.borderColor = '#FFC107'; // JCB-orange color
-    input.style.boxShadow = '0 0 8px #FFC107'; // Slightly thicker shadow
-    input.style.borderWidth = '2px'; // Thicker border
+    
+    input.style.borderColor = '#FFC107'; 
+    input.style.boxShadow = '0 0 8px #FFC107';
+    input.style.borderWidth = '2px';
 
     // Reset styles after 3 seconds
     setTimeout(() => {
