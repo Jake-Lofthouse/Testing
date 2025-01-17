@@ -1103,7 +1103,15 @@ map.on('locationfound', onLocationFound);
             
         });
 
-
+document.getElementById('clear-btn').addEventListener('click', function() {
+    var input = document.getElementById('search-input');
+    var searchIcon = document.getElementById('search-icon');
+    input.value = '';
+    input.classList.remove('show');
+    this.style.display = 'none';
+    searchIcon.classList.remove('hidden'); // Ensure the icon is visible
+    updateMapMarkers();
+        });
 
 
 
