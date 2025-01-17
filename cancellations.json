@@ -45,6 +45,16 @@
         "date": "2025-01-18"
     },
     {
+        "name": "Bill Rose Sports Complex parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Blackbutt parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-18"
+    },
+    {
         "name": "Blackhill parkrun",
         "reason": "Ice on areas of the course",
         "date": "2025-01-18"
@@ -130,8 +140,23 @@
         "date": "2025-01-18"
     },
     {
+        "name": "Fingal Bay parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-18"
+    },
+    {
         "name": "Fletcher Moss parkrun",
         "reason": "River Mersey 3 -  0",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Fletcher\u2019s Cove parkrun",
+        "reason": "Weather - dangerous ice remains on the course",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Gloucester District parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-18"
     },
     {
@@ -200,6 +225,11 @@
         "date": "2025-01-18"
     },
     {
+        "name": "Lakeview parkrun",
+        "reason": "Weather",
+        "date": "2025-01-18"
+    },
+    {
         "name": "Laudium parkrun",
         "reason": "Venue unavailable",
         "date": "2025-01-18"
@@ -242,6 +272,11 @@
     {
         "name": "Miyagawa koen parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Mt Penang parkrun",
+        "reason": "Weather",
         "date": "2025-01-18"
     },
     {
