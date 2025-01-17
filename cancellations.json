@@ -110,6 +110,11 @@
         "date": "2025-01-18"
     },
     {
+        "name": "Karoola Park parkrun",
+        "reason": "Weather",
+        "date": "2025-01-18"
+    },
+    {
         "name": "Kleinplaas parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-18"
@@ -207,6 +212,11 @@
     {
         "name": "The Plens parkrun",
         "reason": "Come snow, water flow or sunny glow; still a no",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "The Terrace parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-18"
     },
     {
