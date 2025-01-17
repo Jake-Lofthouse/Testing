@@ -1138,13 +1138,18 @@ document.getElementById('search-input').addEventListener('input', function() {
                                 <button class="direction-btn" onclick="openDirections(${coordinates[1]}, ${coordinates[0]})">Directions</button><br>
                             </div>
                         `;
-                        markerIcon = L.icon({ iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/Icons/Cancel.png', iconSize: [38, 38] }); // Adjust path and size as needed
+                        markerIcon = L.icon({ iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/Icons/Cancel.png', iconSize: [38, 38] });
                     } else {
                         markerIcon = isJunior ? juniorIcon : fiveKIcon;
                     }
                     
                     var marker = L.marker([coordinates[1], coordinates[0]], {icon: markerIcon})
                         .bindPopup(popupContent);
+                    
+                    // Attach findNearbyPlaces to marker click event
+                    marker.on('click', function () {
+                        findNearbyPlaces(coordinates[1], coordinates[0]);
+                    });
                     
                     markers.addLayer(marker);
                     filteredMarkers.push(marker);
@@ -1163,6 +1168,7 @@ document.getElementById('search-input').addEventListener('input', function() {
         updateMapMarkers();
     }
 });
+
 
     </script>
     
