@@ -75,6 +75,11 @@
         "date": "2025-01-18"
     },
     {
+        "name": "Churchill Parkway parkrun",
+        "reason": "Weather",
+        "date": "2025-01-18"
+    },
+    {
         "name": "Clifton parkrun",
         "reason": "No insurance for a slip and slide",
         "date": "2025-01-18"
@@ -96,6 +101,11 @@
     },
     {
         "name": "Courthouse Lake parkrun",
+        "reason": "Weather",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Dhunggaarr Reserve parkrun",
         "reason": "Weather",
         "date": "2025-01-18"
     },
@@ -195,6 +205,11 @@
         "date": "2025-01-18"
     },
     {
+        "name": "Leakin Park parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-18"
+    },
+    {
         "name": "Lightning Ridge parkrun",
         "reason": "Permission issue",
         "date": "2025-01-18"
@@ -260,8 +275,18 @@
         "date": "2025-01-18"
     },
     {
+        "name": "Port Macquarie parkrun",
+        "reason": "Weather",
+        "date": "2025-01-18"
+    },
+    {
         "name": "Puolarmaari parkrun",
         "reason": "Talvitauko",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Purcell parkrun",
+        "reason": "Weather",
         "date": "2025-01-18"
     },
     {
@@ -290,6 +315,11 @@
         "date": "2025-01-18"
     },
     {
+        "name": "San Remo parkrun",
+        "reason": "Weather",
+        "date": "2025-01-18"
+    },
+    {
         "name": "Sirromet parkrun",
         "reason": "Venue unavailable",
         "date": "2025-01-18"
@@ -302,6 +332,11 @@
     {
         "name": "Sunny Hill parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "The Entrance parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-18"
     },
     {
@@ -355,12 +390,27 @@
         "date": "2025-01-18"
     },
     {
+        "name": "Wauchope parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-18"
+    },
+    {
         "name": "Wetherby parkrun",
         "reason": "Course still flooded and saturated",
         "date": "2025-01-18"
     },
     {
         "name": "Whitley Bay parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Wildflower parkrun",
+        "reason": "Weather",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Willoughby parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-18"
     },
