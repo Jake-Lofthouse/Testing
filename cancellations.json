@@ -1,5 +1,10 @@
 [
     {
+        "name": "Alby G\u00e5rd parkrun",
+        "reason": "Weather",
+        "date": "2025-01-18"
+    },
+    {
         "name": "Alderford Lake parkrun",
         "reason": "The venue is closed for maintenance.",
         "date": "2025-01-18"
@@ -37,6 +42,11 @@
     {
         "name": "Broparken parkrun",
         "reason": "Vinteruppeh\u00e5ll",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Burnage parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-18"
     },
     {
@@ -87,6 +97,11 @@
     {
         "name": "Grahamstown Aquatic Centre parkrun, Medowie",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Henry Kendall Reserve parkrun",
+        "reason": "Weather",
         "date": "2025-01-18"
     },
     {
@@ -242,6 +257,11 @@
     {
         "name": "Victoria parkrun, Truro",
         "reason": "Winter Pause",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Vryheid parkrun",
+        "reason": "Course Flooded",
         "date": "2025-01-18"
     },
     {
