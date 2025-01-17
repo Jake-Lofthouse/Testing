@@ -30,6 +30,11 @@
         "date": "2025-01-18"
     },
     {
+        "name": "Barnsley parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-18"
+    },
+    {
         "name": "Barton Trail parkrun",
         "reason": "Winter Pause",
         "date": "2025-01-18"
@@ -37,6 +42,11 @@
     {
         "name": "Bellevue parkrun",
         "reason": "Winter Pause",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Bowling Park parkrun",
+        "reason": "Lots of unsafe ice across the park",
         "date": "2025-01-18"
     },
     {
@@ -67,6 +77,11 @@
     {
         "name": "College Park parkrun",
         "reason": "Most of the trail still covered in snow and ice",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Conwy parkrun",
+        "reason": "major water leak in area, no facilities available.",
         "date": "2025-01-18"
     },
     {
@@ -116,6 +131,11 @@
     },
     {
         "name": "Jeune Park parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Jock Trail parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-18"
     },
@@ -192,6 +212,11 @@
     {
         "name": "Parke parkrun",
         "reason": "NT are carrying out surfacing works on course.",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Pennington Flash parkrun",
+        "reason": "Section\u2019s  of the course still too icy",
         "date": "2025-01-18"
     },
     {
