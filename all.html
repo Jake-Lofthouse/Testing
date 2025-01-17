@@ -787,6 +787,23 @@ map.on('locationerror', function() {
         }
     });
 
+function fetchLocationCoordinates(place) {
+    const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(place)}`;
+    return fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            if (data && data.length > 0) {
+                const location = data[0];
+                return {
+                    lat: parseFloat(location.lat),
+                    lon: parseFloat(location.lon),
+                    boundingBox: location.boundingbox.map(coord => parseFloat(coord)), // [south, north, west, east]
+                };
+            }
+            throw new Error("Location not found");
+        });
+}
+
 
  
 // Fetch cancellation data
@@ -1086,88 +1103,160 @@ map.on('locationfound', onLocationFound);
             
         });
 
-document.getElementById('clear-btn').addEventListener('click', function() {
-    var input = document.getElementById('search-input');
-    var searchIcon = document.getElementById('search-icon');
-    input.value = '';
-    input.classList.remove('show');
-    this.style.display = 'none';
-    searchIcon.classList.remove('hidden'); // Ensure the icon is visible
-    updateMapMarkers();
-        });
 
-document.getElementById('search-input').addEventListener('input', function() {
-    var searchValue = this.value.trim().toLowerCase();
-    markers.clearLayers();
-    
-    var filteredMarkers = [];
 
-    if (searchValue) {
-        data.events.features.forEach(function(feature) {
-            if (feature.geometry.type === 'Point') {
-                var eventLongName = feature.properties.EventLongName.toLowerCase();
-                var isJunior = eventLongName.includes('junior');
-                var showMarker = (isJunior && document.getElementById('juniorCheckbox').checked) ||
-                                 (!isJunior && document.getElementById('fiveKCheckbox').checked);
 
-                // Split the event name into words and check if any word starts with the search value
-                var words = eventLongName.split(' ');
-                var matchFound = words.some(word => word.startsWith(searchValue));
 
-                if (matchFound && showMarker) {
-                    var coordinates = feature.geometry.coordinates;
-                    var eventname = feature.properties.eventname;
-                    var popupContent = `
-                        <div>
-                            <div class="popup-title">${feature.properties.EventLongName}</div>
-                            <iframe id="weatherIframe" src="https://parkrunnertourist.co.uk/weather?lat=${coordinates[1]}&lon=${coordinates[0]}" scrolling="no"></iframe>
-                            <button class="course-btn" onclick="openUrl('https://www.parkrun.org.uk/${eventname}/course/')">Course</button><br>
-                            <button class="volunteer-btn" onclick="openUrl('https://www.parkrun.org.uk/${eventname}/futureroster/')">Volunteer</button><br>
-                            <button class="direction-btn" onclick="openDirections(${coordinates[1]}, ${coordinates[0]})">Directions</button><br>
-                        </div>
-                    `;
+        
+function debounce(func, delay) {
+    let timer;
+    return function(...args) {
+        clearTimeout(timer);
+        timer = setTimeout(() => func.apply(this, args), delay);
+    };
+}
 
-                    var markerIcon;
-                    if (cancellations[eventname]) {
-                        popupContent = `
-                            <div>
-                                <div class="popup-title">${feature.properties.EventLongName}</div>
-                                <div style="color: red; font-weight: bold;">Cancelled: ${cancellations[eventname]}</div>
-                                <button class="course-btn" onclick="openUrl('https://www.parkrun.org.uk/${eventname}/course/')">Course</button><br>
-                                <button class="volunteer-btn" onclick="openUrl('https://www.parkrun.org.uk/${eventname}/futureroster/')">Volunteer</button><br>
-                                <button class="direction-btn" onclick="openDirections(${coordinates[1]}, ${coordinates[0]})">Directions</button><br>
-                            </div>
-                        `;
-                        markerIcon = L.icon({ iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/Icons/Cancel.png', iconSize: [38, 38] });
-                    } else {
-                        markerIcon = isJunior ? juniorIcon : fiveKIcon;
-                    }
-                    
-                    var marker = L.marker([coordinates[1], coordinates[0]], {icon: markerIcon})
-                        .bindPopup(popupContent);
-                    
-                    // Attach findNearbyPlaces to marker click event
-                    marker.on('click', function () {
-                        findNearbyPlaces(coordinates[1], coordinates[0]);
+
+
+document.getElementById('search-input').addEventListener(
+    'input',
+    debounce(function () {
+        const searchValue = this.value.trim().toLowerCase();
+        markers.clearLayers(); // Clear all markers
+
+        if (searchValue) {
+            // Step 1: Search for the place first
+            fetchLocationCoordinates(searchValue)
+                .then(({ lat, lon, boundingBox }) => {
+                    const [south, north, west, east] = boundingBox;
+
+                    // Display parkruns within the bounding box
+                    const filteredMarkers = [];
+                    data.events.features.forEach(feature => {
+                        if (feature.geometry.type === 'Point') {
+                            const [lonEvent, latEvent] = feature.geometry.coordinates;
+                            const eventLongName = feature.properties.EventLongName.toLowerCase();
+
+                            // Determine if the event is a junior parkrun
+                            const isJunior = eventLongName.includes('junior');
+                            const markerIcon = isJunior ? juniorIcon : fiveKIcon; // Use appropriate marker icon
+
+                            if (
+                                latEvent >= south &&
+                                latEvent <= north &&
+                                lonEvent >= west &&
+                                lonEvent <= east
+                            ) {
+                                const eventname = feature.properties.eventname;
+
+                                const popupContent = `
+                                    <div>
+                                        <div class="popup-title">${feature.properties.EventLongName}</div>
+                                        <iframe id="weatherIframe" src="https://parkrunnertourist.co.uk/weather?lat=${latEvent}&lon=${lonEvent}" scrolling="no"></iframe>
+                                        <button class="course-btn" onclick="openUrl('https://www.parkrun.org.uk/${eventname}/course/')">Course</button><br>
+                                        <button class="volunteer-btn" onclick="openUrl('https://www.parkrun.org.uk/${eventname}/futureroster/')">Volunteer</button><br>
+                                        <button class="direction-btn" onclick="openDirections(${latEvent}, ${lonEvent})">Directions</button><br>
+                                    </div>
+                                `;
+
+                                const marker = L.marker([latEvent, lonEvent], { icon: markerIcon })
+                                    .bindPopup(popupContent)
+                                    .on('click', function () {
+                                        // Trigger nearby places search on marker click
+                                        findNearbyPlaces(latEvent, lonEvent);
+                                    });
+
+                                // Add marker to cluster group after attaching the click event
+                                markers.addLayer(marker);
+                                filteredMarkers.push(marker);
+                            }
+                        }
                     });
-                    
-                    markers.addLayer(marker);
-                    filteredMarkers.push(marker);
-                }
-            }
-        });
-        
-        map.addLayer(markers);
-        
-        // Adjust map view to show all filtered markers
-        if (filteredMarkers.length > 0) {
-            var group = L.featureGroup(filteredMarkers);
-            map.fitBounds(group.getBounds());
+
+                    if (filteredMarkers.length > 0) {
+                        map.addLayer(markers);
+                        const group = L.featureGroup(filteredMarkers);
+                        map.fitBounds(group.getBounds());
+                    } else {
+                        displayNoResultsMessage(); // Notify when no parkruns found
+                    }
+                })
+                .catch(err => {
+                    console.warn("Location not found:", err);
+
+                    // Step 2: Fallback to event name search
+                    const matchingEvents = [];
+                    data.events.features.forEach(function (feature) {
+                        if (feature.geometry.type === 'Point') {
+                            const eventLongName = feature.properties.EventLongName.toLowerCase();
+                            const isJunior = eventLongName.includes('junior');
+                            const markerIcon = isJunior ? juniorIcon : fiveKIcon; // Use appropriate marker icon
+
+                            if (eventLongName.includes(searchValue)) {
+                                matchingEvents.push({ feature, markerIcon });
+                            }
+                        }
+                    });
+
+                    if (matchingEvents.length > 0) {
+                        const filteredMarkers = matchingEvents.map(({ feature, markerIcon }) => {
+                            const [lonEvent, latEvent] = feature.geometry.coordinates;
+                            const eventname = feature.properties.eventname;
+
+                            const popupContent = `
+                                <div>
+                                    <div class="popup-title">${feature.properties.EventLongName}</div>
+                                    <iframe id="weatherIframe" src="https://parkrunnertourist.co.uk/weather?lat=${latEvent}&lon=${lonEvent}" scrolling="no"></iframe>
+                                    <button class="course-btn" onclick="openUrl('https://www.parkrun.org.uk/${eventname}/course/')">Course</button><br>
+                                    <button class="volunteer-btn" onclick="openUrl('https://www.parkrun.org.uk/${eventname}/futureroster/')">Volunteer</button><br>
+                                    <button class="direction-btn" onclick="openDirections(${latEvent}, ${lonEvent})">Directions</button><br>
+                                </div>
+                            `;
+
+                            const marker = L.marker([latEvent, lonEvent], { icon: markerIcon })
+                                .bindPopup(popupContent)
+                                .on('click', function () {
+                                    findNearbyPlaces(latEvent, lonEvent);
+                                });
+
+                            markers.addLayer(marker);
+                            return marker;
+                        });
+
+                        map.addLayer(markers);
+
+                        if (matchingEvents.length === 1) {
+                            const [lon, lat] = matchingEvents[0].feature.geometry.coordinates;
+                            map.setView([lat, lon], 15);
+                        } else {
+                            const group = L.featureGroup(filteredMarkers);
+                            map.fitBounds(group.getBounds());
+                        }
+                    } else {
+                        displayNoResultsMessage(); // Notify when no matching events
+                    }
+                });
+        } else {
+            updateMapMarkers(); // Reset markers if the search is cleared
         }
-    } else {
-        updateMapMarkers();
-    }
-});
+    }, 500)
+);
+
+
+function displayNoResultsMessage() {
+    const input = document.getElementById('search-input');
+    
+    input.style.borderColor = '#FFC107'; 
+    input.style.boxShadow = '0 0 8px #FFC107';
+    input.style.borderWidth = '2px';
+
+    // Reset styles after 3 seconds
+    setTimeout(() => {
+        input.style.borderColor = '';
+        input.style.boxShadow = '';
+        input.style.borderWidth = '';
+    }, 3000);
+}
 
 
     </script>
