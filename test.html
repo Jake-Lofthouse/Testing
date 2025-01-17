@@ -1178,13 +1178,12 @@ document.getElementById('search-input').addEventListener(
                         const group = L.featureGroup(filteredMarkers);
                         map.fitBounds(group.getBounds());
                     } else {
-                        console.warn("No parkruns found in this area");
+                        displayNoResultsMessage(); // Notify when no parkruns found
                     }
                 })
                 .catch(err => {
                     console.warn("Location not found:", err);
 
-                    // Step 2: Fallback to event name search
                     const matchingEvents = [];
                     data.events.features.forEach(function (feature) {
                         if (feature.geometry.type === 'Point') {
@@ -1214,11 +1213,9 @@ document.getElementById('search-input').addEventListener(
                             const marker = L.marker([latEvent, lonEvent], { icon: fiveKIcon })
                                 .bindPopup(popupContent)
                                 .on('click', function () {
-                                    // Trigger nearby places search on marker click
                                     findNearbyPlaces(latEvent, lonEvent);
                                 });
 
-                            // Add marker to cluster group after attaching the click event
                             markers.addLayer(marker);
                             return marker;
                         });
@@ -1233,7 +1230,7 @@ document.getElementById('search-input').addEventListener(
                             map.fitBounds(group.getBounds());
                         }
                     } else {
-                        console.warn("No parkrun events match the search.");
+                        displayNoResultsMessage(); // Notify when no matching events
                     }
                 });
         } else {
@@ -1242,7 +1239,21 @@ document.getElementById('search-input').addEventListener(
     }, 500)
 );
 
+function displayNoResultsMessage() {
+    const input = document.getElementById('search-input');
 
+    // Apply JCB-orange border styling
+    input.style.borderColor = '#FFC107'; // JCB-orange color
+    input.style.boxShadow = '0 0 8px #FFC107'; // Slightly thicker shadow
+    input.style.borderWidth = '2px'; // Thicker border
+
+    // Reset styles after 3 seconds
+    setTimeout(() => {
+        input.style.borderColor = '';
+        input.style.boxShadow = '';
+        input.style.borderWidth = '';
+    }, 3000);
+}
 
 
     </script>
