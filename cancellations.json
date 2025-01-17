@@ -45,6 +45,11 @@
         "date": "2025-01-18"
     },
     {
+        "name": "Blackhill parkrun",
+        "reason": "Ice on areas of the course",
+        "date": "2025-01-18"
+    },
+    {
         "name": "Bowling Park parkrun",
         "reason": "Lots of unsafe ice across the park",
         "date": "2025-01-18"
@@ -90,13 +95,28 @@
         "date": "2025-01-18"
     },
     {
+        "name": "Courthouse Lake parkrun",
+        "reason": "Weather",
+        "date": "2025-01-18"
+    },
+    {
         "name": "Dishley parkrun, Loughborough",
         "reason": "Recent flooding has damaged pathways.",
         "date": "2025-01-18"
     },
     {
+        "name": "Downham Market Academy parkrun",
+        "reason": "Weather",
+        "date": "2025-01-18"
+    },
+    {
         "name": "Ehrenbreitstein parkrun",
         "reason": "Treibgut auf der Strecke nach Hochwasser",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Ellon parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-18"
     },
     {
@@ -112,6 +132,11 @@
     {
         "name": "Grahamstown Aquatic Centre parkrun, Medowie",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Hamlet Park parkrun",
+        "reason": "Weather",
         "date": "2025-01-18"
     },
     {
@@ -150,7 +175,17 @@
         "date": "2025-01-18"
     },
     {
+        "name": "Kensington parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-18"
+    },
+    {
         "name": "Kleinplaas parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Lahden satama parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-18"
     },
@@ -245,6 +280,11 @@
         "date": "2025-01-18"
     },
     {
+        "name": "Roosevelt Island DC parkrun",
+        "reason": "Weather",
+        "date": "2025-01-18"
+    },
+    {
         "name": "Saint-Paulin parkrun",
         "reason": "Winter Pause",
         "date": "2025-01-18"
@@ -280,6 +320,11 @@
         "date": "2025-01-18"
     },
     {
+        "name": "T\u00f8yen parkrun",
+        "reason": "Would be better on ice skates. Banen er en isbane",
+        "date": "2025-01-18"
+    },
+    {
         "name": "University of Northampton parkrun",
         "reason": "Venue unavailable",
         "date": "2025-01-18"
@@ -287,6 +332,11 @@
     {
         "name": "Ury Riverside parkrun",
         "reason": "course flooded in places..",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Vallaskogen parkrun",
+        "reason": "The ice is snow joke.",
         "date": "2025-01-18"
     },
     {
