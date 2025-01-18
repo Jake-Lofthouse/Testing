@@ -60,6 +60,11 @@
         "date": "2025-01-18"
     },
     {
+        "name": "Blyth Links parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-18"
+    },
+    {
         "name": "Bowling Park parkrun",
         "reason": "Lots of unsafe ice across the park",
         "date": "2025-01-18"
@@ -111,6 +116,11 @@
     },
     {
         "name": "Courthouse Lake parkrun",
+        "reason": "Weather",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Darlington South Park parkrun",
         "reason": "Weather",
         "date": "2025-01-18"
     },
@@ -400,6 +410,11 @@
         "date": "2025-01-18"
     },
     {
+        "name": "Sutton Manor parkrun",
+        "reason": "Ice on paths",
+        "date": "2025-01-18"
+    },
+    {
         "name": "The Entrance parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-18"
@@ -487,6 +502,16 @@
     {
         "name": "Wolford Wood parkrun",
         "reason": "Course waterlogged",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "parkrun Ekomarina",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "parkrun Wzniesienie Osowy",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-18"
     },
     {
