@@ -125,6 +125,11 @@
         "date": "2025-01-18"
     },
     {
+        "name": "Denton Dene parkrun",
+        "reason": "Weather",
+        "date": "2025-01-18"
+    },
+    {
         "name": "Dhunggaarr Reserve parkrun",
         "reason": "Weather",
         "date": "2025-01-18"
@@ -195,6 +200,11 @@
         "date": "2025-01-18"
     },
     {
+        "name": "Hamsterley Forest parkrun",
+        "reason": "Ice on course, penguins having fun!",
+        "date": "2025-01-18"
+    },
+    {
         "name": "Henry Kendall Reserve parkrun",
         "reason": "Weather",
         "date": "2025-01-18"
@@ -262,6 +272,11 @@
     {
         "name": "Leakin Park parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Leazes parkrun",
+        "reason": "Thick frost on sections of the course",
         "date": "2025-01-18"
     },
     {
@@ -387,6 +402,11 @@
     {
         "name": "San Remo parkrun",
         "reason": "Weather",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Silksworth parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-18"
     },
     {
@@ -557,6 +577,11 @@
     {
         "name": "Harold Park junior parkrun",
         "reason": "Weather",
+        "date": "2025-01-19"
+    },
+    {
+        "name": "Medway junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-19"
     },
     {
