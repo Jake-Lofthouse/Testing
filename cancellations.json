@@ -95,6 +95,11 @@
         "date": "2025-01-18"
     },
     {
+        "name": "Charleston parkrun, West Virginia",
+        "reason": "Icy conditions on the pathways",
+        "date": "2025-01-18"
+    },
+    {
         "name": "Churchill Parkway parkrun",
         "reason": "Weather",
         "date": "2025-01-18"
@@ -290,6 +295,11 @@
         "date": "2025-01-18"
     },
     {
+        "name": "Lillie parkrun, Ann Arbor",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-18"
+    },
+    {
         "name": "Lillsj\u00f6n parkrun",
         "reason": "Vinteruppeh\u00e5ll",
         "date": "2025-01-18"
@@ -301,6 +311,11 @@
     },
     {
         "name": "Lousberg parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Mansfield OH parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-18"
     },
@@ -347,6 +362,11 @@
     {
         "name": "Ocean Grove parkrun",
         "reason": "Permission issue",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Osborn MetroPark parkrun",
+        "reason": "Weather",
         "date": "2025-01-18"
     },
     {
@@ -451,6 +471,11 @@
     },
     {
         "name": "The Terrace parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Third Creek Greenway parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-18"
     },
