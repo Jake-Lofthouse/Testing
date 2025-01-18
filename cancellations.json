@@ -270,6 +270,11 @@
         "date": "2025-01-18"
     },
     {
+        "name": "Lake Pacawa parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-01-18"
+    },
+    {
         "name": "Lakeview parkrun",
         "reason": "Weather",
         "date": "2025-01-18"
@@ -605,6 +610,11 @@
         "date": "2025-01-18"
     },
     {
+        "name": "Barnsley junior parkrun",
+        "reason": "Unsafe course due to ice",
+        "date": "2025-01-19"
+    },
+    {
         "name": "Harold Park junior parkrun",
         "reason": "Weather",
         "date": "2025-01-19"
@@ -617,6 +627,11 @@
     {
         "name": "NIAC junior parkrun",
         "reason": "Venue unavailable - athletics event on course",
+        "date": "2025-01-19"
+    },
+    {
+        "name": "South Park junior parkrun",
+        "reason": "Weather",
         "date": "2025-01-19"
     }
 ]
