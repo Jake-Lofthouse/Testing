@@ -155,6 +155,11 @@
         "date": "2025-01-18"
     },
     {
+        "name": "George Lane Memorial parkrun",
+        "reason": "Weather",
+        "date": "2025-01-18"
+    },
+    {
         "name": "Gloucester District parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-18"
@@ -196,6 +201,11 @@
     },
     {
         "name": "Jock Trail parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Joe Creason parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-18"
     },
@@ -290,6 +300,11 @@
         "date": "2025-01-18"
     },
     {
+        "name": "Nose Hill parkrun",
+        "reason": "Weather",
+        "date": "2025-01-18"
+    },
+    {
         "name": "Ocean Grove parkrun",
         "reason": "Permission issue",
         "date": "2025-01-18"
@@ -362,6 +377,11 @@
     {
         "name": "South Boulder Creek parkrun",
         "reason": "Weather",
+        "date": "2025-01-18"
+    },
+    {
+        "name": "Strathcona Island parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-18"
     },
     {
