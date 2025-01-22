@@ -45,8 +45,18 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Castlewellan parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Charleston parkrun, South Australia",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Colby parkrun",
+        "reason": "Weather",
         "date": "2025-01-25"
     },
     {
@@ -57,6 +67,11 @@
     {
         "name": "Fish Hoek parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Hampton Oval parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-25"
     },
     {
