@@ -75,6 +75,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Fletcher Moss parkrun",
+        "reason": "Mother Nature continues to win",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Hampton Oval parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-25"
@@ -192,6 +197,11 @@
     {
         "name": "Whitley Bay parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "parkrun Zielona G\u00f3ra",
+        "reason": "Shortage of volunteers",
         "date": "2025-01-25"
     },
     {
