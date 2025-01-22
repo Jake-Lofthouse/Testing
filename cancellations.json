@@ -65,6 +65,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Fell Foot parkrun, Newby Bridge",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Fish Hoek parkrun",
         "reason": "Venue unavailable",
         "date": "2025-01-25"
@@ -137,6 +142,11 @@
     {
         "name": "Puolarmaari parkrun",
         "reason": "Talvitauko",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Rostrevor parkrun",
+        "reason": "Weather",
         "date": "2025-01-25"
     },
     {
