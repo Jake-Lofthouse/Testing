@@ -45,6 +45,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Breakwater parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Bressay parkrun",
         "reason": "Weather",
         "date": "2025-01-25"
@@ -62,6 +67,11 @@
     {
         "name": "Butter Trail parkrun",
         "reason": "Winter Pause",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Cabinteely parkrun",
+        "reason": "Weather",
         "date": "2025-01-25"
     },
     {
@@ -155,6 +165,26 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Kilkenny parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Knockbracken Reservoir parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Largs Prom parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Lews Castle parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Lightning Ridge parkrun",
         "reason": "Venue unavailable",
         "date": "2025-01-25"
@@ -190,6 +220,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Mount Stuart parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Mtunzini parkrun",
         "reason": "Venue unavailable",
         "date": "2025-01-25"
@@ -205,6 +240,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Orangefield parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Oranmore parkrun",
         "reason": "Mark of Respect",
         "date": "2025-01-25"
@@ -212,6 +252,11 @@
     {
         "name": "Oriam parkrun",
         "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Penrhyn parkrun",
+        "reason": "Venue unavailable",
         "date": "2025-01-25"
     },
     {
@@ -267,6 +312,16 @@
     {
         "name": "Victoria parkrun, Truro",
         "reason": "Winter Pause",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Vogrie parkrun",
+        "reason": "We don\u2019t want to reenacting The Wizard of Oz!",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Wallace parkrun, Lisburn",
+        "reason": "Weather",
         "date": "2025-01-25"
     },
     {
@@ -342,6 +397,11 @@
     {
         "name": "Coronation Park junior parkrun",
         "reason": "No RD available",
+        "date": "2025-01-26"
+    },
+    {
+        "name": "Magherafelt junior parkrun",
+        "reason": "Weather",
         "date": "2025-01-26"
     },
     {
