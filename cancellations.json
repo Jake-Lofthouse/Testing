@@ -80,6 +80,16 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Dean Castle Country Park parkrun",
+        "reason": "At request of landowner",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Father Collins parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Fell Foot parkrun, Newby Bridge",
         "reason": "Weather",
         "date": "2025-01-25"
@@ -150,8 +160,18 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Monaghan Town parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Mtunzini parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Narin Beach parkrun",
+        "reason": "Coastal Warnings After Red Warning \u26a0\ufe0f",
         "date": "2025-01-25"
     },
     {
@@ -175,6 +195,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Rothay Park parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Saint-Paulin parkrun",
         "reason": "Winter Pause",
         "date": "2025-01-25"
@@ -187,6 +212,11 @@
     {
         "name": "South Bank parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "St Anne\u2019s parkrun",
+        "reason": "Red Weather warning and potential effects on route",
         "date": "2025-01-25"
     },
     {
@@ -212,6 +242,11 @@
     {
         "name": "Welkom parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Whinlatter Forest parkrun",
+        "reason": "Due to amber warning for wind  - storm Eowyn",
         "date": "2025-01-25"
     },
     {
@@ -282,6 +317,11 @@
     {
         "name": "Moors Valley junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-01-26"
+    },
+    {
+        "name": "NIAC junior parkrun",
+        "reason": "Running test event",
         "date": "2025-01-26"
     },
     {
