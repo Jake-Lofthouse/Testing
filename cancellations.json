@@ -65,6 +65,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Bushy parkrun, Dublin",
+        "reason": "Council instructions due to Storm Eowyn.",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Butter Trail parkrun",
         "reason": "Winter Pause",
         "date": "2025-01-25"
@@ -155,6 +160,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Grove Fields parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Hampton Oval parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-25"
@@ -165,8 +175,18 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Hillsborough Forest parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Huddinge parkrun",
         "reason": "Vinteruppeh\u00e5ll",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Ipswich parkrun",
+        "reason": "Permission issue",
         "date": "2025-01-25"
     },
     {
@@ -186,6 +206,11 @@
     },
     {
         "name": "Kilkenny parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Killarney House parkrun",
         "reason": "Weather",
         "date": "2025-01-25"
     },
@@ -260,6 +285,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Nostell parkrun",
+        "reason": "Post \u00c9owyn site closed for checking",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Ocean Grove parkrun",
         "reason": "Permission issue",
         "date": "2025-01-25"
@@ -276,6 +306,11 @@
     },
     {
         "name": "Oriam parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Ormeau parkrun",
         "reason": "Weather",
         "date": "2025-01-25"
     },
@@ -297,6 +332,11 @@
     {
         "name": "Riviera on Vaal parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Ross-on-Wye parkrun",
+        "reason": "Weather a(bomb)ination- unapologetically British",
         "date": "2025-01-25"
     },
     {
@@ -335,6 +375,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Somerset West parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-01-25"
+    },
+    {
         "name": "South Bank parkrun",
         "reason": "Venue unavailable",
         "date": "2025-01-25"
@@ -352,6 +397,11 @@
     {
         "name": "Taree parkrun",
         "reason": "Council works preventing access",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "The Fisherman\u2018s Walk parkrun",
+        "reason": "Weather",
         "date": "2025-01-25"
     },
     {
@@ -482,6 +532,11 @@
     {
         "name": "NIAC junior parkrun",
         "reason": "Running test event",
+        "date": "2025-01-26"
+    },
+    {
+        "name": "Riverside junior parkrun, Ballymoney",
+        "reason": "Weather",
         "date": "2025-01-26"
     },
     {
