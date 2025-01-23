@@ -75,6 +75,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Carrickfergus parkrun",
+        "reason": "Anticipated storm damage, plus 40mph wind/-7 temps",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Castlewellan parkrun",
         "reason": "Weather",
         "date": "2025-01-25"
@@ -112,6 +117,21 @@
     {
         "name": "Dean Castle Country Park parkrun",
         "reason": "At request of landowner",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Dungannon Park parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Elgin parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Falls parkrun, Belfast",
+        "reason": "Venue unavailable",
         "date": "2025-01-25"
     },
     {
@@ -235,6 +255,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "New Ross parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Ocean Grove parkrun",
         "reason": "Permission issue",
         "date": "2025-01-25"
@@ -255,6 +280,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Paisley Park parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Penrhyn parkrun",
         "reason": "Venue unavailable",
         "date": "2025-01-25"
@@ -262,6 +292,11 @@
     {
         "name": "Puolarmaari parkrun",
         "reason": "Talvitauko",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Riviera on Vaal parkrun",
+        "reason": "Venue unavailable",
         "date": "2025-01-25"
     },
     {
@@ -275,8 +310,23 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Rushmere parkrun",
+        "reason": "High winds forecast - danger from falling trees",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Saint-Paulin parkrun",
         "reason": "Winter Pause",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Settlers Park parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Shanganagh parkrun",
+        "reason": "Weather",
         "date": "2025-01-25"
     },
     {
@@ -292,6 +342,11 @@
     {
         "name": "St Anne\u2019s parkrun",
         "reason": "Red Weather warning and potential effects on route",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Stormont parkrun",
+        "reason": "Venue unavailable",
         "date": "2025-01-25"
     },
     {
@@ -321,6 +376,11 @@
     },
     {
         "name": "Wallace parkrun, Lisburn",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Waterworks parkrun, Belfast",
         "reason": "Weather",
         "date": "2025-01-25"
     },
@@ -390,6 +450,11 @@
         "date": "2025-01-26"
     },
     {
+        "name": "Belfast Victoria junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-26"
+    },
+    {
         "name": "Cambridge junior parkrun",
         "reason": "Cyclocross event in the park",
         "date": "2025-01-26"
@@ -407,6 +472,11 @@
     {
         "name": "Moors Valley junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-01-26"
+    },
+    {
+        "name": "Musgrave junior parkrun",
+        "reason": "Weather",
         "date": "2025-01-26"
     },
     {
