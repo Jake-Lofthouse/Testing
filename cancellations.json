@@ -35,6 +35,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Auldcathie District parkrun",
+        "reason": "Stormzy is kicking off",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Aviemore parkrun",
         "reason": "Weather",
         "date": "2025-01-25"
@@ -132,6 +137,11 @@
     {
         "name": "Buncrana parkrun",
         "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Bundaberg parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-25"
     },
     {
@@ -550,6 +560,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Leazes parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Lees Road parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-25"
@@ -602,6 +617,11 @@
     {
         "name": "Loftsgardsbrua parkrun",
         "reason": "Vinterpause",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Longford parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-25"
     },
     {
@@ -685,6 +705,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "New York Central Fitness Trail parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Northallerton parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-25"
@@ -752,6 +777,11 @@
     {
         "name": "Perth parkrun",
         "reason": "Flying sticks & M Poppins after our course record",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Polkemmet Country parkrun",
+        "reason": "Blowing a hoolie",
         "date": "2025-01-25"
     },
     {
@@ -860,6 +890,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Sippo Lake parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Sirromet parkrun",
         "reason": "Venue unavailable",
         "date": "2025-01-25"
@@ -882,6 +917,11 @@
     {
         "name": "South Bank parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Southport parkrun",
+        "reason": "Venue unavailable - not reopened following Eowyn.",
         "date": "2025-01-25"
     },
     {
@@ -1015,6 +1055,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Westport parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Whinlatter Forest parkrun",
         "reason": "Due to amber warning for wind  - storm Eowyn",
         "date": "2025-01-25"
@@ -1027,6 +1072,11 @@
     {
         "name": "Wolford Wood parkrun",
         "reason": "Course waterlogged",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Workman\u2019s Beach parkrun",
+        "reason": "Weather",
         "date": "2025-01-25"
     },
     {
@@ -1095,6 +1145,11 @@
         "date": "2025-01-26"
     },
     {
+        "name": "Cambourne junior parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-26"
+    },
+    {
         "name": "Cambridge junior parkrun",
         "reason": "Cyclocross event in the park",
         "date": "2025-01-26"
@@ -1102,6 +1157,11 @@
     {
         "name": "Coronation Park junior parkrun",
         "reason": "No RD available",
+        "date": "2025-01-26"
+    },
+    {
+        "name": "Cotlands Park junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-26"
     },
     {
@@ -1162,6 +1222,11 @@
     {
         "name": "West Lothian Cycle Circuit junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-01-26"
+    },
+    {
+        "name": "Westside Playing Fields junior parkrun",
+        "reason": "Weather",
         "date": "2025-01-26"
     }
 ]
