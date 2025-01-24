@@ -25,6 +25,16 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Avondale Forest parkrun",
+        "reason": "Large debris on route due to red weather warning",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Aylesbury parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Baltimore and Annapolis Trail parkrun",
         "reason": "Weather",
         "date": "2025-01-25"
@@ -100,8 +110,18 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Carlingwark Loch parkrun",
+        "reason": "Fallen trees on course and access roads",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Carrickfergus parkrun",
         "reason": "Anticipated storm damage, plus 40mph wind/-7 temps",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Castlebar parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-25"
     },
     {
@@ -120,7 +140,17 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Chopwell Wood parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Clifton parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Clonbur Woods parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-25"
     },
@@ -162,6 +192,26 @@
     {
         "name": "Dean Castle Country Park parkrun",
         "reason": "At request of landowner",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Delamere parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Donabate parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Druridge Bay parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Duffins Trail parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-25"
     },
     {
@@ -245,6 +295,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Hartstown parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Hazlehead parkrun, Aberdeen",
         "reason": "High risk of woodland damage from Storm \u00c9owyn",
         "date": "2025-01-25"
@@ -257,6 +312,11 @@
     {
         "name": "Huddinge parkrun",
         "reason": "Vinteruppeh\u00e5ll",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Illaunmanagh parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-25"
     },
     {
@@ -345,6 +405,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Limavady parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Lochend Woods parkrun",
         "reason": "Trees down on the course",
         "date": "2025-01-25"
@@ -357,6 +422,11 @@
     {
         "name": "Loftsgardsbrua parkrun",
         "reason": "Vinterpause",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Malahide parkrun",
+        "reason": "Weather",
         "date": "2025-01-25"
     },
     {
@@ -390,6 +460,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Mullingar parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Narin Beach parkrun",
         "reason": "Coastal Warnings After Red Warning \u26a0\ufe0f",
         "date": "2025-01-25"
@@ -407,6 +482,16 @@
     {
         "name": "Ocean Grove parkrun",
         "reason": "Permission issue",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Ohio and Erie Canal Reservation parkrun",
+        "reason": "Icy trail and wind chills",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Oldbridge parkrun",
+        "reason": "Weather",
         "date": "2025-01-25"
     },
     {
@@ -440,8 +525,18 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Perth parkrun",
+        "reason": "Flying sticks & M Poppins after our course record",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Poolbeg parkrun",
         "reason": "DCC order in aftermath of storm Eowyn",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Porterstown parkrun",
+        "reason": "Weather",
         "date": "2025-01-25"
     },
     {
@@ -451,6 +546,16 @@
     },
     {
         "name": "Purcell parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "River Valley parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Riverfront parkrun",
         "reason": "Weather",
         "date": "2025-01-25"
     },
@@ -482,6 +587,11 @@
     {
         "name": "Rushmere parkrun",
         "reason": "High winds forecast - danger from falling trees",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Russborough parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-25"
     },
     {
@@ -567,6 +677,21 @@
     {
         "name": "Town Beach parkrun",
         "reason": "Volunteer break, holidays, weather",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Tralee parkrun",
+        "reason": "Cancelled due to Storm \u00c9owyn",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "University of Stirling parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Victoria parkrun, Glasgow",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-25"
     },
     {
