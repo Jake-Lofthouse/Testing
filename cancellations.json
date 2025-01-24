@@ -135,8 +135,18 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Durham NC parkrun",
+        "reason": "Snow and ice on trail make conditions unsafe",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Elgin parkrun",
         "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Evergreen parkrun",
+        "reason": "Snow and ice on trail make conditions unsafe",
         "date": "2025-01-25"
     },
     {
@@ -167,6 +177,11 @@
     {
         "name": "Fletcher Moss parkrun",
         "reason": "Mother Nature continues to win",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Globe parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-25"
     },
     {
@@ -440,6 +455,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Tolka Valley parkrun",
+        "reason": "Red Weather Warning - Storm \u00c9owyn",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Town Beach parkrun",
         "reason": "Volunteer break, holidays, weather",
         "date": "2025-01-25"
@@ -470,6 +490,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Welland Canals Trail parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Whinlatter Forest parkrun",
         "reason": "Due to amber warning for wind  - storm Eowyn",
         "date": "2025-01-25"
@@ -477,6 +502,11 @@
     {
         "name": "Whitley Bay parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Wolford Wood parkrun",
+        "reason": "Course waterlogged",
         "date": "2025-01-25"
     },
     {
@@ -545,6 +575,11 @@
         "date": "2025-01-26"
     },
     {
+        "name": "Killarney House junior parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-01-26"
+    },
+    {
         "name": "Magherafelt junior parkrun",
         "reason": "Weather",
         "date": "2025-01-26"
@@ -577,6 +612,11 @@
     {
         "name": "Thorndon junior parkrun",
         "reason": "Rotary Club Duck Races event on the same day",
+        "date": "2025-01-26"
+    },
+    {
+        "name": "Waterworks junior parkrun",
+        "reason": "Venue unavailable",
         "date": "2025-01-26"
     },
     {
