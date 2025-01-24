@@ -15,6 +15,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Armagh parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Aspen parkrun",
         "reason": "Winter Pause",
         "date": "2025-01-25"
@@ -25,8 +30,18 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Bangor parkrun, Northern Ireland",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Barton Trail parkrun",
         "reason": "Winter Pause",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Bedford parkrun",
+        "reason": "Path in park closed due to Wizard of Oz",
         "date": "2025-01-25"
     },
     {
@@ -90,6 +105,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Castlerea parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Castlewellan parkrun",
         "reason": "Weather",
         "date": "2025-01-25"
@@ -132,6 +152,11 @@
     {
         "name": "Crawfordsburn Country parkrun",
         "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Darndale parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-25"
     },
     {
@@ -265,8 +290,18 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Kirkwall parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Knockbracken Reservoir parkrun",
         "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Knocknacarra parkrun",
+        "reason": "Fallen trees & debris on course",
         "date": "2025-01-25"
     },
     {
@@ -282,6 +317,16 @@
     {
         "name": "Leakin Park parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Lees Road parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Levengrove parkrun",
+        "reason": "Storm \u00c9owyn! ?\ufe0f",
         "date": "2025-01-25"
     },
     {
@@ -395,6 +440,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Poolbeg parkrun",
+        "reason": "DCC order in aftermath of storm Eowyn",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Puolarmaari parkrun",
         "reason": "Talvitauko",
         "date": "2025-01-25"
@@ -460,6 +510,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Skien Fritidspark parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Somerset West parkrun",
         "reason": "Venue unavailable",
         "date": "2025-01-25"
@@ -487,6 +542,11 @@
     {
         "name": "Taree parkrun",
         "reason": "Council works preventing access",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Templemore parkrun",
+        "reason": "Many trees down on course others dangerous",
         "date": "2025-01-25"
     },
     {
@@ -632,6 +692,11 @@
     {
         "name": "Killarney House junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-01-26"
+    },
+    {
+        "name": "Levengrove junior parkrun",
+        "reason": "Weather",
         "date": "2025-01-26"
     },
     {
