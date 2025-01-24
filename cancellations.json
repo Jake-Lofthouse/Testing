@@ -130,6 +130,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Crawfordsburn Country parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Dean Castle Country Park parkrun",
         "reason": "At request of landowner",
         "date": "2025-01-25"
@@ -142,6 +147,11 @@
     {
         "name": "Durham NC parkrun",
         "reason": "Snow and ice on trail make conditions unsafe",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Ecos parkrun, Ballymena",
+        "reason": "Unsafe to course check before dark, storm damage l",
         "date": "2025-01-25"
     },
     {
@@ -260,6 +270,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Lancaster parkrun",
+        "reason": "Fallen tree on course",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Largs Prom parkrun",
         "reason": "Weather",
         "date": "2025-01-25"
@@ -282,6 +297,16 @@
     {
         "name": "Lillsj\u00f6n parkrun",
         "reason": "Vinteruppeh\u00e5ll",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Lochend Woods parkrun",
+        "reason": "Trees down on the course",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Lochore Meadows parkrun",
+        "reason": "Weather",
         "date": "2025-01-25"
     },
     {
