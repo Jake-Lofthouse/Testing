@@ -340,6 +340,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Crinan Canal parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Darndale parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-25"
@@ -1315,6 +1320,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Tubbercurry Trail parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
         "name": "T\u00f8yen parkrun",
         "reason": "Glatt l\u00f8ype og sn\u00f8menn p\u00e5 banen",
         "date": "2025-01-25"
@@ -1510,6 +1520,11 @@
         "date": "2025-01-26"
     },
     {
+        "name": "Beechpark junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-26"
+    },
+    {
         "name": "Belfast Victoria junior parkrun",
         "reason": "Weather",
         "date": "2025-01-26"
@@ -1545,6 +1560,11 @@
         "date": "2025-01-26"
     },
     {
+        "name": "Clevedon Seafront junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-26"
+    },
+    {
         "name": "Cleveragh junior parkrun",
         "reason": "Weather",
         "date": "2025-01-26"
@@ -1552,6 +1572,11 @@
     {
         "name": "Clough Hall junior parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-26"
+    },
+    {
+        "name": "Cobh junior parkrun",
+        "reason": "Weather",
         "date": "2025-01-26"
     },
     {
@@ -1567,6 +1592,11 @@
     {
         "name": "Cotlands Park junior parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-26"
+    },
+    {
+        "name": "Cowick Barton Playing Fields junior parkrun",
+        "reason": "Weather",
         "date": "2025-01-26"
     },
     {
@@ -1595,8 +1625,18 @@
         "date": "2025-01-26"
     },
     {
+        "name": "Iveagh Sports Ground junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-26"
+    },
+    {
         "name": "Killarney House junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-01-26"
+    },
+    {
+        "name": "Larne junior parkrun",
+        "reason": "Weather",
         "date": "2025-01-26"
     },
     {
@@ -1670,7 +1710,17 @@
         "date": "2025-01-26"
     },
     {
+        "name": "Penallta junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-26"
+    },
+    {
         "name": "Riverside junior parkrun, Ballymoney",
+        "reason": "Weather",
+        "date": "2025-01-26"
+    },
+    {
+        "name": "Rockfield junior parkrun",
         "reason": "Weather",
         "date": "2025-01-26"
     },
@@ -1682,6 +1732,21 @@
     {
         "name": "St Mary\u2019s Campus junior parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-01-26"
+    },
+    {
+        "name": "The Great Field junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-26"
+    },
+    {
+        "name": "The Old Rail Trail junior parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-26"
+    },
+    {
+        "name": "The Waterfront junior parkrun",
+        "reason": "Weather",
         "date": "2025-01-26"
     },
     {
