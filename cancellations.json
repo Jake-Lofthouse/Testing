@@ -1550,6 +1550,11 @@
         "date": "2025-01-26"
     },
     {
+        "name": "Clough Hall junior parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-26"
+    },
+    {
         "name": "Collett Park junior parkrun",
         "reason": "Weather",
         "date": "2025-01-26"
@@ -1585,6 +1590,11 @@
         "date": "2025-01-26"
     },
     {
+        "name": "Heavitree junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-26"
+    },
+    {
         "name": "Killarney House junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-01-26"
@@ -1615,6 +1625,11 @@
         "date": "2025-01-26"
     },
     {
+        "name": "Malahide Castle junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-26"
+    },
+    {
         "name": "Mallow Castle junior parkrun",
         "reason": "Weather",
         "date": "2025-01-26"
@@ -1635,12 +1650,22 @@
         "date": "2025-01-26"
     },
     {
+        "name": "Newport junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-26"
+    },
+    {
         "name": "Nursery Drive junior parkrun, Ballinlough",
         "reason": "Debris on course after storm, grassed areas marsh",
         "date": "2025-01-26"
     },
     {
         "name": "Omagh Leisure Complex junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-26"
+    },
+    {
+        "name": "Osterley junior parkrun",
         "reason": "Weather",
         "date": "2025-01-26"
     },
@@ -1686,6 +1711,11 @@
     },
     {
         "name": "Westside Playing Fields junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-26"
+    },
+    {
+        "name": "Weymouth junior parkrun",
         "reason": "Weather",
         "date": "2025-01-26"
     },
