@@ -730,6 +730,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Letterkenny parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Levengrove parkrun",
         "reason": "Storm \u00c9owyn! ?\ufe0f",
         "date": "2025-01-25"
@@ -1510,8 +1515,18 @@
         "date": "2025-01-26"
     },
     {
+        "name": "Arklow Duck Pond junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-26"
+    },
+    {
         "name": "Ballincollig Regional junior parkrun",
         "reason": "Wet and windy weather",
+        "date": "2025-01-26"
+    },
+    {
+        "name": "Bankton Mains Park junior parkrun",
+        "reason": "Weather",
         "date": "2025-01-26"
     },
     {
@@ -1532,6 +1547,11 @@
     {
         "name": "Bracknell junior parkrun",
         "reason": "Waterlogged paths and park.",
+        "date": "2025-01-26"
+    },
+    {
+        "name": "Broadmeadow junior parkrun",
+        "reason": "Weather",
         "date": "2025-01-26"
     },
     {
@@ -1607,6 +1627,11 @@
     {
         "name": "Derry City junior parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-01-26"
+    },
+    {
+        "name": "Devonport junior parkrun",
+        "reason": "Weather",
         "date": "2025-01-26"
     },
     {
@@ -1712,6 +1737,11 @@
     {
         "name": "Penallta junior parkrun",
         "reason": "Weather",
+        "date": "2025-01-26"
+    },
+    {
+        "name": "Pontypridd junior parkrun",
+        "reason": "Yellow weather warning - wind",
         "date": "2025-01-26"
     },
     {
