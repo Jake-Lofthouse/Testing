@@ -230,6 +230,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Colin Glen parkrun",
+        "reason": "Weather",
+        "date": "2025-01-25"
+    },
+    {
         "name": "College Park parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-25"
@@ -237,6 +242,11 @@
     {
         "name": "Con Smith parkrun",
         "reason": "Permission issue",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Cootehill parkrun",
+        "reason": "Weather",
         "date": "2025-01-25"
     },
     {
@@ -492,6 +502,11 @@
     {
         "name": "Judarskogen parkrun",
         "reason": "Vinteruppeh\u00e5ll",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Kensington parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-25"
     },
     {
@@ -1062,6 +1077,11 @@
     {
         "name": "Whinlatter Forest parkrun",
         "reason": "Due to amber warning for wind  - storm Eowyn",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Whitehaven parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-25"
     },
     {
