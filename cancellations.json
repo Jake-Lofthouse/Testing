@@ -1510,6 +1510,16 @@
         "date": "2025-01-26"
     },
     {
+        "name": "Clashduv junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-26"
+    },
+    {
+        "name": "Cleveragh junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-26"
+    },
+    {
         "name": "Coronation Park junior parkrun",
         "reason": "No RD available",
         "date": "2025-01-26"
@@ -1540,7 +1550,22 @@
         "date": "2025-01-26"
     },
     {
+        "name": "Lough Key junior parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-26"
+    },
+    {
+        "name": "Lurgan junior parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-01-26"
+    },
+    {
         "name": "Magherafelt junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-26"
+    },
+    {
+        "name": "Mallow Castle junior parkrun",
         "reason": "Weather",
         "date": "2025-01-26"
     },
@@ -1592,6 +1617,11 @@
     {
         "name": "Westside Playing Fields junior parkrun",
         "reason": "Weather",
+        "date": "2025-01-26"
+    },
+    {
+        "name": "Yeovil Rec junior parkrun",
+        "reason": "Waterlogged. Ground staff have cancelled bookings",
         "date": "2025-01-26"
     }
 ]
