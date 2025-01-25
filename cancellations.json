@@ -1555,6 +1555,11 @@
         "date": "2025-01-26"
     },
     {
+        "name": "Bude Marshes junior parkrun",
+        "reason": "Weather",
+        "date": "2025-01-26"
+    },
+    {
         "name": "Cambourne junior parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-01-26"
@@ -1727,6 +1732,11 @@
     {
         "name": "Omagh Leisure Complex junior parkrun",
         "reason": "Weather",
+        "date": "2025-01-26"
+    },
+    {
+        "name": "Oranmore junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-01-26"
     },
     {
