@@ -180,6 +180,11 @@
         "date": "2025-01-25"
     },
     {
+        "name": "Castleblayney parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-01-25"
+    },
+    {
         "name": "Castlerea parkrun",
         "reason": "Venue unavailable",
         "date": "2025-01-25"
@@ -242,6 +247,11 @@
     {
         "name": "Con Smith parkrun",
         "reason": "Permission issue",
+        "date": "2025-01-25"
+    },
+    {
+        "name": "Coole parkrun",
+        "reason": "Cleanup operations after Storm Eowyn",
         "date": "2025-01-25"
     },
     {
