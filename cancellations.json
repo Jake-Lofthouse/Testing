@@ -1,7 +1,7 @@
 [
     {
         "name": "Amsterdamse Bos parkrun",
-        "reason": "Permission issue",
+        "reason": "Venue unavailable",
         "date": "2025-02-01"
     },
     {
@@ -222,6 +222,11 @@
     {
         "name": "NIAC junior parkrun",
         "reason": "Venue unavailable - athletics event on course",
+        "date": "2025-02-02"
+    },
+    {
+        "name": "Vicarstown junior parkrun",
+        "reason": "Juvenile athletics competition taking place",
         "date": "2025-02-02"
     },
     {
