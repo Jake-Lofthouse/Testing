@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?> 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <!-- Homepage -->
     <url>
@@ -29,6 +29,22 @@
         <loc>https://www.parkrunnertourist.co.uk/B&amp;B</loc>
         <lastmod>2024-11-19</lastmod>
         <changefreq>always</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Features page -->
+    <url>
+        <loc>https://parkrunnertourist.co.uk/#features</loc>
+        <lastmod>2024-11-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Parkrunner Tourist Shop -->
+    <url>
+        <loc>https://aldprint.co.uk/shop/ols/categories/parkrunner-tourist</loc>
+        <lastmod>2024-11-19</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 </urlset>
