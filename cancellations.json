@@ -55,6 +55,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Deerpark Forest parkrun, Virginia",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Dlinza Forest parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-01"
@@ -117,6 +122,11 @@
     {
         "name": "Northala Fields parkrun",
         "reason": "Tree planting along the route that day.",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "Oranmore parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-01"
     },
     {
