@@ -105,6 +105,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Jeune Park parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Judarskogen parkrun",
         "reason": "Vinteruppeh\u00e5ll",
         "date": "2025-02-01"
@@ -217,6 +222,11 @@
     {
         "name": "White Lick Creek parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "Witney parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-01"
     },
     {
