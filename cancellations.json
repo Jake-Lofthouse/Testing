@@ -255,6 +255,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Vandeleur parkrun",
+        "reason": "Trees on course and no way round in it.",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Victoria parkrun, Truro",
         "reason": "Winter Pause",
         "date": "2025-02-01"
@@ -262,6 +267,11 @@
     {
         "name": "White Lick Creek parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "Whitley Bay parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-01"
     },
     {
