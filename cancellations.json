@@ -40,6 +40,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Castlewellan parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Coffs Harbour parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-01"
@@ -140,6 +145,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Palacerigg Country parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Puolarmaari parkrun",
         "reason": "Talvitauko",
         "date": "2025-02-01"
@@ -167,6 +177,11 @@
     {
         "name": "Stockton parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "Taree parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-01"
     },
     {
