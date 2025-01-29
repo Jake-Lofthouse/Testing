@@ -15,6 +15,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Aylesbury parkrun",
+        "reason": "Courses flooded - canoeing competitions only",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Barton Trail parkrun",
         "reason": "Winter Pause",
         "date": "2025-02-01"
@@ -147,6 +152,11 @@
     {
         "name": "Mount Stuart parkrun",
         "reason": "Significant damage to trees in the grounds",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "New Earswick parkrun",
+        "reason": "Course waterlogged",
         "date": "2025-02-01"
     },
     {
