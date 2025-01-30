@@ -893,15 +893,38 @@ function findNearbyPlaces(lat, lng) {
     .then(data => {
         if (data.data && data.data.length > 0) {
             data.data.forEach(place => {
-                fetchPlaceDetails(place.location_id).then(details => {
+                const tripAdvisorDetailsUrl = `https://api.content.tripadvisor.com/api/v1/location/${place.location_id}/details?key=${tripAdvisorApiKey}&language=en`;
+
+                fetch(tripAdvisorDetailsUrl, { headers: { 'accept': 'application/json' } })
+                .then(response => response.json())
+                .then(details => {
                     if (details) {
                         const type = place.category === 'hotels' ? 'hotel' : 'attraction';
                         const icon = type === 'hotel' ? hotelIcon : attractionIcon;
-                        const marker = L.marker([place.latitude, place.longitude], { icon });
+                        const name = details.name || "No Name Available";
+                        const address = details.address_obj ? `${details.address_obj.street1}, ${details.address_obj.city}, ${details.address_obj.country}` : "Address not available";
+                        const phoneNumber = details.phone || "No phone available";
+                        const websiteUrl = details.web_url || null;
+                        const imageUrl = details.photo ? details.photo.images.medium.url : "https://via.placeholder.com/400x300?text=No+Image";
 
-                        marker.bindPopup(generatePopupContent(details, type)).addTo(map);
+                        const popupContent = `
+                            <div class="hotel-popup">
+                                <div class="popup-title">${name}</div>
+                                <img src="${imageUrl}" alt="${name}" class="hotel-popup-image" />
+                                <p>${address}</p>
+                                <a href="https://www.google.com/maps/dir/?api=1&destination=${place.latitude},${place.longitude}" target="_blank">
+                                    <button><i class="fas fa-map-marker-alt"></i> Directions</button>
+                                </a>
+                                ${websiteUrl ? `<a href="${websiteUrl}" target="_blank"><button><i class="fas fa-globe"></i> Visit Website</button></a>` : `<button disabled><i class="fas fa-globe"></i> No Website</button>`}
+                                <button onclick="window.location.href='tel:${phoneNumber}'"><i class="fas fa-phone"></i> ${phoneNumber}</button>
+                            </div>
+                        `;
+
+                        const marker = L.marker([place.latitude, place.longitude], { icon });
+                        marker.bindPopup(popupContent).addTo(map);
                     }
-                });
+                })
+                .catch(error => console.error(`Error fetching details for ${place.location_id}:`, error));
             });
         } else {
             console.error("No nearby places found.");
@@ -909,6 +932,9 @@ function findNearbyPlaces(lat, lng) {
     })
     .catch(error => console.error("Error fetching data from TripAdvisor:", error));
 }
+
+
+
 
 
 
