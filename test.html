@@ -377,10 +377,6 @@
     </style>
 </head>
 <body>
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqnkHVCGBav_o9hLPSOuXHHq86KWXwkhg&libraries=places"
-      onload="initHotelFinder(map)">
-    </script>
     <div id="map"></div>
     <div id="locationButton" class="location-button" onclick="returnToLocation()">
   <i class="fas fa-crosshairs"></i>
@@ -388,7 +384,7 @@
     <div id="search-container">
         <i id="search-icon" class="fas fa-search"></i>
         <div id="search-input-container">
-            <input type="text" id="search-input" placeholder="Search For Events">
+            <input type="text" id="search-input" placeholder="Search">
             <button id="clear-btn"><i class="fas fa-times"></i></button>
         </div>
     </div>
@@ -887,59 +883,58 @@ function updateMapMarkers() {
 
 
 function findNearbyPlaces(lat, lng) {
-    const service = new google.maps.places.PlacesService(document.createElement('div'));
-    const radius = 9000; // 9 km radius
+    const tripAdvisorApiKey = '78CA1D0236874D76AC9288FFA0267CA3';
+    const tripAdvisorUrl = `https://api.content.tripadvisor.com/api/v1/location/nearby_search?latLong=${lat},${lng}&key=${tripAdvisorApiKey}&category=hotels,attractions&radius=10&language=en`;
 
-    const hotelIcon = L.icon({
-        iconUrl: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Icons/Hotel.png',
-        iconSize: [38, 38],
-        iconAnchor: [19, 38],
-        popupAnchor: [0, -38],
-    });
+    fetch(tripAdvisorUrl, {
+        headers: { 'accept': 'application/json' }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.data && data.data.length > 0) {
+            data.data.forEach(place => {
+                fetchPlaceDetails(place.location_id).then(details => {
+                    if (details) {
+                        const type = place.category === 'hotels' ? 'hotel' : 'attraction';
+                        const icon = type === 'hotel' ? hotelIcon : attractionIcon;
+                        const marker = L.marker([place.latitude, place.longitude], { icon });
 
-    const campsiteIcon = L.icon({
-        iconUrl: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Icons/Camp.png',
-        iconSize: [38, 38],
-        iconAnchor: [19, 38],
-        popupAnchor: [0, -38],
-    });
-
-    const location = new google.maps.LatLng(lat, lng);
-
-    // Fetch hotels
-    const hotelRequest = {
-        location,
-        radius,
-        type: ['lodging'],
-    };
-
-    service.nearbySearch(hotelRequest, (results, status) => {
-        if (status === google.maps.places.PlacesServiceStatus.OK) {
-            results.forEach((place) => {
-                fetchPlaceDetails(service, place, "hotel", hotelIcon);
+                        marker.bindPopup(generatePopupContent(details, type)).addTo(map);
+                    }
+                });
             });
         } else {
-            console.error("Error fetching hotels:", status);
+            console.error("No nearby places found.");
         }
-    });
-
-    // Fetch campsites
-    const campsiteRequest = {
-        location,
-        radius,
-        type: ['campground'],
-    };
-
-    service.nearbySearch(campsiteRequest, (results, status) => {
-        if (status === google.maps.places.PlacesServiceStatus.OK) {
-            results.forEach((place) => {
-                fetchPlaceDetails(service, place, "campsite", campsiteIcon);
-            });
-        } else {
-            console.error("Error fetching campsites:", status);
-        }
-    });
+    })
+    .catch(error => console.error("Error fetching data from TripAdvisor:", error));
 }
+
+
+
+function generatePopupContent(details, type) {
+    const name = details.name || "No Name Available";
+    const address = details.address_obj ? `${details.address_obj.street1}, ${details.address_obj.city}, ${details.address_obj.country}` : "Address not available";
+    const rating = details.rating ? `${details.rating} / 5` : "No rating available";
+    const numReviews = details.num_reviews ? `${details.num_reviews} reviews` : "No reviews";
+    const websiteUrl = details.web_url || null;
+    const imageUrl = details.photo ? details.photo.images.medium.url : "https://via.placeholder.com/400x300?text=No+Image";
+
+    return `
+        <div class="popup-container">
+            <div class="popup-title">${name}</div>
+            <img src="${imageUrl}" alt="${name}" class="popup-image" />
+            <p>${address}</p>
+            <p>Rating: ${rating} (${numReviews})</p>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=${details.latitude},${details.longitude}" target="_blank">
+                <button class="popup-btn"><i class="fas fa-map-marker-alt"></i> Directions</button>
+            </a>
+            ${websiteUrl ? `<a href="${websiteUrl}" target="_blank"><button class="popup-btn"><i class="fas fa-globe"></i> More Reviews</button></a>` : `<button class="popup-btn" disabled><i class="fas fa-globe"></i> No Website</button>`}
+        </div>
+    `;
+}
+
+
 
 function fetchPlaceDetails(service, place, type, icon) {
     service.getDetails(
@@ -1103,7 +1098,15 @@ map.on('locationfound', onLocationFound);
             
         });
 
-
+document.getElementById('clear-btn').addEventListener('click', function() {
+    var input = document.getElementById('search-input');
+    var searchIcon = document.getElementById('search-icon');
+    input.value = '';
+    input.classList.remove('show');
+    this.style.display = 'none';
+    searchIcon.classList.remove('hidden'); // Ensure the icon is visible
+    updateMapMarkers();
+        });
 
 
 
@@ -1257,8 +1260,6 @@ function displayNoResultsMessage() {
         input.style.borderWidth = '';
     }, 3000);
 }
-
-
     </script>
     
 </body>
