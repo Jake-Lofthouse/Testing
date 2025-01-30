@@ -110,6 +110,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Garvagh Forest parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Greenpoint parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-01"
