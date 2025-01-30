@@ -130,6 +130,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Higginson parkrun, Marlow",
+        "reason": "Course flooded",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Holyrood parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-01"
@@ -195,6 +200,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Monaghan Town parkrun",
+        "reason": "Trees blocking run route",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Mount Stuart parkrun",
         "reason": "Significant damage to trees in the grounds",
         "date": "2025-02-01"
@@ -250,6 +260,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Stadspark parkrun, Sittard",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Stockton parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-01"
@@ -292,6 +307,11 @@
     {
         "name": "Victoria parkrun, Truro",
         "reason": "Winter Pause",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "Whitby parkrun",
+        "reason": "Weather",
         "date": "2025-02-01"
     },
     {
