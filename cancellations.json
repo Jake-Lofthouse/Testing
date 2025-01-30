@@ -90,6 +90,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Didcot parkrun",
+        "reason": "Cancelled at landowner request to protect field",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Dlinza Forest parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-01"
@@ -130,6 +135,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Great Dunmow parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Greenpoint parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-01"
@@ -157,6 +167,11 @@
     {
         "name": "Huddinge parkrun",
         "reason": "Vinteruppeh\u00e5ll",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "Ipswich parkrun",
+        "reason": "Permission issue",
         "date": "2025-02-01"
     },
     {
@@ -241,6 +256,11 @@
     },
     {
         "name": "Palacerigg Country parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "Portumna parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-01"
     },
@@ -395,6 +415,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Ballincollig Regional junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-02-02"
+    },
+    {
         "name": "Cassiobury junior parkrun",
         "reason": "Watford Half event",
         "date": "2025-02-02"
@@ -402,6 +427,11 @@
     {
         "name": "Cheddar junior parkrun",
         "reason": "Water logged field, possibility of bog monsters",
+        "date": "2025-02-02"
+    },
+    {
+        "name": "Cotlands Park junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-02"
     },
     {
