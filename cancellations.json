@@ -80,6 +80,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Clifton parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Coffs Harbour parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-01"
@@ -92,6 +97,11 @@
     {
         "name": "Corner Brook Stream Trail parkrun",
         "reason": "Winter Pause",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "Crawfordsburn Country parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-01"
     },
     {
@@ -145,6 +155,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Frimley Lodge parkrun",
+        "reason": "Ground saturated, all sport cancelled at the Park",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Garvagh Forest parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-01"
@@ -162,6 +177,11 @@
     {
         "name": "Grove Fields parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "Hafan Pwllheli parkrun",
+        "reason": "Very high tide resulting in no beach!",
         "date": "2025-02-01"
     },
     {
@@ -285,6 +305,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Mountbellew Forest parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-01"
+    },
+    {
         "name": "New Earswick parkrun",
         "reason": "Course waterlogged",
         "date": "2025-02-01"
@@ -311,6 +336,11 @@
     },
     {
         "name": "Plantation parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "Plean parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-01"
     },
@@ -440,6 +470,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Wimpole Estate parkrun",
+        "reason": "Landowner Request: Course conditions.",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Witney parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-01"
@@ -542,6 +577,11 @@
     {
         "name": "NIAC junior parkrun",
         "reason": "Venue unavailable - athletics event on course",
+        "date": "2025-02-02"
+    },
+    {
+        "name": "Stonehouse junior parkrun",
+        "reason": "Waterlogged course",
         "date": "2025-02-02"
     },
     {
