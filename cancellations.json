@@ -270,6 +270,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Plantation parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Portumna parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-01"
@@ -357,6 +362,11 @@
     {
         "name": "Victoria parkrun, Truro",
         "reason": "Winter Pause",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "Welland Canals Trail parkrun",
+        "reason": "Weather",
         "date": "2025-02-01"
     },
     {
