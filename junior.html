@@ -372,25 +372,12 @@
         border-radius: 5px; /* Rounded corners */
         margin-bottom: 10px;
        }
-.notification {
-    background-color: #ffcc00;
-    color: #000;
-    text-align: center;
-    padding: 10px;
-    font-weight: bold;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
+
 
 
     </style>
 </head>
 <body>
-    <div id="notification" class="notification">
-    ⚠️ Hotel and campsite links are currently not working. We are working to fix this. ⚠️
-</div>
     <div id="map"></div>
     <div id="locationButton" class="location-button" onclick="returnToLocation()">
   <i class="fas fa-crosshairs"></i>
@@ -970,26 +957,26 @@ function createPlaceMarker(place, type, icon) {
         popupContent += `<img src="${imageUrl}" alt="${name}" class="hotel-popup-image" />`;
     }
 
-    popupContent += `
-            <a href="https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}" target="_blank">
-                <button><i class="fas fa-map-marker-alt"></i> Directions</button>
-            </a>
-            ${websiteUrl ? `
-                <a href="${websiteUrl}" target="_blank">
-                    <button><i class="fas fa-globe"></i> Visit Website</button>
-                </a>
-            ` : `
-                <button disabled><i class="fas fa-globe"></i> No Website</button>
-            `}
-            ${phoneNumber ? `
-                <a href="tel:${phoneNumber}">
-                    <button><i class="fas fa-phone"></i> Call</button>
-                </a>
-            ` : `
-                <button disabled><i class="fas fa-phone"></i> No Phone</button>
-            `}
-        </div>
-    `;
+popupContent += `
+    <button onclick="openDirections(${lat}, ${lon})">
+        <i class="fas fa-map-marker-alt"></i> Directions
+    </button>
+    ${websiteUrl ? `
+        <button onclick="openWebsite('${websiteUrl}')">
+            <i class="fas fa-globe"></i> Visit Website
+        </button>
+    ` : `
+        <button disabled><i class="fas fa-globe"></i> No Website</button>
+    `}
+    ${phoneNumber ? `
+        <a href="tel:${phoneNumber}">
+            <button><i class="fas fa-phone"></i> Call</button>
+        </a>
+    ` : `
+        <button disabled><i class="fas fa-phone"></i> No Phone</button>
+    `}
+</div>
+`;
 
     // Add marker to the map
     L.marker([lat, lon], { icon }).bindPopup(popupContent).addTo(map);
@@ -1027,6 +1014,15 @@ fetch('https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/events1.
            const url = `https://www.google.com/maps/search/Hotels/@${lat},${lon},18.5z`;
            window.open(url, '_blank');
         }
+        
+function openWebsite(url) {
+    // Ensure the website URL is an absolute URL (with http:// or https://)
+    if (!/^https?:\/\//i.test(url)) {
+        url = 'https://' + url; // Add https:// if no protocol is provided
+    }
+    window.open(url, '_blank');
+}
+
 
 
         
