@@ -15,22 +15,6 @@
         <changefreq>always</changefreq>
         <priority>0.8</priority>
     </url>
-    
-    <!-- Google Play (fixed '&' to '&amp;') -->
-    <url>
-        <loc>https://play.google.com/store/apps/details?id=appinventor.ai_jlofty8.parkrunner_tourist</loc>
-        <lastmod>2024-11-19</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.6</priority>
-    </url>
-    
-    <!-- B&B (fixed '&' to '&amp;') -->
-    <url>
-        <loc>https://www.parkrunnertourist.co.uk/B&amp;B</loc>
-        <lastmod>2024-11-19</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.8</priority>
-    </url>
 
     <!-- Features page -->
     <url>
@@ -39,12 +23,20 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
-    <!-- Parkrunner Tourist Shop -->
+    
+    <!-- B&B -->
     <url>
-        <loc>https://aldprint.co.uk/shop/ols/categories/parkrunner-tourist</loc>
+        <loc>https://www.parkrunnertourist.co.uk/B&amp;B</loc>
+        <lastmod>2024-11-19</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+     <!-- Builder page -->
+    <url>
+        <loc>https://parkrunnertourist.co.uk/builder</loc>
         <lastmod>2024-11-19</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.7</priority>
     </url>
 </urlset>
