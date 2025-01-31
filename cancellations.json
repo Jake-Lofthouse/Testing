@@ -40,6 +40,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Breakwater parkrun",
+        "reason": "Weather",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Broparken parkrun",
         "reason": "Vinteruppeh\u00e5ll",
         "date": "2025-02-01"
@@ -222,6 +227,11 @@
     {
         "name": "Marine Parade parkrun",
         "reason": "High Tide 12.48m @ 8.42am - Unsafe Course",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "Meadowvale parkrun",
+        "reason": "Extreme cold (again)",
         "date": "2025-02-01"
     },
     {
