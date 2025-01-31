@@ -1,8 +1,0 @@
-[build]
-  functions = "functions"
-  publish = "dist"  # (Optional) if you have a build folder; otherwise, it's just public for static sites
-
-[[redirects]]
-  from = "/hotels"
-  to = "/.netlify/functions/hotels"
-  status = 200
