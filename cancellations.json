@@ -10,6 +10,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Aplins Weir parkrun",
+        "reason": "Weather",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Aspen parkrun",
         "reason": "Winter Pause",
         "date": "2025-02-01"
@@ -155,6 +160,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Hamilton Island parkrun",
+        "reason": "Weather",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Higginson parkrun, Marlow",
         "reason": "Course flooded",
         "date": "2025-02-01"
@@ -192,6 +202,11 @@
     {
         "name": "Judarskogen parkrun",
         "reason": "Vinteruppeh\u00e5ll",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "Kameeldoring parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-02-01"
     },
     {
@@ -262,6 +277,11 @@
     {
         "name": "New Earswick parkrun",
         "reason": "Course waterlogged",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "North Shore parkrun",
+        "reason": "Weather",
         "date": "2025-02-01"
     },
     {
@@ -372,6 +392,11 @@
     {
         "name": "Victoria parkrun, Truro",
         "reason": "Winter Pause",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "V\u00e4\u00e4ksyn kanava parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-01"
     },
     {
