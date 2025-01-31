@@ -165,6 +165,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Hampton Oval parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Higginson parkrun, Marlow",
         "reason": "Course flooded",
         "date": "2025-02-01"
@@ -322,6 +327,11 @@
     {
         "name": "Red Star parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "Riverway parkrun",
+        "reason": "Weather",
         "date": "2025-02-01"
     },
     {
