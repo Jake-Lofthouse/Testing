@@ -40,6 +40,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Bracknell parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Braidwood Showground parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-01"
@@ -522,6 +527,11 @@
     {
         "name": "Heritage Park junior parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-02-02"
+    },
+    {
+        "name": "Lurgan junior parkrun",
+        "reason": "Venue unavailable",
         "date": "2025-02-02"
     },
     {
