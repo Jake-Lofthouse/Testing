@@ -377,10 +377,6 @@
     </style>
 </head>
 <body>
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1EBjb5YZa0B7Xa_OXsZk5Y9T34jmJjuU=places"
-      onload="initHotelFinder(map)">
-    </script>
     <div id="map"></div>
     <div id="locationButton" class="location-button" onclick="returnToLocation()">
   <i class="fas fa-crosshairs"></i>
@@ -886,105 +882,82 @@ function updateMapMarkers() {
 
 
 
+// TomTom API Key
+const tomTomApiKey = 'dAvRoz8Z1SA4K6JM5l6XnJMGPwc7GQmG';
+
+// Define custom icons
+const hotelIcon = L.icon({
+    iconUrl: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Icons/Hotel.png',
+    iconSize: [38, 38],
+    iconAnchor: [19, 38],
+    popupAnchor: [0, -38],
+});
+
+const campsiteIcon = L.icon({
+    iconUrl: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Icons/Camp.png',
+    iconSize: [38, 38],
+    iconAnchor: [19, 38],
+    popupAnchor: [0, -38],
+});
+
+// Function to search for nearby hotels and campsites using TomTom
 function findNearbyPlaces(lat, lng) {
-    const service = new google.maps.places.PlacesService(document.createElement('div'));
-    const radius = 9000; // 9 km radius
+    console.log(`Searching for hotels and campsites near: ${lat}, ${lng}`);
 
-    const hotelIcon = L.icon({
-        iconUrl: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Icons/Hotel.png',
-        iconSize: [38, 38],
-        iconAnchor: [19, 38],
-        popupAnchor: [0, -38],
-    });
+    // Search for hotels
+    fetchTomTomPlaces(lat, lng, 'hotel', hotelIcon);
 
-    const campsiteIcon = L.icon({
-        iconUrl: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Icons/Camp.png',
-        iconSize: [38, 38],
-        iconAnchor: [19, 38],
-        popupAnchor: [0, -38],
-    });
-
-    const location = new google.maps.LatLng(lat, lng);
-
-    // Fetch hotels
-    const hotelRequest = {
-        location,
-        radius,
-        type: ['lodging'],
-    };
-
-    service.nearbySearch(hotelRequest, (results, status) => {
-        if (status === google.maps.places.PlacesServiceStatus.OK) {
-            results.forEach((place) => {
-                fetchPlaceDetails(service, place, "hotel", hotelIcon);
-            });
-        } else {
-            console.error("Error fetching hotels:", status);
-        }
-    });
-
-    // Fetch campsites
-    const campsiteRequest = {
-        location,
-        radius,
-        type: ['campground'],
-    };
-
-    service.nearbySearch(campsiteRequest, (results, status) => {
-        if (status === google.maps.places.PlacesServiceStatus.OK) {
-            results.forEach((place) => {
-                fetchPlaceDetails(service, place, "campsite", campsiteIcon);
-            });
-        } else {
-            console.error("Error fetching campsites:", status);
-        }
-    });
+    // Search for campsites
+    fetchTomTomPlaces(lat, lng, 'camping', campsiteIcon);
 }
 
-function fetchPlaceDetails(service, place, type, icon) {
-    service.getDetails(
-        { placeId: place.place_id, fields: ['name', 'vicinity', 'website', 'formatted_phone_number', 'geometry', 'photos'] },
-        (details, status) => {
-            if (status === google.maps.places.PlacesServiceStatus.OK) {
-                const popupContent = generatePopupContent(details, type);
-                const marker = L.marker(
-                    [details.geometry.location.lat(), details.geometry.location.lng()],
-                    { icon }
-                );
-                marker.bindPopup(popupContent).addTo(map);
+// Function to fetch hotels or campsites from TomTom API
+function fetchTomTomPlaces(lat, lng, category, icon) {
+    const searchUrl = `https://api.tomtom.com/search/2/categorySearch/${category}.json?lat=${lat}&lon=${lng}&radius=9000&key=${tomTomApiKey}`;
+
+    fetch(searchUrl)
+        .then(response => response.json())
+        .then(data => {
+            console.log(`TomTom ${category} API Response:`, data);
+
+            if (data.results && data.results.length > 0) {
+                data.results.forEach(place => {
+                    createPlaceMarker(place, category, icon);
+                });
             } else {
-                console.error("Error fetching place details:", status);
+                console.log(`No ${category}s found within 9km.`);
             }
-        }
-    );
+        })
+        .catch(error => console.error(`Error fetching ${category} data:`, error));
 }
 
+// Function to create a marker for a place and bind a popup
+function createPlaceMarker(place, type, icon) {
+    const lat = place.position.lat;
+    const lon = place.position.lon;
+    const name = place.poi?.name || "No Name Available";
+    const address = place.address?.freeformAddress || "Address not available";
+    const phoneNumber = place.poi?.phone || null;
+    const websiteUrl = place.poi?.url || null;
+    const imageUrl = place.poi?.imageUrl || null;
 
-/**
- * Generates styled popup content for hotels and campsites.
- */
-function generatePopupContent(place, type) {
-    const name = place.name || "No Name Available";
-    const address = place.vicinity || "Address not available";
-    const lat = place.geometry.location.lat();
-    const lng = place.geometry.location.lng();
-    const phoneNumber = place.international_phone_number || place.formatted_phone_number || null;
-    const websiteUrl = place.website || null;
-    const imageUrl =
-        place.photos && place.photos.length > 0
-            ? place.photos[0].getUrl({ maxWidth: 400, maxHeight: 300 })
-            : "https://via.placeholder.com/400x300?text=No+Image";
+    // Define button colors based on place type
+    const buttonColor = type === "camping" ? "#0d7640" : "#c8a367";
+    const buttonHoverColor = type === "camping" ? "#0a5a30" : "#b0874e";
 
-    // Style button colors based on place type
-    const buttonColor = type === "campsite" ? "#0d7640" : "#c8a367";
-    const buttonHoverColor = type === "campsite" ? "#0a5a30" : "#b0874e";
-
-    // Build popup content
-    return `
+    // Create popup content
+    let popupContent = `
         <div class="hotel-popup" style="--button-color: ${buttonColor}; --button-hover-color: ${buttonHoverColor}">
             <div class="popup-title">${name}</div>
-            <img src="${imageUrl}" alt="${name}" class="hotel-popup-image" />
-            <a href="https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}" target="_blank">
+    `;
+
+    // If there's an image, add it to the popup content
+    if (imageUrl) {
+        popupContent += `<img src="${imageUrl}" alt="${name}" class="hotel-popup-image" />`;
+    }
+
+    popupContent += `
+            <a href="https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}" target="_blank">
                 <button><i class="fas fa-map-marker-alt"></i> Directions</button>
             </a>
             ${websiteUrl ? `
@@ -1003,8 +976,10 @@ function generatePopupContent(place, type) {
             `}
         </div>
     `;
-}
 
+    // Add marker to the map
+    L.marker([lat, lon], { icon }).bindPopup(popupContent).addTo(map);
+}
 
 
 
