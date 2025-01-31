@@ -50,6 +50,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Bowen parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Bracknell parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-01"
@@ -62,6 +67,11 @@
     {
         "name": "Breakwater parkrun",
         "reason": "Weather",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "Broadwater parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-01"
     },
     {
@@ -172,6 +182,11 @@
     {
         "name": "Erskine Waterfront parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "Evergreen parkrun",
+        "reason": "Icy conditions make the course unsafe.",
         "date": "2025-02-01"
     },
     {
@@ -450,6 +465,16 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Seaview parkrun",
+        "reason": "Weather",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "Sheriff Creek Wildlife Sanctuary parkrun",
+        "reason": "Weather",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Shongweni parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-01"
@@ -677,6 +702,11 @@
     {
         "name": "Vicarstown junior parkrun",
         "reason": "Juvenile athletics competition taking place",
+        "date": "2025-02-02"
+    },
+    {
+        "name": "Washingbay Wetlands junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-02"
     },
     {
