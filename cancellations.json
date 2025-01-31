@@ -260,6 +260,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Kanata parkrun, Ottawa",
+        "reason": "Weather",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Knockanacree Woods parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-01"
@@ -287,6 +292,11 @@
     {
         "name": "Loftsgardsbrua parkrun",
         "reason": "Vinterpause",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "Longford parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-01"
     },
     {
@@ -402,6 +412,11 @@
     {
         "name": "Saint-Paulin parkrun",
         "reason": "Winter Pause",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "Sandhurst Memorial parkrun",
+        "reason": "Excess water on the course",
         "date": "2025-02-01"
     },
     {
