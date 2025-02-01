@@ -230,6 +230,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Gillies Lake parkrun",
+        "reason": "Weather",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Great Denham parkrun",
         "reason": "Flooding on the course.",
         "date": "2025-02-01"
@@ -672,6 +677,11 @@
     {
         "name": "Ballincollig Regional junior parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-02-02"
+    },
+    {
+        "name": "Cambourne junior parkrun",
+        "reason": "Permission issue",
         "date": "2025-02-02"
     },
     {
