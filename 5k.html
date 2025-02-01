@@ -829,7 +829,6 @@ function updateMapMarkers() {
             var eventname = normalizeEventName(feature.properties.eventname);
             var eventLongName = feature.properties.EventLongName;
 
-            console.log('Processing event:', eventname);
 
             var isJunior = eventLongName.toLowerCase().includes('junior');
             var showMarker = (isJunior && document.getElementById('juniorCheckbox').checked) ||
@@ -1066,17 +1065,6 @@ map.on('locationfound', onLocationFound);
 
         map.locate({setView: true, maxZoom: 13});
 
-        fetch('https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/parkruns.json')
-            .then(response => response.json())
-            .then(jsonData => {
-                data = jsonData;
-                updateMapMarkers();
-
-                document.getElementById('juniorCheckbox').addEventListener('change', updateMapMarkers);
-                document.getElementById('fiveKCheckbox').addEventListener('change', updateMapMarkers);
-            })
-          
-         .catch(err => console.error('Error fetching GeoJSON:', err));
 
     document.getElementById('search-icon').addEventListener('click', function() {
     var input = document.getElementById('search-input');
