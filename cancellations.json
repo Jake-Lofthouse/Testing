@@ -45,6 +45,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Beach Strip parkrun",
+        "reason": "Weather",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Bellevue parkrun",
         "reason": "Winter Pause",
         "date": "2025-02-01"
@@ -90,6 +95,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Canyon Rim Trail parkrun",
+        "reason": "Weather",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Castleblayney parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-01"
@@ -102,6 +112,11 @@
     {
         "name": "Castlewellan parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "Chain of Lakes parkrun",
+        "reason": "Weather",
         "date": "2025-02-01"
     },
     {
@@ -137,6 +152,11 @@
     {
         "name": "Curl Curl parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "Cutler Park parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-01"
     },
     {
@@ -405,6 +425,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Orleans parkrun",
+        "reason": "Weather",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Ottawa-Carleton Trailway parkrun",
         "reason": "Weather",
         "date": "2025-02-01"
@@ -447,6 +472,11 @@
     {
         "name": "Riverway parkrun",
         "reason": "Weather",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "Roosevelt Island DC parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-01"
     },
     {
