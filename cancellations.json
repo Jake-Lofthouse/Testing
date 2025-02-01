@@ -25,6 +25,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Auldcathie District parkrun",
+        "reason": "Black ice on course",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Aylesbury parkrun",
         "reason": "Courses flooded - canoeing competitions only",
         "date": "2025-02-01"
@@ -137,6 +142,11 @@
     {
         "name": "Coffs Harbour parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "Conwy parkrun",
+        "reason": "Weather",
         "date": "2025-02-01"
     },
     {
@@ -290,6 +300,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Henley-on-Thames parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Higginson parkrun, Marlow",
         "reason": "Course flooded",
         "date": "2025-02-01"
@@ -425,6 +440,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Nant y Pandy parkrun",
+        "reason": "Weather",
+        "date": "2025-02-01"
+    },
+    {
         "name": "New Earswick parkrun",
         "reason": "Course waterlogged",
         "date": "2025-02-01"
@@ -482,6 +502,11 @@
     {
         "name": "Puolarmaari parkrun",
         "reason": "Talvitauko",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "Raphael parkrun",
+        "reason": "Police incident",
         "date": "2025-02-01"
     },
     {
@@ -635,6 +660,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Widnes parkrun",
+        "reason": "Police incident in park",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Wimpole Estate parkrun",
         "reason": "Landowner Request: Course conditions.",
         "date": "2025-02-01"
@@ -755,6 +785,11 @@
         "date": "2025-02-02"
     },
     {
+        "name": "Magherafelt junior parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-02"
+    },
+    {
         "name": "NIAC junior parkrun",
         "reason": "Venue unavailable - athletics event on course",
         "date": "2025-02-02"
@@ -762,6 +797,11 @@
     {
         "name": "Oranmore junior parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-02-02"
+    },
+    {
+        "name": "Peoples Park junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-02-02"
     },
     {
