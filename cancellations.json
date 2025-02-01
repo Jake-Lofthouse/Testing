@@ -145,6 +145,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Colin Glen parkrun",
+        "reason": "Weather",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Conwy parkrun",
         "reason": "Weather",
         "date": "2025-02-01"
@@ -802,6 +807,11 @@
     {
         "name": "Peoples Park junior parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-02-02"
+    },
+    {
+        "name": "Riverside junior parkrun, St Neots",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-02"
     },
     {
