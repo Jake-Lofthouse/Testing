@@ -200,6 +200,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Edenbrook Country parkrun",
+        "reason": "Yes, we do know it\u2019s a flood plain",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Eglinton parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-01"
@@ -277,6 +282,11 @@
     {
         "name": "Hampton Oval parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "Haverfordwest parkrun",
+        "reason": "Weather",
         "date": "2025-02-01"
     },
     {
@@ -527,6 +537,11 @@
     {
         "name": "Somerdale Pavilion parkrun",
         "reason": "Flooding",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "Sonsbeek parkrun",
+        "reason": "Onveilig parcours vanwege gladheid",
         "date": "2025-02-01"
     },
     {
