@@ -55,6 +55,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Birchwood Trails parkrun",
+        "reason": "Weather",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Bowen parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-01"
@@ -156,6 +161,11 @@
     },
     {
         "name": "Cutler Park parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "Danehy Park parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-01"
     },
