@@ -105,6 +105,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Canton Lower Rouge Trail parkrun",
+        "reason": "Icy Course Conditions",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Canyon Rim Trail parkrun",
         "reason": "Weather",
         "date": "2025-02-01"
@@ -255,6 +260,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Fr\u00e9d\u00e9ric Back parkrun",
+        "reason": "Weather",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Garvagh Forest parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-01"
@@ -400,6 +410,11 @@
         "date": "2025-02-01"
     },
     {
+        "name": "Mansfield OH parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-01"
+    },
+    {
         "name": "Marine Parade parkrun",
         "reason": "High Tide 12.48m @ 8.42am - Unsafe Course",
         "date": "2025-02-01"
@@ -407,6 +422,11 @@
     {
         "name": "Meadowvale parkrun",
         "reason": "Extreme cold (again)",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "Merrymeeting parkrun",
+        "reason": "Weather",
         "date": "2025-02-01"
     },
     {
@@ -467,6 +487,11 @@
     {
         "name": "Northala Fields parkrun",
         "reason": "Tree planting along the route that day.",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "Ohio and Erie Canal Reservation parkrun",
+        "reason": "Ice throughout the course",
         "date": "2025-02-01"
     },
     {
@@ -562,6 +587,11 @@
     {
         "name": "Shongweni parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-02-01"
+    },
+    {
+        "name": "Sippo Lake parkrun",
+        "reason": "Weather",
         "date": "2025-02-01"
     },
     {
@@ -747,6 +777,11 @@
     {
         "name": "Cambourne junior parkrun",
         "reason": "Permission issue",
+        "date": "2025-02-02"
+    },
+    {
+        "name": "Carmarthen junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-02-02"
     },
     {
