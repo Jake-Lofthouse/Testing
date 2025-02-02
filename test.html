@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="robots" content="noindex, nofollow">
     <title>parkrunner tourist</title>
     <link rel="shortcut icon" type="image/x.icon" href="favicon.ico?">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -374,6 +375,7 @@
        }
 
 
+
     </style>
 </head>
 <body>
@@ -555,24 +557,39 @@ function openCampsiteMap(lat, lon) {
                 .then(response => response.json())
                 .then(data => data.address.city || data.address.village || data.address.town || 'Unknown');
         }
+        
+// Modify the map initialization to check URL parameters
+const urlParams = new URLSearchParams(window.location.search);
+const lat = parseFloat(urlParams.get('lat'));
+const lon = parseFloat(urlParams.get('lon'));
+const zoom = parseInt(urlParams.get('zoom')) || 13; 
 
-        var map = L.map('map', {
-         center: [0, 0], // Center the map on the equator and prime meridian
-         zoom: 2, // Set an initial zoom level
-         zoomControl: false,
-         maxBounds: [
-          [-90, -180], // Southwest corner of the map
-          [90, 180]    // Northeast corner of the map
-     ],
-          maxBoundsViscosity: 1.0, // Keeps the map within these bounds
-          minZoom: 2, // Prevents zooming out too far to see the entire world multiple times
-          worldCopyJump: false // Prevents world wrapping
-        });
+var map = L.map('map', {
+    center: lat && lon ? [lat, lon] : [0, 0], // Default if no params
+    zoom: lat && lon ? zoom : 2,
+    zoomControl: false,
+    maxBounds: [[-90, -180], [90, 180]],
+    maxBoundsViscosity: 1.0,
+    minZoom: 2,
+    worldCopyJump: false
+});
 
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-            attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a>',
-            maxZoom: 19
-        }).addTo(map);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a>',
+    maxZoom: 19
+}).addTo(map);
+
+// Function to update URL with current map position
+function updateURL() {
+    const center = map.getCenter();
+    const zoom = map.getZoom();
+    const newUrl = `${window.location.pathname}?lat=${center.lat.toFixed(6)}&lon=${center.lng.toFixed(6)}&zoom=${zoom}`;
+    window.history.replaceState({}, '', newUrl);
+}
+
+// Listen for map movements to update URL
+map.on('moveend', updateURL);
+
 
         var juniorIcon = L.icon({
             iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/Icons/Junior.png',
@@ -827,7 +844,6 @@ function updateMapMarkers() {
             var eventname = normalizeEventName(feature.properties.eventname);
             var eventLongName = feature.properties.EventLongName;
 
-            console.log('Processing event:', eventname);
 
             var isJunior = eventLongName.toLowerCase().includes('junior');
             var showMarker = (isJunior && document.getElementById('juniorCheckbox').checked) ||
@@ -956,26 +972,26 @@ function createPlaceMarker(place, type, icon) {
         popupContent += `<img src="${imageUrl}" alt="${name}" class="hotel-popup-image" />`;
     }
 
-    popupContent += `
-            <a href="https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}" target="_blank">
-                <button><i class="fas fa-map-marker-alt"></i> Directions</button>
-            </a>
-            ${websiteUrl ? `
-                <a href="${websiteUrl}" target="_blank">
-                    <button><i class="fas fa-globe"></i> Visit Website</button>
-                </a>
-            ` : `
-                <button disabled><i class="fas fa-globe"></i> No Website</button>
-            `}
-            ${phoneNumber ? `
-                <a href="tel:${phoneNumber}">
-                    <button><i class="fas fa-phone"></i> Call</button>
-                </a>
-            ` : `
-                <button disabled><i class="fas fa-phone"></i> No Phone</button>
-            `}
-        </div>
-    `;
+popupContent += `
+    <button onclick="openDirections(${lat}, ${lon})">
+        <i class="fas fa-map-marker-alt"></i> Directions
+    </button>
+    ${websiteUrl ? `
+        <button onclick="openWebsite('${websiteUrl}')">
+            <i class="fas fa-globe"></i> Visit Website
+        </button>
+    ` : `
+        <button disabled><i class="fas fa-globe"></i> No Website</button>
+    `}
+    ${phoneNumber ? `
+        <a href="tel:${phoneNumber}">
+            <button><i class="fas fa-phone"></i> Call</button>
+        </a>
+    ` : `
+        <button disabled><i class="fas fa-phone"></i> No Phone</button>
+    `}
+</div>
+`;
 
     // Add marker to the map
     L.marker([lat, lon], { icon }).bindPopup(popupContent).addTo(map);
@@ -1013,6 +1029,15 @@ fetch('https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/events1.
            const url = `https://www.google.com/maps/search/Hotels/@${lat},${lon},18.5z`;
            window.open(url, '_blank');
         }
+        
+function openWebsite(url) {
+    // Ensure the website URL is an absolute URL (with http:// or https://)
+    if (!/^https?:\/\//i.test(url)) {
+        url = 'https://' + url; // Add https:// if no protocol is provided
+    }
+    window.open(url, '_blank');
+}
+
 
 
         
@@ -1055,17 +1080,6 @@ map.on('locationfound', onLocationFound);
 
         map.locate({setView: true, maxZoom: 13});
 
-        fetch('https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/parkruns.json')
-            .then(response => response.json())
-            .then(jsonData => {
-                data = jsonData;
-                updateMapMarkers();
-
-                document.getElementById('juniorCheckbox').addEventListener('change', updateMapMarkers);
-                document.getElementById('fiveKCheckbox').addEventListener('change', updateMapMarkers);
-            })
-          
-         .catch(err => console.error('Error fetching GeoJSON:', err));
 
     document.getElementById('search-icon').addEventListener('click', function() {
     var input = document.getElementById('search-input');
