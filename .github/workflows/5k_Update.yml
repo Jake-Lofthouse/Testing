@@ -15,11 +15,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Fetch index.html
+      - name: Fetch all.html
         run: |
           curl -o index.html https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/all.html
 
-      - name: Modify index.html
+      - name: Update 5k.html
         run: |
           # Uncheck the junior checkbox
           sed -i 's/<input type="checkbox" id="juniorCheckbox" checked>/<input type="checkbox" id="juniorCheckbox">/g' index.html
