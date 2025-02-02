@@ -558,14 +558,14 @@ function openCampsiteMap(lat, lon) {
                 .then(data => data.address.city || data.address.village || data.address.town || 'Unknown');
         }
         
-// Get URL parameters and determine if valid coordinates were provided
+// Modify the map initialization to check URL parameters
 const urlParams = new URLSearchParams(window.location.search);
 const lat = parseFloat(urlParams.get('lat'));
 const lon = parseFloat(urlParams.get('lon'));
 const zoom = parseInt(urlParams.get('zoom')) || 13; 
+
 const hasValidCoords = !isNaN(lat) && !isNaN(lon);
 
-// Initialize the map: if valid URL coordinates exist, center there; otherwise use default
 var map = L.map('map', {
     center: hasValidCoords ? [lat, lon] : [0, 0],
     zoom: hasValidCoords ? zoom : 2,
@@ -588,42 +588,32 @@ function updateURL() {
     const newUrl = `${window.location.pathname}?lat=${center.lat.toFixed(6)}&lon=${center.lng.toFixed(6)}&zoom=${zoom}`;
     window.history.replaceState({}, '', newUrl);
 }
+
 map.on('moveend', updateURL);
 
-// Global variable for the user's location marker (ensure this is declared once)
 var userLocationMarker;
 
-// Function to handle locationfound event
+// Function to handle location found
 function onLocationFound(e) {
-    // Create or update the user location marker without moving the map if a coordinate was provided in the URL
     if (!userLocationMarker) {
         userLocationMarker = L.marker(e.latlng, { icon: LocationIcon }).addTo(map)
             .bindPopup("You are here");
     } else {
         userLocationMarker.setLatLng(e.latlng);
     }
-    
-    // Only pan the map to the user's location if no valid URL coordinates exist
+
     if (!hasValidCoords) {
         map.setView(e.latlng, 13);
     }
 }
+
 map.on('locationfound', onLocationFound);
 
-// Conditionally locate the user on load:
-// • If no URL coordinates are provided, locate the user and center the map.
-// • Otherwise, just detect the location so we can add/update the marker.
+// Only locate user if no valid coordinates are provided in the URL
 if (!hasValidCoords) {
     map.locate({ setView: true, maxZoom: 13 });
 } else {
-    map.locate({ setView: false });
-}
-
-// If you have a "return to location" button, its function may still pan to the user's location:
-var locationButton = document.getElementById("locationButton");
-function returnToLocation() {
-    // When explicitly requested, move the map to the user's current location.
-    map.locate({ setView: true, maxZoom: 13 });
+    map.locate({ setView: false }); // Detect user location but don’t move map
 }
 
 
@@ -769,7 +759,7 @@ var userLocationMarker; // Variable to hold the user's location marker
   var locationButton = document.getElementById("locationButton");
 
   // Automatically locate the user on map load
-  map.locate({ setView: true, maxZoom: 13 });
+  //map.locate({ setView: true, maxZoom: 13 });
 
   // Function to relocate to the user's current location
   function returnToLocation() {
@@ -1094,10 +1084,10 @@ var locationCircle = null; // To show accuracy radius circle around the user loc
            // alert(e.message);
         }
 
-        map.on('locationfound', onLocationFound);
-        map.on('locationerror', onLocationError);
+        //map.on('locationfound', onLocationFound);
+        //map.on('locationerror', onLocationError);
 
-        map.locate({setView: true, maxZoom: 13});
+        //map.locate({setView: true, maxZoom: 13});
 
 
     document.getElementById('search-icon').addEventListener('click', function() {
