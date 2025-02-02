@@ -590,6 +590,9 @@ function updateURL() {
 // Listen for map movements to update URL
 map.on('moveend', updateURL);
 
+if (!lat || !lon) {
+    map.locate({ setView: true, maxZoom: 13 });
+}
 
         var juniorIcon = L.icon({
             iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/Icons/Junior.png',
