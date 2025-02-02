@@ -342,7 +342,7 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            animation: progress 5s linear forwards;
+            animation: progress 2.5s linear forwards;
             background: #E24D4C;
         }
         @keyframes progress {
@@ -755,7 +755,7 @@ map.on('locationerror', function() {
     canCreateToast = false;
     setTimeout(function() {
       canCreateToast = true;
-    }, 10000); // 10 seconds
+    }, 2500); 
   }
 });
 
@@ -775,10 +775,10 @@ map.on('locationerror', function() {
         const notifications = document.querySelector(".notifications");
 
         const toastDetails = {
-            timer: 5000, // 5 seconds timer
+            timer: 2500, 
             error: {
                 icon: 'fa-triangle-exclamation',
-                text: 'Unable to find your location',
+                text: 'Cannot find your location',
             }
         };
 
