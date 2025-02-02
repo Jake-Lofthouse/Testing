@@ -737,8 +737,8 @@ function returnToLocation() {
         // Instantly pan to last known location
         map.flyTo(userLocationMarker.getLatLng(), 13, { duration: 1.5 });
 
-        // Then request a fresh location update (doesn't move the map instantly)
-        map.locate({ setView: false, maxZoom: 13 });
+        /* Then request a fresh location update (doesn't move the map instantly)
+        map.locate({ setView: false, maxZoom: 13 });*/
     } else {
         // If no known location, request it and center when found
         map.locate({ setView: true, maxZoom: 13 });
