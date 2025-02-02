@@ -589,6 +589,7 @@ function updateURL() {
     window.history.replaceState({}, '', newUrl);
 }
 
+
 // Listen for map movements to update URL
 map.on('moveend', updateURL);
 
@@ -1047,26 +1048,31 @@ function openWebsite(url) {
 var userLocationMarker = null;
 var locationCircle = null; // To show accuracy radius circle around the user location
 
+// Function to handle location found
 function onLocationFound(e) {
-    var radius = e.accuracy / 2; // Half the accuracy radius for better accuracy indication
+    var radius = e.accuracy / 2;
 
     if (!userLocationMarker) {
-        // Create marker and add accuracy circle if they don't exist
         userLocationMarker = L.marker(e.latlng, { icon: LocationIcon }).addTo(map)
-            .bindPopup("You are here")
-            .openPopup();
-
+            .bindPopup("You are here");
     } else {
-        // Update marker and circle if they already exist
         userLocationMarker.setLatLng(e.latlng);
     }
 
-    // Set map view to user's location with zoom level 13
-    map.setView(e.latlng, 13);
-
-    // Hide the location button if user's location is shown
-    locationButton.style.display = "none";
+    if (!hasValidCoords) { // Only update map if no coordinates were provided in URL
+        map.setView(e.latlng, 13);
+    }
 }
+
+map.on('locationfound', onLocationFound);
+
+// Only locate user if no valid coordinates are provided in the URL, but still detect location
+if (!hasValidCoords) {
+    map.locate({ setView: true, maxZoom: 13 });
+} else {
+    map.locate(); // Find location without changing view
+}
+
 
 // Use the merged function in the location found event
 map.on('locationfound', onLocationFound);
