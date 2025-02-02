@@ -1048,6 +1048,7 @@ function openWebsite(url) {
 var userLocationMarker = null;
 var locationCircle = null; // To show accuracy radius circle around the user location
 
+
 // Function to handle location found
 function onLocationFound(e) {
     var radius = e.accuracy / 2;
@@ -1059,24 +1060,23 @@ function onLocationFound(e) {
         userLocationMarker.setLatLng(e.latlng);
     }
 
-    if (!hasValidCoords) { // Only update map if no coordinates were provided in URL
+    // Only move the map if no coordinates were provided in URL
+    if (!hasValidCoords) {
         map.setView(e.latlng, 13);
     }
 }
 
 map.on('locationfound', onLocationFound);
 
-// Only locate user if no valid coordinates are provided in the URL, but still detect location
+// Only locate user if no valid coordinates are provided in the URL
 if (!hasValidCoords) {
     map.locate({ setView: true, maxZoom: 13 });
 } else {
-    map.locate(); // Find location without changing view
+    map.locate({ setView: false }); // Detect user location but don't move map
 }
-
 
 // Use the merged function in the location found event
 map.on('locationfound', onLocationFound);
-
 
         function onLocationError(e) {
            // alert(e.message);
