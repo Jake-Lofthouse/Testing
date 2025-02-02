@@ -732,9 +732,18 @@ var userLocationMarker; // Variable to hold the user's location marker
   //map.locate({ setView: true, maxZoom: 13 });
 
   // Function to relocate to the user's current location
-  function returnToLocation() {
-    map.locate({ setView: true, maxZoom: 13 });
-  }
+function returnToLocation() {
+    if (userLocationMarker) {
+        // Instantly pan to last known location
+        map.flyTo(userLocationMarker.getLatLng(), 13, { duration: 1.5 });
+
+        // Then request a fresh location update (doesn't move the map instantly)
+        map.locate({ setView: false, maxZoom: 13 });
+    } else {
+        // If no known location, request it and center when found
+        map.locate({ setView: true, maxZoom: 13 });
+    }
+}
 
   
 
