@@ -557,24 +557,71 @@ function openCampsiteMap(lat, lon) {
                 .then(response => response.json())
                 .then(data => data.address.city || data.address.village || data.address.town || 'Unknown');
         }
+        
+// Modify the map initialization to check URL parameters
+const urlParams = new URLSearchParams(window.location.search);
+const lat = parseFloat(urlParams.get('lat'));
+const lon = parseFloat(urlParams.get('lon'));
+const zoom = parseInt(urlParams.get('zoom')) || 13; 
 
-        var map = L.map('map', {
-         center: [0, 0], // Center the map on the equator and prime meridian
-         zoom: 2, // Set an initial zoom level
-         zoomControl: false,
-         maxBounds: [
-          [-90, -180], // Southwest corner of the map
-          [90, 180]    // Northeast corner of the map
-     ],
-          maxBoundsViscosity: 1.0, // Keeps the map within these bounds
-          minZoom: 2, // Prevents zooming out too far to see the entire world multiple times
-          worldCopyJump: false // Prevents world wrapping
-        });
+const hasValidCoords = !isNaN(lat) && !isNaN(lon);
 
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-            attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a>',
-            maxZoom: 19
-        }).addTo(map);
+var map = L.map('map', {
+    center: hasValidCoords ? [lat, lon] : [0, 0],
+    zoom: hasValidCoords ? zoom : 2,
+    zoomControl: false,
+    maxBounds: [[-90, -180], [90, 180]],
+    maxBoundsViscosity: 1.0,
+    minZoom: 2,
+    worldCopyJump: false
+});
+
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a>',
+    maxZoom: 19
+}).addTo(map);
+
+// Function to update URL with current map position
+function updateURL() {
+    const center = map.getCenter();
+    const zoom = map.getZoom();
+    const newUrl = `${window.location.pathname}?lat=${center.lat.toFixed(6)}&lon=${center.lng.toFixed(6)}&zoom=${zoom}`;
+    window.history.replaceState({}, '', newUrl);
+}
+
+map.on('moveend', updateURL);
+
+var userLocationMarker;
+
+// Function to handle location found
+function onLocationFound(e) {
+    if (!userLocationMarker) {
+        userLocationMarker = L.marker(e.latlng, { icon: LocationIcon }).addTo(map)
+            .bindPopup("You are here");
+    } else {
+        userLocationMarker.setLatLng(e.latlng);
+    }
+
+    if (!hasValidCoords) {
+        map.setView(e.latlng, 13);
+    }
+}
+
+map.on('locationfound', onLocationFound);
+
+// Only locate user if no valid coordinates are provided in the URL
+if (!hasValidCoords) {
+    map.locate({ setView: true, maxZoom: 13 });
+} else {
+    map.locate({ setView: false }); // Detect user location but don’t move map
+}
+
+
+// Use the merged function in the location found event
+//.on('locationfound', onLocationFound);
+
+// Listen for map movements to update URL
+map.on('moveend', updateURL);
 
         var juniorIcon = L.icon({
             iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/Icons/Junior.png',
@@ -712,7 +759,7 @@ var userLocationMarker; // Variable to hold the user's location marker
   var locationButton = document.getElementById("locationButton");
 
   // Automatically locate the user on map load
-  map.locate({ setView: true, maxZoom: 13 });
+  //map.locate({ setView: true, maxZoom: 13 });
 
   // Function to relocate to the user's current location
   function returnToLocation() {
@@ -1031,39 +1078,16 @@ function openWebsite(url) {
 var userLocationMarker = null;
 var locationCircle = null; // To show accuracy radius circle around the user location
 
-function onLocationFound(e) {
-    var radius = e.accuracy / 2; // Half the accuracy radius for better accuracy indication
-
-    if (!userLocationMarker) {
-        // Create marker and add accuracy circle if they don't exist
-        userLocationMarker = L.marker(e.latlng, { icon: LocationIcon }).addTo(map)
-            .bindPopup("You are here")
-            .openPopup();
-
-    } else {
-        // Update marker and circle if they already exist
-        userLocationMarker.setLatLng(e.latlng);
-    }
-
-    // Set map view to user's location with zoom level 13
-    map.setView(e.latlng, 13);
-
-    // Hide the location button if user's location is shown
-    locationButton.style.display = "none";
-}
-
-// Use the merged function in the location found event
-map.on('locationfound', onLocationFound);
 
 
         function onLocationError(e) {
            // alert(e.message);
         }
 
-        map.on('locationfound', onLocationFound);
-        map.on('locationerror', onLocationError);
+        //map.on('locationfound', onLocationFound);
+        //map.on('locationerror', onLocationError);
 
-        map.locate({setView: true, maxZoom: 13});
+        //map.locate({setView: true, maxZoom: 13});
 
 
     document.getElementById('search-icon').addEventListener('click', function() {
