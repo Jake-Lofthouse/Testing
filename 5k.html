@@ -449,28 +449,7 @@
             window.open(url, '_blank');
         }
         
-        //hotels from here
- 
-function initHotelFinder() {
-    const service = new google.maps.places.PlacesService(document.createElement('div'));
-    const hotelIcon = L.icon({
-        iconUrl: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Icons/Hotel.png',
-        iconSize: [38, 38],
-        iconAnchor: [19, 38],
-        popupAnchor: [0, -38],
-    });
-    const campsiteIcon = L.icon({
-        iconUrl: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Icons/Camp.png',
-        iconSize: [38, 38],
-        iconAnchor: [19, 38],
-        popupAnchor: [0, -38],
-    });
 
-}
-
-
-
-        //hotels to here
         
 function chooseAccommodation(lat, lon) {
     // Store the coordinates for use after the user makes a selection
@@ -481,9 +460,6 @@ function chooseAccommodation(lat, lon) {
     document.getElementById('accommodationModal').style.display = 'flex';
 }
 
- function returnToLocation() {
-    map.locate({ setView: true, maxZoom: 16 });
-  }
 
 function handleAccommodationChoice(type) {
     const lat = window.accommodationLat;
@@ -508,12 +484,6 @@ function openCampsiteMap(lat, lon) {
     window.open(url, '_blank');
 }
 
-   document.addEventListener('contextmenu', function(e) {
-            // Allow right-click on #search-container and its children
-            if (!e.target.closest('#search-container')) {
-                e.preventDefault();
-            }
-        });
 
         // Disable touch-and-hold context menus on mobile devices except for #search-container
         document.addEventListener('touchstart', function(e) {
