@@ -105,6 +105,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Mount Stuart parkrun",
+        "reason": "Debris from storm still being cleared",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Naas parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-08"
@@ -212,6 +217,11 @@
     {
         "name": "Maldon Prom junior parkrun",
         "reason": "Military vehicle event in prom",
+        "date": "2025-02-09"
+    },
+    {
+        "name": "NIAC junior parkrun",
+        "reason": "Test event being run on 9th Feb",
         "date": "2025-02-09"
     }
 ]
