@@ -55,6 +55,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Falkirk parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Geographe Bay parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-08"
@@ -102,6 +107,11 @@
     {
         "name": "Loftsgardsbrua parkrun",
         "reason": "Vinterpause",
+        "date": "2025-02-08"
+    },
+    {
+        "name": "Montalto Estate parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-08"
     },
     {
