@@ -130,6 +130,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "North Harbour parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Puolarmaari parkrun",
         "reason": "Talvitauko",
         "date": "2025-02-08"
@@ -186,6 +191,11 @@
     },
     {
         "name": "Westville parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-02-08"
+    },
+    {
+        "name": "Windhoek parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-08"
     },
