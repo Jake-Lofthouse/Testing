@@ -10,6 +10,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Aplins Weir parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Aspen parkrun",
         "reason": "Winter Pause",
         "date": "2025-02-08"
@@ -72,6 +77,11 @@
     {
         "name": "Huddinge parkrun",
         "reason": "Vinteruppeh\u00e5ll",
+        "date": "2025-02-08"
+    },
+    {
+        "name": "Jells parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-08"
     },
     {
@@ -248,6 +258,11 @@
         "name": "parkrun du Lac de Divonne",
         "reason": "parkrun est actuellement suspendu en France",
         "date": "2025-02-08"
+    },
+    {
+        "name": "Carmarthen junior parkrun",
+        "reason": "No run directors available",
+        "date": "2025-02-09"
     },
     {
         "name": "Maldon Prom junior parkrun",
