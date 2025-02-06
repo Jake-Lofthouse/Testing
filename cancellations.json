@@ -55,6 +55,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Castlewellan parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Clifton parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-08"
@@ -217,6 +222,11 @@
     {
         "name": "Sirromet parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-02-08"
+    },
+    {
+        "name": "Somerset West parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-08"
     },
     {
