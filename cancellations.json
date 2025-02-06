@@ -80,6 +80,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Horinouchi koen parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Huddinge parkrun",
         "reason": "Vinteruppeh\u00e5ll",
         "date": "2025-02-08"
@@ -167,6 +172,11 @@
     {
         "name": "Puolarmaari parkrun",
         "reason": "Talvitauko",
+        "date": "2025-02-08"
+    },
+    {
+        "name": "Riverway parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-08"
     },
     {
