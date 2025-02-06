@@ -50,6 +50,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Castleblayney parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Clonbur Woods parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-08"
@@ -87,6 +92,11 @@
     {
         "name": "Huddinge parkrun",
         "reason": "Vinteruppeh\u00e5ll",
+        "date": "2025-02-08"
+    },
+    {
+        "name": "Ipswich parkrun",
+        "reason": "Permission issue",
         "date": "2025-02-08"
     },
     {
