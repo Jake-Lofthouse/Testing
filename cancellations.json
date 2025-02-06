@@ -225,6 +225,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Somerdale Pavilion parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Somerset West parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-08"
@@ -247,6 +252,11 @@
     {
         "name": "Temple Newsam parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-02-08"
+    },
+    {
+        "name": "The Fisherman\u2018s Walk parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-08"
     },
     {
