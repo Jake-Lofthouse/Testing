@@ -55,6 +55,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Clifton parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Clonbur Woods parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-08"
@@ -167,6 +172,11 @@
     {
         "name": "Naas parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-02-08"
+    },
+    {
+        "name": "New Earswick parkrun",
+        "reason": "Course waterlogged",
         "date": "2025-02-08"
     },
     {
