@@ -25,6 +25,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Ballina parkrun",
+        "reason": "Weather",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Barton Trail parkrun",
         "reason": "Winter Pause",
         "date": "2025-02-08"
@@ -36,6 +41,11 @@
     },
     {
         "name": "Bowen parkrun",
+        "reason": "Weather",
+        "date": "2025-02-08"
+    },
+    {
+        "name": "Bracknell parkrun",
         "reason": "Weather",
         "date": "2025-02-08"
     },
@@ -85,12 +95,22 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Coed Cefn-pwll-du parkrun",
+        "reason": "Unable to access course - closed at short notice",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Corner Brook Stream Trail parkrun",
         "reason": "Winter Pause",
         "date": "2025-02-08"
     },
     {
         "name": "Deerpark Forest parkrun, Virginia",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-08"
+    },
+    {
+        "name": "Duffins Trail parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-08"
     },
@@ -235,6 +255,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Mundy parkrun",
+        "reason": "Weather",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Naas parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-08"
@@ -295,6 +320,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Perrigo parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Plantation parkrun",
         "reason": "Weather",
         "date": "2025-02-08"
@@ -337,6 +367,11 @@
     {
         "name": "Shawnigan Hills parkrun",
         "reason": "Weather",
+        "date": "2025-02-08"
+    },
+    {
+        "name": "Sippo Lake parkrun",
+        "reason": "Ice on Course",
         "date": "2025-02-08"
     },
     {
