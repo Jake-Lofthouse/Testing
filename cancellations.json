@@ -105,6 +105,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Festningen parkrun",
+        "reason": "Icy conditions on 3 major parts of the course",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Geographe Bay parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-08"
@@ -117,6 +122,11 @@
     {
         "name": "Hamilton Island parkrun",
         "reason": "Course severely damaged and unsafe",
+        "date": "2025-02-08"
+    },
+    {
+        "name": "Hazelmere Dam parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-08"
     },
     {
@@ -265,6 +275,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Oranmore parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Osterley parkrun",
         "reason": "Filming means venue not available",
         "date": "2025-02-08"
@@ -370,6 +385,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Tinley Manor parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Tramore parkrun, Waterford",
         "reason": "Tramore Duathlon on",
         "date": "2025-02-08"
@@ -390,6 +410,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Vryheid parkrun",
+        "reason": "Weather",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Warwick Racecourse parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-08"
@@ -407,6 +432,11 @@
     {
         "name": "Windhoek parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-02-08"
+    },
+    {
+        "name": "Witney parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-08"
     },
     {
