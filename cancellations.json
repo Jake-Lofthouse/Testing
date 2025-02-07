@@ -120,6 +120,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Hluhluwe parkrun",
+        "reason": "Weather",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Hondajima parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-08"
@@ -156,6 +161,11 @@
     },
     {
         "name": "Knockanacree Woods parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-08"
+    },
+    {
+        "name": "Knocknacarra parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-08"
     },
@@ -250,6 +260,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Odakaryokuchi parkrun",
+        "reason": "Weather",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Osterley parkrun",
         "reason": "Filming means venue not available",
         "date": "2025-02-08"
@@ -262,6 +277,11 @@
     {
         "name": "Plantation parkrun",
         "reason": "Weather",
+        "date": "2025-02-08"
+    },
+    {
+        "name": "Portumna parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-08"
     },
     {
@@ -437,6 +457,11 @@
     {
         "name": "Carmarthen junior parkrun",
         "reason": "No run directors available",
+        "date": "2025-02-09"
+    },
+    {
+        "name": "Cotlands Park junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-09"
     },
     {
