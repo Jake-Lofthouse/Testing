@@ -105,6 +105,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Hamilton Island parkrun",
+        "reason": "Course severely damaged and unsafe",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Horinouchi koen parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-08"
@@ -212,6 +217,11 @@
     {
         "name": "Osterley parkrun",
         "reason": "Filming means venue not available",
+        "date": "2025-02-08"
+    },
+    {
+        "name": "Plantation parkrun",
+        "reason": "Weather",
         "date": "2025-02-08"
     },
     {
