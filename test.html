@@ -342,7 +342,7 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            animation: progress 5s linear forwards;
+            animation: progress 2.5s linear forwards;
             background: #E24D4C;
         }
         @keyframes progress {
@@ -580,11 +580,15 @@ function onLocationFound(e) {
 map.on('locationfound', onLocationFound);
 
 // Only locate user if no valid coordinates are provided in the URL
-if (!hasValidCoords) {
-    map.locate({ setView: true, maxZoom: 13 });
-} else {
-    map.locate({ setView: false }); // Detect user location but don’t move map
+if (hasValidCoords) {
+    if (!userLocationMarker) {
+        userLocationMarker = L.marker([lat, lon], { icon: LocationIcon }).addTo(map)
+            .bindPopup("You are here").openPopup();
+    } else {
+        userLocationMarker.setLatLng([lat, lon]);
+    }
 }
+
 
 
 // Use the merged function in the location found event
@@ -737,8 +741,8 @@ function returnToLocation() {
         // Instantly pan to last known location
         map.flyTo(userLocationMarker.getLatLng(), 13, { duration: 1.5 });
 
-        // Then request a fresh location update (doesn't move the map instantly)
-        map.locate({ setView: false, maxZoom: 13 });
+        /* Then request a fresh location update (doesn't move the map instantly)
+        map.locate({ setView: false, maxZoom: 13 });*/
     } else {
         // If no known location, request it and center when found
         map.locate({ setView: true, maxZoom: 13 });
@@ -755,7 +759,7 @@ map.on('locationerror', function() {
     canCreateToast = false;
     setTimeout(function() {
       canCreateToast = true;
-    }, 10000); // 10 seconds
+    }, 2500); 
   }
 });
 
@@ -775,10 +779,10 @@ map.on('locationerror', function() {
         const notifications = document.querySelector(".notifications");
 
         const toastDetails = {
-            timer: 5000, // 5 seconds timer
+            timer: 2500, 
             error: {
                 icon: 'fa-triangle-exclamation',
-                text: 'Unable to find your location',
+                text: 'Cannot find your location',
             }
         };
 
