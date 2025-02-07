@@ -35,6 +35,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Bowen parkrun",
+        "reason": "Weather",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Broparken parkrun",
         "reason": "Vinteruppeh\u00e5ll",
         "date": "2025-02-08"
@@ -75,6 +80,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Cloncurry parkrun",
+        "reason": "Weather",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Corner Brook Stream Trail parkrun",
         "reason": "Winter Pause",
         "date": "2025-02-08"
@@ -107,6 +117,11 @@
     {
         "name": "Hamilton Island parkrun",
         "reason": "Course severely damaged and unsafe",
+        "date": "2025-02-08"
+    },
+    {
+        "name": "Hondajima parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-08"
     },
     {
@@ -185,6 +200,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Mount Isa parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Mount Stuart parkrun",
         "reason": "Debris from storm still being cleared",
         "date": "2025-02-08"
@@ -207,6 +227,11 @@
     {
         "name": "North Harbour parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-02-08"
+    },
+    {
+        "name": "North Shore parkrun",
+        "reason": "Weather",
         "date": "2025-02-08"
     },
     {
@@ -285,6 +310,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Sunshine Beach parkrun",
+        "reason": "\u6e29\u5ea6\u304c\u6c37\u70b9\u4e0b\u4ee5\u4e0b\u3067\u3001\u51cd\u7d50\u3067\u5371\u967a\u306a\u305f\u3081",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Taree parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-08"
@@ -347,6 +377,11 @@
     {
         "name": "Windhoek parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-02-08"
+    },
+    {
+        "name": "Wolford Wood parkrun",
+        "reason": "Course needs work to bring back to good condition",
         "date": "2025-02-08"
     },
     {
