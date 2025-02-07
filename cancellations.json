@@ -220,6 +220,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "O\u2019Connors Beach parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Plantation parkrun",
         "reason": "Weather",
         "date": "2025-02-08"
@@ -300,6 +305,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "The Ponds parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Tramore parkrun, Waterford",
         "reason": "Tramore Duathlon on",
         "date": "2025-02-08"
@@ -327,6 +337,11 @@
     {
         "name": "Westville parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-02-08"
+    },
+    {
+        "name": "Whitley Bay parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-08"
     },
     {
