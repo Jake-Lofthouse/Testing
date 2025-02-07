@@ -20,6 +20,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Ayr parkrun",
+        "reason": "Storm damage",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Barton Trail parkrun",
         "reason": "Winter Pause",
         "date": "2025-02-08"
@@ -180,6 +185,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Mountbellew Forest parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Naas parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-08"
@@ -207,6 +217,11 @@
     {
         "name": "Puolarmaari parkrun",
         "reason": "Talvitauko",
+        "date": "2025-02-08"
+    },
+    {
+        "name": "Reading parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-08"
     },
     {
