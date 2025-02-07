@@ -255,6 +255,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Nonsuch parkrun",
+        "reason": "Waterlogged course",
+        "date": "2025-02-08"
+    },
+    {
         "name": "North Harbour parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-08"
@@ -330,6 +335,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Shawnigan Hills parkrun",
+        "reason": "Weather",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Sirromet parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-08"
@@ -347,6 +357,11 @@
     {
         "name": "Sterkfontein parkrun",
         "reason": "Course change",
+        "date": "2025-02-08"
+    },
+    {
+        "name": "Stockley Country parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-02-08"
     },
     {
