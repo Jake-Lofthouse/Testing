@@ -65,6 +65,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Canton Lower Rouge Trail parkrun",
+        "reason": "Icy Course Conditions",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Cardiff parkrun",
         "reason": "winter Warmer races using both courses",
         "date": "2025-02-08"
@@ -82,6 +87,11 @@
     {
         "name": "Central parkrun, Burnaby",
         "reason": "Course unsafe or blocked",
+        "date": "2025-02-08"
+    },
+    {
+        "name": "Chain of Lakes parkrun",
+        "reason": "Trail covered in ice",
         "date": "2025-02-08"
     },
     {
@@ -247,6 +257,11 @@
     {
         "name": "Knocknacarra parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-02-08"
+    },
+    {
+        "name": "Lake Pacawa parkrun",
+        "reason": "Weather",
         "date": "2025-02-08"
     },
     {
@@ -592,6 +607,11 @@
     {
         "name": "Warwick Racecourse parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-02-08"
+    },
+    {
+        "name": "Wascana parkrun",
+        "reason": "Weather",
         "date": "2025-02-08"
     },
     {
