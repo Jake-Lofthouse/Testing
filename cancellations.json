@@ -120,6 +120,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Dawesville parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Deerpark Forest parkrun, Virginia",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-08"
@@ -537,6 +542,11 @@
     {
         "name": "Warwick Racecourse parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-02-08"
+    },
+    {
+        "name": "Welland Canals Trail parkrun",
+        "reason": "Icy trail",
         "date": "2025-02-08"
     },
     {
