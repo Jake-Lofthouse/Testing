@@ -85,6 +85,16 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Chuo koen parkrun",
+        "reason": "Weather",
+        "date": "2025-02-08"
+    },
+    {
+        "name": "Citypark parkrun, Craigavon",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Clifton parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-08"
@@ -390,6 +400,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Portobello parkrun, Edinburgh",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Portumna parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-08"
@@ -520,6 +535,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Thurso parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Tinley Manor parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-08"
@@ -540,8 +560,18 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Ury Riverside parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-08"
+    },
+    {
         "name": "Victoria parkrun, Truro",
         "reason": "Winter Pause",
+        "date": "2025-02-08"
+    },
+    {
+        "name": "Vogrie parkrun",
+        "reason": "Icy patches too slippy",
         "date": "2025-02-08"
     },
     {
@@ -630,6 +660,11 @@
         "date": "2025-02-08"
     },
     {
+        "name": "Bracknell junior parkrun",
+        "reason": "Course waterlogged",
+        "date": "2025-02-09"
+    },
+    {
         "name": "Carmarthen junior parkrun",
         "reason": "No run directors available",
         "date": "2025-02-09"
@@ -652,6 +687,11 @@
     {
         "name": "NIAC junior parkrun",
         "reason": "Test event being run on 9th Feb",
+        "date": "2025-02-09"
+    },
+    {
+        "name": "Oranmore junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-09"
     },
     {
