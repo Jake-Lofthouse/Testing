@@ -715,6 +715,11 @@
         "date": "2025-02-09"
     },
     {
+        "name": "Millbank Boating Pond junior parkrun",
+        "reason": "Weather",
+        "date": "2025-02-09"
+    },
+    {
         "name": "NIAC junior parkrun",
         "reason": "Test event being run on 9th Feb",
         "date": "2025-02-09"
@@ -727,6 +732,11 @@
     {
         "name": "Osterley junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-02-09"
+    },
+    {
+        "name": "Wepre junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-09"
     }
 ]
