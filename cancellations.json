@@ -145,6 +145,11 @@
         "date": "2025-02-15"
     },
     {
+        "name": "Snowden Field parkrun",
+        "reason": "Mud took over grass - route needs time to recover.",
+        "date": "2025-02-15"
+    },
+    {
         "name": "Sterkfontein parkrun",
         "reason": "Course change",
         "date": "2025-02-15"
@@ -232,6 +237,11 @@
     {
         "name": "Osterley junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-02-16"
+    },
+    {
+        "name": "Peoples Park junior parkrun",
+        "reason": "Cancelling due to road closures for Llanelli Half",
         "date": "2025-02-16"
     },
     {
