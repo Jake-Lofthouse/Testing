@@ -225,6 +225,11 @@
         "date": "2025-02-15"
     },
     {
+        "name": "Holmebrook Valley junior parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-02-16"
+    },
+    {
         "name": "Osterley junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-16"
@@ -232,6 +237,11 @@
     {
         "name": "Pontypool junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-02-16"
+    },
+    {
+        "name": "Shipley Country junior parkrun",
+        "reason": "Butterfly\u2019s will be running through the park!",
         "date": "2025-02-16"
     }
 ]
