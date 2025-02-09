@@ -30,7 +30,6 @@
             width: 100vw;
         }
 
-        /* Updated controls styling */
         .logo-container {
             position: absolute;
             bottom: 10px;
@@ -46,7 +45,6 @@
             transform: scale(1.1);
         }
 
-        /* Popup styling */
         .popup-title {
             font-size: 16px;
             font-weight: bold;
@@ -59,23 +57,81 @@
             font-weight: normal;
             padding: 5px;
         }
+        .popup-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        .popup-button.course {
+            background-color: #28a745;
+            color: white;
+        }
+        .popup-button.direction {
+            background-color: #d90b26;
+            color: white;
+        }
+        .popup-button:hover {
+            opacity: 0.9;
+        }
+        .leaflet-popup-content-wrapper {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+        }
+        .leaflet-popup-tip-container {
+            top: 100%;
+            left: 50%;
+            margin-left: -20px;
+            margin-top: -1px;
+            width: 40px;
+            height: 20px;
+            position: absolute;
+            pointer-events: none;
+        }
+        .leaflet-popup-tip {
+            width: 17px;
+            height: 17px;
+            padding: 1px;
+            margin: -10px auto 0;
+            transform: rotate(45deg);
+            background: white;
+            box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+        }
+
+        /* Responsive styles */
+        @media (min-width: 768px) {
+            .popup-button {
+                font-size: 16px;
+                padding: 12px;
+            }
+        }
+        @media (min-width: 1024px) {
+            .popup-button {
+                font-size: 18px;
+                padding: 14px;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Map container -->
     <div id="map"></div>
 
-    <!-- Logo at the bottom -->
     <div class="logo-container">
         <img src="https://raw.githubusercontent.com/ALD-Models/Testing/main/Images/logo.png" alt="parkrunner tourist" onclick="window.open('https://parkrunnertourist.co.uk', '_blank')">
     </div>
 
-    <!-- Scripts -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
 
     <script>
-        // Initialize map
         var map = L.map('map', {
             center: [0, 0],
             zoom: 2,
@@ -87,36 +143,33 @@
             maxBoundsViscosity: 1.0,
             minZoom: 2,
             worldCopyJump: false,
-            attributionControl: false // Remove attribution text
+            attributionControl: false
         });
 
-        // Tile Layer
         L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
             maxZoom: 19
         }).addTo(map);
 
-        // Custom Icons
         var juniorIcon = L.icon({
             iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/Icons/Junior.png',
             iconSize: [38, 38],
-            iconAnchor: [19, 38]
+            iconAnchor: [19, 38],
+            popupAnchor: [0, 0]
         });
 
         var fiveKIcon = L.icon({
             iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/Icons/5k.png',
             iconSize: [38, 38],
-            iconAnchor: [19, 38]
+            iconAnchor: [19, 38],
+            popupAnchor: [0, 0]
         });
 
-        // Marker Cluster Group
         var markers = L.markerClusterGroup();
 
-        // Normalize Event Names (utility function)
         function normalizeEventName(name) {
             return name.toLowerCase().replace(/\s+/g, '').replace('parkrun', '');
         }
 
-        // Fetch and Render Markers
         fetch('https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/events1.json')
             .then(response => response.json())
             .then(data => {
@@ -130,51 +183,53 @@
                         var popupContent = `
                             <div class="popup-content">
                                 <div class="popup-title">${eventLongName}</div>
-                                <button class="course-btn" style="background-color:#28a745; color:white; border:none; padding:8px 12px; border-radius:5px; cursor:pointer; margin-bottom:5px;"
-                                    onclick="window.open('https://www.parkrun.org.uk/${eventName}/course/', '_blank')">Course</button>
-                                <button class="direction-btn" style="background-color:#d90b26; color:white; border:none; padding:8px 12px; border-radius:5px; cursor:pointer;"
-                                    onclick="window.open('https://www.google.com/maps/dir/?api=1&destination=${coords[1]},${coords[0]}', '_blank')">Directions</button>
+                                <button class="popup-button course" onclick="window.open('https://www.parkrun.org.uk/${eventName}/course/', '_blank')">Course</button>
+                                <button class="popup-button direction" onclick="window.open('https://www.google.com/maps/dir/?api=1&destination=${coords[1]},${coords[0]}', '_blank')">Directions</button>
                             </div>
                         `;
 
                         var markerIcon = isJunior ? juniorIcon : fiveKIcon;
-                        var marker = L.marker([coords[1], coords[0]], { icon: markerIcon }).bindPopup(popupContent);
+                        var marker = L.marker([coords[1], coords[0]], { icon: markerIcon }).bindPopup(popupContent, {
+                            offset: L.point(0, -30),
+                            className: 'custom-popup'
+                        });
                         markers.addLayer(marker);
                     }
                 });
                 map.addLayer(markers);
             });
 
-        // Custom Query Params for Markers
         function getQueryParams() {
             const params = new URLSearchParams(window.location.search);
             const lat = parseFloat(params.get('lat'));
             const lng = parseFloat(params.get('lng'));
-            const text = params.get('text')?.trim(); // Optional
+            const text = params.get('text')?.trim();
             const iconUrl = params.get('iconUrl');
             return { lat, lng, text, iconUrl };
         }
 
         const { lat, lng, text, iconUrl } = getQueryParams();
         if (!isNaN(lat) && !isNaN(lng)) {
-            // Define custom marker if icon URL exists
             let customIcon = iconUrl ? L.icon({
                 iconUrl: iconUrl,
                 iconSize: [30, 30],
-                iconAnchor: [15, 30]
+                iconAnchor: [15, 30],
+                popupAnchor: [0, -22]
             }) : null;
 
             const markerOptions = customIcon ? { icon: customIcon } : {};
             const marker = L.marker([lat, lng], markerOptions).addTo(map);
 
-            // Add popup only if text exists
             if (text) {
                 const popupContent = `
                     <div style="text-align: left; line-height: 1.4; font-size: 14px;">
                         ${text}
                     </div>
                 `;
-                marker.bindPopup(popupContent).openPopup();
+                marker.bindPopup(popupContent, {
+                    offset: L.point(0, -22),
+                    className: 'custom-popup'
+                }).openPopup();
             }
 
             map.setView([lat, lng], 14);
