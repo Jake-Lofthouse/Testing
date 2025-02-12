@@ -40,6 +40,11 @@
         "date": "2025-02-15"
     },
     {
+        "name": "Bury St Edmunds parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-15"
+    },
+    {
         "name": "Butter Trail parkrun",
         "reason": "Winter Pause",
         "date": "2025-02-15"
@@ -61,6 +66,11 @@
     },
     {
         "name": "Falkirk parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-15"
+    },
+    {
+        "name": "Fort William parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-15"
     },
