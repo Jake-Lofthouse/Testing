@@ -20,6 +20,11 @@
         "date": "2025-02-15"
     },
     {
+        "name": "Ayr parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-15"
+    },
+    {
         "name": "Barton Trail parkrun",
         "reason": "Winter Pause",
         "date": "2025-02-15"
@@ -57,6 +62,11 @@
     {
         "name": "Churchill Parkway parkrun",
         "reason": "Weather",
+        "date": "2025-02-15"
+    },
+    {
+        "name": "Clonbur Woods parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-15"
     },
     {
