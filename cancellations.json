@@ -95,6 +95,11 @@
         "date": "2025-02-15"
     },
     {
+        "name": "Ipswich parkrun",
+        "reason": "Permission issue",
+        "date": "2025-02-15"
+    },
+    {
         "name": "Jells parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-15"
@@ -117,6 +122,11 @@
     {
         "name": "Loftsgardsbrua parkrun",
         "reason": "Vinterpause",
+        "date": "2025-02-15"
+    },
+    {
+        "name": "Maldon Prom parkrun",
+        "reason": "Field wet and puddly, cancel to protect for future",
         "date": "2025-02-15"
     },
     {
@@ -162,6 +172,11 @@
     {
         "name": "Puolarmaari parkrun",
         "reason": "Talvitauko",
+        "date": "2025-02-15"
+    },
+    {
+        "name": "Ross-on-Wye parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-15"
     },
     {
