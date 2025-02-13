@@ -35,6 +35,11 @@
         "date": "2025-02-15"
     },
     {
+        "name": "Bayview Road parkrun",
+        "reason": "Weather",
+        "date": "2025-02-15"
+    },
+    {
         "name": "Bellevue parkrun",
         "reason": "Winter Pause",
         "date": "2025-02-15"
@@ -85,6 +90,11 @@
         "date": "2025-02-15"
     },
     {
+        "name": "Duffins Trail parkrun",
+        "reason": "Weather",
+        "date": "2025-02-15"
+    },
+    {
         "name": "Durbanville parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-15"
@@ -107,6 +117,11 @@
     {
         "name": "Geographe Bay parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-02-15"
+    },
+    {
+        "name": "Hafan Pwllheli parkrun",
+        "reason": "Very high tide - no beach",
         "date": "2025-02-15"
     },
     {
@@ -182,6 +197,11 @@
     {
         "name": "Montalto Estate parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-02-15"
+    },
+    {
+        "name": "Mount Stuart parkrun",
+        "reason": "Ongoing clearance of storm damage to course",
         "date": "2025-02-15"
     },
     {
@@ -287,6 +307,11 @@
     {
         "name": "Welkom parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-02-15"
+    },
+    {
+        "name": "Welland Canals Trail parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-15"
     },
     {
