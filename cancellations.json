@@ -145,6 +145,11 @@
         "date": "2025-02-15"
     },
     {
+        "name": "Huntingdon parkrun",
+        "reason": "Location in poor condition after multiple events",
+        "date": "2025-02-15"
+    },
+    {
         "name": "Ipswich parkrun",
         "reason": "Permission issue",
         "date": "2025-02-15"
@@ -368,6 +373,11 @@
         "name": "parkrun du Lac de Divonne",
         "reason": "parkrun est actuellement suspendu en France",
         "date": "2025-02-15"
+    },
+    {
+        "name": "Cotlands Park junior parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-16"
     },
     {
         "name": "Holmebrook Valley junior parkrun",
