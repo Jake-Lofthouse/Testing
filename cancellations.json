@@ -120,6 +120,11 @@
         "date": "2025-02-15"
     },
     {
+        "name": "Jeune Park parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-15"
+    },
+    {
         "name": "Judarskogen parkrun",
         "reason": "Vinteruppeh\u00e5ll",
         "date": "2025-02-15"
@@ -262,6 +267,11 @@
     {
         "name": "Windhoek parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-02-15"
+    },
+    {
+        "name": "Zeehan Golf Club parkrun",
+        "reason": "Fires",
         "date": "2025-02-15"
     },
     {
