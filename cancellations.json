@@ -115,6 +115,11 @@
         "date": "2025-02-15"
     },
     {
+        "name": "Horspath parkrun",
+        "reason": "Risk of hippos in course. Course waterlogged.",
+        "date": "2025-02-15"
+    },
+    {
         "name": "Huddinge parkrun",
         "reason": "Vinteruppeh\u00e5ll",
         "date": "2025-02-15"
@@ -197,6 +202,11 @@
     {
         "name": "Osterley parkrun",
         "reason": "Filming means venue not available",
+        "date": "2025-02-15"
+    },
+    {
+        "name": "Port Hedland parkrun",
+        "reason": "Severe Tropical cyclone Zelia",
         "date": "2025-02-15"
     },
     {
@@ -337,6 +347,11 @@
     {
         "name": "Hucknall junior parkrun",
         "reason": "No Run Director available",
+        "date": "2025-02-16"
+    },
+    {
+        "name": "Knavesmire junior parkrun",
+        "reason": "Venue unavailable",
         "date": "2025-02-16"
     },
     {
