@@ -115,6 +115,11 @@
         "date": "2025-02-15"
     },
     {
+        "name": "Emmerwiesen parkrun",
+        "reason": "Air quality",
+        "date": "2025-02-15"
+    },
+    {
         "name": "Falkirk parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-15"
@@ -215,6 +220,11 @@
         "date": "2025-02-15"
     },
     {
+        "name": "Miyagawa koen parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-02-15"
+    },
+    {
         "name": "Montalto Estate parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-15"
@@ -227,6 +237,11 @@
     {
         "name": "Mthatha parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-02-15"
+    },
+    {
+        "name": "Mtunzini parkrun",
+        "reason": "Weather",
         "date": "2025-02-15"
     },
     {
@@ -271,6 +286,11 @@
     },
     {
         "name": "Plantation parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-15"
+    },
+    {
+        "name": "Poolsbrook parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-15"
     },
@@ -428,6 +448,11 @@
         "name": "parkrun du Lac de Divonne",
         "reason": "parkrun est actuellement suspendu en France",
         "date": "2025-02-15"
+    },
+    {
+        "name": "Cambourne junior parkrun",
+        "reason": "Permission issue",
+        "date": "2025-02-16"
     },
     {
         "name": "Cotlands Park junior parkrun",
