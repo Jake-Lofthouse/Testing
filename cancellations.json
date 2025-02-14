@@ -170,6 +170,11 @@
         "date": "2025-02-15"
     },
     {
+        "name": "Jock Trail parkrun",
+        "reason": "Course unsafe due to flooding",
+        "date": "2025-02-15"
+    },
+    {
         "name": "Judarskogen parkrun",
         "reason": "Vinteruppeh\u00e5ll",
         "date": "2025-02-15"
@@ -225,8 +230,18 @@
         "date": "2025-02-15"
     },
     {
+        "name": "Mundy parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-15"
+    },
+    {
         "name": "Myponga Reservoir parkrun",
         "reason": "Conflict with another event",
+        "date": "2025-02-15"
+    },
+    {
+        "name": "New Earswick parkrun",
+        "reason": "Ground conditions",
         "date": "2025-02-15"
     },
     {
@@ -267,6 +282,11 @@
     {
         "name": "Puolarmaari parkrun",
         "reason": "Talvitauko",
+        "date": "2025-02-15"
+    },
+    {
+        "name": "Riverway parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-15"
     },
     {
