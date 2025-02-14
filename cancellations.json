@@ -50,6 +50,11 @@
         "date": "2025-02-15"
     },
     {
+        "name": "Bramhall parkrun",
+        "reason": "Key path damaged.",
+        "date": "2025-02-15"
+    },
+    {
         "name": "Brooklands parkrun",
         "reason": "Funfair on the course",
         "date": "2025-02-15"
@@ -360,6 +365,11 @@
         "date": "2025-02-15"
     },
     {
+        "name": "The Fisherman\u2018s Walk parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-15"
+    },
+    {
         "name": "The Plens parkrun",
         "reason": "Course still blocked",
         "date": "2025-02-15"
@@ -407,6 +417,11 @@
     {
         "name": "Wolford Wood parkrun",
         "reason": "Course needs work to bring it back into condition",
+        "date": "2025-02-15"
+    },
+    {
+        "name": "Worthing parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-15"
     },
     {
@@ -477,6 +492,11 @@
     {
         "name": "Knavesmire junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-02-16"
+    },
+    {
+        "name": "Longford junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-02-16"
     },
     {
