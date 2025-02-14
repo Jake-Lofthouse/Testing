@@ -85,6 +85,11 @@
         "date": "2025-02-15"
     },
     {
+        "name": "Canyon Rim Trail parkrun",
+        "reason": "Weather",
+        "date": "2025-02-15"
+    },
+    {
         "name": "Central parkrun, Burnaby",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-15"
@@ -92,6 +97,11 @@
     {
         "name": "Churchill Parkway parkrun",
         "reason": "Weather",
+        "date": "2025-02-15"
+    },
+    {
+        "name": "Clarence parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-02-15"
     },
     {
