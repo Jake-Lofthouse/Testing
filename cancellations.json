@@ -95,6 +95,11 @@
         "date": "2025-02-15"
     },
     {
+        "name": "Cutler Park parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-15"
+    },
+    {
         "name": "Deerpark Forest parkrun, Virginia",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-15"
@@ -135,6 +140,11 @@
         "date": "2025-02-15"
     },
     {
+        "name": "Festningen parkrun",
+        "reason": "Icy conditions on part of the course",
+        "date": "2025-02-15"
+    },
+    {
         "name": "Fort William parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-15"
@@ -147,6 +157,11 @@
     {
         "name": "Groene Ster parkrun",
         "reason": "Weather",
+        "date": "2025-02-15"
+    },
+    {
+        "name": "Grove Fields parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-15"
     },
     {
@@ -202,6 +217,11 @@
     {
         "name": "Judarskogen parkrun",
         "reason": "Vinteruppeh\u00e5ll",
+        "date": "2025-02-15"
+    },
+    {
+        "name": "Kralinbergh parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-02-15"
     },
     {
@@ -285,6 +305,11 @@
         "date": "2025-02-15"
     },
     {
+        "name": "Ohio and Erie Canal Reservation parkrun",
+        "reason": "Weather",
+        "date": "2025-02-15"
+    },
+    {
         "name": "Old Thomson River Road parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-15"
@@ -362,6 +387,11 @@
     {
         "name": "Snowden Field parkrun",
         "reason": "Mud took over grass - route needs time to recover.",
+        "date": "2025-02-15"
+    },
+    {
+        "name": "Spanish Banks Beach parkrun",
+        "reason": "Weather",
         "date": "2025-02-15"
     },
     {
