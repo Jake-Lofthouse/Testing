@@ -240,6 +240,11 @@
         "date": "2025-02-15"
     },
     {
+        "name": "Havelkanal parkrun",
+        "reason": "Strecke teilweise vereist",
+        "date": "2025-02-15"
+    },
+    {
         "name": "Haverhill parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-02-15"
@@ -536,6 +541,11 @@
     },
     {
         "name": "Stadspark parkrun, Groningen",
+        "reason": "Weather",
+        "date": "2025-02-15"
+    },
+    {
+        "name": "Stadtpark parkrun, Chemnitz",
         "reason": "Weather",
         "date": "2025-02-15"
     },
