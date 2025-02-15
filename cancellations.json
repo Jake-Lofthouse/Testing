@@ -145,6 +145,11 @@
         "date": "2025-02-15"
     },
     {
+        "name": "Coal Creek Trail parkrun",
+        "reason": "Weather",
+        "date": "2025-02-15"
+    },
+    {
         "name": "Corner Brook Stream Trail parkrun",
         "reason": "Winter Pause",
         "date": "2025-02-15"
@@ -320,6 +325,11 @@
         "date": "2025-02-15"
     },
     {
+        "name": "Lake Pacawa parkrun",
+        "reason": "Weather",
+        "date": "2025-02-15"
+    },
+    {
         "name": "Lightning Ridge parkrun",
         "reason": "Permission issue",
         "date": "2025-02-15"
@@ -377,6 +387,11 @@
     {
         "name": "Montalto Estate parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-02-15"
+    },
+    {
+        "name": "Morrissey Park parkrun",
+        "reason": "Weather",
         "date": "2025-02-15"
     },
     {
@@ -772,6 +787,11 @@
     {
         "name": "Shipley Country junior parkrun",
         "reason": "Butterfly\u2019s will be running through the park!",
+        "date": "2025-02-16"
+    },
+    {
+        "name": "Stonehouse junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-16"
     },
     {
