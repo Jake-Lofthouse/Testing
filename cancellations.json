@@ -110,6 +110,11 @@
         "date": "2025-02-15"
     },
     {
+        "name": "Castlewellan parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-15"
+    },
+    {
         "name": "Central parkrun, Burnaby",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-15"
@@ -610,6 +615,11 @@
         "date": "2025-02-15"
     },
     {
+        "name": "Vermuyden Way parkrun",
+        "reason": "Incident after start",
+        "date": "2025-02-15"
+    },
+    {
         "name": "Victoria parkrun, Truro",
         "reason": "Winter Pause",
         "date": "2025-02-15"
@@ -625,11 +635,6 @@
         "date": "2025-02-15"
     },
     {
-        "name": "Waterloo Plains parkrun",
-        "reason": "Weather",
-        "date": "2025-02-15"
-    },
-    {
         "name": "Welkom parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-15"
@@ -637,6 +642,11 @@
     {
         "name": "Welland Canals Trail parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-02-15"
+    },
+    {
+        "name": "White Lick Creek parkrun",
+        "reason": "Weather",
         "date": "2025-02-15"
     },
     {
