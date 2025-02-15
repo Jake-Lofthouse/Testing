@@ -150,6 +150,11 @@
         "date": "2025-02-15"
     },
     {
+        "name": "Cornerstone Lakes parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-15"
+    },
+    {
         "name": "Cutler Park parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-15"
@@ -635,6 +640,11 @@
         "date": "2025-02-15"
     },
     {
+        "name": "Waterloo Plains parkrun",
+        "reason": "Weather",
+        "date": "2025-02-15"
+    },
+    {
         "name": "Welkom parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-15"
@@ -762,6 +772,11 @@
     {
         "name": "Shipley Country junior parkrun",
         "reason": "Butterfly\u2019s will be running through the park!",
+        "date": "2025-02-16"
+    },
+    {
+        "name": "Wimpole Estate junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-02-16"
     }
 ]
