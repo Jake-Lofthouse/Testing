@@ -100,6 +100,11 @@
         "date": "2025-02-15"
     },
     {
+        "name": "Castleblayney parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-15"
+    },
+    {
         "name": "Central parkrun, Burnaby",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-15"
@@ -175,6 +180,11 @@
         "date": "2025-02-15"
     },
     {
+        "name": "Eramosa River Trail parkrun",
+        "reason": "The trail has too much snow",
+        "date": "2025-02-15"
+    },
+    {
         "name": "Evergreen parkrun",
         "reason": "Icy conditions make the course unsafe",
         "date": "2025-02-15"
@@ -242,6 +252,11 @@
     {
         "name": "Huntingdon parkrun",
         "reason": "Location in poor condition after multiple events",
+        "date": "2025-02-15"
+    },
+    {
+        "name": "ITC Community Sports parkrun",
+        "reason": "Weather",
         "date": "2025-02-15"
     },
     {
@@ -550,6 +565,11 @@
         "date": "2025-02-15"
     },
     {
+        "name": "Tollgate Farm Park parkrun, baq\u02b7ab",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-15"
+    },
+    {
         "name": "Upington parkrun",
         "reason": "John Nugent Memorial run use the whole route",
         "date": "2025-02-15"
@@ -567,6 +587,11 @@
     {
         "name": "Walvis Bay parkrun",
         "reason": "SPCA 5km fundraiser on route",
+        "date": "2025-02-15"
+    },
+    {
+        "name": "Wascana parkrun",
+        "reason": "Weather",
         "date": "2025-02-15"
     },
     {
