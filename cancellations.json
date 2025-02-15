@@ -405,6 +405,11 @@
         "date": "2025-02-15"
     },
     {
+        "name": "Nant y Pandy parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-15"
+    },
+    {
         "name": "New Earswick parkrun",
         "reason": "Ground conditions",
         "date": "2025-02-15"
@@ -567,6 +572,11 @@
     {
         "name": "Taree parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-02-15"
+    },
+    {
+        "name": "Teignmouth Promenade parkrun",
+        "reason": "Weather",
         "date": "2025-02-15"
     },
     {
