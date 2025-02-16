@@ -125,6 +125,11 @@
         "date": "2025-02-22"
     },
     {
+        "name": "Montalto Estate parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-22"
+    },
+    {
         "name": "Mount Stuart parkrun",
         "reason": "Ongoing clearance of storm damage to course",
         "date": "2025-02-22"
@@ -203,6 +208,11 @@
         "name": "parkrun du Lac de Divonne",
         "reason": "parkrun est actuellement suspendu en France",
         "date": "2025-02-22"
+    },
+    {
+        "name": "Castle Playing Fields junior parkrun",
+        "reason": "No available Run Directors",
+        "date": "2025-02-23"
     },
     {
         "name": "Cotlands Park junior parkrun",
