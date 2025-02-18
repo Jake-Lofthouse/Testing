@@ -20,15 +20,12 @@
   gtag('config', 'G-REFFZSK4XK');
 </script>
 
-
-
 <!-- Cronitor RUM -->
 <script async src="https://rum.cronitor.io/script.js"></script>
 <script>
     window.cronitor = window.cronitor || function() { (window.cronitor.q = window.cronitor.q || []).push(arguments); };
     cronitor('config', { clientKey: '7d03d6af0f794abeb3988b05dc158a14' });
 </script>
-
     
     <style>
         html, body {
@@ -213,10 +210,6 @@
   justify-content: center;
 }
 
-
-
-
-
         #search-input-container {
             position: relative;
             display: flex;
@@ -373,8 +366,6 @@
         border-radius: 5px; /* Rounded corners */
         margin-bottom: 10px;
        }
-
-
 
     </style>
 </head>
@@ -1009,8 +1000,6 @@ popupContent += `
 }
 
 
-
-
 // Initial fetch for data and event listener setup
 fetch('/events1.json')
     .then(response => response.json())
@@ -1021,14 +1010,25 @@ fetch('/events1.json')
         document.getElementById('juniorCheckbox').addEventListener('change', updateMapMarkers);
         document.getElementById('fiveKCheckbox').addEventListener('change', updateMapMarkers);
     })
-    .catch(err => console.error('Error fetching GeoJSON:', err));
+    .catch(err => {
+        console.error('Error fetching GeoJSON:', err);
+        handleGeocodingError();
+    });
 
-        window.addEventListener('load', () => {
+function handleGeocodingError() {
+    window.location.href = 'https://parkrunnertourist.co.uk/Error';
+}
+
+// Consent button click event listener
+window.addEventListener('load', () => {
     const consentButton = document.querySelector('.VfPpkd-RLmnJb');
     if (consentButton) {
         consentButton.click();
     }
 });
+
+
+
 
 
         function openDirections(lat, lon) {
