@@ -594,7 +594,7 @@ if (!hasValidCoords) {
 map.on('moveend', updateURL);
 
         var juniorIcon = L.icon({
-            iconUrl: 'main/Icons/Junior.png',
+            iconUrl: '/Icons/Junior.png',
             iconSize: [38, 38],
             iconAnchor: [19, 38],
             popupAnchor: [0, -38]
@@ -608,14 +608,14 @@ map.on('moveend', updateURL);
         });
 
         var LocationIcon = L.icon({
-            iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/Icons/Me.png',
+            iconUrl: '/Icons/Me.png',
             iconSize: [38, 38],
             iconAnchor: [19, 38],
             popupAnchor: [0, -38]
         });
         
         var bbIcon = L.icon({
-           iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/Icons/BB.png',  // Replace with actual icon URL
+           iconUrl: 'Icons/BB.png',
            iconSize: [38, 38],
            iconAnchor: [19, 38],
            popupAnchor: [0, -38]
@@ -623,7 +623,7 @@ map.on('moveend', updateURL);
 
         
         var canceledIcon = L.icon({
-           iconUrl: 'https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/Icons/Cancel.png',
+           iconUrl: '/Icons/Cancel.png',
            iconSize: [38, 38],
            iconAnchor: [19, 38],
            popupAnchor: [0, -38]
@@ -644,7 +644,7 @@ function normalizeEventName(name) {
 
 // Function to fetch location data
 async function fetchLocationData() {
-    const url = 'https://raw.githubusercontent.com/ALD-Models/Testing/refs/heads/main/BBS/Locations.json';
+    const url = '/BBS/Locations.json';
     try {
         const response = await fetch(url);
         if (!response.ok) {
@@ -831,7 +831,7 @@ function fetchLocationCoordinates(place) {
 
  
 // Fetch cancellation data
-fetch('https://raw.githubusercontent.com/ALD-Models/Testing/main/cancellations.json')
+fetch('/cancellations.json')
     .then(response => response.json())
     .then(data => {
         cancellations = {};
@@ -914,14 +914,14 @@ const tomTomApiKey = 'dAvRoz8Z1SA4K6JM5l6XnJMGPwc7GQmG';
 
 // Define custom icons
 const hotelIcon = L.icon({
-    iconUrl: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Icons/Hotel.png',
+    iconUrl: '/Icons/Hotel.png',
     iconSize: [38, 38],
     iconAnchor: [19, 38],
     popupAnchor: [0, -38],
 });
 
 const campsiteIcon = L.icon({
-    iconUrl: 'https://raw.githubusercontent.com/ALD-Models/Testing/main/Icons/Camp.png',
+    iconUrl: '/Icons/Camp.png',
     iconSize: [38, 38],
     iconAnchor: [19, 38],
     popupAnchor: [0, -38],
@@ -1012,7 +1012,7 @@ popupContent += `
 
 
 // Initial fetch for data and event listener setup
-fetch('https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/events1.json')
+fetch('/events1.json')
     .then(response => response.json())
     .then(jsonData => {
         data = jsonData;
