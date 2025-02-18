@@ -1009,8 +1009,6 @@ popupContent += `
 }
 
 
-
-
 // Initial fetch for data and event listener setup
 fetch('/events1.json')
     .then(response => response.json())
@@ -1021,14 +1019,25 @@ fetch('/events1.json')
         document.getElementById('juniorCheckbox').addEventListener('change', updateMapMarkers);
         document.getElementById('fiveKCheckbox').addEventListener('change', updateMapMarkers);
     })
-    .catch(err => console.error('Error fetching GeoJSON:', err));
+    .catch(err => {
+        console.error('Error fetching GeoJSON:', err);
+        handleGeocodingError();
+    });
 
-        window.addEventListener('load', () => {
+function handleGeocodingError() {
+    window.location.href = 'https://parkrunnertourist.co.uk/Error';
+}
+
+// Consent button click event listener
+window.addEventListener('load', () => {
     const consentButton = document.querySelector('.VfPpkd-RLmnJb');
     if (consentButton) {
         consentButton.click();
     }
 });
+
+
+
 
 
         function openDirections(lat, lon) {
