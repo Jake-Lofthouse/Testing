@@ -60,6 +60,11 @@
         "date": "2025-02-22"
     },
     {
+        "name": "Colby parkrun",
+        "reason": "Weather",
+        "date": "2025-02-22"
+    },
+    {
         "name": "Corner Brook Stream Trail parkrun",
         "reason": "Winter Pause",
         "date": "2025-02-22"
@@ -182,6 +187,11 @@
     {
         "name": "North Harbour parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-02-22"
+    },
+    {
+        "name": "Penryn Campus parkrun",
+        "reason": "No Run Director available.",
         "date": "2025-02-22"
     },
     {
