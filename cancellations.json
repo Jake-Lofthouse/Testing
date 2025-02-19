@@ -110,12 +110,22 @@
         "date": "2025-02-22"
     },
     {
+        "name": "Huntingdon parkrun",
+        "reason": "Location in poor condition after multiple events",
+        "date": "2025-02-22"
+    },
+    {
         "name": "Huskisson parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-22"
     },
     {
         "name": "Jells parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-22"
+    },
+    {
+        "name": "Jeune Park parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-22"
     },
