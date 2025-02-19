@@ -110,6 +110,11 @@
         "date": "2025-02-22"
     },
     {
+        "name": "Harrismith parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-22"
+    },
+    {
         "name": "Hastings High School parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-22"
@@ -202,6 +207,11 @@
     {
         "name": "Rinko Park parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-02-22"
+    },
+    {
+        "name": "Ross-on-Wye parkrun",
+        "reason": "Weather be crazy like my wife.",
         "date": "2025-02-22"
     },
     {
