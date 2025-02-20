@@ -25,6 +25,11 @@
         "date": "2025-02-22"
     },
     {
+        "name": "Baxter parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-02-22"
+    },
+    {
         "name": "Bedok Reservoir parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-22"
@@ -56,6 +61,11 @@
     },
     {
         "name": "Chuo koen parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-22"
+    },
+    {
+        "name": "Clonbur Woods parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-22"
     },
