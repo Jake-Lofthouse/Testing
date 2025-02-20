@@ -1,7 +1,7 @@
 [
     {
         "name": "Anacostia parkrun",
-        "reason": "Federal overreach",
+        "reason": "Permission issue",
         "date": "2025-02-22"
     },
     {
@@ -170,6 +170,11 @@
         "date": "2025-02-22"
     },
     {
+        "name": "Ipswich parkrun",
+        "reason": "Permission issue",
+        "date": "2025-02-22"
+    },
+    {
         "name": "Jells parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-22"
@@ -187,6 +192,11 @@
     {
         "name": "Judarskogen parkrun",
         "reason": "Vinteruppeh\u00e5ll",
+        "date": "2025-02-22"
+    },
+    {
+        "name": "King George V Playing Field parkrun, Cheltenham",
+        "reason": "Weather",
         "date": "2025-02-22"
     },
     {
@@ -296,6 +306,11 @@
     },
     {
         "name": "Taup\u014d parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-02-22"
+    },
+    {
+        "name": "Thoulstone parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-22"
     },
