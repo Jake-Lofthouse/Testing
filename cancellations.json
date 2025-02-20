@@ -105,6 +105,11 @@
         "date": "2025-02-22"
     },
     {
+        "name": "Dullstroom parkrun",
+        "reason": "Course is waterlogged after recent heavy rain",
+        "date": "2025-02-22"
+    },
+    {
         "name": "East Grinstead parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-22"
@@ -225,6 +230,11 @@
         "date": "2025-02-22"
     },
     {
+        "name": "Oranmore parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-22"
+    },
+    {
         "name": "Penryn Campus parkrun",
         "reason": "No Run Director available.",
         "date": "2025-02-22"
@@ -252,6 +262,11 @@
     {
         "name": "Saint-Paulin parkrun",
         "reason": "Winter Pause",
+        "date": "2025-02-22"
+    },
+    {
+        "name": "Somerset West parkrun",
+        "reason": "Venue unavailable",
         "date": "2025-02-22"
     },
     {
