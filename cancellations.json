@@ -70,6 +70,11 @@
         "date": "2025-02-22"
     },
     {
+        "name": "Clifton parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-22"
+    },
+    {
         "name": "Clonbur Woods parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-22"
@@ -96,6 +101,11 @@
     },
     {
         "name": "Deerpark Forest parkrun, Virginia",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-22"
+    },
+    {
+        "name": "Drumblade parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-22"
     },
@@ -247,6 +257,11 @@
     {
         "name": "Rinko Park parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-02-22"
+    },
+    {
+        "name": "Riviera on Vaal parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-22"
     },
     {
