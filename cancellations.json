@@ -1,10 +1,5 @@
 [
     {
-        "name": "Anacostia parkrun",
-        "reason": "Permission issue",
-        "date": "2025-02-22"
-    },
-    {
         "name": "Ankerskogen parkrun",
         "reason": "Vinterpause",
         "date": "2025-02-22"
@@ -255,6 +250,11 @@
         "date": "2025-02-22"
     },
     {
+        "name": "New Earswick parkrun",
+        "reason": "Waterlogged fields",
+        "date": "2025-02-22"
+    },
+    {
         "name": "North Harbour parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-22"
@@ -336,6 +336,11 @@
     },
     {
         "name": "Welland Canals Trail parkrun",
+        "reason": "Weather",
+        "date": "2025-02-22"
+    },
+    {
+        "name": "Wolford Wood parkrun",
         "reason": "Weather",
         "date": "2025-02-22"
     },
