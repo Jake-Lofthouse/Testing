@@ -26903,26 +26903,6 @@
         }
       },
       {
-        "id": 1910,
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            153.306901,
-            -27.81877
-          ]
-        },
-        "properties": {
-          "eventname": "gainsboroughgreens",
-          "EventLongName": "Gainsborough Greens parkrun",
-          "EventShortName": "Gainsborough Greens",
-          "LocalisedEventLongName": null,
-          "countrycode": 3,
-          "seriesid": 1,
-          "EventLocation": "Wyperfield Circuit"
-        }
-      },
-      {
         "id": 1911,
         "type": "Feature",
         "geometry": {
@@ -53343,6 +53323,26 @@
         }
       },
       {
+        "id": 3623,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            152.630279,
+            -25.204584
+          ]
+        },
+        "properties": {
+          "eventname": "burrumheadsbeach",
+          "EventLongName": "Burrum Heads Beach parkrun",
+          "EventShortName": "Burrum Heads Beach",
+          "LocalisedEventLongName": null,
+          "countrycode": 3,
+          "seriesid": 1,
+          "EventLocation": "Burrum Heads Beach"
+        }
+      },
+      {
         "id": 3624,
         "type": "Feature",
         "geometry": {
@@ -53380,6 +53380,86 @@
           "countrycode": 98,
           "seriesid": 1,
           "EventLocation": "Old Town House Park"
+        }
+      },
+      {
+        "id": 3628,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -2.083087,
+            51.879141
+          ]
+        },
+        "properties": {
+          "eventname": "burrowsfield-juniors",
+          "EventLongName": "Burrow’s Field junior parkrun",
+          "EventShortName": "Burrow’s Field juniors",
+          "LocalisedEventLongName": null,
+          "countrycode": 97,
+          "seriesid": 2,
+          "EventLocation": "Burrow’s Field juniors"
+        }
+      },
+      {
+        "id": 3629,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            153.299229,
+            -27.812345
+          ]
+        },
+        "properties": {
+          "eventname": "gainsboroughparklands",
+          "EventLongName": "Gainsborough Parklands parkrun",
+          "EventShortName": "Gainsborough Parklands",
+          "LocalisedEventLongName": null,
+          "countrycode": 3,
+          "seriesid": 1,
+          "EventLocation": "Gainsborough Parklands"
+        }
+      },
+      {
+        "id": 3631,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            13.341577,
+            52.407965
+          ]
+        },
+        "properties": {
+          "eventname": "mauerweg",
+          "EventLongName": "Mauerweg parkrun",
+          "EventShortName": "Mauerweg",
+          "LocalisedEventLongName": null,
+          "countrycode": 32,
+          "seriesid": 1,
+          "EventLocation": "Mauerweg"
+        }
+      },
+      {
+        "id": 3632,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -2.220016,
+            53.003581
+          ]
+        },
+        "properties": {
+          "eventname": "lymevalleyparkway-juniors",
+          "EventLongName": "Lyme Valley Parkway junior parkrun",
+          "EventShortName": "Lyme Valley Parkway juniors",
+          "LocalisedEventLongName": null,
+          "countrycode": 97,
+          "seriesid": 2,
+          "EventLocation": "Lyme Valley Parkway juniors"
         }
       }
     ]
