@@ -115,12 +115,22 @@
         "date": "2025-02-22"
     },
     {
+        "name": "Duffins Trail parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-22"
+    },
+    {
         "name": "Dullstroom parkrun",
         "reason": "Course is waterlogged after recent heavy rain",
         "date": "2025-02-22"
     },
     {
         "name": "East Grinstead parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-22"
+    },
+    {
+        "name": "Emerald Resort parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-22"
     },
@@ -322,6 +332,11 @@
     {
         "name": "Warwick Racecourse parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-02-22"
+    },
+    {
+        "name": "Welland Canals Trail parkrun",
+        "reason": "Weather",
         "date": "2025-02-22"
     },
     {
