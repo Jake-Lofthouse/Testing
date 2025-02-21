@@ -645,6 +645,11 @@
         "date": "2025-02-23"
     },
     {
+        "name": "Haulbowline Island junior parkrun",
+        "reason": "Weather",
+        "date": "2025-02-23"
+    },
+    {
         "name": "Magherafelt junior parkrun",
         "reason": "Weather",
         "date": "2025-02-23"
@@ -657,6 +662,11 @@
     {
         "name": "Ockwells junior parkrun",
         "reason": "No available Run Directors",
+        "date": "2025-02-23"
+    },
+    {
+        "name": "Oranmore junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-23"
     },
     {
