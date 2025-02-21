@@ -235,6 +235,11 @@
         "date": "2025-02-22"
     },
     {
+        "name": "Leeupoort parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-22"
+    },
+    {
         "name": "Lightning Ridge parkrun",
         "reason": "Permission issue",
         "date": "2025-02-22"
@@ -247,6 +252,11 @@
     {
         "name": "Loftsgardsbrua parkrun",
         "reason": "Vinterpause",
+        "date": "2025-02-22"
+    },
+    {
+        "name": "Matlosana Bird parkrun",
+        "reason": "Weather",
         "date": "2025-02-22"
     },
     {
