@@ -25,6 +25,11 @@
         "date": "2025-02-22"
     },
     {
+        "name": "Ayr parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-22"
+    },
+    {
         "name": "Ballincollig parkrun",
         "reason": "Course is flooded and impassable in places",
         "date": "2025-02-22"
@@ -102,6 +107,11 @@
     {
         "name": "Clonbur Woods parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-02-22"
+    },
+    {
+        "name": "Clonmel parkrun",
+        "reason": "Course flooded&flood barriers up preventing access",
         "date": "2025-02-22"
     },
     {
@@ -310,6 +320,11 @@
         "date": "2025-02-22"
     },
     {
+        "name": "New York Central Fitness Trail parkrun",
+        "reason": "Weather",
+        "date": "2025-02-22"
+    },
+    {
         "name": "North Harbour parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-22"
@@ -357,6 +372,11 @@
     {
         "name": "Saint-Paulin parkrun",
         "reason": "Winter Pause",
+        "date": "2025-02-22"
+    },
+    {
+        "name": "Skien Fritidspark parkrun",
+        "reason": "Weather",
         "date": "2025-02-22"
     },
     {
