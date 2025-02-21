@@ -5,6 +5,11 @@
         "date": "2025-02-22"
     },
     {
+        "name": "Anstey Hill Recreation parkrun",
+        "reason": "Weather",
+        "date": "2025-02-22"
+    },
+    {
         "name": "Arrow Rest parkrun",
         "reason": "Route too muddy, unable to do maintenance",
         "date": "2025-02-22"
@@ -17,6 +22,11 @@
     {
         "name": "Avondale Forest parkrun",
         "reason": "Wicklow Hospice 10k and Half Marathon",
+        "date": "2025-02-22"
+    },
+    {
+        "name": "Bannockburn Bush parkrun",
+        "reason": "Weather",
         "date": "2025-02-22"
     },
     {
@@ -72,6 +82,11 @@
     {
         "name": "Chuo koen parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-02-22"
+    },
+    {
+        "name": "Cleland parkrun",
+        "reason": "Total fire ban",
         "date": "2025-02-22"
     },
     {
@@ -275,6 +290,11 @@
         "date": "2025-02-22"
     },
     {
+        "name": "Myponga Reservoir parkrun",
+        "reason": "Weather",
+        "date": "2025-02-22"
+    },
+    {
         "name": "New Earswick parkrun",
         "reason": "Waterlogged fields",
         "date": "2025-02-22"
@@ -292,6 +312,11 @@
     {
         "name": "Penryn Campus parkrun",
         "reason": "No Run Director available.",
+        "date": "2025-02-22"
+    },
+    {
+        "name": "Plantation parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-22"
     },
     {
@@ -327,6 +352,11 @@
     {
         "name": "Somerset West parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-02-22"
+    },
+    {
+        "name": "South Para Reservoir parkrun",
+        "reason": "Total Fire Ban declared",
         "date": "2025-02-22"
     },
     {
