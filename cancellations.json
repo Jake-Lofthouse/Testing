@@ -25,6 +25,11 @@
         "date": "2025-02-22"
     },
     {
+        "name": "Ballincollig parkrun",
+        "reason": "Course is flooded and impassable in places",
+        "date": "2025-02-22"
+    },
+    {
         "name": "Bannockburn Bush parkrun",
         "reason": "Weather",
         "date": "2025-02-22"
@@ -186,6 +191,11 @@
     },
     {
         "name": "Hastings High School parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-22"
+    },
+    {
+        "name": "Hazeldean Farm parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-22"
     },
@@ -362,6 +372,11 @@
     {
         "name": "Sterkfontein parkrun",
         "reason": "Course under maintenance",
+        "date": "2025-02-22"
+    },
+    {
+        "name": "Stonehouse parkrun",
+        "reason": "Weather",
         "date": "2025-02-22"
     },
     {
