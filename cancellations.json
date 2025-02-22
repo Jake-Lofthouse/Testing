@@ -685,6 +685,16 @@
         "date": "2025-02-22"
     },
     {
+        "name": "Arklow Duck Pond junior parkrun",
+        "reason": "Weather",
+        "date": "2025-02-23"
+    },
+    {
+        "name": "Barshaw junior parkrun",
+        "reason": "Weather",
+        "date": "2025-02-23"
+    },
+    {
         "name": "Castle Playing Fields junior parkrun",
         "reason": "No available Run Directors",
         "date": "2025-02-23"
@@ -711,6 +721,11 @@
     },
     {
         "name": "Haulbowline Island junior parkrun",
+        "reason": "Weather",
+        "date": "2025-02-23"
+    },
+    {
+        "name": "Inverleith junior parkrun",
         "reason": "Weather",
         "date": "2025-02-23"
     },
@@ -757,6 +772,11 @@
     {
         "name": "Stonehouse junior parkrun",
         "reason": "Waterlogged course",
+        "date": "2025-02-23"
+    },
+    {
+        "name": "Strathaven junior parkrun",
+        "reason": "Weather",
         "date": "2025-02-23"
     },
     {
