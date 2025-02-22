@@ -710,12 +710,27 @@
         "date": "2025-02-23"
     },
     {
+        "name": "Bankton Mains Park junior parkrun",
+        "reason": "Blowing a Hoolie",
+        "date": "2025-02-23"
+    },
+    {
         "name": "Barshaw junior parkrun",
         "reason": "Weather",
         "date": "2025-02-23"
     },
     {
+        "name": "Battery Park junior parkrun",
+        "reason": "Weather",
+        "date": "2025-02-23"
+    },
+    {
         "name": "Bodmin junior parkrun",
+        "reason": "Weather",
+        "date": "2025-02-23"
+    },
+    {
+        "name": "Bude Marshes junior parkrun",
         "reason": "Weather",
         "date": "2025-02-23"
     },
@@ -800,6 +815,11 @@
         "date": "2025-02-23"
     },
     {
+        "name": "Kilkenny Countryside Park junior parkrun",
+        "reason": "Weather",
+        "date": "2025-02-23"
+    },
+    {
         "name": "Leatherhead junior parkrun",
         "reason": "Flooding of the course",
         "date": "2025-02-23"
@@ -840,6 +860,11 @@
         "date": "2025-02-23"
     },
     {
+        "name": "Omagh Leisure Complex junior parkrun",
+        "reason": "Weather warning and volunteer shortage",
+        "date": "2025-02-23"
+    },
+    {
         "name": "Oranmore junior parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-02-23"
@@ -861,6 +886,16 @@
     },
     {
         "name": "Riverside junior parkrun, Ballymoney",
+        "reason": "Weather",
+        "date": "2025-02-23"
+    },
+    {
+        "name": "Rockfield junior parkrun",
+        "reason": "Inclement weather and shortage of volunteers",
+        "date": "2025-02-23"
+    },
+    {
+        "name": "Round Lake junior parkrun",
         "reason": "Weather",
         "date": "2025-02-23"
     },
@@ -890,8 +925,23 @@
         "date": "2025-02-23"
     },
     {
+        "name": "Walton Park junior parkrun",
+        "reason": "Weather",
+        "date": "2025-02-23"
+    },
+    {
+        "name": "Whaley Bridge junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-02-23"
+    },
+    {
         "name": "Winchester junior parkrun",
         "reason": "Winchester 10k using the park",
+        "date": "2025-02-23"
+    },
+    {
+        "name": "Yatton Recreation junior parkrun",
+        "reason": "Weather",
         "date": "2025-02-23"
     }
 ]
