@@ -500,6 +500,11 @@
         "date": "2025-02-22"
     },
     {
+        "name": "River Oaks parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-02-22"
+    },
+    {
         "name": "Riverside Walk parkrun",
         "reason": "Course conditions",
         "date": "2025-02-22"
@@ -690,8 +695,23 @@
         "date": "2025-02-23"
     },
     {
+        "name": "Ballincollig Regional junior parkrun",
+        "reason": "Route is badly flooded and sections are impassable",
+        "date": "2025-02-23"
+    },
+    {
         "name": "Barshaw junior parkrun",
         "reason": "Weather",
+        "date": "2025-02-23"
+    },
+    {
+        "name": "Bodmin junior parkrun",
+        "reason": "Weather",
+        "date": "2025-02-23"
+    },
+    {
+        "name": "Carmarthen junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-02-23"
     },
     {
@@ -705,8 +725,23 @@
         "date": "2025-02-23"
     },
     {
+        "name": "Clashduv junior parkrun",
+        "reason": "Weather",
+        "date": "2025-02-23"
+    },
+    {
+        "name": "Collett Park junior parkrun",
+        "reason": "Weather warning for wind in the morning.",
+        "date": "2025-02-23"
+    },
+    {
         "name": "Cotlands Park junior parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-02-23"
+    },
+    {
+        "name": "Cranbrook Country Park junior parkrun",
+        "reason": "Weather",
         "date": "2025-02-23"
     },
     {
