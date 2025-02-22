@@ -441,40 +441,6 @@
         }
         
 
-        
-function chooseAccommodation(lat, lon) {
-    // Store the coordinates for use after the user makes a selection
-    window.accommodationLat = lat;
-    window.accommodationLon = lon;
-
-    // Show the modal popup
-    document.getElementById('accommodationModal').style.display = 'flex';
-}
-
-
-function handleAccommodationChoice(type) {
-    const lat = window.accommodationLat;
-    const lon = window.accommodationLon;
-
-    if (type === 'hotels') {
-        openHotelMap(lat, lon);
-    } else if (type === 'campsites') {
-        openCampsiteMap(lat, lon);
-    }
-
-    // Close the modal after selection
-    closeAccommodationModal();
-}
-
-function closeAccommodationModal() {
-    document.getElementById('accommodationModal').style.display = 'none';
-}
-
-function openCampsiteMap(lat, lon) {
-    const url = `https://www.google.com/maps/search/Campsites/@${lat},${lon},18.5z`;
-    window.open(url, '_blank');
-}
-
 
         // Disable touch-and-hold context menus on mobile devices except for #search-container
         document.addEventListener('touchstart', function(e) {
