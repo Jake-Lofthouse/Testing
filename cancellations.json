@@ -785,6 +785,11 @@
         "date": "2025-02-23"
     },
     {
+        "name": "Dromlena Lawn junior parkrun",
+        "reason": "Weather",
+        "date": "2025-02-23"
+    },
+    {
         "name": "Eastbourne junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-23"
@@ -830,6 +835,11 @@
         "date": "2025-02-23"
     },
     {
+        "name": "Lurgan junior parkrun",
+        "reason": "Weather",
+        "date": "2025-02-23"
+    },
+    {
         "name": "Magherafelt junior parkrun",
         "reason": "Weather",
         "date": "2025-02-23"
@@ -846,6 +856,11 @@
     },
     {
         "name": "Millbank Boating Pond junior parkrun",
+        "reason": "Weather",
+        "date": "2025-02-23"
+    },
+    {
+        "name": "Moira junior parkrun",
         "reason": "Weather",
         "date": "2025-02-23"
     },
@@ -926,6 +941,11 @@
     },
     {
         "name": "Walton Park junior parkrun",
+        "reason": "Weather",
+        "date": "2025-02-23"
+    },
+    {
+        "name": "West Lothian Cycle Circuit junior parkrun",
         "reason": "Weather",
         "date": "2025-02-23"
     },
