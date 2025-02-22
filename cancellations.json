@@ -215,6 +215,11 @@
         "date": "2025-02-22"
     },
     {
+        "name": "Evergreen parkrun",
+        "reason": "Icy conditions make the course unsafe.",
+        "date": "2025-02-22"
+    },
+    {
         "name": "Falkirk parkrun",
         "reason": "Venue unavailable",
         "date": "2025-02-22"
@@ -267,6 +272,11 @@
     {
         "name": "Huskisson parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-02-22"
+    },
+    {
+        "name": "ITC Community Sports parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-02-22"
     },
     {
