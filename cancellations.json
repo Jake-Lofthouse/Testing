@@ -695,6 +695,11 @@
         "date": "2025-02-22"
     },
     {
+        "name": "Albert College junior parkrun",
+        "reason": "As a mark of respect on the pass of our RD Niamh S",
+        "date": "2025-02-23"
+    },
+    {
         "name": "Arklow Duck Pond junior parkrun",
         "reason": "Weather",
         "date": "2025-02-23"
@@ -740,6 +745,16 @@
         "date": "2025-02-23"
     },
     {
+        "name": "Cleveragh junior parkrun",
+        "reason": "Weather",
+        "date": "2025-02-23"
+    },
+    {
+        "name": "Cliff Park junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-02-23"
+    },
+    {
         "name": "Collett Park junior parkrun",
         "reason": "Weather warning for wind in the morning.",
         "date": "2025-02-23"
@@ -777,6 +792,16 @@
     {
         "name": "Inverleith junior parkrun",
         "reason": "Weather",
+        "date": "2025-02-23"
+    },
+    {
+        "name": "Jacks Road junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-02-23"
+    },
+    {
+        "name": "Leatherhead junior parkrun",
+        "reason": "Flooding of the course",
         "date": "2025-02-23"
     },
     {
@@ -830,7 +855,17 @@
         "date": "2025-02-23"
     },
     {
+        "name": "Pontypridd junior parkrun",
+        "reason": "Weather",
+        "date": "2025-02-23"
+    },
+    {
         "name": "Riverside junior parkrun, Ballymoney",
+        "reason": "Weather",
+        "date": "2025-02-23"
+    },
+    {
+        "name": "Shelbourne junior parkrun",
         "reason": "Weather",
         "date": "2025-02-23"
     },
