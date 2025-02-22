@@ -530,6 +530,11 @@
         "date": "2025-02-22"
     },
     {
+        "name": "Sheriff Creek Wildlife Sanctuary parkrun",
+        "reason": "No participants",
+        "date": "2025-02-22"
+    },
+    {
         "name": "Skien Fritidspark parkrun",
         "reason": "Weather",
         "date": "2025-02-22"
@@ -730,6 +735,11 @@
         "date": "2025-02-23"
     },
     {
+        "name": "Clevedon Seafront junior parkrun",
+        "reason": "Weather",
+        "date": "2025-02-23"
+    },
+    {
         "name": "Collett Park junior parkrun",
         "reason": "Weather warning for wind in the morning.",
         "date": "2025-02-23"
@@ -750,6 +760,11 @@
         "date": "2025-02-23"
     },
     {
+        "name": "Eyemouth Primary Playing Fields junior parkrun",
+        "reason": "Weather",
+        "date": "2025-02-23"
+    },
+    {
         "name": "Eynesbury Heritage Trail junior parkrun",
         "reason": "Weather",
         "date": "2025-02-23"
@@ -761,6 +776,11 @@
     },
     {
         "name": "Inverleith junior parkrun",
+        "reason": "Weather",
+        "date": "2025-02-23"
+    },
+    {
+        "name": "Levengrove junior parkrun",
         "reason": "Weather",
         "date": "2025-02-23"
     },
@@ -780,6 +800,16 @@
         "date": "2025-02-23"
     },
     {
+        "name": "Millbank Boating Pond junior parkrun",
+        "reason": "Weather",
+        "date": "2025-02-23"
+    },
+    {
+        "name": "Norris Green Park junior parkrun",
+        "reason": "Weather",
+        "date": "2025-02-23"
+    },
+    {
         "name": "Ockwells junior parkrun",
         "reason": "No available Run Directors",
         "date": "2025-02-23"
@@ -787,6 +817,11 @@
     {
         "name": "Oranmore junior parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-02-23"
+    },
+    {
+        "name": "Par Track junior parkrun",
+        "reason": "Weather",
         "date": "2025-02-23"
     },
     {
