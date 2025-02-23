@@ -25,6 +25,11 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Blaise Castle parkrun",
+        "reason": "Weather",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Braidwood Showground parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-01"
@@ -177,6 +182,16 @@
     {
         "name": "Sanukikodomonokuni parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-03-01"
+    },
+    {
+        "name": "Seacliff Esplanade parkrun",
+        "reason": "Seacliff SLSC is hosting the SLSSA Junior State Ch",
+        "date": "2025-03-01"
+    },
+    {
+        "name": "Uditore parkrun",
+        "reason": "Venue unavailable",
         "date": "2025-03-01"
     },
     {
