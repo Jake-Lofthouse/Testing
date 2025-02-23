@@ -586,6 +586,14 @@ map.on('moveend', updateURL);
            popupAnchor: [0, -38]
         });
         
+        const cafeIcon = L.icon({
+           iconUrl: 'Icons/Cafe.png',
+           iconSize: [38, 38],
+           iconAnchor: [19, 38],
+           popupAnchor: [0, -38],
+        });
+
+        
         //here
 
 var bbMarkers = []; // Array to store BB markers
@@ -887,6 +895,9 @@ const campsiteIcon = L.icon({
 // Function to search for nearby hotels and campsites using TomTom
 function findNearbyPlaces(lat, lng) {
     console.log(`Searching for hotels and campsites near: ${lat}, ${lng}`);
+    
+    //Search for cafes
+    fetchTomTomPlaces(lat, lng, 'cafe', cafeIcon);
 
     // Search for hotels
     fetchTomTomPlaces(lat, lng, 'hotel', hotelIcon);
