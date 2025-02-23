@@ -907,41 +907,23 @@ function findNearbyPlaces(lat, lng) {
 }
 
 // Function to fetch hotels or campsites from TomTom API
-function fetchTomTomPlaces(lat, lng) {
-    const categorySet = "7315,7316,9376"; // Hotels, Campsites, Cafes
-    const searchUrl = `https://api.tomtom.com/search/2/categorySearch.json?lat=${lat}&lon=${lng}&radius=9000&categorySet=${categorySet}&key=${tomTomApiKey}`;
+function fetchTomTomPlaces(lat, lng, category, icon) {
+    const searchUrl = `https://api.tomtom.com/search/2/categorySearch/${category}.json?lat=${lat}&lon=${lng}&radius=9000&key=${tomTomApiKey}`;
 
     fetch(searchUrl)
         .then(response => response.json())
         .then(data => {
-            console.log("TomTom API Response:", data);
+            console.log(`TomTom ${category} API Response:`, data);
 
             if (data.results && data.results.length > 0) {
                 data.results.forEach(place => {
-                    let type;
-                    let icon;
-
-                    // Assign correct type and icon based on category
-                    if (place.poi.categories.includes("Hotel")) {
-                        type = "hotel";
-                        icon = hotelIcon;
-                    } else if (place.poi.categories.includes("Camping Ground")) {
-                        type = "camping";
-                        icon = campsiteIcon;
-                    } else if (place.poi.categories.includes("Cafe")) {
-                        type = "cafe";
-                        icon = cafeIcon;
-                    }
-
-                    if (type && icon) {
-                        createPlaceMarker(place, type, icon);
-                    }
+                    createPlaceMarker(place, category, icon);
                 });
             } else {
-                console.log("No places found within 9km.");
+                console.log(`No ${category}s found within 9km.`);
             }
         })
-        .catch(error => console.error("Error fetching places:", error));
+        .catch(error => console.error(`Error fetching ${category} data:`, error));
 }
 
 // Function to create a marker for a place and bind a popup
