@@ -1,5 +1,10 @@
 [
     {
+        "name": "Aachener Weiher parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Ambleside parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-01"
