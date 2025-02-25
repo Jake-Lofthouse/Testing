@@ -165,6 +165,11 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Mount Stuart parkrun",
+        "reason": "Debris from storm still being cleared",
+        "date": "2025-03-01"
+    },
+    {
         "name": "North Harbour parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-01"
@@ -257,6 +262,11 @@
     {
         "name": "White Lick Creek parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-01"
+    },
+    {
+        "name": "Windhoek parkrun",
+        "reason": "Permission issue",
         "date": "2025-03-01"
     },
     {
