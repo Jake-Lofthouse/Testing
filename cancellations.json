@@ -105,6 +105,11 @@
         "date": "2025-03-01"
     },
     {
+        "name": "East Grinstead parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Franschhoek parkrun",
         "reason": "Booked out for venue drone photography.",
         "date": "2025-03-01"
