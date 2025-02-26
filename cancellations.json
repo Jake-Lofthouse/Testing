@@ -170,6 +170,11 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Leeupoort parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Lillsj\u00f6n parkrun",
         "reason": "Vinteruppeh\u00e5ll",
         "date": "2025-03-01"
@@ -245,6 +250,11 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Ross-on-Wye parkrun",
+        "reason": "No balls2go ahead after hurdling electric fence",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Rugby parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-01"
@@ -317,6 +327,11 @@
     {
         "name": "Windhoek parkrun",
         "reason": "Permission issue",
+        "date": "2025-03-01"
+    },
+    {
+        "name": "Wotton parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-01"
     },
     {
