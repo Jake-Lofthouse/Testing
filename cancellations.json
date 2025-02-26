@@ -15,6 +15,11 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Arrow Rest parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Aspen parkrun",
         "reason": "Winter Pause",
         "date": "2025-03-01"
@@ -55,6 +60,11 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Brynaman parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Bundoran Promenade parkrun",
         "reason": "A local 10 mile annual run is taking place that da",
         "date": "2025-03-01"
@@ -87,6 +97,11 @@
     {
         "name": "Deerpark Forest parkrun, Virginia",
         "reason": "Course unsafe or blocked",
+        "date": "2025-03-01"
+    },
+    {
+        "name": "Didcot parkrun",
+        "reason": "Cancelled at landowners request",
         "date": "2025-03-01"
     },
     {
@@ -132,6 +147,11 @@
     {
         "name": "Jakes Point parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-03-01"
+    },
+    {
+        "name": "Jells parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-01"
     },
     {
