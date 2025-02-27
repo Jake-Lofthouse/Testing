@@ -3208,8 +3208,8 @@
         "geometry": {
           "type": "Point",
           "coordinates": [
-            -1.906573,
-            52.29362
+            -1.913661,
+            52.305986
           ]
         },
         "properties": {
@@ -9843,6 +9843,26 @@
         }
       },
       {
+        "id": 555,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            18.828764,
+            -33.995056
+          ]
+        },
+        "properties": {
+          "eventname": "root44",
+          "EventLongName": "Root 44 parkrun",
+          "EventShortName": "Root 44",
+          "LocalisedEventLongName": null,
+          "countrycode": 85,
+          "seriesid": 1,
+          "EventLocation": "Audacia Wine Farm"
+        }
+      },
+      {
         "id": 556,
         "type": "Feature",
         "geometry": {
@@ -10200,6 +10220,26 @@
           "countrycode": 85,
           "seriesid": 1,
           "EventLocation": "Greenpoint Park"
+        }
+      },
+      {
+        "id": 583,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            174.854161,
+            -41.134246
+          ]
+        },
+        "properties": {
+          "eventname": "porirua",
+          "EventLongName": "Porirua parkrun",
+          "EventShortName": "Porirua",
+          "LocalisedEventLongName": null,
+          "countrycode": 65,
+          "seriesid": 1,
+          "EventLocation": "Bothamley Park"
         }
       },
       {
@@ -53360,6 +53400,26 @@
           "countrycode": 97,
           "seriesid": 2,
           "EventLocation": "Hinksley Park Recreation Ground"
+        }
+      },
+      {
+        "id": 3625,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            149.278952,
+            -31.271095
+          ]
+        },
+        "properties": {
+          "eventname": "skyriverpath",
+          "EventLongName": "Sky River Path parkrun",
+          "EventShortName": "Sky River Path",
+          "LocalisedEventLongName": null,
+          "countrycode": 3,
+          "seriesid": 1,
+          "EventLocation": "Sky River Path"
         }
       },
       {
