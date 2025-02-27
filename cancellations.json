@@ -25,6 +25,11 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Aylesbury parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Barton Trail parkrun",
         "reason": "Winter Pause",
         "date": "2025-03-01"
@@ -90,6 +95,16 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Churchill Parkway parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-01"
+    },
+    {
+        "name": "Clonbur Woods parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Corner Brook Stream Trail parkrun",
         "reason": "Winter Pause",
         "date": "2025-03-01"
@@ -130,6 +145,11 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Hafan Pwllheli parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Halsema Trailhead parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-03-01"
@@ -157,6 +177,11 @@
     {
         "name": "Huddinge parkrun",
         "reason": "Vinteruppeh\u00e5ll",
+        "date": "2025-03-01"
+    },
+    {
+        "name": "Ipswich parkrun",
+        "reason": "Permission issue",
         "date": "2025-03-01"
     },
     {
@@ -310,8 +335,18 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Tewkesbury parkrun",
+        "reason": "Too muddy even for Swamp Thing!",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Uditore parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-01"
+    },
+    {
+        "name": "Vandeleur parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-01"
     },
     {
@@ -417,6 +452,11 @@
     {
         "name": "Clashduv junior parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-03-02"
+    },
+    {
+        "name": "Cotlands Park junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-02"
     },
     {
