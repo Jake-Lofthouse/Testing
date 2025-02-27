@@ -240,13 +240,28 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Oranmore parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Piet Retief parkrun",
         "reason": "Cycle race taking place on parkrun route",
         "date": "2025-03-01"
     },
     {
+        "name": "Porirua parkrun",
+        "reason": "Event Closed",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Puolarmaari parkrun",
         "reason": "Talvitauko",
+        "date": "2025-03-01"
+    },
+    {
+        "name": "Reading parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-01"
     },
     {
