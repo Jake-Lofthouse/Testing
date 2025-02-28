@@ -315,6 +315,11 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Pokkinen parkrun",
+        "reason": "Weather",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Porirua parkrun",
         "reason": "Event Closed",
         "date": "2025-03-01"
@@ -332,6 +337,11 @@
     {
         "name": "Rendlesham Forest parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-01"
+    },
+    {
+        "name": "Riverside parkrun, Grand Rapids",
+        "reason": "Weather",
         "date": "2025-03-01"
     },
     {
