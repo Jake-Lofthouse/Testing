@@ -105,6 +105,11 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Clifton parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Clonbur Woods parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-01"
@@ -166,6 +171,11 @@
     },
     {
         "name": "Hastings High School parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-01"
+    },
+    {
+        "name": "Higginson parkrun, Marlow",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-01"
     },
@@ -300,6 +310,11 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Plantation parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Porirua parkrun",
         "reason": "Event Closed",
         "date": "2025-03-01"
@@ -355,6 +370,11 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Stonehouse parkrun",
+        "reason": "Waterlogged field",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Taup\u014d parkrun",
         "reason": "advised by parkrun HQ to cancel event.",
         "date": "2025-03-01"
@@ -382,6 +402,11 @@
     {
         "name": "Victoria parkrun, Truro",
         "reason": "Winter Pause",
+        "date": "2025-03-01"
+    },
+    {
+        "name": "V\u00e4\u00e4ksyn kanava parkrun",
+        "reason": "Weather",
         "date": "2025-03-01"
     },
     {
