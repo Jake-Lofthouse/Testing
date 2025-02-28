@@ -75,6 +75,11 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Burrum Heads Beach parkrun",
+        "reason": "Cyclone Alfred - Course unusable and unsafe.",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Butter Trail parkrun",
         "reason": "Winter Pause",
         "date": "2025-03-01"
@@ -207,6 +212,11 @@
     {
         "name": "Leeupoort parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-03-01"
+    },
+    {
+        "name": "Lightning Ridge parkrun",
+        "reason": "Permission issue",
         "date": "2025-03-01"
     },
     {
