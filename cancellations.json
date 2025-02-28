@@ -135,6 +135,11 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Duffins Trail parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-01"
+    },
+    {
         "name": "East Coast Brewery parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-01"
@@ -305,6 +310,11 @@
         "date": "2025-03-01"
     },
     {
+        "name": "New York Central Fitness Trail parkrun",
+        "reason": "Weather",
+        "date": "2025-03-01"
+    },
+    {
         "name": "North Harbour parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-01"
@@ -337,6 +347,11 @@
     {
         "name": "Porirua parkrun",
         "reason": "Event Closed",
+        "date": "2025-03-01"
+    },
+    {
+        "name": "Portumna parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-01"
     },
     {
@@ -462,6 +477,11 @@
     {
         "name": "Welkom parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-01"
+    },
+    {
+        "name": "Welland Canals Trail parkrun",
+        "reason": "Weather",
         "date": "2025-03-01"
     },
     {
