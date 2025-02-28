@@ -120,6 +120,11 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Cutler Park parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Deerpark Forest parkrun, Virginia",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-01"
@@ -127,6 +132,11 @@
     {
         "name": "Didcot parkrun",
         "reason": "Cancelled at landowners request",
+        "date": "2025-03-01"
+    },
+    {
+        "name": "East Coast Brewery parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-01"
     },
     {
@@ -162,6 +172,11 @@
     {
         "name": "Halsema Trailhead parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-03-01"
+    },
+    {
+        "name": "Hanworth parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-01"
     },
     {
@@ -337,6 +352,11 @@
     {
         "name": "Rendlesham Forest parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-01"
+    },
+    {
+        "name": "Richards Bay parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-01"
     },
     {
@@ -557,6 +577,11 @@
     {
         "name": "Peoples Park junior parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-03-02"
+    },
+    {
+        "name": "Stonehouse junior parkrun",
+        "reason": "Waterlogged course",
         "date": "2025-03-02"
     },
     {
