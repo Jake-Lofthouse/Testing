@@ -270,11 +270,6 @@
         "date": "2025-03-01"
     },
     {
-        "name": "Millennium parkrun",
-        "reason": "Weather",
-        "date": "2025-03-01"
-    },
-    {
         "name": "Miyagawa koen parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-03-01"
@@ -330,6 +325,16 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Orleans parkrun",
+        "reason": "Weather",
+        "date": "2025-03-01"
+    },
+    {
+        "name": "Ottawa-Carleton Trailway parkrun",
+        "reason": "Weather",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Piet Retief parkrun",
         "reason": "Cycle race taking place on parkrun route",
         "date": "2025-03-01"
@@ -361,6 +366,11 @@
     },
     {
         "name": "Reading parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-01"
+    },
+    {
+        "name": "Red Point Church parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-01"
     },
@@ -407,6 +417,11 @@
     {
         "name": "Seacliff Esplanade parkrun",
         "reason": "Seacliff SLSC is hosting the SLSSA Junior State Ch",
+        "date": "2025-03-01"
+    },
+    {
+        "name": "Sheriff Creek Wildlife Sanctuary parkrun",
+        "reason": "Weather",
         "date": "2025-03-01"
     },
     {
