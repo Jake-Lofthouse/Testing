@@ -110,6 +110,11 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Clevedon Salthouse Fields parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Clifton parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-01"
@@ -347,6 +352,11 @@
     {
         "name": "Mount Stuart parkrun",
         "reason": "Debris from storm still being cleared",
+        "date": "2025-03-01"
+    },
+    {
+        "name": "Mountbellew Forest parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-01"
     },
     {
@@ -682,6 +692,11 @@
     {
         "name": "Milton Keynes junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-02"
+    },
+    {
+        "name": "Oranmore junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-02"
     },
     {
