@@ -610,6 +610,11 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Winthrop Trailhead parkrun",
+        "reason": "No participants",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Witney parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-01"
@@ -682,6 +687,11 @@
     {
         "name": "Dartford junior parkrun",
         "reason": "Dartford Half Marathon on our course",
+        "date": "2025-03-02"
+    },
+    {
+        "name": "Eastbourne junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-03-02"
     },
     {
