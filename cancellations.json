@@ -55,6 +55,11 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Breakwater parkrun",
+        "reason": "Weather",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Brooklands parkrun",
         "reason": "Funfair on the course",
         "date": "2025-03-01"
@@ -135,6 +140,11 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Downsview parkrun",
+        "reason": "Weather",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Duffins Trail parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-01"
@@ -150,6 +160,11 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Eramosa River Trail parkrun",
+        "reason": "Course is icy and unsafe",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Franschhoek parkrun",
         "reason": "Booked out for venue drone photography.",
         "date": "2025-03-01"
@@ -157,6 +172,11 @@
     {
         "name": "Geographe Bay parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-01"
+    },
+    {
+        "name": "Gillies Lake parkrun",
+        "reason": "Weather",
         "date": "2025-03-01"
     },
     {
@@ -240,6 +260,11 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Kanata parkrun, Ottawa",
+        "reason": "Weather",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Keswick parkrun",
         "reason": "Another local event is using our course",
         "date": "2025-03-01"
@@ -270,6 +295,16 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Mendel Riverbank parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-01"
+    },
+    {
+        "name": "Millennium parkrun",
+        "reason": "Weather",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Miyagawa koen parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-03-01"
@@ -297,6 +332,11 @@
     {
         "name": "Mount Stuart parkrun",
         "reason": "Debris from storm still being cleared",
+        "date": "2025-03-01"
+    },
+    {
+        "name": "Moussette parkrun",
+        "reason": "Weather",
         "date": "2025-03-01"
     },
     {
