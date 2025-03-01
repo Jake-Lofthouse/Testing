@@ -270,6 +270,11 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Kroonstad parkrun",
+        "reason": "Weather",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Leeupoort parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-01"
@@ -385,6 +390,11 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Pine Forest parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Plantation parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-01"
@@ -490,8 +500,18 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Tinley Manor parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Uditore parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-01"
+    },
+    {
+        "name": "Vaal Marina parkrun",
+        "reason": "Weather",
         "date": "2025-03-01"
     },
     {
