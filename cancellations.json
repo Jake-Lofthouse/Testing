@@ -95,6 +95,11 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Canton Lower Rouge Trail parkrun",
+        "reason": "Weather",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Cardiff parkrun",
         "reason": "St David's Day race using both courses",
         "date": "2025-03-01"
@@ -451,6 +456,11 @@
     },
     {
         "name": "Richards Bay parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-01"
+    },
+    {
+        "name": "River Oaks parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-01"
     },
