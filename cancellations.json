@@ -165,6 +165,11 @@
         "date": "2025-03-01"
     },
     {
+        "name": "Five Arches parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-01"
+    },
+    {
         "name": "Franschhoek parkrun",
         "reason": "Booked out for venue drone photography.",
         "date": "2025-03-01"
@@ -472,6 +477,11 @@
     {
         "name": "Seacliff Esplanade parkrun",
         "reason": "Seacliff SLSC is hosting the SLSSA Junior State Ch",
+        "date": "2025-03-01"
+    },
+    {
+        "name": "Seotlong Agriculture School parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-01"
     },
     {
