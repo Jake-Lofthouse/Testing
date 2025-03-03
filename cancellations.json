@@ -185,6 +185,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Samford Parklands parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Skat\u00e5s parkrun",
         "reason": "Annat evenemang p\u00e5 platsen",
         "date": "2025-03-08"
@@ -232,6 +237,11 @@
     {
         "name": "Yuuka Family Road parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "parkrun Akwen Tropicana",
+        "reason": "Venue unavailable",
         "date": "2025-03-08"
     },
     {
