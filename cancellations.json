@@ -10,6 +10,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Ashgrove parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Aspen parkrun",
         "reason": "Winter Pause",
         "date": "2025-03-08"
@@ -205,6 +210,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Scribbly Gums Conservation parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Skat\u00e5s parkrun",
         "reason": "Annat evenemang p\u00e5 platsen",
         "date": "2025-03-08"
@@ -308,6 +318,11 @@
         "name": "parkrun du Lac de Divonne",
         "reason": "parkrun est actuellement suspendu en France",
         "date": "2025-03-08"
+    },
+    {
+        "name": "Bellevue Park junior parkrun",
+        "reason": "Weather",
+        "date": "2025-03-09"
     },
     {
         "name": "Queen\u2019s Parade junior parkrun, Aldershot",
