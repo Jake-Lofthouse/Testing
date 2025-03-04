@@ -35,6 +35,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Bunyaville parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Butter Trail parkrun",
         "reason": "Winter Pause",
         "date": "2025-03-08"
@@ -117,6 +122,11 @@
     {
         "name": "Loftsgardsbrua parkrun",
         "reason": "Vinterpause",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Main Beach parkrun",
+        "reason": "Weather",
         "date": "2025-03-08"
     },
     {
