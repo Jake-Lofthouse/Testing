@@ -70,6 +70,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Greenpoint parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Hereford parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-08"
@@ -167,11 +172,6 @@
     {
         "name": "Puolarmaari parkrun",
         "reason": "Talvitauko",
-        "date": "2025-03-08"
-    },
-    {
-        "name": "Rendlesham Forest parkrun",
-        "reason": "Venue unavailable",
         "date": "2025-03-08"
     },
     {
