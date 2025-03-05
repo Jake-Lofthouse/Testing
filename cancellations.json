@@ -20,6 +20,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Ballina Coast parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Barton Trail parkrun",
         "reason": "Winter Pause",
         "date": "2025-03-08"
@@ -275,6 +280,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Redcliffe parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Rinko Park parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-08"
@@ -340,6 +350,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Urunga parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Varsity Lakes parkrun",
         "reason": "Cyclone Alfred",
         "date": "2025-03-08"
@@ -382,6 +397,11 @@
     {
         "name": "Wollaton Hall parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Yamba parkrun",
+        "reason": "Weather",
         "date": "2025-03-08"
     },
     {
