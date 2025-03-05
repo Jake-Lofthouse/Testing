@@ -60,6 +60,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Coffs Harbour parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Cormorant Bay parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-08"
@@ -120,6 +125,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Kedron parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Kirra parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-08"
@@ -137,6 +147,11 @@
     {
         "name": "Lancaster parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Lightning Ridge parkrun",
+        "reason": "Permission issue",
         "date": "2025-03-08"
     },
     {
@@ -187,6 +202,11 @@
     {
         "name": "Pakapakanthi parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Paradise Point parkrun",
+        "reason": "Weather",
         "date": "2025-03-08"
     },
     {
