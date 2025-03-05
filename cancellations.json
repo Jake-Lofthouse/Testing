@@ -55,6 +55,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Chermside parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Christies Beach parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-08"
@@ -101,6 +106,11 @@
     },
     {
         "name": "Hereford parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Horinouchi koen parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-08"
     },
@@ -295,6 +305,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Varsity Lakes parkrun",
+        "reason": "Cyclone Alfred",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Veterans Park parkrun",
         "reason": "No participants",
         "date": "2025-03-08"
@@ -342,6 +357,11 @@
     {
         "name": "Yuuka Family Road parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Zillmere parkrun",
+        "reason": "Weather",
         "date": "2025-03-08"
     },
     {
