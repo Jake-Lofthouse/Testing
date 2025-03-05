@@ -1112,12 +1112,14 @@ document.getElementById('search-input').addEventListener(
                             ) {
                                 const eventname = feature.properties.eventname;
 
+                                const countryUrl = getCountryUrl(latEvent, lonEvent);
+                                    
                                 const popupContent = `
                                     <div>
                                         <div class="popup-title">${feature.properties.EventLongName}</div>
                                         <iframe id="weatherIframe" src="https://parkrunnertourist.co.uk/weather?lat=${latEvent}&lon=${lonEvent}" scrolling="no"></iframe>
-                                        <button class="course-btn" onclick="openUrl('https://www.parkrun.org.uk/${eventname}/course/')">Course</button><br>
-                                        <button class="volunteer-btn" onclick="openUrl('https://www.parkrun.org.uk/${eventname}/futureroster/')">Volunteer</button><br>
+                                        <button class="course-btn" onclick="openUrl('${countryUrl}/${eventname}/course/')">Course</button><br>
+                                        <button class="volunteer-btn" onclick="openUrl('${countryUrl}/${eventname}/futureroster/')">Volunteer</button><br>
                                         <button class="direction-btn" onclick="openDirections(${latEvent}, ${lonEvent})">Directions</button><br>
                                     </div>
                                 `;
