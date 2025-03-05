@@ -185,6 +185,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Meadowbrook parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Meijo koen parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-08"
@@ -305,6 +310,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Surfers Paradise parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Varsity Lakes parkrun",
         "reason": "Cyclone Alfred",
         "date": "2025-03-08"
@@ -416,6 +426,11 @@
     },
     {
         "name": "Bellevue Park junior parkrun",
+        "reason": "Weather",
+        "date": "2025-03-09"
+    },
+    {
+        "name": "Des Connor Park junior parkrun",
         "reason": "Weather",
         "date": "2025-03-09"
     },
