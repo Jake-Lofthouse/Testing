@@ -120,6 +120,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Ipswich parkrun",
+        "reason": "Permission issue",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Jells parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-08"
@@ -212,6 +217,11 @@
     {
         "name": "Moreletapark Gemeente parkrun",
         "reason": "Twane Kingdom Indaba",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Neckarufer parkrun, Esslingen",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-08"
     },
     {
