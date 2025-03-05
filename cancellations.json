@@ -185,6 +185,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Mansfield parkrun, Queensland",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Meadowbrook parkrun",
         "reason": "Weather",
         "date": "2025-03-08"
@@ -297,6 +302,11 @@
     {
         "name": "Skat\u00e5s parkrun",
         "reason": "Annat evenemang p\u00e5 platsen",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Somerset West parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-08"
     },
     {
