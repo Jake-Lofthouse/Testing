@@ -50,6 +50,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Calamvale parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Christies Beach parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-08"
@@ -72,6 +77,11 @@
     {
         "name": "East Grinstead parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Gainsborough Parklands parkrun",
+        "reason": "Cylcone Alfred",
         "date": "2025-03-08"
     },
     {
@@ -132,6 +142,11 @@
     {
         "name": "Lillsj\u00f6n parkrun",
         "reason": "Vinteruppeh\u00e5ll",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Lismore parkrun",
+        "reason": "Weather",
         "date": "2025-03-08"
     },
     {
@@ -275,8 +290,18 @@
         "date": "2025-03-08"
     },
     {
+        "name": "White Rock parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Wollaton Hall parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Yarrabilba parkrun",
+        "reason": "Weather",
         "date": "2025-03-08"
     },
     {
