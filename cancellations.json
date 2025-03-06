@@ -50,6 +50,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Broadbeach Waters parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Brooklands parkrun",
         "reason": "Funfair extended an extra week.",
         "date": "2025-03-08"
@@ -95,6 +100,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Cleveland parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Coffs Harbour parkrun",
         "reason": "Weather",
         "date": "2025-03-08"
@@ -137,6 +147,11 @@
     {
         "name": "Geographe Bay parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Golden Beach parkrun",
+        "reason": "Weather",
         "date": "2025-03-08"
     },
     {
@@ -191,6 +206,11 @@
     },
     {
         "name": "Jeune Park parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Jubilee parkrun, Tenterfield",
         "reason": "Weather",
         "date": "2025-03-08"
     },
@@ -352,6 +372,11 @@
     {
         "name": "Pakapakanthi parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Pallara parkrun",
+        "reason": "Weather",
         "date": "2025-03-08"
     },
     {
@@ -522,6 +547,11 @@
     {
         "name": "Victoria parkrun, Truro",
         "reason": "Winter Pause",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Victory Heights Trail parkrun",
+        "reason": "Weather",
         "date": "2025-03-08"
     },
     {
