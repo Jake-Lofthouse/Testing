@@ -110,6 +110,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Ecco Ripley parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Fodder Forest parkrun",
         "reason": "Weather",
         "date": "2025-03-08"
@@ -275,7 +280,22 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Mudgeeraba parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Mudjimba Beach parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Nambour parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Nathan Road Sports Ground parkrun",
         "reason": "Weather",
         "date": "2025-03-08"
     },
@@ -456,6 +476,11 @@
     },
     {
         "name": "Surfers Paradise parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Toowoomba parkrun",
         "reason": "Weather",
         "date": "2025-03-08"
     },
