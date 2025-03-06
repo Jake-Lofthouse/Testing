@@ -100,6 +100,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Churchill Parkway parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Cleveland parkrun",
         "reason": "Weather",
         "date": "2025-03-08"
@@ -151,6 +156,11 @@
     },
     {
         "name": "Geographe Bay parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Gisborne parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-08"
     },
@@ -365,6 +375,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Oakey parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Ocean View parkrun",
         "reason": "Weather",
         "date": "2025-03-08"
@@ -427,6 +442,11 @@
     {
         "name": "Queen Elizabeth parkrun, Casino",
         "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Red Point Church parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-08"
     },
     {
@@ -542,6 +562,11 @@
     {
         "name": "Urunga parkrun",
         "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Vandeleur parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-08"
     },
     {
