@@ -54,15 +54,6 @@
         70.0923
       ]
     },
-    "31": {
-      "url": "www.parkrun.fr",
-      "bounds": [
-        -5.14128,
-        41.3646,
-        9.56009,
-        51.089
-      ]
-    },
     "32": {
       "url": "www.parkrun.com.de",
       "bounds": [
@@ -1153,9 +1144,9 @@
           ]
         },
         "properties": {
-          "eventname": "greenwich",
-          "EventLongName": "Greenwich parkrun",
-          "EventShortName": "Greenwich",
+          "eventname": "averyhill",
+          "EventLongName": "Avery Hill parkrun",
+          "EventShortName": "Avery Hill",
           "LocalisedEventLongName": null,
           "countrycode": 97,
           "seriesid": 1,
@@ -7540,26 +7531,6 @@
           "countrycode": 3,
           "seriesid": 1,
           "EventLocation": "Wynnum Manly Foreshore, QLD"
-        }
-      },
-      {
-        "id": 418,
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -0.42901,
-            45.065926
-          ]
-        },
-        "properties": {
-          "eventname": "lesdougnes",
-          "EventLongName": "parkrun des Dougnes, Cubnezais",
-          "EventShortName": "Les Dougnes",
-          "LocalisedEventLongName": null,
-          "countrycode": 31,
-          "seriesid": 1,
-          "EventLocation": "Espace de Loisirs des Dougnes"
         }
       },
       {
@@ -19603,46 +19574,6 @@
         }
       },
       {
-        "id": 1393,
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            2.257737,
-            48.859573
-          ]
-        },
-        "properties": {
-          "eventname": "boisdeboulogne",
-          "EventLongName": "parkrun du Bois de Boulogne, Paris",
-          "EventShortName": "Bois de Boulogne",
-          "LocalisedEventLongName": null,
-          "countrycode": 31,
-          "seriesid": 1,
-          "EventLocation": "Bois de Boulogne"
-        }
-      },
-      {
-        "id": 1394,
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            5.267379,
-            46.882182
-          ]
-        },
-        "properties": {
-          "eventname": "chateaudepierredebresse",
-          "EventLongName": "parkrun du Château de Pierre de Bresse",
-          "EventShortName": "Château de Pierre de Bresse",
-          "LocalisedEventLongName": null,
-          "countrycode": 31,
-          "seriesid": 1,
-          "EventLocation": "Château de Pierre de Bresse"
-        }
-      },
-      {
         "id": 1395,
         "type": "Feature",
         "geometry": {
@@ -20600,26 +20531,6 @@
           "countrycode": 97,
           "seriesid": 1,
           "EventLocation": "Langford Village"
-        }
-      },
-      {
-        "id": 1453,
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            1.348135,
-            43.564162
-          ]
-        },
-        "properties": {
-          "eventname": "laramee",
-          "EventLongName": "parkrun de la Ramée",
-          "EventShortName": "la Ramée",
-          "LocalisedEventLongName": "parkrun de la Ramée",
-          "countrycode": 31,
-          "seriesid": 1,
-          "EventLocation": "Base de Sports et de Loisirs de la Ramée"
         }
       },
       {
@@ -21803,26 +21714,6 @@
         }
       },
       {
-        "id": 1535,
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            2.3408,
-            48.821115
-          ]
-        },
-        "properties": {
-          "eventname": "montsouris",
-          "EventLongName": "parkrun de Montsouris",
-          "EventShortName": "Montsouris",
-          "LocalisedEventLongName": null,
-          "countrycode": 31,
-          "seriesid": 1,
-          "EventLocation": "Montsouris"
-        }
-      },
-      {
         "id": 1536,
         "type": "Feature",
         "geometry": {
@@ -21960,26 +21851,6 @@
           "countrycode": 3,
           "seriesid": 1,
           "EventLocation": "Penrith"
-        }
-      },
-      {
-        "id": 1545,
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            2.705253,
-            48.403585
-          ]
-        },
-        "properties": {
-          "eventname": "fontainebleau",
-          "EventLongName": "parkrun de Fontainebleau",
-          "EventShortName": "Fontainebleau",
-          "LocalisedEventLongName": null,
-          "countrycode": 31,
-          "seriesid": 1,
-          "EventLocation": "Fontainebleau"
         }
       },
       {
@@ -23103,26 +22974,6 @@
         }
       },
       {
-        "id": 1669,
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            6.146281,
-            46.352593
-          ]
-        },
-        "properties": {
-          "eventname": "lacdedivonne",
-          "EventLongName": "parkrun du Lac de Divonne",
-          "EventShortName": "Lac de Divonne",
-          "LocalisedEventLongName": "parkrun du Lac de Divonne",
-          "countrycode": 31,
-          "seriesid": 1,
-          "EventLocation": "Lac de Divonne"
-        }
-      },
-      {
         "id": 1670,
         "type": "Feature",
         "geometry": {
@@ -23740,26 +23591,6 @@
           "countrycode": 85,
           "seriesid": 1,
           "EventLocation": "Sabi River Sun"
-        }
-      },
-      {
-        "id": 1710,
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            1.072794,
-            49.44128
-          ]
-        },
-        "properties": {
-          "eventname": "rouen",
-          "EventLongName": "parkrun de Rouen",
-          "EventShortName": "Rouen",
-          "LocalisedEventLongName": "parkrun de Rouen",
-          "countrycode": 31,
-          "seriesid": 1,
-          "EventLocation": "Rouen"
         }
       },
       {
@@ -38400,6 +38231,26 @@
           "countrycode": 64,
           "seriesid": 1,
           "EventLocation": ""
+        }
+      },
+      {
+        "id": 2699,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            151.427968,
+            -33.29805
+          ]
+        },
+        "properties": {
+          "eventname": "pioneerdairy",
+          "EventLongName": "Pioneer Dairy parkrun",
+          "EventShortName": "Pioneer Dairy",
+          "LocalisedEventLongName": null,
+          "countrycode": 3,
+          "seriesid": 1,
+          "EventLocation": "Pioneer Dairy"
         }
       },
       {
@@ -53440,6 +53291,26 @@
           "countrycode": 98,
           "seriesid": 1,
           "EventLocation": "Old Town House Park"
+        }
+      },
+      {
+        "id": 3627,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            118.289452,
+            -31.470564
+          ]
+        },
+        "properties": {
+          "eventname": "merredinpeak",
+          "EventLongName": "Merredin Peak parkrun",
+          "EventShortName": "Merredin Peak",
+          "LocalisedEventLongName": null,
+          "countrycode": 3,
+          "seriesid": 1,
+          "EventLocation": "Merredin Peak"
         }
       },
       {
