@@ -40,6 +40,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Birtinya Island parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Brooklands parkrun",
         "reason": "Funfair extended an extra week.",
         "date": "2025-03-08"
@@ -137,6 +142,11 @@
     {
         "name": "Hereford parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Highfields parkrun",
+        "reason": "Council has closed the grounds due to the weather",
         "date": "2025-03-08"
     },
     {
@@ -335,8 +345,18 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Queen Elizabeth parkrun, Casino",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Redcliffe parkrun",
         "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Redland Bay parkrun",
+        "reason": "Weather - TC Alfred",
         "date": "2025-03-08"
     },
     {
@@ -472,6 +492,11 @@
     {
         "name": "Wollaton Hall parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Wynnum parkrun",
+        "reason": "Weather",
         "date": "2025-03-08"
     },
     {
