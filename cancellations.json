@@ -35,6 +35,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Berrinba parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Brooklands parkrun",
         "reason": "Funfair extended an extra week.",
         "date": "2025-03-08"
@@ -57,6 +62,11 @@
     {
         "name": "Calamvale parkrun",
         "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Capestone Lake parkrun",
+        "reason": "TC Alfred",
         "date": "2025-03-08"
     },
     {
@@ -95,6 +105,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Fodder Forest parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Gainsborough Parklands parkrun",
         "reason": "Cylcone Alfred",
         "date": "2025-03-08"
@@ -107,6 +122,11 @@
     {
         "name": "Greenpoint parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Harris Avenue parkrun",
+        "reason": "Weather",
         "date": "2025-03-08"
     },
     {
@@ -151,6 +171,11 @@
     },
     {
         "name": "Kedron parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Kelvin Grove parkrun",
         "reason": "Weather",
         "date": "2025-03-08"
     },
@@ -220,6 +245,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Minnippi parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Montalto Estate parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-08"
@@ -235,6 +265,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "New Farm parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Noosa parkrun",
         "reason": "Weather",
         "date": "2025-03-08"
@@ -245,12 +280,32 @@
         "date": "2025-03-08"
     },
     {
+        "name": "North Lakes parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Ocean View parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Old Esk Railway Station parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Pakapakanthi parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-08"
     },
     {
         "name": "Paradise Point parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Petrie parkrun",
         "reason": "Weather",
         "date": "2025-03-08"
     },
@@ -320,8 +375,18 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Sandgate parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Scribbly Gums Conservation parkrun",
         "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Sirromet parkrun",
+        "reason": "Weather -TC Alfred",
         "date": "2025-03-08"
     },
     {
@@ -332,6 +397,11 @@
     {
         "name": "Somerset West parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "South Bank parkrun",
+        "reason": "Weather",
         "date": "2025-03-08"
     },
     {
@@ -391,6 +461,11 @@
     },
     {
         "name": "White Rock parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Wishart parkrun",
         "reason": "Weather",
         "date": "2025-03-08"
     },
