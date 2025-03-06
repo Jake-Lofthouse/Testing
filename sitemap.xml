@@ -13,7 +13,7 @@
         <loc>https://parkrunnertourist.co.uk/webapp</loc>
         <lastmod>2024-11-19</lastmod>
         <changefreq>always</changefreq>
-        <priority>0.8</priority>
+        <priority>0.5</priority>
     </url>
 
     <!-- Features page -->
@@ -21,7 +21,7 @@
         <loc>https://parkrunnertourist.co.uk/#features</loc>
         <lastmod>2024-11-19</lastmod>
         <changefreq>always</changefreq>
-        <priority>0.8</priority>
+        <priority>0.5</priority>
     </url>
     
     <!-- B&B -->
@@ -29,7 +29,7 @@
         <loc>https://parkrunnertourist.co.uk/B&amp;B</loc>
         <lastmod>2024-11-19</lastmod>
         <changefreq>always</changefreq>
-        <priority>0.7</priority>
+        <priority>0.5</priority>
     </url>
 
     <!-- Builder page -->
@@ -37,7 +37,7 @@
         <loc>https://parkrunnertourist.co.uk/builder</loc>
         <lastmod>2024-11-19</lastmod>
         <changefreq>always</changefreq>
-        <priority>0.7</priority>
+        <priority>0.5</priority>
     </url>
 
     <!-- Jake Lofthouse page -->
@@ -45,6 +45,6 @@
         <loc>https://parkrunnertourist.co.uk/JakeLofthouse</loc>
         <lastmod>2025-02-19</lastmod>
         <changefreq>always</changefreq>
-        <priority>0.9</priority>
+        <priority>0.5</priority>
     </url>
 </urlset>
