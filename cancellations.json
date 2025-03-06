@@ -25,6 +25,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Baringa parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Barton Trail parkrun",
         "reason": "Winter Pause",
         "date": "2025-03-08"
@@ -66,6 +71,11 @@
     },
     {
         "name": "Calamvale parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Capalaba parkrun",
         "reason": "Weather",
         "date": "2025-03-08"
     },
@@ -241,6 +251,11 @@
     },
     {
         "name": "Main Beach parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Maleny Trail parkrun",
         "reason": "Weather",
         "date": "2025-03-08"
     },
