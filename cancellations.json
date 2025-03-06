@@ -160,6 +160,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Ipswich QLD parkrun",
+        "reason": "Cyclone ?",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Ipswich parkrun",
         "reason": "Permission issue",
         "date": "2025-03-08"
@@ -270,6 +275,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Mudjimba Beach parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Neckarufer parkrun, Esslingen",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-08"
@@ -317,6 +327,11 @@
     {
         "name": "Petrie parkrun",
         "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Picnic Point Parklands parkrun",
+        "reason": "Venue unavailable",
         "date": "2025-03-08"
     },
     {
@@ -425,6 +440,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "South Toowoomba parkrun",
+        "reason": "Council have closed the park due to weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Southwark parkrun",
         "reason": "Core team unavailable",
         "date": "2025-03-08"
@@ -436,6 +456,11 @@
     },
     {
         "name": "Surfers Paradise parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Underwood Park parkrun",
         "reason": "Weather",
         "date": "2025-03-08"
     },
