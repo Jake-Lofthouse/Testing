@@ -120,6 +120,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Coomera parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Cormorant Bay parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-08"
@@ -187,6 +192,11 @@
     {
         "name": "Grafton parkrun",
         "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Greenbank parkrun",
+        "reason": "Cyclone Alfred - the unwanted guest",
         "date": "2025-03-08"
     },
     {
@@ -322,6 +332,11 @@
     {
         "name": "Loftsgardsbrua parkrun",
         "reason": "Vinterpause",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Logan River parkrun",
+        "reason": "Weather",
         "date": "2025-03-08"
     },
     {
@@ -525,6 +540,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Rocks Riverside parkrun",
+        "reason": "Don't want to be blown away by TC Alfred",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Rugby parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-08"
@@ -667,6 +687,11 @@
     {
         "name": "Welkom parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Welland Canals Trail parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-03-08"
     },
     {
