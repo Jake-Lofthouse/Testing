@@ -50,6 +50,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Brightwater parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Broadbeach Waters parkrun",
         "reason": "Weather",
         "date": "2025-03-08"
@@ -150,6 +155,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Forest Lake parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Gainsborough Parklands parkrun",
         "reason": "Cylcone Alfred",
         "date": "2025-03-08"
@@ -165,13 +175,28 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Glass House Mountains Conservation parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Golden Beach parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Grafton parkrun",
         "reason": "Weather",
         "date": "2025-03-08"
     },
     {
         "name": "Greenpoint parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Harmony Boulevard parkrun",
+        "reason": "Weather",
         "date": "2025-03-08"
     },
     {
@@ -182,6 +207,11 @@
     {
         "name": "Harrismith parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Henry Kendall Reserve parkrun",
+        "reason": "Council cancelled- cyclone",
         "date": "2025-03-08"
     },
     {
@@ -235,6 +265,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Kawana parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Kedron parkrun",
         "reason": "Weather",
         "date": "2025-03-08"
@@ -285,6 +320,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Lota parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Main Beach parkrun",
         "reason": "Weather",
         "date": "2025-03-08"
@@ -316,6 +356,11 @@
     },
     {
         "name": "Minnippi parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Mitchelton parkrun",
         "reason": "Weather",
         "date": "2025-03-08"
     },
@@ -435,6 +480,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Port Macquarie parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Puolarmaari parkrun",
         "reason": "Talvitauko",
         "date": "2025-03-08"
@@ -550,6 +600,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Tamborine Mountain parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Toowoomba parkrun",
         "reason": "Weather",
         "date": "2025-03-08"
@@ -592,6 +647,11 @@
     {
         "name": "Waitangi parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Wauchope parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-08"
     },
     {
