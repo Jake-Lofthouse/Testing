@@ -155,6 +155,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Derrynoid Forest parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Duffins Trail parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-08"
@@ -632,6 +637,11 @@
     {
         "name": "Scribbly Gums Conservation parkrun",
         "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Sheriff Creek Wildlife Sanctuary parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-08"
     },
     {
