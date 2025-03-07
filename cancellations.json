@@ -540,6 +540,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Plean parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Porirua parkrun",
         "reason": "Event Closed",
         "date": "2025-03-08"
@@ -672,6 +677,11 @@
     {
         "name": "Stones Corner parkrun",
         "reason": "Incoming cyclone",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Stutterheim parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-08"
     },
     {
@@ -887,6 +897,11 @@
     {
         "name": "Des Connor Park junior parkrun",
         "reason": "Weather",
+        "date": "2025-03-09"
+    },
+    {
+        "name": "Oranmore junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-03-09"
     },
     {
