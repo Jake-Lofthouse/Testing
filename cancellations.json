@@ -230,6 +230,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Horseshoe Bay Reserve parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Huddinge parkrun",
         "reason": "Vinteruppeh\u00e5ll",
         "date": "2025-03-08"
@@ -647,6 +652,11 @@
     {
         "name": "Waitangi parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Warner Lakes parkrun",
+        "reason": "Weather",
         "date": "2025-03-08"
     },
     {
