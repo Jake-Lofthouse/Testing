@@ -640,6 +640,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Sterkfontein parkrun",
+        "reason": "Course maintenance",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Stones Corner parkrun",
         "reason": "Incoming cyclone",
         "date": "2025-03-08"
@@ -742,6 +747,11 @@
     {
         "name": "Wishart parkrun",
         "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Wolford Wood parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-08"
     },
     {
