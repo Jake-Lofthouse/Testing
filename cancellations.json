@@ -20,6 +20,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Australian Standing Stones parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Ballina Coast parkrun",
         "reason": "Weather",
         "date": "2025-03-08"
@@ -95,6 +100,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Central Lakes parkrun",
+        "reason": "Permission issue",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Chermside parkrun",
         "reason": "Weather",
         "date": "2025-03-08"
@@ -167,6 +177,11 @@
     {
         "name": "Gainsborough Parklands parkrun",
         "reason": "Cylcone Alfred",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Gatton parkrun",
+        "reason": "Weather",
         "date": "2025-03-08"
     },
     {
@@ -291,6 +306,11 @@
     },
     {
         "name": "Kelvin Grove parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Kingscliff parkrun",
         "reason": "Weather",
         "date": "2025-03-08"
     },
@@ -680,6 +700,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Warwick parkrun",
+        "reason": "Effects of Cyclone Alfred",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Wauchope parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-08"
@@ -731,6 +756,11 @@
     },
     {
         "name": "Yarrabilba parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Yowie parkrun",
         "reason": "Weather",
         "date": "2025-03-08"
     },
