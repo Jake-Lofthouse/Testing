@@ -60,6 +60,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Breakwater parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Brightwater parkrun",
         "reason": "Weather",
         "date": "2025-03-08"
@@ -192,6 +197,11 @@
     {
         "name": "Forest Lake parkrun",
         "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Fr\u00e9d\u00e9ric Back parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-08"
     },
     {
@@ -510,6 +520,11 @@
         "date": "2025-03-08"
     },
     {
+        "name": "Ottawa-Carleton Trailway parkrun",
+        "reason": "Weather",
+        "date": "2025-03-08"
+    },
+    {
         "name": "Pakapakanthi parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-08"
@@ -641,6 +656,11 @@
     },
     {
         "name": "Sheriff Creek Wildlife Sanctuary parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-08"
+    },
+    {
+        "name": "Silveroaks parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-08"
     },
