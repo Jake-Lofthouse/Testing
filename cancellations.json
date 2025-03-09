@@ -70,6 +70,11 @@
         "date": "2025-03-15"
     },
     {
+        "name": "Eramosa River Trail parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-15"
+    },
+    {
         "name": "Geographe Bay parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-15"
@@ -107,6 +112,11 @@
     {
         "name": "Millennium parkrun",
         "reason": "Weather",
+        "date": "2025-03-15"
+    },
+    {
+        "name": "North Harbour parkrun",
+        "reason": "Venue unavailable",
         "date": "2025-03-15"
     },
     {
