@@ -50,6 +50,11 @@
         "date": "2025-03-15"
     },
     {
+        "name": "Conwy parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-15"
+    },
+    {
         "name": "Corner Brook Stream Trail parkrun",
         "reason": "Winter Pause",
         "date": "2025-03-15"
@@ -107,6 +112,11 @@
     {
         "name": "Loftsgardsbrua parkrun",
         "reason": "Vinterpause",
+        "date": "2025-03-15"
+    },
+    {
+        "name": "Main Beach parkrun",
+        "reason": "Weather",
         "date": "2025-03-15"
     },
     {
