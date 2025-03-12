@@ -55,6 +55,11 @@
         "date": "2025-03-15"
     },
     {
+        "name": "Cormorant Bay parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-15"
+    },
+    {
         "name": "Corner Brook Stream Trail parkrun",
         "reason": "Winter Pause",
         "date": "2025-03-15"
@@ -96,6 +101,11 @@
     },
     {
         "name": "Jells parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-15"
+    },
+    {
+        "name": "Jeune Park parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-15"
     },
