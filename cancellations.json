@@ -50,6 +50,11 @@
         "date": "2025-03-15"
     },
     {
+        "name": "Churchill Parkway parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-15"
+    },
+    {
         "name": "Clermont Waterfront parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-15"
@@ -212,6 +217,11 @@
     {
         "name": "Shongweni parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-15"
+    },
+    {
+        "name": "Silveroaks parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-15"
     },
     {
