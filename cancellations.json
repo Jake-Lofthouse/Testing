@@ -60,6 +60,11 @@
         "date": "2025-03-15"
     },
     {
+        "name": "Castleblayney parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-03-15"
+    },
+    {
         "name": "Churchill Parkway parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-15"
@@ -102,6 +107,11 @@
     {
         "name": "Dubbo parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-15"
+    },
+    {
+        "name": "Duffins Trail parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-15"
     },
     {
