@@ -210,6 +210,11 @@
         "date": "2025-03-15"
     },
     {
+        "name": "Robelle Domain parkrun",
+        "reason": "Permission issue",
+        "date": "2025-03-15"
+    },
+    {
         "name": "Rugby parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-15"
@@ -286,6 +291,11 @@
     },
     {
         "name": "Waitangi parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-03-15"
+    },
+    {
+        "name": "Wauchope parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-15"
     },
