@@ -115,6 +115,11 @@
         "date": "2025-03-15"
     },
     {
+        "name": "Greenbank parkrun",
+        "reason": "Weather",
+        "date": "2025-03-15"
+    },
+    {
         "name": "Harrismith parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-15"
@@ -166,6 +171,11 @@
     },
     {
         "name": "Meadowbrook parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-15"
+    },
+    {
+        "name": "Memorial Park parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-15"
     },
@@ -302,6 +312,11 @@
     {
         "name": "Waitangi parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-15"
+    },
+    {
+        "name": "Warwick parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-15"
     },
     {
