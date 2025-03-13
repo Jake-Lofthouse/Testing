@@ -55,6 +55,11 @@
         "date": "2025-03-15"
     },
     {
+        "name": "Capalaba parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-15"
+    },
+    {
         "name": "Churchill Parkway parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-15"
@@ -182,6 +187,11 @@
     {
         "name": "Ormskirk parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-15"
+    },
+    {
+        "name": "Petrie parkrun",
+        "reason": "Weather",
         "date": "2025-03-15"
     },
     {
