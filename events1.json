@@ -9819,8 +9819,8 @@
         "geometry": {
           "type": "Point",
           "coordinates": [
-            18.828764,
-            -33.995056
+            18.82902,
+            -33.995078
           ]
         },
         "properties": {
@@ -53214,6 +53214,26 @@
         }
       },
       {
+        "id": 3622,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -4.201428,
+            55.84069
+          ]
+        },
+        "properties": {
+          "eventname": "cuningarloop",
+          "EventLongName": "Cuningar Loop parkrun",
+          "EventShortName": "Cuningar Loop",
+          "LocalisedEventLongName": null,
+          "countrycode": 97,
+          "seriesid": 1,
+          "EventLocation": "Cuningar Loop"
+        }
+      },
+      {
         "id": 3623,
         "type": "Feature",
         "geometry": {
@@ -53354,6 +53374,26 @@
         }
       },
       {
+        "id": 3630,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            147.170722,
+            -41.436491
+          ]
+        },
+        "properties": {
+          "eventname": "hoblersbridgereserve",
+          "EventLongName": "Hoblers Bridge Reserve parkrun",
+          "EventShortName": "Hoblers Bridge Reserve",
+          "LocalisedEventLongName": null,
+          "countrycode": 3,
+          "seriesid": 1,
+          "EventLocation": "Hoblers Bridge Reserve"
+        }
+      },
+      {
         "id": 3631,
         "type": "Feature",
         "geometry": {
@@ -53391,6 +53431,26 @@
           "countrycode": 97,
           "seriesid": 2,
           "EventLocation": "Lyme Valley Parkway juniors"
+        }
+      },
+      {
+        "id": 3636,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            135.477848,
+            34.478529
+          ]
+        },
+        "properties": {
+          "eventname": "shinhinookoen",
+          "EventLongName": "Shinhinoo koen parkrun",
+          "EventShortName": "Shinhinoo koen",
+          "LocalisedEventLongName": null,
+          "countrycode": 46,
+          "seriesid": 1,
+          "EventLocation": "Shinhinoo koen"
         }
       }
     ]
