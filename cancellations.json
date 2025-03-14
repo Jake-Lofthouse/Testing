@@ -70,6 +70,11 @@
         "date": "2025-03-15"
     },
     {
+        "name": "Brunswick Park parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-03-15"
+    },
+    {
         "name": "Bunyaville parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-15"
@@ -601,6 +606,11 @@
     },
     {
         "name": "Blickling junior parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-03-16"
+    },
+    {
+        "name": "Conwy Nature Reserve junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-16"
     },
