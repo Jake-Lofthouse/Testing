@@ -40,6 +40,11 @@
         "date": "2025-03-15"
     },
     {
+        "name": "Broadbeach Waters parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-15"
+    },
+    {
         "name": "Broparken parkrun",
         "reason": "Vinteruppeh\u00e5ll",
         "date": "2025-03-15"
@@ -386,6 +391,11 @@
     },
     {
         "name": "Welkom parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-03-15"
+    },
+    {
+        "name": "White Rock parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-15"
     },
