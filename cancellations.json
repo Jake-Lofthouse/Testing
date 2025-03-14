@@ -25,6 +25,11 @@
         "date": "2025-03-15"
     },
     {
+        "name": "Atlasville parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-15"
+    },
+    {
         "name": "Ballito parkrun",
         "reason": "Weather",
         "date": "2025-03-15"
@@ -265,6 +270,11 @@
         "date": "2025-03-15"
     },
     {
+        "name": "Miyagawa koen parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-03-15"
+    },
+    {
         "name": "Myponga Reservoir parkrun",
         "reason": "Weather",
         "date": "2025-03-15"
@@ -311,6 +321,11 @@
     },
     {
         "name": "Queen Elizabeth parkrun, Casino",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-15"
+    },
+    {
+        "name": "Red Point Church parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-15"
     },
@@ -375,6 +390,11 @@
         "date": "2025-03-15"
     },
     {
+        "name": "South Para Reservoir parkrun",
+        "reason": "Weather",
+        "date": "2025-03-15"
+    },
+    {
         "name": "Spanish Banks Beach parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-15"
@@ -390,8 +410,23 @@
         "date": "2025-03-15"
     },
     {
+        "name": "Stutterheim parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-15"
+    },
+    {
         "name": "Tamborine Mountain parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-15"
+    },
+    {
+        "name": "The Avenues parkrun",
+        "reason": "Weather",
+        "date": "2025-03-15"
+    },
+    {
+        "name": "Tinley Manor parkrun",
+        "reason": "Weather",
         "date": "2025-03-15"
     },
     {
@@ -441,6 +476,11 @@
     },
     {
         "name": "Whitfords Nodes parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-03-15"
+    },
+    {
+        "name": "Wolford Wood parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-15"
     },
