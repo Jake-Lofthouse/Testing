@@ -10,6 +10,11 @@
         "date": "2025-03-15"
     },
     {
+        "name": "Anstey Hill Recreation parkrun",
+        "reason": "Weather",
+        "date": "2025-03-15"
+    },
+    {
         "name": "Ashgrove parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-15"
@@ -17,6 +22,11 @@
     {
         "name": "Aspen parkrun",
         "reason": "Winter Pause",
+        "date": "2025-03-15"
+    },
+    {
+        "name": "Ballito parkrun",
+        "reason": "Weather",
         "date": "2025-03-15"
     },
     {
@@ -70,8 +80,18 @@
         "date": "2025-03-15"
     },
     {
+        "name": "Charleys Creek parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-15"
+    },
+    {
         "name": "Churchill Parkway parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-03-15"
+    },
+    {
+        "name": "Cleland parkrun",
+        "reason": "Weather",
         "date": "2025-03-15"
     },
     {
@@ -242,6 +262,11 @@
     {
         "name": "Minnippi parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-03-15"
+    },
+    {
+        "name": "Myponga Reservoir parkrun",
+        "reason": "Weather",
         "date": "2025-03-15"
     },
     {
