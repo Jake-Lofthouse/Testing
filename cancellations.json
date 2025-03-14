@@ -155,7 +155,17 @@
         "date": "2025-03-15"
     },
     {
+        "name": "Dusi parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-15"
+    },
+    {
         "name": "Eramosa River Trail parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-15"
+    },
+    {
+        "name": "Fig Tree parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-15"
     },
@@ -292,6 +302,16 @@
     {
         "name": "Miyagawa koen parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-03-15"
+    },
+    {
+        "name": "Mountbellew Forest parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-15"
+    },
+    {
+        "name": "Mthatha parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-15"
     },
     {
@@ -452,6 +472,11 @@
     {
         "name": "Tamborine Mountain parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-15"
+    },
+    {
+        "name": "Terme parkrun",
+        "reason": "Weather",
         "date": "2025-03-15"
     },
     {
