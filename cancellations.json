@@ -125,6 +125,11 @@
         "date": "2025-03-15"
     },
     {
+        "name": "Fodder Forest parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-15"
+    },
+    {
         "name": "Geographe Bay parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-15"
@@ -170,6 +175,11 @@
         "date": "2025-03-15"
     },
     {
+        "name": "Kirra parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-03-15"
+    },
+    {
         "name": "Langebaan parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-15"
@@ -187,6 +197,11 @@
     {
         "name": "Loftsgardsbrua parkrun",
         "reason": "Vinterpause",
+        "date": "2025-03-15"
+    },
+    {
+        "name": "Logan River parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-15"
     },
     {
@@ -257,6 +272,11 @@
     {
         "name": "Queen Elizabeth parkrun, Casino",
         "reason": "Course unsafe or blocked",
+        "date": "2025-03-15"
+    },
+    {
+        "name": "Redland Bay parkrun",
+        "reason": "Permission issue",
         "date": "2025-03-15"
     },
     {
