@@ -140,6 +140,11 @@
         "date": "2025-03-15"
     },
     {
+        "name": "Dlinza Forest parkrun",
+        "reason": "Weather",
+        "date": "2025-03-15"
+    },
+    {
         "name": "Dubbo parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-15"
@@ -171,6 +176,16 @@
     },
     {
         "name": "Harrismith parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-15"
+    },
+    {
+        "name": "Hazelmere Dam parkrun",
+        "reason": "Weather",
+        "date": "2025-03-15"
+    },
+    {
+        "name": "Hluhluwe parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-15"
     },
@@ -365,6 +380,11 @@
         "date": "2025-03-15"
     },
     {
+        "name": "Ruimsig parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-15"
+    },
+    {
         "name": "Saint-Paulin parkrun",
         "reason": "Winter Pause",
         "date": "2025-03-15"
@@ -436,6 +456,11 @@
     },
     {
         "name": "The Avenues parkrun",
+        "reason": "Weather",
+        "date": "2025-03-15"
+    },
+    {
+        "name": "Thousand Hills parkrun",
         "reason": "Weather",
         "date": "2025-03-15"
     },
