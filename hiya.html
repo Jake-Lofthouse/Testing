@@ -534,7 +534,8 @@ function updateURL() {
 map.on('moveend', updateURL);
 
 var userLocationMarker;
-
+var markers = L.markerClusterGroup(); // Cluster for other markers
+        
 // Function to handle location found
 function onLocationFound(e) {
     if (!userLocationMarker) {
@@ -1050,7 +1051,6 @@ var userLocationMarker = null;
 var locationCircle = null; // To show accuracy radius circle around the user location
 
 
-
         function onLocationError(e) {
            // alert(e.message);
         }
@@ -1237,7 +1237,7 @@ function displayNoResultsMessage() {
     }, 3000);
 }
 
-    var markers = L.markerClusterGroup(); // Cluster for other markers
+    
     
     </script>
 </body>
