@@ -45,6 +45,11 @@
         "date": "2025-03-15"
     },
     {
+        "name": "Baysgarth Park parkrun",
+        "reason": "Weather",
+        "date": "2025-03-15"
+    },
+    {
         "name": "Bellevue parkrun",
         "reason": "Winter Pause",
         "date": "2025-03-15"
@@ -457,6 +462,11 @@
     {
         "name": "Shongweni parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-15"
+    },
+    {
+        "name": "Silksworth parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-15"
     },
     {
