@@ -85,6 +85,11 @@
         "date": "2025-03-15"
     },
     {
+        "name": "Canyon Rim Trail parkrun",
+        "reason": "Weather",
+        "date": "2025-03-15"
+    },
+    {
         "name": "Capalaba parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-15"
@@ -325,6 +330,11 @@
         "date": "2025-03-15"
     },
     {
+        "name": "Mtunzini parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-15"
+    },
+    {
         "name": "Mura di Lucca parkrun",
         "reason": "Weather",
         "date": "2025-03-15"
@@ -457,6 +467,11 @@
     {
         "name": "Sirromet parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-15"
+    },
+    {
+        "name": "Somerset East parkrun",
+        "reason": "Weather",
         "date": "2025-03-15"
     },
     {
