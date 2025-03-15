@@ -295,6 +295,11 @@
         "date": "2025-03-15"
     },
     {
+        "name": "Mansfield OH parkrun",
+        "reason": "Weather",
+        "date": "2025-03-15"
+    },
+    {
         "name": "Meadowbrook parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-15"
@@ -365,8 +370,18 @@
         "date": "2025-03-15"
     },
     {
+        "name": "Ohio and Erie Canal Reservation parkrun",
+        "reason": "Weather",
+        "date": "2025-03-15"
+    },
+    {
         "name": "Ormskirk parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-15"
+    },
+    {
+        "name": "Osborn MetroPark parkrun",
+        "reason": "Weather",
         "date": "2025-03-15"
     },
     {
@@ -646,6 +661,11 @@
     },
     {
         "name": "Great Cornard junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-03-16"
+    },
+    {
+        "name": "Haulbowline Island junior parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-03-16"
     },
