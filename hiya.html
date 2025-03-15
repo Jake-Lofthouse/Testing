@@ -614,7 +614,7 @@ map.on('moveend', updateURL);
 var bbMarkers = []; // Array to store BB markers
 var data = {};
 var cancellations = {};
-var markers = L.markerClusterGroup(); // Cluster for other markers
+
 
 // Function to normalize event names
 function normalizeEventName(name) {
@@ -1236,7 +1236,9 @@ function displayNoResultsMessage() {
         input.style.borderWidth = '';
     }, 3000);
 }
-    </script>
+
+    var markers = L.markerClusterGroup(); // Cluster for other markers
     
+    </script>
 </body>
 </html>
