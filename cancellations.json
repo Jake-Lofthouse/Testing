@@ -60,6 +60,11 @@
         "date": "2025-03-22"
     },
     {
+        "name": "Deerpark Forest parkrun, Virginia",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-22"
+    },
+    {
         "name": "Didcot parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-22"
@@ -106,6 +111,11 @@
     },
     {
         "name": "Kitanagase Mirai Fureai Sogokoen parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-03-22"
+    },
+    {
+        "name": "Kleinevalleij parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-03-22"
     },
