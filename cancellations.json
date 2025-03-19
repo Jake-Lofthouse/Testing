@@ -100,6 +100,11 @@
         "date": "2025-03-22"
     },
     {
+        "name": "Jeune Park parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-22"
+    },
+    {
         "name": "Judarskogen parkrun",
         "reason": "Vinteruppeh\u00e5ll",
         "date": "2025-03-22"
@@ -192,6 +197,11 @@
     {
         "name": "Sirromet parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-22"
+    },
+    {
+        "name": "Southsea parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-22"
     },
     {
