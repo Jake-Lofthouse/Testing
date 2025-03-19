@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFC URL Writer</title>
+    <script>
+        async function writeNFC() {
+            if ('NDEFReader' in window) {
+                try {
+                    const url = document.getElementById('urlInput').value;
+                    if (!url) {
+                        alert('Please enter a URL');
+                        return;
+                    }
+                    
+                    const ndef = new NDEFReader();
+                    await ndef.write({records: [{recordType: 'url', data: url}]});
+                    alert('URL written to NFC tag!');
+                } catch (error) {
+                    alert('Error writing to NFC: ' + error);
+                }
+            } else {
+                alert('NFC writing not supported on this device.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Write URL to NFC Tag</h2>
+    <input type="text" id="urlInput" placeholder="Enter URL" />
+    <button onclick="writeNFC()">Write to NFC</button>
+    <p>Note: NFC writing is only supported on compatible devices and browsers.</p>
+</body>
+</html>
