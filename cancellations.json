@@ -1,5 +1,10 @@
 [
     {
+        "name": "Aggeneys parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-03-22"
+    },
+    {
         "name": "Albert parkrun, Melbourne",
         "reason": "Grand Prix clean-up\u2014 hurdles aren\u2019t our sport",
         "date": "2025-03-22"
@@ -97,6 +102,11 @@
     {
         "name": "Huddinge parkrun",
         "reason": "Vinteruppeh\u00e5ll",
+        "date": "2025-03-22"
+    },
+    {
+        "name": "Jells parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-22"
     },
     {
