@@ -35,6 +35,11 @@
         "date": "2025-03-22"
     },
     {
+        "name": "Berrinba parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-22"
+    },
+    {
         "name": "Braidwood Showground parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-22"
@@ -47,6 +52,11 @@
     {
         "name": "Butter Trail parkrun",
         "reason": "Winter Pause",
+        "date": "2025-03-22"
+    },
+    {
+        "name": "Capalaba parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-22"
     },
     {
@@ -217,6 +227,11 @@
     {
         "name": "Sirromet parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-22"
+    },
+    {
+        "name": "South Para Reservoir parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-22"
     },
     {
