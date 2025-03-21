@@ -200,6 +200,11 @@
         "date": "2025-03-22"
     },
     {
+        "name": "Miyagawa koen parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-03-22"
+    },
+    {
         "name": "Moreletapark Gemeente parkrun",
         "reason": "Due to G12 Conference (3C gemeente)",
         "date": "2025-03-22"
@@ -260,6 +265,11 @@
         "date": "2025-03-22"
     },
     {
+        "name": "Scribbly Gums Conservation parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-22"
+    },
+    {
         "name": "Serengeti Estate parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-22"
@@ -277,6 +287,11 @@
     {
         "name": "Sirromet parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-22"
+    },
+    {
+        "name": "Somerset West parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-03-22"
     },
     {
