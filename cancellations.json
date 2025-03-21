@@ -25,6 +25,11 @@
         "date": "2025-03-22"
     },
     {
+        "name": "Atlasville parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-22"
+    },
+    {
         "name": "Ballina Coast parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-22"
@@ -262,6 +267,11 @@
     {
         "name": "Redland Bay parkrun",
         "reason": "Permission issue",
+        "date": "2025-03-22"
+    },
+    {
+        "name": "Riverway parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-22"
     },
     {
