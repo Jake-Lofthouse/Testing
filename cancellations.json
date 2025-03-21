@@ -115,6 +115,11 @@
         "date": "2025-03-22"
     },
     {
+        "name": "Duffins Trail parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-22"
+    },
+    {
         "name": "Falkirk parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-22"
@@ -235,8 +240,23 @@
         "date": "2025-03-22"
     },
     {
+        "name": "Moussette parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-22"
+    },
+    {
+        "name": "Mura di Lucca parkrun",
+        "reason": "Weather",
+        "date": "2025-03-22"
+    },
+    {
         "name": "Nagaragawa koen parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-22"
+    },
+    {
+        "name": "New York Central Fitness Trail parkrun",
+        "reason": "Weather",
         "date": "2025-03-22"
     },
     {
@@ -336,6 +356,11 @@
     },
     {
         "name": "Southsea parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-22"
+    },
+    {
+        "name": "Sterkfontein parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-22"
     },
