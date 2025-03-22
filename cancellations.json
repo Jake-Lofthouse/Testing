@@ -335,6 +335,11 @@
         "date": "2025-03-22"
     },
     {
+        "name": "Sheriff Creek Wildlife Sanctuary parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-22"
+    },
+    {
         "name": "Shongweni parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-22"
@@ -472,6 +477,11 @@
     {
         "name": "Carlisle junior parkrun",
         "reason": "Run Carlisle races using course route",
+        "date": "2025-03-23"
+    },
+    {
+        "name": "Conwy Nature Reserve junior parkrun",
+        "reason": "Venue unavailable",
         "date": "2025-03-23"
     },
     {
