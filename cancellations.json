@@ -55,6 +55,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Centre Vale parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Conwy parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-29"
@@ -191,6 +196,11 @@
     },
     {
         "name": "Shongweni parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Stutterheim parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-29"
     },
