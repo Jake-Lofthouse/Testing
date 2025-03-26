@@ -130,6 +130,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Meadowbrook parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Millennium parkrun",
         "reason": "Weather",
         "date": "2025-03-29"
@@ -202,6 +207,11 @@
     {
         "name": "Shongweni parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Sky River Path parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-29"
     },
     {
