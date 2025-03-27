@@ -100,6 +100,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Greenpoint parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Harrismith parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-29"
@@ -322,6 +327,11 @@
     {
         "name": "Boston Road Rec junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-30"
+    },
+    {
+        "name": "Central Park junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-30"
     },
     {
