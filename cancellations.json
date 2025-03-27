@@ -280,6 +280,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Torvean parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Town Moor parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-29"
@@ -306,6 +311,11 @@
     },
     {
         "name": "Victory Heights Trail parkrun",
+        "reason": "Weather",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Waterloo Plains parkrun",
         "reason": "Weather",
         "date": "2025-03-29"
     },
