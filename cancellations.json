@@ -95,6 +95,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Churchill Parkway parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Cloncurry parkrun",
         "reason": "Weather",
         "date": "2025-03-29"
@@ -507,6 +512,11 @@
     {
         "name": "Westville parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Whitby parkrun",
+        "reason": "Weather",
         "date": "2025-03-29"
     },
     {
