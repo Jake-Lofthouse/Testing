@@ -30,6 +30,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Berrinba parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Braidwood Showground parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-29"
@@ -170,6 +175,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Marina parkrun",
+        "reason": "Weather",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Meadowbrook parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-29"
@@ -192,6 +202,11 @@
     {
         "name": "North Harbour parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "North Shore parkrun",
+        "reason": "Weather",
         "date": "2025-03-29"
     },
     {
@@ -352,6 +367,11 @@
     {
         "name": "Woodley parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Zillmere parkrun",
+        "reason": "Weather",
         "date": "2025-03-29"
     },
     {
