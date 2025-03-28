@@ -135,6 +135,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Fig Tree parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Geographe Bay parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-29"
@@ -260,6 +265,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Matlosana Bird parkrun",
+        "reason": "Weather",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Meadowbrook parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-29"
@@ -355,6 +365,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Riviera on Vaal parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Robelle Domain parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-29"
@@ -432,6 +447,11 @@
     {
         "name": "Tamagawa chuo koen parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Tinley Manor parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-29"
     },
     {
