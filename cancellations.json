@@ -25,6 +25,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Australian Standing Stones parkrun",
+        "reason": "Weather",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Ballito parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-29"
@@ -42,6 +47,21 @@
     {
         "name": "Berrinba parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Bill Rose Sports Complex parkrun",
+        "reason": "Weather",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Birtinya Island parkrun",
+        "reason": "Weather",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Bourke Racecourse parkrun",
+        "reason": "Weather",
         "date": "2025-03-29"
     },
     {
@@ -91,6 +111,11 @@
     },
     {
         "name": "Centre Vale parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Chaffey Park parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-29"
     },
@@ -145,6 +170,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Forster parkrun",
+        "reason": "Weather",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Geographe Bay parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-29"
@@ -156,6 +186,11 @@
     },
     {
         "name": "Graham Andrews parkrun",
+        "reason": "Weather",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Grahamstown Aquatic Centre parkrun, Medowie",
         "reason": "Weather",
         "date": "2025-03-29"
     },
@@ -220,6 +255,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Kedron parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Kirra parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-29"
@@ -270,6 +310,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Main Beach parkrun",
+        "reason": "Weather",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Marina parkrun",
         "reason": "Weather",
         "date": "2025-03-29"
@@ -292,6 +337,16 @@
     {
         "name": "Mogol parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Moussette parkrun",
+        "reason": "Weather",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Mudgeeraba parkrun",
+        "reason": "Weather",
         "date": "2025-03-29"
     },
     {
@@ -327,6 +382,16 @@
     {
         "name": "Oiso undokoen parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Ome kyuryo parkrun",
+        "reason": "Weather",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Orleans parkrun",
+        "reason": "Weather",
         "date": "2025-03-29"
     },
     {
@@ -380,6 +445,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Riverbank parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Riverway parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-29"
@@ -402,6 +472,11 @@
     {
         "name": "Saint-Paulin parkrun",
         "reason": "Winter Pause",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Samford Parklands parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-29"
     },
     {
@@ -432,6 +507,11 @@
     {
         "name": "Silveroaks parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Singleton parkrun",
+        "reason": "Weather",
         "date": "2025-03-29"
     },
     {
@@ -470,6 +550,16 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Tamworth parkrun",
+        "reason": "Weather",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "The Entrance parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Tinley Manor parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-29"
@@ -482,6 +572,11 @@
     {
         "name": "Town Moor parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Two Rivers Wines parkrun",
+        "reason": "Weather",
         "date": "2025-03-29"
     },
     {
@@ -515,6 +610,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Walcha parkrun",
+        "reason": "Weather",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Waterloo Plains parkrun",
         "reason": "Weather",
         "date": "2025-03-29"
@@ -522,6 +622,11 @@
     {
         "name": "Wauchope parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Wes Mitchell Park parkrun",
+        "reason": "Weather",
         "date": "2025-03-29"
     },
     {
