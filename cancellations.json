@@ -90,6 +90,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Cloncurry parkrun",
+        "reason": "Weather",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Conwy parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-29"
@@ -107,6 +112,11 @@
     {
         "name": "Dlinza Forest parkrun",
         "reason": "Weather",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Drumblade parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-29"
     },
     {
@@ -155,8 +165,18 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Ipswich parkrun",
+        "reason": "Permission issue",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Jeune Park parkrun",
         "reason": "Weather",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Jock Trail parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-29"
     },
     {
@@ -172,6 +192,11 @@
     {
         "name": "Kirra parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Kroonstad parkrun",
+        "reason": "Weather",
         "date": "2025-03-29"
     },
     {
@@ -242,6 +267,11 @@
     {
         "name": "Newent parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "North Bay parkrun",
+        "reason": "Weather",
         "date": "2025-03-29"
     },
     {
@@ -361,6 +391,11 @@
     },
     {
         "name": "Southsea parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Sterkfontein parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-29"
     },
