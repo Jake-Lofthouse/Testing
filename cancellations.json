@@ -225,8 +225,18 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Petrie parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Pioneer Dairy parkrun",
         "reason": "Event Closed",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Plantation parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-29"
     },
     {
@@ -237,6 +247,11 @@
     {
         "name": "Puolarmaari parkrun",
         "reason": "Talvitauko",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Riverway parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-29"
     },
     {
