@@ -60,6 +60,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Bunyaville parkrun",
+        "reason": "Weather",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Burrum Heads Beach parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-29"
@@ -100,6 +105,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Dlinza Forest parkrun",
+        "reason": "Weather",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Duffins Trail parkrun",
         "reason": "Weather",
         "date": "2025-03-29"
@@ -116,6 +126,11 @@
     },
     {
         "name": "Graham Andrews parkrun",
+        "reason": "Weather",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Greenbank parkrun",
         "reason": "Weather",
         "date": "2025-03-29"
     },
