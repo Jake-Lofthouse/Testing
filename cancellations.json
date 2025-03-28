@@ -25,6 +25,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Ballito parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Barton Trail parkrun",
         "reason": "Winter Pause",
         "date": "2025-03-29"
@@ -125,6 +130,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Dusi parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Geographe Bay parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-29"
@@ -152,6 +162,11 @@
     {
         "name": "Harrismith parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Hazelmere Dam parkrun",
+        "reason": "Weather",
         "date": "2025-03-29"
     },
     {
@@ -330,6 +345,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Red Point Church parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Riverway parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-29"
@@ -465,6 +485,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Westville parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-29"
+    },
+    {
         "name": "White Rock parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-29"
@@ -537,6 +562,11 @@
     {
         "name": "St Anne\u2019s junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-30"
+    },
+    {
+        "name": "Torvean junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-30"
     }
 ]
