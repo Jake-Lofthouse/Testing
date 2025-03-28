@@ -215,6 +215,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Karoola Park parkrun",
+        "reason": "Weather",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Kirra parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-29"
@@ -295,6 +300,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "New York Central Fitness Trail parkrun",
+        "reason": "Weather",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Newent parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-29"
@@ -322,6 +332,11 @@
     {
         "name": "PE Hobie Beach parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Paradise Point parkrun",
+        "reason": "Weather",
         "date": "2025-03-29"
     },
     {
@@ -560,6 +575,11 @@
         "date": "2025-03-30"
     },
     {
+        "name": "Conwy Nature Reserve junior parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-03-30"
+    },
+    {
         "name": "Des Connor Park junior parkrun",
         "reason": "Weather",
         "date": "2025-03-30"
@@ -582,6 +602,11 @@
     {
         "name": "Ormeau junior parkrun",
         "reason": "Event Closed",
+        "date": "2025-03-30"
+    },
+    {
+        "name": "Rockfield junior parkrun",
+        "reason": "Venue unavailable",
         "date": "2025-03-30"
     },
     {
