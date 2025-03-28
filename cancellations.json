@@ -165,6 +165,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Logan River parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Meadowbrook parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-29"
@@ -300,6 +305,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Urayasushi sogo koen parkrun",
+        "reason": "Weather",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Veterans Park parkrun",
         "reason": "No participants",
         "date": "2025-03-29"
@@ -332,6 +342,11 @@
     {
         "name": "Whitfords Nodes parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Wolford Wood parkrun",
+        "reason": "Venue unavailable",
         "date": "2025-03-29"
     },
     {
