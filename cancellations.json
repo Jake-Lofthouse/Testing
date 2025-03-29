@@ -500,6 +500,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Rondebult parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Russborough parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-29"
@@ -587,6 +592,11 @@
     {
         "name": "Tamworth parkrun",
         "reason": "Weather",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Terra Nova parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-03-29"
     },
     {
