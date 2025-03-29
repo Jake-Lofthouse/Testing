@@ -110,6 +110,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Carlingwark Loch parkrun",
+        "reason": "Incident after start",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Castleblayney parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-29"
@@ -302,6 +307,11 @@
     {
         "name": "Laytown Beach parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Leakin Park parkrun",
+        "reason": "Venue unavailable",
         "date": "2025-03-29"
     },
     {
