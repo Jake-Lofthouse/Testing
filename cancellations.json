@@ -70,6 +70,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Breakwater parkrun",
+        "reason": "Weather",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Bright parkrun",
         "reason": "Buffalo Stampede weekend",
         "date": "2025-03-29"
@@ -120,6 +125,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Chichibu Muse Park parkrun",
+        "reason": "Weather",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Churchill Parkway parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-03-29"
@@ -152,6 +162,11 @@
     {
         "name": "Drumblade parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Dubbo parkrun",
+        "reason": "Weather",
         "date": "2025-03-29"
     },
     {
@@ -215,6 +230,11 @@
         "date": "2025-03-29"
     },
     {
+        "name": "Hervey Bay parkrun",
+        "reason": "Weather",
+        "date": "2025-03-29"
+    },
+    {
         "name": "Horinouchi koen parkrun",
         "reason": "Venue unavailable",
         "date": "2025-03-29"
@@ -227,6 +247,11 @@
     {
         "name": "Ipswich parkrun",
         "reason": "Permission issue",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Jakes Point parkrun",
+        "reason": "Weather",
         "date": "2025-03-29"
     },
     {
@@ -327,6 +352,11 @@
     {
         "name": "Meadowbrook parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-03-29"
+    },
+    {
+        "name": "Merrymeeting parkrun",
+        "reason": "Weather",
         "date": "2025-03-29"
     },
     {
@@ -685,6 +715,11 @@
         "date": "2025-03-30"
     },
     {
+        "name": "Cottenham Recreation Ground junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-03-30"
+    },
+    {
         "name": "Des Connor Park junior parkrun",
         "reason": "Weather",
         "date": "2025-03-30"
@@ -727,6 +762,11 @@
     {
         "name": "Torvean junior parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-03-30"
+    },
+    {
+        "name": "Ward End junior parkrun",
+        "reason": "Venue unavailable",
         "date": "2025-03-30"
     }
 ]
