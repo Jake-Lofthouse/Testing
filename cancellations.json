@@ -1,812 +1,217 @@
 [
     {
-        "name": "Aberfields parkrun",
-        "reason": "Shortage of volunteers",
-        "date": "2025-03-29"
+        "name": "Armidale parkrun",
+        "reason": "Campus to city canter using part of course.",
+        "date": "2025-04-05"
     },
     {
-        "name": "Ankerskogen parkrun",
-        "reason": "Vinterpause",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Aplins Weir parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Ashgrove parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Aspen parkrun",
-        "reason": "Winter Pause",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Australian Standing Stones parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Ballito parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Barton Trail parkrun",
-        "reason": "Winter Pause",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Bellevue parkrun",
-        "reason": "Winter Pause",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Berrinba parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Bill Rose Sports Complex parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Birtinya Island parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Bourke Racecourse parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Braidwood Showground parkrun",
+        "name": "Aronica\u2019s Nursery parkrun",
         "reason": "Venue unavailable",
-        "date": "2025-03-29"
+        "date": "2025-04-05"
     },
     {
-        "name": "Breakwater parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Bright parkrun",
-        "reason": "Buffalo Stampede weekend",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Broken Hill Racecourse parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Broparken parkrun",
-        "reason": "Vinteruppeh\u00e5ll",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Bunyaville parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Burrum Heads Beach parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Butter Trail parkrun",
-        "reason": "Winter Pause",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Capalaba parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Carlingwark Loch parkrun",
-        "reason": "Incident after start",
-        "date": "2025-03-29"
+        "name": "Aveley parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-04-05"
     },
     {
         "name": "Castleblayney parkrun",
         "reason": "Venue unavailable",
-        "date": "2025-03-29"
+        "date": "2025-04-05"
     },
     {
         "name": "Centre Vale parkrun",
         "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
+        "date": "2025-04-05"
     },
     {
-        "name": "Chaffey Park parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Chichibu Muse Park parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Churchill Parkway parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Cloncurry parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Conwy parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Corner Brook Stream Trail parkrun",
-        "reason": "Winter Pause",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Deerpark Forest parkrun, Virginia",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Dlinza Forest parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Drumblade parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Dubbo parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Duffins Trail parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Dusi parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Fig Tree parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Forster parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Geographe Bay parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Gloucester City parkrun",
-        "reason": "Permission issue",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Graham Andrews parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Grahamstown Aquatic Centre parkrun, Medowie",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Greenbank parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Greenpoint parkrun",
+        "name": "Cronulla parkrun",
         "reason": "Venue unavailable",
-        "date": "2025-03-29"
+        "date": "2025-04-05"
     },
     {
-        "name": "Harrismith parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Hazelmere Dam parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Hervey Bay parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Horinouchi koen parkrun",
-        "reason": "Venue unavailable",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Huddinge parkrun",
-        "reason": "Vinteruppeh\u00e5ll",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Ipswich parkrun",
+        "name": "Delaware and Raritan Canal parkrun",
         "reason": "Permission issue",
-        "date": "2025-03-29"
+        "date": "2025-04-05"
     },
     {
-        "name": "Jakes Point parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
+        "name": "Heiwa koen Kurashino mori parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-04-05"
     },
     {
-        "name": "Jeune Park parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
+        "name": "Horspath parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-04-05"
     },
     {
-        "name": "Jock Trail parkrun",
+        "name": "Hove Promenade parkrun",
         "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Jubilee parkrun, Tenterfield",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Judarskogen parkrun",
-        "reason": "Vinteruppeh\u00e5ll",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Karoola Park parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Kedron parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
+        "date": "2025-04-05"
     },
     {
         "name": "Kirra parkrun",
         "reason": "Venue unavailable",
-        "date": "2025-03-29"
+        "date": "2025-04-05"
     },
     {
-        "name": "Kroonstad parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Ladysmith parkrun",
+        "name": "Lithgow parkrun",
         "reason": "Venue unavailable",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Laytown Beach parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Leakin Park parkrun",
-        "reason": "Venue unavailable",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Leybourne Lakes parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Lightning Ridge parkrun",
-        "reason": "Permission issue",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Lillsj\u00f6n parkrun",
-        "reason": "Vinteruppeh\u00e5ll",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Lismore parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
+        "date": "2025-04-05"
     },
     {
         "name": "Loftsgardsbrua parkrun",
-        "reason": "Vinterpause",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Logan River parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Main Beach parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Marina parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Matlosana Bird parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Meadowbrook parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Merrymeeting parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Millennium parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
+        "reason": "Shortage of volunteers",
+        "date": "2025-04-05"
     },
     {
         "name": "Mogol parkrun",
         "reason": "Venue unavailable",
-        "date": "2025-03-29"
+        "date": "2025-04-05"
     },
     {
-        "name": "Moussette parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Mudgeeraba parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Nathan Road Sports Ground parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "New York Central Fitness Trail parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Newent parkrun",
+        "name": "Newy parkrun",
         "reason": "Venue unavailable",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "North Bay parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "North Harbour parkrun",
-        "reason": "Venue unavailable",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "North Shore parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Oiso undokoen parkrun",
-        "reason": "Venue unavailable",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Ome kyuryo parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Orleans parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Ottawa-Carleton Trailway parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
+        "date": "2025-04-05"
     },
     {
         "name": "PE Hobie Beach parkrun",
         "reason": "Venue unavailable",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Paradise Point parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Penrith Lakes parkrun",
-        "reason": "Venue unavailable",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Petrie parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Picnic Point Parklands parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Pioneer Dairy parkrun",
-        "reason": "Event Closed",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Pirates Sport Club parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Plantation parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
+        "date": "2025-04-05"
     },
     {
         "name": "Porirua parkrun",
         "reason": "Event Closed",
-        "date": "2025-03-29"
+        "date": "2025-04-05"
     },
     {
-        "name": "Puolarmaari parkrun",
-        "reason": "Talvitauko",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Red Point Church parkrun",
+        "name": "Richards Bay parkrun",
         "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
+        "date": "2025-04-05"
     },
     {
-        "name": "Riverbank parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Riverway parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Riviera on Vaal parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Robelle Domain parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Rondebult parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Russborough parkrun",
+        "name": "Rinko Park parkrun",
         "reason": "Venue unavailable",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Saint-Paulin parkrun",
-        "reason": "Winter Pause",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Samford Parklands parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Sanukikodomonokuni parkrun",
-        "reason": "Shortage of volunteers",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Sasolburg Stadium parkrun",
-        "reason": "Venue unavailable",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Settlers Park parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
+        "date": "2025-04-05"
     },
     {
         "name": "Sheriff Creek Wildlife Sanctuary parkrun",
         "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Shibamata koen kadan parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-04-05"
     },
     {
         "name": "Shongweni parkrun",
         "reason": "Venue unavailable",
-        "date": "2025-03-29"
+        "date": "2025-04-05"
     },
     {
-        "name": "Silveroaks parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
+        "name": "Sir James Mitchell parkrun",
+        "reason": "Pre-organised event using the course.",
+        "date": "2025-04-05"
     },
     {
-        "name": "Singleton parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Sky River Path parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
+        "name": "Skat\u00e5s parkrun",
+        "reason": "Annat event p\u00e5 platsen",
+        "date": "2025-04-05"
     },
     {
         "name": "Somerset West parkrun",
         "reason": "Venue unavailable",
-        "date": "2025-03-29"
+        "date": "2025-04-05"
     },
     {
-        "name": "Southsea parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Sterkfontein parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Stones Corner parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Stutterheim parkrun",
+        "name": "St Anne\u2019s parkrun",
         "reason": "Venue unavailable",
-        "date": "2025-03-29"
+        "date": "2025-04-05"
     },
     {
-        "name": "Tamagawa chuo koen parkrun",
+        "name": "Voortrekker Monument parkrun, Pretoria",
         "reason": "Venue unavailable",
-        "date": "2025-03-29"
+        "date": "2025-04-05"
     },
     {
-        "name": "Tamworth parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Terra Nova parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "The Entrance parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Tinley Manor parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Torvean parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Town Moor parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Two Rivers Wines parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "University of Waikato parkrun",
-        "reason": "Major event at same location - Relay for Life",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Upton House parkrun",
+        "name": "Wentworth Common parkrun",
         "reason": "Venue unavailable",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Urayasushi sogo koen parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Veterans Park parkrun",
-        "reason": "No participants",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Victoria parkrun, Truro",
-        "reason": "Winter Pause",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Victory Heights Trail parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Walcha parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Waterloo Plains parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Wauchope parkrun",
-        "reason": "Venue unavailable",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Wes Mitchell Park parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Westville parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Whitby parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "White Rock parkrun",
-        "reason": "Venue unavailable",
-        "date": "2025-03-29"
+        "date": "2025-04-05"
     },
     {
         "name": "Whitfords Nodes parkrun",
         "reason": "Course unsafe or blocked",
-        "date": "2025-03-29"
+        "date": "2025-04-05"
     },
     {
         "name": "Wolford Wood parkrun",
         "reason": "Venue unavailable",
-        "date": "2025-03-29"
+        "date": "2025-04-05"
     },
     {
         "name": "Woodley parkrun",
-        "reason": "Venue unavailable",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Zillmere parkrun",
-        "reason": "Weather",
-        "date": "2025-03-29"
-    },
-    {
-        "name": "Boston Road Rec junior parkrun",
-        "reason": "Venue unavailable",
-        "date": "2025-03-30"
-    },
-    {
-        "name": "Central Park junior parkrun",
         "reason": "Course unsafe or blocked",
-        "date": "2025-03-30"
+        "date": "2025-04-05"
     },
     {
-        "name": "Clough Hall junior parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-30"
-    },
-    {
-        "name": "Conwy Nature Reserve junior parkrun",
+        "name": "parkrun Krak\u00f3w",
         "reason": "Venue unavailable",
-        "date": "2025-03-30"
+        "date": "2025-04-05"
     },
     {
-        "name": "Cottenham Recreation Ground junior parkrun",
-        "reason": "Shortage of volunteers",
-        "date": "2025-03-30"
+        "name": "Beacon junior parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-04-06"
     },
     {
-        "name": "Des Connor Park junior parkrun",
-        "reason": "Weather",
-        "date": "2025-03-30"
+        "name": "Bognor Regis junior parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-04-06"
     },
     {
-        "name": "Evesham junior parkrun",
-        "reason": "Shortage of volunteers",
-        "date": "2025-03-30"
+        "name": "Cleveragh junior parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-04-06"
     },
     {
-        "name": "Eyemouth Primary Playing Fields junior parkrun",
-        "reason": "Weather",
-        "date": "2025-03-30"
-    },
-    {
-        "name": "King George Playing Fields junior parkrun, Hull",
-        "reason": "Shortage of volunteers",
-        "date": "2025-03-30"
-    },
-    {
-        "name": "Norris Green Park junior parkrun",
-        "reason": "Shortage of volunteers",
-        "date": "2025-03-30"
+        "name": "NIAC junior parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-04-06"
     },
     {
         "name": "Ormeau junior parkrun",
         "reason": "Event Closed",
-        "date": "2025-03-30"
+        "date": "2025-04-06"
     },
     {
-        "name": "Riverside junior parkrun, Ballymoney",
-        "reason": "Shortage of volunteers",
-        "date": "2025-03-30"
-    },
-    {
-        "name": "Rockfield junior parkrun",
+        "name": "Porthcawl Promenade junior parkrun",
         "reason": "Venue unavailable",
-        "date": "2025-03-30"
+        "date": "2025-04-06"
     },
     {
-        "name": "Spencer Park junior parkrun",
+        "name": "Preston Park junior parkrun, Brighton",
         "reason": "Venue unavailable",
-        "date": "2025-03-30"
+        "date": "2025-04-06"
     },
     {
-        "name": "St Anne\u2019s junior parkrun",
+        "name": "Queen\u2019s Park junior parkrun, Brighton",
         "reason": "Venue unavailable",
-        "date": "2025-03-30"
+        "date": "2025-04-06"
     },
     {
-        "name": "Torvean junior parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-03-30"
-    },
-    {
-        "name": "Ward End junior parkrun",
+        "name": "Southampton Common junior parkrun",
         "reason": "Venue unavailable",
-        "date": "2025-03-30"
+        "date": "2025-04-06"
+    },
+    {
+        "name": "Southampton junior parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-04-06"
+    },
+    {
+        "name": "Witton Park junior parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-04-06"
     }
 ]
