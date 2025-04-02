@@ -24,13 +24,7 @@
         <priority>0.5</priority>
     </url>
     
-    <!-- B&B -->
-    <url>
-        <loc>https://parkrunnertourist.co.uk/B&amp;B</loc>
-        <lastmod>2024-11-19</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
-    </url>
+  
 
     <!-- Builder page -->
     <url>
