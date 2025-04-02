@@ -70,6 +70,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Ipswich parkrun",
+        "reason": "Permission issue",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Kirra parkrun",
         "reason": "Venue unavailable",
         "date": "2025-04-05"
@@ -92,6 +97,11 @@
     {
         "name": "Mapule Sindane School parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Meadowbrook parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
     },
     {
