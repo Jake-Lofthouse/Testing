@@ -50,6 +50,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Durbanville parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Fire Service College parkrun",
         "reason": "Event Closed",
         "date": "2025-04-05"
@@ -72,6 +77,11 @@
     {
         "name": "Ipswich parkrun",
         "reason": "Permission issue",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Jeune Park parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
     },
     {
@@ -176,6 +186,11 @@
     },
     {
         "name": "Voortrekker Monument parkrun, Pretoria",
+        "reason": "Venue unavailable",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Wauchope parkrun",
         "reason": "Venue unavailable",
         "date": "2025-04-05"
     },
