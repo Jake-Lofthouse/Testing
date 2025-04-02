@@ -65,6 +65,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Five Arches parkrun",
+        "reason": "Permission issue",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Heiwa koen Kurashino mori parkrun",
         "reason": "Venue unavailable",
         "date": "2025-04-05"
@@ -122,6 +127,11 @@
     {
         "name": "Mogol parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Mthatha parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-04-05"
     },
     {
