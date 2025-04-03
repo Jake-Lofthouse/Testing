@@ -245,6 +245,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Terra Nova parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Victory Heights Trail parkrun",
         "reason": "Weather",
         "date": "2025-04-05"
@@ -285,6 +290,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Yarborough Leisure Centre parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-04-05"
+    },
+    {
         "name": "parkrun Krak\u00f3w",
         "reason": "Venue unavailable",
         "date": "2025-04-05"
@@ -301,6 +311,11 @@
     },
     {
         "name": "Cleveragh junior parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-04-06"
+    },
+    {
+        "name": "Moors Valley junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-04-06"
     },
