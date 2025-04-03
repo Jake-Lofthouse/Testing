@@ -275,6 +275,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Warwick parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Wauchope parkrun",
         "reason": "Venue unavailable",
         "date": "2025-04-05"
