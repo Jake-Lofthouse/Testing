@@ -125,6 +125,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Lismore parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Lithgow parkrun",
         "reason": "Venue unavailable",
         "date": "2025-04-05"
@@ -227,6 +232,16 @@
     {
         "name": "St Anne\u2019s parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Taree parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Victory Heights Trail parkrun",
+        "reason": "Weather",
         "date": "2025-04-05"
     },
     {
