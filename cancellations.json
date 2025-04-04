@@ -10,6 +10,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Arrow Rest parkrun",
+        "reason": "Weather",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Aspen parkrun",
         "reason": "Venue unavailable",
         "date": "2025-04-05"
@@ -61,6 +66,11 @@
     },
     {
         "name": "Dolls Point parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Duffins Trail parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
     },
@@ -275,6 +285,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Phoenix Park parkrun",
+        "reason": "Weather",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Plantation parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
@@ -347,6 +362,11 @@
     {
         "name": "St Anne\u2019s parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Sterkfontein parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
     },
     {
