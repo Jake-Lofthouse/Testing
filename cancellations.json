@@ -70,6 +70,16 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Egweni River Lodge parkrun",
+        "reason": "Weather",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Ferryvale parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Fire Service College parkrun",
         "reason": "Event Closed",
         "date": "2025-04-05"
@@ -90,8 +100,18 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Gladstone QLD parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Grafton parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Greenbank parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
     },
     {
@@ -120,6 +140,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Inibos parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Ipswich parkrun",
         "reason": "Permission issue",
         "date": "2025-04-05"
@@ -132,6 +157,11 @@
     {
         "name": "Jindabyne parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Jock Trail parkrun",
+        "reason": "Weather",
         "date": "2025-04-05"
     },
     {
@@ -165,6 +195,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Matlosana Bird parkrun",
+        "reason": "Weather",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Meadowbrook parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
@@ -192,6 +227,11 @@
     {
         "name": "Mthatha parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Nathan Road Sports Ground parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
     },
     {
@@ -236,6 +276,16 @@
     },
     {
         "name": "Riverway parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Rockhampton parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Serengeti Estate parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
     },
