@@ -20,6 +20,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Atlasville parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Aveley parkrun",
         "reason": "Venue unavailable",
         "date": "2025-04-05"
@@ -80,6 +85,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Ebotse parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Egweni River Lodge parkrun",
         "reason": "Weather",
         "date": "2025-04-05"
@@ -87,6 +97,11 @@
     {
         "name": "Ferryvale parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Ficksburg parkrun",
+        "reason": "Weather",
         "date": "2025-04-05"
     },
     {
@@ -135,6 +150,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Homestead Lake parkrun",
+        "reason": "Weather",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Horspath parkrun",
         "reason": "Venue unavailable",
         "date": "2025-04-05"
@@ -180,6 +200,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Kleinplaas parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Koster parkrun",
         "reason": "Weather",
         "date": "2025-04-05"
@@ -205,6 +230,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Lochore Meadows parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Loftsgardsbrua parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-04-05"
@@ -227,6 +257,11 @@
     {
         "name": "Memorial Park parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Meyers Farm parkrun",
+        "reason": "Weather",
         "date": "2025-04-05"
     },
     {
@@ -290,6 +325,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Pine Forest parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Plantation parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
@@ -315,7 +355,17 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Riviera on Vaal parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Rockhampton parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Sand River parkrun, Virginia",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
     },
@@ -421,6 +471,11 @@
     },
     {
         "name": "Whitfords Nodes parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Winterton parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
     },
