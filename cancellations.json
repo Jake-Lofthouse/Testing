@@ -30,8 +30,28 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Bapsfontein Hotel parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Bethlehem parkrun",
         "reason": "Weather",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Biki Byte parkrun",
+        "reason": "Weather",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Bolberry Down parkrun",
+        "reason": "Weather",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Brakpan parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
     },
     {
@@ -55,6 +75,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Clarens parkrun",
+        "reason": "Weather",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Coler Mountain Bike Preserve parkrun",
         "reason": "Venue unavailable",
         "date": "2025-04-05"
@@ -75,12 +100,22 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Derrynoid Forest parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Dlinza Forest parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
     },
     {
         "name": "Dolls Point parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Drumblade parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
     },
@@ -101,6 +136,11 @@
     },
     {
         "name": "Egweni River Lodge parkrun",
+        "reason": "Weather",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Eldorado Park parkrun",
         "reason": "Weather",
         "date": "2025-04-05"
     },
@@ -360,6 +400,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Rietvlei parkrun, JHB South",
+        "reason": "Weather",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Rinko Park parkrun",
         "reason": "Venue unavailable",
         "date": "2025-04-05"
@@ -380,6 +425,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Rondebult parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Rooi Point Farm parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
@@ -387,6 +437,11 @@
     {
         "name": "Sand River parkrun, Virginia",
         "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Senekal parkrun",
+        "reason": "Weather",
         "date": "2025-04-05"
     },
     {
@@ -475,6 +530,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Vryheid parkrun",
+        "reason": "Weather",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Warwick parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
@@ -501,6 +561,11 @@
     },
     {
         "name": "Whitfords Nodes parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Whitley Bay parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
     },
