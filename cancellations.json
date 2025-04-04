@@ -50,6 +50,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Bosmont Stadium parkrun",
+        "reason": "Weather",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Brakpan parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
@@ -265,6 +270,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Kralinbergh parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Kroonstad parkrun",
         "reason": "Weather",
         "date": "2025-04-05"
@@ -316,6 +326,11 @@
     },
     {
         "name": "Meyers Farm parkrun",
+        "reason": "Weather",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Meyerton parkrun",
         "reason": "Weather",
         "date": "2025-04-05"
     },
@@ -617,6 +632,11 @@
     {
         "name": "NIAC junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-04-06"
+    },
+    {
+        "name": "Oranmore junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-04-06"
     },
     {
