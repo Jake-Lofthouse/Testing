@@ -85,6 +85,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Geographe Bay parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Grafton parkrun",
         "reason": "Venue unavailable",
         "date": "2025-04-05"
@@ -302,6 +307,11 @@
     {
         "name": "Warwick parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Waterloo Plains parkrun",
+        "reason": "Weather",
         "date": "2025-04-05"
     },
     {
