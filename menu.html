@@ -29,9 +29,10 @@
 
         .menu-container {
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-around; /* Ensure equal space around each item */
             align-items: center;
             width: 100%;
+            max-width: 500px;
             padding: 0 20px;
         }
 
@@ -43,16 +44,17 @@
             padding: 10px;
             transition: all 0.3s ease;
             cursor: default;
+            text-align: center;
         }
 
         .nav-item .material-icons {
-            font-size: 24px;
+            font-size: 5vw; /* Scale icon size based on viewport width */
             margin-bottom: 5px;
             transition: transform 0.3s ease;
         }
 
         .nav-item span {
-            font-size: 12px;
+            font-size: 2vw; /* Scale text size based on viewport width */
             font-weight: 500;
         }
 
@@ -88,36 +90,32 @@
             animation: fadeIn 0.5s ease-out forwards;
         }
 
-        /* Responsive design */
+        /* Responsive design adjustments */
         @media (max-width: 480px) {
-            .nav-item {
-                padding: 8px;
-            }
-            
-            .nav-item .material-icons {
-                font-size: 20px;
-            }
-            
-            .nav-item span {
-                font-size: 10px;
-            }
-            
             .menu-container {
                 padding: 0 10px;
+            }
+
+            .nav-item .material-icons {
+                font-size: 6vw; /* Slightly larger icons on smaller screens */
+            }
+
+            .nav-item span {
+                font-size: 3vw; /* Larger text on smaller screens */
             }
         }
 
         @media (min-width: 1200px) {
-            .nav-item .material-icons {
-                font-size: 28px;
-            }
-            
-            .nav-item span {
-                font-size: 14px;
-            }
-            
             .menu-container {
                 padding: 0 40px;
+            }
+
+            .nav-item .material-icons {
+                font-size: 4vw; /* Adjust for larger screens */
+            }
+
+            .nav-item span {
+                font-size: 2.5vw; /* Larger text on larger screens */
             }
         }
     </style>
