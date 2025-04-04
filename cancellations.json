@@ -85,6 +85,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Grafton parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Harrismith parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
@@ -157,6 +162,11 @@
     {
         "name": "Memorial Park parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Miyagawa koen parkrun",
+        "reason": "Permission issue",
         "date": "2025-04-05"
     },
     {
@@ -252,6 +262,11 @@
     {
         "name": "St Anne\u2019s parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Stones Corner parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
     },
     {
