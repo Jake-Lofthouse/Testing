@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Prevent indexing -->
     <meta name="robots" content="noindex, nofollow">
+    <!-- Google Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         * {
@@ -21,6 +23,8 @@
             justify-content: center;
             align-items: center;
             font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            -webkit-overflow-scrolling: none;
+            touch-action: none;
         }
 
         .menu-container {
@@ -30,7 +34,7 @@
             width: 100%;
             max-width: 500px;
             padding: 0 20px;
-            gap: 35vw;
+            gap: 10vw;
         }
 
         .nav-item {
@@ -40,7 +44,7 @@
             color: #ffffff;
             padding: 10px;
             transition: all 0.3s ease;
-            cursor: pointer;
+            cursor: default;
             text-align: center;
         }
 
@@ -70,9 +74,54 @@
         .nav-item.selected {
             opacity: 1 !important;
         }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .menu-container {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        @media (max-width: 480px) {
+            .menu-container {
+                padding: 0 10px;
+                gap: 5vw;
+            }
+
+            .nav-item .material-icons {
+                font-size: 6vw;
+            }
+
+            .nav-item span {
+                font-size: 3vw;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .menu-container {
+                padding: 0 40px;
+                gap: 15vw;
+            }
+
+            .nav-item .material-icons {
+                font-size: 4vw;
+            }
+
+            .nav-item span {
+                font-size: 2.5vw;
+            }
+        }
     </style>
 </head>
-<body>
+<body oncontextmenu="return false" onmousedown="if(event.button==2)return false;">
     <div class="menu-container">
         <div class="nav-item" onclick="selectItem(this, 1)">
             <i class="material-icons">dashboard</i>
@@ -85,17 +134,25 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const selectedItem = urlParams.get('') || '1';
-            
-            document.querySelectorAll('.nav-item').forEach(item => {
-                item.classList.remove('selected');
-            });
-            
-            const selectedElement = document.querySelector(`.nav-item:nth-child(${selectedItem})`);
-            if (selectedElement) {
-                selectedElement.classList.add('selected');
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.addEventListener('dragstart', event => event.preventDefault());
+        document.addEventListener('touchstart', function(e) {
+            let touchTimer;
+            touchTimer = setTimeout(() => {}, 250);
+            return false;
+        });
+
+        document.addEventListener('wheel', function(e) {
+            e.preventDefault();
+        }, { passive: false });
+
+        document.addEventListener('touchmove', function(e) {
+            e.preventDefault();
+        }, { passive: false });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === '+' || e.key === '-' || e.key === '0')) {
+                e.preventDefault();
             }
         });
 
@@ -108,6 +165,26 @@
             const baseUrl = window.location.pathname;
             history.pushState({}, '', `${baseUrl}?${itemNumber}`);
         }
+
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            const itemNum = params.get(''); // Get the query parameter value
+            const navItems = document.querySelectorAll('.nav-item');
+
+            // Default to Dashboard selected if no valid parameter
+            navItems[0].classList.add('selected');
+
+            // Check URL parameter and select Settings if ?2
+            if (itemNum === '2') {
+                navItems[0].classList.remove('selected');
+                navItems[1].classList.add('selected');
+            } else if (itemNum !== '1') {
+                // If not ?1 or ?2, keep Dashboard selected but update URL to ?1
+                const baseUrl = window.location.pathname;
+                history.pushState({}, '', `${baseUrl}?1`);
+            }
+        }
     </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92b2048b2e347462',t:'MTc0Mzc4MjQxNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>
