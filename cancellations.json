@@ -125,6 +125,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Jindabyne parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Kirra parkrun",
         "reason": "Venue unavailable",
         "date": "2025-04-05"
@@ -222,6 +227,11 @@
     {
         "name": "Rinko Park parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Riverway parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
     },
     {
