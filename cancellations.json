@@ -170,6 +170,16 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Koster parkrun",
+        "reason": "Weather",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Kroonstad parkrun",
+        "reason": "Weather",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Lightning Ridge parkrun",
         "reason": "Permission issue",
         "date": "2025-04-05"
@@ -245,6 +255,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "North Shore parkrun",
+        "reason": "Weather",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Old Thomson River Road parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
@@ -256,6 +271,11 @@
     },
     {
         "name": "Petrie parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Plantation parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
     },
