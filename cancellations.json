@@ -30,6 +30,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Bethlehem parkrun",
+        "reason": "Weather",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Capalaba parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
@@ -70,6 +75,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Dlinza Forest parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Dolls Point parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
@@ -92,6 +102,11 @@
     {
         "name": "Egweni River Lodge parkrun",
         "reason": "Weather",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Emerald Resort parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
     },
     {
@@ -365,8 +380,18 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Rooi Point Farm parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Sand River parkrun, Virginia",
         "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Seotlong Agriculture School parkrun",
+        "reason": "Weather",
         "date": "2025-04-05"
     },
     {
@@ -431,6 +456,11 @@
     },
     {
         "name": "Terra Nova parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Vaal Marina parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
     },
