@@ -34,7 +34,7 @@
             width: 100%;
             max-width: 500px;
             padding: 0 20px;
-            gap: 10vw;
+            gap: 12vw; /* Increased from 10vw to 12vw for slightly larger spacing */
         }
 
         .nav-item {
@@ -93,7 +93,7 @@
         @media (max-width: 480px) {
             .menu-container {
                 padding: 0 10px;
-                gap: 5vw;
+                gap: 6vw; /* Increased from 5vw to 6vw */
             }
 
             .nav-item .material-icons {
@@ -108,7 +108,7 @@
         @media (min-width: 1200px) {
             .menu-container {
                 padding: 0 40px;
-                gap: 15vw;
+                gap: 18vw; /* Increased from 15vw to 18vw */
             }
 
             .nav-item .material-icons {
@@ -171,17 +171,16 @@
             const itemNum = params.get(''); // Get the query parameter value
             const navItems = document.querySelectorAll('.nav-item');
 
-            // Default to Dashboard selected if no valid parameter
-            navItems[0].classList.add('selected');
-
-            // Check URL parameter and select Settings if ?2
+            // Check URL parameter and set selection accordingly
             if (itemNum === '2') {
-                navItems[0].classList.remove('selected');
-                navItems[1].classList.add('selected');
-            } else if (itemNum !== '1') {
-                // If not ?1 or ?2, keep Dashboard selected but update URL to ?1
-                const baseUrl = window.location.pathname;
-                history.pushState({}, '', `${baseUrl}?1`);
+                navItems[1].classList.add('selected'); // Settings selected for ?2
+            } else {
+                navItems[0].classList.add('selected'); // Default to Dashboard
+                // Only update URL to ?1 if it’s not already ?2
+                if (itemNum !== '2') {
+                    const baseUrl = window.location.pathname;
+                    history.pushState({}, '', `${baseUrl}?1`);
+                }
             }
         }
     </script>
