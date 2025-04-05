@@ -171,19 +171,14 @@
             const itemNum = params.get(''); // Get the query parameter value
             const navItems = document.querySelectorAll('.nav-item');
 
-            // Clear any existing selection first
+            // Clear any existing selection
             navItems.forEach(item => item.classList.remove('selected'));
 
-            // Set selection based on URL parameter
+            // Set selection based on URL parameter, no URL changes
             if (itemNum === '2') {
-                navItems[1].classList.add('selected'); // Settings selected for ?2
-            } else if (itemNum === '1') {
-                navItems[0].classList.add('selected'); // Dashboard selected for ?1
+                navItems[1].classList.add('selected'); // Settings for ?2
             } else {
-                // Default to Dashboard and set URL to ?1 only if no valid parameter
-                navItems[0].classList.add('selected');
-                const baseUrl = window.location.pathname;
-                history.pushState({}, '', `${baseUrl}?1`);
+                navItems[0].classList.add('selected'); // Default to Dashboard
             }
         }
     </script>
