@@ -34,7 +34,7 @@
             width: 100%;
             max-width: 500px;
             padding: 0 20px;
-            gap: 12vw; /* Increased from 10vw to 12vw for slightly larger spacing */
+            gap: 12vw;
         }
 
         .nav-item {
@@ -93,7 +93,7 @@
         @media (max-width: 480px) {
             .menu-container {
                 padding: 0 10px;
-                gap: 6vw; /* Increased from 5vw to 6vw */
+                gap: 6vw;
             }
 
             .nav-item .material-icons {
@@ -108,7 +108,7 @@
         @media (min-width: 1200px) {
             .menu-container {
                 padding: 0 40px;
-                gap: 18vw; /* Increased from 15vw to 18vw */
+                gap: 18vw;
             }
 
             .nav-item .material-icons {
@@ -174,10 +174,12 @@
             // Check URL parameter and set selection accordingly
             if (itemNum === '2') {
                 navItems[1].classList.add('selected'); // Settings selected for ?2
+            } else if (itemNum === '1') {
+                navItems[0].classList.add('selected'); // Dashboard selected for ?1
             } else {
-                navItems[0].classList.add('selected'); // Default to Dashboard
-                // Only update URL to ?1 if it’s not already ?2
-                if (itemNum !== '2') {
+                // Default to Dashboard and set URL to ?1 only if no parameter is present
+                navItems[0].classList.add('selected');
+                if (!itemNum) {
                     const baseUrl = window.location.pathname;
                     history.pushState({}, '', `${baseUrl}?1`);
                 }
