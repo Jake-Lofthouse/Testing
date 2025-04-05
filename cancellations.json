@@ -40,6 +40,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Beckenham Place parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Bethlehem parkrun",
         "reason": "Weather",
         "date": "2025-04-05"
@@ -86,6 +91,11 @@
     },
     {
         "name": "Churchill Parkway parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Clarence parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
     },
@@ -340,6 +350,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Mapetla parkrun",
+        "reason": "Weather",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Mapule Sindane School parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-04-05"
@@ -426,6 +441,11 @@
     },
     {
         "name": "Old Thomson River Road parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Oldham parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
     },
@@ -737,6 +757,11 @@
     {
         "name": "Southampton junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-04-06"
+    },
+    {
+        "name": "Sutton Lawn junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-04-06"
     },
     {
