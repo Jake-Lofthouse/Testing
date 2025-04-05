@@ -210,6 +210,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Hillside parkrun",
+        "reason": "Weather",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Homestead Lake parkrun",
         "reason": "Weather",
         "date": "2025-04-05"
@@ -336,6 +341,11 @@
     },
     {
         "name": "Meyerton parkrun",
+        "reason": "Weather",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Midstream parkrun",
         "reason": "Weather",
         "date": "2025-04-05"
     },
