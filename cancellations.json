@@ -40,6 +40,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Bear Creek Greenbelt parkrun",
+        "reason": "Weather",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Beckenham Place parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
@@ -206,6 +211,11 @@
     },
     {
         "name": "Geographe Bay parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Gillies Lake parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
     },
@@ -560,6 +570,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Sippo Lake parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Sir James Mitchell parkrun",
         "reason": "Pre-organised event using the course.",
         "date": "2025-04-05"
@@ -652,6 +667,11 @@
     {
         "name": "Wentworth Common parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "White Lick Creek parkrun",
+        "reason": "Weather",
         "date": "2025-04-05"
     },
     {
