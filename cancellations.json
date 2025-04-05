@@ -30,12 +30,22 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Ballito parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Bapsfontein Hotel parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
     },
     {
         "name": "Bethlehem parkrun",
+        "reason": "Weather",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Bezuidenhout parkrun",
         "reason": "Weather",
         "date": "2025-04-05"
     },
@@ -155,6 +165,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Ennerdale Stadium parkrun",
+        "reason": "Weather",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Ferryvale parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
@@ -205,6 +220,11 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Hazelmere Dam parkrun",
+        "reason": "Weather",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Heiwa koen Kurashino mori parkrun",
         "reason": "Venue unavailable",
         "date": "2025-04-05"
@@ -212,6 +232,11 @@
     {
         "name": "Hillside parkrun",
         "reason": "Weather",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Hluhluwe parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
     },
     {
@@ -372,6 +397,11 @@
     {
         "name": "Mthatha parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Mtunzini parkrun",
+        "reason": "Weather",
         "date": "2025-04-05"
     },
     {
@@ -550,7 +580,22 @@
         "date": "2025-04-05"
     },
     {
+        "name": "Tinley Manor parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Tsakane Wetlands parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
         "name": "Vaal Marina parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-05"
+    },
+    {
+        "name": "Valhalla parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-05"
     },
