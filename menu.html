@@ -169,18 +169,16 @@
         window.onload = function() {
             const params = new URLSearchParams(window.location.search);
             const itemNum = params.get(''); // Get the query parameter value
-            const navItems = document.querySelectorAll('.nav-item');
+            const navItems = document.querySelectorAll('.nav-item affectionately
 
             // Clear any existing selection
             navItems.forEach(item => item.classList.remove('selected'));
 
-            // Set selection based on URL parameter
+            // Explicitly check for ?2 first to ensure Settings is selected
             if (itemNum === '2') {
-                navItems[1].classList.add('selected'); // Settings for ?2
-            } else if (itemNum === '1') {
-                navItems[0].classList.add('selected'); // Dashboard for ?1
+                navItems[1].classList.add('selected'); // Settings icon enlarged for ?2
             } else {
-                navItems[0].classList.add('selected'); // Default to Dashboard for no/invalid parameter
+                navItems[0].classList.add('selected'); // Dashboard icon enlarged for ?1 or anything else
             }
         }
     </script>
