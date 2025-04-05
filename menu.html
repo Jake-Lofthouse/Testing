@@ -171,14 +171,12 @@
             const itemNum = params.get(''); // Get the query parameter value
             const navItems = document.querySelectorAll('.nav-item');
 
-            // Check URL parameter and set selection accordingly
+            // Honor the URL parameter on load/refresh
             if (itemNum === '2') {
                 navItems[1].classList.add('selected'); // Settings selected for ?2
-            } else if (itemNum === '1') {
-                navItems[0].classList.add('selected'); // Dashboard selected for ?1
             } else {
-                // Default to Dashboard and set URL to ?1 only if no parameter is present
-                navItems[0].classList.add('selected');
+                navItems[0].classList.add('selected'); // Default to Dashboard
+                // Only set to ?1 if no parameter exists
                 if (!itemNum) {
                     const baseUrl = window.location.pathname;
                     history.pushState({}, '', `${baseUrl}?1`);
