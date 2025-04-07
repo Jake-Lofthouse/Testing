@@ -23,16 +23,16 @@ jobs:
 
       # Notify Cronitor at the start of the workflow
       - name: Notify Cronitor start
-        run: curl -m 10 --retry 5 -o /dev/null -s "https://cronitor.link/p/6c06f2554fc841ccb0b0928481a03ed1/cancellation-scraper/run"
+        run: curl -m 10 --retry 5 -o /dev/null -s "https://cronitor.link/p/6c06f2554fc841ccb0b0928481a03ed1/cancellation/run"
 
-      - name: Run cancellation scraper
-        id: run_scraper
+      - name: Collect Data
+        id: run
         run: |
           python "scripts/cancellations.py"
           echo "exit_code=$?" >> $GITHUB_ENV  # Save exit code to environment variable
 
       - name: Commit and push changes
-        if: steps.run_scraper.outcome == 'success'
+        if: steps.run.outcome == 'success'
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'actions@github.com'
