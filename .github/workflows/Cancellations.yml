@@ -6,7 +6,7 @@ on:
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
-  scrape:
+  Sync:
     runs-on: ubuntu-latest
 
     steps:
@@ -47,8 +47,8 @@ jobs:
         run: |
           if [ "$exit_code" -eq 0 ] || [ "$exit_code" -eq 1 ]; then
             # Success for exit code 0 or 1
-            curl -m 10 --retry 5 -o /dev/null -s "https://cronitor.link/p/6c06f2554fc841ccb0b0928481a03ed1/cancellation-scraper/complete?msg=Success%20with%20exit%20code%20$exit_code"
+            curl -m 10 --retry 5 -o /dev/null -s "https://cronitor.link/p/6c06f2554fc841ccb0b0928481a03ed1/cancellation/complete?msg=Success%20with%20exit%20code%20$exit_code"
           else
             # Failure for any other exit code
-            curl -m 10 --retry 5 -o /dev/null -s "https://cronitor.link/p/6c06f2554fc841ccb0b0928481a03ed1/cancellation-scraper/fail?msg=Failure%20with%20exit%20code%20$exit_code"
+            curl -m 10 --retry 5 -o /dev/null -s "https://cronitor.link/p/6c06f2554fc841ccb0b0928481a03ed1/cancellation/fail?msg=Failure%20with%20exit%20code%20$exit_code"
           fi
