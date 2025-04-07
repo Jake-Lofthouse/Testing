@@ -17,7 +17,7 @@ jobs:
       - name: Notify Cronitor start
         run: curl -m 10 --retry 5 -o /dev/null -s "https://cronitor.link/p/6c06f2554fc841ccb0b0928481a03ed1/fBAIJ5/run"
 
-      - name: Fetch events.json from developer source
+      - name: Sync
         run: |
           curl -sSL "https://images.parkrun.com/events.json" -o events.json
           jq '.' events.json > events1.json
