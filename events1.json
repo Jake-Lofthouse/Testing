@@ -14599,8 +14599,8 @@
         "geometry": {
           "type": "Point",
           "coordinates": [
-            30.890567,
-            -30.049276
+            30.890231,
+            -30.050668
           ]
         },
         "properties": {
@@ -53434,6 +53434,26 @@
         }
       },
       {
+        "id": 3633,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            0.291723,
+            52.375707
+          ]
+        },
+        "properties": {
+          "eventname": "bensyardely",
+          "EventLongName": "Ben’s Yard parkrun, Ely",
+          "EventShortName": "Ben’s Yard, Ely",
+          "LocalisedEventLongName": null,
+          "countrycode": 97,
+          "seriesid": 1,
+          "EventLocation": "Ben’s Yard, Ely"
+        }
+      },
+      {
         "id": 3634,
         "type": "Feature",
         "geometry": {
@@ -53631,6 +53651,106 @@
           "countrycode": 67,
           "seriesid": 1,
           "EventLocation": "Berger Stadion"
+        }
+      },
+      {
+        "id": 3647,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            8.954318,
+            56.156235
+          ]
+        },
+        "properties": {
+          "eventname": "fuglsangso",
+          "EventLongName": "Fuglsang Sø parkrun",
+          "EventShortName": "Fuglsang Sø",
+          "LocalisedEventLongName": null,
+          "countrycode": 23,
+          "seriesid": 1,
+          "EventLocation": "Fuglsang Sø"
+        }
+      },
+      {
+        "id": 3648,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -74.173977,
+            40.775247
+          ]
+        },
+        "properties": {
+          "eventname": "branchbrookpark",
+          "EventLongName": "Branch Brook Park parkrun",
+          "EventShortName": "Branch Brook Park",
+          "LocalisedEventLongName": null,
+          "countrycode": 98,
+          "seriesid": 1,
+          "EventLocation": "Branch Brook Park"
+        }
+      },
+      {
+        "id": 3649,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            171.248407,
+            -44.391483
+          ]
+        },
+        "properties": {
+          "eventname": "carolinebay",
+          "EventLongName": "Caroline Bay parkrun",
+          "EventShortName": "Caroline Bay",
+          "LocalisedEventLongName": null,
+          "countrycode": 65,
+          "seriesid": 1,
+          "EventLocation": "Caroline Bay"
+        }
+      },
+      {
+        "id": 3650,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            27.09857,
+            -25.345457
+          ]
+        },
+        "properties": {
+          "eventname": "suncity",
+          "EventLongName": "Sun City parkrun",
+          "EventShortName": "Sun City",
+          "LocalisedEventLongName": null,
+          "countrycode": 85,
+          "seriesid": 1,
+          "EventLocation": "Sun City"
+        }
+      },
+      {
+        "id": 3651,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            1.493585,
+            52.618807
+          ]
+        },
+        "properties": {
+          "eventname": "lingwoodvillagehall-juniors",
+          "EventLongName": "Lingwood Village Hall junior parkrun",
+          "EventShortName": "Lingwood Village Hall juniors",
+          "LocalisedEventLongName": null,
+          "countrycode": 97,
+          "seriesid": 2,
+          "EventLocation": "Lingwood Village Hall juniors"
         }
       }
     ]
