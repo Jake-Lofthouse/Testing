@@ -80,6 +80,11 @@
         "date": "2025-04-12"
     },
     {
+        "name": "Inis Me\u00e1in parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-04-12"
+    },
+    {
         "name": "Ipswich parkrun",
         "reason": "Permission issue",
         "date": "2025-04-12"
@@ -140,6 +145,11 @@
         "date": "2025-04-12"
     },
     {
+        "name": "Nobles parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-04-12"
+    },
+    {
         "name": "PE Hobie Beach parkrun",
         "reason": "Venue unavailable",
         "date": "2025-04-12"
@@ -196,6 +206,11 @@
     },
     {
         "name": "Southern Path parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-12"
+    },
+    {
+        "name": "The Reeds parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-12"
     },
