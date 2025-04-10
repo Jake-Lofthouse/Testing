@@ -150,8 +150,18 @@
         "date": "2025-04-12"
     },
     {
+        "name": "Rockhampton parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-12"
+    },
+    {
         "name": "Sheriff Creek Wildlife Sanctuary parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-04-12"
+    },
+    {
+        "name": "Shongweni parkrun",
+        "reason": "Venue unavailable",
         "date": "2025-04-12"
     },
     {
