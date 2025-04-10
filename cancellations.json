@@ -55,6 +55,11 @@
         "date": "2025-04-12"
     },
     {
+        "name": "Goffert parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-12"
+    },
+    {
         "name": "Harrismith parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-12"
@@ -72,6 +77,11 @@
     {
         "name": "Ho\u00ebrskool Ben Viljoen parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-04-12"
+    },
+    {
+        "name": "Ipswich parkrun",
+        "reason": "Permission issue",
         "date": "2025-04-12"
     },
     {
@@ -147,6 +157,11 @@
     {
         "name": "Rinko Park parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-04-12"
+    },
+    {
+        "name": "Riviera on Vaal parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-04-12"
     },
     {
