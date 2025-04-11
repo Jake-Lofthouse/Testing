@@ -10,6 +10,11 @@
         "date": "2025-04-12"
     },
     {
+        "name": "Camperdown parkrun, Dundee",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-12"
+    },
+    {
         "name": "Castleblayney parkrun",
         "reason": "Venue unavailable",
         "date": "2025-04-12"
@@ -135,6 +140,11 @@
         "date": "2025-04-12"
     },
     {
+        "name": "Larne parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-04-12"
+    },
+    {
         "name": "Lightning Ridge parkrun",
         "reason": "Permission issue",
         "date": "2025-04-12"
@@ -232,6 +242,11 @@
     {
         "name": "Shongweni parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-04-12"
+    },
+    {
+        "name": "Silveroaks parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-04-12"
     },
     {
