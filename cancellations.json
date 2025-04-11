@@ -235,6 +235,11 @@
         "date": "2025-04-12"
     },
     {
+        "name": "Terra Nova parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-12"
+    },
+    {
         "name": "The Reeds parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-12"
@@ -275,6 +280,11 @@
         "date": "2025-04-12"
     },
     {
+        "name": "Zastron Commons parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-12"
+    },
+    {
         "name": "Cambourne junior parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-04-13"
@@ -302,6 +312,11 @@
     {
         "name": "Nonsuch junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-04-13"
+    },
+    {
+        "name": "Norfolk Road Playing Fields junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-04-13"
     },
     {
