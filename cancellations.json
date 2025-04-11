@@ -130,6 +130,11 @@
         "date": "2025-04-12"
     },
     {
+        "name": "Kroonstad parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-12"
+    },
+    {
         "name": "Lightning Ridge parkrun",
         "reason": "Permission issue",
         "date": "2025-04-12"
