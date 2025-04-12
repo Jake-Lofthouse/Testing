@@ -190,6 +190,11 @@
         "date": "2025-04-12"
     },
     {
+        "name": "New York Central Fitness Trail parkrun",
+        "reason": "Weather",
+        "date": "2025-04-12"
+    },
+    {
         "name": "Nobles parkrun",
         "reason": "Venue unavailable",
         "date": "2025-04-12"
@@ -212,6 +217,11 @@
     {
         "name": "Pittsworth parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-04-12"
+    },
+    {
+        "name": "Pocket parkrun",
+        "reason": "AED unavailable",
         "date": "2025-04-12"
     },
     {
