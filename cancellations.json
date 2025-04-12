@@ -345,8 +345,18 @@
         "date": "2025-04-13"
     },
     {
+        "name": "Des Connor Park junior parkrun",
+        "reason": "Weather",
+        "date": "2025-04-13"
+    },
+    {
         "name": "Gang Warily junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-04-13"
+    },
+    {
+        "name": "Great Cornard junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-04-13"
     },
     {
@@ -371,6 +381,11 @@
     },
     {
         "name": "The Mystery junior parkrun, Wavertree",
+        "reason": "Shortage of volunteers",
+        "date": "2025-04-13"
+    },
+    {
+        "name": "Whaley Bridge junior parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-04-13"
     },
