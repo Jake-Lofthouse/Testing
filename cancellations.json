@@ -5,6 +5,11 @@
         "date": "2025-04-12"
     },
     {
+        "name": "Aspen parkrun",
+        "reason": "Weather",
+        "date": "2025-04-12"
+    },
+    {
         "name": "Bundoran Promenade parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-04-12"
@@ -360,12 +365,27 @@
         "date": "2025-04-13"
     },
     {
+        "name": "Dumfries junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-04-13"
+    },
+    {
         "name": "Gang Warily junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-04-13"
     },
     {
+        "name": "Gnoll junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-04-13"
+    },
+    {
         "name": "Great Cornard junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-04-13"
+    },
+    {
+        "name": "Haulbowline Island junior parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-04-13"
     },
