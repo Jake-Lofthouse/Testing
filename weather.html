@@ -28,58 +28,71 @@
             background-repeat: no-repeat;
             transition: background 0.5s ease;
             user-select: none;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: stretch;
         }
 
-        /* Fluid container */
+        /* Full-stretch container */
         .container {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
+            flex: 1;
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.4);
             backdrop-filter: blur(4px);
             -webkit-backdrop-filter: blur(4px);
-            padding: min(2vmin, 0.5rem);
+            padding: 2%;
             text-align: center;
         }
 
-        /* Fluid typography using the clamp function */
+        /* Header section */
+        .header {
+            width: 100%;
+            flex: 0 0 auto;
+            padding: 1% 0;
+        }
+
         h1 {
-            font-size: clamp(0.7rem, 5vmin, 1.2rem);
+            font-size: min(5vw, 5vh, 1.2rem);
             font-weight: 600;
-            margin-bottom: clamp(0.1rem, 1vmin, 0.5rem);
             width: 100%;
             text-align: center;
             line-height: 1.2;
         }
 
+        /* Main content section - takes most of the space */
         #weather {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             width: 100%;
+            flex: 1 1 auto;
+            padding: 2% 0;
         }
 
         .weather-icon {
-            font-size: clamp(1rem, 8vmin, 2rem);
+            font-size: min(15vw, 15vh, 4rem);
             line-height: 1;
-            margin-bottom: clamp(0.1rem, 1vmin, 0.3rem);
+            margin-bottom: 2%;
         }
 
         .temp {
-            font-size: clamp(0.9rem, 7vmin, 1.5rem);
+            font-size: min(10vw, 10vh, 2.5rem);
             font-weight: 600;
-            margin-bottom: clamp(0.1rem, 1vmin, 0.3rem);
+            margin-bottom: 2%;
             line-height: 1.2;
         }
 
         .description {
-            font-size: clamp(0.6rem, 4vmin, 1rem);
+            font-size: min(5vw, 5vh, 1.2rem);
             text-transform: capitalize;
-            margin-bottom: clamp(0.1rem, 1vmin, 0.3rem);
+            margin-bottom: 2%;
             line-height: 1.2;
             max-width: 100%;
             overflow: hidden;
@@ -87,21 +100,28 @@
             white-space: nowrap;
         }
 
+        /* Footer section */
+        .footer {
+            width: 100%;
+            flex: 0 0 auto;
+            padding: 1% 0;
+        }
+
         .date-info {
-            font-size: clamp(0.5rem, 3.5vmin, 0.9rem);
+            font-size: min(4vw, 4vh, 1rem);
             opacity: 0.9;
             line-height: 1.2;
         }
 
-        /* Simple loading spinner that scales with container */
+        /* Responsive loading spinner */
         .loading {
-            width: clamp(1rem, 8vmin, 2rem);
-            height: clamp(1rem, 8vmin, 2rem);
-            border: clamp(2px, 0.5vmin, 4px) solid rgba(255, 255, 255, 0.3);
+            width: min(10vw, 10vh, 3rem);
+            height: min(10vw, 10vh, 3rem);
+            border: min(0.5vw, 0.5vh, 4px) solid rgba(255, 255, 255, 0.3);
             border-radius: 50%;
             border-top-color: #fff;
             animation: spin 1s ease-in-out infinite;
-            margin: clamp(0.3rem, 2vmin, 0.8rem) auto;
+            margin: 0 auto;
         }
         
         @keyframes spin {
@@ -114,22 +134,19 @@
                 display: none; /* Hide description on extremely small screens */
             }
             
-            .date-info {
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                max-width: 100%;
+            .container {
+                padding: 1%;
             }
         }
 
         /* For extremely tiny containers, show only the most essential info */
         @media (max-width: 60px), (max-height: 60px) {
-            h1 {
-                display: none; /* Hide title on extremely tiny screens */
+            .header, .footer {
+                display: none; /* Hide header and footer on extremely tiny screens */
             }
             
-            .date-info {
-                display: none; /* Hide date on extremely tiny screens */
+            #weather {
+                justify-content: center;
             }
         }
     </style>
@@ -137,9 +154,16 @@
 <body>
 
     <div class="container">
-        <h1>Event Forecast</h1>
+        <div class="header">
+            <h1>Event Forecast</h1>
+        </div>
+        
         <div id="weather">
             <div class="loading"></div>
+        </div>
+        
+        <div class="footer" id="date-container">
+            <!-- Date will be inserted here -->
         </div>
     </div>
 
@@ -151,35 +175,49 @@
         document.addEventListener('selectstart', e => e.preventDefault());
         document.addEventListener('touchstart', e => e.preventDefault(), { passive: false });
 
-        // Get latitude and longitude from URL parameters
+        // Get parameters from URL
         const params = new URLSearchParams(window.location.search);
         const latitude = params.get('lat') || 51.5074; // Default to London
         const longitude = params.get('lon') || -0.1278; // Default to London
+        const isJunior = params.has('junior'); // Check if junior parameter exists
 
-        // Function to get the upcoming Saturday's date at 9 AM (in UTC)
-        function getNextSaturdayAt9AM() {
+        // Function to get the upcoming Saturday or Sunday at 9 AM (in local time based on coordinates)
+        function getNextWeekendDay() {
             const today = new Date();
             const dayOfWeek = today.getDay();
-            const daysUntilSaturday = (6 - dayOfWeek + 7) % 7;
-            const nextSaturday = new Date(today.getTime() + daysUntilSaturday * 24 * 60 * 60 * 1000);
-            nextSaturday.setUTCHours(9, 0, 0, 0);
-            return nextSaturday;
+            
+            // Determine target day (0 = Sunday, 6 = Saturday)
+            const targetDay = isJunior ? 0 : 6; // Sunday for junior, Saturday otherwise
+            
+            // Calculate days until target day
+            let daysUntilTarget = (targetDay - dayOfWeek + 7) % 7;
+            if (daysUntilTarget === 0) {
+                // If today is the target day, get next week's day
+                daysUntilTarget = 7;
+            }
+            
+            // Create date for the target day
+            const targetDate = new Date(today.getTime() + daysUntilTarget * 24 * 60 * 60 * 1000);
+            targetDate.setHours(9, 0, 0, 0); // Set to 9 AM local time
+            
+            return targetDate;
         }
 
-        // Format date to display (shortened for compact display)
+        // Format date to display with local time based on coordinates
         function formatDate(date) {
             // For very small containers, we want the shortest possible format
             const width = window.innerWidth || document.documentElement.clientWidth;
             const height = window.innerHeight || document.documentElement.clientHeight;
             
+            const dayName = isJunior ? "Sun" : "Sat";
+            
             if (width < 100 || height < 100) {
                 // Ultra compact format for tiny containers
-                const options = { weekday: 'short' };
-                return date.toLocaleDateString('en-US', options);
+                return dayName;
             } else {
                 // Standard compact format
-                const options = { weekday: 'short', day: 'numeric' };
-                return `${date.toLocaleDateString('en-US', options)} 9AM`;
+                const day = date.getDate();
+                return `${dayName} ${day}, 9AM`;
             }
         }
 
@@ -200,28 +238,37 @@
             return text.substring(0, maxLength - 1) + '…';
         }
 
-        async function getWeatherForSaturday() {
-            const nextSaturdayAt9AM = getNextSaturdayAt9AM();
+        async function getWeatherForWeekend() {
+            const targetDate = getNextWeekendDay();
             const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
             
             try {
                 const response = await fetch(url);
                 const data = await response.json();
 
-                // Find the closest forecast to 9 AM UTC on the upcoming Saturday
-                const forecast = data.list.find(item => {
-                    const forecastDate = new Date(item.dt * 1000);
-                    return forecastDate.getUTCDate() === nextSaturdayAt9AM.getUTCDate() &&
-                        (forecastDate.getUTCHours() === 9);
-                });
+                // Find the closest forecast to 9 AM on the target day
+                // Convert target date to timestamp for comparison
+                const targetTimestamp = Math.floor(targetDate.getTime() / 1000);
+                
+                // Find forecast with closest timestamp
+                let closestForecast = null;
+                let closestDiff = Infinity;
+                
+                for (const forecast of data.list) {
+                    const diff = Math.abs(forecast.dt - targetTimestamp);
+                    if (diff < closestDiff) {
+                        closestDiff = diff;
+                        closestForecast = forecast;
+                    }
+                }
 
                 // Update the HTML with the weather data
-                if (forecast) {
-                    const temp = Math.round(forecast.main.temp);
-                    const weatherDescription = forecast.weather[0].description;
+                if (closestForecast) {
+                    const temp = Math.round(closestForecast.main.temp);
+                    const weatherDescription = closestForecast.weather[0].description;
                     const weatherElement = document.getElementById('weather');
                     const weatherIcon = getWeatherIcon(weatherDescription);
-                    const formattedDate = formatDate(nextSaturdayAt9AM);
+                    const formattedDate = formatDate(targetDate);
                     
                     // Get container dimensions to adapt content
                     const width = window.innerWidth || document.documentElement.clientWidth;
@@ -236,9 +283,10 @@
                         html += `<div class="description">${truncateText(weatherDescription, 20)}</div>`;
                     }
                     
-                    html += `<div class="date-info">${formattedDate}</div>`;
-                    
                     weatherElement.innerHTML = html;
+                    
+                    // Update date in footer
+                    document.getElementById('date-container').innerHTML = `<div class="date-info">${formattedDate}</div>`;
 
                     // Change background based on weather condition
                     const body = document.body;
@@ -257,25 +305,26 @@
                     document.getElementById('weather').innerHTML = `
                         <div class="weather-icon">📅</div>
                         <div class="temp">--°C</div>
-                        <div class="date-info">${formatDate(nextSaturdayAt9AM)}</div>
                     `;
+                    document.getElementById('date-container').innerHTML = `<div class="date-info">${formatDate(targetDate)}</div>`;
                 }
             } catch (error) {
                 document.getElementById('weather').innerHTML = `
                     <div class="weather-icon">⚠️</div>
                     <div class="temp">--°C</div>
                 `;
+                document.getElementById('date-container').innerHTML = '';
             }
         }
 
         // Call the function when the page loads
-        getWeatherForSaturday();
+        getWeatherForWeekend();
         
         // Update content on resize to adapt to container changes
         window.addEventListener('resize', function() {
             // Only re-render if we already have weather data
             if (!document.querySelector('.loading')) {
-                getWeatherForSaturday();
+                getWeatherForWeekend();
             }
         });
     </script>
