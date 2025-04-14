@@ -7,15 +7,18 @@
     <title>Weather for Event</title>
     
     <style>
-        /* Use next/font approach instead of @font-face for better optimization */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
-        /* Ensure html and body take full height */
-        html, body {
-            height: 100%;
+        /* Reset and base styles */
+        * {
             margin: 0;
             padding: 0;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
         }
 
         body {
@@ -24,15 +27,10 @@
             background-position: center;
             background-repeat: no-repeat;
             transition: background 0.5s ease;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
             user-select: none;
         }
 
-        /* Glass-like container for better visual appeal */
+        /* Fluid container */
         .container {
             display: flex;
             flex-direction: column;
@@ -40,156 +38,98 @@
             align-items: center;
             width: 100%;
             height: 100%;
-            box-sizing: border-box;
             background-color: rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-        }
-
-        .weather-card {
-            padding: 1.5rem;
-            border-radius: 16px;
-            background-color: rgba(255, 255, 255, 0.15);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            padding: min(2vmin, 0.5rem);
             text-align: center;
-            max-width: 90%;
-            width: 300px;
         }
 
+        /* Fluid typography using the clamp function */
         h1 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin: 0 0 1rem 0;
-            color: #fff;
+            font-size: clamp(0.7rem, 5vmin, 1.2rem);
+            font-weight: 600;
+            margin-bottom: clamp(0.1rem, 1vmin, 0.5rem);
+            width: 100%;
             text-align: center;
-            letter-spacing: -0.5px;
+            line-height: 1.2;
         }
 
         #weather {
-            font-size: 1.2rem;
-            margin: 0.5rem 0;
-            color: #fff;
-            text-align: center;
-            line-height: 1.5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
         }
 
         .weather-icon {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            font-size: clamp(1rem, 8vmin, 2rem);
+            line-height: 1;
+            margin-bottom: clamp(0.1rem, 1vmin, 0.3rem);
         }
 
         .temp {
-            font-size: 2rem;
+            font-size: clamp(0.9rem, 7vmin, 1.5rem);
             font-weight: 600;
-            margin: 0.5rem 0;
+            margin-bottom: clamp(0.1rem, 1vmin, 0.3rem);
+            line-height: 1.2;
         }
 
         .description {
+            font-size: clamp(0.6rem, 4vmin, 1rem);
             text-transform: capitalize;
-            font-weight: 500;
+            margin-bottom: clamp(0.1rem, 1vmin, 0.3rem);
+            line-height: 1.2;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
         .date-info {
-            margin-top: 1rem;
-            font-size: 0.9rem;
+            font-size: clamp(0.5rem, 3.5vmin, 0.9rem);
             opacity: 0.9;
+            line-height: 1.2;
         }
 
-        /* Loading animation */
+        /* Simple loading spinner that scales with container */
         .loading {
-            display: inline-block;
-            position: relative;
-            width: 80px;
-            height: 80px;
-        }
-        
-        .loading div {
-            position: absolute;
-            top: 33px;
-            width: 13px;
-            height: 13px;
+            width: clamp(1rem, 8vmin, 2rem);
+            height: clamp(1rem, 8vmin, 2rem);
+            border: clamp(2px, 0.5vmin, 4px) solid rgba(255, 255, 255, 0.3);
             border-radius: 50%;
-            background: #fff;
-            animation-timing-function: cubic-bezier(0, 1, 1, 0);
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+            margin: clamp(0.3rem, 2vmin, 0.8rem) auto;
         }
         
-        .loading div:nth-child(1) {
-            left: 8px;
-            animation: loading1 0.6s infinite;
-        }
-        
-        .loading div:nth-child(2) {
-            left: 8px;
-            animation: loading2 0.6s infinite;
-        }
-        
-        .loading div:nth-child(3) {
-            left: 32px;
-            animation: loading2 0.6s infinite;
-        }
-        
-        .loading div:nth-child(4) {
-            left: 56px;
-            animation: loading3 0.6s infinite;
-        }
-        
-        @keyframes loading1 {
-            0% { transform: scale(0); }
-            100% { transform: scale(1); }
-        }
-        
-        @keyframes loading3 {
-            0% { transform: scale(1); }
-            100% { transform: scale(0); }
-        }
-        
-        @keyframes loading2 {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(24px, 0); }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
         }
 
-        /* Media queries for responsive design */
-        @media (max-width: 400px) {
-            .weather-card {
-                width: 85%;
-                padding: 1rem;
+        /* Ensure content fits in extremely small containers */
+        @media (max-width: 100px), (max-height: 100px) {
+            .description {
+                display: none; /* Hide description on extremely small screens */
             }
             
-            h1 {
-                font-size: 1.5rem;
-            }
-            
-            .temp {
-                font-size: 1.8rem;
+            .date-info {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 100%;
             }
         }
 
-        @media (max-width: 300px) {
+        /* For extremely tiny containers, show only the most essential info */
+        @media (max-width: 60px), (max-height: 60px) {
             h1 {
-                font-size: 1.3rem;
+                display: none; /* Hide title on extremely tiny screens */
             }
             
-            #weather {
-                font-size: 1rem;
-            }
-            
-            .temp {
-                font-size: 1.5rem;
-            }
-        }
-
-        @media (max-width: 150px), (max-height: 150px) {
-            .weather-card {
-                padding: 0.5rem;
-            }
-            
-            h1 {
-                font-size: 1.1rem;
-                margin-bottom: 0.5rem;
-            }
-            
-            .weather-icon {
-                font-size: 1.5rem;
+            .date-info {
+                display: none; /* Hide date on extremely tiny screens */
             }
         }
     </style>
@@ -197,13 +137,9 @@
 <body>
 
     <div class="container">
-        <div class="weather-card">
-            <h1>Event Forecast</h1>
-            <div id="weather">
-                <div class="loading">
-                    <div></div><div></div><div></div><div></div>
-                </div>
-            </div>
+        <h1>Event Forecast</h1>
+        <div id="weather">
+            <div class="loading"></div>
         </div>
     </div>
 
@@ -211,19 +147,9 @@
         const apiKey = "363c7db4a209fe68a8f4cf01c380c328";
 
         // Disable right-click, text selection, and touch-hold actions
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-        });
-
-        document.addEventListener('selectstart', function(e) {
-            e.preventDefault();
-        });
-
-        document.addEventListener('touchstart', function(e) {
-            if (e.target.tagName !== 'A') {
-                e.preventDefault();
-            }
-        }, { passive: false });
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('selectstart', e => e.preventDefault());
+        document.addEventListener('touchstart', e => e.preventDefault(), { passive: false });
 
         // Get latitude and longitude from URL parameters
         const params = new URLSearchParams(window.location.search);
@@ -234,35 +160,44 @@
         function getNextSaturdayAt9AM() {
             const today = new Date();
             const dayOfWeek = today.getDay();
-            const daysUntilSaturday = (6 - dayOfWeek + 7) % 7; // Calculate how many days until the next Saturday
-            const nextSaturday = new Date(today.getTime() + daysUntilSaturday * 24 * 60 * 60 * 1000); // Add the days until next Saturday
-            nextSaturday.setUTCHours(9, 0, 0, 0); // Set time to 9 AM UTC
+            const daysUntilSaturday = (6 - dayOfWeek + 7) % 7;
+            const nextSaturday = new Date(today.getTime() + daysUntilSaturday * 24 * 60 * 60 * 1000);
+            nextSaturday.setUTCHours(9, 0, 0, 0);
             return nextSaturday;
         }
 
-        // Format date to display
+        // Format date to display (shortened for compact display)
         function formatDate(date) {
-            const options = { weekday: 'long', month: 'short', day: 'numeric' };
-            return date.toLocaleDateString('en-US', options);
+            // For very small containers, we want the shortest possible format
+            const width = window.innerWidth || document.documentElement.clientWidth;
+            const height = window.innerHeight || document.documentElement.clientHeight;
+            
+            if (width < 100 || height < 100) {
+                // Ultra compact format for tiny containers
+                const options = { weekday: 'short' };
+                return date.toLocaleDateString('en-US', options);
+            } else {
+                // Standard compact format
+                const options = { weekday: 'short', day: 'numeric' };
+                return `${date.toLocaleDateString('en-US', options)} 9AM`;
+            }
         }
 
         // Get weather icon based on description
         function getWeatherIcon(description) {
-            if (description.includes("clear")) {
-                return "☀️";
-            } else if (description.includes("cloud")) {
-                return "☁️";
-            } else if (description.includes("rain")) {
-                return "🌧️";
-            } else if (description.includes("snow")) {
-                return "❄️";
-            } else if (description.includes("thunder")) {
-                return "⛈️";
-            } else if (description.includes("mist") || description.includes("fog")) {
-                return "🌫️";
-            } else {
-                return "🌤️";
-            }
+            if (description.includes("clear")) return "☀️";
+            if (description.includes("cloud")) return "☁️";
+            if (description.includes("rain")) return "🌧️";
+            if (description.includes("snow")) return "❄️";
+            if (description.includes("thunder")) return "⛈️";
+            if (description.includes("mist") || description.includes("fog")) return "🌫️";
+            return "🌤️";
+        }
+
+        // Function to truncate text if needed
+        function truncateText(text, maxLength) {
+            if (text.length <= maxLength) return text;
+            return text.substring(0, maxLength - 1) + '…';
         }
 
         async function getWeatherForSaturday() {
@@ -275,9 +210,9 @@
 
                 // Find the closest forecast to 9 AM UTC on the upcoming Saturday
                 const forecast = data.list.find(item => {
-                    const forecastDate = new Date(item.dt * 1000); // Convert UNIX timestamp to date
+                    const forecastDate = new Date(item.dt * 1000);
                     return forecastDate.getUTCDate() === nextSaturdayAt9AM.getUTCDate() &&
-                        (forecastDate.getUTCHours() === 9); // Look for forecast at 9 AM
+                        (forecastDate.getUTCHours() === 9);
                 });
 
                 // Update the HTML with the weather data
@@ -287,45 +222,62 @@
                     const weatherElement = document.getElementById('weather');
                     const weatherIcon = getWeatherIcon(weatherDescription);
                     const formattedDate = formatDate(nextSaturdayAt9AM);
-
-                    weatherElement.innerHTML = `
-                        <div class="weather-icon">${weatherIcon}</div>
-                        <div class="temp">${temp}°C</div>
-                        <div class="description">${weatherDescription}</div>
-                        <div class="date-info">${formattedDate}, 9:00 AM</div>
-                    `;
+                    
+                    // Get container dimensions to adapt content
+                    const width = window.innerWidth || document.documentElement.clientWidth;
+                    const height = window.innerHeight || document.documentElement.clientHeight;
+                    
+                    // Adapt content based on container size
+                    let html = `<div class="weather-icon">${weatherIcon}</div>
+                               <div class="temp">${temp}°C</div>`;
+                    
+                    // Only add description if we have enough space
+                    if (width > 100 && height > 100) {
+                        html += `<div class="description">${truncateText(weatherDescription, 20)}</div>`;
+                    }
+                    
+                    html += `<div class="date-info">${formattedDate}</div>`;
+                    
+                    weatherElement.innerHTML = html;
 
                     // Change background based on weather condition
                     const body = document.body;
                     if (weatherDescription.includes("clear")) {
-                        body.style.backgroundImage = 'url("https://media.istockphoto.com/id/1007768414/photo/blue-sky-with-bright-sun-and-clouds.jpg?s=612x612&w=0&k=20&c=MGd2-v42lNF7Ie6TtsYoKnohdCfOPFSPQt5XOz4uOy4=")'; // Clear sky background
+                        body.style.backgroundImage = 'url("https://media.istockphoto.com/id/1007768414/photo/blue-sky-with-bright-sun-and-clouds.jpg?s=612x612&w=0&k=20&c=MGd2-v42lNF7Ie6TtsYoKnohdCfOPFSPQt5XOz4uOy4=")';
                     } else if (weatherDescription.includes("cloud")) {
-                        body.style.backgroundImage = 'url("https://s.err.ee/photo/crop/2024/07/09/2467729h04e7t2.jpg")'; // Cloudy background
+                        body.style.backgroundImage = 'url("https://s.err.ee/photo/crop/2024/07/09/2467729h04e7t2.jpg")';
                     } else if (weatherDescription.includes("rain")) {
-                        body.style.backgroundImage = 'url("https://img.freepik.com/free-photo/weather-effects-composition_23-2149853295.jpg")'; // Rainy background
+                        body.style.backgroundImage = 'url("https://img.freepik.com/free-photo/weather-effects-composition_23-2149853295.jpg")';
                     } else if (weatherDescription.includes("snow")) {
-                        body.style.backgroundImage = 'url("https://wjla.com/resources/media/be94f27f-c70a-4e6c-b3cc-9a448da929b8-large16x9_SnowfallsinEllicottCityVeronicaJohnson.JPG?1637506983305")'; // Snowy background
+                        body.style.backgroundImage = 'url("https://wjla.com/resources/media/be94f27f-c70a-4e6c-b3cc-9a448da929b8-large16x9_SnowfallsinEllicottCityVeronicaJohnson.JPG?1637506983305")';
                     } else {
-                        body.style.backgroundColor = '#3b5998'; // Default background if no matching condition
+                        body.style.backgroundColor = '#3b5998';
                     }
                 } else {
                     document.getElementById('weather').innerHTML = `
                         <div class="weather-icon">📅</div>
-                        <div class="description">Weather coming from Monday</div>
+                        <div class="temp">--°C</div>
                         <div class="date-info">${formatDate(nextSaturdayAt9AM)}</div>
                     `;
                 }
             } catch (error) {
                 document.getElementById('weather').innerHTML = `
                     <div class="weather-icon">⚠️</div>
-                    <div class="description">Unable to load weather</div>
-                    <div class="date-info">Please try again later</div>
+                    <div class="temp">--°C</div>
                 `;
             }
         }
 
         // Call the function when the page loads
         getWeatherForSaturday();
+        
+        // Update content on resize to adapt to container changes
+        window.addEventListener('resize', function() {
+            // Only re-render if we already have weather data
+            if (!document.querySelector('.loading')) {
+                getWeatherForSaturday();
+            }
+        });
     </script>
 
 </body>
