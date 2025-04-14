@@ -46,7 +46,7 @@
             background-color: rgba(0, 0, 0, 0.4);
             backdrop-filter: blur(4px);
             -webkit-backdrop-filter: blur(4px);
-            padding: 2%;
+            padding: 5%;
             text-align: center;
         }
 
@@ -54,11 +54,12 @@
         .header {
             width: 100%;
             flex: 0 0 auto;
-            padding: 1% 0;
+            padding: 2% 0;
         }
 
         h1 {
-            font-size: min(5vw, 5vh, 1.2rem);
+            /* Minimum size to ensure readability */
+            font-size: max(16px, min(5vw, 5vh, 24px));
             font-weight: 600;
             width: 100%;
             text-align: center;
@@ -73,26 +74,29 @@
             justify-content: center;
             width: 100%;
             flex: 1 1 auto;
-            padding: 2% 0;
+            padding: 5% 0;
         }
 
         .weather-icon {
-            font-size: min(15vw, 15vh, 4rem);
+            /* Minimum size to ensure visibility */
+            font-size: max(32px, min(15vw, 15vh, 64px));
             line-height: 1;
-            margin-bottom: 2%;
+            margin-bottom: 5%;
         }
 
         .temp {
-            font-size: min(10vw, 10vh, 2.5rem);
+            /* Minimum size to ensure readability */
+            font-size: max(24px, min(10vw, 10vh, 48px));
             font-weight: 600;
-            margin-bottom: 2%;
+            margin-bottom: 5%;
             line-height: 1.2;
         }
 
         .description {
-            font-size: min(5vw, 5vh, 1.2rem);
+            /* Minimum size to ensure readability */
+            font-size: max(14px, min(5vw, 5vh, 20px));
             text-transform: capitalize;
-            margin-bottom: 2%;
+            margin-bottom: 5%;
             line-height: 1.2;
             max-width: 100%;
             overflow: hidden;
@@ -104,20 +108,21 @@
         .footer {
             width: 100%;
             flex: 0 0 auto;
-            padding: 1% 0;
+            padding: 2% 0;
         }
 
         .date-info {
-            font-size: min(4vw, 4vh, 1rem);
+            /* Minimum size to ensure readability */
+            font-size: max(12px, min(4vw, 4vh, 18px));
             opacity: 0.9;
             line-height: 1.2;
         }
 
         /* Responsive loading spinner */
         .loading {
-            width: min(10vw, 10vh, 3rem);
-            height: min(10vw, 10vh, 3rem);
-            border: min(0.5vw, 0.5vh, 4px) solid rgba(255, 255, 255, 0.3);
+            width: max(24px, min(10vw, 10vh, 48px));
+            height: max(24px, min(10vw, 10vh, 48px));
+            border: max(2px, min(0.5vw, 0.5vh, 4px)) solid rgba(255, 255, 255, 0.3);
             border-radius: 50%;
             border-top-color: #fff;
             animation: spin 1s ease-in-out infinite;
@@ -128,19 +133,31 @@
             to { transform: rotate(360deg); }
         }
 
-        /* Ensure content fits in extremely small containers */
-        @media (max-width: 100px), (max-height: 100px) {
-            .description {
-                display: none; /* Hide description on extremely small screens */
+        /* For extremely tiny containers, adjust layout but keep text readable */
+        @media (max-width: 100px), (max-height: 150px) {
+            .container {
+                padding: 2%;
             }
             
-            .container {
-                padding: 1%;
+            #weather {
+                padding: 2% 0;
+            }
+            
+            .weather-icon {
+                margin-bottom: 2%;
+            }
+            
+            .temp {
+                margin-bottom: 2%;
+            }
+            
+            .description {
+                margin-bottom: 2%;
             }
         }
 
         /* For extremely tiny containers, show only the most essential info */
-        @media (max-width: 60px), (max-height: 60px) {
+        @media (max-width: 60px), (max-height: 100px) {
             .header, .footer {
                 display: none; /* Hide header and footer on extremely tiny screens */
             }
@@ -210,13 +227,13 @@
             const height = window.innerHeight || document.documentElement.clientHeight;
             
             const dayName = isJunior ? "Sun" : "Sat";
+            const day = date.getDate();
             
             if (width < 100 || height < 100) {
                 // Ultra compact format for tiny containers
                 return dayName;
             } else {
                 // Standard compact format
-                const day = date.getDate();
                 return `${dayName} ${day}, 9AM`;
             }
         }
@@ -274,12 +291,12 @@
                     const width = window.innerWidth || document.documentElement.clientWidth;
                     const height = window.innerHeight || document.documentElement.clientHeight;
                     
-                    // Adapt content based on container size
+                    // Always show icon and temperature
                     let html = `<div class="weather-icon">${weatherIcon}</div>
                                <div class="temp">${temp}°C</div>`;
                     
-                    // Only add description if we have enough space
-                    if (width > 100 && height > 100) {
+                    // Always show description unless extremely small
+                    if (width > 60 && height > 100) {
                         html += `<div class="description">${truncateText(weatherDescription, 20)}</div>`;
                     }
                     
