@@ -26,7 +26,7 @@
     window.cronitor = window.cronitor || function() { (window.cronitor.q = window.cronitor.q || []).push(arguments); };
     cronitor('config', { clientKey: '7d03d6af0f794abeb3988b05dc158a14' });
 </script>
-    
+
     <style>
         html, body {
             height: 100%;
@@ -39,7 +39,7 @@
             height: 100vh;
             width: 100vw;
         }
-        
+
                 /* Disable text selection for all elements except #search-container */
         *:not(#search-container) {
             user-select: none; /* Disable text selection */
@@ -53,7 +53,7 @@
             -webkit-user-drag: none; /* Disable dragging in Safari */
             user-drag: none; /* Standard property */
         }
-        
+
          * {
             user-select: none; /* Disable text selection */
             -webkit-user-select: none; /* Disable text selection in Safari */
@@ -66,7 +66,7 @@
             -webkit-user-drag: none; /* Disable dragging in Safari */
             user-drag: none; /* Standard property */
         }
-        
+
 
         .controls {
             background-color: white;
@@ -123,14 +123,14 @@
         .hotel-btn:hover {
             background-color: #4500b0;
         }
-        
+
         .direction-btn {
             background-color: #d90b26;
         }
         .direction-btn:hover {
             background-color: #b71c1c;
         }
-        
+
         .course-btn {
             background-color: #28a745;
         }
@@ -224,7 +224,7 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-        
+
 
         #search-input.show {
             width: 40vw;
@@ -252,11 +252,11 @@
             display: none;
             cursor: not-allowed;
         }
-        
+
         #search-icon.hidden {
              display: none;
         }
-        
+
 /* Styles for hotel popup image */
 .hotel-popup-image {
     max-width: 80%;      /* Slightly smaller width (80% of the popup) */
@@ -358,7 +358,7 @@
         }
 
 
-        
+
     iframe {
         width: 100%;  /* Full width */
         border: none; /* Remove border */
@@ -396,9 +396,9 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
     <script>
-        
-        
-    
+
+
+
     function getCountryUrl(lat, lon) {
     const countries = {
         "3": { "url": "http://www.parkrun.com.au", "bounds": [113.654841, -43.163256, 153.578901, -12.376205] },
@@ -440,7 +440,7 @@
         function openUrl(url) {
             window.open(url, '_blank');
         }
-        
+
 
 
         // Disable touch-and-hold context menus on mobile devices except for #search-container
@@ -485,7 +485,7 @@
                 .then(response => response.json())
                 .then(data => data.address.city || data.address.village || data.address.town || 'Unknown');
         }
-        
+
 // Modify the map initialization to check URL parameters
 const urlParams = new URLSearchParams(window.location.search);
 const lat = parseFloat(urlParams.get('lat'));
@@ -571,7 +571,7 @@ map.on('moveend', updateURL);
             iconAnchor: [19, 38],
             popupAnchor: [0, -38]
         });
-        
+
         var bbIcon = L.icon({
            iconUrl: 'Icons/BB.png',
            iconSize: [38, 38],
@@ -579,14 +579,14 @@ map.on('moveend', updateURL);
            popupAnchor: [0, -38]
         });
 
-        
+
         var canceledIcon = L.icon({
            iconUrl: '/Icons/Cancel.png',
            iconSize: [38, 38],
            iconAnchor: [19, 38],
            popupAnchor: [0, -38]
         });
-        
+
         const cafeIcon = L.icon({
            iconUrl: 'Icons/Cafe.png',
            iconSize: [38, 38],
@@ -594,7 +594,7 @@ map.on('moveend', updateURL);
            popupAnchor: [0, -38],
         });
 
-        
+
         //here
 
 var bbMarkers = []; // Array to store BB markers
@@ -657,7 +657,7 @@ function addMarkersToMap(locations) {
         // Store the BB marker
         bbMarkers.push(bbMarker);
     });
-    
+
     updateMarkerVisibility(); // Check visibility after adding markers
 }
 
@@ -711,7 +711,7 @@ function returnToLocation() {
     }
 }
 
-  
+
 
 let canCreateToast = true;
 
@@ -795,7 +795,7 @@ function fetchLocationCoordinates(place) {
 }
 
 
- 
+
 // Fetch cancellation data
 fetch('/cancellations.json')
     .then(response => response.json())
@@ -828,12 +828,18 @@ function updateMapMarkers() {
 
             if (showMarker) {
                 var countryUrl = getCountryUrl(coordinates[1], coordinates[0]);
+                
+                // Modify weather URL to include &junior if event is junior
+            var weatherUrl = `https://parkrunnertourist.co.uk/weather?lat=${coordinates[1]}&lon=${coordinates[0]}`;
+            if (isJunior) {
+                weatherUrl += '&junior';
+            }
 
                 // Default popup content
                 var popupContent = `
                     <div>
                         <div class="popup-title">${eventLongName}</div>
-                        <iframe id="weatherIframe" src="https://parkrunnertourist.co.uk/weather?lat=${coordinates[1]}&lon=${coordinates[0]}" scrolling="no"></iframe>
+                        <iframe id="weatherIframe" src="${weatherUrl}" scrolling="no"></iframe>
                         <button class="course-btn" onclick="openUrl('${countryUrl}/${eventname}/course/')">Course</button><br>
                         <button class="volunteer-btn" onclick="openUrl('${countryUrl}/${eventname}/futureroster/')">Volunteer</button><br>
                         <button class="direction-btn" onclick="openDirections(${coordinates[1]}, ${coordinates[0]})">Directions</button><br>
@@ -896,7 +902,7 @@ const campsiteIcon = L.icon({
 // Function to search for nearby hotels and campsites using TomTom
 function findNearbyPlaces(lat, lng) {
     console.log(`Searching for hotels and campsites near: ${lat}, ${lng}`);
-    
+
     //Search for cafes
     fetchTomTomPlaces(lat, lng, 'cafe', cafeIcon);
 
@@ -1018,7 +1024,7 @@ window.addEventListener('load', () => {
            const url = `https://www.google.com/maps/search/Hotels/@${lat},${lon},18.5z`;
            window.open(url, '_blank');
         }
-        
+
 function openWebsite(url) {
     // Ensure the website URL is an absolute URL (with http:// or https://)
     if (!/^https?:\/\//i.test(url)) {
@@ -1029,7 +1035,7 @@ function openWebsite(url) {
 
 
 
-        
+
 
 // Assuming userLocationMarker is defined globally to store the user's location marker
 var userLocationMarker = null;
@@ -1055,7 +1061,7 @@ var locationCircle = null; // To show accuracy radius circle around the user loc
     clearBtn.style.display = input.classList.contains('show') ? 'block' : 'none';
     searchIcon.classList.toggle('hidden', input.classList.contains('show')); // Add this line
     input.focus();
-            
+
         });
 
 document.getElementById('clear-btn').addEventListener('click', function() {
@@ -1070,7 +1076,7 @@ document.getElementById('clear-btn').addEventListener('click', function() {
 
 
 
-        
+
 function debounce(func, delay) {
     let timer;
     return function(...args) {
@@ -1113,7 +1119,7 @@ document.getElementById('search-input').addEventListener(
                                 const eventname = feature.properties.eventname;
 
                                 const countryUrl = getCountryUrl(latEvent, lonEvent);
-                                    
+
                                 const popupContent = `
                                     <div>
                                         <div class="popup-title">${feature.properties.EventLongName}</div>
@@ -1210,7 +1216,7 @@ document.getElementById('search-input').addEventListener(
 
 function displayNoResultsMessage() {
     const input = document.getElementById('search-input');
-    
+
     input.style.borderColor = '#FFC107'; 
     input.style.boxShadow = '0 0 8px #FFC107';
     input.style.borderWidth = '2px';
@@ -1223,6 +1229,6 @@ function displayNoResultsMessage() {
     }, 3000);
 }
     </script>
-    
+
 </body>
 </html>
