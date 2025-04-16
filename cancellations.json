@@ -110,6 +110,11 @@
         "date": "2025-04-19"
     },
     {
+        "name": "Jeune Park parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-19"
+    },
+    {
         "name": "Lightning Ridge parkrun",
         "reason": "Permission issue",
         "date": "2025-04-19"
@@ -247,6 +252,11 @@
     {
         "name": "Bodington junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-04-20"
+    },
+    {
+        "name": "Clough Hall junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-04-20"
     },
     {
