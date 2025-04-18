@@ -75,6 +75,11 @@
         "date": "2025-04-19"
     },
     {
+        "name": "Dunleath Playing Fields parkrun",
+        "reason": "Weather",
+        "date": "2025-04-19"
+    },
+    {
         "name": "Durban Point parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-19"
@@ -315,6 +320,11 @@
         "date": "2025-04-19"
     },
     {
+        "name": "Tinley Manor parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-19"
+    },
+    {
         "name": "Wakehurst parkrun",
         "reason": "Venue unavailable",
         "date": "2025-04-19"
@@ -357,6 +367,11 @@
     {
         "name": "Wolford Wood parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-04-19"
+    },
+    {
+        "name": "parkrun Koszalin",
+        "reason": "Permission issue",
         "date": "2025-04-19"
     },
     {
@@ -422,6 +437,11 @@
     {
         "name": "Harcourt Hill junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-04-20"
+    },
+    {
+        "name": "Haulbowline Island junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-04-20"
     },
     {
