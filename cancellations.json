@@ -20,6 +20,11 @@
         "date": "2025-04-19"
     },
     {
+        "name": "Ballito parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-19"
+    },
+    {
         "name": "Bellevue parkrun",
         "reason": "Weather",
         "date": "2025-04-19"
@@ -147,6 +152,11 @@
     {
         "name": "Kleinplaas parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-04-19"
+    },
+    {
+        "name": "Kroonstad parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-04-19"
     },
     {
