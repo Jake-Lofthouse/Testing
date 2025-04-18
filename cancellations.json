@@ -15,6 +15,11 @@
         "date": "2025-04-19"
     },
     {
+        "name": "Avondale Forest parkrun",
+        "reason": "Weather",
+        "date": "2025-04-19"
+    },
+    {
         "name": "Bellevue parkrun",
         "reason": "Weather",
         "date": "2025-04-19"
@@ -32,6 +37,11 @@
     {
         "name": "Castleblayney parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-04-19"
+    },
+    {
+        "name": "Century City parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-04-19"
     },
     {
@@ -130,6 +140,11 @@
         "date": "2025-04-19"
     },
     {
+        "name": "Karoola Park parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-04-19"
+    },
+    {
         "name": "Kleinplaas parkrun",
         "reason": "Venue unavailable",
         "date": "2025-04-19"
@@ -207,6 +222,16 @@
     {
         "name": "Rinko Park parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-04-19"
+    },
+    {
+        "name": "Riviera on Vaal parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-19"
+    },
+    {
+        "name": "Russborough parkrun",
+        "reason": "Weather",
         "date": "2025-04-19"
     },
     {
