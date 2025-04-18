@@ -50,6 +50,11 @@
         "date": "2025-04-19"
     },
     {
+        "name": "Clermont Waterfront parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-04-19"
+    },
+    {
         "name": "Conwy parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-19"
@@ -155,6 +160,11 @@
         "date": "2025-04-19"
     },
     {
+        "name": "Koster parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-19"
+    },
+    {
         "name": "Kroonstad parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-19"
@@ -250,6 +260,11 @@
         "date": "2025-04-19"
     },
     {
+        "name": "Sheriff Creek Wildlife Sanctuary parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-19"
+    },
+    {
         "name": "Shongweni parkrun",
         "reason": "Venue unavailable",
         "date": "2025-04-19"
@@ -272,6 +287,11 @@
     {
         "name": "St Andrews parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-04-19"
+    },
+    {
+        "name": "Sterkfontein parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-04-19"
     },
     {
