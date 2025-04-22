@@ -75,6 +75,11 @@
         "date": "2025-04-26"
     },
     {
+        "name": "Geographe Bay parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-04-26"
+    },
+    {
         "name": "Goffert parkrun",
         "reason": "King\u2019s recycling centre has taken over park!",
         "date": "2025-04-26"
@@ -240,6 +245,11 @@
         "date": "2025-04-26"
     },
     {
+        "name": "Thoulstone parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-04-26"
+    },
+    {
         "name": "Victoria Dock parkrun",
         "reason": "London Marathon -unsafe volume of runners expected",
         "date": "2025-04-26"
@@ -297,6 +307,11 @@
     {
         "name": "Forster Memorial Park junior parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-04-27"
+    },
+    {
+        "name": "Horsforth Hall junior parkrun",
+        "reason": "Venue unavailable",
         "date": "2025-04-27"
     },
     {
