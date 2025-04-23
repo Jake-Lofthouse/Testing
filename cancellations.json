@@ -35,6 +35,11 @@
         "date": "2025-04-26"
     },
     {
+        "name": "Chasewater parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-26"
+    },
+    {
         "name": "Conwy parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-26"
@@ -67,6 +72,11 @@
     {
         "name": "Elgin parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-04-26"
+    },
+    {
+        "name": "Emerald Resort parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-04-26"
     },
     {
