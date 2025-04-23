@@ -75,6 +75,11 @@
         "date": "2025-04-26"
     },
     {
+        "name": "Five Arches parkrun",
+        "reason": "Permission issue",
+        "date": "2025-04-26"
+    },
+    {
         "name": "Fort William parkrun",
         "reason": "Venue unavailable",
         "date": "2025-04-26"
@@ -257,6 +262,11 @@
     {
         "name": "Tennogawa koen parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-04-26"
+    },
+    {
+        "name": "Terra Nova parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-04-26"
     },
     {
