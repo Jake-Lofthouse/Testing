@@ -250,6 +250,11 @@
         "date": "2025-04-26"
     },
     {
+        "name": "Riviera on Vaal parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-26"
+    },
+    {
         "name": "Silveroaks parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-26"
@@ -277,6 +282,11 @@
     {
         "name": "Strathcona Island parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-04-26"
+    },
+    {
+        "name": "Stutterheim parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-04-26"
     },
     {
@@ -337,6 +347,11 @@
     {
         "name": "Whitfords Nodes parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-04-26"
+    },
+    {
+        "name": "Winthrop Trailhead parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-04-26"
     },
     {
