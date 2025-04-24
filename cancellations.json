@@ -255,6 +255,11 @@
         "date": "2025-04-26"
     },
     {
+        "name": "Shongweni parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-04-26"
+    },
+    {
         "name": "Silveroaks parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-26"
@@ -371,6 +376,11 @@
     },
     {
         "name": "Barking junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-04-27"
+    },
+    {
+        "name": "Broadmeadow junior parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-04-27"
     },
