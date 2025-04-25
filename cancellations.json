@@ -80,8 +80,18 @@
         "date": "2025-04-26"
     },
     {
+        "name": "East Coast Brewery parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-26"
+    },
+    {
         "name": "Edgbaston Reservoir parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-04-26"
+    },
+    {
+        "name": "Egweni River Lodge parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-04-26"
     },
     {
@@ -375,6 +385,11 @@
         "date": "2025-04-26"
     },
     {
+        "name": "Tinley Manor parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-26"
+    },
+    {
         "name": "Victoria Dock parkrun",
         "reason": "London Marathon -unsafe volume of runners expected",
         "date": "2025-04-26"
@@ -412,6 +427,11 @@
     {
         "name": "Wolford Wood parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-04-26"
+    },
+    {
+        "name": "Zuiderpark parkrun, Den Haag",
+        "reason": "Course unsafe or blocked",
         "date": "2025-04-26"
     },
     {
