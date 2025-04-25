@@ -175,6 +175,11 @@
         "date": "2025-04-26"
     },
     {
+        "name": "Hyndburn parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-26"
+    },
+    {
         "name": "Ingrebourne Hill parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-04-26"
@@ -457,6 +462,11 @@
     {
         "name": "Wolford Wood parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-04-26"
+    },
+    {
+        "name": "Zillmere parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-04-26"
     },
     {
