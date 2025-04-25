@@ -5,6 +5,11 @@
         "date": "2025-04-26"
     },
     {
+        "name": "Arrow Rest parkrun",
+        "reason": "Weather",
+        "date": "2025-04-26"
+    },
+    {
         "name": "Aspen parkrun",
         "reason": "Venue unavailable",
         "date": "2025-04-26"
@@ -220,6 +225,11 @@
         "date": "2025-04-26"
     },
     {
+        "name": "Mudgeeraba parkrun",
+        "reason": "Weather",
+        "date": "2025-04-26"
+    },
+    {
         "name": "Nagaragawa koen parkrun",
         "reason": "Venue unavailable",
         "date": "2025-04-26"
@@ -297,6 +307,11 @@
     {
         "name": "Stadspark parkrun, Sittard",
         "reason": "Venue unavailable",
+        "date": "2025-04-26"
+    },
+    {
+        "name": "Stones Corner parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-04-26"
     },
     {
