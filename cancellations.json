@@ -10,6 +10,11 @@
         "date": "2025-04-26"
     },
     {
+        "name": "Ashgrove parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-26"
+    },
+    {
         "name": "Aspen parkrun",
         "reason": "Venue unavailable",
         "date": "2025-04-26"
@@ -70,6 +75,11 @@
         "date": "2025-04-26"
     },
     {
+        "name": "Drumchapel parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-04-26"
+    },
+    {
         "name": "Edgbaston Reservoir parkrun",
         "reason": "Venue unavailable",
         "date": "2025-04-26"
@@ -107,6 +117,11 @@
     {
         "name": "Goffert parkrun",
         "reason": "King\u2019s recycling centre has taken over park!",
+        "date": "2025-04-26"
+    },
+    {
+        "name": "Greenbank parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-04-26"
     },
     {
@@ -276,6 +291,11 @@
     },
     {
         "name": "Riviera on Vaal parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-26"
+    },
+    {
+        "name": "Roses parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-26"
     },
@@ -452,6 +472,11 @@
     {
         "name": "Ormeau junior parkrun",
         "reason": "Event Closed",
+        "date": "2025-04-27"
+    },
+    {
+        "name": "Roses parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-04-27"
     },
     {
