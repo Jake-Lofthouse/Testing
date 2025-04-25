@@ -25,12 +25,22 @@
         "date": "2025-04-26"
     },
     {
+        "name": "Bethlehem parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-26"
+    },
+    {
         "name": "Braidwood Showground parkrun",
         "reason": "Venue unavailable",
         "date": "2025-04-26"
     },
     {
         "name": "Burrum Heads Beach parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-26"
+    },
+    {
+        "name": "Carnival City parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-26"
     },
@@ -150,6 +160,11 @@
         "date": "2025-04-26"
     },
     {
+        "name": "Hazelmere Dam parkrun",
+        "reason": "Weather",
+        "date": "2025-04-26"
+    },
+    {
         "name": "Hazelwood parkrun",
         "reason": "Venue unavailable",
         "date": "2025-04-26"
@@ -231,6 +246,11 @@
     },
     {
         "name": "Meadowbrook parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-26"
+    },
+    {
+        "name": "Meyerton parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-26"
     },
@@ -392,6 +412,11 @@
     {
         "name": "Victoria Dock parkrun",
         "reason": "London Marathon -unsafe volume of runners expected",
+        "date": "2025-04-26"
+    },
+    {
+        "name": "Vryheid parkrun",
+        "reason": "Weather",
         "date": "2025-04-26"
     },
     {
