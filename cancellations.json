@@ -25,6 +25,11 @@
         "date": "2025-04-26"
     },
     {
+        "name": "Ballito parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-04-26"
+    },
+    {
         "name": "Bethlehem parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-26"
@@ -77,6 +82,11 @@
     {
         "name": "Delaware and Raritan Canal parkrun",
         "reason": "Permission issue",
+        "date": "2025-04-26"
+    },
+    {
+        "name": "Dlinza Forest parkrun",
+        "reason": "Weather",
         "date": "2025-04-26"
     },
     {
