@@ -565,6 +565,16 @@
         "date": "2025-04-27"
     },
     {
+        "name": "Padiham Greenway junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-04-27"
+    },
+    {
+        "name": "Prudhoe Riverside junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-04-27"
+    },
+    {
         "name": "Roses parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-04-27"
@@ -572,6 +582,11 @@
     {
         "name": "Seymour Park junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-04-27"
+    },
+    {
+        "name": "Sheffield Olympic Legacy Park junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-04-27"
     },
     {
