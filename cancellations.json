@@ -220,12 +220,22 @@
         "date": "2025-05-04"
     },
     {
+        "name": "Castle Playing Fields junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-05-04"
+    },
+    {
         "name": "Chippenham junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-04"
     },
     {
         "name": "Colchester junior parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-05-04"
+    },
+    {
+        "name": "Conwy Nature Reserve junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-04"
     },
