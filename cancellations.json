@@ -65,6 +65,11 @@
         "date": "2025-05-03"
     },
     {
+        "name": "Greenpoint parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-05-03"
+    },
+    {
         "name": "Higginson parkrun, Marlow",
         "reason": "Venue unavailable",
         "date": "2025-05-03"
@@ -87,6 +92,11 @@
     {
         "name": "Kitanagase Mirai Fureai Sogokoen parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-05-03"
+    },
+    {
+        "name": "Kleinplaas parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-05-03"
     },
     {
@@ -146,6 +156,11 @@
     },
     {
         "name": "Somerset East parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-05-03"
+    },
+    {
+        "name": "Somerset West parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-03"
     },
