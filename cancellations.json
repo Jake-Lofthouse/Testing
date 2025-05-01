@@ -105,6 +105,11 @@
         "date": "2025-05-03"
     },
     {
+        "name": "Lightning Ridge parkrun",
+        "reason": "Permission issue",
+        "date": "2025-05-03"
+    },
+    {
         "name": "Lydiard parkrun",
         "reason": "Race for life taking place in the park.",
         "date": "2025-05-03"
@@ -211,6 +216,11 @@
     },
     {
         "name": "Wezenlanden parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-05-03"
+    },
+    {
+        "name": "White Rock parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-03"
     },
