@@ -180,7 +180,17 @@
         "date": "2025-05-03"
     },
     {
+        "name": "Riviera on Vaal parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-03"
+    },
+    {
         "name": "Shipley Country parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-05-03"
+    },
+    {
+        "name": "Shongweni parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-03"
     },
@@ -362,6 +372,11 @@
     {
         "name": "Reigate Priory junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-05-04"
+    },
+    {
+        "name": "Rockfield junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-05-04"
     },
     {
