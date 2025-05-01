@@ -75,6 +75,11 @@
         "date": "2025-05-03"
     },
     {
+        "name": "Hanmer Forest parkrun",
+        "reason": "Weather",
+        "date": "2025-05-03"
+    },
+    {
         "name": "Higginson parkrun, Marlow",
         "reason": "Venue unavailable",
         "date": "2025-05-03"
@@ -92,6 +97,11 @@
     {
         "name": "Ipswich parkrun",
         "reason": "Permission issue",
+        "date": "2025-05-03"
+    },
+    {
+        "name": "Jeune Park parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-05-03"
     },
     {
