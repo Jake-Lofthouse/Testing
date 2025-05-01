@@ -33570,7 +33570,7 @@
           "LocalisedEventLongName": null,
           "countrycode": 14,
           "seriesid": 1,
-          "EventLocation": "12030 River Valley Road NW"
+          "EventLocation": "12010 River Valley Road NW"
         }
       },
       {
@@ -53934,6 +53934,26 @@
         }
       },
       {
+        "id": 3663,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -1.440605,
+            54.82399
+          ]
+        },
+        "properties": {
+          "eventname": "hettonlyonscountrypark-juniors",
+          "EventLongName": "Hetton Lyons Country Park junior parkrun",
+          "EventShortName": "Hetton Lyons Country Park juniors",
+          "LocalisedEventLongName": null,
+          "countrycode": 97,
+          "seriesid": 2,
+          "EventLocation": "Hetton Lyons Country Park juniors"
+        }
+      },
+      {
         "id": 3664,
         "type": "Feature",
         "geometry": {
@@ -54011,6 +54031,46 @@
           "countrycode": 98,
           "seriesid": 1,
           "EventLocation": "Willie Blake Community"
+        }
+      },
+      {
+        "id": 3670,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            171.596129,
+            -41.743882
+          ]
+        },
+        "properties": {
+          "eventname": "lostlagoon",
+          "EventLongName": "Lost Lagoon parkrun",
+          "EventShortName": "Lost Lagoon",
+          "LocalisedEventLongName": null,
+          "countrycode": 65,
+          "seriesid": 1,
+          "EventLocation": "Lost Lagoon"
+        }
+      },
+      {
+        "id": 3671,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            23.895822,
+            -33.977205
+          ]
+        },
+        "properties": {
+          "eventname": "plaatbosnaturereserve",
+          "EventLongName": "Plaatbos Nature Reserve parkrun",
+          "EventShortName": "Plaatbos Nature Reserve",
+          "LocalisedEventLongName": null,
+          "countrycode": 85,
+          "seriesid": 1,
+          "EventLocation": "Plaatbos Nature Reserve"
         }
       }
     ]
