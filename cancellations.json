@@ -5,6 +5,11 @@
         "date": "2025-05-03"
     },
     {
+        "name": "Ballito parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-03"
+    },
+    {
         "name": "Bendigo Botanic Gardens parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-03"
@@ -225,6 +230,11 @@
         "date": "2025-05-03"
     },
     {
+        "name": "Surfers Paradise parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-03"
+    },
+    {
         "name": "Swansea Bay parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-05-03"
@@ -417,6 +427,11 @@
     {
         "name": "The Waterfront junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-05-04"
+    },
+    {
+        "name": "Yatton Recreation junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-05-04"
     }
 ]
