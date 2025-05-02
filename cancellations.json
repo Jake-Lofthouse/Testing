@@ -60,6 +60,11 @@
         "date": "2025-05-03"
     },
     {
+        "name": "Claremorris parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-05-03"
+    },
+    {
         "name": "Conwy parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-05-03"
@@ -97,6 +102,11 @@
     {
         "name": "George Lane Memorial parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-05-03"
+    },
+    {
+        "name": "Grahamstown Aquatic Centre parkrun, Medowie",
+        "reason": "Course unsafe or blocked",
         "date": "2025-05-03"
     },
     {
@@ -196,6 +206,11 @@
     },
     {
         "name": "North Wollongong parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-05-03"
+    },
+    {
+        "name": "Odakaryokuchi parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-03"
     },
