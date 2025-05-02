@@ -80,6 +80,11 @@
         "date": "2025-05-03"
     },
     {
+        "name": "Emerald Resort parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-03"
+    },
+    {
         "name": "Fire Service College parkrun",
         "reason": "Event Closed",
         "date": "2025-05-03"
@@ -100,8 +105,18 @@
         "date": "2025-05-03"
     },
     {
+        "name": "Groeneweide parkrun",
+        "reason": "AED unavailable",
+        "date": "2025-05-03"
+    },
+    {
         "name": "Hanmer Forest parkrun",
         "reason": "Weather",
+        "date": "2025-05-03"
+    },
+    {
+        "name": "Harrismith parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-05-03"
     },
     {
@@ -136,6 +151,11 @@
     },
     {
         "name": "Kleinplaas parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-03"
+    },
+    {
+        "name": "Koster parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-05-03"
     },
@@ -310,6 +330,11 @@
         "date": "2025-05-03"
     },
     {
+        "name": "Woking parkrun",
+        "reason": "Local health restrictions",
+        "date": "2025-05-03"
+    },
+    {
         "name": "Wolford Wood parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-03"
@@ -452,6 +477,11 @@
     {
         "name": "The Waterfront junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-05-04"
+    },
+    {
+        "name": "Woking junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-05-04"
     },
     {
