@@ -25,6 +25,11 @@
         "date": "2025-05-03"
     },
     {
+        "name": "Botanical Garden parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-03"
+    },
+    {
         "name": "Braidwood Showground parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-03"
@@ -222,6 +227,11 @@
     {
         "name": "Somerset West parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-05-03"
+    },
+    {
+        "name": "South End Reserve parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-05-03"
     },
     {
