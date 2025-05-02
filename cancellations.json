@@ -1,5 +1,10 @@
 [
     {
+        "name": "Aronica\u2019s Nursery parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-05-03"
+    },
+    {
         "name": "Australian Standing Stones parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-03"
@@ -135,6 +140,11 @@
         "date": "2025-05-03"
     },
     {
+        "name": "Kroonstad parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-03"
+    },
+    {
         "name": "Lightning Ridge parkrun",
         "reason": "Permission issue",
         "date": "2025-05-03"
@@ -257,6 +267,11 @@
     {
         "name": "The Entrance parkrun",
         "reason": "Weather",
+        "date": "2025-05-03"
+    },
+    {
+        "name": "Tinley Manor parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-05-03"
     },
     {
