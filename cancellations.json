@@ -20,6 +20,11 @@
         "date": "2025-05-03"
     },
     {
+        "name": "Bill Thorpe Walking Bridge parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-03"
+    },
+    {
         "name": "Birchwood Trails parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-03"
@@ -322,6 +327,11 @@
     {
         "name": "Wauchope parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-05-03"
+    },
+    {
+        "name": "West Coast Park parkrun",
+        "reason": "Weather",
         "date": "2025-05-03"
     },
     {
