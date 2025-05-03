@@ -200,6 +200,11 @@
         "date": "2025-05-03"
     },
     {
+        "name": "Melksham parkrun",
+        "reason": "AED unavailable",
+        "date": "2025-05-03"
+    },
+    {
         "name": "Millennium parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-05-03"
@@ -326,6 +331,11 @@
     },
     {
         "name": "University of Western Australia parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-05-03"
+    },
+    {
+        "name": "Veterans Park parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-03"
     },
