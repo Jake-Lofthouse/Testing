@@ -10,6 +10,11 @@
         "date": "2025-05-10"
     },
     {
+        "name": "Braidwood Showground parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-05-10"
+    },
+    {
         "name": "Brandon Country Park parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-05-10"
@@ -287,6 +292,11 @@
     {
         "name": "Laleham junior parkrun",
         "reason": "core team taking part in other events",
+        "date": "2025-05-11"
+    },
+    {
+        "name": "Leatherhead junior parkrun",
+        "reason": "Venue unavailable",
         "date": "2025-05-11"
     },
     {
