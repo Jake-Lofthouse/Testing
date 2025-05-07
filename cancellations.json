@@ -120,6 +120,11 @@
         "date": "2025-05-10"
     },
     {
+        "name": "Lucy Park parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-10"
+    },
+    {
         "name": "Lynnfield parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-10"
@@ -172,6 +177,11 @@
     {
         "name": "Rinko Park parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-05-10"
+    },
+    {
+        "name": "Riverside parkrun, Grand Rapids",
+        "reason": "Shortage of volunteers",
         "date": "2025-05-10"
     },
     {
