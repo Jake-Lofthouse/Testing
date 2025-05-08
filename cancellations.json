@@ -155,6 +155,11 @@
         "date": "2025-05-10"
     },
     {
+        "name": "Melkbosstrand parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-10"
+    },
+    {
         "name": "Midstream parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-10"
@@ -202,6 +207,11 @@
     {
         "name": "Seotlong Agriculture School parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-05-10"
+    },
+    {
+        "name": "Silveroaks parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-05-10"
     },
     {
