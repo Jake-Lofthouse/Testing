@@ -10,6 +10,11 @@
         "date": "2025-05-10"
     },
     {
+        "name": "Billericay parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-10"
+    },
+    {
         "name": "Braidwood Showground parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-10"
@@ -82,6 +87,11 @@
     {
         "name": "Guildford parkrun",
         "reason": "Inflatable 5K event in Stoke Park",
+        "date": "2025-05-10"
+    },
+    {
+        "name": "Harrismith parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-05-10"
     },
     {
@@ -210,6 +220,11 @@
         "date": "2025-05-10"
     },
     {
+        "name": "Phoenix Park parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-05-10"
+    },
+    {
         "name": "Pontypridd parkrun",
         "reason": "RCT Event - VE Day 80",
         "date": "2025-05-10"
@@ -241,6 +256,11 @@
     },
     {
         "name": "Silveroaks parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-10"
+    },
+    {
+        "name": "Sixfields Upton parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-05-10"
     },
@@ -362,6 +382,11 @@
     {
         "name": "Bramley junior parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-05-11"
+    },
+    {
+        "name": "Burrow\u2019s Field junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-05-11"
     },
     {
