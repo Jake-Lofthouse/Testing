@@ -90,6 +90,11 @@
         "date": "2025-05-10"
     },
     {
+        "name": "Heiwa koen Kurashino mori parkrun",
+        "reason": "Weather",
+        "date": "2025-05-10"
+    },
+    {
         "name": "Hirono kaigankoen parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-05-10"
@@ -145,6 +150,11 @@
         "date": "2025-05-10"
     },
     {
+        "name": "Maborikaigan yuhodo parkrun",
+        "reason": "Weather",
+        "date": "2025-05-10"
+    },
+    {
         "name": "Maldon Prom parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-05-10"
@@ -171,6 +181,11 @@
     },
     {
         "name": "Millennium parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-05-10"
+    },
+    {
+        "name": "Miyagawa koen parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-05-10"
     },
@@ -242,6 +257,11 @@
     {
         "name": "Stretford parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-05-10"
+    },
+    {
+        "name": "Tennogawa koen parkrun",
+        "reason": "Weather",
         "date": "2025-05-10"
     },
     {
