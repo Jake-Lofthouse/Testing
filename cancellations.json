@@ -25,6 +25,11 @@
         "date": "2025-05-10"
     },
     {
+        "name": "Camperdown parkrun, Dundee",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-10"
+    },
+    {
         "name": "Castlerea parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-10"
@@ -197,6 +202,11 @@
     {
         "name": "Miyagawa koen parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-05-10"
+    },
+    {
+        "name": "Montrose parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-05-10"
     },
     {
