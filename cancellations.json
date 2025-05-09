@@ -185,6 +185,11 @@
         "date": "2025-05-10"
     },
     {
+        "name": "Meijo koen parkrun",
+        "reason": "Weather",
+        "date": "2025-05-10"
+    },
+    {
         "name": "Melkbosstrand parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-05-10"
@@ -215,8 +220,18 @@
         "date": "2025-05-10"
     },
     {
+        "name": "Nagaragawa koen parkrun",
+        "reason": "Weather",
+        "date": "2025-05-10"
+    },
+    {
         "name": "Nansenparken parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-05-10"
+    },
+    {
+        "name": "Nathan Road Sports Ground parkrun",
+        "reason": "Equipment unavailable",
         "date": "2025-05-10"
     },
     {
@@ -227,6 +242,11 @@
     {
         "name": "Oiso undokoen parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-05-10"
+    },
+    {
+        "name": "Ome kyuryo parkrun",
+        "reason": "Weather",
         "date": "2025-05-10"
     },
     {
