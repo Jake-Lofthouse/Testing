@@ -25,6 +25,11 @@
         "date": "2025-05-10"
     },
     {
+        "name": "Breede Valley parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-10"
+    },
+    {
         "name": "Camperdown parkrun, Dundee",
         "reason": "Course unsafe or blocked",
         "date": "2025-05-10"
@@ -62,6 +67,11 @@
     {
         "name": "Dolls Point parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-05-10"
+    },
+    {
+        "name": "Durbanville parkrun",
+        "reason": "Weather",
         "date": "2025-05-10"
     },
     {
