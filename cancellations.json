@@ -205,6 +205,11 @@
         "date": "2025-05-17"
     },
     {
+        "name": "Peckham Rye parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-17"
+    },
+    {
         "name": "Sandhurst Memorial parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-17"
@@ -342,6 +347,11 @@
     {
         "name": "Hogmoor Inclosure junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-05-18"
+    },
+    {
+        "name": "Long Eaton junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-05-18"
     },
     {
