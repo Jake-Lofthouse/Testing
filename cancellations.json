@@ -85,6 +85,11 @@
         "date": "2025-05-17"
     },
     {
+        "name": "Exeter Riverside parkrun",
+        "reason": "Permission issue",
+        "date": "2025-05-17"
+    },
+    {
         "name": "Ferry Meadows parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-17"
@@ -122,6 +127,11 @@
     {
         "name": "Gongendo 2gou kouen parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-05-17"
+    },
+    {
+        "name": "Harrismith parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-05-17"
     },
     {
