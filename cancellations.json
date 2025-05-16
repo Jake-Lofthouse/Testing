@@ -55,6 +55,11 @@
         "date": "2025-05-17"
     },
     {
+        "name": "Bunyaville parkrun",
+        "reason": "Permission issue",
+        "date": "2025-05-17"
+    },
+    {
         "name": "Canyon Rim Trail parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-17"
@@ -132,6 +137,11 @@
     {
         "name": "Harrismith parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-05-17"
+    },
+    {
+        "name": "Heiwa koen Kurashino mori parkrun",
+        "reason": "Weather",
         "date": "2025-05-17"
     },
     {
@@ -217,6 +227,11 @@
     {
         "name": "Odakaryokuchi parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-05-17"
+    },
+    {
+        "name": "Ohno Gokurakuji Koen parkrun",
+        "reason": "Weather",
         "date": "2025-05-17"
     },
     {
