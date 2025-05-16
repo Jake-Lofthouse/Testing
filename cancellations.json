@@ -240,6 +240,11 @@
         "date": "2025-05-17"
     },
     {
+        "name": "Meijo koen parkrun",
+        "reason": "Weather",
+        "date": "2025-05-17"
+    },
+    {
         "name": "Millennium parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-05-17"
@@ -257,6 +262,11 @@
     {
         "name": "Mount Beauty parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-05-17"
+    },
+    {
+        "name": "Nagaragawa koen parkrun",
+        "reason": "Weather",
         "date": "2025-05-17"
     },
     {
@@ -290,8 +300,18 @@
         "date": "2025-05-17"
     },
     {
+        "name": "Ome kyuryo parkrun",
+        "reason": "Weather",
+        "date": "2025-05-17"
+    },
+    {
         "name": "Peckham Rye parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-05-17"
+    },
+    {
+        "name": "Picnic Point Parklands parkrun",
+        "reason": "Weather",
         "date": "2025-05-17"
     },
     {
@@ -342,6 +362,11 @@
     {
         "name": "Somerset West parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-05-17"
+    },
+    {
+        "name": "Stones Corner parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-05-17"
     },
     {
