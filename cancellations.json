@@ -130,6 +130,11 @@
         "date": "2025-05-17"
     },
     {
+        "name": "Glass House Mountains Conservation parkrun",
+        "reason": "Permission issue",
+        "date": "2025-05-17"
+    },
+    {
         "name": "Gongendo 2gou kouen parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-17"
@@ -307,6 +312,11 @@
     {
         "name": "Whitfords Nodes parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-05-17"
+    },
+    {
+        "name": "Yodogawa kasenkoen Hirakata chiku parkrun",
+        "reason": "Weather",
         "date": "2025-05-17"
     },
     {
