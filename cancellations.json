@@ -230,6 +230,11 @@
         "date": "2025-05-17"
     },
     {
+        "name": "Montrose parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-17"
+    },
+    {
         "name": "Mount Beauty parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-17"
@@ -362,6 +367,11 @@
     {
         "name": "Whitfords Nodes parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-05-17"
+    },
+    {
+        "name": "Wythenshawe parkrun",
+        "reason": "Venue unavailable",
         "date": "2025-05-17"
     },
     {
