@@ -125,6 +125,11 @@
         "date": "2025-05-17"
     },
     {
+        "name": "Fukakitaryokuchi parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-05-17"
+    },
+    {
         "name": "George Lane Memorial parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-17"
@@ -142,6 +147,11 @@
     {
         "name": "Harrismith parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-05-17"
+    },
+    {
+        "name": "Heijo kyuseki Rekishi koen parkrun",
+        "reason": "Weather",
         "date": "2025-05-17"
     },
     {
@@ -230,6 +240,11 @@
         "date": "2025-05-17"
     },
     {
+        "name": "Nathan Road Sports Ground parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-05-17"
+    },
+    {
         "name": "North Harbour parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-05-17"
@@ -241,6 +256,11 @@
     },
     {
         "name": "Ohno Gokurakuji Koen parkrun",
+        "reason": "Weather",
+        "date": "2025-05-17"
+    },
+    {
+        "name": "Oiso undokoen parkrun",
         "reason": "Weather",
         "date": "2025-05-17"
     },
@@ -267,6 +287,11 @@
     {
         "name": "Seotlong Agriculture School parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-05-17"
+    },
+    {
+        "name": "Shingashigawa Ukima parkrun",
+        "reason": "Weather",
         "date": "2025-05-17"
     },
     {
@@ -432,6 +457,11 @@
     {
         "name": "Stanley Park junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-05-18"
+    },
+    {
+        "name": "Swansea Prom junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-05-18"
     },
     {
