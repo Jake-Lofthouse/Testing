@@ -275,6 +275,11 @@
         "date": "2025-05-17"
     },
     {
+        "name": "Prinzenpark parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-17"
+    },
+    {
         "name": "Riviera on Vaal parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-05-17"
@@ -295,6 +300,11 @@
         "date": "2025-05-17"
     },
     {
+        "name": "Shirahama koen parkrun",
+        "reason": "Weather",
+        "date": "2025-05-17"
+    },
+    {
         "name": "Silveroaks parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-05-17"
@@ -307,6 +317,11 @@
     {
         "name": "Somerset West parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-05-17"
+    },
+    {
+        "name": "Sunshine Beach parkrun",
+        "reason": "Weather",
         "date": "2025-05-17"
     },
     {
