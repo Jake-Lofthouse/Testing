@@ -160,6 +160,11 @@
         "date": "2025-05-17"
     },
     {
+        "name": "Kitanagase Mirai Fureai Sogokoen parkrun",
+        "reason": "Weather",
+        "date": "2025-05-17"
+    },
+    {
         "name": "Lake Pacawa parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-17"
@@ -217,6 +222,11 @@
     {
         "name": "Peckham Rye parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-05-17"
+    },
+    {
+        "name": "Pioneer Dairy parkrun",
+        "reason": "Weather",
         "date": "2025-05-17"
     },
     {
