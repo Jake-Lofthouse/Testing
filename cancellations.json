@@ -60,6 +60,11 @@
         "date": "2025-05-17"
     },
     {
+        "name": "Camperdown parkrun, Dundee",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-17"
+    },
+    {
         "name": "Canyon Rim Trail parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-17"
@@ -145,6 +150,16 @@
         "date": "2025-05-17"
     },
     {
+        "name": "Hackworth parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-05-17"
+    },
+    {
+        "name": "Haldon Forest parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-05-17"
+    },
+    {
         "name": "Harrismith parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-05-17"
@@ -197,6 +212,11 @@
     {
         "name": "Lightning Ridge parkrun",
         "reason": "Permission issue",
+        "date": "2025-05-17"
+    },
+    {
+        "name": "Limerick parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-05-17"
     },
     {
