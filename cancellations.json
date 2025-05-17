@@ -90,6 +90,11 @@
         "date": "2025-05-17"
     },
     {
+        "name": "Creekside parkrun",
+        "reason": "Weather",
+        "date": "2025-05-17"
+    },
+    {
         "name": "Delaware and Raritan Canal parkrun",
         "reason": "Permission issue",
         "date": "2025-05-17"
@@ -227,6 +232,11 @@
     {
         "name": "Lister Park parkrun, Bradford",
         "reason": "Venue unavailable",
+        "date": "2025-05-17"
+    },
+    {
+        "name": "Little Sugar Creek Greenway parkrun",
+        "reason": "Weather",
         "date": "2025-05-17"
     },
     {
