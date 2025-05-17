@@ -325,6 +325,11 @@
         "date": "2025-05-17"
     },
     {
+        "name": "Ottawa-Carleton Trailway parkrun",
+        "reason": "Weather",
+        "date": "2025-05-17"
+    },
+    {
         "name": "Peckham Rye parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-05-17"
@@ -402,6 +407,11 @@
     {
         "name": "Temple Newsam parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-05-17"
+    },
+    {
+        "name": "Tennogawa koen parkrun",
+        "reason": "Weather",
         "date": "2025-05-17"
     },
     {
