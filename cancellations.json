@@ -135,6 +135,11 @@
         "date": "2025-05-24"
     },
     {
+        "name": "Jeune Park parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-24"
+    },
+    {
         "name": "Karoola Park parkrun",
         "reason": "Weather",
         "date": "2025-05-24"
@@ -272,6 +277,11 @@
     {
         "name": "Temple Newsam parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-05-24"
+    },
+    {
+        "name": "The Terrace parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-05-24"
     },
     {
