@@ -95,6 +95,11 @@
         "date": "2025-05-24"
     },
     {
+        "name": "Dhunggaarr Reserve parkrun",
+        "reason": "Weather",
+        "date": "2025-05-24"
+    },
+    {
         "name": "East Brighton parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-24"
@@ -195,6 +200,11 @@
         "date": "2025-05-24"
     },
     {
+        "name": "Pioneer Dairy parkrun",
+        "reason": "Weather",
+        "date": "2025-05-24"
+    },
+    {
         "name": "Red Star parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-24"
@@ -237,6 +247,11 @@
     {
         "name": "Stewart parkrun, Middlesbrough",
         "reason": "Venue unavailable",
+        "date": "2025-05-24"
+    },
+    {
+        "name": "Taree parkrun",
+        "reason": "Weather",
         "date": "2025-05-24"
     },
     {
