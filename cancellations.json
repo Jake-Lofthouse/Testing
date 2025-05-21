@@ -110,6 +110,11 @@
         "date": "2025-05-24"
     },
     {
+        "name": "Gloucester District parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-24"
+    },
+    {
         "name": "Holyrood parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-24"
@@ -122,6 +127,11 @@
     {
         "name": "Ipswich parkrun",
         "reason": "Permission issue",
+        "date": "2025-05-24"
+    },
+    {
+        "name": "Karoola Park parkrun",
+        "reason": "Weather",
         "date": "2025-05-24"
     },
     {
