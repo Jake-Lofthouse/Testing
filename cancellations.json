@@ -165,6 +165,11 @@
         "date": "2025-05-24"
     },
     {
+        "name": "Kathu parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-05-24"
+    },
+    {
         "name": "Laytown Beach parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-05-24"
@@ -262,6 +267,11 @@
     {
         "name": "Riverside Walk parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-05-24"
+    },
+    {
+        "name": "Riviera on Vaal parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-05-24"
     },
     {
