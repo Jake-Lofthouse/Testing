@@ -125,6 +125,11 @@
         "date": "2025-05-24"
     },
     {
+        "name": "Grahamstown Aquatic Centre parkrun, Medowie",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-24"
+    },
+    {
         "name": "Henry Kendall Reserve parkrun",
         "reason": "Weather",
         "date": "2025-05-24"
@@ -362,6 +367,11 @@
     {
         "name": "Warrington parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-05-24"
+    },
+    {
+        "name": "Wauchope parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-05-24"
     },
     {
