@@ -828,12 +828,18 @@ function updateMapMarkers() {
 
             if (showMarker) {
                 var countryUrl = getCountryUrl(coordinates[1], coordinates[0]);
+                
+                // Modify weather URL to include &junior if event is junior
+            var weatherUrl = `https://parkrunnertourist.co.uk/weather?lat=${coordinates[1]}&lon=${coordinates[0]}`;
+            if (isJunior) {
+                weatherUrl += '&junior';
+            }
 
                 // Default popup content
                 var popupContent = `
                     <div>
                         <div class="popup-title">${eventLongName}</div>
-                        <iframe id="weatherIframe" src="https://parkrunnertourist.co.uk/weather?lat=${coordinates[1]}&lon=${coordinates[0]}" scrolling="no"></iframe>
+                        <iframe id="weatherIframe" src="${weatherUrl}" scrolling="no"></iframe>
                         <button class="course-btn" onclick="openUrl('${countryUrl}/${eventname}/course/')">Course</button><br>
                         <button class="volunteer-btn" onclick="openUrl('${countryUrl}/${eventname}/futureroster/')">Volunteer</button><br>
                         <button class="direction-btn" onclick="openDirections(${coordinates[1]}, ${coordinates[0]})">Directions</button><br>
