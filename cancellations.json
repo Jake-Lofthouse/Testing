@@ -270,7 +270,17 @@
         "date": "2025-05-24"
     },
     {
+        "name": "Singleton parkrun",
+        "reason": "Weather",
+        "date": "2025-05-24"
+    },
+    {
         "name": "Sixmilewater parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-05-24"
+    },
+    {
+        "name": "Somerset West parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-24"
     },
@@ -307,6 +317,11 @@
     {
         "name": "Thornham Walks parkrun",
         "reason": "Permission issue",
+        "date": "2025-05-24"
+    },
+    {
+        "name": "Two Rivers Wines parkrun",
+        "reason": "Weather",
         "date": "2025-05-24"
     },
     {
@@ -402,6 +417,11 @@
     {
         "name": "Helix junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-05-25"
+    },
+    {
+        "name": "Horfield Common junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-05-25"
     },
     {
