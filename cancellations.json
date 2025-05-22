@@ -150,6 +150,11 @@
         "date": "2025-05-24"
     },
     {
+        "name": "Jells parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-24"
+    },
+    {
         "name": "Jeune Park parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-05-24"
@@ -172,6 +177,11 @@
     {
         "name": "Lightning Ridge parkrun",
         "reason": "Permission issue",
+        "date": "2025-05-24"
+    },
+    {
+        "name": "Limerick parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-05-24"
     },
     {
