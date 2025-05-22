@@ -140,6 +140,11 @@
         "date": "2025-05-24"
     },
     {
+        "name": "Houghton Hall parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-24"
+    },
+    {
         "name": "Ho\u00ebrskool Ben Viljoen parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-24"
@@ -241,6 +246,11 @@
     },
     {
         "name": "Mtunzini parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-05-24"
+    },
+    {
+        "name": "Paisley Park parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-24"
     },
