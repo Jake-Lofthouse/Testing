@@ -120,6 +120,11 @@
         "date": "2025-05-24"
     },
     {
+        "name": "Henry Kendall Reserve parkrun",
+        "reason": "Weather",
+        "date": "2025-05-24"
+    },
+    {
         "name": "Holyrood parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-24"
@@ -172,6 +177,11 @@
     {
         "name": "Lousberg parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-05-24"
+    },
+    {
+        "name": "Maitland parkrun",
+        "reason": "Weather",
         "date": "2025-05-24"
     },
     {
