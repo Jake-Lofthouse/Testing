@@ -10,6 +10,11 @@
         "date": "2025-05-24"
     },
     {
+        "name": "Avondale University College parkrun",
+        "reason": "Weather",
+        "date": "2025-05-24"
+    },
+    {
         "name": "Ayr parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-24"
@@ -255,6 +260,11 @@
         "date": "2025-05-24"
     },
     {
+        "name": "Nulkaba parkrun",
+        "reason": "Weather",
+        "date": "2025-05-24"
+    },
+    {
         "name": "Paisley Park parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-24"
@@ -277,6 +287,11 @@
     {
         "name": "Red Star parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-05-24"
+    },
+    {
+        "name": "Rex Jackson Oval parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-05-24"
     },
     {
@@ -342,6 +357,11 @@
     {
         "name": "Temple Newsam parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-05-24"
+    },
+    {
+        "name": "The Entrance parkrun",
+        "reason": "Weather",
         "date": "2025-05-24"
     },
     {
