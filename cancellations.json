@@ -35,6 +35,11 @@
         "date": "2025-05-24"
     },
     {
+        "name": "Bega parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-24"
+    },
+    {
         "name": "Bill Rose Sports Complex parkrun",
         "reason": "Weather",
         "date": "2025-05-24"
@@ -140,12 +145,22 @@
         "date": "2025-05-24"
     },
     {
+        "name": "Glass House Mountains Conservation parkrun",
+        "reason": "Permission issue",
+        "date": "2025-05-24"
+    },
+    {
         "name": "Gloucester District parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-05-24"
     },
     {
         "name": "Grahamstown Aquatic Centre parkrun, Medowie",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-24"
+    },
+    {
+        "name": "Harrismith parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-05-24"
     },
@@ -197,6 +212,11 @@
     {
         "name": "Kathu parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-05-24"
+    },
+    {
+        "name": "Kitanagase Mirai Fureai Sogokoen parkrun",
+        "reason": "Weather",
         "date": "2025-05-24"
     },
     {
@@ -300,6 +320,11 @@
         "date": "2025-05-24"
     },
     {
+        "name": "Phoenix Park parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-05-24"
+    },
+    {
         "name": "Pioneer Dairy parkrun",
         "reason": "Weather",
         "date": "2025-05-24"
@@ -396,6 +421,11 @@
     },
     {
         "name": "Two Rivers Wines parkrun",
+        "reason": "Weather",
+        "date": "2025-05-24"
+    },
+    {
+        "name": "Urunga parkrun",
         "reason": "Weather",
         "date": "2025-05-24"
     },
