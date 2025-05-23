@@ -160,6 +160,11 @@
         "date": "2025-05-24"
     },
     {
+        "name": "Forster parkrun",
+        "reason": "Weather",
+        "date": "2025-05-24"
+    },
+    {
         "name": "Glass House Mountains Conservation parkrun",
         "reason": "Permission issue",
         "date": "2025-05-24"
@@ -195,6 +200,11 @@
         "date": "2025-05-24"
     },
     {
+        "name": "Horseshoe Bay Reserve parkrun",
+        "reason": "Weather",
+        "date": "2025-05-24"
+    },
+    {
         "name": "Houghton Hall parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-05-24"
@@ -227,6 +237,11 @@
     {
         "name": "Kathu parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-05-24"
+    },
+    {
+        "name": "Kingston Park parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-05-24"
     },
     {
@@ -460,6 +475,11 @@
         "date": "2025-05-24"
     },
     {
+        "name": "Tynwald Park parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-24"
+    },
+    {
         "name": "Urunga parkrun",
         "reason": "Weather",
         "date": "2025-05-24"
@@ -471,6 +491,11 @@
     },
     {
         "name": "Warrington parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-05-24"
+    },
+    {
+        "name": "Watergrove parkrun, Rochdale",
         "reason": "Venue unavailable",
         "date": "2025-05-24"
     },
