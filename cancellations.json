@@ -50,6 +50,11 @@
         "date": "2025-05-24"
     },
     {
+        "name": "Botanical Garden parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-05-24"
+    },
+    {
         "name": "Braidwood Showground parkrun",
         "reason": "Weather",
         "date": "2025-05-24"
@@ -112,6 +117,11 @@
     {
         "name": "Chippenham parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-05-24"
+    },
+    {
+        "name": "Chipping Norton parkrun",
+        "reason": "Weather",
         "date": "2025-05-24"
     },
     {
@@ -270,6 +280,11 @@
         "date": "2025-05-24"
     },
     {
+        "name": "Miyagawa koen parkrun",
+        "reason": "Weather",
+        "date": "2025-05-24"
+    },
+    {
         "name": "Morden parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-24"
@@ -307,6 +322,11 @@
     {
         "name": "Panania parkrun",
         "reason": "Weather",
+        "date": "2025-05-24"
+    },
+    {
+        "name": "Patawalonga River parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-05-24"
     },
     {
@@ -352,6 +372,11 @@
     {
         "name": "Rushmoor parkrun",
         "reason": "Ghurka Cup",
+        "date": "2025-05-24"
+    },
+    {
+        "name": "San Remo parkrun",
+        "reason": "Weather",
         "date": "2025-05-24"
     },
     {
@@ -470,6 +495,11 @@
         "date": "2025-05-24"
     },
     {
+        "name": "Yamaguchi Kirarahaku kinen koen parkrun",
+        "reason": "Weather",
+        "date": "2025-05-24"
+    },
+    {
         "name": "parkrun Gosty\u0144",
         "reason": "Venue unavailable",
         "date": "2025-05-24"
@@ -507,6 +537,11 @@
     {
         "name": "Chippenham junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-05-25"
+    },
+    {
+        "name": "Clashduv junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-05-25"
     },
     {
