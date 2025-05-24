@@ -165,6 +165,11 @@
         "date": "2025-05-24"
     },
     {
+        "name": "Exploration Place parkrun",
+        "reason": "Weather",
+        "date": "2025-05-24"
+    },
+    {
         "name": "Forster parkrun",
         "reason": "Weather",
         "date": "2025-05-24"
@@ -642,6 +647,11 @@
     {
         "name": "Queen\u2019s Parade junior parkrun, Aldershot",
         "reason": "Ghurka Cup",
+        "date": "2025-05-25"
+    },
+    {
+        "name": "Riversley Park junior parkrun",
+        "reason": "Venue unavailable",
         "date": "2025-05-25"
     },
     {
