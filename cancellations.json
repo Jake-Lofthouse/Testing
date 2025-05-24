@@ -595,8 +595,18 @@
         "date": "2025-05-25"
     },
     {
+        "name": "Devonport junior parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-25"
+    },
+    {
         "name": "Hafan Yr Afon junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-05-25"
+    },
+    {
+        "name": "Haulbowline Island junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-05-25"
     },
     {
