@@ -110,6 +110,11 @@
         "date": "2025-05-31"
     },
     {
+        "name": "Kitanagase Mirai Fureai Sogokoen parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-05-31"
+    },
+    {
         "name": "Leazes parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-05-31"
@@ -201,6 +206,11 @@
     },
     {
         "name": "Tsujido kaihin koen parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-05-31"
+    },
+    {
+        "name": "University of Galway parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-31"
     },
