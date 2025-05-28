@@ -125,6 +125,11 @@
         "date": "2025-05-31"
     },
     {
+        "name": "Maitland parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-31"
+    },
+    {
         "name": "Malm\u00f6 Ribersborg parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-31"
@@ -182,6 +187,11 @@
     {
         "name": "Sunny Hill parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-05-31"
+    },
+    {
+        "name": "Taree parkrun",
+        "reason": "Permission issue",
         "date": "2025-05-31"
     },
     {
