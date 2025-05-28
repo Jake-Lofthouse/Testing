@@ -85,6 +85,11 @@
         "date": "2025-05-31"
     },
     {
+        "name": "Ennerdale Stadium parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-05-31"
+    },
+    {
         "name": "Europapark parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-31"
@@ -230,6 +235,11 @@
         "date": "2025-05-31"
     },
     {
+        "name": "Tyne Green parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-31"
+    },
+    {
         "name": "University of Galway parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-31"
@@ -282,6 +292,11 @@
     {
         "name": "Burnley junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-06-01"
+    },
+    {
+        "name": "Clashduv junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-06-01"
     },
     {
