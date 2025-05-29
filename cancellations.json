@@ -200,6 +200,11 @@
         "date": "2025-05-31"
     },
     {
+        "name": "Riviera on Vaal parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-31"
+    },
+    {
         "name": "Rotherham parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-31"
@@ -392,6 +397,11 @@
     {
         "name": "St Mary\u2019s Campus junior parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-06-01"
+    },
+    {
+        "name": "Tyne Green junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-06-01"
     },
     {
