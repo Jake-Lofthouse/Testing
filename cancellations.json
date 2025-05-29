@@ -175,6 +175,11 @@
         "date": "2025-05-31"
     },
     {
+        "name": "Pioneer Dairy parkrun",
+        "reason": "Weather",
+        "date": "2025-05-31"
+    },
+    {
         "name": "Poole parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-31"
@@ -197,6 +202,11 @@
     {
         "name": "Silveroaks parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-05-31"
+    },
+    {
+        "name": "Somerset West parkrun",
+        "reason": "Venue unavailable",
         "date": "2025-05-31"
     },
     {
