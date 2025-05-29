@@ -54194,6 +54194,26 @@
         }
       },
       {
+        "id": 3672,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -1.586547,
+            52.773488
+          ]
+        },
+        "properties": {
+          "eventname": "coronationpark",
+          "EventLongName": "Coronation Park parkrun",
+          "EventShortName": "Coronation Park",
+          "LocalisedEventLongName": null,
+          "countrycode": 97,
+          "seriesid": 1,
+          "EventLocation": "Coronation Park"
+        }
+      },
+      {
         "id": 3674,
         "type": "Feature",
         "geometry": {
@@ -54391,6 +54411,66 @@
           "countrycode": 65,
           "seriesid": 1,
           "EventLocation": "Riverlution"
+        }
+      },
+      {
+        "id": 3688,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -2.941735,
+            54.399595
+          ]
+        },
+        "properties": {
+          "eventname": "brockholeonwindermere-juniors",
+          "EventLongName": "Brockhole on Windermere junior parkrun",
+          "EventShortName": "Brockhole on Windermere juniors",
+          "LocalisedEventLongName": null,
+          "countrycode": 97,
+          "seriesid": 2,
+          "EventLocation": "Brockhole on Windermere juniors"
+        }
+      },
+      {
+        "id": 3689,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -3.353097,
+            54.659599
+          ]
+        },
+        "properties": {
+          "eventname": "cockermouthgreenway-juniors",
+          "EventLongName": "Cockermouth Greenway junior parkrun",
+          "EventShortName": "Cockermouth Greenway juniors",
+          "LocalisedEventLongName": null,
+          "countrycode": 97,
+          "seriesid": 2,
+          "EventLocation": "Cockermouth Greenway juniors"
+        }
+      },
+      {
+        "id": 3690,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            175.171911,
+            -37.680844
+          ]
+        },
+        "properties": {
+          "eventname": "teawa",
+          "EventLongName": "Te Awa parkrun",
+          "EventShortName": "Te Awa",
+          "LocalisedEventLongName": null,
+          "countrycode": 65,
+          "seriesid": 1,
+          "EventLocation": "Te Awa"
         }
       }
     ]
