@@ -120,6 +120,11 @@
         "date": "2025-05-31"
     },
     {
+        "name": "Jeune Park parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-31"
+    },
+    {
         "name": "Kitanagase Mirai Fureai Sogokoen parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-31"
@@ -147,6 +152,11 @@
     {
         "name": "Millennium parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-05-31"
+    },
+    {
+        "name": "Mudgeeraba parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-05-31"
     },
     {
