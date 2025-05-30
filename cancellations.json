@@ -145,6 +145,11 @@
         "date": "2025-05-31"
     },
     {
+        "name": "Jells parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-31"
+    },
+    {
         "name": "Jeune Park parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-05-31"
@@ -165,6 +170,16 @@
         "date": "2025-05-31"
     },
     {
+        "name": "Limerick parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-31"
+    },
+    {
+        "name": "Maborikaigan yuhodo parkrun",
+        "reason": "Weather",
+        "date": "2025-05-31"
+    },
+    {
         "name": "Maitland parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-05-31"
@@ -177,6 +192,11 @@
     {
         "name": "Millennium parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-05-31"
+    },
+    {
+        "name": "Momoi harappa koen parkrun",
+        "reason": "Weather",
         "date": "2025-05-31"
     },
     {
@@ -316,6 +336,11 @@
     },
     {
         "name": "Urayasushi sogo koen parkrun",
+        "reason": "Weather",
+        "date": "2025-05-31"
+    },
+    {
+        "name": "Victory Heights Trail parkrun",
         "reason": "Weather",
         "date": "2025-05-31"
     },
