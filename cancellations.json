@@ -205,6 +205,11 @@
         "date": "2025-05-31"
     },
     {
+        "name": "Marine Parade parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-05-31"
+    },
+    {
         "name": "Millennium parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-05-31"
@@ -241,6 +246,11 @@
     },
     {
         "name": "Oosterplas parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-05-31"
+    },
+    {
+        "name": "Pendle parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-31"
     },
@@ -387,6 +397,11 @@
     {
         "name": "You Yangs parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-05-31"
+    },
+    {
+        "name": "parkrun Las \u0141agiewnicki",
+        "reason": "Shortage of volunteers",
         "date": "2025-05-31"
     },
     {
