@@ -105,6 +105,11 @@
         "date": "2025-05-31"
     },
     {
+        "name": "Dunedin parkrun",
+        "reason": "Weather",
+        "date": "2025-05-31"
+    },
+    {
         "name": "Dunfermline parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-31"
@@ -157,6 +162,11 @@
     {
         "name": "Hilton parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-05-31"
+    },
+    {
+        "name": "Invercargill parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-05-31"
     },
     {
