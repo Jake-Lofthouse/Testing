@@ -15,6 +15,11 @@
         "date": "2025-05-31"
     },
     {
+        "name": "Birchwood Trails parkrun",
+        "reason": "Air quality",
+        "date": "2025-05-31"
+    },
+    {
         "name": "Blackbutt parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-05-31"
@@ -392,6 +397,11 @@
     {
         "name": "Wallace parkrun, Lisburn",
         "reason": "Venue unavailable",
+        "date": "2025-05-31"
+    },
+    {
+        "name": "Wascana parkrun",
+        "reason": "Air quality",
         "date": "2025-05-31"
     },
     {
