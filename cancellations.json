@@ -35,6 +35,11 @@
         "date": "2025-05-31"
     },
     {
+        "name": "Branch Brook Park parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-31"
+    },
+    {
         "name": "Brickfields Park parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-31"
@@ -87,6 +92,11 @@
     {
         "name": "Chuo koen parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-05-31"
+    },
+    {
+        "name": "Clermont Waterfront parkrun",
+        "reason": "Weather",
         "date": "2025-05-31"
     },
     {
@@ -242,6 +252,11 @@
     {
         "name": "Marine Parade parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-05-31"
+    },
+    {
+        "name": "Mendel Riverbank parkrun",
+        "reason": "Air quality",
         "date": "2025-05-31"
     },
     {
@@ -510,6 +525,11 @@
         "date": "2025-06-01"
     },
     {
+        "name": "Harold Park junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-06-01"
+    },
+    {
         "name": "Hemlington Lake junior parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-06-01"
@@ -527,6 +547,11 @@
     {
         "name": "Mote Park junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-06-01"
+    },
+    {
+        "name": "Plas Newydd junior parkrun",
+        "reason": "Weather",
         "date": "2025-06-01"
     },
     {
