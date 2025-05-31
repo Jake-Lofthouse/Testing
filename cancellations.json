@@ -5,6 +5,11 @@
         "date": "2025-05-31"
     },
     {
+        "name": "Auldcathie District parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-05-31"
+    },
+    {
         "name": "Barking parkrun",
         "reason": "Venue unavailable",
         "date": "2025-05-31"
@@ -87,6 +92,11 @@
     {
         "name": "Conwy parkrun",
         "reason": "Permission issue",
+        "date": "2025-05-31"
+    },
+    {
+        "name": "Cotsford Fields parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-05-31"
     },
     {
