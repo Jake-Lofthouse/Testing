@@ -90,6 +90,11 @@
         "date": "2025-06-07"
     },
     {
+        "name": "Fort La Tour parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-06-07"
+    },
+    {
         "name": "Franschhoek parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-07"
@@ -121,6 +126,11 @@
     },
     {
         "name": "Hastings High School parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-06-07"
+    },
+    {
+        "name": "Ho\u00ebrskool Ben Viljoen parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-07"
     },
