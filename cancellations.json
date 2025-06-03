@@ -175,6 +175,11 @@
         "date": "2025-06-07"
     },
     {
+        "name": "Loch Neaton parkrun, Watton",
+        "reason": "Venue unavailable",
+        "date": "2025-06-07"
+    },
+    {
         "name": "Lurgan Park parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-07"
@@ -277,6 +282,11 @@
     {
         "name": "Swellendam parkrun",
         "reason": "Clashes with other event and overlapping of course",
+        "date": "2025-06-07"
+    },
+    {
+        "name": "Tapijn parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-06-07"
     },
     {
@@ -415,6 +425,11 @@
         "date": "2025-06-08"
     },
     {
+        "name": "Gnoll junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-06-08"
+    },
+    {
         "name": "Graves junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-08"
@@ -501,6 +516,11 @@
     },
     {
         "name": "Verulamium junior parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-06-08"
+    },
+    {
+        "name": "Watton Sports Centre junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-08"
     },
