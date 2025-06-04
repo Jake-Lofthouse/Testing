@@ -970,8 +970,19 @@ if (type === "camping") {
     `;
 
     // If there's an image, add it to the popup content
-popupContent += `<img src="${imageUrl || '/Icons/CaravanDefault.png'}" alt="${name}" class="hotel-popup-image" />`;
-
+    if (imageUrl) {
+popupContent += `
+<div class="mapilly-container" id="mapillary-${lat}-${lon.replace('.', '')}">
+    <iframe
+        width="100%"
+        height="150"
+        style="border-radius: 10px; border: none;"
+        src="https://www.mapillary.com/embed?lat=${lat}&lng=${lon}&z=17&menu=false"
+        allowfullscreen
+    ></iframe>
+</div>
+`;
+    }
 
 popupContent += `
     <button onclick="openDirections(${lat}, ${lon})">
