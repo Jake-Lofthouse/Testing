@@ -140,6 +140,11 @@
         "date": "2025-06-07"
     },
     {
+        "name": "Jeune Park parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-06-07"
+    },
+    {
         "name": "Kambaku Golf Club parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-07"
@@ -307,6 +312,11 @@
     {
         "name": "The Pastures parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-06-07"
+    },
+    {
+        "name": "The Terrace parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-06-07"
     },
     {
