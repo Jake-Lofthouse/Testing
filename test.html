@@ -899,6 +899,13 @@ const campsiteIcon = L.icon({
     popupAnchor: [0, -38],
 });
 
+const caravanIcon = L.icon({
+    iconUrl: '/Icons/Caravan.png',
+    iconSize: [38, 38],
+    iconAnchor: [19, 38],
+    popupAnchor: [0, -38],
+});
+
 // Function to search for nearby hotels and campsites using TomTom
 function findNearbyPlaces(lat, lng) {
     console.log(`Searching for hotels and campsites near: ${lat}, ${lng}`);
@@ -911,6 +918,9 @@ function findNearbyPlaces(lat, lng) {
 
     // Search for campsites
     fetchTomTomPlaces(lat, lng, 'camping', campsiteIcon);
+    
+    //Search for caravansites
+    fetchTomTomPlaces(lat, lng, 'caravan parking', caravanIcon);
 }
 
 // Function to fetch hotels or campsites from TomTom API
