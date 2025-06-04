@@ -911,13 +911,13 @@ function findNearbyPlaces(lat, lng) {
     console.log(`Searching for hotels and campsites near: ${lat}, ${lng}`);
 
     //Search for cafes
-    fetchTomTomPlaces(lat, lng, 'cafe', cafeIcon);
+    fetchTomTomPlaces(lat, lng, 'CAFE_PUB', cafeIcon);
 
     // Search for hotels
     fetchTomTomPlaces(lat, lng, 'hotel', hotelIcon);
 
     // Search for campsites
-    fetchTomTomPlaces(lat, lng, 'camping', campsiteIcon);
+    fetchTomTomPlaces(lat, lng, 'camping ground', campsiteIcon);
     
     //Search for caravansites
     fetchTomTomPlaces(lat, lng, 'caravan site', caravanIcon);
