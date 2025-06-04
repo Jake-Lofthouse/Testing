@@ -959,15 +959,14 @@ let buttonHoverColor = "#b0874e"; // Default
 if (type === "camping") {
     buttonColor = "#0d7640";
     buttonHoverColor = "#0a5a30";
-}
-if (type.toLowerCase().includes("caravan")) {
+} else if (type.toLowerCase().includes("caravan")) {
     buttonColor = "#046e7b";
     buttonHoverColor = "#03505d";
-}
 } else if (type.toLowerCase().includes("cafe")) {
     buttonColor = "#4b1f2c";
     buttonHoverColor = "#702f45";
 }
+
     // Create popup content
     let popupContent = `
         <div class="hotel-popup" style="--button-color: ${buttonColor}; --button-hover-color: ${buttonHoverColor}">
