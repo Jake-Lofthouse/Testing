@@ -953,10 +953,16 @@ function createPlaceMarker(place, type, icon) {
     const websiteUrl = place.poi?.url || null;
     const imageUrl = place.poi?.imageUrl || null;
 
-    // Define button colors based on place type
-    const buttonColor = type === "camping" ? "#0d7640" : "#c8a367";
-    const buttonHoverColor = type === "camping" ? "#0a5a30" : "#b0874e";
+let buttonColor = "#c8a367"; // Default
+let buttonHoverColor = "#b0874e"; // Default
 
+if (type === "camping") {
+    buttonColor = "#0d7640";
+    buttonHoverColor = "#0a5a30";
+} else if (type.toLowerCase().includes("caravan")) {
+    buttonColor = "#046e7b";
+    buttonHoverColor = "#03505d";
+}
     // Create popup content
     let popupContent = `
         <div class="hotel-popup" style="--button-color: ${buttonColor}; --button-hover-color: ${buttonHoverColor}">
@@ -964,9 +970,8 @@ function createPlaceMarker(place, type, icon) {
     `;
 
     // If there's an image, add it to the popup content
-    if (imageUrl) {
-        popupContent += `<img src="${imageUrl}" alt="${name}" class="hotel-popup-image" />`;
-    }
+popupContent += `<img src="${imageUrl || '/Icons/CaravanDefault.png'}" alt="${name}" class="hotel-popup-image" />`;
+
 
 popupContent += `
     <button onclick="openDirections(${lat}, ${lon})">
