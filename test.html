@@ -920,7 +920,7 @@ function findNearbyPlaces(lat, lng) {
     fetchTomTomPlaces(lat, lng, 'camping', campsiteIcon);
     
     //Search for caravansites
-    fetchTomTomPlaces(lat, lng, 'caravan parking', caravanIcon);
+    fetchTomTomPlaces(lat, lng, 'caravan sites', caravanIcon);
 }
 
 // Function to fetch hotels or campsites from TomTom API
@@ -970,19 +970,10 @@ if (type === "camping") {
     `;
 
     // If there's an image, add it to the popup content
-    if (imageUrl) {
-popupContent += `
-<div class="mapilly-container" id="mapillary-${lat}-${lon.replace('.', '')}">
-    <iframe
-        width="100%"
-        height="150"
-        style="border-radius: 10px; border: none;"
-        src="https://www.mapillary.com/embed?lat=${lat}&lng=${lon}&z=17&menu=false"
-        allowfullscreen
-    ></iframe>
-</div>
-`;
-    }
+if (imageUrl) {
+    popupContent += `<img src="${imageUrl}" alt="${name}" class="hotel-popup-image" />`;
+}
+
 
 popupContent += `
     <button onclick="openDirections(${lat}, ${lon})">
