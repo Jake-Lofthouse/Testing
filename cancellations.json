@@ -145,6 +145,11 @@
         "date": "2025-06-07"
     },
     {
+        "name": "Jacobsdal parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-06-07"
+    },
+    {
         "name": "Jells parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-06-07"
@@ -187,6 +192,16 @@
     {
         "name": "Laytown Beach parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-06-07"
+    },
+    {
+        "name": "Limerick parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-06-07"
+    },
+    {
+        "name": "Living Colour parkrun",
+        "reason": "Weather",
         "date": "2025-06-07"
     },
     {
@@ -275,12 +290,22 @@
         "date": "2025-06-07"
     },
     {
+        "name": "Riviera on Vaal parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-06-07"
+    },
+    {
         "name": "Rother Valley parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-07"
     },
     {
         "name": "Simmons Park parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-06-07"
+    },
+    {
+        "name": "Sittingbourne parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-07"
     },
