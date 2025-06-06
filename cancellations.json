@@ -130,6 +130,11 @@
         "date": "2025-06-07"
     },
     {
+        "name": "Hackworth parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-06-07"
+    },
+    {
         "name": "Hamlet Park parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-07"
@@ -350,6 +355,11 @@
         "date": "2025-06-07"
     },
     {
+        "name": "Stones Corner parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-06-07"
+    },
+    {
         "name": "Strokestown parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-07"
@@ -542,6 +552,11 @@
     {
         "name": "Leigh junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-06-08"
+    },
+    {
+        "name": "Longford junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-06-08"
     },
     {
