@@ -25,6 +25,11 @@
         "date": "2025-06-07"
     },
     {
+        "name": "Breede Valley parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-06-07"
+    },
+    {
         "name": "Brockwell parkrun, Herne Hill",
         "reason": "Venue unavailable",
         "date": "2025-06-07"
@@ -432,6 +437,11 @@
     {
         "name": "Victor Harbor parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-06-07"
+    },
+    {
+        "name": "Weltevrede Wine Estate parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-06-07"
     },
     {
