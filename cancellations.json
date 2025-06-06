@@ -280,6 +280,11 @@
         "date": "2025-06-07"
     },
     {
+        "name": "Pioneer Dairy parkrun",
+        "reason": "Weather",
+        "date": "2025-06-07"
+    },
+    {
         "name": "Pontypool parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-07"
@@ -296,6 +301,11 @@
     },
     {
         "name": "Red Point Church parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-06-07"
+    },
+    {
+        "name": "Riverside parkrun, Grand Rapids",
         "reason": "Venue unavailable",
         "date": "2025-06-07"
     },
