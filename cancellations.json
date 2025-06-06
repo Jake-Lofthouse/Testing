@@ -45,6 +45,11 @@
         "date": "2025-06-07"
     },
     {
+        "name": "Charleys Creek parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-06-07"
+    },
+    {
         "name": "Clare Castle parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-07"
@@ -252,6 +257,11 @@
     {
         "name": "Mtunzini parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-06-07"
+    },
+    {
+        "name": "Mudgeeraba parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-06-07"
     },
     {
