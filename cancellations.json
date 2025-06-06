@@ -115,6 +115,16 @@
         "date": "2025-06-07"
     },
     {
+        "name": "Greenpoint parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-06-07"
+    },
+    {
+        "name": "Groeneweide parkrun",
+        "reason": "Weather",
+        "date": "2025-06-07"
+    },
+    {
         "name": "Guildford parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-07"
@@ -402,6 +412,11 @@
     {
         "name": "Urunga parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-06-07"
+    },
+    {
+        "name": "Victor Harbor parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-06-07"
     },
     {
