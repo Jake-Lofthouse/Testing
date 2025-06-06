@@ -20,6 +20,11 @@
         "date": "2025-06-07"
     },
     {
+        "name": "Bolberry Down parkrun",
+        "reason": "Weather",
+        "date": "2025-06-07"
+    },
+    {
         "name": "Brakpan parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-06-07"
@@ -120,6 +125,11 @@
         "date": "2025-06-07"
     },
     {
+        "name": "Graves parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-06-07"
+    },
+    {
         "name": "Greenpoint parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-06-07"
@@ -192,6 +202,11 @@
     {
         "name": "Karoola Park parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-06-07"
+    },
+    {
+        "name": "Kleinevalleij parkrun",
+        "reason": "Weather",
         "date": "2025-06-07"
     },
     {
