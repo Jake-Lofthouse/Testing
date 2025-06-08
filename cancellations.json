@@ -225,6 +225,11 @@
         "date": "2025-06-14"
     },
     {
+        "name": "The Terrace parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-06-14"
+    },
+    {
         "name": "Torquay parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-14"
@@ -351,6 +356,11 @@
     },
     {
         "name": "Malvern Park junior parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-06-15"
+    },
+    {
+        "name": "Mowbray Park junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-15"
     },
