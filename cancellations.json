@@ -305,6 +305,11 @@
         "date": "2025-06-14"
     },
     {
+        "name": "Alexandra junior parkrun, Oldham",
+        "reason": "Venue unavailable",
+        "date": "2025-06-15"
+    },
+    {
         "name": "Antrim Castle Gardens junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-15"
@@ -347,6 +352,11 @@
     {
         "name": "Haywards Heath junior parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-06-15"
+    },
+    {
+        "name": "Helix junior parkrun",
+        "reason": "Venue unavailable",
         "date": "2025-06-15"
     },
     {
