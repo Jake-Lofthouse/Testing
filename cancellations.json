@@ -60,6 +60,11 @@
         "date": "2025-06-14"
     },
     {
+        "name": "Delaware and Raritan Canal parkrun",
+        "reason": "Permission issue",
+        "date": "2025-06-14"
+    },
+    {
         "name": "Enniskillen parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-14"
@@ -206,6 +211,11 @@
     },
     {
         "name": "Shepton Mallet parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-06-14"
+    },
+    {
+        "name": "Shongweni parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-14"
     },
