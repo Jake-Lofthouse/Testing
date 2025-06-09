@@ -25,6 +25,11 @@
         "date": "2025-06-14"
     },
     {
+        "name": "Bryn Bach parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-06-14"
+    },
+    {
         "name": "Canterbury parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-14"
@@ -36,6 +41,11 @@
     },
     {
         "name": "Chipping Sodbury parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-06-14"
+    },
+    {
+        "name": "Colchester Castle parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-14"
     },
