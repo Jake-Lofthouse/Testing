@@ -110,6 +110,11 @@
         "date": "2025-06-14"
     },
     {
+        "name": "Jacobsdal parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-06-14"
+    },
+    {
         "name": "Kitanagase Mirai Fureai Sogokoen parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-14"
@@ -327,6 +332,11 @@
     {
         "name": "Birchwood Leisure Centre junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-06-15"
+    },
+    {
+        "name": "Dromleena Lawn junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-06-15"
     },
     {
