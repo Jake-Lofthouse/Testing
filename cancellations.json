@@ -30,6 +30,11 @@
         "date": "2025-06-14"
     },
     {
+        "name": "Brynaman parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-06-14"
+    },
+    {
         "name": "Canterbury parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-14"
@@ -125,6 +130,11 @@
         "date": "2025-06-14"
     },
     {
+        "name": "Harrismith parkrun",
+        "reason": "Permission issue",
+        "date": "2025-06-14"
+    },
+    {
         "name": "Heaton parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-14"
@@ -137,6 +147,11 @@
     {
         "name": "Huddersfield parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-06-14"
+    },
+    {
+        "name": "Ingrebourne Hill parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-06-14"
     },
     {
