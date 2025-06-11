@@ -155,6 +155,11 @@
         "date": "2025-06-14"
     },
     {
+        "name": "Limerick parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-06-14"
+    },
+    {
         "name": "Lister Park parkrun, Bradford",
         "reason": "Venue unavailable",
         "date": "2025-06-14"
@@ -187,6 +192,11 @@
     {
         "name": "Meyerton parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-06-14"
+    },
+    {
+        "name": "Millennium parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-06-14"
     },
     {
