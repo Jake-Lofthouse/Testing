@@ -1534,26 +1534,6 @@
         }
       },
       {
-        "id": 74,
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            1.116032,
-            52.050923
-          ]
-        },
-        "properties": {
-          "eventname": "ipswich",
-          "EventLongName": "Ipswich parkrun",
-          "EventShortName": "Ipswich",
-          "LocalisedEventLongName": null,
-          "countrycode": 97,
-          "seriesid": 1,
-          "EventLocation": "Chantry Park"
-        }
-      },
-      {
         "id": 75,
         "type": "Feature",
         "geometry": {
@@ -5059,8 +5039,8 @@
         "geometry": {
           "type": "Point",
           "coordinates": [
-            -1.285714,
-            50.71332
+            -1.143086,
+            50.725836
           ]
         },
         "properties": {
@@ -14750,7 +14730,7 @@
           "LocalisedEventLongName": null,
           "countrycode": 3,
           "seriesid": 1,
-          "EventLocation": "Young Street (underneath the Joy Baluch "
+          "EventLocation": "Eastside Foreshore (underneath the Joy Baluch)"
         }
       },
       {
@@ -24134,26 +24114,6 @@
         }
       },
       {
-        "id": 1741,
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            153.022849,
-            -30.497475
-          ]
-        },
-        "properties": {
-          "eventname": "urunga",
-          "EventLongName": "Urunga parkrun",
-          "EventShortName": "Urunga",
-          "LocalisedEventLongName": null,
-          "countrycode": 3,
-          "seriesid": 1,
-          "EventLocation": "Urunga Boardwalk"
-        }
-      },
-      {
         "id": 1742,
         "type": "Feature",
         "geometry": {
@@ -25950,7 +25910,7 @@
           "LocalisedEventLongName": null,
           "countrycode": 97,
           "seriesid": 1,
-          "EventLocation": "Hogmoor Inclosure "
+          "EventLocation": "Hogmoor Inclosure"
         }
       },
       {
@@ -49626,11 +49586,11 @@
         "properties": {
           "eventname": "norfolkroadplayingfields-juniors",
           "EventLongName": "Norfolk Road Playing Fields junior parkrun",
-          "EventShortName": "Norfolk Road Playing Fields juniors ",
+          "EventShortName": "Norfolk Road Playing Fields juniors",
           "LocalisedEventLongName": null,
           "countrycode": 97,
           "seriesid": 2,
-          "EventLocation": "Norfolk Road Playing Fields juniors "
+          "EventLocation": "Norfolk Road Playing Fields"
         }
       },
       {
@@ -52270,7 +52230,7 @@
           "LocalisedEventLongName": null,
           "countrycode": 3,
           "seriesid": 1,
-          "EventLocation": "Emerald Lake   "
+          "EventLocation": "Emerald Lake"
         }
       },
       {
@@ -54354,6 +54314,26 @@
         }
       },
       {
+        "id": 3681,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -6.339015,
+            54.170834
+          ]
+        },
+        "properties": {
+          "eventname": "newrygreenway",
+          "EventLongName": "Newry Greenway parkrun",
+          "EventShortName": "Newry Greenway",
+          "LocalisedEventLongName": null,
+          "countrycode": 97,
+          "seriesid": 1,
+          "EventLocation": "Newry Greenway"
+        }
+      },
+      {
         "id": 3682,
         "type": "Feature",
         "geometry": {
@@ -54371,6 +54351,26 @@
           "countrycode": 98,
           "seriesid": 1,
           "EventLocation": "Jenkins Park"
+        }
+      },
+      {
+        "id": 3683,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -3.880411,
+            51.697844
+          ]
+        },
+        "properties": {
+          "eventname": "parccoedgwilym",
+          "EventLongName": "Parc Coed Gwilym parkrun",
+          "EventShortName": "Parc Coed Gwilym",
+          "LocalisedEventLongName": null,
+          "countrycode": 97,
+          "seriesid": 1,
+          "EventLocation": "Parc Coed Gwilym"
         }
       },
       {
@@ -54471,6 +54471,66 @@
           "countrycode": 65,
           "seriesid": 1,
           "EventLocation": "Te Awa"
+        }
+      },
+      {
+        "id": 3694,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            137.212694,
+            36.708301
+          ]
+        },
+        "properties": {
+          "eventname": "fuganungakansuikoen",
+          "EventLongName": "Fugan unga kansui koen parkrun",
+          "EventShortName": "Fugan unga kansui koen",
+          "LocalisedEventLongName": "富岩運河環水公園parkrun",
+          "countrycode": 46,
+          "seriesid": 1,
+          "EventLocation": "Fugan unga kansui koen"
+        }
+      },
+      {
+        "id": 3695,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            8.833296,
+            53.058341
+          ]
+        },
+        "properties": {
+          "eventname": "werdersee",
+          "EventLongName": "Werdersee parkrun",
+          "EventShortName": "Werdersee",
+          "LocalisedEventLongName": null,
+          "countrycode": 32,
+          "seriesid": 1,
+          "EventLocation": "Werdersee"
+        }
+      },
+      {
+        "id": 3698,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            175.582634,
+            -40.234658
+          ]
+        },
+        "properties": {
+          "eventname": "orouariverwalkway",
+          "EventLongName": "Ōroua River Walkway parkrun",
+          "EventShortName": "Ōroua River Walkway",
+          "LocalisedEventLongName": null,
+          "countrycode": 65,
+          "seriesid": 1,
+          "EventLocation": "Ōroua River Walkway"
         }
       }
     ]
