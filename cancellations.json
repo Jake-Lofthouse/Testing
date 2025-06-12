@@ -160,6 +160,11 @@
         "date": "2025-06-14"
     },
     {
+        "name": "Jells parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-06-14"
+    },
+    {
         "name": "Jeune Park parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-06-14"
@@ -222,6 +227,11 @@
     {
         "name": "Nagaragawa koen parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-06-14"
+    },
+    {
+        "name": "North Lakes parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-06-14"
     },
     {
