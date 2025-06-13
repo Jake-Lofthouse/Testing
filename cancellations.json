@@ -245,6 +245,11 @@
         "date": "2025-06-14"
     },
     {
+        "name": "Mount Stuart parkrun",
+        "reason": "Weather",
+        "date": "2025-06-14"
+    },
+    {
         "name": "Mudgeeraba parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-06-14"
@@ -342,6 +347,11 @@
     {
         "name": "Stadtpark parkrun, Graz",
         "reason": "Venue unavailable",
+        "date": "2025-06-14"
+    },
+    {
+        "name": "Stamford Park parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-06-14"
     },
     {
@@ -497,6 +507,11 @@
     {
         "name": "Gadebridge Park junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-06-15"
+    },
+    {
+        "name": "Guildford junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-06-15"
     },
     {
