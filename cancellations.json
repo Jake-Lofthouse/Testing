@@ -85,6 +85,11 @@
         "date": "2025-06-14"
     },
     {
+        "name": "Dungannon Park parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-06-14"
+    },
+    {
         "name": "Enniskillen parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-14"
@@ -152,6 +157,11 @@
     {
         "name": "Heaton parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-06-14"
+    },
+    {
+        "name": "Heijo kyuseki Rekishi koen parkrun",
+        "reason": "Weather",
         "date": "2025-06-14"
     },
     {
@@ -422,6 +432,11 @@
     {
         "name": "Wantijpark parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-06-14"
+    },
+    {
+        "name": "Waterstown parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-06-14"
     },
     {
