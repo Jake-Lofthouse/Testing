@@ -178,11 +178,6 @@
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
         }
 
-        .location-button.active {
-            background: var(--success-gradient);
-            color: white;
-        }
-
         /* Search suggestions dropdown - improved visibility */
         .search-suggestions {
             position: absolute;
@@ -543,12 +538,13 @@
             }
 
             .search-wrapper {
-                flex-direction: column;
-                gap: 8px;
+                flex-direction: row;
+                gap: 12px;
+                align-items: center;
             }
 
             .search-container {
-                width: 100%;
+                flex: 1;
             }
 
             #search-input {
@@ -558,7 +554,7 @@
             }
 
             .location-button {
-                align-self: flex-end;
+                flex-shrink: 0;
             }
 
             .popup-title {
@@ -825,92 +821,70 @@
         }
 
         function showParkrunsInArea(lat, lon, boundingBox) {
-            if (!boundingBox) return;
-            
-            const [south, north, west, east] = boundingBox.map(coord => parseFloat(coord));
-            
-            markers.clearLayers();
-            
-            data.events.features.forEach(feature => {
-                if (feature.geometry.type === 'Point') {
-                    const [lonEvent, latEvent] = feature.geometry.coordinates;
-                    
-                    if (latEvent >= south && latEvent <= north && lonEvent >= west && lonEvent <= east) {
-                        createParkrunMarker(feature);
+            // Don't clear all markers, just focus on the area
+            // All parkruns remain visible
+            if (boundingBox) {
+                const [south, north, west, east] = boundingBox.map(coord => parseFloat(coord));
+                
+                // Find parkruns in the area and highlight them or zoom to show them
+                let foundParkruns = [];
+                data.events.features.forEach(feature => {
+                    if (feature.geometry.type === 'Point') {
+                        const [lonEvent, latEvent] = feature.geometry.coordinates;
+                        
+                        if (latEvent >= south && latEvent <= north && lonEvent >= west && lonEvent <= east) {
+                            foundParkruns.push([latEvent, lonEvent]);
+                        }
                     }
+                });
+                
+                // If we found parkruns in the area, fit the map to show them
+                if (foundParkruns.length > 0) {
+                    const group = new L.featureGroup(foundParkruns.map(coords => L.marker(coords)));
+                    map.fitBounds(group.getBounds().pad(0.1));
                 }
-            });
-            
-            map.addLayer(markers);
-        }
-
-        // Simplified location functionality - always on tracking
-        function returnToLocation() {
-            if (userLocationMarker) {
-                map.flyTo(userLocationMarker.getLatLng(), 15, { duration: 1.5 });
-            } else {
-                startLocationTracking();
             }
         }
 
-        function startLocationTracking() {
-            const locationButton = document.getElementById('locationButton');
-            
+        // Simplified location functionality - just return to location
+        function returnToLocation() {
             if (navigator.geolocation) {
-                locationButton.classList.add('active');
-                isTrackingLocation = true;
-                
-                // Get initial position
                 navigator.geolocation.getCurrentPosition(
                     (position) => {
-                        updateUserLocation(position);
-                        map.setView([position.coords.latitude, position.coords.longitude], 15);
+                        const lat = position.coords.latitude;
+                        const lng = position.coords.longitude;
+                        
+                        // Update or create user location marker
+                        if (!userLocationMarker) {
+                            userLocationMarker = L.marker([lat, lng], { icon: LocationIcon }).addTo(map)
+                                .bindPopup(`You are here`);
+                        } else {
+                            userLocationMarker.setLatLng([lat, lng]);
+                        }
+                        
+                        // Fly to user location
+                        map.flyTo([lat, lng], 15, { duration: 1.5 });
                     },
-                    handleLocationError,
+                    (error) => {
+                        let message = 'Cannot find your location';
+                        switch(error.code) {
+                            case error.PERMISSION_DENIED:
+                                message = 'Location access denied by user';
+                                break;
+                            case error.POSITION_UNAVAILABLE:
+                                message = 'Location information unavailable';
+                                break;
+                            case error.TIMEOUT:
+                                message = 'Location request timed out';
+                                break;
+                        }
+                        createToast('error', message);
+                    },
                     { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
-                );
-                
-                // Start watching position
-                locationWatchId = navigator.geolocation.watchPosition(
-                    updateUserLocation,
-                    handleLocationError,
-                    { enableHighAccuracy: true, timeout: 10000, maximumAge: 30000 }
                 );
             } else {
                 createToast('error', 'Geolocation is not supported by this browser');
             }
-        }
-
-        function updateUserLocation(position) {
-            const lat = position.coords.latitude;
-            const lng = position.coords.longitude;
-            const accuracy = position.coords.accuracy;
-
-            if (!userLocationMarker) {
-                userLocationMarker = L.marker([lat, lng], { icon: LocationIcon }).addTo(map)
-                    .bindPopup(`You are here (±${Math.round(accuracy)}m accuracy)`);
-            } else {
-                userLocationMarker.setLatLng([lat, lng]);
-                userLocationMarker.getPopup().setContent(`You are here (±${Math.round(accuracy)}m accuracy)`);
-            }
-        }
-
-        function handleLocationError(error) {
-            let message = 'Cannot find your location';
-            
-            switch(error.code) {
-                case error.PERMISSION_DENIED:
-                    message = 'Location access denied by user';
-                    break;
-                case error.POSITION_UNAVAILABLE:
-                    message = 'Location information unavailable';
-                    break;
-                case error.TIMEOUT:
-                    message = 'Location request timed out';
-                    break;
-            }
-            
-            createToast('error', message);
         }
 
         // All the original JavaScript functionality
@@ -1383,14 +1357,9 @@
             window.open(url, '_blank');
         }
 
-        // Initialize location tracking if URL has coordinates
+        // Initialize map position
         if (hasValidCoords) {
             map.setView([lat, lon], zoom);
-        } else {
-            // Auto-start location tracking on first load
-            setTimeout(() => {
-                startLocationTracking();
-            }, 1000);
         }
     </script>
 </body>
