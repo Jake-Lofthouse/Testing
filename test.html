@@ -702,7 +702,7 @@
                             parkrunSuggestions.push({
                                 type: 'parkrun',
                                 title: eventName,
-                                subtitle: 'Parkrun Event',
+                                subtitle: 'parkrun Event',
                                 data: feature
                             });
                         }
@@ -884,6 +884,30 @@
                 );
             } else {
                 createToast('error', 'Geolocation is not supported by this browser');
+            }
+        }
+
+        // Auto-locate user on startup
+        function autoLocateUser() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const lat = position.coords.latitude;
+                        const lng = position.coords.longitude;
+                        
+                        // Create user location marker
+                        userLocationMarker = L.marker([lat, lng], { icon: LocationIcon }).addTo(map)
+                            .bindPopup(`You are here`);
+                        
+                        // Set map view to user location
+                        map.setView([lat, lng], 13);
+                    },
+                    (error) => {
+                        // Silently fail on startup - don't show error toast
+                        console.log('Auto-location failed:', error.message);
+                    },
+                    { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
+                );
             }
         }
 
@@ -1357,9 +1381,14 @@
             window.open(url, '_blank');
         }
 
-        // Initialize map position
+        // Initialize map position and auto-locate user
         if (hasValidCoords) {
             map.setView([lat, lon], zoom);
+        } else {
+            // Auto-locate user on startup if no URL coordinates
+            setTimeout(() => {
+                autoLocateUser();
+            }, 1000);
         }
     </script>
 </body>
