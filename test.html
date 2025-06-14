@@ -30,8 +30,8 @@
         @import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap');
         
         :root {
-            --glass-bg: rgba(255, 255, 255, 0.15);
-            --glass-border: rgba(255, 255, 255, 0.2);
+            --glass-bg: rgba(255, 255, 255, 0.25);
+            --glass-border: rgba(255, 255, 255, 0.3);
             --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
             --glass-backdrop: blur(20px);
             --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -39,10 +39,13 @@
             --success-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
             --warning-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
             --danger-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-            --hotel-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --course-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            --volunteer-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-            --direction-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            
+            /* Better parkrun button colors */
+            --course-gradient: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            --volunteer-gradient: linear-gradient(135deg, #fd7e14 0%, #ffc107 100%);
+            --direction-gradient: linear-gradient(135deg, #dc3545 0%, #e83e8c 100%);
+            --hotel-gradient: linear-gradient(135deg, #6f42c1 0%, #e83e8c 100%);
+            
             --text-primary: rgba(0, 0, 0, 0.87);
             --text-secondary: rgba(0, 0, 0, 0.6);
             --border-radius: 16px;
@@ -108,13 +111,13 @@
         }
 
         .search-container:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.35);
             transform: translateY(-1px);
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
         }
 
         .search-container:focus-within {
-            background: rgba(255, 255, 255, 0.25);
+            background: rgba(255, 255, 255, 0.4);
             border-color: rgba(102, 126, 234, 0.5);
             box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1), var(--glass-shadow);
         }
@@ -149,7 +152,7 @@
             color: var(--text-primary);
         }
 
-        /* Location button */
+        /* Location button - removed pulse animation */
         .location-button {
             width: 48px;
             height: 48px;
@@ -170,7 +173,7 @@
         }
 
         .location-button:hover {
-            background: rgba(255, 255, 255, 0.25);
+            background: rgba(255, 255, 255, 0.35);
             transform: translateY(-2px);
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
         }
@@ -178,27 +181,20 @@
         .location-button.active {
             background: var(--success-gradient);
             color: white;
-            animation: pulse 2s infinite;
         }
 
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(67, 233, 123, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(67, 233, 123, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(67, 233, 123, 0); }
-        }
-
-        /* Search suggestions dropdown - FIXED */
+        /* Search suggestions dropdown - improved visibility */
         .search-suggestions {
             position: absolute;
             top: calc(100% + 8px);
             left: 0;
             right: 0;
-            background: var(--glass-bg);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: var(--glass-backdrop);
             -webkit-backdrop-filter: var(--glass-backdrop);
-            border: 1px solid var(--glass-border);
+            border: 1px solid rgba(255, 255, 255, 0.5);
             border-radius: var(--border-radius);
-            box-shadow: var(--glass-shadow);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
             max-height: 400px;
             overflow-y: auto;
             display: none;
@@ -228,7 +224,7 @@
             gap: 16px;
             cursor: pointer;
             transition: var(--transition);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         }
 
         .suggestion-item:last-child {
@@ -236,7 +232,7 @@
         }
 
         .suggestion-item:hover {
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(102, 126, 234, 0.1);
         }
 
         .suggestion-icon {
@@ -287,13 +283,13 @@
             padding: 12px 20px;
             font-weight: 600;
             color: var(--text-primary);
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(0, 0, 0, 0.05);
             font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
-        /* Solid buttons with gradients */
+        /* Solid buttons with better parkrun colors */
         .glass-button {
             border: none;
             border-radius: var(--border-radius-small);
@@ -321,16 +317,24 @@
             transform: translateY(0);
         }
 
-        /* Specific button styles with solid gradients */
-        .hotel-btn { background: var(--hotel-gradient); }
-        .course-btn { background: var(--course-gradient); }
-        .volunteer-btn { background: var(--volunteer-gradient); }
-        .direction-btn { background: var(--direction-gradient); }
+        /* Better parkrun button colors */
+        .course-btn { 
+            background: var(--course-gradient);
+        }
+        .volunteer-btn { 
+            background: var(--volunteer-gradient);
+        }
+        .direction-btn { 
+            background: var(--direction-gradient);
+        }
+        .hotel-btn { 
+            background: var(--hotel-gradient);
+        }
 
-        .hotel-btn:hover { box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4); }
-        .course-btn:hover { box-shadow: 0 8px 25px rgba(79, 172, 254, 0.4); }
-        .volunteer-btn:hover { box-shadow: 0 8px 25px rgba(67, 233, 123, 0.4); }
-        .direction-btn:hover { box-shadow: 0 8px 25px rgba(250, 112, 154, 0.4); }
+        .course-btn:hover { box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4); }
+        .volunteer-btn:hover { box-shadow: 0 8px 25px rgba(253, 126, 20, 0.4); }
+        .direction-btn:hover { box-shadow: 0 8px 25px rgba(220, 53, 69, 0.4); }
+        .hotel-btn:hover { box-shadow: 0 8px 25px rgba(111, 66, 193, 0.4); }
 
         /* Popup styles */
         .leaflet-popup-content-wrapper {
@@ -370,7 +374,7 @@
             transform: scale(1.02);
         }
 
-        /* Weather iframe container with loading */
+        /* Weather iframe container with black loading icon */
         .weather-container {
             position: relative;
             margin-bottom: 16px;
@@ -389,7 +393,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.9);
             z-index: 1;
         }
 
@@ -400,8 +404,8 @@
         .spinner {
             width: 32px;
             height: 32px;
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            border-top: 3px solid var(--primary-gradient);
+            border: 3px solid rgba(0, 0, 0, 0.1);
+            border-top: 3px solid #333;
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
@@ -613,7 +617,7 @@
                 <input type="text" id="search-input" placeholder="Search places or parkruns...">
                 <div class="search-suggestions" id="search-suggestions"></div>
             </div>
-            <button class="location-button" id="locationButton" onclick="toggleLocationTracking()" title="Toggle location tracking">
+            <button class="location-button" id="locationButton" onclick="returnToLocation()" title="Return to my location">
                 <i class="fas fa-crosshairs"></i>
             </button>
         </div>
@@ -758,12 +762,12 @@
             let currentCategory = '';
 
             suggestions.forEach(suggestion => {
-                // Add category headers
+                // Add category headers without emoji icons
                 if (suggestion.type !== currentCategory) {
                     if (suggestion.type === 'parkrun') {
-                        html += '<div class="suggestion-category">🏃‍♂️ Parkruns</div>';
+                        html += '<div class="suggestion-category">PARKRUNS</div>';
                     } else if (suggestion.type === 'place') {
-                        html += '<div class="suggestion-category">📍 Places</div>';
+                        html += '<div class="suggestion-category">PLACES</div>';
                     }
                     currentCategory = suggestion.type;
                 }
@@ -840,12 +844,10 @@
             map.addLayer(markers);
         }
 
-        // Location tracking like Google Maps
-        function toggleLocationTracking() {
-            const locationButton = document.getElementById('locationButton');
-            
-            if (isTrackingLocation) {
-                stopLocationTracking();
+        // Simplified location functionality - always on tracking
+        function returnToLocation() {
+            if (userLocationMarker) {
+                map.flyTo(userLocationMarker.getLatLng(), 15, { duration: 1.5 });
             } else {
                 startLocationTracking();
             }
@@ -879,18 +881,6 @@
             }
         }
 
-        function stopLocationTracking() {
-            const locationButton = document.getElementById('locationButton');
-            
-            if (locationWatchId !== null) {
-                navigator.geolocation.clearWatch(locationWatchId);
-                locationWatchId = null;
-            }
-            
-            locationButton.classList.remove('active');
-            isTrackingLocation = false;
-        }
-
         function updateUserLocation(position) {
             const lat = position.coords.latitude;
             const lng = position.coords.longitude;
@@ -921,7 +911,6 @@
             }
             
             createToast('error', message);
-            stopLocationTracking();
         }
 
         // All the original JavaScript functionality
