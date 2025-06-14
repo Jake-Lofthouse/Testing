@@ -69,7 +69,204 @@
             filter: saturate(1.1) contrast(1.05);
         }
 
-        /* Glass morphism controls */
+        /* Top controls container */
+        .top-controls {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: flex-end;
+        }
+
+        /* Search container */
+        .search-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .search-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-backdrop);
+            -webkit-backdrop-filter: var(--glass-backdrop);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            box-shadow: var(--glass-shadow);
+            transition: var(--transition);
+            overflow: hidden;
+        }
+
+        .search-container:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-1px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        #search-input {
+            background: transparent;
+            border: none;
+            padding: 14px 20px;
+            font-size: 16px;
+            color: var(--text-primary);
+            width: 300px;
+            outline: none;
+            user-select: text;
+            -webkit-user-select: text;
+            font-weight: 500;
+        }
+
+        #search-input::placeholder {
+            color: rgba(0, 0, 0, 0.5);
+            font-weight: 400;
+        }
+
+        .search-icon {
+            padding: 14px 16px;
+            color: var(--text-secondary);
+            font-size: 18px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .search-icon:hover {
+            color: var(--text-primary);
+        }
+
+        /* Action buttons */
+        .action-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .action-btn {
+            width: 48px;
+            height: 48px;
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-backdrop);
+            -webkit-backdrop-filter: var(--glass-backdrop);
+            border: 1px solid var(--glass-border);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--glass-shadow);
+            color: var(--text-primary);
+            font-size: 18px;
+            border: none;
+        }
+
+        .action-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Search suggestions dropdown */
+        .search-suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-backdrop);
+            -webkit-backdrop-filter: var(--glass-backdrop);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            box-shadow: var(--glass-shadow);
+            margin-top: 8px;
+            max-height: 300px;
+            overflow-y: auto;
+            display: none;
+            z-index: 1001;
+        }
+
+        .search-suggestions.show {
+            display: block;
+            animation: slideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .suggestion-item {
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            transition: var(--transition);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .suggestion-item:last-child {
+            border-bottom: none;
+        }
+
+        .suggestion-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .suggestion-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .suggestion-icon.place {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .suggestion-icon.parkrun {
+            background: linear-gradient(135deg, #43e97b, #38f9d7);
+            color: white;
+        }
+
+        .suggestion-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .suggestion-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .suggestion-subtitle {
+            font-size: 14px;
+            color: var(--text-secondary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Hidden controls */
         .controls {
             background: var(--glass-bg);
             backdrop-filter: var(--glass-backdrop);
@@ -87,18 +284,21 @@
             gap: 16px;
             min-width: 200px;
             transition: var(--transition);
+            opacity: 0;
+            transform: translateY(-20px);
+            pointer-events: none;
+        }
+
+        .controls.show {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: all;
         }
 
         .controls:hover {
             background: rgba(255, 255, 255, 0.2);
             transform: translateY(-2px);
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .controls.hidden {
-            opacity: 0;
-            transform: translateY(-20px);
-            pointer-events: none;
         }
 
         .controls label {
@@ -143,6 +343,14 @@
             color: white;
             font-size: 14px;
             font-weight: bold;
+        }
+
+        /* Toggle button for controls */
+        .controls-toggle {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1001;
         }
 
         /* Glass morphism buttons */
@@ -197,125 +405,6 @@
         .course-btn::before { background: var(--success-gradient); }
         .volunteer-btn::before { background: var(--warning-gradient); }
         .direction-btn::before { background: var(--danger-gradient); }
-
-        /* Search container */
-        #search-container {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        #search-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--glass-bg);
-            backdrop-filter: var(--glass-backdrop);
-            -webkit-backdrop-filter: var(--glass-backdrop);
-            border: 1px solid var(--glass-border);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: var(--transition);
-            box-shadow: var(--glass-shadow);
-            color: var(--text-primary);
-            font-size: 20px;
-        }
-
-        #search-icon:hover {
-            background: rgba(255, 255, 255, 0.25);
-            transform: translateY(-2px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        #search-input-container {
-            position: relative;
-            display: flex;
-            align-items: center;
-        }
-
-        #search-input {
-            width: 0;
-            opacity: 0;
-            background: var(--glass-bg);
-            backdrop-filter: var(--glass-backdrop);
-            -webkit-backdrop-filter: var(--glass-backdrop);
-            border: 1px solid var(--glass-border);
-            border-radius: var(--border-radius-small);
-            padding: 14px 20px;
-            font-size: 16px;
-            color: var(--text-primary);
-            transition: var(--transition);
-            box-shadow: var(--glass-shadow);
-            user-select: text;
-            -webkit-user-select: text;
-        }
-
-        #search-input::placeholder {
-            color: rgba(0, 0, 0, 0.4);
-        }
-
-        #search-input.show {
-            width: 300px;
-            opacity: 1;
-        }
-
-        #search-input:focus {
-            outline: none;
-            border-color: rgba(102, 126, 234, 0.5);
-            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1), var(--glass-shadow);
-        }
-
-        #clear-btn {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            color: var(--text-secondary);
-            font-size: 18px;
-            padding: 8px;
-            border-radius: 50%;
-            transition: var(--transition);
-        }
-
-        #clear-btn:hover {
-            background: rgba(0, 0, 0, 0.1);
-            color: var(--text-primary);
-        }
-
-        /* Location button */
-        .location-button {
-            position: absolute;
-            top: 88px;
-            right: 20px;
-            z-index: 1000;
-            width: 48px;
-            height: 48px;
-            background: var(--glass-bg);
-            backdrop-filter: var(--glass-backdrop);
-            -webkit-backdrop-filter: var(--glass-backdrop);
-            border: 1px solid var(--glass-border);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: var(--transition);
-            box-shadow: var(--glass-shadow);
-            color: var(--text-primary);
-            font-size: 20px;
-        }
-
-        .location-button:hover {
-            background: rgba(255, 255, 255, 0.25);
-            transform: translateY(-2px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-        }
 
         /* Popup styles */
         .leaflet-popup-content-wrapper {
@@ -456,31 +545,81 @@
             display: none;
         }
 
-        /* Responsive design */
+        /* Mobile responsive design */
         @media (max-width: 768px) {
+            .top-controls {
+                top: 15px;
+                right: 15px;
+                left: 15px;
+                align-items: stretch;
+            }
+
+            .search-wrapper {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .search-container {
+                width: 100%;
+            }
+
+            #search-input {
+                width: 100%;
+                padding: 12px 16px;
+                font-size: 16px;
+            }
+
+            .action-buttons {
+                align-self: flex-end;
+            }
+
+            .controls-toggle {
+                left: 15px;
+                top: 15px;
+            }
+
             .controls {
-                left: 10px;
-                top: 10px;
-                padding: 16px;
-                min-width: 160px;
-            }
-
-            #search-container {
-                top: 10px;
-                right: 10px;
-            }
-
-            .location-button {
-                top: 78px;
-                right: 10px;
-            }
-
-            #search-input.show {
-                width: 250px;
+                left: 15px;
+                top: 15px;
+                right: 15px;
+                min-width: auto;
+                max-width: calc(100vw - 30px);
             }
 
             .popup-title {
                 font-size: 16px;
+            }
+
+            .search-suggestions {
+                max-height: 200px;
+            }
+
+            .suggestion-item {
+                padding: 12px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .top-controls {
+                top: 10px;
+                right: 10px;
+                left: 10px;
+            }
+
+            .controls-toggle {
+                left: 10px;
+                top: 10px;
+            }
+
+            .controls {
+                left: 10px;
+                top: 10px;
+                right: 10px;
+                padding: 16px;
+            }
+
+            #search-input {
+                font-size: 16px; /* Prevent zoom on iOS */
             }
         }
 
@@ -526,23 +665,46 @@
         ::-webkit-scrollbar-thumb:hover {
             background: rgba(255, 255, 255, 0.5);
         }
+
+        /* Loading state for suggestions */
+        .suggestion-loading {
+            padding: 16px 20px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        .suggestion-no-results {
+            padding: 16px 20px;
+            text-align: center;
+            color: var(--text-secondary);
+        }
     </style>
 </head>
 <body>
     <div id="map"></div>
-    <div id="locationButton" class="location-button" onclick="returnToLocation()">
-        <i class="fas fa-crosshairs"></i>
-    </div>
-    <div id="search-container">
-        <i id="search-icon" class="fas fa-search"></i>
-        <div id="search-input-container">
-            <input type="text" id="search-input" placeholder="Search locations...">
-            <button id="clear-btn"><i class="fas fa-times"></i></button>
+    
+    <!-- Top controls -->
+    <div class="top-controls">
+        <div class="search-wrapper">
+            <div class="search-container">
+                <i class="search-icon fas fa-search"></i>
+                <input type="text" id="search-input" placeholder="Search places or parkruns...">
+                <div class="search-suggestions" id="search-suggestions"></div>
+            </div>
+            <div class="action-buttons">
+                <button class="action-btn" id="locationButton" onclick="returnToLocation()" title="Return to my location">
+                    <i class="fas fa-crosshairs"></i>
+                </button>
+                <button class="action-btn" id="controlsToggle" onclick="toggleControls()" title="Toggle filters">
+                    <i class="fas fa-sliders-h"></i>
+                </button>
+            </div>
         </div>
     </div>
-    <ul class="notifications"></ul>
-    <div id="map-overlay" class="map-overlay"></div>
-    <div class="controls">
+
+    <!-- Hidden controls -->
+    <div class="controls" id="controls">
         <label>
             <input type="checkbox" id="fiveKCheckbox" checked>
             <span>5K Events</span>
@@ -553,10 +715,210 @@
         </label>
     </div>
 
+    <ul class="notifications"></ul>
+    <div id="map-overlay" class="map-overlay"></div>
+
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
     <script>
-        // All the original JavaScript functionality remains the same
+        // Global variables
+        let searchTimeout;
+        let currentSuggestions = [];
+        let data = {};
+        let cancellations = {};
+        let markers = L.markerClusterGroup();
+        let bbMarkers = [];
+        let userLocationMarker;
+
+        // Toggle controls visibility
+        function toggleControls() {
+            const controls = document.getElementById('controls');
+            controls.classList.toggle('show');
+        }
+
+        // Close controls when clicking outside
+        document.addEventListener('click', function(e) {
+            const controls = document.getElementById('controls');
+            const toggle = document.getElementById('controlsToggle');
+            
+            if (!controls.contains(e.target) && !toggle.contains(e.target)) {
+                controls.classList.remove('show');
+            }
+        });
+
+        // Search functionality with live suggestions
+        const searchInput = document.getElementById('search-input');
+        const suggestionsContainer = document.getElementById('search-suggestions');
+
+        searchInput.addEventListener('input', function() {
+            const query = this.value.trim();
+            
+            clearTimeout(searchTimeout);
+            
+            if (query.length < 2) {
+                hideSuggestions();
+                return;
+            }
+
+            showLoadingSuggestions();
+            
+            searchTimeout = setTimeout(() => {
+                performSearch(query);
+            }, 300);
+        });
+
+        searchInput.addEventListener('focus', function() {
+            if (this.value.trim().length >= 2) {
+                showSuggestions();
+            }
+        });
+
+        // Hide suggestions when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.search-container')) {
+                hideSuggestions();
+            }
+        });
+
+        function showLoadingSuggestions() {
+            suggestionsContainer.innerHTML = '<div class="suggestion-loading">Searching...</div>';
+            showSuggestions();
+        }
+
+        function showSuggestions() {
+            suggestionsContainer.classList.add('show');
+        }
+
+        function hideSuggestions() {
+            suggestionsContainer.classList.remove('show');
+        }
+
+        function performSearch(query) {
+            const suggestions = [];
+            
+            // Search for parkruns
+            if (data.events && data.events.features) {
+                data.events.features.forEach(feature => {
+                    if (feature.geometry.type === 'Point') {
+                        const eventName = feature.properties.EventLongName;
+                        if (eventName.toLowerCase().includes(query.toLowerCase())) {
+                            suggestions.push({
+                                type: 'parkrun',
+                                title: eventName,
+                                subtitle: 'Parkrun Event',
+                                data: feature
+                            });
+                        }
+                    }
+                });
+            }
+
+            // Search for places using Nominatim
+            fetchLocationSuggestions(query).then(placeSuggestions => {
+                const combinedSuggestions = [...suggestions, ...placeSuggestions];
+                displaySuggestions(combinedSuggestions.slice(0, 8)); // Limit to 8 results
+            }).catch(() => {
+                displaySuggestions(suggestions.slice(0, 8));
+            });
+        }
+
+        function fetchLocationSuggestions(query) {
+            const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&limit=5&addressdetails=1`;
+            
+            return fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    return data.map(place => ({
+                        type: 'place',
+                        title: place.display_name.split(',')[0],
+                        subtitle: place.display_name.split(',').slice(1, 3).join(',').trim(),
+                        data: place
+                    }));
+                });
+        }
+
+        function displaySuggestions(suggestions) {
+            if (suggestions.length === 0) {
+                suggestionsContainer.innerHTML = '<div class="suggestion-no-results">No results found</div>';
+                return;
+            }
+
+            const html = suggestions.map(suggestion => {
+                const iconClass = suggestion.type === 'place' ? 'fas fa-map-marker-alt' : 'fas fa-tree';
+                const iconType = suggestion.type === 'place' ? 'place' : 'parkrun';
+                
+                return `
+                    <div class="suggestion-item" onclick="selectSuggestion('${suggestion.type}', ${JSON.stringify(suggestion).replace(/"/g, '&quot;')})">
+                        <div class="suggestion-icon ${iconType}">
+                            <i class="${iconClass}"></i>
+                        </div>
+                        <div class="suggestion-content">
+                            <div class="suggestion-title">${suggestion.title}</div>
+                            <div class="suggestion-subtitle">${suggestion.subtitle}</div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            suggestionsContainer.innerHTML = html;
+        }
+
+        function selectSuggestion(type, suggestionData) {
+            const suggestion = typeof suggestionData === 'string' ? JSON.parse(suggestionData) : suggestionData;
+            
+            searchInput.value = suggestion.title;
+            hideSuggestions();
+
+            if (type === 'place') {
+                const lat = parseFloat(suggestion.data.lat);
+                const lon = parseFloat(suggestion.data.lon);
+                map.setView([lat, lon], 13);
+                
+                // Show parkruns in this area
+                showParkrunsInArea(lat, lon, suggestion.data.boundingbox);
+            } else if (type === 'parkrun') {
+                const coordinates = suggestion.data.geometry.coordinates;
+                map.setView([coordinates[1], coordinates[0]], 15);
+                
+                // Find and open the specific marker
+                markers.eachLayer(marker => {
+                    const markerLatLng = marker.getLatLng();
+                    if (Math.abs(markerLatLng.lat - coordinates[1]) < 0.0001 && 
+                        Math.abs(markerLatLng.lng - coordinates[0]) < 0.0001) {
+                        marker.openPopup();
+                    }
+                });
+            }
+        }
+
+        function showParkrunsInArea(lat, lon, boundingBox) {
+            if (!boundingBox) return;
+            
+            const [south, north, west, east] = boundingBox.map(coord => parseFloat(coord));
+            
+            markers.clearLayers();
+            
+            data.events.features.forEach(feature => {
+                if (feature.geometry.type === 'Point') {
+                    const [lonEvent, latEvent] = feature.geometry.coordinates;
+                    
+                    if (latEvent >= south && latEvent <= north && lonEvent >= west && lonEvent <= east) {
+                        const eventLongName = feature.properties.EventLongName;
+                        const isJunior = eventLongName.toLowerCase().includes('junior');
+                        const showMarker = (isJunior && document.getElementById('juniorCheckbox').checked) ||
+                            (!isJunior && document.getElementById('fiveKCheckbox').checked);
+
+                        if (showMarker) {
+                            createParkrunMarker(feature);
+                        }
+                    }
+                }
+            });
+            
+            map.addLayer(markers);
+        }
+
+        // All the original JavaScript functionality
         function getCountryUrl(lat, lon) {
             const countries = {
                 "3": { "url": "http://www.parkrun.com.au", "bounds": [113.654841, -43.163256, 153.578901, -12.376205] },
@@ -598,44 +960,38 @@
             window.open(url, '_blank');
         }
 
-        // Disable touch-and-hold context menus on mobile devices except for #search-container
+        // Disable touch-and-hold context menus on mobile devices
         document.addEventListener('touchstart', function(e) {
-            if (!e.target.closest('#search-container') && e.touches.length > 1) {
+            if (!e.target.closest('.search-container') && e.touches.length > 1) {
                 e.preventDefault();
             }
         }, { passive: false });
 
         document.addEventListener('touchend', function(e) {
-            if (!e.target.closest('#search-container') && e.timeStamp - e.targetTouches[0].startTime > 500) {
+            if (!e.target.closest('.search-container') && e.timeStamp - e.targetTouches[0].startTime > 500) {
                 e.preventDefault();
             }
         });
 
         document.addEventListener('mousedown', function(e) {
-            if (!e.target.closest('#search-container')) {
+            if (!e.target.closest('.search-container')) {
                 e.preventDefault();
             }
         });
 
         document.addEventListener('dragstart', function(e) {
-            if (!e.target.closest('#search-container')) {
+            if (!e.target.closest('.search-container')) {
                 e.preventDefault();
             }
         });
 
         document.addEventListener('contextmenu', function(e) {
-            if (e.target.closest('.leaflet-popup-content') && !e.target.closest('#search-container')) {
+            if (e.target.closest('.leaflet-popup-content') && !e.target.closest('.search-container')) {
                 e.preventDefault();
             }
         });
 
-        function getCityName(lat, lon) {
-            return fetch(`https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lon}&format=json`)
-                .then(response => response.json())
-                .then(data => data.address.city || data.address.village || data.address.town || 'Unknown');
-        }
-
-        // Map initialization with URL parameters
+        // Map initialization
         const urlParams = new URLSearchParams(window.location.search);
         const lat = parseFloat(urlParams.get('lat'));
         const lon = parseFloat(urlParams.get('lon'));
@@ -666,8 +1022,6 @@
         }
 
         map.on('moveend', updateURL);
-
-        var userLocationMarker;
 
         function onLocationFound(e) {
             if (!userLocationMarker) {
@@ -754,11 +1108,6 @@
             popupAnchor: [0, -38],
         });
 
-        var bbMarkers = [];
-        var data = {};
-        var cancellations = {};
-        var markers = L.markerClusterGroup();
-
         function normalizeEventName(name) {
             if (!name) return '';
             return name.toLowerCase().replace(/\s+/g, '').replace('parkrun', '');
@@ -828,8 +1177,6 @@
 
         map.on('zoomend', updateMarkerVisibility);
 
-        var locationButton = document.getElementById("locationButton");
-
         function returnToLocation() {
             if (userLocationMarker) {
                 map.flyTo(userLocationMarker.getLatLng(), 13, { duration: 1.5 });
@@ -854,7 +1201,7 @@
             if (userLocationMarker) {
                 var bounds = map.getBounds();
                 var isUserLocationVisible = bounds.contains(userLocationMarker.getLatLng());
-                locationButton.style.display = isUserLocationVisible ? "none" : "block";
+                document.getElementById('locationButton').style.display = isUserLocationVisible ? "none" : "flex";
             }
         });
 
@@ -895,23 +1242,6 @@
             }
         });
 
-        function fetchLocationCoordinates(place) {
-            const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(place)}`;
-            return fetch(url)
-                .then(response => response.json())
-                .then(data => {
-                    if (data && data.length > 0) {
-                        const location = data[0];
-                        return {
-                            lat: parseFloat(location.lat),
-                            lon: parseFloat(location.lon),
-                            boundingBox: location.boundingbox.map(coord => parseFloat(coord)),
-                        };
-                    }
-                    throw new Error("Location not found");
-                });
-        }
-
         fetch('/cancellations.json')
             .then(response => response.json())
             .then(data => {
@@ -924,6 +1254,66 @@
             })
             .catch(err => console.error('Error fetching cancellation data:', err));
 
+        function createParkrunMarker(feature) {
+            const coordinates = feature.geometry.coordinates;
+            const eventname = normalizeEventName(feature.properties.eventname);
+            const eventLongName = feature.properties.EventLongName;
+            const isJunior = eventLongName.toLowerCase().includes('junior');
+            const countryUrl = getCountryUrl(coordinates[1], coordinates[0]);
+            
+            var weatherUrl = `https://parkrunnertourist.co.uk/weather?lat=${coordinates[1]}&lon=${coordinates[0]}`;
+            if (isJunior) {
+                weatherUrl += '&junior';
+            }
+
+            var popupContent = `
+                <div>
+                    <div class="popup-title">${eventLongName}</div>
+                    <iframe id="weatherIframe" src="${weatherUrl}" scrolling="no"></iframe>
+                    <button class="glass-button course-btn" onclick="openUrl('${countryUrl}/${eventname}/course/')" style="width: 100%; margin-bottom: 8px;">
+                        <i class="fas fa-route"></i> Course
+                    </button>
+                    <button class="glass-button volunteer-btn" onclick="openUrl('${countryUrl}/${eventname}/futureroster/')" style="width: 100%; margin-bottom: 8px;">
+                        <i class="fas fa-hands-helping"></i> Volunteer
+                    </button>
+                    <button class="glass-button direction-btn" onclick="openDirections(${coordinates[1]}, ${coordinates[0]})" style="width: 100%;">
+                        <i class="fas fa-directions"></i> Directions
+                    </button>
+                </div>
+            `;
+
+            var markerIcon = isJunior ? juniorIcon : fiveKIcon;
+            if (cancellations[eventname]) {
+                popupContent = `
+                    <div>
+                        <div class="popup-title">${eventLongName}</div>
+                        <div style="color: #fa709a; font-weight: 600; margin-bottom: 16px; padding: 12px; background: rgba(250, 112, 154, 0.1); border-radius: 8px;">
+                            <i class="fas fa-exclamation-triangle"></i> Cancelled: ${cancellations[eventname]}
+                        </div>
+                        <button class="glass-button course-btn" onclick="openUrl('${countryUrl}/${eventname}/course/')" style="width: 100%; margin-bottom: 8px;">
+                            <i class="fas fa-route"></i> Course
+                        </button>
+                        <button class="glass-button volunteer-btn" onclick="openUrl('${countryUrl}/${eventname}/futureroster/')" style="width: 100%; margin-bottom: 8px;">
+                            <i class="fas fa-hands-helping"></i> Volunteer
+                        </button>
+                        <button class="glass-button direction-btn" onclick="openDirections(${coordinates[1]}, ${coordinates[0]})" style="width: 100%;">
+                            <i class="fas fa-directions"></i> Directions
+                        </button>
+                    </div>
+                `;
+                markerIcon = canceledIcon;
+            }
+
+            var marker = L.marker([coordinates[1], coordinates[0]], { icon: markerIcon })
+                .bindPopup(popupContent);
+
+            marker.on('click', function () {
+                findNearbyPlaces(coordinates[1], coordinates[0]);
+            });
+
+            markers.addLayer(marker);
+        }
+
         function updateMapMarkers() {
             markers.clearLayers();
 
@@ -931,69 +1321,13 @@
 
             data.events.features.forEach(function (feature) {
                 if (feature.geometry.type === 'Point') {
-                    var coordinates = feature.geometry.coordinates;
-                    var eventname = normalizeEventName(feature.properties.eventname);
                     var eventLongName = feature.properties.EventLongName;
-
                     var isJunior = eventLongName.toLowerCase().includes('junior');
                     var showMarker = (isJunior && document.getElementById('juniorCheckbox').checked) ||
                         (!isJunior && document.getElementById('fiveKCheckbox').checked);
 
                     if (showMarker) {
-                        var countryUrl = getCountryUrl(coordinates[1], coordinates[0]);
-                        
-                        var weatherUrl = `https://parkrunnertourist.co.uk/weather?lat=${coordinates[1]}&lon=${coordinates[0]}`;
-                        if (isJunior) {
-                            weatherUrl += '&junior';
-                        }
-
-                        var popupContent = `
-                            <div>
-                                <div class="popup-title">${eventLongName}</div>
-                                <iframe id="weatherIframe" src="${weatherUrl}" scrolling="no"></iframe>
-                                <button class="glass-button course-btn" onclick="openUrl('${countryUrl}/${eventname}/course/')" style="width: 100%; margin-bottom: 8px;">
-                                    <i class="fas fa-route"></i> Course
-                                </button>
-                                <button class="glass-button volunteer-btn" onclick="openUrl('${countryUrl}/${eventname}/futureroster/')" style="width: 100%; margin-bottom: 8px;">
-                                    <i class="fas fa-hands-helping"></i> Volunteer
-                                </button>
-                                <button class="glass-button direction-btn" onclick="openDirections(${coordinates[1]}, ${coordinates[0]})" style="width: 100%;">
-                                    <i class="fas fa-directions"></i> Directions
-                                </button>
-                            </div>
-                        `;
-
-                        var markerIcon = isJunior ? juniorIcon : fiveKIcon;
-                        if (cancellations[eventname]) {
-                            popupContent = `
-                                <div>
-                                    <div class="popup-title">${eventLongName}</div>
-                                    <div style="color: #fa709a; font-weight: 600; margin-bottom: 16px; padding: 12px; background: rgba(250, 112, 154, 0.1); border-radius: 8px;">
-                                        <i class="fas fa-exclamation-triangle"></i> Cancelled: ${cancellations[eventname]}
-                                    </div>
-                                    <button class="glass-button course-btn" onclick="openUrl('${countryUrl}/${eventname}/course/')" style="width: 100%; margin-bottom: 8px;">
-                                        <i class="fas fa-route"></i> Course
-                                    </button>
-                                    <button class="glass-button volunteer-btn" onclick="openUrl('${countryUrl}/${eventname}/futureroster/')" style="width: 100%; margin-bottom: 8px;">
-                                        <i class="fas fa-hands-helping"></i> Volunteer
-                                    </button>
-                                    <button class="glass-button direction-btn" onclick="openDirections(${coordinates[1]}, ${coordinates[0]})" style="width: 100%;">
-                                        <i class="fas fa-directions"></i> Directions
-                                    </button>
-                                </div>
-                            `;
-                            markerIcon = canceledIcon;
-                        }
-
-                        var marker = L.marker([coordinates[1], coordinates[0]], { icon: markerIcon })
-                            .bindPopup(popupContent);
-
-                        marker.on('click', function () {
-                            console.log(`Marker clicked at: ${coordinates[1]}, ${coordinates[0]}`);
-                            findNearbyPlaces(coordinates[1], coordinates[0]);
-                        });
-
-                        markers.addLayer(marker);
+                        createParkrunMarker(feature);
                     }
                 }
             });
@@ -1004,7 +1338,6 @@
         const tomTomApiKey = 'dAvRoz8Z1SA4K6JM5l6XnJMGPwc7GQmG';
 
         function findNearbyPlaces(lat, lng) {
-            console.log(`Searching for hotels and campsites near: ${lat}, ${lng}`);
             fetchTomTomPlaces(lat, lng, 'CAFE_PUB', cafeIcon);
             fetchTomTomPlaces(lat, lng, 'hotel', hotelIcon);
             fetchTomTomPlaces(lat, lng, 'camping ground', campsiteIcon);
@@ -1016,14 +1349,10 @@
             fetch(searchUrl)
                 .then(response => response.json())
                 .then(data => {
-                    console.log(`TomTom ${category} API Response:`, data);
-
                     if (data.results && data.results.length > 0) {
                         data.results.forEach(place => {
                             createPlaceMarker(place, category, icon);
                         });
-                    } else {
-                        console.log(`No ${category}s found within 9km.`);
                     }
                 })
                 .catch(error => console.error(`Error fetching ${category} data:`, error));
@@ -1033,27 +1362,22 @@
             const lat = place.position.lat;
             const lon = place.position.lon;
             const name = place.poi?.name || "No Name Available";
-            const address = place.address?.freeformAddress || "Address not available";
             const phoneNumber = place.poi?.phone || null;
             const websiteUrl = place.poi?.url || null;
             const imageUrl = place.poi?.imageUrl || null;
 
             let buttonColor = "#c8a367";
-            let buttonHoverColor = "#b0874e";
 
             if (type === "camping") {
                 buttonColor = "#0d7640";
-                buttonHoverColor = "#0a5a30";
             } else if (type.toLowerCase().includes("caravan")) {
                 buttonColor = "#046e7b";
-                buttonHoverColor = "#03505d";
             } else if (type.toLowerCase().includes("cafe")) {
                 buttonColor = "#4b1f2c";
-                buttonHoverColor = "#702f45";
             }
 
             let popupContent = `
-                <div class="hotel-popup" style="--button-color: ${buttonColor}; --button-hover-color: ${buttonHoverColor}">
+                <div class="hotel-popup" style="--button-color: ${buttonColor};">
                     <div class="popup-title">${name}</div>
             `;
 
@@ -1109,21 +1433,9 @@
             window.location.href = 'https://parkrunnertourist.co.uk/Error';
         }
 
-        window.addEventListener('load', () => {
-            const consentButton = document.querySelector('.VfPpkd-RLmnJb');
-            if (consentButton) {
-                consentButton.click();
-            }
-        });
-
         function openDirections(lat, lon) {
             const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}`;
             window.open(url, '_blank');
-        }
-
-        function openHotelMap(lat, lon) {
-           const url = `https://www.google.com/maps/search/Hotels/@${lat},${lon},18.5z`;
-           window.open(url, '_blank');
         }
 
         function openWebsite(url) {
@@ -1131,189 +1443,6 @@
                 url = 'https://' + url;
             }
             window.open(url, '_blank');
-        }
-
-        var userLocationMarker = null;
-        var locationCircle = null;
-
-        function onLocationError(e) {
-            // Handle location error silently
-        }
-
-        // Search functionality
-        document.getElementById('search-icon').addEventListener('click', function() {
-            var input = document.getElementById('search-input');
-            var clearBtn = document.getElementById('clear-btn');
-            var searchIcon = document.getElementById('search-icon');
-            input.classList.toggle('show');
-            clearBtn.style.display = input.classList.contains('show') ? 'block' : 'none';
-            searchIcon.classList.toggle('hidden', input.classList.contains('show'));
-            if (input.classList.contains('show')) {
-                input.focus();
-            }
-        });
-
-        document.getElementById('clear-btn').addEventListener('click', function() {
-            var input = document.getElementById('search-input');
-            var searchIcon = document.getElementById('search-icon');
-            input.value = '';
-            input.classList.remove('show');
-            this.style.display = 'none';
-            searchIcon.classList.remove('hidden');
-            updateMapMarkers();
-        });
-
-        function debounce(func, delay) {
-            let timer;
-            return function(...args) {
-                clearTimeout(timer);
-                timer = setTimeout(() => func.apply(this, args), delay);
-            };
-        }
-
-        document.getElementById('search-input').addEventListener(
-            'input',
-            debounce(function () {
-                const searchValue = this.value.trim().toLowerCase();
-                markers.clearLayers();
-
-                if (searchValue) {
-                    fetchLocationCoordinates(searchValue)
-                        .then(({ lat, lon, boundingBox }) => {
-                            const [south, north, west, east] = boundingBox;
-
-                            const filteredMarkers = [];
-                            data.events.features.forEach(feature => {
-                                if (feature.geometry.type === 'Point') {
-                                    const [lonEvent, latEvent] = feature.geometry.coordinates;
-                                    const eventLongName = feature.properties.EventLongName.toLowerCase();
-
-                                    const isJunior = eventLongName.includes('junior');
-                                    const markerIcon = isJunior ? juniorIcon : fiveKIcon;
-
-                                    if (
-                                        latEvent >= south &&
-                                        latEvent <= north &&
-                                        lonEvent >= west &&
-                                        lonEvent <= east
-                                    ) {
-                                        const eventname = feature.properties.eventname;
-                                        const countryUrl = getCountryUrl(latEvent, lonEvent);
-
-                                        const popupContent = `
-                                            <div>
-                                                <div class="popup-title">${feature.properties.EventLongName}</div>
-                                                <iframe id="weatherIframe" src="https://parkrunnertourist.co.uk/weather?lat=${latEvent}&lon=${lonEvent}" scrolling="no"></iframe>
-                                                <button class="glass-button course-btn" onclick="openUrl('${countryUrl}/${eventname}/course/')" style="width: 100%; margin-bottom: 8px;">
-                                                    <i class="fas fa-route"></i> Course
-                                                </button>
-                                                <button class="glass-button volunteer-btn" onclick="openUrl('${countryUrl}/${eventname}/futureroster/')" style="width: 100%; margin-bottom: 8px;">
-                                                    <i class="fas fa-hands-helping"></i> Volunteer
-                                                </button>
-                                                <button class="glass-button direction-btn" onclick="openDirections(${latEvent}, ${lonEvent})" style="width: 100%;">
-                                                    <i class="fas fa-directions"></i> Directions
-                                                </button>
-                                            </div>
-                                        `;
-
-                                        const marker = L.marker([latEvent, lonEvent], { icon: markerIcon })
-                                            .bindPopup(popupContent)
-                                            .on('click', function () {
-                                                findNearbyPlaces(latEvent, lonEvent);
-                                            });
-
-                                        markers.addLayer(marker);
-                                        filteredMarkers.push(marker);
-                                    }
-                                }
-                            });
-
-                            if (filteredMarkers.length > 0) {
-                                map.addLayer(markers);
-                                const group = L.featureGroup(filteredMarkers);
-                                map.fitBounds(group.getBounds());
-                            } else {
-                                displayNoResultsMessage();
-                            }
-                        })
-                        .catch(err => {
-                            console.warn("Location not found:", err);
-
-                            const matchingEvents = [];
-                            data.events.features.forEach(function (feature) {
-                                if (feature.geometry.type === 'Point') {
-                                    const eventLongName = feature.properties.EventLongName.toLowerCase();
-                                    const isJunior = eventLongName.includes('junior');
-                                    const markerIcon = isJunior ? juniorIcon : fiveKIcon;
-
-                                    if (eventLongName.includes(searchValue)) {
-                                        matchingEvents.push({ feature, markerIcon });
-                                    }
-                                }
-                            });
-
-                            if (matchingEvents.length > 0) {
-                                const filteredMarkers = matchingEvents.map(({ feature, markerIcon }) => {
-                                    const [lonEvent, latEvent] = feature.geometry.coordinates;
-                                    const eventname = feature.properties.eventname;
-
-                                    const popupContent = `
-                                        <div>
-                                            <div class="popup-title">${feature.properties.EventLongName}</div>
-                                            <iframe id="weatherIframe" src="https://parkrunnertourist.co.uk/weather?lat=${latEvent}&lon=${lonEvent}" scrolling="no"></iframe>
-                                            <button class="glass-button course-btn" onclick="openUrl('https://www.parkrun.org.uk/${eventname}/course/')" style="width: 100%; margin-bottom: 8px;">
-                                                <i class="fas fa-route"></i> Course
-                                            </button>
-                                            <button class="glass-button volunteer-btn" onclick="openUrl('https://www.parkrun.org.uk/${eventname}/futureroster/')" style="width: 100%; margin-bottom: 8px;">
-                                                <i class="fas fa-hands-helping"></i> Volunteer
-                                            </button>
-                                            <button class="glass-button direction-btn" onclick="openDirections(${latEvent}, ${lonEvent})" style="width: 100%;">
-                                                <i class="fas fa-directions"></i> Directions
-                                            </button>
-                                        </div>
-                                    `;
-
-                                    const marker = L.marker([latEvent, lonEvent], { icon: markerIcon })
-                                        .bindPopup(popupContent)
-                                        .on('click', function () {
-                                            findNearbyPlaces(latEvent, lonEvent);
-                                        });
-
-                                    markers.addLayer(marker);
-                                    return marker;
-                                });
-
-                                map.addLayer(markers);
-
-                                if (matchingEvents.length === 1) {
-                                    const [lon, lat] = matchingEvents[0].feature.geometry.coordinates;
-                                    map.setView([lat, lon], 15);
-                                } else {
-                                    const group = L.featureGroup(filteredMarkers);
-                                    map.fitBounds(group.getBounds());
-                                }
-                            } else {
-                                displayNoResultsMessage();
-                            }
-                        });
-                } else {
-                    updateMapMarkers();
-                }
-            }, 500)
-        );
-
-        function displayNoResultsMessage() {
-            const input = document.getElementById('search-input');
-
-            input.style.borderColor = '#FFC107'; 
-            input.style.boxShadow = '0 0 8px #FFC107';
-            input.style.borderWidth = '2px';
-
-            setTimeout(() => {
-                input.style.borderColor = '';
-                input.style.boxShadow = '';
-                input.style.borderWidth = '';
-            }, 3000);
         }
     </script>
 </body>
