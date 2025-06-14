@@ -25,6 +25,11 @@
         "date": "2025-06-14"
     },
     {
+        "name": "Barrow parkrun",
+        "reason": "Weather",
+        "date": "2025-06-14"
+    },
+    {
         "name": "Battersea parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-14"
@@ -47,6 +52,11 @@
     {
         "name": "Canton Lower Rouge Trail parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-06-14"
+    },
+    {
+        "name": "Carlisle parkrun",
+        "reason": "Weather",
         "date": "2025-06-14"
     },
     {
@@ -127,6 +137,11 @@
     {
         "name": "Fingal Bay parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-06-14"
+    },
+    {
+        "name": "Ford parkrun",
+        "reason": "Weather",
         "date": "2025-06-14"
     },
     {
@@ -272,6 +287,11 @@
     {
         "name": "Millennium parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-06-14"
+    },
+    {
+        "name": "Millom parkrun",
+        "reason": "Weather",
         "date": "2025-06-14"
     },
     {
