@@ -60,6 +60,11 @@
         "date": "2025-06-14"
     },
     {
+        "name": "Cockermouth Greenway parkrun",
+        "reason": "Weather",
+        "date": "2025-06-14"
+    },
+    {
         "name": "Colchester Castle parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-14"
@@ -335,6 +340,11 @@
         "date": "2025-06-14"
     },
     {
+        "name": "Rothay Park parkrun",
+        "reason": "Weather",
+        "date": "2025-06-14"
+    },
+    {
         "name": "Shepton Mallet parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-14"
@@ -447,6 +457,11 @@
     {
         "name": "Wells Estate parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-06-14"
+    },
+    {
+        "name": "Whinlatter Forest parkrun",
+        "reason": "Weather",
         "date": "2025-06-14"
     },
     {
