@@ -100,6 +100,11 @@
         "date": "2025-06-14"
     },
     {
+        "name": "Dunleath Playing Fields parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-06-14"
+    },
+    {
         "name": "Enniskillen parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-14"
@@ -205,6 +210,11 @@
         "date": "2025-06-14"
     },
     {
+        "name": "Keswick parkrun",
+        "reason": "Weather",
+        "date": "2025-06-14"
+    },
+    {
         "name": "Kitanagase Mirai Fureai Sogokoen parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-14"
@@ -225,6 +235,11 @@
         "date": "2025-06-14"
     },
     {
+        "name": "Lytham Hall parkrun",
+        "reason": "Weather",
+        "date": "2025-06-14"
+    },
+    {
         "name": "Mansfield OH parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-14"
@@ -242,6 +257,11 @@
     {
         "name": "Marlay parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-06-14"
+    },
+    {
+        "name": "Maryport Prom parkrun",
+        "reason": "Weather",
         "date": "2025-06-14"
     },
     {
@@ -402,6 +422,11 @@
     {
         "name": "Taree parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-06-14"
+    },
+    {
+        "name": "Tawd Valley parkrun",
+        "reason": "Weather",
         "date": "2025-06-14"
     },
     {
