@@ -104,7 +104,7 @@
             border-radius: 24px;
             box-shadow: var(--glass-shadow);
             transition: var(--transition);
-            overflow: hidden;
+            overflow: visible;
         }
 
         .search-container:hover {
@@ -187,10 +187,10 @@
             100% { box-shadow: 0 0 0 0 rgba(67, 233, 123, 0); }
         }
 
-        /* Search suggestions dropdown */
+        /* Search suggestions dropdown - FIXED */
         .search-suggestions {
             position: absolute;
-            top: 100%;
+            top: calc(100% + 8px);
             left: 0;
             right: 0;
             background: var(--glass-bg);
@@ -199,8 +199,7 @@
             border: 1px solid var(--glass-border);
             border-radius: var(--border-radius);
             box-shadow: var(--glass-shadow);
-            margin-top: 8px;
-            max-height: 300px;
+            max-height: 400px;
             overflow-y: auto;
             display: none;
             z-index: 1001;
@@ -226,7 +225,7 @@
             padding: 16px 20px;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 16px;
             cursor: pointer;
             transition: var(--transition);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -237,28 +236,28 @@
         }
 
         .suggestion-item:hover {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.15);
         }
 
         .suggestion-icon {
-            width: 32px;
-            height: 32px;
+            width: 40px;
+            height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 8px;
-            font-size: 16px;
+            border-radius: 10px;
+            font-size: 18px;
             flex-shrink: 0;
             color: white;
             font-weight: 600;
         }
 
-        .suggestion-icon.place {
-            background: var(--primary-gradient);
-        }
-
         .suggestion-icon.parkrun {
             background: var(--success-gradient);
+        }
+
+        .suggestion-icon.place {
+            background: var(--primary-gradient);
         }
 
         .suggestion-content {
@@ -269,7 +268,7 @@
         .suggestion-title {
             font-weight: 600;
             color: var(--text-primary);
-            margin-bottom: 2px;
+            margin-bottom: 4px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -282,6 +281,16 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+        }
+
+        .suggestion-category {
+            padding: 12px 20px;
+            font-weight: 600;
+            color: var(--text-primary);
+            background: rgba(255, 255, 255, 0.05);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         /* Solid buttons with gradients */
@@ -502,6 +511,24 @@
             display: none;
         }
 
+        /* Loading state for suggestions */
+        .suggestion-loading {
+            padding: 20px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-style: italic;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .suggestion-no-results {
+            padding: 20px;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+
         /* Mobile responsive design */
         @media (max-width: 768px) {
             .top-controls {
@@ -535,7 +562,7 @@
             }
 
             .search-suggestions {
-                max-height: 200px;
+                max-height: 300px;
             }
 
             .suggestion-item {
@@ -553,20 +580,6 @@
             #search-input {
                 font-size: 16px; /* Prevent zoom on iOS */
             }
-        }
-
-        /* Loading state for suggestions */
-        .suggestion-loading {
-            padding: 16px 20px;
-            text-align: center;
-            color: var(--text-secondary);
-            font-style: italic;
-        }
-
-        .suggestion-no-results {
-            padding: 16px 20px;
-            text-align: center;
-            color: var(--text-secondary);
         }
 
         /* Smooth scrollbar for webkit browsers */
@@ -645,7 +658,7 @@
 
         searchInput.addEventListener('focus', function() {
             if (this.value.trim().length >= 2) {
-                showSuggestions();
+                performSearch(this.value.trim());
             }
         });
 
@@ -657,7 +670,12 @@
         });
 
         function showLoadingSuggestions() {
-            suggestionsContainer.innerHTML = '<div class="suggestion-loading"><i class="fas fa-spinner fa-spin"></i> Searching...</div>';
+            suggestionsContainer.innerHTML = `
+                <div class="suggestion-loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <span>Searching...</span>
+                </div>
+            `;
             showSuggestions();
         }
 
@@ -670,15 +688,18 @@
         }
 
         function performSearch(query) {
-            const suggestions = [];
+            console.log('Performing search for:', query);
             
-            // Search for parkruns
+            const parkrunSuggestions = [];
+            const placeSuggestions = [];
+            
+            // Search for parkruns FIRST
             if (data.events && data.events.features) {
                 data.events.features.forEach(feature => {
                     if (feature.geometry.type === 'Point') {
                         const eventName = feature.properties.EventLongName;
                         if (eventName.toLowerCase().includes(query.toLowerCase())) {
-                            suggestions.push({
+                            parkrunSuggestions.push({
                                 type: 'parkrun',
                                 title: eventName,
                                 subtitle: 'Parkrun Event',
@@ -690,11 +711,17 @@
             }
 
             // Search for places using Nominatim
-            fetchLocationSuggestions(query).then(placeSuggestions => {
-                const combinedSuggestions = [...suggestions, ...placeSuggestions];
-                displaySuggestions(combinedSuggestions.slice(0, 8));
-            }).catch(() => {
-                displaySuggestions(suggestions.slice(0, 8));
+            fetchLocationSuggestions(query).then(places => {
+                placeSuggestions.push(...places);
+                
+                // Combine suggestions with parkruns FIRST
+                const allSuggestions = [...parkrunSuggestions.slice(0, 5), ...placeSuggestions.slice(0, 5)];
+                
+                console.log('Found suggestions:', allSuggestions);
+                displaySuggestions(allSuggestions);
+            }).catch(error => {
+                console.error('Error fetching place suggestions:', error);
+                displaySuggestions(parkrunSuggestions.slice(0, 8));
             });
         }
 
@@ -702,28 +729,49 @@
             const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&limit=5&addressdetails=1`;
             
             return fetch(url)
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
                 .then(data => {
                     return data.map(place => ({
                         type: 'place',
                         title: place.display_name.split(',')[0],
-                        subtitle: place.display_name.split(',').slice(1, 3).join(',').trim(),
+                        subtitle: place.display_name.split(',').slice(1, 3).join(',').trim() || 'Location',
                         data: place
                     }));
                 });
         }
 
         function displaySuggestions(suggestions) {
+            console.log('Displaying suggestions:', suggestions);
+            
             if (suggestions.length === 0) {
                 suggestionsContainer.innerHTML = '<div class="suggestion-no-results">No results found</div>';
+                showSuggestions();
                 return;
             }
 
-            const html = suggestions.map(suggestion => {
+            let html = '';
+            let currentCategory = '';
+
+            suggestions.forEach(suggestion => {
+                // Add category headers
+                if (suggestion.type !== currentCategory) {
+                    if (suggestion.type === 'parkrun') {
+                        html += '<div class="suggestion-category">🏃‍♂️ Parkruns</div>';
+                    } else if (suggestion.type === 'place') {
+                        html += '<div class="suggestion-category">📍 Places</div>';
+                    }
+                    currentCategory = suggestion.type;
+                }
+
                 const iconClass = suggestion.type === 'place' ? 'fas fa-map-marker-alt' : 'fas fa-tree';
-                const iconType = suggestion.type === 'place' ? 'place' : 'parkrun';
+                const iconType = suggestion.type;
                 
-                return `
+                html += `
                     <div class="suggestion-item" onclick="selectSuggestion(${JSON.stringify(suggestion).replace(/"/g, '&quot;')})">
                         <div class="suggestion-icon ${iconType}">
                             <i class="${iconClass}"></i>
@@ -734,38 +782,41 @@
                         </div>
                     </div>
                 `;
-            }).join('');
+            });
 
             suggestionsContainer.innerHTML = html;
+            showSuggestions();
         }
 
         function selectSuggestion(suggestionData) {
-            const suggestion = suggestionData;
+            console.log('Selected suggestion:', suggestionData);
             
-            searchInput.value = suggestion.title;
+            searchInput.value = suggestionData.title;
             hideSuggestions();
 
-            if (suggestion.type === 'place') {
-                const lat = parseFloat(suggestion.data.lat);
-                const lon = parseFloat(suggestion.data.lon);
+            if (suggestionData.type === 'place') {
+                const lat = parseFloat(suggestionData.data.lat);
+                const lon = parseFloat(suggestionData.data.lon);
                 map.setView([lat, lon], 13);
                 
                 // Show parkruns in this area
-                if (suggestion.data.boundingbox) {
-                    showParkrunsInArea(lat, lon, suggestion.data.boundingbox);
+                if (suggestionData.data.boundingbox) {
+                    showParkrunsInArea(lat, lon, suggestionData.data.boundingbox);
                 }
-            } else if (suggestion.type === 'parkrun') {
-                const coordinates = suggestion.data.geometry.coordinates;
+            } else if (suggestionData.type === 'parkrun') {
+                const coordinates = suggestionData.data.geometry.coordinates;
                 map.setView([coordinates[1], coordinates[0]], 15);
                 
                 // Find and open the specific marker
-                markers.eachLayer(marker => {
-                    const markerLatLng = marker.getLatLng();
-                    if (Math.abs(markerLatLng.lat - coordinates[1]) < 0.0001 && 
-                        Math.abs(markerLatLng.lng - coordinates[0]) < 0.0001) {
-                        marker.openPopup();
-                    }
-                });
+                setTimeout(() => {
+                    markers.eachLayer(marker => {
+                        const markerLatLng = marker.getLatLng();
+                        if (Math.abs(markerLatLng.lat - coordinates[1]) < 0.0001 && 
+                            Math.abs(markerLatLng.lng - coordinates[0]) < 0.0001) {
+                            marker.openPopup();
+                        }
+                    });
+                }, 500);
             }
         }
 
@@ -1319,6 +1370,7 @@
             .then(response => response.json())
             .then(jsonData => {
                 data = jsonData;
+                console.log('Loaded parkrun data:', data);
                 updateMapMarkers();
             })
             .catch(err => {
