@@ -39,6 +39,10 @@
             --success-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
             --warning-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
             --danger-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            --hotel-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --course-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --volunteer-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            --direction-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
             --text-primary: rgba(0, 0, 0, 0.87);
             --text-secondary: rgba(0, 0, 0, 0.6);
             --border-radius: 16px;
@@ -109,6 +113,12 @@
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
         }
 
+        .search-container:focus-within {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(102, 126, 234, 0.5);
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1), var(--glass-shadow);
+        }
+
         #search-input {
             background: transparent;
             border: none;
@@ -139,13 +149,8 @@
             color: var(--text-primary);
         }
 
-        /* Action buttons */
-        .action-buttons {
-            display: flex;
-            gap: 8px;
-        }
-
-        .action-btn {
+        /* Location button */
+        .location-button {
             width: 48px;
             height: 48px;
             background: var(--glass-bg);
@@ -164,10 +169,22 @@
             border: none;
         }
 
-        .action-btn:hover {
+        .location-button:hover {
             background: rgba(255, 255, 255, 0.25);
             transform: translateY(-2px);
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .location-button.active {
+            background: var(--success-gradient);
+            color: white;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(67, 233, 123, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(67, 233, 123, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(67, 233, 123, 0); }
         }
 
         /* Search suggestions dropdown */
@@ -224,24 +241,24 @@
         }
 
         .suggestion-icon {
-            width: 24px;
-            height: 24px;
+            width: 32px;
+            height: 32px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 6px;
-            font-size: 14px;
+            border-radius: 8px;
+            font-size: 16px;
             flex-shrink: 0;
+            color: white;
+            font-weight: 600;
         }
 
         .suggestion-icon.place {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
+            background: var(--primary-gradient);
         }
 
         .suggestion-icon.parkrun {
-            background: linear-gradient(135deg, #43e97b, #38f9d7);
-            color: white;
+            background: var(--success-gradient);
         }
 
         .suggestion-content {
@@ -256,6 +273,7 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            font-size: 16px;
         }
 
         .suggestion-subtitle {
@@ -266,99 +284,9 @@
             text-overflow: ellipsis;
         }
 
-        /* Hidden controls */
-        .controls {
-            background: var(--glass-bg);
-            backdrop-filter: var(--glass-backdrop);
-            -webkit-backdrop-filter: var(--glass-backdrop);
-            border: 1px solid var(--glass-border);
-            border-radius: var(--border-radius);
-            padding: 20px;
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            z-index: 1000;
-            box-shadow: var(--glass-shadow);
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            min-width: 200px;
-            transition: var(--transition);
-            opacity: 0;
-            transform: translateY(-20px);
-            pointer-events: none;
-        }
-
-        .controls.show {
-            opacity: 1;
-            transform: translateY(0);
-            pointer-events: all;
-        }
-
-        .controls:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .controls label {
-            display: flex;
-            align-items: center;
-            font-size: 16px;
-            font-weight: 500;
-            color: var(--text-primary);
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .controls label:hover {
-            color: #667eea;
-        }
-
-        .controls input[type="checkbox"] {
-            appearance: none;
-            width: 24px;
-            height: 24px;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 6px;
-            margin-right: 12px;
-            position: relative;
-            cursor: pointer;
-            transition: var(--transition);
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .controls input[type="checkbox"]:checked {
-            background: var(--primary-gradient);
-            border-color: transparent;
-            transform: scale(1.05);
-        }
-
-        .controls input[type="checkbox"]:checked::after {
-            content: '✓';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        /* Toggle button for controls */
-        .controls-toggle {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            z-index: 1001;
-        }
-
-        /* Glass morphism buttons */
+        /* Solid buttons with gradients */
         .glass-button {
-            background: var(--glass-bg);
-            backdrop-filter: var(--glass-backdrop);
-            -webkit-backdrop-filter: var(--glass-backdrop);
-            border: 1px solid var(--glass-border);
+            border: none;
             border-radius: var(--border-radius-small);
             padding: 14px 24px;
             color: white;
@@ -369,42 +297,31 @@
             text-decoration: none;
             display: block;
             text-align: center;
-            box-shadow: var(--glass-shadow);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             position: relative;
             overflow: hidden;
-        }
-
-        .glass-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
             background: var(--primary-gradient);
-            opacity: 0;
-            transition: var(--transition);
-            z-index: -1;
         }
 
         .glass-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        .glass-button:hover::before {
-            opacity: 1;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
         }
 
         .glass-button:active {
             transform: translateY(0);
         }
 
-        /* Specific button styles */
-        .hotel-btn::before { background: var(--secondary-gradient); }
-        .course-btn::before { background: var(--success-gradient); }
-        .volunteer-btn::before { background: var(--warning-gradient); }
-        .direction-btn::before { background: var(--danger-gradient); }
+        /* Specific button styles with solid gradients */
+        .hotel-btn { background: var(--hotel-gradient); }
+        .course-btn { background: var(--course-gradient); }
+        .volunteer-btn { background: var(--volunteer-gradient); }
+        .direction-btn { background: var(--direction-gradient); }
+
+        .hotel-btn:hover { box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4); }
+        .course-btn:hover { box-shadow: 0 8px 25px rgba(79, 172, 254, 0.4); }
+        .volunteer-btn:hover { box-shadow: 0 8px 25px rgba(67, 233, 123, 0.4); }
+        .direction-btn:hover { box-shadow: 0 8px 25px rgba(250, 112, 154, 0.4); }
 
         /* Popup styles */
         .leaflet-popup-content-wrapper {
@@ -442,6 +359,47 @@
 
         .hotel-popup-image:hover {
             transform: scale(1.02);
+        }
+
+        /* Weather iframe container with loading */
+        .weather-container {
+            position: relative;
+            margin-bottom: 16px;
+            border-radius: var(--border-radius-small);
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.1);
+            min-height: 120px;
+        }
+
+        .weather-loading {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 1;
+        }
+
+        .weather-loading.hidden {
+            display: none;
+        }
+
+        .spinner {
+            width: 32px;
+            height: 32px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top: 3px solid var(--primary-gradient);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         /* Notifications */
@@ -522,8 +480,7 @@
             border: none;
             overflow: hidden;
             border-radius: var(--border-radius-small);
-            margin-bottom: 16px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background: transparent;
         }
 
         /* Map overlay */
@@ -569,21 +526,8 @@
                 font-size: 16px;
             }
 
-            .action-buttons {
+            .location-button {
                 align-self: flex-end;
-            }
-
-            .controls-toggle {
-                left: 15px;
-                top: 15px;
-            }
-
-            .controls {
-                left: 15px;
-                top: 15px;
-                right: 15px;
-                min-width: auto;
-                max-width: calc(100vw - 30px);
             }
 
             .popup-title {
@@ -606,45 +550,23 @@
                 left: 10px;
             }
 
-            .controls-toggle {
-                left: 10px;
-                top: 10px;
-            }
-
-            .controls {
-                left: 10px;
-                top: 10px;
-                right: 10px;
-                padding: 16px;
-            }
-
             #search-input {
                 font-size: 16px; /* Prevent zoom on iOS */
             }
         }
 
-        /* Enhanced button hover effects */
-        .glass-button {
-            position: relative;
-            overflow: hidden;
+        /* Loading state for suggestions */
+        .suggestion-loading {
+            padding: 16px 20px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-style: italic;
         }
 
-        .glass-button::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
-
-        .glass-button:active::after {
-            width: 300px;
-            height: 300px;
+        .suggestion-no-results {
+            padding: 16px 20px;
+            text-align: center;
+            color: var(--text-secondary);
         }
 
         /* Smooth scrollbar for webkit browsers */
@@ -665,20 +587,6 @@
         ::-webkit-scrollbar-thumb:hover {
             background: rgba(255, 255, 255, 0.5);
         }
-
-        /* Loading state for suggestions */
-        .suggestion-loading {
-            padding: 16px 20px;
-            text-align: center;
-            color: var(--text-secondary);
-            font-style: italic;
-        }
-
-        .suggestion-no-results {
-            padding: 16px 20px;
-            text-align: center;
-            color: var(--text-secondary);
-        }
     </style>
 </head>
 <body>
@@ -692,27 +600,10 @@
                 <input type="text" id="search-input" placeholder="Search places or parkruns...">
                 <div class="search-suggestions" id="search-suggestions"></div>
             </div>
-            <div class="action-buttons">
-                <button class="action-btn" id="locationButton" onclick="returnToLocation()" title="Return to my location">
-                    <i class="fas fa-crosshairs"></i>
-                </button>
-                <button class="action-btn" id="controlsToggle" onclick="toggleControls()" title="Toggle filters">
-                    <i class="fas fa-sliders-h"></i>
-                </button>
-            </div>
+            <button class="location-button" id="locationButton" onclick="toggleLocationTracking()" title="Toggle location tracking">
+                <i class="fas fa-crosshairs"></i>
+            </button>
         </div>
-    </div>
-
-    <!-- Hidden controls -->
-    <div class="controls" id="controls">
-        <label>
-            <input type="checkbox" id="fiveKCheckbox" checked>
-            <span>5K Events</span>
-        </label>
-        <label>
-            <input type="checkbox" id="juniorCheckbox" checked>
-            <span>Junior Events</span>
-        </label>
     </div>
 
     <ul class="notifications"></ul>
@@ -723,28 +614,13 @@
     <script>
         // Global variables
         let searchTimeout;
-        let currentSuggestions = [];
         let data = {};
         let cancellations = {};
         let markers = L.markerClusterGroup();
         let bbMarkers = [];
         let userLocationMarker;
-
-        // Toggle controls visibility
-        function toggleControls() {
-            const controls = document.getElementById('controls');
-            controls.classList.toggle('show');
-        }
-
-        // Close controls when clicking outside
-        document.addEventListener('click', function(e) {
-            const controls = document.getElementById('controls');
-            const toggle = document.getElementById('controlsToggle');
-            
-            if (!controls.contains(e.target) && !toggle.contains(e.target)) {
-                controls.classList.remove('show');
-            }
-        });
+        let locationWatchId = null;
+        let isTrackingLocation = false;
 
         // Search functionality with live suggestions
         const searchInput = document.getElementById('search-input');
@@ -781,7 +657,7 @@
         });
 
         function showLoadingSuggestions() {
-            suggestionsContainer.innerHTML = '<div class="suggestion-loading">Searching...</div>';
+            suggestionsContainer.innerHTML = '<div class="suggestion-loading"><i class="fas fa-spinner fa-spin"></i> Searching...</div>';
             showSuggestions();
         }
 
@@ -816,7 +692,7 @@
             // Search for places using Nominatim
             fetchLocationSuggestions(query).then(placeSuggestions => {
                 const combinedSuggestions = [...suggestions, ...placeSuggestions];
-                displaySuggestions(combinedSuggestions.slice(0, 8)); // Limit to 8 results
+                displaySuggestions(combinedSuggestions.slice(0, 8));
             }).catch(() => {
                 displaySuggestions(suggestions.slice(0, 8));
             });
@@ -848,7 +724,7 @@
                 const iconType = suggestion.type === 'place' ? 'place' : 'parkrun';
                 
                 return `
-                    <div class="suggestion-item" onclick="selectSuggestion('${suggestion.type}', ${JSON.stringify(suggestion).replace(/"/g, '&quot;')})">
+                    <div class="suggestion-item" onclick="selectSuggestion(${JSON.stringify(suggestion).replace(/"/g, '&quot;')})">
                         <div class="suggestion-icon ${iconType}">
                             <i class="${iconClass}"></i>
                         </div>
@@ -863,20 +739,22 @@
             suggestionsContainer.innerHTML = html;
         }
 
-        function selectSuggestion(type, suggestionData) {
-            const suggestion = typeof suggestionData === 'string' ? JSON.parse(suggestionData) : suggestionData;
+        function selectSuggestion(suggestionData) {
+            const suggestion = suggestionData;
             
             searchInput.value = suggestion.title;
             hideSuggestions();
 
-            if (type === 'place') {
+            if (suggestion.type === 'place') {
                 const lat = parseFloat(suggestion.data.lat);
                 const lon = parseFloat(suggestion.data.lon);
                 map.setView([lat, lon], 13);
                 
                 // Show parkruns in this area
-                showParkrunsInArea(lat, lon, suggestion.data.boundingbox);
-            } else if (type === 'parkrun') {
+                if (suggestion.data.boundingbox) {
+                    showParkrunsInArea(lat, lon, suggestion.data.boundingbox);
+                }
+            } else if (suggestion.type === 'parkrun') {
                 const coordinates = suggestion.data.geometry.coordinates;
                 map.setView([coordinates[1], coordinates[0]], 15);
                 
@@ -903,19 +781,96 @@
                     const [lonEvent, latEvent] = feature.geometry.coordinates;
                     
                     if (latEvent >= south && latEvent <= north && lonEvent >= west && lonEvent <= east) {
-                        const eventLongName = feature.properties.EventLongName;
-                        const isJunior = eventLongName.toLowerCase().includes('junior');
-                        const showMarker = (isJunior && document.getElementById('juniorCheckbox').checked) ||
-                            (!isJunior && document.getElementById('fiveKCheckbox').checked);
-
-                        if (showMarker) {
-                            createParkrunMarker(feature);
-                        }
+                        createParkrunMarker(feature);
                     }
                 }
             });
             
             map.addLayer(markers);
+        }
+
+        // Location tracking like Google Maps
+        function toggleLocationTracking() {
+            const locationButton = document.getElementById('locationButton');
+            
+            if (isTrackingLocation) {
+                stopLocationTracking();
+            } else {
+                startLocationTracking();
+            }
+        }
+
+        function startLocationTracking() {
+            const locationButton = document.getElementById('locationButton');
+            
+            if (navigator.geolocation) {
+                locationButton.classList.add('active');
+                isTrackingLocation = true;
+                
+                // Get initial position
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        updateUserLocation(position);
+                        map.setView([position.coords.latitude, position.coords.longitude], 15);
+                    },
+                    handleLocationError,
+                    { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
+                );
+                
+                // Start watching position
+                locationWatchId = navigator.geolocation.watchPosition(
+                    updateUserLocation,
+                    handleLocationError,
+                    { enableHighAccuracy: true, timeout: 10000, maximumAge: 30000 }
+                );
+            } else {
+                createToast('error', 'Geolocation is not supported by this browser');
+            }
+        }
+
+        function stopLocationTracking() {
+            const locationButton = document.getElementById('locationButton');
+            
+            if (locationWatchId !== null) {
+                navigator.geolocation.clearWatch(locationWatchId);
+                locationWatchId = null;
+            }
+            
+            locationButton.classList.remove('active');
+            isTrackingLocation = false;
+        }
+
+        function updateUserLocation(position) {
+            const lat = position.coords.latitude;
+            const lng = position.coords.longitude;
+            const accuracy = position.coords.accuracy;
+
+            if (!userLocationMarker) {
+                userLocationMarker = L.marker([lat, lng], { icon: LocationIcon }).addTo(map)
+                    .bindPopup(`You are here (±${Math.round(accuracy)}m accuracy)`);
+            } else {
+                userLocationMarker.setLatLng([lat, lng]);
+                userLocationMarker.getPopup().setContent(`You are here (±${Math.round(accuracy)}m accuracy)`);
+            }
+        }
+
+        function handleLocationError(error) {
+            let message = 'Cannot find your location';
+            
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    message = 'Location access denied by user';
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    message = 'Location information unavailable';
+                    break;
+                case error.TIMEOUT:
+                    message = 'Location request timed out';
+                    break;
+            }
+            
+            createToast('error', message);
+            stopLocationTracking();
         }
 
         // All the original JavaScript functionality
@@ -1023,27 +978,6 @@
 
         map.on('moveend', updateURL);
 
-        function onLocationFound(e) {
-            if (!userLocationMarker) {
-                userLocationMarker = L.marker(e.latlng, { icon: LocationIcon }).addTo(map)
-                    .bindPopup("You are here");
-            } else {
-                userLocationMarker.setLatLng(e.latlng);
-            }
-
-            if (!hasValidCoords) {
-                map.setView(e.latlng, 13);
-            }
-        }
-
-        map.on('locationfound', onLocationFound);
-
-        if (!hasValidCoords) {
-            map.locate({ setView: true, maxZoom: 13 });
-        } else {
-            map.locate({ setView: false });
-        }
-
         // Icon definitions
         var juniorIcon = L.icon({
             iconUrl: '/Icons/Junior.png',
@@ -1129,6 +1063,8 @@
         }
 
         function addMarkersToMap(locations) {
+            if (!locations) return;
+            
             locations.forEach(location => {
                 const lat = location.coordinates.latitude;
                 const lon = location.coordinates.longitude;
@@ -1177,34 +1113,6 @@
 
         map.on('zoomend', updateMarkerVisibility);
 
-        function returnToLocation() {
-            if (userLocationMarker) {
-                map.flyTo(userLocationMarker.getLatLng(), 13, { duration: 1.5 });
-            } else {
-                map.locate({ setView: true, maxZoom: 13 });
-            }
-        }
-
-        let canCreateToast = true;
-
-        map.on('locationerror', function() {
-          if (canCreateToast) {
-            createToast();
-            canCreateToast = false;
-            setTimeout(function() {
-              canCreateToast = true;
-            }, 2500); 
-          }
-        });
-
-        map.on('moveend', function() {
-            if (userLocationMarker) {
-                var bounds = map.getBounds();
-                var isUserLocationVisible = bounds.contains(userLocationMarker.getLatLng());
-                document.getElementById('locationButton').style.display = isUserLocationVisible ? "none" : "flex";
-            }
-        });
-
         const notifications = document.querySelector(".notifications");
 
         const toastDetails = {
@@ -1220,13 +1128,12 @@
             setTimeout(() => toast.remove(), 500);
         }
 
-        const createToast = () => {
-            const { icon, text } = toastDetails.error;
+        const createToast = (type = 'error', message = 'Cannot find your location') => {
             const toast = document.createElement("li");
             toast.className = `toast`;
             toast.innerHTML = `<div class="column">
-                                 <i class="fa-solid ${icon}"></i>
-                                 <span>${text}</span>
+                                 <i class="fa-solid fa-triangle-exclamation"></i>
+                                 <span>${message}</span>
                               </div>`;
             notifications.appendChild(toast);
             setTimeout(() => {
@@ -1237,8 +1144,6 @@
         fetchLocationData().then(data => {
             if (data && Array.isArray(data)) {
                 addMarkersToMap(data);
-            } else {
-                console.error('Invalid location data');
             }
         });
 
@@ -1269,7 +1174,12 @@
             var popupContent = `
                 <div>
                     <div class="popup-title">${eventLongName}</div>
-                    <iframe id="weatherIframe" src="${weatherUrl}" scrolling="no"></iframe>
+                    <div class="weather-container">
+                        <div class="weather-loading" id="weather-loading-${eventname}">
+                            <div class="spinner"></div>
+                        </div>
+                        <iframe id="weatherIframe-${eventname}" src="${weatherUrl}" scrolling="no" onload="hideWeatherLoading('${eventname}')"></iframe>
+                    </div>
                     <button class="glass-button course-btn" onclick="openUrl('${countryUrl}/${eventname}/course/')" style="width: 100%; margin-bottom: 8px;">
                         <i class="fas fa-route"></i> Course
                     </button>
@@ -1314,6 +1224,13 @@
             markers.addLayer(marker);
         }
 
+        function hideWeatherLoading(eventname) {
+            const loadingElement = document.getElementById(`weather-loading-${eventname}`);
+            if (loadingElement) {
+                loadingElement.classList.add('hidden');
+            }
+        }
+
         function updateMapMarkers() {
             markers.clearLayers();
 
@@ -1321,14 +1238,7 @@
 
             data.events.features.forEach(function (feature) {
                 if (feature.geometry.type === 'Point') {
-                    var eventLongName = feature.properties.EventLongName;
-                    var isJunior = eventLongName.toLowerCase().includes('junior');
-                    var showMarker = (isJunior && document.getElementById('juniorCheckbox').checked) ||
-                        (!isJunior && document.getElementById('fiveKCheckbox').checked);
-
-                    if (showMarker) {
-                        createParkrunMarker(feature);
-                    }
+                    createParkrunMarker(feature);
                 }
             });
 
@@ -1366,18 +1276,8 @@
             const websiteUrl = place.poi?.url || null;
             const imageUrl = place.poi?.imageUrl || null;
 
-            let buttonColor = "#c8a367";
-
-            if (type === "camping") {
-                buttonColor = "#0d7640";
-            } else if (type.toLowerCase().includes("caravan")) {
-                buttonColor = "#046e7b";
-            } else if (type.toLowerCase().includes("cafe")) {
-                buttonColor = "#4b1f2c";
-            }
-
             let popupContent = `
-                <div class="hotel-popup" style="--button-color: ${buttonColor};">
+                <div class="hotel-popup">
                     <div class="popup-title">${name}</div>
             `;
 
@@ -1386,26 +1286,26 @@
             }
 
             popupContent += `
-                <button class="glass-button" onclick="openDirections(${lat}, ${lon})" style="width: 100%; margin-bottom: 8px;">
+                <button class="glass-button direction-btn" onclick="openDirections(${lat}, ${lon})" style="width: 100%; margin-bottom: 8px;">
                     <i class="fas fa-map-marker-alt"></i> Directions
                 </button>
                 ${websiteUrl ? `
-                    <button class="glass-button" onclick="openWebsite('${websiteUrl}')" style="width: 100%; margin-bottom: 8px;">
+                    <button class="glass-button hotel-btn" onclick="openWebsite('${websiteUrl}')" style="width: 100%; margin-bottom: 8px;">
                         <i class="fas fa-globe"></i> Visit Website
                     </button>
                 ` : `
-                    <button class="glass-button" disabled style="width: 100%; margin-bottom: 8px; opacity: 0.5;">
+                    <button class="glass-button" disabled style="width: 100%; margin-bottom: 8px; opacity: 0.5; background: #ccc;">
                         <i class="fas fa-globe"></i> No Website
                     </button>
                 `}
                 ${phoneNumber ? `
                     <a href="tel:${phoneNumber}" style="text-decoration: none;">
-                        <button class="glass-button" style="width: 100%;">
+                        <button class="glass-button course-btn" style="width: 100%;">
                             <i class="fas fa-phone"></i> Call
                         </button>
                     </a>
                 ` : `
-                    <button class="glass-button" disabled style="width: 100%; opacity: 0.5;">
+                    <button class="glass-button" disabled style="width: 100%; opacity: 0.5; background: #ccc;">
                         <i class="fas fa-phone"></i> No Phone
                     </button>
                 `}
@@ -1420,9 +1320,6 @@
             .then(jsonData => {
                 data = jsonData;
                 updateMapMarkers();
-
-                document.getElementById('juniorCheckbox').addEventListener('change', updateMapMarkers);
-                document.getElementById('fiveKCheckbox').addEventListener('change', updateMapMarkers);
             })
             .catch(err => {
                 console.error('Error fetching GeoJSON:', err);
@@ -1443,6 +1340,16 @@
                 url = 'https://' + url;
             }
             window.open(url, '_blank');
+        }
+
+        // Initialize location tracking if URL has coordinates
+        if (hasValidCoords) {
+            map.setView([lat, lon], zoom);
+        } else {
+            // Auto-start location tracking on first load
+            setTimeout(() => {
+                startLocationTracking();
+            }, 1000);
         }
     </script>
 </body>
