@@ -219,10 +219,11 @@
             color: white;
         }
 
-        /* Live location indicator */
+        /* Live location indicator - keep transparent background but show green dot */
         .location-button.tracking {
-            background: var(--parkrun-gradient);
-            color: white;
+            /* Keep same transparent background as normal state */
+            background: var(--glass-bg);
+            color: var(--text-primary);
         }
 
         .location-button.tracking::after {
@@ -347,7 +348,7 @@
             font-size: 16px;
         }
 
-        /* Search suggestions dropdown - with visible scrollbar */
+        /* Search suggestions dropdown - match filter dropdown transparency */
         .search-suggestions {
             position: absolute;
             top: calc(100% + 8px);
@@ -707,16 +708,25 @@
             display: none;
         }
 
-        /* Loading state for suggestions */
+        /* Loading state for suggestions - match weather loading style */
         .suggestion-loading {
             padding: 20px;
             text-align: center;
             color: var(--text-secondary);
-            font-style: italic;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 12px;
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .suggestion-loading .spinner {
+            width: 24px;
+            height: 24px;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            border-top: 2px solid #333;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
         }
 
         .suggestion-no-results {
@@ -912,7 +922,7 @@
         function showLoadingSuggestions() {
             suggestionsContainer.innerHTML = `
                 <div class="suggestion-loading">
-                    <i class="fas fa-spinner fa-spin"></i>
+                    <div class="spinner"></div>
                     <span>Searching...</span>
                 </div>
             `;
@@ -1211,7 +1221,7 @@
             }
         }
 
-        // Auto-locate user on startup and start tracking
+        // Auto-locate user on startup and start tracking - ALWAYS show marker
         function autoLocateAndTrack() {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(
@@ -1219,7 +1229,7 @@
                         const lat = position.coords.latitude;
                         const lng = position.coords.longitude;
                         
-                        // Create user location marker
+                        // ALWAYS create and show user location marker
                         userLocationMarker = L.marker([lat, lng], { icon: LocationIcon }).addTo(map)
                             .bindPopup(`You are here`);
                         
@@ -1636,7 +1646,7 @@
 
             fetch(searchUrl)
                 .then(response => response.json())
-                .then(data => {
+                                .then(data => {
                     if (data.results && data.results.length > 0) {
                         data.results.forEach(place => {
                             createPlaceMarker(place, category, icon, filterType);
@@ -1732,6 +1742,10 @@
         // Initialize map position and auto-locate user
         if (hasValidMapCoords) {
             map.setView([mapLat, mapLon], mapZoom);
+            // Still try to get user location even if URL has coordinates
+            setTimeout(() => {
+                autoLocateAndTrack();
+            }, 1000);
         } else {
             // Auto-locate user on startup if no URL coordinates
             setTimeout(() => {
