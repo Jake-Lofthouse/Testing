@@ -100,6 +100,11 @@
         "date": "2025-06-21"
     },
     {
+        "name": "Jells parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-06-21"
+    },
+    {
         "name": "Jubilee parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-21"
@@ -277,6 +282,11 @@
     {
         "name": "Whitfords Nodes parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-06-21"
+    },
+    {
+        "name": "Worcester Pitchcroft parkrun",
+        "reason": "Venue unavailable",
         "date": "2025-06-21"
     },
     {
