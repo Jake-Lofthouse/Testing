@@ -882,57 +882,35 @@
 
         // Parse URL parameters for parkrun filtering
         function parseParkrunFilter() {
-            const urlParams = new URLSearchParams(window.location.search);
             const path = window.location.pathname;
             const hash = window.location.hash;
             
-            // Check for filter in URL parameters (e.g., ?filter=5k)
-    const filterParam = urlParams.get('filter');
-    if (filterParam) {
-        const filter = filterParam.toLowerCase();
-        if (['all', '5k', 'junior'].includes(filter)) {
-            parkrunFilter = filter;
-            console.log('Parkrun filter set to:', parkrunFilter);
-            return;
-        }
-    }
-    
-    // Check for ?/filter format in pathname
-    if (path.includes('?/')) {
-        const filterPart = path.split('?/')[1];
-        if (filterPart) {
-            const filter = filterPart.toLowerCase();
-            if (['all', '5k', 'junior'].includes(filter)) {
-                parkrunFilter = filter;
-                console.log('Parkrun filter set to:', parkrunFilter);
-                return;
+            // Check for ?/filter format
+            if (path.includes('?/')) {
+                const filterPart = path.split('?/')[1];
+                if (filterPart) {
+                    const filter = filterPart.toLowerCase();
+                    if (['all', '5k', 'junior'].includes(filter)) {
+                        parkrunFilter = filter;
+                        console.log('Parkrun filter set to:', parkrunFilter);
+                        return;
+                    }
+                }
             }
+            
+            // Check for #filter format as fallback
+            if (hash) {
+                const filter = hash.substring(1).toLowerCase();
+                if (['all', '5k', 'junior'].includes(filter)) {
+                    parkrunFilter = filter;
+                    console.log('Parkrun filter set to:', parkrunFilter);
+                    return;
+                }
+            }
+            
+            // Default to all
+            parkrunFilter = 'all';
         }
-    }
-    
-    // Check for /filter format in pathname (e.g., /5k, /junior, /all)
-    const pathParts = path.split('/').filter(part => part.length > 0);
-    const lastPart = pathParts[pathParts.length - 1];
-    if (lastPart && ['all', '5k', 'junior'].includes(lastPart.toLowerCase())) {
-        parkrunFilter = lastPart.toLowerCase();
-        console.log('Parkrun filter set to:', parkrunFilter);
-        return;
-    }
-    
-    // Check for #filter format as fallback
-    if (hash) {
-        const filter = hash.substring(1).toLowerCase();
-        if (['all', '5k', 'junior'].includes(filter)) {
-            parkrunFilter = filter;
-            console.log('Parkrun filter set to:', parkrunFilter);
-            return;
-        }
-    }
-    
-    // Default to all
-    parkrunFilter = 'all';
-    console.log('Parkrun filter defaulted to: all');
-}
 
         // Initialize parkrun filter from URL
         parseParkrunFilter();
@@ -1666,6 +1644,7 @@
 
             markers.addLayer(marker);
         }
+
         function hideWeatherLoading(eventname) {
             const loadingElement = document.getElementById(`weather-loading-${eventname}`);
             if (loadingElement) {
