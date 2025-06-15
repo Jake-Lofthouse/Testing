@@ -426,10 +426,6 @@
             background: var(--parkrun-gradient);
         }
 
-        .suggestion-icon.parkrun.junior {
-            background: var(--junior-gradient);
-        }
-
         .suggestion-icon.place {
             background: var(--primary-gradient);
         }
@@ -1301,16 +1297,16 @@
         });
 
         // Map initialization
-        const urlParams = new URLSearchParams(window.location.search);
-        const lat = parseFloat(urlParams.get('lat'));
-        const lon = parseFloat(urlParams.get('lon'));
-        const zoom = parseInt(urlParams.get('zoom')) || 13; 
+        const mapUrlParams = new URLSearchParams(window.location.search);
+        const mapLat = parseFloat(mapUrlParams.get('lat'));
+        const mapLon = parseFloat(mapUrlParams.get('lon'));
+        const mapZoom = parseInt(mapUrlParams.get('zoom')) || 13; 
 
-        const hasValidCoords = !isNaN(lat) && !isNaN(lon);
+        const hasValidMapCoords = !isNaN(mapLat) && !isNaN(mapLon);
 
         var map = L.map('map', {
-            center: hasValidCoords ? [lat, lon] : [0, 0],
-            zoom: hasValidCoords ? zoom : 2,
+            center: hasValidMapCoords ? [mapLat, mapLon] : [0, 0],
+            zoom: hasValidMapCoords ? mapZoom : 2,
             zoomControl: false,
             maxBounds: [[-90, -180], [90, 180]],
             maxBoundsViscosity: 1.0,
@@ -1719,15 +1715,8 @@
         }
 
         // Initialize map position and auto-locate user
-        const urlParams = new URLSearchParams(window.location.search);
-        const lat = parseFloat(urlParams.get('lat'));
-        const lon = parseFloat(urlParams.get('lon'));
-        const zoom = parseInt(urlParams.get('zoom')) || 13; 
-
-        const hasValidCoords = !isNaN(lat) && !isNaN(lon);
-
-        if (hasValidCoords) {
-            map.setView([lat, lon], zoom);
+        if (hasValidMapCoords) {
+            map.setView([mapLat, mapLon], mapZoom);
         } else {
             // Auto-locate user on startup if no URL coordinates
             setTimeout(() => {
