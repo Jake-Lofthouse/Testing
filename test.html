@@ -1626,4 +1626,114 @@
             fetch(searchUrl)
                 .then(response => response.json())
                 .then(data => {
-                    if (data.results && data
+                    if (data.results && data.results.length > 0) {
+                        data.results.forEach(place => {
+                            createPlaceMarker(place, category, icon, filterType);
+                        });
+                    }
+                })
+                .catch(error => console.error(`Error fetching ${category} data:`, error));
+        }
+
+        function createPlaceMarker(place, type, icon, filterType) {
+            const lat = place.position.lat;
+            const lon = place.position.lon;
+            const name = place.poi?.name || "No Name Available";
+            const phoneNumber = place.poi?.phone || null;
+            const websiteUrl = place.poi?.url || null;
+            const imageUrl = place.poi?.imageUrl || null;
+
+            let popupContent = `
+                <div class="hotel-popup">
+                    <div class="popup-title">${name}</div>
+            `;
+
+            if (imageUrl) {
+                popupContent += `<img src="${imageUrl}" alt="${name}" class="hotel-popup-image" />`;
+            }
+
+            popupContent += `
+                <button class="glass-button direction-btn" onclick="openDirections(${lat}, ${lon})" style="width: 100%; margin-bottom: 8px;">
+                    <i class="fas fa-map-marker-alt"></i> Directions
+                </button>
+                ${websiteUrl ? `
+                    <button class="glass-button hotel-btn" onclick="openWebsite('${websiteUrl}')" style="width: 100%; margin-bottom: 8px;">
+                        <i class="fas fa-globe"></i> Visit Website
+                    </button>
+                ` : `
+                    <button class="glass-button" disabled style="width: 100%; margin-bottom: 8px; opacity: 0.5; background: #ccc;">
+                        <i class="fas fa-globe"></i> No Website
+                    </button>
+                `}
+                ${phoneNumber ? `
+                    <a href="tel:${phoneNumber}" style="text-decoration: none;">
+                        <button class="glass-button course-btn" style="width: 100%;">
+                            <i class="fas fa-phone"></i> Call
+                        </button>
+                    </a>
+                ` : `
+                    <button class="glass-button" disabled style="width: 100%; opacity: 0.5; background: #ccc;">
+                        <i class="fas fa-phone"></i> No Phone
+                    </button>
+                `}
+            </div>
+            `;
+
+            const marker = L.marker([lat, lon], { icon }).bindPopup(popupContent);
+            
+            // Store marker with its type for filtering
+            placeMarkers.push({ marker, type: filterType });
+            
+            // Only add to map if filter allows it
+            if (activeFilters.includes(filterType)) {
+                marker.addTo(map);
+            }
+        }
+
+        fetch('/events1.json')
+            .then(response => response.json())
+            .then(jsonData => {
+                data = jsonData;
+                console.log('Loaded parkrun data:', data);
+                updateMapMarkers();
+            })
+            .catch(err => {
+                console.error('Error fetching GeoJSON:', err);
+                handleGeocodingError();
+            });
+
+        function handleGeocodingError() {
+            window.location.href = 'https://parkrunnertourist.co.uk/Error';
+        }
+
+        function openDirections(lat, lon) {
+            const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}`;
+            window.open(url, '_blank');
+        }
+
+        function openWebsite(url) {
+            if (!/^https?:\/\//i.test(url)) {
+                url = 'https://' + url;
+            }
+            window.open(url, '_blank');
+        }
+
+        // Initialize map position and auto-locate user
+        const urlParams = new URLSearchParams(window.location.search);
+        const lat = parseFloat(urlParams.get('lat'));
+        const lon = parseFloat(urlParams.get('lon'));
+        const zoom = parseInt(urlParams.get('zoom')) || 13; 
+
+        const hasValidCoords = !isNaN(lat) && !isNaN(lon);
+
+        if (hasValidCoords) {
+            map.setView([lat, lon], zoom);
+        } else {
+            // Auto-locate user on startup if no URL coordinates
+            setTimeout(() => {
+                autoLocateUser();
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
