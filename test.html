@@ -878,42 +878,6 @@
         let isTrackingLocation = false;
         let activeFilters = ['hotels', 'cafes', 'camping']; // All active by default
         let placeMarkers = [];
-        let parkrunFilter = 'all'; // Default to show all parkruns
-
-        // Parse URL parameters for parkrun filtering
-        function parseParkrunFilter() {
-            const path = window.location.pathname;
-            const hash = window.location.hash;
-            
-            // Check for ?/filter format
-            if (path.includes('?/')) {
-                const filterPart = path.split('?/')[1];
-                if (filterPart) {
-                    const filter = filterPart.toLowerCase();
-                    if (['all', '5k', 'junior'].includes(filter)) {
-                        parkrunFilter = filter;
-                        console.log('Parkrun filter set to:', parkrunFilter);
-                        return;
-                    }
-                }
-            }
-            
-            // Check for #filter format as fallback
-            if (hash) {
-                const filter = hash.substring(1).toLowerCase();
-                if (['all', '5k', 'junior'].includes(filter)) {
-                    parkrunFilter = filter;
-                    console.log('Parkrun filter set to:', parkrunFilter);
-                    return;
-                }
-            }
-            
-            // Default to all
-            parkrunFilter = 'all';
-        }
-
-        // Initialize parkrun filter from URL
-        parseParkrunFilter();
 
         // Search functionality with live suggestions
         const searchInput = document.getElementById('search-input');
@@ -1094,18 +1058,13 @@
             const parkrunSuggestions = [];
             const placeSuggestions = [];
             
-            // Search for parkruns FIRST - apply parkrun filter
+            // Search for parkruns FIRST
             if (data.events && data.events.features) {
                 data.events.features.forEach(feature => {
                     if (feature.geometry.type === 'Point') {
                         const eventName = feature.properties.EventLongName;
-                        const isJunior = eventName.toLowerCase().includes('junior');
-                        
-                        // Apply parkrun filter
-                        if (parkrunFilter === '5k' && isJunior) return;
-                        if (parkrunFilter === 'junior' && !isJunior) return;
-                        
                         if (eventName.toLowerCase().includes(query.toLowerCase())) {
+                            const isJunior = eventName.toLowerCase().includes('junior');
                             parkrunSuggestions.push({
                                 type: 'parkrun',
                                 title: eventName,
@@ -1580,11 +1539,6 @@
             const eventname = normalizeEventName(feature.properties.eventname);
             const eventLongName = feature.properties.EventLongName;
             const isJunior = eventLongName.toLowerCase().includes('junior');
-            
-            // Apply parkrun filter - don't create marker if it doesn't match filter
-            if (parkrunFilter === '5k' && isJunior) return;
-            if (parkrunFilter === 'junior' && !isJunior) return;
-            
             const countryUrl = getCountryUrl(coordinates[1], coordinates[0]);
             
             var weatherUrl = `https://parkrunnertourist.co.uk/weather?lat=${coordinates[1]}&lon=${coordinates[0]}`;
@@ -1692,7 +1646,7 @@
 
             fetch(searchUrl)
                 .then(response => response.json())
-                .then(data => {
+                                .then(data => {
                     if (data.results && data.results.length > 0) {
                         data.results.forEach(place => {
                             createPlaceMarker(place, category, icon, filterType);
@@ -1704,44 +1658,100 @@
 
         function createPlaceMarker(place, type, icon, filterType) {
             const lat = place.position.lat;
-            const lng = place.position.lon;
-            const name = place.poi ? place.poi.name : place.address.freeformAddress;
-            const address = place.address.freeformAddress;
+            const lon = place.position.lon;
+            const name = place.poi?.name || "No Name Available";
+            const phoneNumber = place.poi?.phone || null;
+            const websiteUrl = place.poi?.url || null;
+            const imageUrl = place.poi?.imageUrl || null;
 
-            const marker = L.marker([lat, lng], { icon: icon })
-                .bindPopup(`
+            let popupContent = `
+                <div class="hotel-popup">
                     <div class="popup-title">${name}</div>
-                    <p style="margin-bottom: 16px; color: var(--text-secondary);">${address}</p>
-                    <button class="glass-button direction-btn" onclick="openDirections(${lat}, ${lng})" style="width: 100%;">
-                        <i class="fas fa-directions"></i> Directions
-                    </button>
-                `);
+            `;
 
+            if (imageUrl) {
+                popupContent += `<img src="${imageUrl}" alt="${name}" class="hotel-popup-image" />`;
+            }
+
+            popupContent += `
+                <button class="glass-button direction-btn" onclick="openDirections(${lat}, ${lon})" style="width: 100%; margin-bottom: 8px;">
+                    <i class="fas fa-map-marker-alt"></i> Directions
+                </button>
+                ${websiteUrl ? `
+                    <button class="glass-button hotel-btn" onclick="openWebsite('${websiteUrl}')" style="width: 100%; margin-bottom: 8px;">
+                        <i class="fas fa-globe"></i> Visit Website
+                    </button>
+                ` : `
+                    <button class="glass-button" disabled style="width: 100%; margin-bottom: 8px; opacity: 0.5; background: #ccc;">
+                        <i class="fas fa-globe"></i> No Website
+                    </button>
+                `}
+                ${phoneNumber ? `
+                    <a href="tel:${phoneNumber}" style="text-decoration: none;">
+                        <button class="glass-button course-btn" style="width: 100%;">
+                            <i class="fas fa-phone"></i> Call
+                        </button>
+                    </a>
+                ` : `
+                    <button class="glass-button" disabled style="width: 100%; opacity: 0.5; background: #ccc;">
+                        <i class="fas fa-phone"></i> No Phone
+                    </button>
+                `}
+            </div>
+            `;
+
+            const marker = L.marker([lat, lon], { icon }).bindPopup(popupContent);
+            
             // Store marker with its type for filtering
             placeMarkers.push({ marker, type: filterType });
-
-            // Only add to map if filter is active
+            
+            // Only add to map if filter allows it
             if (activeFilters.includes(filterType)) {
-                map.addLayer(marker);
+                marker.addTo(map);
             }
         }
 
-        function openDirections(lat, lng) {
-            const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`;
+        fetch('/events1.json')
+            .then(response => response.json())
+            .then(jsonData => {
+                data = jsonData;
+                console.log('Loaded parkrun data:', data);
+                updateMapMarkers();
+            })
+            .catch(err => {
+                console.error('Error fetching GeoJSON:', err);
+                handleGeocodingError();
+            });
+
+        function handleGeocodingError() {
+            window.location.href = 'https://parkrunnertourist.co.uk/Error';
+        }
+
+        function openDirections(lat, lon) {
+            const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}`;
             window.open(url, '_blank');
         }
 
-        // Load parkrun data
-        fetch('/geo.json')
-            .then(response => response.json())
-            .then(geojsonData => {
-                data.events = geojsonData;
-                updateMapMarkers();
-                
-                // Auto-locate user after data is loaded
+        function openWebsite(url) {
+            if (!/^https?:\/\//i.test(url)) {
+                url = 'https://' + url;
+            }
+            window.open(url, '_blank');
+        }
+
+        // Initialize map position and auto-locate user
+        if (hasValidMapCoords) {
+            map.setView([mapLat, mapLon], mapZoom);
+            // Still try to get user location even if URL has coordinates
+            setTimeout(() => {
                 autoLocateAndTrack();
-            })
-            .catch(err => console.error('Error fetching parkrun data:', err));
+            }, 1000);
+        } else {
+            // Auto-locate user on startup if no URL coordinates
+            setTimeout(() => {
+                autoLocateAndTrack();
+            }, 1000);
+        }
     </script>
 </body>
 </html>
