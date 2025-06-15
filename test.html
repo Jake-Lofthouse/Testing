@@ -40,6 +40,8 @@
             --warning-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
             --danger-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
             --filter-gradient: linear-gradient(135deg, #7dd856 0%, #5cb85c 100%);
+            --parkrun-gradient: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            --junior-gradient: linear-gradient(135deg, #6f42c1 0%, #8e44ad 100%);
             
             /* Better parkrun button colors */
             --course-gradient: linear-gradient(135deg, #28a745 0%, #20c997 100%);
@@ -204,6 +206,37 @@
             color: white;
         }
 
+        /* Live location indicator */
+        .location-button.tracking {
+            background: var(--parkrun-gradient);
+            color: white;
+        }
+
+        .location-button.tracking::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            right: -2px;
+            width: 12px;
+            height: 12px;
+            background: #28a745;
+            border: 2px solid white;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+            }
+        }
+
         /* Filter dropdown */
         .filter-dropdown {
             position: absolute;
@@ -217,7 +250,7 @@
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
             display: none;
             z-index: 1002;
-            min-width: 200px;
+            min-width: 220px;
         }
 
         .filter-dropdown.show {
@@ -243,10 +276,32 @@
             background: rgba(125, 216, 86, 0.1);
         }
 
-        .filter-item.active {
-            background: rgba(125, 216, 86, 0.2);
-            color: #5cb85c;
-            font-weight: 600;
+        .filter-checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+
+        .filter-item.active .filter-checkbox {
+            background: var(--filter-gradient);
+            border-color: #7dd856;
+        }
+
+        .filter-checkbox i {
+            color: white;
+            font-size: 12px;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .filter-item.active .filter-checkbox i {
+            opacity: 1;
         }
 
         .filter-icon {
@@ -255,16 +310,28 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 8px;
-            font-size: 16px;
             flex-shrink: 0;
-            color: white;
-            font-weight: 600;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
-        .filter-icon.hotels { background: var(--hotel-gradient); }
-        .filter-icon.cafes { background: var(--warning-gradient); }
-        .filter-icon.camping { background: var(--course-gradient); }
+        .filter-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .filter-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 16px;
+        }
+
+        .filter-subtitle {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
 
         /* Search suggestions dropdown - with visible scrollbar */
         .search-suggestions {
@@ -356,7 +423,11 @@
         }
 
         .suggestion-icon.parkrun {
-            background: var(--success-gradient);
+            background: var(--parkrun-gradient);
+        }
+
+        .suggestion-icon.parkrun.junior {
+            background: var(--junior-gradient);
         }
 
         .suggestion-icon.place {
@@ -731,7 +802,7 @@
                 <div class="search-suggestions" id="search-suggestions"></div>
             </div>
             <div class="control-buttons">
-                <button class="location-button" id="locationButton" onclick="returnToLocation()" title="Return to my location">
+                <button class="location-button" id="locationButton" onclick="toggleLocationTracking()" title="Toggle location tracking">
                     <i class="fas fa-crosshairs"></i>
                 </button>
                 <div style="position: relative;">
@@ -739,29 +810,35 @@
                         <i class="fas fa-filter"></i>
                     </button>
                     <div class="filter-dropdown" id="filterDropdown">
-                        <div class="filter-item active" onclick="toggleFilterType('all')">
-                            <div class="filter-icon hotels">
-                                <i class="fas fa-globe"></i>
+                        <div class="filter-item active" onclick="toggleFilterType('hotels')" data-type="hotels">
+                            <div class="filter-checkbox">
+                                <i class="fas fa-check"></i>
                             </div>
-                            <span>Show All</span>
+                            <div class="filter-icon" style="background-image: url('/Icons/Hotel.png');"></div>
+                            <div class="filter-content">
+                                <div class="filter-title">Hotels</div>
+                                <div class="filter-subtitle">Accommodation</div>
+                            </div>
                         </div>
-                        <div class="filter-item" onclick="toggleFilterType('hotels')">
-                            <div class="filter-icon hotels">
-                                <i class="fas fa-bed"></i>
+                        <div class="filter-item active" onclick="toggleFilterType('cafes')" data-type="cafes">
+                            <div class="filter-checkbox">
+                                <i class="fas fa-check"></i>
                             </div>
-                            <span>Hotels</span>
+                            <div class="filter-icon" style="background-image: url('Icons/Cafe.png');"></div>
+                            <div class="filter-content">
+                                <div class="filter-title">Cafés & Pubs</div>
+                                <div class="filter-subtitle">Food & Drink</div>
+                            </div>
                         </div>
-                        <div class="filter-item" onclick="toggleFilterType('cafes')">
-                            <div class="filter-icon cafes">
-                                <i class="fas fa-coffee"></i>
+                        <div class="filter-item active" onclick="toggleFilterType('camping')" data-type="camping">
+                            <div class="filter-checkbox">
+                                <i class="fas fa-check"></i>
                             </div>
-                            <span>Cafés & Pubs</span>
-                        </div>
-                        <div class="filter-item" onclick="toggleFilterType('camping')">
-                            <div class="filter-icon camping">
-                                <i class="fas fa-campground"></i>
+                            <div class="filter-icon" style="background-image: url('/Icons/Camp.png');"></div>
+                            <div class="filter-content">
+                                <div class="filter-title">Camping</div>
+                                <div class="filter-subtitle">Outdoor Stay</div>
                             </div>
-                            <span>Camping</span>
                         </div>
                     </div>
                 </div>
@@ -784,7 +861,7 @@
         let userLocationMarker;
         let locationWatchId = null;
         let isTrackingLocation = false;
-        let activeFilters = ['all'];
+        let activeFilters = ['hotels', 'cafes', 'camping']; // All active by default
         let placeMarkers = [];
 
         // Search functionality with live suggestions
@@ -792,6 +869,7 @@
         const suggestionsContainer = document.getElementById('search-suggestions');
         const filterButton = document.getElementById('filterButton');
         const filterDropdown = document.getElementById('filterDropdown');
+        const locationButton = document.getElementById('locationButton');
 
         searchInput.addEventListener('input', function() {
             const query = this.value.trim();
@@ -864,31 +942,96 @@
         }
 
         function toggleFilterType(type) {
-            // Update active filter
-            activeFilters = [type];
+            const filterItem = document.querySelector(`[data-type="${type}"]`);
             
-            // Update UI
-            document.querySelectorAll('.filter-item').forEach(item => {
-                item.classList.remove('active');
-            });
-            event.target.closest('.filter-item').classList.add('active');
+            if (activeFilters.includes(type)) {
+                // Remove from active filters
+                activeFilters = activeFilters.filter(f => f !== type);
+                filterItem.classList.remove('active');
+            } else {
+                // Add to active filters
+                activeFilters.push(type);
+                filterItem.classList.add('active');
+            }
             
             // Apply filter to existing place markers
             applyPlaceFilters();
-            
-            hideFilter();
         }
 
         function applyPlaceFilters() {
             placeMarkers.forEach(markerData => {
                 const { marker, type } = markerData;
                 
-                if (activeFilters.includes('all') || activeFilters.includes(type)) {
+                if (activeFilters.includes(type)) {
                     map.addLayer(marker);
                 } else {
                     map.removeLayer(marker);
                 }
             });
+        }
+
+        function toggleLocationTracking() {
+            if (isTrackingLocation) {
+                stopLocationTracking();
+            } else {
+                startLocationTracking();
+            }
+        }
+
+        function startLocationTracking() {
+            if (navigator.geolocation) {
+                locationButton.classList.add('tracking');
+                isTrackingLocation = true;
+                
+                locationWatchId = navigator.geolocation.watchPosition(
+                    (position) => {
+                        const lat = position.coords.latitude;
+                        const lng = position.coords.longitude;
+                        
+                        // Update or create user location marker
+                        if (!userLocationMarker) {
+                            userLocationMarker = L.marker([lat, lng], { icon: LocationIcon }).addTo(map)
+                                .bindPopup(`You are here (Live tracking)`);
+                            // Fly to user location on first track
+                            map.flyTo([lat, lng], 15, { duration: 1.5 });
+                        } else {
+                            userLocationMarker.setLatLng([lat, lng]);
+                        }
+                    },
+                    (error) => {
+                        let message = 'Cannot track your location';
+                        switch(error.code) {
+                            case error.PERMISSION_DENIED:
+                                message = 'Location access denied by user';
+                                break;
+                            case error.POSITION_UNAVAILABLE:
+                                message = 'Location information unavailable';
+                                break;
+                            case error.TIMEOUT:
+                                message = 'Location request timed out';
+                                break;
+                        }
+                        createToast('error', message);
+                        stopLocationTracking();
+                    },
+                    { 
+                        enableHighAccuracy: true, 
+                        timeout: 10000, 
+                        maximumAge: 30000 // Update every 30 seconds max
+                    }
+                );
+            } else {
+                createToast('error', 'Geolocation is not supported by this browser');
+            }
+        }
+
+        function stopLocationTracking() {
+            if (locationWatchId !== null) {
+                navigator.geolocation.clearWatch(locationWatchId);
+                locationWatchId = null;
+            }
+            locationButton.classList.remove('tracking');
+            isTrackingLocation = false;
         }
 
         function performSearch(query) {
@@ -903,11 +1046,13 @@
                     if (feature.geometry.type === 'Point') {
                         const eventName = feature.properties.EventLongName;
                         if (eventName.toLowerCase().includes(query.toLowerCase())) {
+                            const isJunior = eventName.toLowerCase().includes('junior');
                             parkrunSuggestions.push({
                                 type: 'parkrun',
                                 title: eventName,
                                 subtitle: 'parkrun Event',
-                                data: feature
+                                data: feature,
+                                isJunior: isJunior
                             });
                         }
                     }
@@ -972,8 +1117,13 @@
                     currentCategory = suggestion.type;
                 }
 
-                const iconClass = suggestion.type === 'place' ? 'fas fa-map-marker-alt' : 'fas fa-tree';
-                const iconType = suggestion.type;
+                const iconClass = suggestion.type === 'place' ? 'fas fa-map-marker-alt' : 'fas fa-seedling';
+                let iconType = suggestion.type;
+                
+                // Add junior class for junior parkruns
+                if (suggestion.type === 'parkrun' && suggestion.isJunior) {
+                    iconType += ' junior';
+                }
                 
                 html += `
                     <div class="suggestion-item" onclick="selectSuggestion(${JSON.stringify(suggestion).replace(/"/g, '&quot;')})">
@@ -1050,47 +1200,6 @@
                     const group = new L.featureGroup(foundParkruns.map(coords => L.marker(coords)));
                     map.fitBounds(group.getBounds().pad(0.1));
                 }
-            }
-        }
-
-        // Simplified location functionality - just return to location
-        function returnToLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(
-                    (position) => {
-                        const lat = position.coords.latitude;
-                        const lng = position.coords.longitude;
-                        
-                        // Update or create user location marker
-                        if (!userLocationMarker) {
-                            userLocationMarker = L.marker([lat, lng], { icon: LocationIcon }).addTo(map)
-                                .bindPopup(`You are here`);
-                        } else {
-                            userLocationMarker.setLatLng([lat, lng]);
-                        }
-                        
-                        // Fly to user location
-                        map.flyTo([lat, lng], 15, { duration: 1.5 });
-                    },
-                    (error) => {
-                        let message = 'Cannot find your location';
-                        switch(error.code) {
-                            case error.PERMISSION_DENIED:
-                                message = 'Location access denied by user';
-                                break;
-                            case error.POSITION_UNAVAILABLE:
-                                message = 'Location information unavailable';
-                                break;
-                            case error.TIMEOUT:
-                                message = 'Location request timed out';
-                                break;
-                        }
-                        createToast('error', message);
-                    },
-                    { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
-                );
-            } else {
-                createToast('error', 'Geolocation is not supported by this browser');
             }
         }
 
@@ -1500,13 +1609,13 @@
             placeMarkers = [];
 
             // Fetch places based on active filters
-            if (activeFilters.includes('all') || activeFilters.includes('cafes')) {
+            if (activeFilters.includes('cafes')) {
                 fetchTomTomPlaces(lat, lng, 'CAFE_PUB', cafeIcon, 'cafes');
             }
-            if (activeFilters.includes('all') || activeFilters.includes('hotels')) {
+            if (activeFilters.includes('hotels')) {
                 fetchTomTomPlaces(lat, lng, 'hotel', hotelIcon, 'hotels');
             }
-            if (activeFilters.includes('all') || activeFilters.includes('camping')) {
+            if (activeFilters.includes('camping')) {
                 fetchTomTomPlaces(lat, lng, 'camping ground', campsiteIcon, 'camping');
             }
         }
@@ -1517,107 +1626,4 @@
             fetch(searchUrl)
                 .then(response => response.json())
                 .then(data => {
-                    if (data.results && data.results.length > 0) {
-                        data.results.forEach(place => {
-                            createPlaceMarker(place, category, icon, filterType);
-                        });
-                    }
-                })
-                .catch(error => console.error(`Error fetching ${category} data:`, error));
-        }
-
-        function createPlaceMarker(place, type, icon, filterType) {
-            const lat = place.position.lat;
-            const lon = place.position.lon;
-            const name = place.poi?.name || "No Name Available";
-            const phoneNumber = place.poi?.phone || null;
-            const websiteUrl = place.poi?.url || null;
-            const imageUrl = place.poi?.imageUrl || null;
-
-            let popupContent = `
-                <div class="hotel-popup">
-                    <div class="popup-title">${name}</div>
-            `;
-
-            if (imageUrl) {
-                popupContent += `<img src="${imageUrl}" alt="${name}" class="hotel-popup-image" />`;
-            }
-
-            popupContent += `
-                <button class="glass-button direction-btn" onclick="openDirections(${lat}, ${lon})" style="width: 100%; margin-bottom: 8px;">
-                    <i class="fas fa-map-marker-alt"></i> Directions
-                </button>
-                ${websiteUrl ? `
-                    <button class="glass-button hotel-btn" onclick="openWebsite('${websiteUrl}')" style="width: 100%; margin-bottom: 8px;">
-                        <i class="fas fa-globe"></i> Visit Website
-                    </button>
-                ` : `
-                    <button class="glass-button" disabled style="width: 100%; margin-bottom: 8px; opacity: 0.5; background: #ccc;">
-                        <i class="fas fa-globe"></i> No Website
-                    </button>
-                `}
-                ${phoneNumber ? `
-                    <a href="tel:${phoneNumber}" style="text-decoration: none;">
-                        <button class="glass-button course-btn" style="width: 100%;">
-                            <i class="fas fa-phone"></i> Call
-                        </button>
-                    </a>
-                ` : `
-                    <button class="glass-button" disabled style="width: 100%; opacity: 0.5; background: #ccc;">
-                        <i class="fas fa-phone"></i> No Phone
-                    </button>
-                `}
-            </div>
-            `;
-
-            const marker = L.marker([lat, lon], { icon }).bindPopup(popupContent);
-            
-            // Store marker with its type for filtering
-            placeMarkers.push({ marker, type: filterType });
-            
-            // Only add to map if filter allows it
-            if (activeFilters.includes('all') || activeFilters.includes(filterType)) {
-                marker.addTo(map);
-            }
-        }
-
-        fetch('/events1.json')
-            .then(response => response.json())
-            .then(jsonData => {
-                data = jsonData;
-                console.log('Loaded parkrun data:', data);
-                updateMapMarkers();
-            })
-            .catch(err => {
-                console.error('Error fetching GeoJSON:', err);
-                handleGeocodingError();
-            });
-
-        function handleGeocodingError() {
-            window.location.href = 'https://parkrunnertourist.co.uk/Error';
-        }
-
-        function openDirections(lat, lon) {
-            const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}`;
-            window.open(url, '_blank');
-        }
-
-        function openWebsite(url) {
-            if (!/^https?:\/\//i.test(url)) {
-                url = 'https://' + url;
-            }
-            window.open(url, '_blank');
-        }
-
-        // Initialize map position and auto-locate user
-        if (hasValidCoords) {
-            map.setView([lat, lon], zoom);
-        } else {
-            // Auto-locate user on startup if no URL coordinates
-            setTimeout(() => {
-                autoLocateUser();
-            }, 1000);
-        }
-    </script>
-</body>
-</html>
+                    if (data.results && data
