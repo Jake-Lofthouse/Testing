@@ -64,9 +64,13 @@
             box-sizing: border-box;
         }
 
-        /* Remove blue focus outline from buttons */
+        /* Remove ALL focus/active/tap highlights */
+        *:focus,
+        *:active,
         button:focus,
         button:active,
+        input:focus,
+        input:active,
         .glass-button:focus,
         .glass-button:active,
         .location-button:focus,
@@ -75,6 +79,15 @@
         .filter-button:active {
             outline: none !important;
             -webkit-tap-highlight-color: transparent !important;
+            -webkit-touch-callout: none !important;
+            -webkit-user-select: none !important;
+            box-shadow: none !important;
+        }
+
+        /* Remove tap highlights on mobile */
+        * {
+            -webkit-tap-highlight-color: transparent !important;
+            -webkit-touch-callout: none !important;
         }
 
         html, body {
@@ -272,36 +285,42 @@
             border-bottom: none;
         }
 
+        /* Remove hover effect on filter items */
         .filter-item:hover {
-            background: rgba(125, 216, 86, 0.1);
+            background: transparent;
         }
 
-        .filter-checkbox {
-            width: 20px;
-            height: 20px;
-            border: 2px solid #ddd;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        /* Apple-style toggle switch */
+        .filter-toggle {
+            width: 44px;
+            height: 26px;
+            background: #e5e5e7;
+            border-radius: 13px;
+            position: relative;
             transition: var(--transition);
             flex-shrink: 0;
+            cursor: pointer;
         }
 
-        .filter-item.active .filter-checkbox {
-            background: var(--filter-gradient);
-            border-color: #7dd856;
+        .filter-item.active .filter-toggle {
+            background: #34c759;
         }
 
-        .filter-checkbox i {
-            color: white;
-            font-size: 12px;
-            opacity: 0;
+        .filter-toggle::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 22px;
+            height: 22px;
+            background: white;
+            border-radius: 50%;
             transition: var(--transition);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
-        .filter-item.active .filter-checkbox i {
-            opacity: 1;
+        .filter-item.active .filter-toggle::after {
+            transform: translateX(18px);
         }
 
         .filter-icon {
@@ -326,11 +345,6 @@
             font-weight: 600;
             color: var(--text-primary);
             font-size: 16px;
-        }
-
-        .filter-subtitle {
-            font-size: 14px;
-            color: var(--text-secondary);
         }
 
         /* Search suggestions dropdown - with visible scrollbar */
@@ -424,6 +438,10 @@
 
         .suggestion-icon.parkrun {
             background: var(--parkrun-gradient);
+        }
+
+        .suggestion-icon.parkrun.junior {
+            background: var(--junior-gradient);
         }
 
         .suggestion-icon.place {
@@ -798,7 +816,7 @@
                 <div class="search-suggestions" id="search-suggestions"></div>
             </div>
             <div class="control-buttons">
-                <button class="location-button" id="locationButton" onclick="toggleLocationTracking()" title="Toggle location tracking">
+                <button class="location-button" id="locationButton" onclick="returnToUserLocation()" title="Return to your location">
                     <i class="fas fa-crosshairs"></i>
                 </button>
                 <div style="position: relative;">
@@ -807,33 +825,24 @@
                     </button>
                     <div class="filter-dropdown" id="filterDropdown">
                         <div class="filter-item active" onclick="toggleFilterType('hotels')" data-type="hotels">
-                            <div class="filter-checkbox">
-                                <i class="fas fa-check"></i>
-                            </div>
+                            <div class="filter-toggle"></div>
                             <div class="filter-icon" style="background-image: url('/Icons/Hotel.png');"></div>
                             <div class="filter-content">
                                 <div class="filter-title">Hotels</div>
-                                <div class="filter-subtitle">Accommodation</div>
                             </div>
                         </div>
                         <div class="filter-item active" onclick="toggleFilterType('cafes')" data-type="cafes">
-                            <div class="filter-checkbox">
-                                <i class="fas fa-check"></i>
-                            </div>
+                            <div class="filter-toggle"></div>
                             <div class="filter-icon" style="background-image: url('Icons/Cafe.png');"></div>
                             <div class="filter-content">
                                 <div class="filter-title">Cafés & Pubs</div>
-                                <div class="filter-subtitle">Food & Drink</div>
                             </div>
                         </div>
                         <div class="filter-item active" onclick="toggleFilterType('camping')" data-type="camping">
-                            <div class="filter-checkbox">
-                                <i class="fas fa-check"></i>
-                            </div>
+                            <div class="filter-toggle"></div>
                             <div class="filter-icon" style="background-image: url('/Icons/Camp.png');"></div>
                             <div class="filter-content">
                                 <div class="filter-title">Camping</div>
-                                <div class="filter-subtitle">Outdoor Stay</div>
                             </div>
                         </div>
                     </div>
@@ -966,11 +975,27 @@
             });
         }
 
-        function toggleLocationTracking() {
-            if (isTrackingLocation) {
-                stopLocationTracking();
+        function returnToUserLocation() {
+            if (userLocationMarker) {
+                const userLatLng = userLocationMarker.getLatLng();
+                map.flyTo([userLatLng.lat, userLatLng.lng], 15, { duration: 1.5 });
             } else {
-                startLocationTracking();
+                // If no user location marker, try to get current location
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(
+                        (position) => {
+                            const lat = position.coords.latitude;
+                            const lng = position.coords.longitude;
+                            map.flyTo([lat, lng], 15, { duration: 1.5 });
+                        },
+                        (error) => {
+                            createToast('error', 'Cannot find your location');
+                        },
+                        { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
+                    );
+                } else {
+                    createToast('error', 'Geolocation is not supported by this browser');
+                }
             }
         }
 
@@ -988,8 +1013,6 @@
                         if (!userLocationMarker) {
                             userLocationMarker = L.marker([lat, lng], { icon: LocationIcon }).addTo(map)
                                 .bindPopup(`You are here (Live tracking)`);
-                            // Fly to user location on first track
-                            map.flyTo([lat, lng], 15, { duration: 1.5 });
                         } else {
                             userLocationMarker.setLatLng([lat, lng]);
                         }
@@ -1007,8 +1030,8 @@
                                 message = 'Location request timed out';
                                 break;
                         }
-                        createToast('error', message);
-                        stopLocationTracking();
+                        console.log('Location tracking error:', message);
+                        // Don't show error toast for automatic tracking
                     },
                     { 
                         enableHighAccuracy: true, 
@@ -1016,18 +1039,7 @@
                         maximumAge: 30000 // Update every 30 seconds max
                     }
                 );
-            } else {
-                createToast('error', 'Geolocation is not supported by this browser');
             }
-        }
-
-        function stopLocationTracking() {
-            if (locationWatchId !== null) {
-                navigator.geolocation.clearWatch(locationWatchId);
-                locationWatchId = null;
-            }
-            locationButton.classList.remove('tracking');
-            isTrackingLocation = false;
         }
 
         function performSearch(query) {
@@ -1113,7 +1125,7 @@
                     currentCategory = suggestion.type;
                 }
 
-                const iconClass = suggestion.type === 'place' ? 'fas fa-map-marker-alt' : 'fas fa-seedling';
+                const iconClass = suggestion.type === 'place' ? 'fas fa-map-marker-alt' : 'fas fa-tree';
                 let iconType = suggestion.type;
                 
                 // Add junior class for junior parkruns
@@ -1199,8 +1211,8 @@
             }
         }
 
-        // Auto-locate user on startup
-        function autoLocateUser() {
+        // Auto-locate user on startup and start tracking
+        function autoLocateAndTrack() {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(
                     (position) => {
@@ -1213,6 +1225,9 @@
                         
                         // Set map view to user location
                         map.setView([lat, lng], 13);
+                        
+                        // Start live tracking
+                        startLocationTracking();
                     },
                     (error) => {
                         // Silently fail on startup - don't show error toast
@@ -1720,7 +1735,7 @@
         } else {
             // Auto-locate user on startup if no URL coordinates
             setTimeout(() => {
-                autoLocateUser();
+                autoLocateAndTrack();
             }, 1000);
         }
     </script>
