@@ -70,6 +70,11 @@
         "date": "2025-06-21"
     },
     {
+        "name": "Conwy parkrun",
+        "reason": "Permission issue",
+        "date": "2025-06-21"
+    },
+    {
         "name": "Fitzmaurice Park parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-21"
@@ -87,6 +92,11 @@
     {
         "name": "Hilly Fields parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-06-21"
+    },
+    {
+        "name": "Horinouchi koen parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-06-21"
     },
     {
