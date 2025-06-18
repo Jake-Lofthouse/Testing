@@ -80,6 +80,11 @@
         "date": "2025-06-21"
     },
     {
+        "name": "Derrynoid Forest parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-06-21"
+    },
+    {
         "name": "Fingal Bay parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-06-21"
@@ -87,6 +92,11 @@
     {
         "name": "Fitzmaurice Park parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-06-21"
+    },
+    {
+        "name": "Foro Italico parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-06-21"
     },
     {
@@ -237,6 +247,11 @@
     {
         "name": "Poole parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-06-21"
+    },
+    {
+        "name": "Poppintree parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-06-21"
     },
     {
