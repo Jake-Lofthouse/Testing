@@ -170,6 +170,11 @@
         "date": "2025-06-21"
     },
     {
+        "name": "Kathu parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-06-21"
+    },
+    {
         "name": "Kesgrave parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-21"
@@ -311,6 +316,11 @@
     },
     {
         "name": "Rostrevor parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-06-21"
+    },
+    {
+        "name": "Roundshaw Downs parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-21"
     },
