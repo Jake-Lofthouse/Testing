@@ -5,6 +5,11 @@
         "date": "2025-06-21"
     },
     {
+        "name": "Aldinga Beach parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-06-21"
+    },
+    {
         "name": "Alexandra parkrun, Moss Side",
         "reason": "Venue unavailable",
         "date": "2025-06-21"
@@ -87,6 +92,11 @@
     {
         "name": "Ellesmere Port parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-06-21"
+    },
+    {
+        "name": "Exeter Riverside parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-06-21"
     },
     {
@@ -246,6 +256,11 @@
     },
     {
         "name": "Peel parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-06-21"
+    },
+    {
+        "name": "Pendle parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-21"
     },
