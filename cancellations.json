@@ -195,6 +195,11 @@
         "date": "2025-06-21"
     },
     {
+        "name": "Maidstone River Park parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-06-21"
+    },
+    {
         "name": "Margate parkrun",
         "reason": "Permission issue",
         "date": "2025-06-21"
@@ -392,6 +397,11 @@
     {
         "name": "Victoria parkrun, Truro",
         "reason": "Venue unavailable",
+        "date": "2025-06-21"
+    },
+    {
+        "name": "Watermead Country Park parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-06-21"
     },
     {
