@@ -85,6 +85,11 @@
         "date": "2025-06-21"
     },
     {
+        "name": "Dawesville parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-06-21"
+    },
+    {
         "name": "Derrynoid Forest parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-06-21"
@@ -112,6 +117,11 @@
     {
         "name": "Foro Italico parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-06-21"
+    },
+    {
+        "name": "George Lane Memorial parkrun",
+        "reason": "Weather",
         "date": "2025-06-21"
     },
     {
@@ -207,6 +217,11 @@
     {
         "name": "Maidstone River Park parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-06-21"
+    },
+    {
+        "name": "Margaret River parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-06-21"
     },
     {
