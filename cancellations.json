@@ -275,6 +275,11 @@
         "date": "2025-06-21"
     },
     {
+        "name": "Nose Hill parkrun",
+        "reason": "Weather",
+        "date": "2025-06-21"
+    },
+    {
         "name": "Oakwell Hall parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-21"
@@ -372,6 +377,11 @@
     {
         "name": "Shawnigan Hills parkrun",
         "reason": "Permission issue",
+        "date": "2025-06-21"
+    },
+    {
+        "name": "Sheep River parkrun",
+        "reason": "Weather",
         "date": "2025-06-21"
     },
     {
