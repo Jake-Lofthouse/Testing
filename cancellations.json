@@ -230,6 +230,11 @@
         "date": "2025-06-28"
     },
     {
+        "name": "Riverside Park parkrun, Glenrothes",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-06-28"
+    },
+    {
         "name": "Roberts Park parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-28"
@@ -313,6 +318,11 @@
         "name": "York parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-28"
+    },
+    {
+        "name": "Barnsley junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-06-29"
     },
     {
         "name": "Chichester junior parkrun",
