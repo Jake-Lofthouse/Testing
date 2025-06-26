@@ -54494,6 +54494,66 @@
         }
       },
       {
+        "id": 3691,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -0.447787,
+            52.121506
+          ]
+        },
+        "properties": {
+          "eventname": "jubileebedford",
+          "EventLongName": "Jubilee parkrun, Bedford",
+          "EventShortName": "Jubilee, Bedford",
+          "LocalisedEventLongName": null,
+          "countrycode": 97,
+          "seriesid": 1,
+          "EventLocation": "Jubilee, Bedford"
+        }
+      },
+      {
+        "id": 3692,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -1.316448,
+            54.792693
+          ]
+        },
+        "properties": {
+          "eventname": "heritagecoastalpatheasington",
+          "EventLongName": "Heritage Coastal Path parkrun, Easington",
+          "EventShortName": "Heritage Coastal Path, Easington",
+          "LocalisedEventLongName": null,
+          "countrycode": 97,
+          "seriesid": 1,
+          "EventLocation": "Heritage Coastal Path, Easington"
+        }
+      },
+      {
+        "id": 3693,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            145.155851,
+            -38.105426
+          ]
+        },
+        "properties": {
+          "eventname": "belvedere",
+          "EventLongName": "Belvedere parkrun",
+          "EventShortName": "Belvedere",
+          "LocalisedEventLongName": null,
+          "countrycode": 3,
+          "seriesid": 1,
+          "EventLocation": "Belvedere"
+        }
+      },
+      {
         "id": 3694,
         "type": "Feature",
         "geometry": {
@@ -54611,6 +54671,26 @@
           "countrycode": 74,
           "seriesid": 1,
           "EventLocation": "Park Aktywności Rodzinnej"
+        }
+      },
+      {
+        "id": 3703,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            136.661699,
+            36.547551
+          ]
+        },
+        "properties": {
+          "eventname": "saigawaryokuchikoen",
+          "EventLongName": "Saigawa ryokuchi koen parkrun",
+          "EventShortName": "Saigawa ryokuchi koen",
+          "LocalisedEventLongName": "犀川緑地公園parkrun",
+          "countrycode": 46,
+          "seriesid": 1,
+          "EventLocation": "Saigawa ryokuchi koen"
         }
       }
     ]
