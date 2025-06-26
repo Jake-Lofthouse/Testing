@@ -195,6 +195,11 @@
         "date": "2025-06-28"
     },
     {
+        "name": "Margate parkrun",
+        "reason": "Permission issue",
+        "date": "2025-06-28"
+    },
+    {
         "name": "Maria Creek Reserve parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-06-28"
@@ -462,6 +467,11 @@
     {
         "name": "Peacehaven junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-06-29"
+    },
+    {
+        "name": "Phear Park junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-06-29"
     },
     {
