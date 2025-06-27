@@ -95,6 +95,11 @@
         "date": "2025-06-28"
     },
     {
+        "name": "Durbanville parkrun",
+        "reason": "Weather",
+        "date": "2025-06-28"
+    },
+    {
         "name": "Endcliffe parkrun",
         "reason": "Venue unavailable",
         "date": "2025-06-28"
@@ -325,6 +330,11 @@
         "date": "2025-06-28"
     },
     {
+        "name": "Robertson parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-06-28"
+    },
+    {
         "name": "Root 44 parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-06-28"
@@ -537,6 +547,11 @@
     {
         "name": "Southampton Common junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-06-29"
+    },
+    {
+        "name": "St Mary\u2019s Campus junior parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-06-29"
     },
     {
