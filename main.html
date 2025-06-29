@@ -96,7 +96,8 @@
             padding: 0;
             overflow: hidden;
             font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #ffffff;
+            background: #f8f9fa;
+            min-height: 100vh;
         }
 
         #map {
@@ -989,8 +990,7 @@
             // Check if we have any URL parameters (excluding lat, lon, zoom)
             const allParams = Array.from(urlParams.keys());
             const nonMapParams = allParams.filter(param => !['lat', 'lon', 'zoom'].includes(param));
-            hasUrlParameters = nonMapParams.length > 0;
-            console.log('Has URL parameters:', hasUrlParameters, 'Non-map params:', nonMapParams);
+            console.log('Non-map params:', nonMapParams);
             
             let filters = [];
             
@@ -1008,25 +1008,68 @@
                 console.log('Found individual filter params:', filters);
             }
             
-if (filters.length > 0) {
-    let newFilters = [];
-    filters.forEach(filter => {
-        const mapped = filterMap[filter.toLowerCase()];
-        if (Array.isArray(mapped)) {
-            newFilters.push(...mapped);
-        } else if (mapped) {
-            newFilters.push(mapped);
+            if (filters.length > 0) {
+                // Map URL filters to internal filter names
+                const filterMap = {
+                    '5k': '5k',
+                    'junior': 'junior', 
+                    'all': ['5k', 'junior'], // ?all shows both 5k and junior parkruns
+                    'hotels': 'hotels',
+                    'hotel': 'hotels',
+                    'cafes': 'cafes',
+                    'cafe': 'cafes',
+                    'camping': 'camping',
+                    'campsite': 'camping'
+                };
+                
+                activeFilters = [];
+                let hasPlaceFilters = false;
+                
+                filters.forEach(filter => {
+                    const mapped = filterMap[filter.toLowerCase()];
+                    if (Array.isArray(mapped)) {
+                        activeFilters.push(...mapped);
+                    } else if (mapped) {
+                        activeFilters.push(mapped);
+                        // Check if this is a place filter (not parkrun filter)
+                        if (['hotels', 'cafes', 'camping'].includes(mapped)) {
+                            hasPlaceFilters = true;
+                        }
+                    }
+                });
+                
+                // Remove duplicates
+                activeFilters = [...new Set(activeFilters)];
+                console.log('Final active filters from URL:', activeFilters);
+                console.log('Has place filters:', hasPlaceFilters);
+                
+                // ENHANCED: If no place filters specified, show all places by default
+                if (!hasPlaceFilters) {
+                    console.log('No place filters found, adding all place types');
+                    activeFilters.push('cafes', 'hotels', 'camping');
+                }
+                
+                // If no parkrun filters specified, show both by default
+                const hasParkrunFilters = activeFilters.includes('5k') || activeFilters.includes('junior');
+                if (!hasParkrunFilters) {
+                    console.log('No parkrun filters found, adding both 5k and junior');
+                    activeFilters.push('5k', 'junior');
+                }
+                
+                console.log('Final active filters (with defaults):', activeFilters);
+                
+                // Set hasUrlParameters flag
+                hasUrlParameters = true;
+                
+                // Update UI to reflect URL filters
+                updateFilterUI();
+            } else {
+                // No URL filters, show everything by default
+                hasUrlParameters = false;
+                activeFilters = ['5k', 'junior', 'hotels', 'cafes', 'camping'];
+                updateFilterUI();
+            }
         }
-    });
-
-    if (newFilters.length > 0) {
-        activeFilters = [...new Set(newFilters)];
-        console.log('Final active filters from URL:', activeFilters);
-        updateFilterUI();
-    }
-
-}
-}
 
         // Update filter UI based on active filters
         function updateFilterUI() {
