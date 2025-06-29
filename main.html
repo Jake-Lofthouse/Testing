@@ -958,53 +958,59 @@
         let placeMarkers = [];
         let lastSelectedParkrun = null;
 
+        // Parse URL parameters to check for coordinates
+        const mapUrlParams = new URLSearchParams(window.location.search);
+        const mapLat = parseFloat(mapUrlParams.get('lat'));
+        const mapLon = parseFloat(mapUrlParams.get('lon'));
+        const mapZoom = parseInt(mapUrlParams.get('zoom')) || 13; 
+        const hasValidMapCoords = !isNaN(mapLat) && !isNaN(mapLon);
+
         // Parse URL filters on page load
         function parseUrlFilters() {
             const urlParams = new URLSearchParams(window.location.search);
+            const filterParam = urlParams.get('filters') || urlParams.toString();
             
-            // Check for various URL filter formats
-            const possibleFilters = ['5k', 'junior', 'all', 'hotels', 'hotel', 'cafes', 'cafe', 'camping', 'campsite'];
-            let foundFilters = [];
-            
-            // Check for filters parameter
-            const filtersParam = urlParams.get('filters');
-            if (filtersParam) {
-                foundFilters = filtersParam.split(',').map(f => f.trim().toLowerCase());
-            } else {
-                // Check for individual parameters
-                possibleFilters.forEach(filter => {
-                    if (urlParams.has(filter)) {
-                        foundFilters.push(filter);
-                    }
-                });
-            }
-            
-            if (foundFilters.length > 0) {
+            if (filterParam) {
+                // Handle both ?filters=5k,hotel,camping and ?5k,hotel,camping formats
+                let filters = [];
+                if (filterParam.includes('=')) {
+                    filters = urlParams.get('filters').split(',');
+                } else {
+                    // Parse individual parameters like ?5k&hotel&camping
+                    const allParams = Array.from(urlParams.keys());
+                    filters = allParams.filter(param => 
+                        ['5k', 'junior', 'all', 'hotels', 'cafes', 'camping'].includes(param.toLowerCase())
+                    );
+                }
+                
                 // Map URL filters to internal filter names
                 const filterMap = {
-                    '5k': ['5k'],
-                    'junior': ['junior'], 
+                    '5k': '5k',
+                    'junior': 'junior', 
                     'all': ['5k', 'junior'],
-                    'hotels': ['hotels'],
-                    'hotel': ['hotels'],
-                    'cafes': ['cafes'],
-                    'cafe': ['cafes'],
-                    'camping': ['camping'],
-                    'campsite': ['camping']
+                    'hotels': 'hotels',
+                    'hotel': 'hotels',
+                    'cafes': 'cafes',
+                    'cafe': 'cafes',
+                    'camping': 'camping',
+                    'campsite': 'camping'
                 };
                 
                 activeFilters = [];
-                foundFilters.forEach(filter => {
+                filters.forEach(filter => {
                     const mapped = filterMap[filter.toLowerCase()];
-                    if (mapped) {
+                    if (Array.isArray(mapped)) {
                         activeFilters.push(...mapped);
+                    } else if (mapped) {
+                        activeFilters.push(mapped);
                     }
                 });
                 
                 // Remove duplicates
                 activeFilters = [...new Set(activeFilters)];
                 
-                console.log('Parsed URL filters:', foundFilters, '-> Active filters:', activeFilters);
+                // Update UI to reflect URL filters
+                updateFilterUI();
             }
         }
 
@@ -1029,23 +1035,10 @@
                 url.searchParams.delete(param);
             });
             
-            // Add current filters as individual parameters for better readability
-            const placeFilters = activeFilters.filter(f => ['hotels', 'cafes', 'camping'].includes(f));
-            const eventFilters = activeFilters.filter(f => ['5k', 'junior'].includes(f));
-            
-            // Add event filters
-            if (eventFilters.length === 2) {
-                url.searchParams.set('all', '');
-            } else if (eventFilters.includes('5k')) {
-                url.searchParams.set('5k', '');
-            } else if (eventFilters.includes('junior')) {
-                url.searchParams.set('junior', '');
+            // Add current filters
+            if (activeFilters.length > 0 && activeFilters.length < 5) {
+                url.searchParams.set('filters', activeFilters.join(','));
             }
-            
-            // Add place filters
-            placeFilters.forEach(filter => {
-                url.searchParams.set(filter, '');
-            });
             
             window.history.replaceState({}, '', url);
         }
@@ -1457,7 +1450,7 @@
             return nextFriday;
         }
 
-        // Auto-locate user on startup and start tracking - ALWAYS show marker
+        // Auto-locate user on startup and start tracking - ONLY if no URL coordinates
         function autoLocateAndTrack() {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(
@@ -1469,8 +1462,10 @@
                         userLocationMarker = L.marker([lat, lng], { icon: LocationIcon }).addTo(map)
                             .bindPopup(`You are here`);
                         
-                        // Set map view to user location
-                        map.setView([lat, lng], 13);
+                        // Only set map view to user location if no URL coordinates
+                        if (!hasValidMapCoords) {
+                            map.setView([lat, lng], 13);
+                        }
                         
                         // Start live tracking
                         startLocationTracking();
@@ -1557,14 +1552,7 @@
             }
         });
 
-        // Map initialization
-        const mapUrlParams = new URLSearchParams(window.location.search);
-        const mapLat = parseFloat(mapUrlParams.get('lat'));
-        const mapLon = parseFloat(mapUrlParams.get('lon'));
-        const mapZoom = parseInt(mapUrlParams.get('zoom')) || 13; 
-
-        const hasValidMapCoords = !isNaN(mapLat) && !isNaN(mapLon);
-
+        // Map initialization with proper coordinate handling
         var map = L.map('map', {
             center: hasValidMapCoords ? [mapLat, mapLon] : [54.5, -3], // Default to UK center
             zoom: hasValidMapCoords ? mapZoom : 6, // Default zoom for UK
@@ -2047,22 +2035,13 @@
             window.open(url, '_blank');
         }
 
-        // Initialize URL filters and map position
+        // Initialize URL filters
         parseUrlFilters();
-        updateFilterUI();
         
-        if (hasValidMapCoords) {
-            map.setView([mapLat, mapLon], mapZoom);
-            // Still try to get user location even if URL has coordinates
-            setTimeout(() => {
-                autoLocateAndTrack();
-            }, 1000);
-        } else {
-            // Auto-locate user on startup if no URL coordinates
-            setTimeout(() => {
-                autoLocateAndTrack();
-            }, 1000);
-        }
+        // Auto-locate user only if no URL coordinates provided
+        setTimeout(() => {
+            autoLocateAndTrack();
+        }, 1000);
     </script>
 </body>
 </html>
