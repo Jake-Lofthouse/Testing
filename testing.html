@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
-    <script src="https://stay22.com/embed/embed.js"></script>
-
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-REFFZSK4XK"></script>
@@ -880,6 +878,58 @@
         let isTrackingLocation = false;
         let activeFilters = ['hotels', 'cafes', 'camping']; // All active by default
         let placeMarkers = [];
+        
+        // NEW: Parkrun event filter
+        let parkrunFilter = 'all'; // 'all', '5k', 'junior'
+
+        // Parse URL parameters for parkrun filtering
+        function parseUrlFilters() {
+            const params = new URLSearchParams(window.location.search);
+            
+            // Check for parkrun filter parameters
+            if (params.has('5k')) {
+                parkrunFilter = '5k';
+            } else if (params.has('Junior')) {
+                parkrunFilter = 'junior';
+            } else if (params.has('All')) {
+                parkrunFilter = 'all';
+            }
+            
+            console.log('Parkrun filter set to:', parkrunFilter);
+        }
+
+        // Update URL to include current filter
+        function updateURL() {
+            const center = map.getCenter();
+            const zoom = map.getZoom();
+            let newUrl = `${window.location.pathname}?lat=${center.lat.toFixed(6)}&lon=${center.lng.toFixed(6)}&zoom=${zoom}`;
+            
+            // Add parkrun filter parameter
+            if (parkrunFilter === '5k') {
+                newUrl += '&5k';
+            } else if (parkrunFilter === 'junior') {
+                newUrl += '&Junior';
+            } else if (parkrunFilter === 'all') {
+                newUrl += '&All';
+            }
+            
+            window.history.replaceState({}, '', newUrl);
+        }
+
+        // Check if a parkrun event should be shown based on current filter
+        function shouldShowParkrun(eventLongName) {
+            const isJunior = eventLongName.toLowerCase().includes('junior');
+            
+            switch (parkrunFilter) {
+                case '5k':
+                    return !isJunior;
+                case 'junior':
+                    return isJunior;
+                case 'all':
+                default:
+                    return true;
+            }
+        }
 
         // Search functionality with live suggestions
         const searchInput = document.getElementById('search-input');
@@ -1060,13 +1110,15 @@
             const parkrunSuggestions = [];
             const placeSuggestions = [];
             
-            // Search for parkruns FIRST
+            // Search for parkruns FIRST - now with filter applied
             if (data.events && data.events.features) {
                 data.events.features.forEach(feature => {
                     if (feature.geometry.type === 'Point') {
                         const eventName = feature.properties.EventLongName;
-                        if (eventName.toLowerCase().includes(query.toLowerCase())) {
-                            const isJunior = eventName.toLowerCase().includes('junior');
+                        const isJunior = eventName.toLowerCase().includes('junior');
+                        
+                        // Apply parkrun filter to search results
+                        if (eventName.toLowerCase().includes(query.toLowerCase()) && shouldShowParkrun(eventName)) {
                             parkrunSuggestions.push({
                                 type: 'parkrun',
                                 title: eventName,
@@ -1208,8 +1260,10 @@
                 data.events.features.forEach(feature => {
                     if (feature.geometry.type === 'Point') {
                         const [lonEvent, latEvent] = feature.geometry.coordinates;
+                        const eventName = feature.properties.EventLongName;
                         
-                        if (latEvent >= south && latEvent <= north && lonEvent >= west && lonEvent <= east) {
+                        // Apply parkrun filter when showing parkruns in area
+                        if (latEvent >= south && latEvent <= north && lonEvent >= west && lonEvent <= east && shouldShowParkrun(eventName)) {
                             foundParkruns.push([latEvent, lonEvent]);
                         }
                     }
@@ -1323,6 +1377,9 @@
             }
         });
 
+        // Parse URL filters on page load
+        parseUrlFilters();
+
         // Map initialization
         const mapUrlParams = new URLSearchParams(window.location.search);
         const mapLat = parseFloat(mapUrlParams.get('lat'));
@@ -1341,39 +1398,10 @@
             worldCopyJump: false
         });
 
-
-      // Initialize Stay22 on your Leaflet map
-stay22.initMap({
-    map: map, // use your Leaflet map object
-    lmaId: '68605b5cef762c58b327d56b', // your actual ID
-    lat: map.getCenter().lat,
-    lng: map.getCenter().lng,
-    zoom: map.getZoom(),
-    radius: 10000 // adjust based on how many hotels you want to show
-});
-
-      map.on('moveend', () => {
-    const center = map.getCenter();
-    stay22.setView({
-        lat: center.lat,
-        lng: center.lng,
-        zoom: map.getZoom()
-    });
-});
-
-
-
         L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
             attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a>',
             maxZoom: 19
         }).addTo(map);
-
-        function updateURL() {
-            const center = map.getCenter();
-            const zoom = map.getZoom();
-            const newUrl = `${window.location.pathname}?lat=${center.lat.toFixed(6)}&lon=${center.lng.toFixed(6)}&zoom=${zoom}`;
-            window.history.replaceState({}, '', newUrl);
-        }
 
         map.on('moveend', updateURL);
 
@@ -1565,6 +1593,11 @@ stay22.initMap({
             const isJunior = eventLongName.toLowerCase().includes('junior');
             const countryUrl = getCountryUrl(coordinates[1], coordinates[0]);
             
+            // Apply parkrun filter - don't create marker if it doesn't match filter
+            if (!shouldShowParkrun(eventLongName)) {
+                return;
+            }
+            
             var weatherUrl = `https://parkrunnertourist.co.uk/weather?lat=${coordinates[1]}&lon=${coordinates[0]}`;
             if (isJunior) {
                 weatherUrl += '&junior';
@@ -1740,6 +1773,7 @@ stay22.initMap({
             .then(jsonData => {
                 data = jsonData;
                 console.log('Loaded parkrun data:', data);
+                console.log('Applied parkrun filter:', parkrunFilter);
                 updateMapMarkers();
             })
             .catch(err => {
