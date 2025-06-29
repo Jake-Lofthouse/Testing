@@ -904,20 +904,6 @@
                         <i class="fas fa-filter"></i>
                     </button>
                     <div class="filter-dropdown" id="filterDropdown">
-                        <div class="filter-item active" onclick="toggleFilterType('5k')" data-type="5k">
-                            <div class="filter-toggle"></div>
-                            <div class="filter-icon" style="background-image: url('/Icons/5k.png');"></div>
-                            <div class="filter-content">
-                                <div class="filter-title">5K Events</div>
-                            </div>
-                        </div>
-                        <div class="filter-item active" onclick="toggleFilterType('junior')" data-type="junior">
-                            <div class="filter-toggle"></div>
-                            <div class="filter-icon" style="background-image: url('/Icons/Junior.png');"></div>
-                            <div class="filter-content">
-                                <div class="filter-title">Junior Events</div>
-                            </div>
-                        </div>
                         <div class="filter-item active" onclick="toggleFilterType('hotels')" data-type="hotels">
                             <div class="filter-toggle"></div>
                             <div class="filter-icon" style="background-image: url('/Icons/Hotel.png');"></div>
@@ -925,18 +911,18 @@
                                 <div class="filter-title">Hotels</div>
                             </div>
                         </div>
-                        <div class="filter-item active" onclick="toggleFilterType('cafes')" data-type="cafes">
-                            <div class="filter-toggle"></div>
-                            <div class="filter-icon" style="background-image: url('Icons/Cafe.png');"></div>
-                            <div class="filter-content">
-                                <div class="filter-title">Cafés & Pubs</div>
-                            </div>
-                        </div>
                         <div class="filter-item active" onclick="toggleFilterType('camping')" data-type="camping">
                             <div class="filter-toggle"></div>
                             <div class="filter-icon" style="background-image: url('/Icons/Camp.png');"></div>
                             <div class="filter-content">
                                 <div class="filter-title">Camping</div>
+                            </div>
+                        </div>
+                        <div class="filter-item active" onclick="toggleFilterType('cafes')" data-type="cafes">
+                            <div class="filter-toggle"></div>
+                            <div class="filter-icon" style="background-image: url('Icons/Cafe.png');"></div>
+                            <div class="filter-content">
+                                <div class="filter-title">Cafés & Pubs</div>
                             </div>
                         </div>
                     </div>
@@ -975,49 +961,50 @@
         // Parse URL filters on page load
         function parseUrlFilters() {
             const urlParams = new URLSearchParams(window.location.search);
-            const filterParam = urlParams.get('filters') || urlParams.toString();
             
-            if (filterParam) {
-                // Handle both ?filters=5k,hotel,camping and ?5k,hotel,camping formats
-                let filters = [];
-                if (filterParam.includes('=')) {
-                    filters = urlParams.get('filters').split(',');
-                } else {
-                    // Parse individual parameters like ?5k&hotel&camping
-                    const allParams = Array.from(urlParams.keys());
-                    filters = allParams.filter(param => 
-                        ['5k', 'junior', 'all', 'hotels', 'cafes', 'camping'].includes(param.toLowerCase())
-                    );
-                }
-                
+            // Check for various URL filter formats
+            const possibleFilters = ['5k', 'junior', 'all', 'hotels', 'hotel', 'cafes', 'cafe', 'camping', 'campsite'];
+            let foundFilters = [];
+            
+            // Check for filters parameter
+            const filtersParam = urlParams.get('filters');
+            if (filtersParam) {
+                foundFilters = filtersParam.split(',').map(f => f.trim().toLowerCase());
+            } else {
+                // Check for individual parameters
+                possibleFilters.forEach(filter => {
+                    if (urlParams.has(filter)) {
+                        foundFilters.push(filter);
+                    }
+                });
+            }
+            
+            if (foundFilters.length > 0) {
                 // Map URL filters to internal filter names
                 const filterMap = {
-                    '5k': '5k',
-                    'junior': 'junior', 
+                    '5k': ['5k'],
+                    'junior': ['junior'], 
                     'all': ['5k', 'junior'],
-                    'hotels': 'hotels',
-                    'hotel': 'hotels',
-                    'cafes': 'cafes',
-                    'cafe': 'cafes',
-                    'camping': 'camping',
-                    'campsite': 'camping'
+                    'hotels': ['hotels'],
+                    'hotel': ['hotels'],
+                    'cafes': ['cafes'],
+                    'cafe': ['cafes'],
+                    'camping': ['camping'],
+                    'campsite': ['camping']
                 };
                 
                 activeFilters = [];
-                filters.forEach(filter => {
+                foundFilters.forEach(filter => {
                     const mapped = filterMap[filter.toLowerCase()];
-                    if (Array.isArray(mapped)) {
+                    if (mapped) {
                         activeFilters.push(...mapped);
-                    } else if (mapped) {
-                        activeFilters.push(mapped);
                     }
                 });
                 
                 // Remove duplicates
                 activeFilters = [...new Set(activeFilters)];
                 
-                // Update UI to reflect URL filters
-                updateFilterUI();
+                console.log('Parsed URL filters:', foundFilters, '-> Active filters:', activeFilters);
             }
         }
 
@@ -1042,10 +1029,23 @@
                 url.searchParams.delete(param);
             });
             
-            // Add current filters
-            if (activeFilters.length > 0 && activeFilters.length < 5) {
-                url.searchParams.set('filters', activeFilters.join(','));
+            // Add current filters as individual parameters for better readability
+            const placeFilters = activeFilters.filter(f => ['hotels', 'cafes', 'camping'].includes(f));
+            const eventFilters = activeFilters.filter(f => ['5k', 'junior'].includes(f));
+            
+            // Add event filters
+            if (eventFilters.length === 2) {
+                url.searchParams.set('all', '');
+            } else if (eventFilters.includes('5k')) {
+                url.searchParams.set('5k', '');
+            } else if (eventFilters.includes('junior')) {
+                url.searchParams.set('junior', '');
             }
+            
+            // Add place filters
+            placeFilters.forEach(filter => {
+                url.searchParams.set(filter, '');
+            });
             
             window.history.replaceState({}, '', url);
         }
@@ -1566,8 +1566,8 @@
         const hasValidMapCoords = !isNaN(mapLat) && !isNaN(mapLon);
 
         var map = L.map('map', {
-            center: hasValidMapCoords ? [mapLat, mapLon] : [0, 0],
-            zoom: hasValidMapCoords ? mapZoom : 2,
+            center: hasValidMapCoords ? [mapLat, mapLon] : [54.5, -3], // Default to UK center
+            zoom: hasValidMapCoords ? mapZoom : 6, // Default zoom for UK
             zoomControl: false,
             maxBounds: [[-90, -180], [90, 180]],
             maxBoundsViscosity: 1.0,
@@ -2049,6 +2049,7 @@
 
         // Initialize URL filters and map position
         parseUrlFilters();
+        updateFilterUI();
         
         if (hasValidMapCoords) {
             map.setView([mapLat, mapLon], mapZoom);
