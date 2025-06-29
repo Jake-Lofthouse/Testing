@@ -48,6 +48,7 @@
             --volunteer-gradient: linear-gradient(135deg, #fd7e14 0%, #ffc107 100%);
             --direction-gradient: linear-gradient(135deg, #dc3545 0%, #e83e8c 100%);
             --hotel-gradient: linear-gradient(135deg, #6f42c1 0%, #e83e8c 100%);
+            --hotel-search-gradient: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
             
             --text-primary: rgba(0, 0, 0, 0.87);
             --text-secondary: rgba(0, 0, 0, 0.6);
@@ -523,11 +524,15 @@
         .hotel-btn { 
             background: var(--hotel-gradient);
         }
+        .hotel-search-btn {
+            background: var(--hotel-search-gradient);
+        }
 
         .course-btn:hover { box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4); }
         .volunteer-btn:hover { box-shadow: 0 8px 25px rgba(253, 126, 20, 0.4); }
         .direction-btn:hover { box-shadow: 0 8px 25px rgba(220, 53, 69, 0.4); }
         .hotel-btn:hover { box-shadow: 0 8px 25px rgba(111, 66, 193, 0.4); }
+        .hotel-search-btn:hover { box-shadow: 0 8px 25px rgba(23, 162, 184, 0.4); }
 
         /* Popup styles */
         .leaflet-popup-content-wrapper {
@@ -878,45 +883,62 @@
         let isTrackingLocation = false;
         let activeFilters = ['hotels', 'cafes', 'camping']; // All active by default
         let placeMarkers = [];
-        
-        // NEW: Parkrun event filter
-        let parkrunFilter = 'all'; // 'all', '5k', 'junior'
+        let parkrunFilter = 'all'; // 'all', '5k', or 'junior'
 
-        // Parse URL parameters for parkrun filtering
+        // Search functionality with live suggestions
+        const searchInput = document.getElementById('search-input');
+        const suggestionsContainer = document.getElementById('search-suggestions');
+        const filterButton = document.getElementById('filterButton');
+        const filterDropdown = document.getElementById('filterDropdown');
+        const locationButton = document.getElementById('locationButton');
+
+        // Parse URL filters on page load
         function parseUrlFilters() {
-            const params = new URLSearchParams(window.location.search);
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlPath = window.location.pathname;
             
-            // Check for parkrun filter parameters
-            if (params.has('5k')) {
+            // Parse parkrun filter from URL path
+            if (urlPath.includes('5k') || urlParams.has('5k')) {
                 parkrunFilter = '5k';
-            } else if (params.has('Junior')) {
+            } else if (urlPath.includes('Junior') || urlParams.has('Junior')) {
                 parkrunFilter = 'junior';
-            } else if (params.has('All')) {
+            } else if (urlPath.includes('All') || urlParams.has('All')) {
                 parkrunFilter = 'all';
             }
             
-            console.log('Parkrun filter set to:', parkrunFilter);
-        }
-
-        // Update URL to include current filter
-        function updateURL() {
-            const center = map.getCenter();
-            const zoom = map.getZoom();
-            let newUrl = `${window.location.pathname}?lat=${center.lat.toFixed(6)}&lon=${center.lng.toFixed(6)}&zoom=${zoom}`;
-            
-            // Add parkrun filter parameter
-            if (parkrunFilter === '5k') {
-                newUrl += '&5k';
-            } else if (parkrunFilter === 'junior') {
-                newUrl += '&Junior';
-            } else if (parkrunFilter === 'all') {
-                newUrl += '&All';
+            // Parse place filters from URL
+            const placeFilters = [];
+            if (urlParams.has('hotels') || urlPath.includes('hotel')) {
+                placeFilters.push('hotels');
+            }
+            if (urlParams.has('cafes') || urlPath.includes('cafe')) {
+                placeFilters.push('cafes');
+            }
+            if (urlParams.has('camping') || urlPath.includes('camping') || urlPath.includes('campsite')) {
+                placeFilters.push('camping');
             }
             
-            window.history.replaceState({}, '', newUrl);
+            // If specific place filters are found in URL, use only those
+            if (placeFilters.length > 0) {
+                activeFilters = placeFilters;
+                updateFilterUI();
+            }
         }
 
-        // Check if a parkrun event should be shown based on current filter
+        // Update filter UI to match active filters
+        function updateFilterUI() {
+            const filterItems = document.querySelectorAll('.filter-item');
+            filterItems.forEach(item => {
+                const type = item.getAttribute('data-type');
+                if (activeFilters.includes(type)) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        }
+
+        // Check if a parkrun should be shown based on current filter
         function shouldShowParkrun(eventLongName) {
             const isJunior = eventLongName.toLowerCase().includes('junior');
             
@@ -931,12 +953,22 @@
             }
         }
 
-        // Search functionality with live suggestions
-        const searchInput = document.getElementById('search-input');
-        const suggestionsContainer = document.getElementById('search-suggestions');
-        const filterButton = document.getElementById('filterButton');
-        const filterDropdown = document.getElementById('filterDropdown');
-        const locationButton = document.getElementById('locationButton');
+        // Get next Friday date for hotel search
+        function getNextFriday() {
+            const today = new Date();
+            const dayOfWeek = today.getDay();
+            const daysUntilFriday = (5 - dayOfWeek + 7) % 7;
+            const nextFriday = new Date(today);
+            nextFriday.setDate(today.getDate() + (daysUntilFriday === 0 ? 7 : daysUntilFriday));
+            return nextFriday.toISOString().split('T')[0];
+        }
+
+        // Open advanced hotel search
+        function openHotelSearch(lat, lng) {
+            const checkinDate = getNextFriday();
+            const url = `https://www.stay22.com/embed/gm?aid=parkrunnertourist&lat=${lat}&lng=${lng}&checkin=${checkinDate}&maincolor=7dd856`;
+            window.open(url, '_blank');
+        }
 
         searchInput.addEventListener('input', function() {
             const query = this.value.trim();
@@ -1023,6 +1055,9 @@
             
             // Apply filter to existing place markers
             applyPlaceFilters();
+            
+            // Update URL with current filters
+            updateURL();
         }
 
         function applyPlaceFilters() {
@@ -1110,15 +1145,19 @@
             const parkrunSuggestions = [];
             const placeSuggestions = [];
             
-            // Search for parkruns FIRST - now with filter applied
+            // Search for parkruns FIRST - filter based on parkrunFilter
             if (data.events && data.events.features) {
                 data.events.features.forEach(feature => {
                     if (feature.geometry.type === 'Point') {
                         const eventName = feature.properties.EventLongName;
-                        const isJunior = eventName.toLowerCase().includes('junior');
                         
-                        // Apply parkrun filter to search results
-                        if (eventName.toLowerCase().includes(query.toLowerCase()) && shouldShowParkrun(eventName)) {
+                        // Apply parkrun filter
+                        if (!shouldShowParkrun(eventName)) {
+                            return;
+                        }
+                        
+                        if (eventName.toLowerCase().includes(query.toLowerCase())) {
+                            const isJunior = eventName.toLowerCase().includes('junior');
                             parkrunSuggestions.push({
                                 type: 'parkrun',
                                 title: eventName,
@@ -1251,7 +1290,7 @@
 
         function showParkrunsInArea(lat, lon, boundingBox) {
             // Don't clear all markers, just focus on the area
-            // All parkruns remain visible
+            // All parkruns remain visible (filtered by parkrunFilter)
             if (boundingBox) {
                 const [south, north, west, east] = boundingBox.map(coord => parseFloat(coord));
                 
@@ -1262,8 +1301,12 @@
                         const [lonEvent, latEvent] = feature.geometry.coordinates;
                         const eventName = feature.properties.EventLongName;
                         
-                        // Apply parkrun filter when showing parkruns in area
-                        if (latEvent >= south && latEvent <= north && lonEvent >= west && lonEvent <= east && shouldShowParkrun(eventName)) {
+                        // Apply parkrun filter
+                        if (!shouldShowParkrun(eventName)) {
+                            return;
+                        }
+                        
+                        if (latEvent >= south && latEvent <= north && lonEvent >= west && lonEvent <= east) {
                             foundParkruns.push([latEvent, lonEvent]);
                         }
                     }
@@ -1377,9 +1420,6 @@
             }
         });
 
-        // Parse URL filters on page load
-        parseUrlFilters();
-
         // Map initialization
         const mapUrlParams = new URLSearchParams(window.location.search);
         const mapLat = parseFloat(mapUrlParams.get('lat'));
@@ -1402,6 +1442,34 @@
             attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a>',
             maxZoom: 19
         }).addTo(map);
+
+        function updateURL() {
+            const center = map.getCenter();
+            const zoom = map.getZoom();
+            
+            // Build URL parameters
+            const params = new URLSearchParams();
+            params.set('lat', center.lat.toFixed(6));
+            params.set('lon', center.lng.toFixed(6));
+            params.set('zoom', zoom.toString());
+            
+            // Add parkrun filter if not 'all'
+            if (parkrunFilter !== 'all') {
+                if (parkrunFilter === '5k') {
+                    params.set('5k', '');
+                } else if (parkrunFilter === 'junior') {
+                    params.set('Junior', '');
+                }
+            }
+            
+            // Add place filters
+            activeFilters.forEach(filter => {
+                params.set(filter, '');
+            });
+            
+            const newUrl = `${window.location.pathname}?${params.toString()}`;
+            window.history.replaceState({}, '', newUrl);
+        }
 
         map.on('moveend', updateURL);
 
@@ -1593,7 +1661,7 @@
             const isJunior = eventLongName.toLowerCase().includes('junior');
             const countryUrl = getCountryUrl(coordinates[1], coordinates[0]);
             
-            // Apply parkrun filter - don't create marker if it doesn't match filter
+            // Check if this parkrun should be shown based on filter
             if (!shouldShowParkrun(eventLongName)) {
                 return;
             }
@@ -1618,11 +1686,21 @@
                     <button class="glass-button volunteer-btn" onclick="openUrl('${countryUrl}/${eventname}/futureroster/')" style="width: 100%; margin-bottom: 8px;">
                         <i class="fas fa-hands-helping"></i> Volunteer
                     </button>
-                    <button class="glass-button direction-btn" onclick="openDirections(${coordinates[1]}, ${coordinates[0]})" style="width: 100%;">
+                    <button class="glass-button direction-btn" onclick="openDirections(${coordinates[1]}, ${coordinates[0]})" style="width: 100%; margin-bottom: 8px;">
                         <i class="fas fa-directions"></i> Directions
                     </button>
-                </div>
             `;
+
+            // Add hotel search button if hotels filter is active
+            if (activeFilters.includes('hotels')) {
+                popupContent += `
+                    <button class="glass-button hotel-search-btn" onclick="openHotelSearch(${coordinates[1]}, ${coordinates[0]})" style="width: 100%; margin-bottom: 8px;">
+                        <i class="fas fa-bed"></i> Find Hotels
+                    </button>
+                `;
+            }
+
+            popupContent += `</div>`;
 
             var markerIcon = isJunior ? juniorIcon : fiveKIcon;
             if (cancellations[eventname]) {
@@ -1703,7 +1781,7 @@
 
             fetch(searchUrl)
                 .then(response => response.json())
-                                .then(data => {
+                .then(data => {
                     if (data.results && data.results.length > 0) {
                         data.results.forEach(place => {
                             createPlaceMarker(place, category, icon, filterType);
@@ -1773,7 +1851,6 @@
             .then(jsonData => {
                 data = jsonData;
                 console.log('Loaded parkrun data:', data);
-                console.log('Applied parkrun filter:', parkrunFilter);
                 updateMapMarkers();
             })
             .catch(err => {
@@ -1796,6 +1873,9 @@
             }
             window.open(url, '_blank');
         }
+
+        // Initialize filters from URL on page load
+        parseUrlFilters();
 
         // Initialize map position and auto-locate user
         if (hasValidMapCoords) {
