@@ -96,7 +96,7 @@
             padding: 0;
             overflow: hidden;
             font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            background: #ffffff;
         }
 
         #map {
@@ -1008,38 +1008,25 @@
                 console.log('Found individual filter params:', filters);
             }
             
-            if (filters.length > 0) {
-                // Map URL filters to internal filter names
-                const filterMap = {
-                    '5k': '5k',
-                    'junior': 'junior', 
-                    'all': ['5k', 'junior'], // ?all shows both 5k and junior parkruns
-                    'hotels': 'hotels',
-                    'hotel': 'hotels',
-                    'cafes': 'cafes',
-                    'cafe': 'cafes',
-                    'camping': 'camping',
-                    'campsite': 'camping'
-                };
-                
-                activeFilters = [];
-                filters.forEach(filter => {
-                    const mapped = filterMap[filter.toLowerCase()];
-                    if (Array.isArray(mapped)) {
-                        activeFilters.push(...mapped);
-                    } else if (mapped) {
-                        activeFilters.push(mapped);
-                    }
-                });
-                
-                // Remove duplicates
-                activeFilters = [...new Set(activeFilters)];
-                console.log('Final active filters from URL:', activeFilters);
-                
-                // Update UI to reflect URL filters
-                updateFilterUI();
-            }
+if (filters.length > 0) {
+    let newFilters = [];
+    filters.forEach(filter => {
+        const mapped = filterMap[filter.toLowerCase()];
+        if (Array.isArray(mapped)) {
+            newFilters.push(...mapped);
+        } else if (mapped) {
+            newFilters.push(mapped);
         }
+    });
+
+    if (newFilters.length > 0) {
+        activeFilters = [...new Set(newFilters)];
+        console.log('Final active filters from URL:', activeFilters);
+        updateFilterUI();
+    }
+
+}
+}
 
         // Update filter UI based on active filters
         function updateFilterUI() {
