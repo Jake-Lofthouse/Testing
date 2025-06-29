@@ -42,12 +42,12 @@
             --filter-gradient: linear-gradient(135deg, #7dd856 0%, #5cb85c 100%);
             --parkrun-gradient: linear-gradient(135deg, #28a745 0%, #20c997 100%);
             --junior-gradient: linear-gradient(135deg, #6f42c1 0%, #8e44ad 100%);
-            --hotel-gradient: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
             
             /* Better parkrun button colors */
             --course-gradient: linear-gradient(135deg, #28a745 0%, #20c997 100%);
             --volunteer-gradient: linear-gradient(135deg, #fd7e14 0%, #ffc107 100%);
             --direction-gradient: linear-gradient(135deg, #dc3545 0%, #e83e8c 100%);
+            --hotel-gradient: linear-gradient(135deg, #6f42c1 0%, #e83e8c 100%);
             
             --text-primary: rgba(0, 0, 0, 0.87);
             --text-secondary: rgba(0, 0, 0, 0.6);
@@ -217,52 +217,6 @@
         .filter-button.active {
             background: var(--filter-gradient);
             color: white;
-        }
-
-        /* Advanced Hotel Search Button */
-        .advanced-hotel-button {
-            position: absolute;
-            bottom: 30px;
-            right: 30px;
-            z-index: 1000;
-            background: var(--glass-bg);
-            backdrop-filter: var(--glass-backdrop);
-            -webkit-backdrop-filter: var(--glass-backdrop);
-            border: 1px solid var(--glass-border);
-            border-radius: var(--border-radius);
-            box-shadow: var(--glass-shadow);
-            padding: 16px 24px;
-            color: var(--text-primary);
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            display: none;
-            align-items: center;
-            gap: 12px;
-            border: none;
-        }
-
-        .advanced-hotel-button:hover {
-            background: rgba(255, 255, 255, 0.35);
-            transform: translateY(-2px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .advanced-hotel-button.show {
-            display: flex;
-            animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         /* Live location indicator - keep transparent background but show green dot */
@@ -528,6 +482,61 @@
             letter-spacing: 0.5px;
         }
 
+        /* Advanced Hotel Search Button */
+        .advanced-hotel-search {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            display: none;
+            animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .advanced-hotel-search.show {
+            display: block;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .advanced-hotel-btn {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-backdrop);
+            -webkit-backdrop-filter: var(--glass-backdrop);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            padding: 16px 24px;
+            color: var(--text-primary);
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--glass-shadow);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .advanced-hotel-btn:hover {
+            background: rgba(255, 255, 255, 0.35);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .advanced-hotel-btn i {
+            font-size: 18px;
+            color: var(--text-primary);
+        }
+
         /* Solid buttons with better parkrun colors */
         .glass-button {
             border: none;
@@ -573,7 +582,7 @@
         .course-btn:hover { box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4); }
         .volunteer-btn:hover { box-shadow: 0 8px 25px rgba(253, 126, 20, 0.4); }
         .direction-btn:hover { box-shadow: 0 8px 25px rgba(220, 53, 69, 0.4); }
-        .hotel-btn:hover { box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4); }
+        .hotel-btn:hover { box-shadow: 0 8px 25px rgba(111, 66, 193, 0.4); }
 
         /* Popup styles */
         .leaflet-popup-content-wrapper {
@@ -827,12 +836,14 @@
                 left: auto;
             }
 
-            .advanced-hotel-button {
+            .advanced-hotel-search {
                 bottom: 20px;
                 right: 20px;
-                left: 20px;
-                padding: 14px 20px;
-                font-size: 15px;
+            }
+
+            .advanced-hotel-btn {
+                padding: 12px 20px;
+                font-size: 14px;
             }
         }
 
@@ -847,10 +858,9 @@
                 font-size: 16px; /* Prevent zoom on iOS */
             }
 
-            .advanced-hotel-button {
+            .advanced-hotel-search {
                 bottom: 15px;
                 right: 15px;
-                left: 15px;
             }
         }
 
@@ -936,10 +946,12 @@
     </div>
 
     <!-- Advanced Hotel Search Button -->
-    <button class="advanced-hotel-button" id="advancedHotelButton" onclick="openAdvancedHotelSearch()">
-        <i class="fas fa-bed"></i>
-        <span>Advanced Hotel Search</span>
-    </button>
+    <div class="advanced-hotel-search" id="advancedHotelSearch">
+        <a href="#" class="advanced-hotel-btn" id="advancedHotelBtn" onclick="openAdvancedHotelSearch()">
+            <i class="fas fa-bed"></i>
+            <span>Advanced Hotel Search</span>
+        </a>
+    </div>
 
     <ul class="notifications"></ul>
     <div id="map-overlay" class="map-overlay"></div>
@@ -959,46 +971,61 @@
         let activeFilters = ['5k', 'junior', 'hotels', 'cafes', 'camping']; // All active by default
         let placeMarkers = [];
         let lastSelectedParkrun = null;
-        let lastSelectedParkrunCoords = null;
 
-        // Parse URL parameters for filters
+        // Parse URL filters on page load
         function parseUrlFilters() {
             const urlParams = new URLSearchParams(window.location.search);
-            const filterParam = urlParams.get('filters');
+            const filterParam = urlParams.get('filters') || urlParams.toString();
             
             if (filterParam) {
-                const urlFilters = filterParam.split(',').map(f => f.trim().toLowerCase());
+                // Handle both ?filters=5k,hotel,camping and ?5k,hotel,camping formats
+                let filters = [];
+                if (filterParam.includes('=')) {
+                    filters = urlParams.get('filters').split(',');
+                } else {
+                    // Parse individual parameters like ?5k&hotel&camping
+                    const allParams = Array.from(urlParams.keys());
+                    filters = allParams.filter(param => 
+                        ['5k', 'junior', 'all', 'hotels', 'cafes', 'camping'].includes(param.toLowerCase())
+                    );
+                }
                 
-                // Map URL filter names to internal filter names
-                const filterMapping = {
+                // Map URL filters to internal filter names
+                const filterMap = {
                     '5k': '5k',
-                    'junior': 'junior',
-                    'hotel': 'hotels',
+                    'junior': 'junior', 
+                    'all': ['5k', 'junior'],
                     'hotels': 'hotels',
-                    'cafe': 'cafes',
+                    'hotel': 'hotels',
                     'cafes': 'cafes',
+                    'cafe': 'cafes',
                     'camping': 'camping',
                     'campsite': 'camping'
                 };
                 
-                // Set active filters based on URL
                 activeFilters = [];
-                urlFilters.forEach(urlFilter => {
-                    const mappedFilter = filterMapping[urlFilter];
-                    if (mappedFilter && !activeFilters.includes(mappedFilter)) {
-                        activeFilters.push(mappedFilter);
+                filters.forEach(filter => {
+                    const mapped = filterMap[filter.toLowerCase()];
+                    if (Array.isArray(mapped)) {
+                        activeFilters.push(...mapped);
+                    } else if (mapped) {
+                        activeFilters.push(mapped);
                     }
                 });
+                
+                // Remove duplicates
+                activeFilters = [...new Set(activeFilters)];
                 
                 // Update UI to reflect URL filters
                 updateFilterUI();
             }
         }
 
+        // Update filter UI based on active filters
         function updateFilterUI() {
             document.querySelectorAll('.filter-item').forEach(item => {
-                const filterType = item.getAttribute('data-type');
-                if (activeFilters.includes(filterType)) {
+                const type = item.getAttribute('data-type');
+                if (activeFilters.includes(type)) {
                     item.classList.add('active');
                 } else {
                     item.classList.remove('active');
@@ -1006,13 +1033,20 @@
             });
         }
 
+        // Update URL with current filters
         function updateUrlWithFilters() {
             const url = new URL(window.location);
-            if (activeFilters.length > 0) {
+            
+            // Clear existing filter params
+            ['5k', 'junior', 'all', 'hotels', 'hotel', 'cafes', 'cafe', 'camping', 'campsite', 'filters'].forEach(param => {
+                url.searchParams.delete(param);
+            });
+            
+            // Add current filters
+            if (activeFilters.length > 0 && activeFilters.length < 5) {
                 url.searchParams.set('filters', activeFilters.join(','));
-            } else {
-                url.searchParams.delete('filters');
             }
+            
             window.history.replaceState({}, '', url);
         }
 
@@ -1022,7 +1056,7 @@
         const filterButton = document.getElementById('filterButton');
         const filterDropdown = document.getElementById('filterDropdown');
         const locationButton = document.getElementById('locationButton');
-        const advancedHotelButton = document.getElementById('advancedHotelButton');
+        const advancedHotelSearch = document.getElementById('advancedHotelSearch');
 
         searchInput.addEventListener('input', function() {
             const query = this.value.trim();
@@ -1107,15 +1141,19 @@
                 filterItem.classList.add('active');
             }
             
-            // Update URL with new filters
-            updateUrlWithFilters();
+            // Apply filters to map
+            applyFilters();
             
-            // Apply filter to existing markers
-            if (type === '5k' || type === 'junior') {
-                updateMapMarkers();
-            } else {
-                applyPlaceFilters();
-            }
+            // Update URL
+            updateUrlWithFilters();
+        }
+
+        function applyFilters() {
+            // Apply place filters
+            applyPlaceFilters();
+            
+            // Apply parkrun filters
+            applyParkrunFilters();
         }
 
         function applyPlaceFilters() {
@@ -1130,34 +1168,9 @@
             });
         }
 
-        function showAdvancedHotelButton() {
-            advancedHotelButton.classList.add('show');
-        }
-
-        function hideAdvancedHotelButton() {
-            advancedHotelButton.classList.remove('show');
-        }
-
-        function openAdvancedHotelSearch() {
-            if (!lastSelectedParkrunCoords || !lastSelectedParkrun) {
-                createToast('error', 'Please select a parkrun first');
-                return;
-            }
-            
-            const nextFriday = getNextFriday();
-            const stay22Url = `https://www.stay22.com/embed/gm?aid=parkrunnertourist&lat=${lastSelectedParkrunCoords.lat}&lng=${lastSelectedParkrunCoords.lng}&checkin=${nextFriday}&maincolor=7dd856&venue=${encodeURIComponent(lastSelectedParkrun)}`;
-            
-            window.open(stay22Url, '_blank');
-        }
-
-        function getNextFriday() {
-            const today = new Date();
-            const dayOfWeek = today.getDay();
-            const daysUntilFriday = (5 - dayOfWeek + 7) % 7;
-            const nextFriday = new Date(today);
-            nextFriday.setDate(today.getDate() + (daysUntilFriday === 0 ? 7 : daysUntilFriday));
-            
-            return nextFriday.toISOString().split('T')[0];
+        function applyParkrunFilters() {
+            // Clear and rebuild parkrun markers based on filters
+            updateMapMarkers();
         }
 
         function returnToUserLocation() {
@@ -1240,10 +1253,10 @@
                         const eventName = feature.properties.EventLongName;
                         const isJunior = eventName.toLowerCase().includes('junior');
                         
-                        // Check if this type of event is in active filters
-                        const eventType = isJunior ? 'junior' : '5k';
-                        if (!activeFilters.includes(eventType)) {
-                            return; // Skip if this event type is filtered out
+                        // Apply filter check during search
+                        if ((isJunior && !activeFilters.includes('junior')) || 
+                            (!isJunior && !activeFilters.includes('5k'))) {
+                            return; // Skip if filtered out
                         }
                         
                         if (eventName.toLowerCase().includes(query.toLowerCase())) {
@@ -1353,11 +1366,6 @@
                 const lon = parseFloat(suggestionData.data.lon);
                 map.setView([lat, lon], 13);
                 
-                // Hide advanced hotel button when selecting a place
-                hideAdvancedHotelButton();
-                lastSelectedParkrun = null;
-                lastSelectedParkrunCoords = null;
-                
                 // Show parkruns in this area
                 if (suggestionData.data.boundingbox) {
                     showParkrunsInArea(lat, lon, suggestionData.data.boundingbox);
@@ -1367,9 +1375,14 @@
                 map.setView([coordinates[1], coordinates[0]], 15);
                 
                 // Set selected parkrun for hotel search
-                lastSelectedParkrun = suggestionData.title;
-                lastSelectedParkrunCoords = { lat: coordinates[1], lng: coordinates[0] };
-                showAdvancedHotelButton();
+                lastSelectedParkrun = {
+                    name: suggestionData.data.properties.EventLongName,
+                    lat: coordinates[1],
+                    lng: coordinates[0]
+                };
+                
+                // Show advanced hotel search button
+                showAdvancedHotelSearch();
                 
                 // Show nearby places for this parkrun
                 findNearbyPlaces(coordinates[1], coordinates[0]);
@@ -1411,6 +1424,37 @@
                     map.fitBounds(group.getBounds().pad(0.1));
                 }
             }
+        }
+
+        // Advanced Hotel Search Functions
+        function showAdvancedHotelSearch() {
+            advancedHotelSearch.classList.add('show');
+        }
+
+        function hideAdvancedHotelSearch() {
+            advancedHotelSearch.classList.remove('show');
+            lastSelectedParkrun = null;
+        }
+
+        function openAdvancedHotelSearch() {
+            if (!lastSelectedParkrun) return;
+            
+            // Get next Friday's date
+            const nextFriday = getNextFriday();
+            const checkinDate = nextFriday.toISOString().split('T')[0];
+            
+            const stay22Url = `https://www.stay22.com/embed/gm?aid=parkrunnertourist&lat=${lastSelectedParkrun.lat}&lng=${lastSelectedParkrun.lng}&checkin=${checkinDate}&maincolor=7dd856&venue=${encodeURIComponent(lastSelectedParkrun.name)}`;
+            
+            window.open(stay22Url, '_blank');
+        }
+
+        function getNextFriday() {
+            const today = new Date();
+            const dayOfWeek = today.getDay();
+            const daysUntilFriday = (5 - dayOfWeek + 7) % 7;
+            const nextFriday = new Date(today);
+            nextFriday.setDate(today.getDate() + (daysUntilFriday === 0 ? 7 : daysUntilFriday));
+            return nextFriday;
         }
 
         // Auto-locate user on startup and start tracking - ALWAYS show marker
@@ -1548,15 +1592,11 @@
 
         map.on('moveend', updateURL);
 
-        // Hide advanced hotel button when zooming out
+        // Hide advanced hotel search when zooming out
         map.on('zoomend', function() {
-            const currentZoom = map.getZoom();
-            if (currentZoom < 10) {
-                hideAdvancedHotelButton();
-                lastSelectedParkrun = null;
-                lastSelectedParkrunCoords = null;
+            if (map.getZoom() < 10) {
+                hideAdvancedHotelSearch();
             }
-            updateMarkerVisibility();
         });
 
         // Icon definitions
@@ -1628,6 +1668,44 @@
             return name.toLowerCase().replace(/\s+/g, '').replace('parkrun', '');
         }
 
+        // Enhanced cancellation matching function
+        function findCancellationMatch(eventLongName) {
+            if (!eventLongName) return null;
+            
+            // Try exact match first
+            const exactMatch = Object.keys(cancellations).find(key => 
+                cancellations[key].originalName === eventLongName
+            );
+            if (exactMatch) {
+                console.log('Found exact cancellation match:', eventLongName);
+                return cancellations[exactMatch];
+            }
+            
+            // Try normalized match
+            const normalizedEventName = normalizeEventName(eventLongName);
+            if (cancellations[normalizedEventName]) {
+                console.log('Found normalized cancellation match:', eventLongName, '->', normalizedEventName);
+                return cancellations[normalizedEventName];
+            }
+            
+            // Try partial matching for complex names
+            const matchingKey = Object.keys(cancellations).find(key => {
+                const originalName = cancellations[key].originalName;
+                if (!originalName) return false;
+                
+                // Check if the event names match when normalized
+                const normalizedOriginal = normalizeEventName(originalName);
+                return normalizedOriginal === normalizedEventName;
+            });
+            
+            if (matchingKey) {
+                console.log('Found partial cancellation match:', eventLongName, '->', cancellations[matchingKey].originalName);
+                return cancellations[matchingKey];
+            }
+            
+            return null;
+        }
+
         async function fetchLocationData() {
             const url = '/BBS/Locations.json';
             try {
@@ -1692,6 +1770,8 @@
             }
         }
 
+        map.on('zoomend', updateMarkerVisibility);
+
         const notifications = document.querySelector(".notifications");
 
         const toastDetails = {
@@ -1731,9 +1811,12 @@
             .then(data => {
                 cancellations = {};
                 data.forEach(item => {
-                    // Use the exact name from cancellations.json for matching
-                    let normalizedKey = item.name.toLowerCase().replace(/\s+/g, '').replace('parkrun', '');
-                    cancellations[normalizedKey] = item.reason;
+                    let normalizedKey = normalizeEventName(item.name);
+                    cancellations[normalizedKey] = {
+                        reason: item.reason,
+                        date: item.date,
+                        originalName: item.name
+                    };
                 });
                 console.log('Loaded cancellations:', cancellations);
                 updateMapMarkers();
@@ -1747,9 +1830,9 @@
             const isJunior = eventLongName.toLowerCase().includes('junior');
             const countryUrl = getCountryUrl(coordinates[1], coordinates[0]);
             
-            // Check if this event type should be shown based on active filters
-            const eventType = isJunior ? 'junior' : '5k';
-            if (!activeFilters.includes(eventType)) {
+            // Check if this event should be shown based on filters
+            if ((isJunior && !activeFilters.includes('junior')) || 
+                (!isJunior && !activeFilters.includes('5k'))) {
                 return; // Don't create marker if filtered out
             }
             
@@ -1781,14 +1864,14 @@
 
             var markerIcon = isJunior ? juniorIcon : fiveKIcon;
             
-            // Check for cancellations using multiple matching strategies
-            const cancellationKey = findCancellationMatch(eventLongName);
-            if (cancellationKey && cancellations[cancellationKey]) {
+            // Check for cancellations
+            const cancellationInfo = findCancellationMatch(eventLongName);
+            if (cancellationInfo) {
                 popupContent = `
                     <div>
                         <div class="popup-title">${eventLongName}</div>
                         <div style="color: #fa709a; font-weight: 600; margin-bottom: 16px; padding: 12px; background: rgba(250, 112, 154, 0.1); border-radius: 8px;">
-                            <i class="fas fa-exclamation-triangle"></i> Cancelled: ${cancellations[cancellationKey]}
+                            <i class="fas fa-exclamation-triangle"></i> Cancelled: ${cancellationInfo.reason}
                         </div>
                         <button class="glass-button course-btn" onclick="openUrl('${countryUrl}/${eventname}/course/')" style="width: 100%; margin-bottom: 8px;">
                             <i class="fas fa-route"></i> Course
@@ -1809,34 +1892,19 @@
 
             marker.on('click', function () {
                 // Set selected parkrun for hotel search
-                lastSelectedParkrun = eventLongName;
-                lastSelectedParkrunCoords = { lat: coordinates[1], lng: coordinates[0] };
-                showAdvancedHotelButton();
+                lastSelectedParkrun = {
+                    name: eventLongName,
+                    lat: coordinates[1],
+                    lng: coordinates[0]
+                };
+                
+                // Show advanced hotel search button
+                showAdvancedHotelSearch();
                 
                 findNearbyPlaces(coordinates[1], coordinates[0]);
             });
 
             markers.addLayer(marker);
-        }
-
-        function findCancellationMatch(eventLongName) {
-            // Try exact match first
-            const exactKey = eventLongName.toLowerCase().replace(/\s+/g, '').replace('parkrun', '');
-            if (cancellations[exactKey]) {
-                return exactKey;
-            }
-            
-            // Try matching with the original event name from cancellations
-            for (let cancellationName in cancellations) {
-                const normalizedCancellation = cancellationName.toLowerCase().replace(/\s+/g, '').replace('parkrun', '');
-                const normalizedEvent = eventLongName.toLowerCase().replace(/\s+/g, '').replace('parkrun', '');
-                
-                if (normalizedCancellation === normalizedEvent) {
-                    return cancellationName;
-                }
-            }
-            
-            return null;
         }
 
         function hideWeatherLoading(eventname) {
@@ -1979,10 +2047,9 @@
             window.open(url, '_blank');
         }
 
-        // Parse URL filters on page load
+        // Initialize URL filters and map position
         parseUrlFilters();
-
-        // Initialize map position and auto-locate user
+        
         if (hasValidMapCoords) {
             map.setView([mapLat, mapLon], mapZoom);
             // Still try to get user location even if URL has coordinates
