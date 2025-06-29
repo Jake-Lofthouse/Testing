@@ -7,7 +7,8 @@
 <title>parkrunner tourist - Web App</title>
 <link rel="shortcut icon" type="image/x.icon" href="favicon.ico">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="apple-touch-icon" href="https://raw.githubusercontent.com/ALD-Models/pr-tourist-map/main/logo.png">
+<link rel="apple-touch-icon" href="Images/logo.png">
+
 
 <!-- General Meta Tags -->
 <meta name="description" content="Discover all parkrun events, nearby hotels, and campsites with our interactive web app. Navigate easily, get directions, and plan your parkrun travels effortlessly.">
@@ -19,147 +20,143 @@
 <meta name="distribution" content="global">
 
 <!-- Twitter Card Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="parkrunner tourist - Explore parkrun Events, Hotels & Campsites">
 <meta name="twitter:description" content="Use our web app to explore parkrun events, hotels, and campsites easily. Plan your travels with directions and a user-friendly interface.">
 <meta name="twitter:image" content="/Images/WebApp_Feature.jpg">
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-REFFZSK4XK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-REFFZSK4XK');
+</script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-REFFZSK4XK"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-REFFZSK4XK');
-    </script>
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
 
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-        }
+    .iframe-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        overflow: hidden;
+    }
 
-        .iframe-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            overflow: hidden;
-        }
+    iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
 
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
+    .menu-bar {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 50px;
+        width: 90%;
+        background-color: #58993d;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 25px;
+    }
 
-        .menu-bar {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            height: 50px;
-            width: 90%;
-            background-color: #58993d;
-            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            border-radius: 25px;
-        }
+    .menu-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        font-size: 12px;
+        position: relative;
+        cursor: pointer;
+    }
 
-        .menu-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            color: white;
-            text-decoration: none;
-            font-size: 12px;
-            position: relative; /* Positioning for the dropdown */
-            cursor: pointer; /* Pointer cursor for all items */
-        }
+    .menu-item .material-icons {
+        font-size: 24px;
+        color: white;
+    }
 
-        .menu-item .material-icons {
-            font-size: 24px;
-            color: white;
-        }
+    .menu-item:hover {
+        color: #c0e9a4;
+    }
 
-        .menu-item:hover {
-            color: #c0e9a4; /* Light color on hover */
-        }
+    .dropdown {
+        position: absolute;
+        bottom: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        display: none;
+        z-index: 1000;
+        width: 100px;
+    }
 
-        /* Dropdown Menu */
-        .dropdown {
-            position: absolute;
-            bottom: 60px; /* Position above the menu */
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-            display: none; /* Initially hidden */
-            z-index: 1000;
-            width: 100px; /* Set a fixed width for the dropdown */
-        }
+    .dropdown-item {
+        padding: 10px;
+        color: #58993d;
+        cursor: pointer;
+        text-align: center;
+        border-radius: 10px;
+        transition: background-color 0.2s, color 0.2s;
+    }
 
-        .dropdown-item {
-            padding: 10px;
-            color: #58993d; /* Green text for items */
-            cursor: pointer;
-            text-align: center;
-            border-radius: 10px; /* Add round edges */
-            transition: background-color 0.2s, color 0.2s; /* Smooth background change */
-        }
+    .dropdown-item.selected {
+        background-color: #7abf7e;
+        color: white;
+    }
 
-        .dropdown-item.selected {
-            background-color: #7abf7e; /* Darker light green for the selected item */
-            color: white; /* White text on selected item */
-        }
+    .dropdown-item:hover {
+        background-color: #f0f0f0;
+        color: #58993d;
+    }
 
-        .dropdown-item:hover {
-            background-color: #f0f0f0; /* Light grey on hover */
-            color: #58993d; /* Green text on hover */
-        }
+    .dropdown.active {
+        display: block;
+    }
 
-        /* Show dropdown when active */
-        .dropdown.active {
-            display: block; /* Show dropdown */
-        }
+    .current-selection {
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 14px;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
 
-        .current-selection {
-            display: flex;
-            align-items: center; /* Align icon and text vertically */
-            color: white;
-            font-size: 14px; /* Slightly larger font for visibility */
-            padding: 5px 10px; /* Add padding for better touch target */
-            cursor: pointer; /* Pointer cursor */
-            transition: background-color 0.2s; /* Smooth background change */
-        }
+    .current-selection:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
 
-        .current-selection:hover {
-            background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
-        }
+    .rotate {
+        transition: transform 0.3s ease;
+    }
 
-        .rotate {
-            transition: transform 0.3s ease; /* Smooth rotation transition */
-        }
-
-        .rotate-down {
-            transform: rotate(180deg); /* Downward arrow */
-        }
-    </style>
+    .rotate-down {
+        transform: rotate(180deg);
+    }
+</style>
 </head>
 <body>
-    <div class="iframe-container">
-        <iframe id="parkrunIframe" src="https://parkrunnertourist.co.uk/5k" allow="geolocation; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-    </div>
+<div class="iframe-container">
+    <iframe id="parkrunIframe" src="https://parkrunnertourist.co.uk/main?5k&web" allow="geolocation; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+</div>
 
-    <div class="menu-bar">
+<div class="menu-bar">
     <a href="https://www.parkrunnertourist.co.uk" class="menu-item">
         <span class="material-icons">home</span>
         Home
@@ -179,68 +176,51 @@
     </a>
 </div>
 
+<script>
+    let currentType = '5k';
 
-    <script>
-        let currentType = '5k'; // Track the current type
+    function setIframeSrc(type, selectedItem) {
+        var iframe = document.getElementById('parkrunIframe');
+        var currentSelection = document.getElementById('currentSelection');
+        var dropdownItems = document.querySelectorAll('.dropdown-item');
 
-        function setIframeSrc(type, selectedItem) {
-            var iframe = document.getElementById('parkrunIframe');
-            var currentSelection = document.getElementById('currentSelection');
-            var dropdownItems = document.querySelectorAll('.dropdown-item');
+        currentType = type;
+        iframe.src = `https://parkrunnertourist.co.uk/main?${type}&web`;
+        currentSelection.textContent = `Showing ${type.charAt(0).toUpperCase() + type.slice(1)}`;
 
-            currentType = type; // Update current type
+        dropdownItems.forEach(item => {
+            item.classList.remove('selected');
+        });
+        selectedItem.classList.add('selected');
 
-            switch (type) {
-                case 'junior':
-                    iframe.src = 'https://parkrunnertourist.co.uk/junior';
-                    currentSelection.textContent = "Showing Junior"; // Update selection text
-                    break;
-                case 'all':
-                    iframe.src = 'https://parkrunnertourist.co.uk/all';
-                    currentSelection.textContent = "Showing All"; // Update selection text
-                    break;
-                default: // '5k'
-                    iframe.src = 'https://parkrunnertourist.co.uk/5k';
-                    currentSelection.textContent = "Showing 5k"; // Update selection text
-                    break;
-            }
+        closeDropdown();
+    }
 
-            // Highlight the selected item and reset others
-            dropdownItems.forEach(item => {
-                item.classList.remove('selected'); // Remove selected class from all
-            });
-            selectedItem.classList.add('selected'); // Add selected class to the current item
+    function openUrl(url) {
+        window.open(url, '_blank');
+    }
 
-            // Close the dropdown after selection
+    function toggleDropdown() {
+        const dropdown = document.getElementById('dropdownMenu');
+        const arrow = document.getElementById('arrow');
+        dropdown.classList.toggle('active');
+        arrow.classList.toggle('rotate-down');
+    }
+
+    function closeDropdown() {
+        const dropdown = document.getElementById('dropdownMenu');
+        const arrow = document.getElementById('arrow');
+        dropdown.classList.remove('active');
+        arrow.classList.remove('rotate-down');
+    }
+
+    window.onclick = function(event) {
+        const dropdown = document.getElementById('dropdownMenu');
+        const arrow = document.getElementById('arrow');
+        if (!event.target.closest('.menu-item') && dropdown.classList.contains('active')) {
             closeDropdown();
         }
-
-        function openUrl(url) {
-            window.open(url, '_blank');
-        }
-
-        function toggleDropdown() {
-            const dropdown = document.getElementById('dropdownMenu');
-            const arrow = document.getElementById('arrow');
-            dropdown.classList.toggle('active'); // Toggle dropdown visibility
-            arrow.classList.toggle('rotate-down'); // Rotate arrow
-        }
-
-        function closeDropdown() {
-            const dropdown = document.getElementById('dropdownMenu');
-            const arrow = document.getElementById('arrow');
-            dropdown.classList.remove('active'); // Hide dropdown
-            arrow.classList.remove('rotate-down'); // Reset arrow rotation
-        }
-
-        // Close dropdown when clicking outside
-        window.onclick = function(event) {
-            const dropdown = document.getElementById('dropdownMenu');
-            const arrow = document.getElementById('arrow');
-            if (!event.target.closest('.menu-item') && dropdown.classList.contains('active')) {
-                closeDropdown();
-            }
-        }
-    </script>
+    }
+</script>
 </body>
 </html>
