@@ -945,6 +945,13 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
     <script>
+        // Parse URL parameters first
+        const mapUrlParams = new URLSearchParams(window.location.search);
+        const mapLat = parseFloat(mapUrlParams.get('lat'));
+        const mapLon = parseFloat(mapUrlParams.get('lon'));
+        const mapZoom = parseInt(mapUrlParams.get('zoom')) || 13; 
+        const hasValidMapCoords = !isNaN(mapLat) && !isNaN(mapLon);
+
         // Global variables
         let searchTimeout;
         let data = {};
@@ -958,59 +965,78 @@
         let placeMarkers = [];
         let lastSelectedParkrun = null;
 
-        // Parse URL parameters to check for coordinates
-        const mapUrlParams = new URLSearchParams(window.location.search);
-        const mapLat = parseFloat(mapUrlParams.get('lat'));
-        const mapLon = parseFloat(mapUrlParams.get('lon'));
-        const mapZoom = parseInt(mapUrlParams.get('zoom')) || 13; 
-        const hasValidMapCoords = !isNaN(mapLat) && !isNaN(mapLon);
-
         // Parse URL filters on page load
         function parseUrlFilters() {
             const urlParams = new URLSearchParams(window.location.search);
-            const filterParam = urlParams.get('filters') || urlParams.toString();
             
-            if (filterParam) {
-                // Handle both ?filters=5k,hotel,camping and ?5k,hotel,camping formats
-                let filters = [];
-                if (filterParam.includes('=')) {
-                    filters = urlParams.get('filters').split(',');
-                } else {
-                    // Parse individual parameters like ?5k&hotel&camping
-                    const allParams = Array.from(urlParams.keys());
-                    filters = allParams.filter(param => 
-                        ['5k', 'junior', 'all', 'hotels', 'cafes', 'camping'].includes(param.toLowerCase())
-                    );
-                }
-                
-                // Map URL filters to internal filter names
-                const filterMap = {
-                    '5k': '5k',
-                    'junior': 'junior', 
-                    'all': ['5k', 'junior'],
-                    'hotels': 'hotels',
-                    'hotel': 'hotels',
-                    'cafes': 'cafes',
-                    'cafe': 'cafes',
-                    'camping': 'camping',
-                    'campsite': 'camping'
-                };
-                
+            // Get all parameter keys
+            const allParams = Array.from(urlParams.keys());
+            
+            // Check for filters parameter first
+            const filtersParam = urlParams.get('filters');
+            if (filtersParam) {
+                const filters = filtersParam.split(',').map(f => f.trim().toLowerCase());
                 activeFilters = [];
+                
                 filters.forEach(filter => {
-                    const mapped = filterMap[filter.toLowerCase()];
-                    if (Array.isArray(mapped)) {
-                        activeFilters.push(...mapped);
-                    } else if (mapped) {
-                        activeFilters.push(mapped);
+                    // Map URL filter names to internal names
+                    switch(filter) {
+                        case '5k':
+                            activeFilters.push('5k');
+                            break;
+                        case 'junior':
+                            activeFilters.push('junior');
+                            break;
+                        case 'hotels':
+                        case 'hotel':
+                            activeFilters.push('hotels');
+                            break;
+                        case 'cafes':
+                        case 'cafe':
+                            activeFilters.push('cafes');
+                            break;
+                        case 'camping':
+                        case 'campsite':
+                            activeFilters.push('camping');
+                            break;
                     }
                 });
                 
                 // Remove duplicates
                 activeFilters = [...new Set(activeFilters)];
-                
-                // Update UI to reflect URL filters
-                updateFilterUI();
+                console.log('Parsed filters from filters param:', activeFilters);
+                return;
+            }
+            
+            // Check for individual parameters like ?5k&cafes&hotels
+            const foundFilters = [];
+            allParams.forEach(param => {
+                const lowerParam = param.toLowerCase();
+                switch(lowerParam) {
+                    case '5k':
+                        foundFilters.push('5k');
+                        break;
+                    case 'junior':
+                        foundFilters.push('junior');
+                        break;
+                    case 'hotels':
+                    case 'hotel':
+                        foundFilters.push('hotels');
+                        break;
+                    case 'cafes':
+                    case 'cafe':
+                        foundFilters.push('cafes');
+                        break;
+                    case 'camping':
+                    case 'campsite':
+                        foundFilters.push('camping');
+                        break;
+                }
+            });
+            
+            if (foundFilters.length > 0) {
+                activeFilters = [...new Set(foundFilters)];
+                console.log('Parsed filters from individual params:', activeFilters);
             }
         }
 
@@ -1035,9 +1061,11 @@
                 url.searchParams.delete(param);
             });
             
-            // Add current filters
-            if (activeFilters.length > 0 && activeFilters.length < 5) {
-                url.searchParams.set('filters', activeFilters.join(','));
+            // Add current filters as individual parameters for better compatibility
+            if (activeFilters.length > 0) {
+                activeFilters.forEach(filter => {
+                    url.searchParams.set(filter, '');
+                });
             }
             
             window.history.replaceState({}, '', url);
@@ -1552,10 +1580,10 @@
             }
         });
 
-        // Map initialization with proper coordinate handling
+        // Map initialization
         var map = L.map('map', {
-            center: hasValidMapCoords ? [mapLat, mapLon] : [54.5, -3], // Default to UK center
-            zoom: hasValidMapCoords ? mapZoom : 6, // Default zoom for UK
+            center: hasValidMapCoords ? [mapLat, mapLon] : [54.5, -3],
+            zoom: hasValidMapCoords ? mapZoom : 6,
             zoomControl: false,
             maxBounds: [[-90, -180], [90, 180]],
             maxBoundsViscosity: 1.0,
@@ -2035,13 +2063,16 @@
             window.open(url, '_blank');
         }
 
-        // Initialize URL filters
+        // Initialize URL filters and map position
         parseUrlFilters();
         
-        // Auto-locate user only if no URL coordinates provided
+        // Auto-locate user on startup if no URL coordinates
         setTimeout(() => {
             autoLocateAndTrack();
         }, 1000);
+        
+        // Update UI to reflect URL filters
+        updateFilterUI();
     </script>
 </body>
 </html>
