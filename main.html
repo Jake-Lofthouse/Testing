@@ -1,0 +1,2000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="robots" content="noindex, nofollow">
+    <title>parkrunner tourist</title>
+    <link rel="shortcut icon" type="image/x.icon" href="favicon.ico?">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-REFFZSK4XK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-REFFZSK4XK');
+    </script>
+
+    <!-- Cronitor RUM -->
+    <script async src="https://rum.cronitor.io/script.js"></script>
+    <script>
+        window.cronitor = window.cronitor || function() { (window.cronitor.q = window.cronitor.q || []).push(arguments); };
+        cronitor('config', { clientKey: '7d03d6af0f794abeb3988b05dc158a14' });
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.25);
+            --glass-border: rgba(255, 255, 255, 0.3);
+            --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            --glass-backdrop: blur(20px);
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --success-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --warning-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            --danger-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            --filter-gradient: linear-gradient(135deg, #7dd856 0%, #5cb85c 100%);
+            --parkrun-gradient: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            --junior-gradient: linear-gradient(135deg, #6f42c1 0%, #8e44ad 100%);
+            --hotel-gradient: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            
+            /* Better parkrun button colors */
+            --course-gradient: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            --volunteer-gradient: linear-gradient(135deg, #fd7e14 0%, #ffc107 100%);
+            --direction-gradient: linear-gradient(135deg, #dc3545 0%, #e83e8c 100%);
+            
+            --text-primary: rgba(0, 0, 0, 0.87);
+            --text-secondary: rgba(0, 0, 0, 0.6);
+            --border-radius: 16px;
+            --border-radius-small: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            -moz-user-select: none;
+            box-sizing: border-box;
+        }
+
+        /* Remove ALL focus/active/tap highlights */
+        *:focus,
+        *:active,
+        button:focus,
+        button:active,
+        input:focus,
+        input:active,
+        .glass-button:focus,
+        .glass-button:active,
+        .location-button:focus,
+        .location-button:active,
+        .filter-button:focus,
+        .filter-button:active {
+            outline: none !important;
+            -webkit-tap-highlight-color: transparent !important;
+            -webkit-touch-callout: none !important;
+            -webkit-user-select: none !important;
+            box-shadow: none !important;
+        }
+
+        /* Remove tap highlights on mobile */
+        * {
+            -webkit-tap-highlight-color: transparent !important;
+            -webkit-touch-callout: none !important;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+        }
+
+        #map {
+            height: 100vh;
+            width: 100vw;
+            filter: saturate(1.1) contrast(1.05);
+        }
+
+        /* Top controls container */
+        .top-controls {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: flex-end;
+        }
+
+        /* Search container */
+        .search-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .search-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-backdrop);
+            -webkit-backdrop-filter: var(--glass-backdrop);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            box-shadow: var(--glass-shadow);
+            transition: var(--transition);
+            overflow: visible;
+        }
+
+        .search-container:hover {
+            background: rgba(255, 255, 255, 0.35);
+            transform: translateY(-1px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .search-container:focus-within {
+            background: rgba(255, 255, 255, 0.4);
+            border-color: #7dd856;
+            box-shadow: 0 0 0 4px rgba(125, 216, 86, 0.2), var(--glass-shadow);
+        }
+
+        #search-input {
+            background: transparent;
+            border: none;
+            padding: 14px 20px;
+            font-size: 16px;
+            color: var(--text-primary);
+            width: 300px;
+            outline: none;
+            user-select: text;
+            -webkit-user-select: text;
+            font-weight: 500;
+        }
+
+        #search-input::placeholder {
+            color: rgba(0, 0, 0, 0.5);
+            font-weight: 400;
+        }
+
+        .search-icon {
+            padding: 14px 16px;
+            color: var(--text-secondary);
+            font-size: 18px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .search-icon:hover {
+            color: var(--text-primary);
+        }
+
+        /* Location and filter buttons */
+        .control-buttons {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .location-button, .filter-button {
+            width: 48px;
+            height: 48px;
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-backdrop);
+            -webkit-backdrop-filter: var(--glass-backdrop);
+            border: 1px solid var(--glass-border);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--glass-shadow);
+            color: var(--text-primary);
+            font-size: 18px;
+            border: none;
+            position: relative;
+        }
+
+        .location-button:hover, .filter-button:hover {
+            background: rgba(255, 255, 255, 0.35);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .filter-button.active {
+            background: var(--filter-gradient);
+            color: white;
+        }
+
+        /* Advanced Hotel Search Button */
+        .advanced-hotel-button {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-backdrop);
+            -webkit-backdrop-filter: var(--glass-backdrop);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            box-shadow: var(--glass-shadow);
+            padding: 16px 24px;
+            color: var(--text-primary);
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: none;
+            align-items: center;
+            gap: 12px;
+            border: none;
+        }
+
+        .advanced-hotel-button:hover {
+            background: rgba(255, 255, 255, 0.35);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .advanced-hotel-button.show {
+            display: flex;
+            animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Live location indicator - keep transparent background but show green dot */
+        .location-button.tracking {
+            /* Keep same transparent background as normal state */
+            background: var(--glass-bg);
+            color: var(--text-primary);
+        }
+
+        .location-button.tracking::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            right: -2px;
+            width: 12px;
+            height: 12px;
+            background: #28a745;
+            border: 2px solid white;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+            }
+        }
+
+        /* Filter dropdown */
+        .filter-dropdown {
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: var(--glass-backdrop);
+            -webkit-backdrop-filter: var(--glass-backdrop);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: var(--border-radius);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+            display: none;
+            z-index: 1002;
+            min-width: 220px;
+        }
+
+        .filter-dropdown.show {
+            display: block;
+            animation: slideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .filter-item {
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            cursor: pointer;
+            transition: var(--transition);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .filter-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Remove hover effect on filter items */
+        .filter-item:hover {
+            background: transparent;
+        }
+
+        /* Apple-style toggle switch */
+        .filter-toggle {
+            width: 44px;
+            height: 26px;
+            background: #e5e5e7;
+            border-radius: 13px;
+            position: relative;
+            transition: var(--transition);
+            flex-shrink: 0;
+            cursor: pointer;
+        }
+
+        .filter-item.active .filter-toggle {
+            background: #34c759;
+        }
+
+        .filter-toggle::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 22px;
+            height: 22px;
+            background: white;
+            border-radius: 50%;
+            transition: var(--transition);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .filter-item.active .filter-toggle::after {
+            transform: translateX(18px);
+        }
+
+        .filter-icon {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .filter-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .filter-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 16px;
+        }
+
+        /* Search suggestions dropdown - match filter dropdown transparency */
+        .search-suggestions {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: var(--glass-backdrop);
+            -webkit-backdrop-filter: var(--glass-backdrop);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: var(--border-radius);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+            max-height: 400px;
+            overflow-y: auto;
+            display: none;
+            z-index: 1001;
+        }
+
+        /* Force scrollbar to be visible */
+        .search-suggestions::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        .search-suggestions::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 6px;
+        }
+
+        .search-suggestions::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 6px;
+        }
+
+        .search-suggestions::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .search-suggestions {
+            scrollbar-width: thin;
+            scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.1);
+        }
+
+        .search-suggestions.show {
+            display: block;
+            animation: slideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .suggestion-item {
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            cursor: pointer;
+            transition: var(--transition);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .suggestion-item:last-child {
+            border-bottom: none;
+        }
+
+        .suggestion-item:hover {
+            background: rgba(125, 216, 86, 0.1);
+        }
+
+        .suggestion-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            font-size: 18px;
+            flex-shrink: 0;
+            color: white;
+            font-weight: 600;
+        }
+
+        .suggestion-icon.parkrun {
+            background: var(--parkrun-gradient);
+        }
+
+        .suggestion-icon.parkrun.junior {
+            background: var(--junior-gradient);
+        }
+
+        .suggestion-icon.place {
+            background: var(--primary-gradient);
+        }
+
+        .suggestion-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .suggestion-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 16px;
+        }
+
+        .suggestion-subtitle {
+            font-size: 14px;
+            color: var(--text-secondary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .suggestion-category {
+            padding: 12px 20px;
+            font-weight: 600;
+            color: var(--text-primary);
+            background: rgba(0, 0, 0, 0.05);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Solid buttons with better parkrun colors */
+        .glass-button {
+            border: none;
+            border-radius: var(--border-radius-small);
+            padding: 14px 24px;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            background: var(--primary-gradient);
+        }
+
+        .glass-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .glass-button:active {
+            transform: translateY(0);
+        }
+
+        /* Better parkrun button colors */
+        .course-btn { 
+            background: var(--course-gradient);
+        }
+        .volunteer-btn { 
+            background: var(--volunteer-gradient);
+        }
+        .direction-btn { 
+            background: var(--direction-gradient);
+        }
+        .hotel-btn { 
+            background: var(--hotel-gradient);
+        }
+
+        .course-btn:hover { box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4); }
+        .volunteer-btn:hover { box-shadow: 0 8px 25px rgba(253, 126, 20, 0.4); }
+        .direction-btn:hover { box-shadow: 0 8px 25px rgba(220, 53, 69, 0.4); }
+        .hotel-btn:hover { box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4); }
+
+        /* Popup styles */
+        .leaflet-popup-content-wrapper {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-backdrop);
+            -webkit-backdrop-filter: var(--glass-backdrop);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            box-shadow: var(--glass-shadow);
+            padding: 0;
+        }
+
+        .leaflet-popup-content {
+            margin: 0;
+            padding: 20px;
+            color: var(--text-primary);
+        }
+
+        .popup-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+            text-align: center;
+        }
+
+        .hotel-popup-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius-small);
+            margin-bottom: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .hotel-popup-image:hover {
+            transform: scale(1.02);
+        }
+
+        /* Weather iframe container with black loading icon */
+        .weather-container {
+            position: relative;
+            margin-bottom: 16px;
+            border-radius: var(--border-radius-small);
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.1);
+            min-height: 120px;
+        }
+
+        .weather-loading {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.9);
+            z-index: 1;
+        }
+
+        .weather-loading.hidden {
+            display: none;
+        }
+
+        .spinner {
+            width: 32px;
+            height: 32px;
+            border: 3px solid rgba(0, 0, 0, 0.1);
+            border-top: 3px solid #333;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Notifications */
+        .notifications {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 90%;
+            z-index: 9999;
+        }
+
+        .notifications .toast {
+            max-width: 400px;
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-backdrop);
+            -webkit-backdrop-filter: var(--glass-backdrop);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: var(--glass-shadow);
+            animation: show_toast 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            color: var(--text-primary);
+        }
+
+        @keyframes show_toast {
+            0% {
+                transform: translateY(100%) scale(0.9);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        .toast::before {
+            content: "";
+            height: 4px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: progress 2.5s linear forwards;
+            background: var(--danger-gradient);
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+        }
+
+        @keyframes progress {
+            100% {
+                width: 0%;
+            }
+        }
+
+        .toast .column {
+            display: flex;
+            align-items: center;
+        }
+
+        .toast .column i {
+            font-size: 1.5rem;
+            color: #fa709a;
+            margin-right: 12px;
+        }
+
+        .toast .column span {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        /* iframe styling */
+        iframe {
+            width: 100%;
+            border: none;
+            overflow: hidden;
+            border-radius: var(--border-radius-small);
+            background: transparent;
+        }
+
+        /* Map overlay */
+        .map-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            z-index: 900;
+            display: none;
+            cursor: not-allowed;
+        }
+
+        /* Hide attribution */
+        .leaflet-control-attribution {
+            display: none;
+        }
+
+        /* Loading state for suggestions - match weather loading style */
+        .suggestion-loading {
+            padding: 20px;
+            text-align: center;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .suggestion-loading .spinner {
+            width: 24px;
+            height: 24px;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            border-top: 2px solid #333;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        .suggestion-no-results {
+            padding: 20px;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+
+        /* Mobile responsive design */
+        @media (max-width: 768px) {
+            .top-controls {
+                top: 15px;
+                right: 15px;
+                left: 15px;
+                align-items: stretch;
+            }
+
+            .search-wrapper {
+                flex-direction: row;
+                gap: 12px;
+                align-items: center;
+            }
+
+            .search-container {
+                flex: 1;
+            }
+
+            #search-input {
+                width: 100%;
+                padding: 12px 16px;
+                font-size: 16px;
+            }
+
+            .control-buttons {
+                flex-shrink: 0;
+            }
+
+            .popup-title {
+                font-size: 16px;
+            }
+
+            .search-suggestions {
+                max-height: 300px;
+            }
+
+            .suggestion-item {
+                padding: 12px 16px;
+            }
+
+            .filter-dropdown {
+                right: 0;
+                left: auto;
+            }
+
+            .advanced-hotel-button {
+                bottom: 20px;
+                right: 20px;
+                left: 20px;
+                padding: 14px 20px;
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .top-controls {
+                top: 10px;
+                right: 10px;
+                left: 10px;
+            }
+
+            #search-input {
+                font-size: 16px; /* Prevent zoom on iOS */
+            }
+
+            .advanced-hotel-button {
+                bottom: 15px;
+                right: 15px;
+                left: 15px;
+            }
+        }
+
+        /* Smooth scrollbar for webkit browsers */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    
+    <!-- Top controls -->
+    <div class="top-controls">
+        <div class="search-wrapper">
+            <div class="search-container">
+                <i class="search-icon fas fa-search"></i>
+                <input type="text" id="search-input" placeholder="Search places & events">
+                <div class="search-suggestions" id="search-suggestions"></div>
+            </div>
+            <div class="control-buttons">
+                <button class="location-button" id="locationButton" onclick="returnToUserLocation()" title="Return to your location">
+                    <i class="fas fa-crosshairs"></i>
+                </button>
+                <div style="position: relative;">
+                    <button class="filter-button" id="filterButton" onclick="toggleFilter()" title="Filter places">
+                        <i class="fas fa-filter"></i>
+                    </button>
+                    <div class="filter-dropdown" id="filterDropdown">
+                        <div class="filter-item active" onclick="toggleFilterType('5k')" data-type="5k">
+                            <div class="filter-toggle"></div>
+                            <div class="filter-icon" style="background-image: url('/Icons/5k.png');"></div>
+                            <div class="filter-content">
+                                <div class="filter-title">5K Events</div>
+                            </div>
+                        </div>
+                        <div class="filter-item active" onclick="toggleFilterType('junior')" data-type="junior">
+                            <div class="filter-toggle"></div>
+                            <div class="filter-icon" style="background-image: url('/Icons/Junior.png');"></div>
+                            <div class="filter-content">
+                                <div class="filter-title">Junior Events</div>
+                            </div>
+                        </div>
+                        <div class="filter-item active" onclick="toggleFilterType('hotels')" data-type="hotels">
+                            <div class="filter-toggle"></div>
+                            <div class="filter-icon" style="background-image: url('/Icons/Hotel.png');"></div>
+                            <div class="filter-content">
+                                <div class="filter-title">Hotels</div>
+                            </div>
+                        </div>
+                        <div class="filter-item active" onclick="toggleFilterType('cafes')" data-type="cafes">
+                            <div class="filter-toggle"></div>
+                            <div class="filter-icon" style="background-image: url('Icons/Cafe.png');"></div>
+                            <div class="filter-content">
+                                <div class="filter-title">Cafés & Pubs</div>
+                            </div>
+                        </div>
+                        <div class="filter-item active" onclick="toggleFilterType('camping')" data-type="camping">
+                            <div class="filter-toggle"></div>
+                            <div class="filter-icon" style="background-image: url('/Icons/Camp.png');"></div>
+                            <div class="filter-content">
+                                <div class="filter-title">Camping</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Advanced Hotel Search Button -->
+    <button class="advanced-hotel-button" id="advancedHotelButton" onclick="openAdvancedHotelSearch()">
+        <i class="fas fa-bed"></i>
+        <span>Advanced Hotel Search</span>
+    </button>
+
+    <ul class="notifications"></ul>
+    <div id="map-overlay" class="map-overlay"></div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+    <script>
+        // Global variables
+        let searchTimeout;
+        let data = {};
+        let cancellations = {};
+        let markers = L.markerClusterGroup();
+        let bbMarkers = [];
+        let userLocationMarker;
+        let locationWatchId = null;
+        let isTrackingLocation = false;
+        let activeFilters = ['5k', 'junior', 'hotels', 'cafes', 'camping']; // All active by default
+        let placeMarkers = [];
+        let lastSelectedParkrun = null;
+        let lastSelectedParkrunCoords = null;
+
+        // Parse URL parameters for filters
+        function parseUrlFilters() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const filterParam = urlParams.get('filters');
+            
+            if (filterParam) {
+                const urlFilters = filterParam.split(',').map(f => f.trim().toLowerCase());
+                
+                // Map URL filter names to internal filter names
+                const filterMapping = {
+                    '5k': '5k',
+                    'junior': 'junior',
+                    'hotel': 'hotels',
+                    'hotels': 'hotels',
+                    'cafe': 'cafes',
+                    'cafes': 'cafes',
+                    'camping': 'camping',
+                    'campsite': 'camping'
+                };
+                
+                // Set active filters based on URL
+                activeFilters = [];
+                urlFilters.forEach(urlFilter => {
+                    const mappedFilter = filterMapping[urlFilter];
+                    if (mappedFilter && !activeFilters.includes(mappedFilter)) {
+                        activeFilters.push(mappedFilter);
+                    }
+                });
+                
+                // Update UI to reflect URL filters
+                updateFilterUI();
+            }
+        }
+
+        function updateFilterUI() {
+            document.querySelectorAll('.filter-item').forEach(item => {
+                const filterType = item.getAttribute('data-type');
+                if (activeFilters.includes(filterType)) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        }
+
+        function updateUrlWithFilters() {
+            const url = new URL(window.location);
+            if (activeFilters.length > 0) {
+                url.searchParams.set('filters', activeFilters.join(','));
+            } else {
+                url.searchParams.delete('filters');
+            }
+            window.history.replaceState({}, '', url);
+        }
+
+        // Search functionality with live suggestions
+        const searchInput = document.getElementById('search-input');
+        const suggestionsContainer = document.getElementById('search-suggestions');
+        const filterButton = document.getElementById('filterButton');
+        const filterDropdown = document.getElementById('filterDropdown');
+        const locationButton = document.getElementById('locationButton');
+        const advancedHotelButton = document.getElementById('advancedHotelButton');
+
+        searchInput.addEventListener('input', function() {
+            const query = this.value.trim();
+            
+            clearTimeout(searchTimeout);
+            
+            if (query.length < 2) {
+                hideSuggestions();
+                return;
+            }
+
+            showLoadingSuggestions();
+            
+            searchTimeout = setTimeout(() => {
+                performSearch(query);
+            }, 300);
+        });
+
+        searchInput.addEventListener('focus', function() {
+            if (this.value.trim().length >= 2) {
+                performSearch(this.value.trim());
+            }
+        });
+
+        // Hide suggestions and filter dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.search-container')) {
+                hideSuggestions();
+            }
+            if (!e.target.closest('.filter-button') && !e.target.closest('.filter-dropdown')) {
+                hideFilter();
+            }
+        });
+
+        function showLoadingSuggestions() {
+            suggestionsContainer.innerHTML = `
+                <div class="suggestion-loading">
+                    <div class="spinner"></div>
+                    <span>Searching...</span>
+                </div>
+            `;
+            showSuggestions();
+        }
+
+        function showSuggestions() {
+            suggestionsContainer.classList.add('show');
+        }
+
+        function hideSuggestions() {
+            suggestionsContainer.classList.remove('show');
+        }
+
+        function toggleFilter() {
+            const isVisible = filterDropdown.classList.contains('show');
+            if (isVisible) {
+                hideFilter();
+            } else {
+                showFilter();
+            }
+        }
+
+        function showFilter() {
+            filterDropdown.classList.add('show');
+            filterButton.classList.add('active');
+        }
+
+        function hideFilter() {
+            filterDropdown.classList.remove('show');
+            filterButton.classList.remove('active');
+        }
+
+        function toggleFilterType(type) {
+            const filterItem = document.querySelector(`[data-type="${type}"]`);
+            
+            if (activeFilters.includes(type)) {
+                // Remove from active filters
+                activeFilters = activeFilters.filter(f => f !== type);
+                filterItem.classList.remove('active');
+            } else {
+                // Add to active filters
+                activeFilters.push(type);
+                filterItem.classList.add('active');
+            }
+            
+            // Update URL with new filters
+            updateUrlWithFilters();
+            
+            // Apply filter to existing markers
+            if (type === '5k' || type === 'junior') {
+                updateMapMarkers();
+            } else {
+                applyPlaceFilters();
+            }
+        }
+
+        function applyPlaceFilters() {
+            placeMarkers.forEach(markerData => {
+                const { marker, type } = markerData;
+                
+                if (activeFilters.includes(type)) {
+                    map.addLayer(marker);
+                } else {
+                    map.removeLayer(marker);
+                }
+            });
+        }
+
+        function showAdvancedHotelButton() {
+            advancedHotelButton.classList.add('show');
+        }
+
+        function hideAdvancedHotelButton() {
+            advancedHotelButton.classList.remove('show');
+        }
+
+        function openAdvancedHotelSearch() {
+            if (!lastSelectedParkrunCoords || !lastSelectedParkrun) {
+                createToast('error', 'Please select a parkrun first');
+                return;
+            }
+            
+            const nextFriday = getNextFriday();
+            const stay22Url = `https://www.stay22.com/embed/gm?aid=parkrunnertourist&lat=${lastSelectedParkrunCoords.lat}&lng=${lastSelectedParkrunCoords.lng}&checkin=${nextFriday}&maincolor=7dd856&venue=${encodeURIComponent(lastSelectedParkrun)}`;
+            
+            window.open(stay22Url, '_blank');
+        }
+
+        function getNextFriday() {
+            const today = new Date();
+            const dayOfWeek = today.getDay();
+            const daysUntilFriday = (5 - dayOfWeek + 7) % 7;
+            const nextFriday = new Date(today);
+            nextFriday.setDate(today.getDate() + (daysUntilFriday === 0 ? 7 : daysUntilFriday));
+            
+            return nextFriday.toISOString().split('T')[0];
+        }
+
+        function returnToUserLocation() {
+            if (userLocationMarker) {
+                const userLatLng = userLocationMarker.getLatLng();
+                map.flyTo([userLatLng.lat, userLatLng.lng], 15, { duration: 1.5 });
+            } else {
+                // If no user location marker, try to get current location
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(
+                        (position) => {
+                            const lat = position.coords.latitude;
+                            const lng = position.coords.longitude;
+                            map.flyTo([lat, lng], 15, { duration: 1.5 });
+                        },
+                        (error) => {
+                            createToast('error', 'Cannot find your location');
+                        },
+                        { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
+                    );
+                } else {
+                    createToast('error', 'Geolocation is not supported by this browser');
+                }
+            }
+        }
+
+        function startLocationTracking() {
+            if (navigator.geolocation) {
+                locationButton.classList.add('tracking');
+                isTrackingLocation = true;
+                
+                locationWatchId = navigator.geolocation.watchPosition(
+                    (position) => {
+                        const lat = position.coords.latitude;
+                        const lng = position.coords.longitude;
+                        
+                        // Update or create user location marker
+                        if (!userLocationMarker) {
+                            userLocationMarker = L.marker([lat, lng], { icon: LocationIcon }).addTo(map)
+                                .bindPopup(`You are here (Live tracking)`);
+                        } else {
+                            userLocationMarker.setLatLng([lat, lng]);
+                        }
+                    },
+                    (error) => {
+                        let message = 'Cannot track your location';
+                        switch(error.code) {
+                            case error.PERMISSION_DENIED:
+                                message = 'Location access denied by user';
+                                break;
+                            case error.POSITION_UNAVAILABLE:
+                                message = 'Location information unavailable';
+                                break;
+                            case error.TIMEOUT:
+                                message = 'Location request timed out';
+                                break;
+                        }
+                        console.log('Location tracking error:', message);
+                        // Don't show error toast for automatic tracking
+                    },
+                    { 
+                        enableHighAccuracy: true, 
+                        timeout: 10000, 
+                        maximumAge: 30000 // Update every 30 seconds max
+                    }
+                );
+            }
+        }
+
+        function performSearch(query) {
+            console.log('Performing search for:', query);
+            
+            const parkrunSuggestions = [];
+            const placeSuggestions = [];
+            
+            // Search for parkruns FIRST
+            if (data.events && data.events.features) {
+                data.events.features.forEach(feature => {
+                    if (feature.geometry.type === 'Point') {
+                        const eventName = feature.properties.EventLongName;
+                        const isJunior = eventName.toLowerCase().includes('junior');
+                        
+                        // Check if this type of event is in active filters
+                        const eventType = isJunior ? 'junior' : '5k';
+                        if (!activeFilters.includes(eventType)) {
+                            return; // Skip if this event type is filtered out
+                        }
+                        
+                        if (eventName.toLowerCase().includes(query.toLowerCase())) {
+                            parkrunSuggestions.push({
+                                type: 'parkrun',
+                                title: eventName,
+                                subtitle: 'parkrun Event',
+                                data: feature,
+                                isJunior: isJunior
+                            });
+                        }
+                    }
+                });
+            }
+
+            // Search for places using Nominatim
+            fetchLocationSuggestions(query).then(places => {
+                placeSuggestions.push(...places);
+                
+                // Combine suggestions with parkruns FIRST
+                const allSuggestions = [...parkrunSuggestions.slice(0, 5), ...placeSuggestions.slice(0, 5)];
+                
+                console.log('Found suggestions:', allSuggestions);
+                displaySuggestions(allSuggestions);
+            }).catch(error => {
+                console.error('Error fetching place suggestions:', error);
+                displaySuggestions(parkrunSuggestions.slice(0, 8));
+            });
+        }
+
+        function fetchLocationSuggestions(query) {
+            const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&limit=5&addressdetails=1`;
+            
+            return fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    return data.map(place => ({
+                        type: 'place',
+                        title: place.display_name.split(',')[0],
+                        subtitle: place.display_name.split(',').slice(1, 3).join(',').trim() || 'Location',
+                        data: place
+                    }));
+                });
+        }
+
+        function displaySuggestions(suggestions) {
+            console.log('Displaying suggestions:', suggestions);
+            
+            if (suggestions.length === 0) {
+                suggestionsContainer.innerHTML = '<div class="suggestion-no-results">No results found</div>';
+                showSuggestions();
+                return;
+            }
+
+            let html = '';
+            let currentCategory = '';
+
+            suggestions.forEach(suggestion => {
+                // Add category headers without emoji icons
+                if (suggestion.type !== currentCategory) {
+                    if (suggestion.type === 'parkrun') {
+                        html += '<div class="suggestion-category">PARKRUNS</div>';
+                    } else if (suggestion.type === 'place') {
+                        html += '<div class="suggestion-category">PLACES</div>';
+                    }
+                    currentCategory = suggestion.type;
+                }
+
+                const iconClass = suggestion.type === 'place' ? 'fas fa-map-marker-alt' : 'fas fa-tree';
+                let iconType = suggestion.type;
+                
+                // Add junior class for junior parkruns
+                if (suggestion.type === 'parkrun' && suggestion.isJunior) {
+                    iconType += ' junior';
+                }
+                
+                html += `
+                    <div class="suggestion-item" onclick="selectSuggestion(${JSON.stringify(suggestion).replace(/"/g, '&quot;')})">
+                        <div class="suggestion-icon ${iconType}">
+                            <i class="${iconClass}"></i>
+                        </div>
+                        <div class="suggestion-content">
+                            <div class="suggestion-title">${suggestion.title}</div>
+                            <div class="suggestion-subtitle">${suggestion.subtitle}</div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            suggestionsContainer.innerHTML = html;
+            showSuggestions();
+        }
+
+        function selectSuggestion(suggestionData) {
+            console.log('Selected suggestion:', suggestionData);
+            
+            searchInput.value = suggestionData.title;
+            hideSuggestions();
+
+            if (suggestionData.type === 'place') {
+                const lat = parseFloat(suggestionData.data.lat);
+                const lon = parseFloat(suggestionData.data.lon);
+                map.setView([lat, lon], 13);
+                
+                // Hide advanced hotel button when selecting a place
+                hideAdvancedHotelButton();
+                lastSelectedParkrun = null;
+                lastSelectedParkrunCoords = null;
+                
+                // Show parkruns in this area
+                if (suggestionData.data.boundingbox) {
+                    showParkrunsInArea(lat, lon, suggestionData.data.boundingbox);
+                }
+            } else if (suggestionData.type === 'parkrun') {
+                const coordinates = suggestionData.data.geometry.coordinates;
+                map.setView([coordinates[1], coordinates[0]], 15);
+                
+                // Set selected parkrun for hotel search
+                lastSelectedParkrun = suggestionData.title;
+                lastSelectedParkrunCoords = { lat: coordinates[1], lng: coordinates[0] };
+                showAdvancedHotelButton();
+                
+                // Show nearby places for this parkrun
+                findNearbyPlaces(coordinates[1], coordinates[0]);
+                
+                // Find and open the specific marker
+                setTimeout(() => {
+                    markers.eachLayer(marker => {
+                        const markerLatLng = marker.getLatLng();
+                        if (Math.abs(markerLatLng.lat - coordinates[1]) < 0.0001 && 
+                            Math.abs(markerLatLng.lng - coordinates[0]) < 0.0001) {
+                            marker.openPopup();
+                        }
+                    });
+                }, 500);
+            }
+        }
+
+        function showParkrunsInArea(lat, lon, boundingBox) {
+            // Don't clear all markers, just focus on the area
+            // All parkruns remain visible
+            if (boundingBox) {
+                const [south, north, west, east] = boundingBox.map(coord => parseFloat(coord));
+                
+                // Find parkruns in the area and highlight them or zoom to show them
+                let foundParkruns = [];
+                data.events.features.forEach(feature => {
+                    if (feature.geometry.type === 'Point') {
+                        const [lonEvent, latEvent] = feature.geometry.coordinates;
+                        
+                        if (latEvent >= south && latEvent <= north && lonEvent >= west && lonEvent <= east) {
+                            foundParkruns.push([latEvent, lonEvent]);
+                        }
+                    }
+                });
+                
+                // If we found parkruns in the area, fit the map to show them
+                if (foundParkruns.length > 0) {
+                    const group = new L.featureGroup(foundParkruns.map(coords => L.marker(coords)));
+                    map.fitBounds(group.getBounds().pad(0.1));
+                }
+            }
+        }
+
+        // Auto-locate user on startup and start tracking - ALWAYS show marker
+        function autoLocateAndTrack() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const lat = position.coords.latitude;
+                        const lng = position.coords.longitude;
+                        
+                        // ALWAYS create and show user location marker
+                        userLocationMarker = L.marker([lat, lng], { icon: LocationIcon }).addTo(map)
+                            .bindPopup(`You are here`);
+                        
+                        // Set map view to user location
+                        map.setView([lat, lng], 13);
+                        
+                        // Start live tracking
+                        startLocationTracking();
+                    },
+                    (error) => {
+                        // Silently fail on startup - don't show error toast
+                        console.log('Auto-location failed:', error.message);
+                    },
+                    { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
+                );
+            }
+        }
+
+        // All the original JavaScript functionality
+        function getCountryUrl(lat, lon) {
+            const countries = {
+                "3": { "url": "http://www.parkrun.com.au", "bounds": [113.654841, -43.163256, 153.578901, -12.376205] },
+                "4": { "url": "http://www.parkrun.co.at", "bounds": [13.065462, 47.075123, 16.419671, 48.318131] },
+                "14": { "url": "http://www.parkrun.ca", "bounds": [-123.650306, 42.990553, -57.937618, 56.733336] },
+                "23": { "url": "http://www.parkrun.dk", "bounds": [8.442703, 55.474609, 12.635341, 56.987144] },
+                "30": { "url": "http://www.parkrun.fi", "bounds": [23.759243, 60.177056, 25.732898, 65.015719] },
+                "31": { "url": "http://www.parkrun.fr", "bounds": [-0.42901, 43.564162, 6.146281, 49.44128] },
+                "32": { "url": "http://www.parkrun.com.de", "bounds": [6.084436, 47.586611, 13.762586, 53.70882] },
+                "42": { "url": "http://www.parkrun.ie", "bounds": [-10.082041, 51.551575, -6.099962, 55.140535] },
+                "44": { "url": "http://www.parkrun.it", "bounds": [9.211192, 37.621125, 18.166117, 45.694128] },
+                "46": { "url": "http://www.parkrun.jp", "bounds": [130.673031, 31.908209, 141.125657, 39.692853] },
+                "54": { "url": "http://www.parkrun.lt", "bounds": [20.9415, 53.8968, 26.8355, 56.4504] },        
+                "57": { "url": "http://www.parkrun.my", "bounds": [101.698056, 2.916852, 101.698056, 2.916852] },
+                "64": { "url": "http://www.parkrun.co.nl", "bounds": [4.290593, 50.843369, 6.883689, 53.214822] },
+                "65": { "url": "http://www.parkrun.co.nz", "bounds": [167.688869, -46.404097, 178.018082, -35.734968] },
+                "67": { "url": "http://www.parkrun.no", "bounds": [5.322763, 58.952586, 11.068693, 63.430394] },
+                "74": { "url": "http://www.parkrun.pl", "bounds": [14.1229, 49.002, 24.1458, 54.8358] },
+                "82": { "url": "http://www.parkrun.sg", "bounds": [103.762915, 1.294155, 103.893129, 1.360729] },
+                "85": { "url": "http://www.parkrun.co.za", "bounds": [14.481783, -34.820522, 32.27309, -22.618415] },
+                "88": { "url": "http://www.parkrun.se", "bounds": [11.943555, 55.60278, 20.249958, 63.826124] },
+                "97": { "url": "http://www.parkrun.org.uk", "bounds": [-7.643103, 40.929141, 14.046913, 60.158081] },
+                "98": { "url": "http://www.parkrun.us", "bounds": [-122.862376, 27.84707, -69.954915, 48.468375] }
+            };
+
+            for (let country in countries) {
+                const { url, bounds } = countries[country];
+                const [minLng, minLat, maxLng, maxLat] = bounds;
+
+                if (lat >= minLat && lat <= maxLat && lon >= minLng && lon <= maxLng) {
+                    return url;
+                }
+            }
+
+            return "http://www.parkrun.org.uk";
+        }
+
+        function openUrl(url) {
+            window.open(url, '_blank');
+        }
+
+        // Disable touch-and-hold context menus on mobile devices
+        document.addEventListener('touchstart', function(e) {
+            if (!e.target.closest('.search-container') && e.touches.length > 1) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+
+        document.addEventListener('touchend', function(e) {
+            if (!e.target.closest('.search-container') && e.timeStamp - e.targetTouches[0].startTime > 500) {
+                e.preventDefault();
+            }
+        });
+
+        document.addEventListener('mousedown', function(e) {
+            if (!e.target.closest('.search-container')) {
+                e.preventDefault();
+            }
+        });
+
+        document.addEventListener('dragstart', function(e) {
+            if (!e.target.closest('.search-container')) {
+                e.preventDefault();
+            }
+        });
+
+        document.addEventListener('contextmenu', function(e) {
+            if (e.target.closest('.leaflet-popup-content') && !e.target.closest('.search-container')) {
+                e.preventDefault();
+            }
+        });
+
+        // Map initialization
+        const mapUrlParams = new URLSearchParams(window.location.search);
+        const mapLat = parseFloat(mapUrlParams.get('lat'));
+        const mapLon = parseFloat(mapUrlParams.get('lon'));
+        const mapZoom = parseInt(mapUrlParams.get('zoom')) || 13; 
+
+        const hasValidMapCoords = !isNaN(mapLat) && !isNaN(mapLon);
+
+        var map = L.map('map', {
+            center: hasValidMapCoords ? [mapLat, mapLon] : [0, 0],
+            zoom: hasValidMapCoords ? mapZoom : 2,
+            zoomControl: false,
+            maxBounds: [[-90, -180], [90, 180]],
+            maxBoundsViscosity: 1.0,
+            minZoom: 2,
+            worldCopyJump: false
+        });
+
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a>',
+            maxZoom: 19
+        }).addTo(map);
+
+        function updateURL() {
+            const center = map.getCenter();
+            const zoom = map.getZoom();
+            const url = new URL(window.location);
+            url.searchParams.set('lat', center.lat.toFixed(6));
+            url.searchParams.set('lon', center.lng.toFixed(6));
+            url.searchParams.set('zoom', zoom);
+            window.history.replaceState({}, '', url);
+        }
+
+        map.on('moveend', updateURL);
+
+        // Hide advanced hotel button when zooming out
+        map.on('zoomend', function() {
+            const currentZoom = map.getZoom();
+            if (currentZoom < 10) {
+                hideAdvancedHotelButton();
+                lastSelectedParkrun = null;
+                lastSelectedParkrunCoords = null;
+            }
+            updateMarkerVisibility();
+        });
+
+        // Icon definitions
+        var juniorIcon = L.icon({
+            iconUrl: '/Icons/Junior.png',
+            iconSize: [38, 38],
+            iconAnchor: [19, 38],
+            popupAnchor: [0, -38]
+        });
+
+        var fiveKIcon = L.icon({
+            iconUrl: '/Icons/5k.png',
+            iconSize: [38, 38],
+            iconAnchor: [19, 38],
+            popupAnchor: [0, -38]
+        });
+
+        var LocationIcon = L.icon({
+            iconUrl: '/Icons/Me.png',
+            iconSize: [38, 38],
+            iconAnchor: [19, 38],
+            popupAnchor: [0, -38]
+        });
+
+        var bbIcon = L.icon({
+           iconUrl: 'Icons/BB.png',
+           iconSize: [38, 38],
+           iconAnchor: [19, 38],
+           popupAnchor: [0, -38]
+        });
+
+        var canceledIcon = L.icon({
+           iconUrl: '/Icons/Cancel.png',
+           iconSize: [38, 38],
+           iconAnchor: [19, 38],
+           popupAnchor: [0, -38]
+        });
+
+        const cafeIcon = L.icon({
+           iconUrl: 'Icons/Cafe.png',
+           iconSize: [38, 38],
+           iconAnchor: [19, 38],
+           popupAnchor: [0, -38],
+        });
+
+        const hotelIcon = L.icon({
+            iconUrl: '/Icons/Hotel.png',
+            iconSize: [38, 38],
+            iconAnchor: [19, 38],
+            popupAnchor: [0, -38],
+        });
+
+        const campsiteIcon = L.icon({
+            iconUrl: '/Icons/Camp.png',
+            iconSize: [38, 38],
+            iconAnchor: [19, 38],
+            popupAnchor: [0, -38],
+        });
+
+        const caravanIcon = L.icon({
+            iconUrl: '/Icons/Caravan.png',
+            iconSize: [38, 38],
+            iconAnchor: [19, 38],
+            popupAnchor: [0, -38],
+        });
+
+        function normalizeEventName(name) {
+            if (!name) return '';
+            return name.toLowerCase().replace(/\s+/g, '').replace('parkrun', '');
+        }
+
+        async function fetchLocationData() {
+            const url = '/BBS/Locations.json';
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                const data = await response.json();
+                return data.locations;
+            } catch (error) {
+                console.error('Failed to fetch the location data:', error);
+                return null;
+            }
+        }
+
+        function addMarkersToMap(locations) {
+            if (!locations) return;
+            
+            locations.forEach(location => {
+                const lat = location.coordinates.latitude;
+                const lon = location.coordinates.longitude;
+                const name = location.name;
+                const description = location.description;
+                const phone = location.phone;
+                const website = location.website;
+                const image = location.image_link;
+
+                const bbMarker = L.marker([lat, lon], { icon: bbIcon })
+                    .bindPopup(
+                        `<div style="width: 200px;">
+                            <img src="${image}" alt="${name}" class="hotel-popup-image">
+                            <div style="padding: 10px;">
+                                <div class="popup-title">${name}</div>
+                                <p style="margin-bottom: 16px; color: var(--text-secondary);">${description}</p>
+                                <a href="${website}" target="_blank" style="text-decoration: none;">
+                                    <button class="glass-button hotel-btn" style="width: 100%; margin-bottom: 8px;">
+                                        <i class="fas fa-globe"></i> Visit Website
+                                    </button>
+                                </a>
+                                <button class="glass-button hotel-btn" style="width: 100%;" onclick="window.location.href='tel:${phone}'">
+                                    <i class="fas fa-phone"></i> ${phone}
+                                </button>
+                            </div>
+                        </div>`
+                    );
+
+                bbMarkers.push(bbMarker);
+            });
+
+            updateMarkerVisibility();
+        }
+
+        function updateMarkerVisibility() {
+            if (map.getZoom() < 13) {
+                bbMarkers.forEach(marker => {
+                    map.removeLayer(marker);
+                });
+            } else {
+                bbMarkers.forEach(marker => {
+                    map.addLayer(marker);
+                });
+            }
+        }
+
+        const notifications = document.querySelector(".notifications");
+
+        const toastDetails = {
+            timer: 2500, 
+            error: {
+                icon: 'fa-triangle-exclamation',
+                text: 'Cannot find your location',
+            }
+        };
+
+        const removeToast = (toast) => {
+            toast.classList.add("hide");
+            setTimeout(() => toast.remove(), 500);
+        }
+
+        const createToast = (type = 'error', message = 'Cannot find your location') => {
+            const toast = document.createElement("li");
+            toast.className = `toast`;
+            toast.innerHTML = `<div class="column">
+                                 <i class="fa-solid fa-triangle-exclamation"></i>
+                                 <span>${message}</span>
+                              </div>`;
+            notifications.appendChild(toast);
+            setTimeout(() => {
+                removeToast(toast);
+            }, toastDetails.timer);
+        }
+
+        fetchLocationData().then(data => {
+            if (data && Array.isArray(data)) {
+                addMarkersToMap(data);
+            }
+        });
+
+        fetch('/cancellations.json')
+            .then(response => response.json())
+            .then(data => {
+                cancellations = {};
+                data.forEach(item => {
+                    // Use the exact name from cancellations.json for matching
+                    let normalizedKey = item.name.toLowerCase().replace(/\s+/g, '').replace('parkrun', '');
+                    cancellations[normalizedKey] = item.reason;
+                });
+                console.log('Loaded cancellations:', cancellations);
+                updateMapMarkers();
+            })
+            .catch(err => console.error('Error fetching cancellation data:', err));
+
+        function createParkrunMarker(feature) {
+            const coordinates = feature.geometry.coordinates;
+            const eventname = normalizeEventName(feature.properties.eventname);
+            const eventLongName = feature.properties.EventLongName;
+            const isJunior = eventLongName.toLowerCase().includes('junior');
+            const countryUrl = getCountryUrl(coordinates[1], coordinates[0]);
+            
+            // Check if this event type should be shown based on active filters
+            const eventType = isJunior ? 'junior' : '5k';
+            if (!activeFilters.includes(eventType)) {
+                return; // Don't create marker if filtered out
+            }
+            
+            var weatherUrl = `https://parkrunnertourist.co.uk/weather?lat=${coordinates[1]}&lon=${coordinates[0]}`;
+            if (isJunior) {
+                weatherUrl += '&junior';
+            }
+
+            var popupContent = `
+                <div>
+                    <div class="popup-title">${eventLongName}</div>
+                    <div class="weather-container">
+                        <div class="weather-loading" id="weather-loading-${eventname}">
+                            <div class="spinner"></div>
+                        </div>
+                        <iframe id="weatherIframe-${eventname}" src="${weatherUrl}" scrolling="no" onload="hideWeatherLoading('${eventname}')"></iframe>
+                    </div>
+                    <button class="glass-button course-btn" onclick="openUrl('${countryUrl}/${eventname}/course/')" style="width: 100%; margin-bottom: 8px;">
+                        <i class="fas fa-route"></i> Course
+                    </button>
+                    <button class="glass-button volunteer-btn" onclick="openUrl('${countryUrl}/${eventname}/futureroster/')" style="width: 100%; margin-bottom: 8px;">
+                        <i class="fas fa-hands-helping"></i> Volunteer
+                    </button>
+                    <button class="glass-button direction-btn" onclick="openDirections(${coordinates[1]}, ${coordinates[0]})" style="width: 100%;">
+                        <i class="fas fa-directions"></i> Directions
+                    </button>
+                </div>
+            `;
+
+            var markerIcon = isJunior ? juniorIcon : fiveKIcon;
+            
+            // Check for cancellations using multiple matching strategies
+            const cancellationKey = findCancellationMatch(eventLongName);
+            if (cancellationKey && cancellations[cancellationKey]) {
+                popupContent = `
+                    <div>
+                        <div class="popup-title">${eventLongName}</div>
+                        <div style="color: #fa709a; font-weight: 600; margin-bottom: 16px; padding: 12px; background: rgba(250, 112, 154, 0.1); border-radius: 8px;">
+                            <i class="fas fa-exclamation-triangle"></i> Cancelled: ${cancellations[cancellationKey]}
+                        </div>
+                        <button class="glass-button course-btn" onclick="openUrl('${countryUrl}/${eventname}/course/')" style="width: 100%; margin-bottom: 8px;">
+                            <i class="fas fa-route"></i> Course
+                        </button>
+                        <button class="glass-button volunteer-btn" onclick="openUrl('${countryUrl}/${eventname}/futureroster/')" style="width: 100%; margin-bottom: 8px;">
+                            <i class="fas fa-hands-helping"></i> Volunteer
+                        </button>
+                        <button class="glass-button direction-btn" onclick="openDirections(${coordinates[1]}, ${coordinates[0]})" style="width: 100%;">
+                            <i class="fas fa-directions"></i> Directions
+                        </button>
+                    </div>
+                `;
+                markerIcon = canceledIcon;
+            }
+
+            var marker = L.marker([coordinates[1], coordinates[0]], { icon: markerIcon })
+                .bindPopup(popupContent);
+
+            marker.on('click', function () {
+                // Set selected parkrun for hotel search
+                lastSelectedParkrun = eventLongName;
+                lastSelectedParkrunCoords = { lat: coordinates[1], lng: coordinates[0] };
+                showAdvancedHotelButton();
+                
+                findNearbyPlaces(coordinates[1], coordinates[0]);
+            });
+
+            markers.addLayer(marker);
+        }
+
+        function findCancellationMatch(eventLongName) {
+            // Try exact match first
+            const exactKey = eventLongName.toLowerCase().replace(/\s+/g, '').replace('parkrun', '');
+            if (cancellations[exactKey]) {
+                return exactKey;
+            }
+            
+            // Try matching with the original event name from cancellations
+            for (let cancellationName in cancellations) {
+                const normalizedCancellation = cancellationName.toLowerCase().replace(/\s+/g, '').replace('parkrun', '');
+                const normalizedEvent = eventLongName.toLowerCase().replace(/\s+/g, '').replace('parkrun', '');
+                
+                if (normalizedCancellation === normalizedEvent) {
+                    return cancellationName;
+                }
+            }
+            
+            return null;
+        }
+
+        function hideWeatherLoading(eventname) {
+            const loadingElement = document.getElementById(`weather-loading-${eventname}`);
+            if (loadingElement) {
+                loadingElement.classList.add('hidden');
+            }
+        }
+
+        function updateMapMarkers() {
+            markers.clearLayers();
+
+            if (!data.events) return;
+
+            data.events.features.forEach(function (feature) {
+                if (feature.geometry.type === 'Point') {
+                    createParkrunMarker(feature);
+                }
+            });
+
+            map.addLayer(markers);
+        }
+
+        const tomTomApiKey = 'dAvRoz8Z1SA4K6JM5l6XnJMGPwc7GQmG';
+
+        function findNearbyPlaces(lat, lng) {
+            // Clear existing place markers
+            placeMarkers.forEach(markerData => {
+                map.removeLayer(markerData.marker);
+            });
+            placeMarkers = [];
+
+            // Fetch places based on active filters
+            if (activeFilters.includes('cafes')) {
+                fetchTomTomPlaces(lat, lng, 'CAFE_PUB', cafeIcon, 'cafes');
+            }
+            if (activeFilters.includes('hotels')) {
+                fetchTomTomPlaces(lat, lng, 'hotel', hotelIcon, 'hotels');
+            }
+            if (activeFilters.includes('camping')) {
+                fetchTomTomPlaces(lat, lng, 'camping ground', campsiteIcon, 'camping');
+            }
+        }
+
+        function fetchTomTomPlaces(lat, lng, category, icon, filterType) {
+            const searchUrl = `https://api.tomtom.com/search/2/categorySearch/${category}.json?lat=${lat}&lon=${lng}&radius=9000&key=${tomTomApiKey}`;
+
+            fetch(searchUrl)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.results && data.results.length > 0) {
+                        data.results.forEach(place => {
+                            createPlaceMarker(place, category, icon, filterType);
+                        });
+                    }
+                })
+                .catch(error => console.error(`Error fetching ${category} data:`, error));
+        }
+
+        function createPlaceMarker(place, type, icon, filterType) {
+            const lat = place.position.lat;
+            const lon = place.position.lon;
+            const name = place.poi?.name || "No Name Available";
+            const phoneNumber = place.poi?.phone || null;
+            const websiteUrl = place.poi?.url || null;
+            const imageUrl = place.poi?.imageUrl || null;
+
+            let popupContent = `
+                <div class="hotel-popup">
+                    <div class="popup-title">${name}</div>
+            `;
+
+            if (imageUrl) {
+                popupContent += `<img src="${imageUrl}" alt="${name}" class="hotel-popup-image" />`;
+            }
+
+            popupContent += `
+                <button class="glass-button direction-btn" onclick="openDirections(${lat}, ${lon})" style="width: 100%; margin-bottom: 8px;">
+                    <i class="fas fa-map-marker-alt"></i> Directions
+                </button>
+                ${websiteUrl ? `
+                    <button class="glass-button hotel-btn" onclick="openWebsite('${websiteUrl}')" style="width: 100%; margin-bottom: 8px;">
+                        <i class="fas fa-globe"></i> Visit Website
+                    </button>
+                ` : `
+                    <button class="glass-button" disabled style="width: 100%; margin-bottom: 8px; opacity: 0.5; background: #ccc;">
+                        <i class="fas fa-globe"></i> No Website
+                    </button>
+                `}
+                ${phoneNumber ? `
+                    <a href="tel:${phoneNumber}" style="text-decoration: none;">
+                        <button class="glass-button course-btn" style="width: 100%;">
+                            <i class="fas fa-phone"></i> Call
+                        </button>
+                    </a>
+                ` : `
+                    <button class="glass-button" disabled style="width: 100%; opacity: 0.5; background: #ccc;">
+                        <i class="fas fa-phone"></i> No Phone
+                    </button>
+                `}
+            </div>
+            `;
+
+            const marker = L.marker([lat, lon], { icon }).bindPopup(popupContent);
+            
+            // Store marker with its type for filtering
+            placeMarkers.push({ marker, type: filterType });
+            
+            // Only add to map if filter allows it
+            if (activeFilters.includes(filterType)) {
+                marker.addTo(map);
+            }
+        }
+
+        fetch('/events1.json')
+            .then(response => response.json())
+            .then(jsonData => {
+                data = jsonData;
+                console.log('Loaded parkrun data:', data);
+                updateMapMarkers();
+            })
+            .catch(err => {
+                console.error('Error fetching GeoJSON:', err);
+                handleGeocodingError();
+            });
+
+        function handleGeocodingError() {
+            window.location.href = 'https://parkrunnertourist.co.uk/Error';
+        }
+
+        function openDirections(lat, lon) {
+            const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}`;
+            window.open(url, '_blank');
+        }
+
+        function openWebsite(url) {
+            if (!/^https?:\/\//i.test(url)) {
+                url = 'https://' + url;
+            }
+            window.open(url, '_blank');
+        }
+
+        // Parse URL filters on page load
+        parseUrlFilters();
+
+        // Initialize map position and auto-locate user
+        if (hasValidMapCoords) {
+            map.setView([mapLat, mapLon], mapZoom);
+            // Still try to get user location even if URL has coordinates
+            setTimeout(() => {
+                autoLocateAndTrack();
+            }, 1000);
+        } else {
+            // Auto-locate user on startup if no URL coordinates
+            setTimeout(() => {
+                autoLocateAndTrack();
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
