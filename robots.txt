@@ -3,6 +3,7 @@ Disallow: /cgi-bin/
 Disallow: /main/
 Disallow: /test/
 Disallow: /5k/
+Disallow: /all/
 Disallow: /junior/
 Disallow: /embed/
 
