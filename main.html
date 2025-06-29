@@ -492,7 +492,7 @@
             animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* Advanced Hotel Search Button - Top left position for URL parameters */
+        /* Top left position when &web parameter is present */
         .advanced-hotel-search.top-left {
             top: 20px;
             left: 20px;
@@ -930,18 +930,18 @@
                                 <div class="filter-title">Hotels</div>
                             </div>
                         </div>
-                        <div class="filter-item active" onclick="toggleFilterType('camping')" data-type="camping">
-                            <div class="filter-toggle"></div>
-                            <div class="filter-icon" style="background-image: url('/Icons/Camp.png');"></div>
-                            <div class="filter-content">
-                                <div class="filter-title">Camping</div>
-                            </div>
-                        </div>
                         <div class="filter-item active" onclick="toggleFilterType('cafes')" data-type="cafes">
                             <div class="filter-toggle"></div>
                             <div class="filter-icon" style="background-image: url('Icons/Cafe.png');"></div>
                             <div class="filter-content">
                                 <div class="filter-title">Cafés & Pubs</div>
+                            </div>
+                        </div>
+                        <div class="filter-item active" onclick="toggleFilterType('camping')" data-type="camping">
+                            <div class="filter-toggle"></div>
+                            <div class="filter-icon" style="background-image: url('/Icons/Camp.png');"></div>
+                            <div class="filter-content">
+                                <div class="filter-title">Camping</div>
                             </div>
                         </div>
                     </div>
@@ -976,24 +976,32 @@
         let activeFilters = ['5k', 'junior', 'hotels', 'cafes', 'camping']; // All active by default
         let placeMarkers = [];
         let lastSelectedParkrun = null;
-        let hasUrlParameters = false; // Track if URL has parameters
+        let hasWebParameter = false;
+
+        // Check if URL contains &web parameter
+        function checkWebParameter() {
+            const urlParams = new URLSearchParams(window.location.search);
+            hasWebParameter = urlParams.has('web');
+        }
 
         // Parse URL filters on page load
         function parseUrlFilters() {
             const urlParams = new URLSearchParams(window.location.search);
+            const filterParam = urlParams.get('filters') || urlParams.toString();
             
-            // Check if URL has any parameters
-            hasUrlParameters = urlParams.toString().length > 0;
-            
-            // Get all parameter keys
-            const allParams = Array.from(urlParams.keys());
-            
-            // Filter out coordinate parameters to get only filter parameters
-            const filterParams = allParams.filter(param => 
-                !['lat', 'lon', 'zoom'].includes(param.toLowerCase())
-            );
-            
-            if (filterParams.length > 0) {
+            if (filterParam) {
+                // Handle both ?filters=5k,hotel,camping and ?5k,hotel,camping formats
+                let filters = [];
+                if (filterParam.includes('=')) {
+                    filters = urlParams.get('filters').split(',');
+                } else {
+                    // Parse individual parameters like ?5k&hotel&camping
+                    const allParams = Array.from(urlParams.keys());
+                    filters = allParams.filter(param => 
+                        ['5k', 'junior', 'all', 'hotels', 'cafes', 'camping'].includes(param.toLowerCase())
+                    );
+                }
+                
                 // Map URL filters to internal filter names
                 const filterMap = {
                     '5k': '5k',
@@ -1008,7 +1016,7 @@
                 };
                 
                 activeFilters = [];
-                filterParams.forEach(filter => {
+                filters.forEach(filter => {
                     const mapped = filterMap[filter.toLowerCase()];
                     if (Array.isArray(mapped)) {
                         activeFilters.push(...mapped);
@@ -1046,17 +1054,9 @@
                 url.searchParams.delete(param);
             });
             
-            // Add current filters as individual parameters
-            const filterableTypes = activeFilters.filter(filter => 
-                !['5k', 'junior'].includes(filter) || 
-                (activeFilters.includes('5k') && activeFilters.includes('junior') && activeFilters.length > 2)
-            );
-            
-            // Only add URL params for non-default filters or when we have specific combinations
-            if (activeFilters.length < 5 || filterableTypes.length > 0) {
-                activeFilters.forEach(filter => {
-                    url.searchParams.set(filter, '');
-                });
+            // Add current filters
+            if (activeFilters.length > 0 && activeFilters.length < 5) {
+                url.searchParams.set('filters', activeFilters.join(','));
             }
             
             window.history.replaceState({}, '', url);
@@ -1158,6 +1158,9 @@
             
             // Update URL
             updateUrlWithFilters();
+            
+            // Update advanced hotel search visibility
+            updateAdvancedHotelSearchVisibility();
         }
 
         function applyFilters() {
@@ -1166,9 +1169,6 @@
             
             // Apply parkrun filters
             applyParkrunFilters();
-            
-            // Update advanced hotel search button visibility
-            updateAdvancedHotelSearchVisibility();
         }
 
         function applyPlaceFilters() {
@@ -1396,7 +1396,7 @@
                     lng: coordinates[0]
                 };
                 
-                // Show advanced hotel search button if hotels filter is active
+                // Update advanced hotel search visibility
                 updateAdvancedHotelSearchVisibility();
                 
                 // Show nearby places for this parkrun
@@ -1443,7 +1443,7 @@
 
         // Advanced Hotel Search Functions
         function updateAdvancedHotelSearchVisibility() {
-            // Only show if hotels filter is active AND a parkrun is selected
+            // Only show if hotels filter is active AND a parkrun is selected AND zoom level is appropriate
             if (activeFilters.includes('hotels') && lastSelectedParkrun && map.getZoom() >= 10) {
                 showAdvancedHotelSearch();
             } else {
@@ -1452,8 +1452,8 @@
         }
 
         function showAdvancedHotelSearch() {
-            // Position based on whether URL has parameters
-            if (hasUrlParameters) {
+            // Position based on whether URL contains &web parameter
+            if (hasWebParameter) {
                 advancedHotelSearch.classList.add('top-left');
             } else {
                 advancedHotelSearch.classList.remove('top-left');
@@ -1499,10 +1499,8 @@
                         userLocationMarker = L.marker([lat, lng], { icon: LocationIcon }).addTo(map)
                             .bindPopup(`You are here`);
                         
-                        // Only set map view to user location if no URL coordinates
-                        if (!hasValidMapCoords) {
-                            map.setView([lat, lng], 13);
-                        }
+                        // Set map view to user location
+                        map.setView([lat, lng], 13);
                         
                         // Start live tracking
                         startLocationTracking();
@@ -1624,7 +1622,7 @@
 
         map.on('moveend', updateURL);
 
-        // Hide advanced hotel search when zooming out or update visibility based on filters
+        // Hide advanced hotel search when zooming out
         map.on('zoomend', function() {
             updateAdvancedHotelSearchVisibility();
         });
@@ -1928,7 +1926,7 @@
                     lng: coordinates[0]
                 };
                 
-                // Update advanced hotel search button visibility
+                // Update advanced hotel search visibility
                 updateAdvancedHotelSearchVisibility();
                 
                 findNearbyPlaces(coordinates[1], coordinates[0]);
@@ -2078,14 +2076,12 @@
         }
 
         // Initialize URL filters and map position
+        checkWebParameter();
         parseUrlFilters();
         
         if (hasValidMapCoords) {
             map.setView([mapLat, mapLon], mapZoom);
-            // Still try to get user location even if URL has coordinates
-            setTimeout(() => {
-                autoLocateAndTrack();
-            }, 1000);
+            // Don't auto-locate if URL has coordinates
         } else {
             // Auto-locate user on startup if no URL coordinates
             setTimeout(() => {
