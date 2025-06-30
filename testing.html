@@ -1246,23 +1246,24 @@
             updateMapMarkers();
         }
 
-        function updateHotelSearchButton() {
-            const hotelSearchButton = document.getElementById('advancedHotelSearch');
-            
-            // Only show if hotels filter is active AND we have a selected parkrun
-            if (activeFilters.includes('hotels') && lastSelectedParkrun) {
-                hotelSearchButton.classList.add('show');
-                
-                // Position based on URL parameters
-                if (hasUrlParameters) {
-                    hotelSearchButton.classList.add('top-left');
-                } else {
-                    hotelSearchButton.classList.remove('top-left');
-                }
-            } else {
-                hotelSearchButton.classList.remove('show');
-            }
+function updateHotelSearchButton() {
+    const hotelSearchButton = document.getElementById('advancedHotelSearch');
+
+    // Show only if "hotels" is active AND a parkrun is selected
+    if (activeFilters.includes('hotels') && lastSelectedParkrun) {
+        hotelSearchButton.classList.add('show');
+
+        // Check for &web in the URL
+        if (window.location.href.includes('&web')) {
+            hotelSearchButton.classList.add('top-left');
+        } else {
+            hotelSearchButton.classList.remove('top-left');
         }
+
+    } else {
+        hotelSearchButton.classList.remove('show');
+    }
+}
 
         function returnToUserLocation() {
             if (userLocationMarker) {
@@ -2181,15 +2182,6 @@
                 }
             }, 1000);
         }
-    document.addEventListener('DOMContentLoaded', function () {
-    const hotelSearch = document.getElementById('advancedHotelSearch');
-
-    if (window.location.href.includes('&web')) {
-        hotelSearch.classList.add('top-left');
-    } else {
-        hotelSearch.classList.remove('top-left');
-    }
-});
     </script>
 </body>
 </html>
