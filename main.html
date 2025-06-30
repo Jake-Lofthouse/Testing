@@ -2181,6 +2181,15 @@
                 }
             }, 1000);
         }
+    document.addEventListener('DOMContentLoaded', function () {
+    const hotelSearch = document.getElementById('advancedHotelSearch');
+
+    if (window.location.href.includes('&web')) {
+        hotelSearch.classList.add('top-left');
+    } else {
+        hotelSearch.classList.remove('top-left');
+    }
+});
     </script>
 </body>
 </html>
