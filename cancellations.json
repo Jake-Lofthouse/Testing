@@ -140,6 +140,11 @@
         "date": "2025-07-05"
     },
     {
+        "name": "Ho\u00ebrskool Ben Viljoen parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-07-05"
+    },
+    {
         "name": "Ingrebourne Hill parkrun",
         "reason": "Venue unavailable",
         "date": "2025-07-05"
@@ -406,6 +411,11 @@
     },
     {
         "name": "Dartford junior parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-07-06"
+    },
+    {
+        "name": "Dromleena Lawn junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-07-06"
     },
