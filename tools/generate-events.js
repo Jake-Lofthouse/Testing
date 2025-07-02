@@ -204,7 +204,16 @@ async function generateHtml(event) {
   <meta name="apple-itunes-app" content="app-id=6743163993, app-argument=https://www.parkrunnertourist.co.uk">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="https://parkrunnertourist.co.uk/favicon.ico">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-REFFZSK4XK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-REFFZSK4XK');
+    </script>
 
   <style>
     * {
@@ -736,7 +745,7 @@ async function generateHtml(event) {
 </div>
 
 <footer>
-  &copy; ${new Date().getFullYear()} parkrunner tourist - Find your next running adventure
+  &copy; ${new Date().getFullYear()} parkrunner tourist
 </footer>
 
 <!-- Buy Me a Coffee Widget - Hidden on mobile and tablets -->
