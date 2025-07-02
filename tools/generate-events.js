@@ -194,7 +194,6 @@ async function generateHtml(event) {
   <meta name="description" content="Find and book hotels, campsites, and cafes around ${name} parkrun." />
   <meta name="keywords" content="parkrun, accommodation, hotels, stay, tourist, ${name.toLowerCase()}" />
   <meta name="author" content="Jake Lofthouse">
-  meta property="og:image" content="https://www.parkrunnertourist.co.uk/Images/Feature.jpg">
   <meta property="og:url" content="https://www.parkrunnertourist.co.uk">
   <meta property="og:type" content="website">
   <link rel="canonical" href="${BASE_URL}/${slugify(name)}.html" />
