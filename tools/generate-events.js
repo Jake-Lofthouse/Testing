@@ -4,7 +4,7 @@ const path = require('path');
 
 const EVENTS_URL = 'https://raw.githubusercontent.com/ALD-Models/Testing/refs/heads/main/events1.json';
 const OUTPUT_DIR = './events';
-const MAX_EVENTS = 13;
+const MAX_EVENTS = 99999;
 const BASE_URL = 'https://www.parkrunnertourist.co.uk/events';
 
 // Country bounds for parkrun URL detection
