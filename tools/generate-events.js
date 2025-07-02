@@ -811,7 +811,7 @@ function generateSitemap(slugs) {
   const today = new Date().toISOString().slice(0, 10);
   const urlset = slugs.map(slug => `
     <url>
-      <loc>${BASE_URL}/${slug}.html</loc>
+      <loc>${BASE_URL}/${slug}</loc>
       <lastmod>${today}</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
