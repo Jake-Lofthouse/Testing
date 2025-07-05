@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Accommodation near neckaruferesslingen parkrun</title>
-  <meta name="description" content="Find and book hotels, campsites, and cafes around neckaruferesslingen parkrun." />
-  <meta name="keywords" content="parkrun, accommodation, hotels, stay, tourist, neckaruferesslingen" />
-  <meta name="author" content="Jake Lofthouse">
-  <meta property="og:url" content="https://www.parkrunnertourist.co.uk">
-  <meta property="og:type" content="website">
-  <link rel="canonical" href="https://www.parkrunnertourist.co.uk/events/N/neckaruferesslingen.html" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Accommodation near neckaruferesslingen parkrun</title>
+<meta name="description" content="Find and book hotels, campsites, and cafes around neckaruferesslingen parkrun." />
+<meta name="keywords" content="parkrun, accommodation, hotels, stay, tourist, neckaruferesslingen" />
+<meta name="author" content="Jake Lofthouse" />
+<meta name="geo.placename" content="Skatepark Adenauerbrücke, Esslingen" />
+<meta name="geo.position" content="48.728248;9.324445" />
+<meta property="og:url" content="https://www.parkrunnertourist.co.uk" />
+<meta property="og:type" content="website" />
+<meta name="robots" content="index, follow" />
+<meta name="language" content="en" />
+<link rel="canonical" href="https://www.parkrunnertourist.co.uk/events/N/neckaruferesslingen.html" />
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -501,7 +506,7 @@
           <button class="toggle-btn" onclick="switchView('map')" id="btn-map">Map View</button>
         </div>
         <iframe id="stay22Frame" class="accommodation-iframe" scrolling="no"
-          src="https://www.stay22.com/embed/gm?aid=parkrunnertourist&lat=48.728248&lng=9.324445&checkin=2025-07-04&maincolor=7dd856&venue=neckaruferesslingen%20parkrun&viewmode=listview&listviewexpand=true"
+          src="https://www.stay22.com/embed/gm?aid=parkrunnertourist&lat=48.728248&lng=9.324445&checkin=2025-07-11&maincolor=7dd856&venue=neckaruferesslingen%20parkrun&viewmode=listview&listviewexpand=true"
           title="Stay22 accommodation listing">
         </iframe>
       </div>
@@ -565,7 +570,7 @@
 <script>
   function switchView(mode) {
     const iframe = document.getElementById('stay22Frame');
-    const baseUrl = "https://www.stay22.com/embed/gm?aid=parkrunnertourist&lat=48.728248&lng=9.324445&checkin=2025-07-04&maincolor=7dd856&venue=neckaruferesslingen%20parkrun";
+    const baseUrl = "https://www.stay22.com/embed/gm?aid=parkrunnertourist&lat=48.728248&lng=9.324445&checkin=2025-07-11&maincolor=7dd856&venue=neckaruferesslingen%20parkrun";
     iframe.src = baseUrl + "&viewmode=" + mode + "&listviewexpand=" + (mode === 'listview');
     document.getElementById('btn-listview').classList.toggle('active', mode === 'listview');
     document.getElementById('btn-map').classList.toggle('active', mode === 'map');
