@@ -877,6 +877,30 @@ function cleanupOldStructure() {
   }
 }
 
+function cleanupRemovedEvents(validSlugs) {
+  const subfolders = fs.readdirSync(OUTPUT_DIR);
+  
+  for (const folder of subfolders) {
+    const folderPath = path.join(OUTPUT_DIR, folder);
+    const stats = fs.statSync(folderPath);
+
+    if (stats.isDirectory()) {
+      const files = fs.readdirSync(folderPath);
+      for (const file of files) {
+        if (file.endsWith('.html')) {
+          const slug = path.basename(file, '.html');
+          if (!validSlugs.has(slug)) {
+            const fullPath = path.join(folderPath, file);
+            fs.unlinkSync(fullPath);
+            console.log(`Deleted old HTML: ${fullPath}`);
+          }
+        }
+      }
+    }
+  }
+}
+
+
 async function main() {
   try {
     console.log('Fetching events JSON...');
@@ -909,6 +933,15 @@ async function main() {
       const nameB = (b.properties.eventname || '').toLowerCase();
       return nameA.localeCompare(nameB);
     });
+
+    // Create a set of valid slugs
+const validSlugs = new Set(
+  selectedEvents.map(e => slugify(e.properties.eventname))
+);
+
+// Remove any HTMLs from disk that don't match
+cleanupRemovedEvents(validSlugs);
+
 
     for (const event of selectedEvents) {
       const slug = slugify(event.properties.eventname);
