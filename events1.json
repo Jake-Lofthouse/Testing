@@ -16014,26 +16014,6 @@
         }
       },
       {
-        "id": 1113,
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            29.151059,
-            -28.279106
-          ]
-        },
-        "properties": {
-          "eventname": "harrismith",
-          "EventLongName": "Harrismith parkrun",
-          "EventShortName": "Harrismith",
-          "LocalisedEventLongName": null,
-          "countrycode": 85,
-          "seriesid": 1,
-          "EventLocation": "Platberg Nature Reserve"
-        }
-      },
-      {
         "id": 1118,
         "type": "Feature",
         "geometry": {
@@ -24691,26 +24671,6 @@
           "countrycode": 85,
           "seriesid": 1,
           "EventLocation": "Polokwane"
-        }
-      },
-      {
-        "id": 1780,
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            24.778901,
-            -29.132198
-          ]
-        },
-        "properties": {
-          "eventname": "jacobsdal",
-          "EventLongName": "Jacobsdal parkrun",
-          "EventShortName": "Jacobsdal",
-          "LocalisedEventLongName": null,
-          "countrycode": 85,
-          "seriesid": 1,
-          "EventLocation": "Jacobsdal Gholf course"
         }
       },
       {
@@ -54594,6 +54554,26 @@
         }
       },
       {
+        "id": 3697,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            151.190048,
+            -33.888306
+          ]
+        },
+        "properties": {
+          "eventname": "universityofsydney",
+          "EventLongName": "University of Sydney parkrun",
+          "EventShortName": "University of Sydney",
+          "LocalisedEventLongName": null,
+          "countrycode": 3,
+          "seriesid": 1,
+          "EventLocation": "University of Sydney"
+        }
+      },
+      {
         "id": 3698,
         "type": "Feature",
         "geometry": {
@@ -54711,6 +54691,26 @@
           "countrycode": 14,
           "seriesid": 1,
           "EventLocation": "Mamquam Spawning Trail"
+        }
+      },
+      {
+        "id": 3707,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -93.143248,
+            44.983345
+          ]
+        },
+        "properties": {
+          "eventname": "comopark",
+          "EventLongName": "Como Park parkrun",
+          "EventShortName": "Como Park",
+          "LocalisedEventLongName": null,
+          "countrycode": 98,
+          "seriesid": 1,
+          "EventLocation": "Como Park"
         }
       }
     ]
