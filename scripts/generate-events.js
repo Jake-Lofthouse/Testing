@@ -199,17 +199,20 @@ async function generateHtml(event, relativePath) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>${pageTitle}</title>
-  <meta name="description" content="Find and book hotels, campsites, and cafes around ${name} parkrun." />
-  <meta name="keywords" content="parkrun, accommodation, hotels, stay, tourist, ${name.toLowerCase()}" />
-  <meta name="author" content="Jake Lofthouse">
-  <meta property="og:url" content="https://www.parkrunnertourist.co.uk">
-  <meta property="og:type" content="website">
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="en">
-  <link rel="canonical" href="${BASE_URL}/${relativePath}" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>${pageTitle}</title>
+<meta name="description" content="Find and book hotels, campsites, and cafes around ${name} parkrun." />
+<meta name="keywords" content="parkrun, accommodation, hotels, stay, tourist, ${name.toLowerCase()}" />
+<meta name="author" content="Jake Lofthouse" />
+<meta name="geo.placename" content="${location}" />
+<meta name="geo.position" content="${latitude};${longitude}" />
+<meta property="og:url" content="https://www.parkrunnertourist.co.uk" />
+<meta property="og:type" content="website" />
+<meta name="robots" content="index, follow" />
+<meta name="language" content="en" />
+<link rel="canonical" href="${BASE_URL}/${relativePath}" />
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
