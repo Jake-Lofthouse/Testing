@@ -1,4 +1,4 @@
-name: Generate Events
+name: Generate Event Websites
 
 on:
   workflow_dispatch:
