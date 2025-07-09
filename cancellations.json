@@ -100,6 +100,11 @@
         "date": "2025-07-12"
     },
     {
+        "name": "Fingal Bay parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-07-12"
+    },
+    {
         "name": "Finsbury parkrun",
         "reason": "Venue unavailable",
         "date": "2025-07-12"
@@ -411,6 +416,11 @@
     },
     {
         "name": "Alexandra junior parkrun, Oldham",
+        "reason": "Shortage of volunteers",
+        "date": "2025-07-13"
+    },
+    {
+        "name": "Arklow Duck Pond junior parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-07-13"
     },
