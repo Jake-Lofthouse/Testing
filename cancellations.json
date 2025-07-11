@@ -490,6 +490,11 @@
         "date": "2025-07-12"
     },
     {
+        "name": "parkrun Pole Mokotowskie",
+        "reason": "Shortage of volunteers",
+        "date": "2025-07-12"
+    },
+    {
         "name": "parkrun Pozna\u0144",
         "reason": "Venue unavailable",
         "date": "2025-07-12"
@@ -586,6 +591,11 @@
     },
     {
         "name": "Lusk Sports Hub junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-07-13"
+    },
+    {
+        "name": "Magherafelt junior parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-07-13"
     },
