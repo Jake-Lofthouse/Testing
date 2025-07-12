@@ -718,5 +718,10 @@
         "name": "Woodvale junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-07-13"
+    },
+    {
+        "name": "Yatton Recreation junior parkrun",
+        "reason": "Permission issue",
+        "date": "2025-07-13"
     }
 ]
