@@ -2166,7 +2166,7 @@ function updateHotelSearchButton() {
         }
 
         // Initialize URL filters and map position
-      parseUrlFilters();
+    parseUrlFilters();
         
         if (hasValidMapCoords) {
             map.setView([mapLat, mapLon], mapZoom);
@@ -2204,20 +2204,44 @@ function updateHotelSearchButton() {
         }
 
         // Handle URL coordinates for parkrun scenario
-        if (hasValidMapCoords) {
-            // Ensure place filters are active
-            activeFilters = [...new Set([...activeFilters, 'hotels', 'cafes', 'camping'])];
-            updateFilterUI();
-            
-            // Load nearby places (hotels, cafes, campsites)
-            findNearbyPlaces(mapLat, mapLon);
-            
-            // Hide search bar and location button
-            document.querySelector('.search-container').style.display = 'none';
-            document.querySelector('.location-button').style.display = 'none';
-            document.querySelector('.filter-button').style.display = 'block';
+        if (hasValidMapCoords && data.events && data.events.features) {
+            // Check if URL coordinates match a parkrun event
+            let isParkrunMatch = false;
+            let matchedParkrun = null;
+            data.events.features.forEach(feature => {
+                if (feature.geometry.type === 'Point') {
+                    const [lon, lat] = feature.geometry.coordinates;
+                    // Allow small floating-point differences (0.0001 degrees ~ 11 meters)
+                    if (Math.abs(lat - mapLat) < 0.0001 && Math.abs(lon - mapLon) < 0.0001) {
+                        isParkrunMatch = true;
+                        matchedParkrun = {
+                            name: feature.properties.EventLongName,
+                            lat: lat,
+                            lng: lon
+                        };
+                    }
+                }
+            });
 
-            document.querySelector('.top-controls').classList.add('filter-only');
+            if (isParkrunMatch) {
+                // Set selected parkrun for consistency
+                lastSelectedParkrun = matchedParkrun;
+
+                // Ensure place filters are active
+                activeFilters = [...new Set([...activeFilters, 'hotels', 'cafes', 'camping'])];
+                updateFilterUI();
+
+                // Load nearby places (hotels, cafes, campsites)
+                findNearbyPlaces(mapLat, mapLon);
+
+                // Hide search bar and location button, keep filter button visible
+                document.querySelector('.search-container').style.display = 'none';
+                document.querySelector('.location-button').style.display = 'none';
+                document.querySelector('.filter-button').style.display = 'block';
+
+                // Add class to top-controls to apply filter-only styling
+                document.querySelector('.top-controls').classList.add('filter-only');
+            }
         }
     </script>
 
