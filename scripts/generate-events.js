@@ -4,7 +4,7 @@ const path = require('path');
 
 const EVENTS_URL = 'https://raw.githubusercontent.com/ALD-Models/Testing/refs/heads/main/events1.json';
 const OUTPUT_DIR = './events';
-const MAX_EVENTS = 99999;
+const MAX_EVENTS = 999999;
 const MAX_FILES_PER_FOLDER = 999;
 const BASE_URL = 'https://www.parkrunnertourist.co.uk/events';
 
@@ -177,11 +177,11 @@ async function generateHtml(event, relativePath) {
       if (wikiDesc && wikiDesc.length > 50) {
         description = `<p>${wikiDesc}</p><p><em>Source: <a href="https://en.wikipedia.org/wiki/${encodeURIComponent(name.replace(/\s+/g, '_'))}" target="_blank" rel="noopener noreferrer">Wikipedia</a></em></p>`;
       } else {
-        description = `<p>${description.replace(/</g, '<').replace(/>/g, '>')}</p>`;
+        description = `<p>${description.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</p>`;
       }
     } catch (e) {
       console.warn(`Failed to fetch Wikipedia description for ${name}: ${e.message}`);
-      description = `<p>${description.replace(/</g, '<').replace(/>/g, '>')}</p>`;
+      description = `<p>${description.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</p>`;
     }
   }
 
@@ -417,6 +417,51 @@ async function generateHtml(event, relativePath) {
     .weather-iframe {
       height: 300px;
       width: 100%;
+    }
+    
+    /* Loading placeholder for weather iframe */
+    .weather-iframe[data-src]:not([src]) {
+      background: linear-gradient(45deg, #f0f0f0 25%, transparent 25%), 
+                  linear-gradient(-45deg, #f0f0f0 25%, transparent 25%), 
+                  linear-gradient(45deg, transparent 75%, #f0f0f0 75%), 
+                  linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
+      background-size: 20px 20px;
+      background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+      animation: loading 1s linear infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-weight: 500;
+    }
+    
+    .weather-iframe[data-src]:not([src])::after {
+      content: 'Loading weather...';
+    }
+    
+    /* Loading placeholder for map iframe */
+    .map-iframe[data-src]:not([src]) {
+      background: linear-gradient(45deg, #e8f5e8 25%, transparent 25%), 
+                  linear-gradient(-45deg, #e8f5e8 25%, transparent 25%), 
+                  linear-gradient(45deg, transparent 75%, #e8f5e8 75%), 
+                  linear-gradient(-45deg, transparent 75%, #e8f5e8 75%);
+      background-size: 20px 20px;
+      background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+      animation: loading 1s linear infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #4caf50;
+      font-weight: 500;
+    }
+    
+    .map-iframe[data-src]:not([src])::after {
+      content: 'Loading map...';
+    }
+    
+    @keyframes loading {
+      0% { background-position: 0 0, 0 10px, 10px -10px, -10px 0px; }
+      100% { background-position: 20px 20px, 20px 30px, 30px 10px, 10px 20px; }
     }
     
     .parkrun-actions {
@@ -715,12 +760,12 @@ async function generateHtml(event, relativePath) {
     <div class="right-column">
       <div class="iframe-container">
         <h2 class="section-title">parkrun Location</h2>
-        <iframe class="map-iframe" src="${mainIframeUrl}" title="parkrun Map"></iframe>
+        <iframe class="map-iframe" data-src="${mainIframeUrl}" title="parkrun Map"></iframe>
       </div>
       
       <div class="iframe-container">
         <h2 class="section-title">Weather This Week</h2>
-        <iframe class="weather-iframe" src="${weatherIframeUrl}" title="Weather forecast for ${name}"></iframe>
+        <iframe class="weather-iframe" data-src="${weatherIframeUrl}" title="Weather forecast for ${name}"></iframe>
       </div>
     </div>
   </div>
@@ -813,9 +858,44 @@ async function generateHtml(event, relativePath) {
     }
   }
   
-  // Add loading states for iframes
+  // Load weather and map iframes only for real users (not crawlers/bots)
   document.addEventListener('DOMContentLoaded', function() {
-    const iframes = document.querySelectorAll('iframe');
+    // Check if this is likely a crawler/bot
+    const userAgent = navigator.userAgent.toLowerCase();
+    const isBot = /bot|crawler|spider|crawling|facebookexternalhit|twitterbot|linkedinbot|whatsapp|telegram|slackbot|discord|googlebot|bingbot|yahoo|duckduckbot|baiduspider|yandexbot|applebot|ia_archiver|curl|wget|python-requests|scrapy|selenium|phantomjs|headless/i.test(userAgent);
+    
+    if (!isBot && 'IntersectionObserver' in window) {
+      // Use Intersection Observer to load iframes when they come into view
+      const lazyIframes = document.querySelectorAll('iframe[data-src]');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !entry.target.src) {
+            entry.target.src = entry.target.dataset.src;
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        rootMargin: '50px' // Load when within 50px of viewport
+      });
+      
+      lazyIframes.forEach(iframe => {
+        observer.observe(iframe);
+      });
+    } else if (!isBot) {
+      // Fallback for browsers without Intersection Observer
+      setTimeout(() => {
+        const lazyIframes = document.querySelectorAll('iframe[data-src]');
+        lazyIframes.forEach(iframe => {
+          if (!iframe.src) {
+            iframe.src = iframe.dataset.src;
+          }
+        });
+      }, 1000);
+    }
+    
+    // Add loading states for other iframes
+    const iframes = document.querySelectorAll('iframe:not([data-src])');
     iframes.forEach(iframe => {
       const container = iframe.closest('.iframe-container');
       iframe.addEventListener('load', function() {
@@ -834,14 +914,14 @@ async function generateHtml(event, relativePath) {
 // Sitemap XML generator with subfolder support
 function generateSitemap(eventPaths) {
   const today = new Date().toISOString().slice(0, 10);
-  const urlset = eventPaths.map(eventPath => `
-    <url>
+  const urlset = eventPaths.map(eventPath => 
+    `<url>
       <loc>${BASE_URL}/${eventPath}</loc>
       <lastmod>${today}</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
-    </url>
-  `).join('\n');
+    </url>`
+  ).join('\n');
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -969,7 +1049,7 @@ cleanupRemovedEvents(validSlugs);
       const subfolderPath = path.join(OUTPUT_DIR, actualSubfolder);
       ensureDirectoryExists(subfolderPath);
       
-      const filename = path.join(subfolderPath, `${slug}`);
+      const filename = path.join(subfolderPath, `${slug}.html`);
       const relativePath = `${actualSubfolder}/${slug}`;
       
       eventPaths.push(relativePath);
