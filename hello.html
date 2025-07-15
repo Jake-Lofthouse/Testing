@@ -2146,7 +2146,7 @@ function updateHotelSearchButton() {
         }
 
         // Initialize URL filters and map position
-        parseUrlFilters();
+      parseUrlFilters();
         
         if (hasValidMapCoords) {
             map.setView([mapLat, mapLon], mapZoom);
@@ -2182,29 +2182,21 @@ function updateHotelSearchButton() {
                 }
             }, 1000);
         }
-    </script>
 
-    <script>
-        // Parse URL parameters
-        const urlParams = new URLSearchParams(window.location.search);
-        const lat = parseFloat(urlParams.get('lat'));
-        const lon = parseFloat(urlParams.get('lon'));
-        const zoom = parseInt(urlParams.get('zoom')) || 13;
-
-        // Check if coordinates are provided
-        if (!isNaN(lat) && !isNaN(lon)) {
-            // Assume map is a global Leaflet map object
-            map.setView([lat, lon], zoom);
-
-            // Load markers for hotels, cafes/pubs, and camping
-            loadHotels();
-            loadCafesPubs();
-            loadCamping();
-
-            // Hide search bar and return to location button
-            document.querySelector('.search-bar').style.display = 'none';
-            document.querySelector('.return-to-location').style.display = 'none';
+        // Handle URL coordinates for parkrun scenario
+        if (hasValidMapCoords) {
+            // Ensure place filters are active
+            activeFilters = [...new Set([...activeFilters, 'hotels', 'cafes', 'camping'])];
+            updateFilterUI();
+            
+            // Load nearby places (hotels, cafes, campsites)
+            findNearbyPlaces(mapLat, mapLon);
+            
+            // Hide search bar and location button
+            document.querySelector('.search-container').style.display = 'none';
+            document.querySelector('.location-button').style.display = 'none';
         }
     </script>
+
 </body>
 </html>
