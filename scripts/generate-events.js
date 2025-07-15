@@ -1050,7 +1050,7 @@ cleanupRemovedEvents(validSlugs);
       ensureDirectoryExists(subfolderPath);
       
       const filename = path.join(subfolderPath, `${slug}.html`);
-      const relativePath = `${actualSubfolder}/${slug}`;
+      const relativePath = `${actualSubfolder}/${slug}.html`;
       
       eventPaths.push(relativePath);
       folderCounts[actualSubfolder]++;
