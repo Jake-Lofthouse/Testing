@@ -483,6 +483,26 @@
             letter-spacing: 0.5px;
         }
 
+        .top-controls.filter-only .control-buttons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        @media (max-width: 768px) {
+          .top-controls.filter-only .control-buttons {
+              top: 15px;
+              right: 15px;
+         }
+     }
+       @media (max-width: 480px) {
+          .top-controls.filter-only .control-buttons {
+              top: 10px;
+              right: 10px;
+        }
+    }
+
         /* Advanced Hotel Search Button */
         .advanced-hotel-search {
             position: fixed;
@@ -2195,6 +2215,9 @@ function updateHotelSearchButton() {
             // Hide search bar and location button
             document.querySelector('.search-container').style.display = 'none';
             document.querySelector('.location-button').style.display = 'none';
+            document.querySelector('.filter-button').style.display = 'block';
+
+            document.querySelector('.top-controls').classList.add('filter-only');
         }
     </script>
 
