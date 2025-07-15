@@ -967,6 +967,28 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
     <script>
+        // Parse URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const lat = parseFloat(urlParams.get('lat'));
+        const lon = parseFloat(urlParams.get('lon'));
+        const zoom = parseInt(urlParams.get('zoom')) || 13;
+
+        // Check if coordinates are provided
+        if (!isNaN(lat) && !isNaN(lon)) {
+            // Assume map is a global Leaflet map object
+            map.setView([lat, lon], zoom);
+
+            // Load markers for hotels, cafes/pubs, and camping
+            loadHotels();
+            loadCafesPubs();
+            loadCamping();
+
+            // Hide search bar and return to location button
+            document.querySelector('.search-bar').style.display = 'none';
+            document.querySelector('.return-to-location').style.display = 'none';
+        }
+    </script>
+    <script>
         // Global variables
         let searchTimeout;
         let data = {};
@@ -2003,26 +2025,6 @@ function updateHotelSearchButton() {
             });
 
             markers.addLayer(marker);
-        }
-
-      const urlParams = new URLSearchParams(window.location.search);
-        const lat = parseFloat(urlParams.get('lat'));
-        const lon = parseFloat(urlParams.get('lon'));
-        const zoom = parseInt(urlParams.get('zoom')) || 13;
-
-        // Check if coordinates are provided
-        if (!isNaN(lat) && !isNaN(lon)) {
-            // Assume map is a global Leaflet map object
-            map.setView([lat, lon], zoom);
-
-            // Load markers for hotels, cafes/pubs, and camping
-            loadHotels();
-            loadCafesPubs();
-            loadCamping();
-
-            // Hide search bar and return to location button
-            document.querySelector('.search-bar').style.display = 'none';
-            document.querySelector('.return-to-location').style.display = 'none';
         }
 
         function hideWeatherLoading(eventname) {
