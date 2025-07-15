@@ -483,6 +483,26 @@
             letter-spacing: 0.5px;
         }
 
+        .top-controls.filter-only .control-buttons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        @media (max-width: 768px) {
+          .top-controls.filter-only .control-buttons {
+              top: 15px;
+              right: 15px;
+         }
+     }
+       @media (max-width: 480px) {
+          .top-controls.filter-only .control-buttons {
+              top: 10px;
+              right: 10px;
+        }
+    }
+
         /* Advanced Hotel Search Button */
         .advanced-hotel-search {
             position: fixed;
@@ -1082,6 +1102,49 @@
                 }
             });
         }
+
+           // Function to check parkrun coordinates and apply actions
+    function checkParkrunCoordinates() {
+        if (hasValidMapCoords && data.events && data.events.features) {
+            // Check if URL coordinates exactly match a parkrun event
+            let isParkrunMatch = false;
+            let matchedParkrun = null;
+            data.events.features.forEach(feature => {
+                if (feature.geometry.type === 'Point') {
+                    const [lon, lat] = feature.geometry.coordinates;
+                    // Use very tight tolerance (0.0000001 degrees ~ 1 cm) for "exact" match
+                    if (Math.abs(lat - mapLat) < 0.0000001 && Math.abs(lon - mapLon) < 0.0000001) {
+                        isParkrunMatch = true;
+                        matchedParkrun = {
+                            name: feature.properties.EventLongName,
+                            lat: lat,
+                            lng: lon
+                        };
+                    }
+                }
+            });
+
+            if (isParkrunMatch) {
+                // Set selected parkrun for consistency
+                lastSelectedParkrun = matchedParkrun;
+
+                // Ensure place filters are active
+                activeFilters = [...new Set([...activeFilters, 'hotels', 'cafes', 'camping'])];
+                updateFilterUI();
+
+                // Load nearby places (hotels, cafes, campsites)
+                findNearbyPlaces(mapLat, mapLon);
+
+                // Hide search bar and location button, keep filter button visible
+                document.querySelector('.search-container').style.display = 'none';
+                document.querySelector('.location-button').style.display = 'none';
+                document.querySelector('.filter-button').style.display = 'block';
+
+                // Add class to top-controls to apply filter-only styling
+                document.querySelector('.top-controls').classList.add('filter-only');
+            }
+        }
+    }
 
         // Update URL with current filters - ENHANCED to maintain parkrun filters
         function updateUrlWithFilters() {
@@ -2117,17 +2180,18 @@ function updateHotelSearchButton() {
             }
         }
 
-        fetch('/events1.json')
-            .then(response => response.json())
-            .then(jsonData => {
-                data = jsonData;
-                console.log('Loaded parkrun data:', data);
-                updateMapMarkers();
-            })
-            .catch(err => {
-                console.error('Error fetching GeoJSON:', err);
-                handleGeocodingError();
-            });
+ fetch('/events1.json')
+        .then(response => response.json())
+        .then(jsonData => {
+            data = jsonData;
+            console.log('Loaded parkrun data:', data);
+            updateMapMarkers();
+            checkParkrunCoordinates(); // Check coordinates after data is loaded
+        })
+        .catch(err => {
+            console.error('Error fetching GeoJSON:', err);
+            handleGeocodingError();
+        });
 
         function handleGeocodingError() {
             window.location.href = 'https://parkrunnertourist.co.uk/Error';
@@ -2146,42 +2210,43 @@ function updateHotelSearchButton() {
         }
 
         // Initialize URL filters and map position
-        parseUrlFilters();
-        
-        if (hasValidMapCoords) {
-            map.setView([mapLat, mapLon], mapZoom);
-            // Still try to get user location even if URL has coordinates (but don't center on it)
-            setTimeout(() => {
-                autoLocateAndTrack();
-            }, 1000);
-        } else {
-            // Auto-locate user on startup if no URL coordinates AND center on user location
-            setTimeout(() => {
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(
-                        (position) => {
-                            const lat = position.coords.latitude;
-                            const lng = position.coords.longitude;
-                            
-                            // ALWAYS create and show user location marker
-                            userLocationMarker = L.marker([lat, lng], { icon: LocationIcon }).addTo(map)
-                                .bindPopup(`You are here`);
-                            
-                            // Set map view to user location ONLY if no URL coordinates
-                            map.setView([lat, lng], 13);
-                            
-                            // Start live tracking
-                            startLocationTracking();
-                        },
-                        (error) => {
-                            // Silently fail on startup - don't show error toast
-                            console.log('Auto-location failed:', error.message);
-                        },
-                        { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
-                    );
-                }
-            }, 1000);
-        }
+  parseUrlFilters();
+    
+    if (hasValidMapCoords) {
+        map.setView([mapLat, mapLon], mapZoom);
+        // Still try to get user location even if URL has coordinates (but don't center on it)
+        setTimeout(() => {
+            autoLocateAndTrack();
+        }, 1000);
+    } else {
+        // Auto-locate user on startup if no URL coordinates AND center on user location
+        setTimeout(() => {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const lat = position.coords.latitude;
+                        const lng = position.coords.longitude;
+                        
+                        // ALWAYS create and show user location marker
+                        userLocationMarker = L.marker([lat, lng], { icon: LocationIcon }).addTo(map)
+                            .bindPopup(`You are here`);
+                        
+                        // Set map view to user location ONLY if no URL coordinates
+                        map.setView([lat, lng], 13);
+                        
+                        // Start live tracking
+                        startLocationTracking();
+                    },
+                    (error) => {
+                        // Silently fail on startup - don't show error toast
+                        console.log('Auto-location failed:', error.message);
+                    },
+                    { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
+                );
+            }
+        }, 1000);
+    }
     </script>
+
 </body>
 </html>
