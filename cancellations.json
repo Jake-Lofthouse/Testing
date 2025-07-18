@@ -30,6 +30,11 @@
         "date": "2025-07-19"
     },
     {
+        "name": "Aspen parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-07-19"
+    },
+    {
         "name": "Bedgebury Pinetum parkrun",
         "reason": "Weather",
         "date": "2025-07-19"
@@ -51,6 +56,11 @@
     },
     {
         "name": "Bury St Edmunds parkrun",
+        "reason": "Weather",
+        "date": "2025-07-19"
+    },
+    {
+        "name": "Canterbury parkrun",
         "reason": "Weather",
         "date": "2025-07-19"
     },
@@ -82,6 +92,11 @@
     {
         "name": "Crinan Canal parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-07-19"
+    },
+    {
+        "name": "Crystal Palace parkrun",
+        "reason": "Weather",
         "date": "2025-07-19"
     },
     {
@@ -220,6 +235,11 @@
         "date": "2025-07-19"
     },
     {
+        "name": "Morden parkrun",
+        "reason": "Weather",
+        "date": "2025-07-19"
+    },
+    {
         "name": "Newborough Forest parkrun",
         "reason": "Venue unavailable",
         "date": "2025-07-19"
@@ -297,6 +317,11 @@
     {
         "name": "St Anne\u2019s parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-07-19"
+    },
+    {
+        "name": "Stones Corner parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-07-19"
     },
     {
