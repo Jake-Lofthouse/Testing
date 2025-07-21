@@ -397,8 +397,8 @@
             border-radius: 3px;
             background: #e5e5e7;
             outline: none;
-            -webkit-appearance: none;
             appearance: none;
+            -webkit-appearance: none;
             cursor: pointer;
         }
 
@@ -1113,6 +1113,8 @@
         let placeMarkers = [];
         let lastSelectedParkrun = null;
         let hasUrlParameters = false;
+        let searchDistanceTimeout;
+        let currentPlaceData = []; // Store all fetched places
         let searchRadius = 9000; // Default 9km search radius
 
         // Initialize distance slider
@@ -1126,11 +1128,7 @@
                     const value = parseInt(this.value);
                     searchRadius = value;
                     distanceValue.textContent = value >= 1000 ? Math.round(value/1000) + 'km' : value + 'm';
-                    
-                    // If a parkrun is selected, refresh the nearby places with new radius
-                    if (lastSelectedParkrun) {
-                        findNearbyPlaces(lastSelectedParkrun.lat, lastSelectedParkrun.lng);
-                    }
+                    handleDistanceChange();
                 });
 
                 // Set initial value
@@ -2234,21 +2232,22 @@ function updateHotelSearchButton() {
                 map.removeLayer(markerData.marker);
             });
             placeMarkers = [];
+            currentPlaceData = []; // Clear stored data
 
             // Fetch places based on active filters using the user-defined search radius
             if (activeFilters.includes('cafes')) {
-                fetchTomTomPlaces(lat, lng, 'CAFE_PUB', cafeIcon, 'cafes');
+                fetchTomTomPlaces(lat, lng, 'CAFE_PUB', cafeIcon, 'cafes', 20000); // Always fetch max distance
             }
             if (activeFilters.includes('hotels')) {
-                fetchTomTomPlaces(lat, lng, 'hotel', hotelIcon, 'hotels');
+                fetchTomTomPlaces(lat, lng, 'hotel', hotelIcon, 'hotels', 20000); // Always fetch max distance
             }
             if (activeFilters.includes('camping')) {
-                fetchTomTomPlaces(lat, lng, 'camping ground', campsiteIcon, 'camping');
+                fetchTomTomPlaces(lat, lng, 'camping ground', campsiteIcon, 'camping', 20000); // Always fetch max distance
             }
         }
 
-        function fetchTomTomPlaces(lat, lng, category, icon, filterType) {
-            // Use the user-defined search radius instead of fixed 9000
+        function fetchTomTomPlaces(lat, lng, category, icon, filterType, radius = searchRadius * 1000) {
+            const searchUrl = `https://api.tomtom.com/search/2/categorySearch/${category}.json?lat=${lat}&lon=${lng}&radius=${radius}&key=${tomTomApiKey}`;
             const searchUrl = `https://api.tomtom.com/search/2/categorySearch/${category}.json?lat=${lat}&lon=${lng}&radius=${searchRadius}&key=${tomTomApiKey}`;
 
             fetch(searchUrl)
@@ -2256,11 +2255,58 @@ function updateHotelSearchButton() {
                 .then(data => {
                     if (data.results && data.results.length > 0) {
                         data.results.forEach(place => {
-                            createPlaceMarker(place, category, icon, filterType);
+                            // Store place data with distance calculation
+                            const distance = calculateDistance(lat, lng, place.position.lat, place.position.lon);
+                            const placeData = { ...place, distance, category, icon, filterType };
+                            currentPlaceData.push(placeData);
                         });
+                        // Filter and display places based on current search radius
+                        filterAndDisplayPlaces();
                     }
                 })
                 .catch(error => console.error(`Error fetching ${category} data:`, error));
+        }
+
+        // Calculate distance between two points in meters
+        function calculateDistance(lat1, lng1, lat2, lng2) {
+            const R = 6371000; // Earth's radius in meters
+            const dLat = (lat2 - lat1) * Math.PI / 180;
+            const dLng = (lng2 - lng1) * Math.PI / 180;
+            const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+                      Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+                      Math.sin(dLng/2) * Math.sin(dLng/2);
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+            return R * c;
+        }
+
+        // Filter and display places based on current search radius
+        function filterAndDisplayPlaces() {
+            // Clear existing place markers
+            placeMarkers.forEach(markerData => {
+                map.removeLayer(markerData.marker);
+            });
+            placeMarkers = [];
+
+            // Filter places by distance and active filters
+            const filteredPlaces = currentPlaceData.filter(place => 
+                place.distance <= (searchRadius * 1000) && activeFilters.includes(place.filterType)
+            );
+
+            // Create markers for filtered places
+            filteredPlaces.forEach(place => {
+                createPlaceMarker(place, place.category, place.icon, place.filterType);
+            });
+        }
+
+        // Debounced function to handle slider changes
+        function handleDistanceChange() {
+            clearTimeout(searchDistanceTimeout);
+            searchDistanceTimeout = setTimeout(() => {
+                if (lastSelectedParkrun && currentPlaceData.length > 0) {
+                    // Filter existing data instead of making new API calls
+                    filterAndDisplayPlaces();
+                }
+            }, 150); // 150ms debounce
         }
 
         function createPlaceMarker(place, type, icon, filterType) {
@@ -2348,7 +2394,27 @@ function updateHotelSearchButton() {
         }
 
         // Initialize URL filters and map position
-  parseUrlFilters();
+        parseUrlFilters();
+        
+        // Initialize distance slider
+        const distanceSlider = document.getElementById('distanceSlider');
+        const distanceValue = document.getElementById('distanceValue');
+        
+        if (distanceSlider && distanceValue) {
+            distanceSlider.addEventListener('input', function() {
+                const newRadius = parseInt(this.value);
+                searchRadius = newRadius * 1000; // Convert to meters
+                distanceValue.textContent = newRadius;
+                
+                // If a parkrun is selected, refresh nearby places with new radius
+                if (lastSelectedParkrun) {
+                    findNearbyPlaces(lastSelectedParkrun.lat, lastSelectedParkrun.lng);
+                }
+            });
+            
+            // Set initial value
+            distanceValue.textContent = distanceSlider.value;
+        }
     
     if (hasValidMapCoords) {
         map.setView([mapLat, mapLon], mapZoom);
