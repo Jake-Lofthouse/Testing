@@ -349,6 +349,106 @@
             font-size: 16px;
         }
 
+        /* Distance slider specific styles */
+        .distance-filter {
+            padding: 20px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            cursor: default;
+        }
+
+        .distance-filter:hover {
+            background: transparent;
+        }
+
+        .distance-content {
+            width: 100%;
+        }
+
+        .distance-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .distance-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .distance-value {
+            background: #34c759;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            min-width: 60px;
+            text-align: center;
+        }
+
+        .distance-slider {
+            width: 100%;
+            height: 6px;
+            border-radius: 3px;
+            background: #e5e5e7;
+            outline: none;
+            -webkit-appearance: none;
+            appearance: none;
+            cursor: pointer;
+        }
+
+        .distance-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background: #34c759;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            transition: all 0.2s ease;
+        }
+
+        .distance-slider::-webkit-slider-thumb:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .distance-slider::-moz-range-thumb {
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background: #34c759;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            transition: all 0.2s ease;
+        }
+
+        .distance-slider::-moz-range-thumb:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .distance-slider::-moz-range-track {
+            height: 6px;
+            border-radius: 3px;
+            background: #e5e5e7;
+            border: none;
+        }
+
+        .distance-info {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-top: 8px;
+            text-align: center;
+        }
+
         /* Search suggestions dropdown - match filter dropdown transparency */
         .search-suggestions {
             position: absolute;
@@ -482,6 +582,26 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
+
+        .top-controls.filter-only .control-buttons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        @media (max-width: 768px) {
+          .top-controls.filter-only .control-buttons {
+              top: 15px;
+              right: 15px;
+         }
+     }
+       @media (max-width: 480px) {
+          .top-controls.filter-only .control-buttons {
+              top: 10px;
+              right: 10px;
+        }
+    }
 
         /* Advanced Hotel Search Button */
         .advanced-hotel-search {
@@ -926,6 +1046,19 @@
                         <i class="fas fa-filter"></i>
                     </button>
                     <div class="filter-dropdown" id="filterDropdown">
+                        <div class="distance-filter">
+                            <div class="distance-content">
+                                <div class="distance-header">
+                                    <div class="distance-title">
+                                        <i class="fas fa-search-location"></i>
+                                        Search Distance
+                                    </div>
+                                    <div class="distance-value" id="distanceValue">9km</div>
+                                </div>
+                                <input type="range" class="distance-slider" id="distanceSlider" min="1000" max="20000" step="1000" value="9000">
+                                <div class="distance-info">1km to 20km max (to protect API credits)</div>
+                            </div>
+                        </div>
                         <div class="filter-item active" onclick="toggleFilterType('hotels')" data-type="hotels">
                             <div class="filter-toggle"></div>
                             <div class="filter-icon" style="background-image: url('/Icons/Hotel.png');"></div>
@@ -980,6 +1113,30 @@
         let placeMarkers = [];
         let lastSelectedParkrun = null;
         let hasUrlParameters = false;
+        let searchRadius = 9000; // Default 9km search radius
+
+        // Initialize distance slider
+        document.addEventListener('DOMContentLoaded', function() {
+            const distanceSlider = document.getElementById('distanceSlider');
+            const distanceValue = document.getElementById('distanceValue');
+
+            if (distanceSlider && distanceValue) {
+                // Update display when slider changes
+                distanceSlider.addEventListener('input', function() {
+                    const value = parseInt(this.value);
+                    searchRadius = value;
+                    distanceValue.textContent = value >= 1000 ? Math.round(value/1000) + 'km' : value + 'm';
+                    
+                    // If a parkrun is selected, refresh the nearby places with new radius
+                    if (lastSelectedParkrun) {
+                        findNearbyPlaces(lastSelectedParkrun.lat, lastSelectedParkrun.lng);
+                    }
+                });
+
+                // Set initial value
+                distanceValue.textContent = Math.round(searchRadius/1000) + 'km';
+            }
+        });
 
         // Parse URL filters on page load - ENHANCED to handle ?junior, ?5k, ?all
         function parseUrlFilters() {
@@ -1082,6 +1239,49 @@
                 }
             });
         }
+
+           // Function to check parkrun coordinates and apply actions
+    function checkParkrunCoordinates() {
+        if (hasValidMapCoords && data.events && data.events.features) {
+            // Check if URL coordinates exactly match a parkrun event
+            let isParkrunMatch = false;
+            let matchedParkrun = null;
+            data.events.features.forEach(feature => {
+                if (feature.geometry.type === 'Point') {
+                    const [lon, lat] = feature.geometry.coordinates;
+                    // Use very tight tolerance (0.0000001 degrees ~ 1 cm) for "exact" match
+                    if (Math.abs(lat - mapLat) < 0.0000001 && Math.abs(lon - mapLon) < 0.0000001) {
+                        isParkrunMatch = true;
+                        matchedParkrun = {
+                            name: feature.properties.EventLongName,
+                            lat: lat,
+                            lng: lon
+                        };
+                    }
+                }
+            });
+
+            if (isParkrunMatch) {
+                // Set selected parkrun for consistency
+                lastSelectedParkrun = matchedParkrun;
+
+                // Ensure place filters are active
+                activeFilters = [...new Set([...activeFilters, 'hotels', 'cafes', 'camping'])];
+                updateFilterUI();
+
+                // Load nearby places (hotels, cafes, campsites)
+                findNearbyPlaces(mapLat, mapLon);
+
+                // Hide search bar and location button, keep filter button visible
+                document.querySelector('.search-container').style.display = 'none';
+                document.querySelector('.location-button').style.display = 'none';
+                document.querySelector('.filter-button').style.display = 'block';
+
+                // Add class to top-controls to apply filter-only styling
+                document.querySelector('.top-controls').classList.add('filter-only');
+            }
+        }
+    }
 
         // Update URL with current filters - ENHANCED to maintain parkrun filters
         function updateUrlWithFilters() {
@@ -2035,7 +2235,7 @@ function updateHotelSearchButton() {
             });
             placeMarkers = [];
 
-            // Fetch places based on active filters
+            // Fetch places based on active filters using the user-defined search radius
             if (activeFilters.includes('cafes')) {
                 fetchTomTomPlaces(lat, lng, 'CAFE_PUB', cafeIcon, 'cafes');
             }
@@ -2048,7 +2248,8 @@ function updateHotelSearchButton() {
         }
 
         function fetchTomTomPlaces(lat, lng, category, icon, filterType) {
-            const searchUrl = `https://api.tomtom.com/search/2/categorySearch/${category}.json?lat=${lat}&lon=${lng}&radius=9000&key=${tomTomApiKey}`;
+            // Use the user-defined search radius instead of fixed 9000
+            const searchUrl = `https://api.tomtom.com/search/2/categorySearch/${category}.json?lat=${lat}&lon=${lng}&radius=${searchRadius}&key=${tomTomApiKey}`;
 
             fetch(searchUrl)
                 .then(response => response.json())
@@ -2117,17 +2318,18 @@ function updateHotelSearchButton() {
             }
         }
 
-        fetch('/events1.json')
-            .then(response => response.json())
-            .then(jsonData => {
-                data = jsonData;
-                console.log('Loaded parkrun data:', data);
-                updateMapMarkers();
-            })
-            .catch(err => {
-                console.error('Error fetching GeoJSON:', err);
-                handleGeocodingError();
-            });
+ fetch('/events1.json')
+        .then(response => response.json())
+        .then(jsonData => {
+            data = jsonData;
+            console.log('Loaded parkrun data:', data);
+            updateMapMarkers();
+            checkParkrunCoordinates(); // Check coordinates after data is loaded
+        })
+        .catch(err => {
+            console.error('Error fetching GeoJSON:', err);
+            handleGeocodingError();
+        });
 
         function handleGeocodingError() {
             window.location.href = 'https://parkrunnertourist.co.uk/Error';
@@ -2146,42 +2348,43 @@ function updateHotelSearchButton() {
         }
 
         // Initialize URL filters and map position
-        parseUrlFilters();
-        
-        if (hasValidMapCoords) {
-            map.setView([mapLat, mapLon], mapZoom);
-            // Still try to get user location even if URL has coordinates (but don't center on it)
-            setTimeout(() => {
-                autoLocateAndTrack();
-            }, 1000);
-        } else {
-            // Auto-locate user on startup if no URL coordinates AND center on user location
-            setTimeout(() => {
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(
-                        (position) => {
-                            const lat = position.coords.latitude;
-                            const lng = position.coords.longitude;
-                            
-                            // ALWAYS create and show user location marker
-                            userLocationMarker = L.marker([lat, lng], { icon: LocationIcon }).addTo(map)
-                                .bindPopup(`You are here`);
-                            
-                            // Set map view to user location ONLY if no URL coordinates
-                            map.setView([lat, lng], 13);
-                            
-                            // Start live tracking
-                            startLocationTracking();
-                        },
-                        (error) => {
-                            // Silently fail on startup - don't show error toast
-                            console.log('Auto-location failed:', error.message);
-                        },
-                        { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
-                    );
-                }
-            }, 1000);
-        }
+  parseUrlFilters();
+    
+    if (hasValidMapCoords) {
+        map.setView([mapLat, mapLon], mapZoom);
+        // Still try to get user location even if URL has coordinates (but don't center on it)
+        setTimeout(() => {
+            autoLocateAndTrack();
+        }, 1000);
+    } else {
+        // Auto-locate user on startup if no URL coordinates AND center on user location
+        setTimeout(() => {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const lat = position.coords.latitude;
+                        const lng = position.coords.longitude;
+                        
+                        // ALWAYS create and show user location marker
+                        userLocationMarker = L.marker([lat, lng], { icon: LocationIcon }).addTo(map)
+                            .bindPopup(`You are here`);
+                        
+                        // Set map view to user location ONLY if no URL coordinates
+                        map.setView([lat, lng], 13);
+                        
+                        // Start live tracking
+                        startLocationTracking();
+                    },
+                    (error) => {
+                        // Silently fail on startup - don't show error toast
+                        console.log('Auto-location failed:', error.message);
+                    },
+                    { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
+                );
+            }
+        }, 1000);
+    }
     </script>
+
 </body>
 </html>
