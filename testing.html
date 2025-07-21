@@ -2248,9 +2248,9 @@ function updateHotelSearchButton() {
 
         function fetchTomTomPlaces(lat, lng, category, icon, filterType, radius = searchRadius * 1000) {
             const searchUrl = `https://api.tomtom.com/search/2/categorySearch/${category}.json?lat=${lat}&lon=${lng}&radius=${radius}&key=${tomTomApiKey}`;
-            const searchUrl = `https://api.tomtom.com/search/2/categorySearch/${category}.json?lat=${lat}&lon=${lng}&radius=${searchRadius}&key=${tomTomApiKey}`;
+            const tomtomSearchUrl = `https://api.tomtom.com/search/2/categorySearch/${category}.json?lat=${lat}&lon=${lng}&radius=${searchRadius * 1000}&key=${tomTomApiKey}`;
 
-            fetch(searchUrl)
+            fetch(tomtomSearchUrl)
                 .then(response => response.json())
                 .then(data => {
                     if (data.results && data.results.length > 0) {
