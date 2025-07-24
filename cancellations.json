@@ -220,6 +220,11 @@
         "date": "2025-07-26"
     },
     {
+        "name": "Sir James Mitchell parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-07-26"
+    },
+    {
         "name": "Somerset West parkrun",
         "reason": "Venue unavailable",
         "date": "2025-07-26"
@@ -371,6 +376,11 @@
     },
     {
         "name": "NIAC junior parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-07-27"
+    },
+    {
+        "name": "Perth junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-07-27"
     },
