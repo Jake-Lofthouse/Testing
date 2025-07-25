@@ -45,6 +45,11 @@
         "date": "2025-07-26"
     },
     {
+        "name": "Chaffey Park parkrun",
+        "reason": "Weather",
+        "date": "2025-07-26"
+    },
+    {
         "name": "Charters Towers Airport parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-07-26"
@@ -215,6 +220,11 @@
         "date": "2025-07-26"
     },
     {
+        "name": "Narrabri parkrun",
+        "reason": "Weather",
+        "date": "2025-07-26"
+    },
+    {
         "name": "O\u2019Connors Beach parkrun",
         "reason": "Weather",
         "date": "2025-07-26"
@@ -345,6 +355,11 @@
         "date": "2025-07-26"
     },
     {
+        "name": "Waterstown parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-07-26"
+    },
+    {
         "name": "Whitfords Nodes parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-07-26"
@@ -367,6 +382,11 @@
     {
         "name": "Worthing parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-07-26"
+    },
+    {
+        "name": "Yackandandah Rail Trail parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-07-26"
     },
     {
