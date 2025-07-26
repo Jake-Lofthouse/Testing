@@ -585,6 +585,11 @@
         "date": "2025-07-27"
     },
     {
+        "name": "Whaley Bridge junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-07-27"
+    },
+    {
         "name": "Winchester junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-07-27"
@@ -592,6 +597,11 @@
     {
         "name": "Wycombe Rye junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-07-27"
+    },
+    {
+        "name": "Yeovil Rec junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-07-27"
     }
 ]
