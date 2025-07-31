@@ -54459,8 +54459,8 @@
         "geometry": {
           "type": "Point",
           "coordinates": [
-            -1.316448,
-            54.792693
+            -1.318742,
+            54.789466
           ]
         },
         "properties": {
@@ -54734,6 +54734,26 @@
         }
       },
       {
+        "id": 3708,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -1.822741,
+            53.928537
+          ]
+        },
+        "properties": {
+          "eventname": "eastholmesfield",
+          "EventLongName": "East Holmes Field parkrun",
+          "EventShortName": "East Holmes Field",
+          "LocalisedEventLongName": null,
+          "countrycode": 97,
+          "seriesid": 1,
+          "EventLocation": "East Holmes Field"
+        }
+      },
+      {
         "id": 3709,
         "type": "Feature",
         "geometry": {
@@ -54811,6 +54831,46 @@
           "countrycode": 85,
           "seriesid": 1,
           "EventLocation": "Mentors Country Estate"
+        }
+      },
+      {
+        "id": 3714,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -9.37888,
+            53.654072
+          ]
+        },
+        "properties": {
+          "eventname": "tourmakeadywood",
+          "EventLongName": "Tourmakeady Wood parkrun",
+          "EventShortName": "Tourmakeady Wood",
+          "LocalisedEventLongName": null,
+          "countrycode": 42,
+          "seriesid": 1,
+          "EventLocation": "Tourmakeady Wood"
+        }
+      },
+      {
+        "id": 3715,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            30.955169,
+            -25.427402
+          ]
+        },
+        "properties": {
+          "eventname": "riversidereserve",
+          "EventLongName": "Riverside Reserve parkrun",
+          "EventShortName": "Riverside Reserve",
+          "LocalisedEventLongName": null,
+          "countrycode": 85,
+          "seriesid": 1,
+          "EventLocation": "Riverside Reserve"
         }
       }
     ]
