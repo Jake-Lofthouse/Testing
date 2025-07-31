@@ -40,6 +40,11 @@
         "date": "2025-08-02"
     },
     {
+        "name": "Chuo koen parkrun",
+        "reason": "Weather",
+        "date": "2025-08-02"
+    },
+    {
         "name": "Cliffe Castle parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-02"
@@ -281,6 +286,11 @@
     },
     {
         "name": "Alyn Waters junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-08-03"
+    },
+    {
+        "name": "Ballachulish Quarry junior parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-08-03"
     },
