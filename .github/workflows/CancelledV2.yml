@@ -1,0 +1,52 @@
+name: Cancellations
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */3 * * MON-THU'
+    - cron: '0 0-15/3,18-23 * * FRI'
+    - cron: '0 0-9,12/3 * * SAT'
+    - cron: '30 5-9 * * SAT'
+    - cron: '0 0,3-8,9/3 * * SUN'
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Download TSV file
+        run: |
+          curl -L "https://raw.githubusercontent.com/josh-justjosh/parkrun-Cancellations/master/_data/cancellations.tsv" -o cancellations.tsv
+
+      - name: Convert TSV to JSON
+        run: |
+          echo "import csv" > script.py
+          echo "import json" >> script.py
+          echo "with open('cancellations.tsv', encoding='utf-8') as f:" >> script.py
+          echo "    reader = csv.DictReader(f, delimiter='\\t')" >> script.py
+          echo "    data = [{" >> script.py
+          echo "        'name': row['Event'].strip()," >> script.py
+          echo "        'reason': row['Cancellation Note'].strip()," >> script.py
+          echo "        'date': row['Date'].strip()" >> script.py
+          echo "    } for row in reader if row['Cancellation Note'].strip() and row['Cancellation Note'].strip().lower() != 'weather']" >> script.py
+          echo "with open('cancellations.json', 'w', encoding='utf-8') as out:" >> script.py
+          echo "    json.dump(data, out, indent=4, ensure_ascii=False)" >> script.py
+          python3 script.py
+
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add cancellations.json
+          git diff --cached --quiet && echo "No changes to commit." || (
+            git commit -m "Update cancellations.json"
+            git push
+          )
