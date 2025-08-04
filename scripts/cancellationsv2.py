@@ -3,60 +3,68 @@ from bs4 import BeautifulSoup
 from html_table_extractor.extractor import Extractor
 import json
 import datetime
-import os
 import time
+import os
 
-# Output file path
-output_path = "_data/cancellations.json"
-os.makedirs(os.path.dirname(output_path), exist_ok=True)
+def now():
+    return datetime.datetime.now()
 
-# Helper function
 def same_week(date_string):
     d1 = datetime.datetime.strptime(date_string, '%Y-%m-%d')
     d2 = datetime.datetime.today()
     return d1.isocalendar()[1] == d2.isocalendar()[1]
 
-# Request cancellations page with retry logic
-URL = "https://wiki.parkrun.com/index.php/Cancellations/Global"
-headers = {'User-Agent': 'Mozilla/5.0'}
-for attempt in range(5):
-    response = requests.get(URL, headers=headers, timeout=30)
-    if response.status_code == 200:
-        break
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
+}
+
+print(now(), 'Getting cancellations data from parkrun wiki...')
+url = 'https://wiki.parkrun.com/index.php/Cancellations/Global'
+
+response = requests.get(url, headers=headers, timeout=60)
+if response.status_code != 200:
+    print(now(), f"Initial request failed ({response.status_code}), retrying...")
     time.sleep(10)
-else:
-    raise Exception(f"Failed to fetch data from {URL} after retries")
+    for i in range(9):
+        response = requests.get(url, headers=headers, timeout=60)
+        if response.status_code == 200:
+            print(now(), f"Retry succeeded on attempt {i+1}")
+            break
+        time.sleep(5)
+    else:
+        raise Exception(f"Failed to fetch data from {url} after retries")
 
 soup = BeautifulSoup(response.text, 'html.parser')
 extractor = Extractor(soup)
 extractor.parse()
 table = extractor.return_list()
 
-# Remove header/footer rows
-if table:
-    try:
-        table.pop(0)  # header
-        table.pop(-1)  # possible footer
-    except IndexError:
-        pass
+try:
+    table.pop(0)
+    table.pop(-1)
+except IndexError:
+    print(now(), "Cancellations table is unexpectedly short")
+    table = []
 
-# Extract and format cancellations
-cancellations = []
+output = []
 for row in table:
     try:
-        date, name, _, region, reason = [col.strip() for col in row[:5]]
-    except (ValueError, IndexError):
+        date, name, _, _, reason = [cell.strip() for cell in row[:5]]
+    except Exception as e:
+        print("Skipping malformed row:", row)
         continue
 
     if same_week(date):
-        cancellations.append({
+        output.append({
             "name": name,
             "reason": reason,
             "date": date
         })
 
-# Save as JSON
-with open(output_path, 'w', encoding='utf-8') as f:
-    json.dump(cancellations, f, indent=4, ensure_ascii=False)
+output_path = "_data/cancellations.json"
+os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
-print(f"{len(cancellations)} cancellations saved to {output_path}")
+with open(output_path, 'w', encoding='utf-8') as f:
+    json.dump(output, f, indent=4, ensure_ascii=False)
+
+print(now(), f"{len(output)} cancellations saved to {output_path}")
