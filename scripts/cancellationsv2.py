@@ -21,14 +21,18 @@ headers = {
 print(now(), 'Getting cancellations data from parkrun wiki...')
 url = 'https://wiki.parkrun.com/index.php/Cancellations/Global'
 
+# Helper to check if we can use the response
+def valid_response(r):
+    return r.status_code in [200, 202] and len(r.text.strip()) > 0
+
 response = requests.get(url, headers=headers, timeout=60)
-if response.status_code != 200:
+if not valid_response(response):
     print(now(), f"Initial request failed ({response.status_code}), retrying...")
     time.sleep(10)
     for i in range(9):
         response = requests.get(url, headers=headers, timeout=60)
-        if response.status_code == 200:
-            print(now(), f"Retry succeeded on attempt {i+1}")
+        if valid_response(response):
+            print(now(), f"Retry succeeded on attempt {i+1} with status {response.status_code}")
             break
         time.sleep(5)
     else:
@@ -50,7 +54,7 @@ output = []
 for row in table:
     try:
         date, name, _, _, reason = [cell.strip() for cell in row[:5]]
-    except Exception as e:
+    except Exception:
         print("Skipping malformed row:", row)
         continue
 
