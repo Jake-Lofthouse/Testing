@@ -20,6 +20,11 @@
         "date": "2025-08-09"
     },
     {
+        "name": "Armidale parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-09"
+    },
+    {
         "name": "Ashton Court parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-09"
@@ -47,6 +52,11 @@
     {
         "name": "Burgess parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-08-09"
+    },
+    {
+        "name": "Butter Trail parkrun",
+        "reason": "Local health restrictions",
         "date": "2025-08-09"
     },
     {
@@ -195,6 +205,11 @@
         "date": "2025-08-09"
     },
     {
+        "name": "Morden parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-08-09"
+    },
+    {
         "name": "Mthatha parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-08-09"
@@ -315,6 +330,11 @@
         "date": "2025-08-10"
     },
     {
+        "name": "Torridge junior parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-08-10"
+    },
+    {
         "name": "Tynehead Regional parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-09"
@@ -333,6 +353,11 @@
         "name": "Victoria Jubilee junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-10"
+    },
+    {
+        "name": "Victoria parkrun, Truro",
+        "reason": "Local health restrictions",
+        "date": "2025-08-09"
     },
     {
         "name": "Wallace parkrun, Lisburn",
