@@ -40,6 +40,11 @@
         "date": "2025-08-10"
     },
     {
+        "name": "Battersea parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-08-09"
+    },
+    {
         "name": "Betteshanger junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-10"
@@ -63,6 +68,11 @@
         "name": "Cambridge junior parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-08-10"
+    },
+    {
+        "name": "Cannibals Cave parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-08-09"
     },
     {
         "name": "Carmarthen junior parkrun",
@@ -155,6 +165,11 @@
         "date": "2025-08-10"
     },
     {
+        "name": "Hout Bay parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-09"
+    },
+    {
         "name": "Jubilee parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-09"
@@ -162,6 +177,11 @@
     {
         "name": "Kameeldoring parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-08-09"
+    },
+    {
+        "name": "Keppel parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-08-09"
     },
     {
@@ -320,6 +340,16 @@
         "date": "2025-08-09"
     },
     {
+        "name": "Shongweni parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-08-09"
+    },
+    {
+        "name": "Somerset West parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-08-09"
+    },
+    {
         "name": "St Andrews parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-09"
@@ -328,6 +358,11 @@
         "name": "Sutton Lawn junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-10"
+    },
+    {
+        "name": "The Terrace parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-09"
     },
     {
         "name": "Torridge junior parkrun",
@@ -393,5 +428,10 @@
         "name": "Wycombe Rye parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-09"
+    },
+    {
+        "name": "Yatton Recreation junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-08-10"
     }
 ]
