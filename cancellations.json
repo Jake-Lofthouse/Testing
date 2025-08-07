@@ -5,6 +5,11 @@
         "date": "2025-08-09"
     },
     {
+        "name": "Aggeneys parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-08-09"
+    },
+    {
         "name": "Agnew parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-09"
@@ -265,6 +270,11 @@
         "date": "2025-08-09"
     },
     {
+        "name": "Nursery Drive junior parkrun, Ballinlough",
+        "reason": "Shortage of volunteers",
+        "date": "2025-08-10"
+    },
+    {
         "name": "PE Hobie Beach parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-09"
@@ -320,6 +330,11 @@
         "date": "2025-08-09"
     },
     {
+        "name": "Riviera on Vaal parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-09"
+    },
+    {
         "name": "Root 44 parkrun",
         "reason": "Permission issue",
         "date": "2025-08-09"
@@ -367,6 +382,11 @@
     {
         "name": "St Andrews parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-08-09"
+    },
+    {
+        "name": "Stonehouse parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-08-09"
     },
     {
