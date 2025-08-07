@@ -85,6 +85,11 @@
         "date": "2025-08-09"
     },
     {
+        "name": "Chain of Lakes parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-08-09"
+    },
+    {
         "name": "Clacton junior parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-08-10"
@@ -400,6 +405,11 @@
         "date": "2025-08-09"
     },
     {
+        "name": "Ward End junior parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-08-10"
+    },
+    {
         "name": "Westville parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-09"
@@ -426,6 +436,11 @@
     },
     {
         "name": "Wycombe Rye parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-08-09"
+    },
+    {
+        "name": "Wythenshawe parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-09"
     },
