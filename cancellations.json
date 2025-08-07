@@ -175,6 +175,11 @@
         "date": "2025-08-09"
     },
     {
+        "name": "Hoërskool Ben Viljoen parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-08-09"
+    },
+    {
         "name": "Jubilee parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-09"
@@ -312,6 +317,11 @@
     {
         "name": "Riverside parkrun, Kamloops",
         "reason": "Venue unavailable",
+        "date": "2025-08-09"
+    },
+    {
+        "name": "Root 44 parkrun",
+        "reason": "Permission issue",
         "date": "2025-08-09"
     },
     {
