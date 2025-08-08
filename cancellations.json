@@ -90,6 +90,11 @@
         "date": "2025-08-09"
     },
     {
+        "name": "Centennial Park parkrun, Dunsborough",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-09"
+    },
+    {
         "name": "Chain of Lakes parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-09"
@@ -242,6 +247,11 @@
     {
         "name": "Morden parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-08-09"
+    },
+    {
+        "name": "Mt Penang parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-08-09"
     },
     {
