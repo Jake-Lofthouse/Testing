@@ -115,9 +115,19 @@
         "date": "2025-08-10"
     },
     {
+        "name": "Crinan Canal parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-09"
+    },
+    {
         "name": "Crystal Palace parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-09"
+    },
+    {
+        "name": "Dumfries junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-08-10"
     },
     {
         "name": "Falls parkrun, Belfast",
@@ -195,6 +205,11 @@
         "date": "2025-08-09"
     },
     {
+        "name": "Huddle parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-09"
+    },
+    {
         "name": "Jubilee parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-09"
@@ -246,6 +261,11 @@
     },
     {
         "name": "Millennium parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-08-09"
+    },
+    {
+        "name": "Miyagawa koen parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-08-09"
     },
@@ -395,6 +415,11 @@
         "date": "2025-08-09"
     },
     {
+        "name": "Springhill parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-09"
+    },
+    {
         "name": "St Andrews parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-09"
@@ -420,6 +445,11 @@
         "date": "2025-08-10"
     },
     {
+        "name": "Town Moor parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-08-09"
+    },
+    {
         "name": "Tynehead Regional parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-09"
@@ -442,6 +472,11 @@
     {
         "name": "Victoria parkrun, Truro",
         "reason": "Local health restrictions",
+        "date": "2025-08-09"
+    },
+    {
+        "name": "Walcha parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-08-09"
     },
     {
