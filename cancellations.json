@@ -55,6 +55,11 @@
         "date": "2025-08-10"
     },
     {
+        "name": "Biki Byte parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-09"
+    },
+    {
         "name": "Bill Rose Sports Complex parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-08-09"
@@ -236,6 +241,11 @@
     },
     {
         "name": "Lavender Mill parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-08-09"
+    },
+    {
+        "name": "Leazes parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-08-09"
     },
