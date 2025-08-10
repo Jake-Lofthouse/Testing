@@ -211,7 +211,7 @@ async function generateHtml(event, relativePath) {
 <meta property="og:type" content="website" />
 <meta name="robots" content="index, follow" />
 <meta name="language" content="en" />
-<link rel="canonical" href="${BASE_URL}/${relativePath}" />
+
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
