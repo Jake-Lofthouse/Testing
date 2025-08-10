@@ -13,7 +13,7 @@
 <meta property="og:type" content="website" />
 <meta name="robots" content="index, follow" />
 <meta name="language" content="en" />
-<link rel="canonical" href="https://www.parkrunnertourist.co.uk/explore/R/richmondolympic.html" />
+
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -551,7 +551,7 @@
           <button class="toggle-btn" onclick="switchView('map')" id="btn-map">Map View</button>
         </div>
         <iframe id="stay22Frame" class="accommodation-iframe" scrolling="no"
-          src="https://www.stay22.com/embed/gm?aid=parkrunnertourist&lat=49.184871&lng=-123.138582&checkin=2025-08-08&maincolor=7dd856&venue=richmondolympic%20parkrun&viewmode=listview&listviewexpand=true"
+          src="https://www.stay22.com/embed/gm?aid=parkrunnertourist&lat=49.184871&lng=-123.138582&checkin=2025-08-15&maincolor=7dd856&venue=richmondolympic%20parkrun&viewmode=listview&listviewexpand=true"
           title="Stay22 accommodation listing">
         </iframe>
       </div>
@@ -615,7 +615,7 @@
 <script>
   function switchView(mode) {
     const iframe = document.getElementById('stay22Frame');
-    const baseUrl = "https://www.stay22.com/embed/gm?aid=parkrunnertourist&lat=49.184871&lng=-123.138582&checkin=2025-08-08&maincolor=7dd856&venue=richmondolympic%20parkrun";
+    const baseUrl = "https://www.stay22.com/embed/gm?aid=parkrunnertourist&lat=49.184871&lng=-123.138582&checkin=2025-08-15&maincolor=7dd856&venue=richmondolympic%20parkrun";
     iframe.src = baseUrl + "&viewmode=" + mode + "&listviewexpand=" + (mode === 'listview');
     document.getElementById('btn-listview').classList.toggle('active', mode === 'listview');
     document.getElementById('btn-map').classList.toggle('active', mode === 'map');
