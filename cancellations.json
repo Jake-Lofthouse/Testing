@@ -470,6 +470,11 @@
         "date": "2025-08-09"
     },
     {
+        "name": "St Nicholas junior parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-10"
+    },
+    {
         "name": "Stonehouse junior parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-08-10"
@@ -568,6 +573,11 @@
         "name": "Wimpole Estate junior parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-08-10"
+    },
+    {
+        "name": "Winthrop Trailhead parkrun",
+        "reason": "No participants",
+        "date": "2025-08-09"
     },
     {
         "name": "Woodhouse Moor parkrun",
