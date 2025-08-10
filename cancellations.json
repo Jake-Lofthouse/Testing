@@ -40,6 +40,11 @@
         "date": "2025-08-10"
     },
     {
+        "name": "Barshaw junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-08-10"
+    },
+    {
         "name": "Battersea junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-10"
@@ -78,6 +83,11 @@
         "name": "Birchwood Trails parkrun",
         "reason": "Air quality",
         "date": "2025-08-09"
+    },
+    {
+        "name": "Broadmeadow junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-08-10"
     },
     {
         "name": "Burgess parkrun",
@@ -532,6 +542,11 @@
     {
         "name": "Warren Hill parkrun",
         "reason": "Local health restrictions",
+        "date": "2025-08-09"
+    },
+    {
+        "name": "Werrington parkrun",
+        "reason": "No participants",
         "date": "2025-08-09"
     },
     {
