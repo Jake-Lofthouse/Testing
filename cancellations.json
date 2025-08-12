@@ -45,6 +45,11 @@
         "date": "2025-08-16"
     },
     {
+        "name": "Blue Lagoon parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-08-16"
+    },
+    {
         "name": "Brickfields Park parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-16"
@@ -337,6 +342,11 @@
     {
         "name": "Victoria Dock parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-08-16"
+    },
+    {
+        "name": "Victoria parkrun, Truro",
+        "reason": "Local health restrictions",
         "date": "2025-08-16"
     },
     {
