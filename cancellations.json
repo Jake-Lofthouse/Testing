@@ -15,6 +15,11 @@
         "date": "2025-08-16"
     },
     {
+        "name": "Alexandra junior parkrun, Moss Side",
+        "reason": "Venue unavailable",
+        "date": "2025-08-17"
+    },
+    {
         "name": "Anchorsholme junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-17"
@@ -337,6 +342,11 @@
     {
         "name": "The Spinney parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-08-16"
+    },
+    {
+        "name": "The Terrace parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-08-16"
     },
     {
