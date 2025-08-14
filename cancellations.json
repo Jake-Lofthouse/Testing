@@ -25,6 +25,11 @@
         "date": "2025-08-17"
     },
     {
+        "name": "Armidale parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-16"
+    },
+    {
         "name": "Avenham Park junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-17"
@@ -272,6 +277,11 @@
     {
         "name": "Ormskirk parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-08-16"
+    },
+    {
+        "name": "PE Hobie Beach parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-08-16"
     },
     {
