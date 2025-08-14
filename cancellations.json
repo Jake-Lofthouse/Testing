@@ -65,6 +65,11 @@
         "date": "2025-08-16"
     },
     {
+        "name": "Bury St Edmunds parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-16"
+    },
+    {
         "name": "Camperdown parkrun, Dundee",
         "reason": "Venue unavailable",
         "date": "2025-08-16"
@@ -88,6 +93,11 @@
         "name": "Cranbrook Country Park junior parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-08-17"
+    },
+    {
+        "name": "Crinan Canal parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-16"
     },
     {
         "name": "Crystal Palace parkrun",
@@ -138,6 +148,11 @@
         "name": "Gravesend junior parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-08-17"
+    },
+    {
+        "name": "Guildford parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-16"
     },
     {
         "name": "Halls parkrun, Nelspruit",
@@ -320,6 +335,11 @@
         "date": "2025-08-16"
     },
     {
+        "name": "Root 44 parkrun",
+        "reason": "Permission issue",
+        "date": "2025-08-16"
+    },
+    {
         "name": "Roundhay junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-17"
@@ -411,6 +431,11 @@
     },
     {
         "name": "Windhoek parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-08-16"
+    },
+    {
+        "name": "Wythenshawe parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-16"
     },
