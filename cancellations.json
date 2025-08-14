@@ -160,6 +160,11 @@
         "date": "2025-08-17"
     },
     {
+        "name": "Holyrood parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-16"
+    },
+    {
         "name": "Horinouchi koen parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-08-16"
@@ -173,6 +178,11 @@
         "name": "Houghton Hall junior parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-08-17"
+    },
+    {
+        "name": "Hout Bay parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-16"
     },
     {
         "name": "King George junior parkrun",
