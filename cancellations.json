@@ -55,6 +55,11 @@
         "date": "2025-08-16"
     },
     {
+        "name": "Bill Rose Sports Complex parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-08-16"
+    },
+    {
         "name": "Blue Lagoon parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-16"
@@ -67,6 +72,11 @@
     {
         "name": "Bury St Edmunds parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-08-16"
+    },
+    {
+        "name": "Butter Trail parkrun",
+        "reason": "Local health restrictions",
         "date": "2025-08-16"
     },
     {
@@ -83,6 +93,11 @@
         "name": "Clashduv junior parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-08-17"
+    },
+    {
+        "name": "Colchester Castle parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-16"
     },
     {
         "name": "Cottenham Recreation Ground junior parkrun",
@@ -102,6 +117,11 @@
     {
         "name": "Crystal Palace parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-08-16"
+    },
+    {
+        "name": "Dalby Forest parkrun",
+        "reason": "Air quality",
         "date": "2025-08-16"
     },
     {
@@ -162,6 +182,11 @@
     {
         "name": "Hastings High School parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-08-16"
+    },
+    {
+        "name": "Hay Lodge parkrun",
+        "reason": "AED unavailable",
         "date": "2025-08-16"
     },
     {
@@ -265,6 +290,11 @@
         "date": "2025-08-16"
     },
     {
+        "name": "Nantu Wama parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-16"
+    },
+    {
         "name": "Newark junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-17"
@@ -318,6 +348,11 @@
         "name": "Pontefract junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-17"
+    },
+    {
+        "name": "Presint 18 parkrun, Putrajaya",
+        "reason": "Venue unavailable",
+        "date": "2025-08-16"
     },
     {
         "name": "Queen’s Parade junior parkrun, Aldershot",
@@ -420,6 +455,11 @@
         "date": "2025-08-16"
     },
     {
+        "name": "Watergrove parkrun, Rochdale",
+        "reason": "Shortage of volunteers",
+        "date": "2025-08-16"
+    },
+    {
         "name": "White Lick Creek parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-16"
@@ -445,6 +485,11 @@
         "date": "2025-08-16"
     },
     {
+        "name": "parkrun Chrzanów",
+        "reason": "Shortage of volunteers",
+        "date": "2025-08-16"
+    },
+    {
         "name": "parkrun Dzierzgoń",
         "reason": "Shortage of volunteers",
         "date": "2025-08-16"
@@ -452,6 +497,11 @@
     {
         "name": "parkrun Kędzierzyn-Koźle",
         "reason": "Venue unavailable",
+        "date": "2025-08-16"
+    },
+    {
+        "name": "parkrun Las Dębiński",
+        "reason": "Course unsafe or blocked",
         "date": "2025-08-16"
     },
     {
