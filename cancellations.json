@@ -180,6 +180,11 @@
         "date": "2025-08-17"
     },
     {
+        "name": "Guildford junior parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-17"
+    },
+    {
         "name": "Guildford parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-08-16"
@@ -370,6 +375,11 @@
         "date": "2025-08-17"
     },
     {
+        "name": "Raphael parkrun",
+        "reason": "Incident after start",
+        "date": "2025-08-16"
+    },
+    {
         "name": "Red Star parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-16"
@@ -420,6 +430,11 @@
         "date": "2025-08-16"
     },
     {
+        "name": "Southampton Common junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-08-17"
+    },
+    {
         "name": "St Mary’s Campus junior parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-08-17"
@@ -432,6 +447,11 @@
     {
         "name": "Tapijn parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-08-16"
+    },
+    {
+        "name": "The Glen parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-08-16"
     },
     {
