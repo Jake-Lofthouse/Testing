@@ -11574,26 +11574,6 @@
         }
       },
       {
-        "id": 693,
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            30.937114,
-            -25.456949
-          ]
-        },
-        "properties": {
-          "eventname": "halls",
-          "EventLongName": "Halls parkrun, Nelspruit",
-          "EventShortName": "Halls",
-          "LocalisedEventLongName": null,
-          "countrycode": 85,
-          "seriesid": 1,
-          "EventLocation": "Halls Gateway"
-        }
-      },
-      {
         "id": 696,
         "type": "Feature",
         "geometry": {
@@ -54730,7 +54710,7 @@
           "LocalisedEventLongName": null,
           "countrycode": 97,
           "seriesid": 1,
-          "EventLocation": "East Holmes Field"
+          "EventLocation": "East Holmes Field, Ilkley"
         }
       },
       {
@@ -54991,6 +54971,66 @@
           "countrycode": 74,
           "seriesid": 1,
           "EventLocation": "Park Drogowskazów"
+        }
+      },
+      {
+        "id": 3726,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -3.270765,
+            55.920151
+          ]
+        },
+        "properties": {
+          "eventname": "hailesquarry-juniors",
+          "EventLongName": "Hailes Quarry junior parkrun",
+          "EventShortName": "Hailes Quarry juniors",
+          "LocalisedEventLongName": null,
+          "countrycode": 97,
+          "seriesid": 2,
+          "EventLocation": "Hailes Quarry juniors"
+        }
+      },
+      {
+        "id": 3728,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -65.500276,
+            44.740319
+          ]
+        },
+        "properties": {
+          "eventname": "stpatrickslane",
+          "EventLongName": "St Patrick’s Lane parkrun",
+          "EventShortName": "St Patrick’s Lane",
+          "LocalisedEventLongName": null,
+          "countrycode": 14,
+          "seriesid": 1,
+          "EventLocation": "St Patrick’s Lane"
+        }
+      },
+      {
+        "id": 3730,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -71.43109,
+            42.280745
+          ]
+        },
+        "properties": {
+          "eventname": "farmpond",
+          "EventLongName": "Farm Pond parkrun",
+          "EventShortName": "Farm Pond",
+          "LocalisedEventLongName": null,
+          "countrycode": 98,
+          "seriesid": 1,
+          "EventLocation": "Farm Pond"
         }
       }
     ]
