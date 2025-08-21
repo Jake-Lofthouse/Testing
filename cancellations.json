@@ -10,6 +10,11 @@
         "date": "2025-08-23"
     },
     {
+        "name": "Armagh parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-08-23"
+    },
+    {
         "name": "Ashford parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-23"
@@ -31,6 +36,11 @@
     },
     {
         "name": "Belfast Victoria parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-08-23"
+    },
+    {
+        "name": "Bill Rose Sports Complex parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-23"
     },
@@ -88,6 +98,11 @@
         "name": "Clashduv junior parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-08-24"
+    },
+    {
+        "name": "Clougha Pike parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-23"
     },
     {
         "name": "Colchester Castle parkrun",
@@ -157,6 +172,11 @@
     {
         "name": "Horspath parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-08-23"
+    },
+    {
+        "name": "Hout Bay parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-08-23"
     },
     {
@@ -315,6 +335,11 @@
         "date": "2025-08-23"
     },
     {
+        "name": "Springhill parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-23"
+    },
+    {
         "name": "Stevens Park junior parkrun, Wollescote",
         "reason": "Shortage of volunteers",
         "date": "2025-08-24"
@@ -396,6 +421,11 @@
     },
     {
         "name": "Whitley Bay parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-23"
+    },
+    {
+        "name": "Woking parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-08-23"
     },
