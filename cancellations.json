@@ -150,8 +150,18 @@
         "date": "2025-08-23"
     },
     {
+        "name": "Flatts Lane parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-08-23"
+    },
+    {
         "name": "Franschhoek parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-08-23"
+    },
+    {
+        "name": "Great Cornard parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-08-23"
     },
     {
@@ -240,6 +250,11 @@
         "date": "2025-08-23"
     },
     {
+        "name": "Margate parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-23"
+    },
+    {
         "name": "Marine Parade parkrun",
         "reason": "High Tide 11.16m @ 07.40am - Unsafe Course",
         "date": "2025-08-23"
@@ -308,6 +323,11 @@
         "name": "Northlands junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-24"
+    },
+    {
+        "name": "Onderstepoort Campus parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-08-23"
     },
     {
         "name": "Pendle parkrun",
@@ -480,6 +500,11 @@
         "date": "2025-08-23"
     },
     {
+        "name": "Wimpole Estate junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-08-24"
+    },
+    {
         "name": "Woking parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-08-23"
@@ -497,6 +522,11 @@
     {
         "name": "York parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-08-23"
+    },
+    {
+        "name": "parkrun Las Łagiewnicki",
+        "reason": "Shortage of volunteers",
         "date": "2025-08-23"
     }
 ]
