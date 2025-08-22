@@ -125,6 +125,11 @@
         "date": "2025-08-24"
     },
     {
+        "name": "Crinan Canal parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-23"
+    },
+    {
         "name": "Crystal Palace parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-23"
@@ -295,6 +300,11 @@
         "date": "2025-08-23"
     },
     {
+        "name": "North Harbour parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-23"
+    },
+    {
         "name": "Northlands junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-24"
@@ -342,6 +352,16 @@
     {
         "name": "Root 44 parkrun",
         "reason": "Permission issue",
+        "date": "2025-08-23"
+    },
+    {
+        "name": "Rouse Hill parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-23"
+    },
+    {
+        "name": "Shellharbour parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-08-23"
     },
     {
@@ -437,6 +457,11 @@
     {
         "name": "Welkom parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-08-23"
+    },
+    {
+        "name": "White Rock parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-08-23"
     },
     {
