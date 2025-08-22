@@ -95,6 +95,11 @@
         "date": "2025-08-23"
     },
     {
+        "name": "Churchill Parkway parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-08-23"
+    },
+    {
         "name": "Clashduv junior parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-08-24"
@@ -215,6 +220,11 @@
         "date": "2025-08-23"
     },
     {
+        "name": "Longford junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-08-24"
+    },
+    {
         "name": "Lucy Park parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-23"
@@ -270,6 +280,11 @@
         "date": "2025-08-23"
     },
     {
+        "name": "Nantu Wama parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-23"
+    },
+    {
         "name": "Newport Lakes parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-08-23"
@@ -283,6 +298,11 @@
         "name": "Northlands junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-24"
+    },
+    {
+        "name": "Pendle parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-23"
     },
     {
         "name": "Pittsworth parkrun",
@@ -313,6 +333,11 @@
         "name": "Riverside junior parkrun, St Neots",
         "reason": "Shortage of volunteers",
         "date": "2025-08-24"
+    },
+    {
+        "name": "Riverway parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-08-23"
     },
     {
         "name": "Root 44 parkrun",
@@ -402,6 +427,11 @@
     {
         "name": "Victoria parkrun, Truro",
         "reason": "Local health restrictions",
+        "date": "2025-08-23"
+    },
+    {
+        "name": "Waterloo Plains parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-08-23"
     },
     {
