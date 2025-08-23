@@ -5,6 +5,11 @@
         "date": "2025-08-23"
     },
     {
+        "name": "Alyn Waters junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-08-24"
+    },
+    {
         "name": "Ankerskogen parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-23"
@@ -533,6 +538,11 @@
         "name": "Woking parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-08-23"
+    },
+    {
+        "name": "Woodvale junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-08-24"
     },
     {
         "name": "Worthing parkrun",
