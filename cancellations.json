@@ -70,6 +70,11 @@
         "date": "2025-08-23"
     },
     {
+        "name": "Branch Brook Park parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-08-23"
+    },
+    {
         "name": "Broadwater parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-23"
@@ -138,6 +143,11 @@
         "name": "Crystal Palace parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-23"
+    },
+    {
+        "name": "Derry City junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-08-24"
     },
     {
         "name": "Derrynoid Forest parkrun",
