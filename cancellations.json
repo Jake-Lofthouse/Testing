@@ -55,6 +55,11 @@
         "date": "2025-08-31"
     },
     {
+        "name": "Chain of Lakes parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-08-30"
+    },
+    {
         "name": "Clashduv junior parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-08-31"
@@ -72,6 +77,11 @@
     {
         "name": "Crinan Canal parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-08-30"
+    },
+    {
+        "name": "Deep Run parkrun",
+        "reason": "Venue unavailable",
         "date": "2025-08-30"
     },
     {
@@ -138,11 +148,6 @@
         "name": "King George V junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-31"
-    },
-    {
-        "name": "Kleinevalleij parkrun",
-        "reason": "Venue unavailable",
-        "date": "2025-08-30"
     },
     {
         "name": "Largs Prom parkrun",
