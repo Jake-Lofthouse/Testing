@@ -95,6 +95,11 @@
         "date": "2025-08-30"
     },
     {
+        "name": "Des Connor Park junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-08-31"
+    },
+    {
         "name": "Elder Park parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-08-30"
@@ -147,6 +152,11 @@
     {
         "name": "Holkham parkrun",
         "reason": "North Norfolk Food & Drink Festival",
+        "date": "2025-08-30"
+    },
+    {
+        "name": "Holyrood parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-08-30"
     },
     {
@@ -297,6 +307,11 @@
     {
         "name": "Winchester parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-08-30"
+    },
+    {
+        "name": "Woking parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-08-30"
     },
     {
