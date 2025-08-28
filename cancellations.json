@@ -45,6 +45,11 @@
         "date": "2025-08-30"
     },
     {
+        "name": "Bright parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-08-30"
+    },
+    {
         "name": "Bug Hunter Waters parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-30"
@@ -150,6 +155,11 @@
         "date": "2025-08-31"
     },
     {
+        "name": "Kitanagase Mirai Fureai Sogokoen parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-08-30"
+    },
+    {
         "name": "Largs Prom parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-30"
@@ -212,6 +222,11 @@
     {
         "name": "North Sydney parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-08-30"
+    },
+    {
+        "name": "Odakaryokuchi parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-08-30"
     },
     {
