@@ -70,6 +70,11 @@
         "date": "2025-08-31"
     },
     {
+        "name": "Carisbrooke parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-30"
+    },
+    {
         "name": "Chain of Lakes parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-30"
@@ -305,6 +310,11 @@
         "date": "2025-08-30"
     },
     {
+        "name": "Portland parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-30"
+    },
+    {
         "name": "Rinko Park parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-30"
@@ -337,6 +347,11 @@
     {
         "name": "Stavanger parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-08-30"
+    },
+    {
+        "name": "Stebonheath parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-08-30"
     },
     {
