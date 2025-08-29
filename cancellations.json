@@ -150,6 +150,11 @@
         "date": "2025-08-31"
     },
     {
+        "name": "Hoblers Bridge Reserve parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-30"
+    },
+    {
         "name": "Holkham parkrun",
         "reason": "North Norfolk Food & Drink Festival",
         "date": "2025-08-30"
@@ -158,6 +163,16 @@
         "name": "Holyrood parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-08-30"
+    },
+    {
+        "name": "Hout Bay parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-30"
+    },
+    {
+        "name": "Hutton Recreation Ground junior parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-31"
     },
     {
         "name": "King George V junior parkrun",
@@ -210,6 +225,11 @@
         "date": "2025-08-30"
     },
     {
+        "name": "Mensola parkrun",
+        "reason": "AED unavailable",
+        "date": "2025-08-30"
+    },
+    {
         "name": "Mewsbrook junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-31"
@@ -243,6 +263,11 @@
         "name": "Onderstepoort Campus parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-30"
+    },
+    {
+        "name": "Park View junior parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-31"
     },
     {
         "name": "Pontypridd junior parkrun",
@@ -280,8 +305,18 @@
         "date": "2025-08-30"
     },
     {
+        "name": "Swakopmund parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-08-30"
+    },
+    {
         "name": "The Terrace parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-08-30"
+    },
+    {
+        "name": "Victoria parkrun, Truro",
+        "reason": "Local health restrictions",
         "date": "2025-08-30"
     },
     {
