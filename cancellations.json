@@ -50,8 +50,18 @@
         "date": "2025-08-30"
     },
     {
+        "name": "Brimbank parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-30"
+    },
+    {
         "name": "Bug Hunter Waters parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-08-30"
+    },
+    {
+        "name": "Butter Trail parkrun",
+        "reason": "Local health restrictions",
         "date": "2025-08-30"
     },
     {
@@ -335,6 +345,11 @@
         "date": "2025-08-30"
     },
     {
+        "name": "Swanley parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-08-30"
+    },
+    {
         "name": "The Terrace parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-08-30"
@@ -382,6 +397,11 @@
     {
         "name": "parkrun Nowy Park Solankowy",
         "reason": "Venue unavailable",
+        "date": "2025-08-30"
+    },
+    {
+        "name": "parkrun Poznań",
+        "reason": "Shortage of volunteers",
         "date": "2025-08-30"
     }
 ]
