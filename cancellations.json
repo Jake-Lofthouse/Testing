@@ -325,6 +325,11 @@
         "date": "2025-08-30"
     },
     {
+        "name": "Redcar junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-08-31"
+    },
+    {
         "name": "Rinko Park parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-30"
@@ -397,6 +402,11 @@
     {
         "name": "West End junior parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-08-31"
+    },
+    {
+        "name": "Weston-super-Mare junior parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-08-31"
     },
     {
