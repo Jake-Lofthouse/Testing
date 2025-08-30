@@ -25,6 +25,11 @@
         "date": "2025-08-30"
     },
     {
+        "name": "Appleton Thorn parkrun",
+        "reason": "Permission issue",
+        "date": "2025-08-30"
+    },
+    {
         "name": "Belcamp junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-08-31"
@@ -376,6 +381,11 @@
     },
     {
         "name": "The Terrace parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-08-30"
+    },
+    {
+        "name": "Timboon parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-08-30"
     },
