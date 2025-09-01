@@ -370,6 +370,11 @@
         "date": "2025-09-07"
     },
     {
+        "name": "Springhill parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-09-06"
+    },
+    {
         "name": "St Albans parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-06"
@@ -413,11 +418,6 @@
         "name": "Witton Park junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-07"
-    },
-    {
-        "name": "Woking parkrun",
-        "reason": "Course unsafe or blocked",
-        "date": "2025-09-06"
     },
     {
         "name": "parkrun Chełm",
