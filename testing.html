@@ -349,106 +349,6 @@
             font-size: 16px;
         }
 
-        /* Distance slider specific styles */
-        .distance-filter {
-            padding: 20px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            cursor: default;
-        }
-
-        .distance-filter:hover {
-            background: transparent;
-        }
-
-        .distance-content {
-            width: 100%;
-        }
-
-        .distance-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 16px;
-        }
-
-        .distance-title {
-            font-weight: 600;
-            color: var(--text-primary);
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .distance-value {
-            background: #34c759;
-            color: white;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 14px;
-            font-weight: 600;
-            min-width: 60px;
-            text-align: center;
-        }
-
-        .distance-slider {
-            width: 100%;
-            height: 6px;
-            border-radius: 3px;
-            background: #e5e5e7;
-            outline: none;
-            appearance: none;
-            -webkit-appearance: none;
-            cursor: pointer;
-        }
-
-        .distance-slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            height: 24px;
-            width: 24px;
-            border-radius: 50%;
-            background: #34c759;
-            cursor: pointer;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-            transition: all 0.2s ease;
-        }
-
-        .distance-slider::-webkit-slider-thumb:hover {
-            transform: scale(1.1);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        }
-
-        .distance-slider::-moz-range-thumb {
-            height: 24px;
-            width: 24px;
-            border-radius: 50%;
-            background: #34c759;
-            cursor: pointer;
-            border: none;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-            transition: all 0.2s ease;
-        }
-
-        .distance-slider::-moz-range-thumb:hover {
-            transform: scale(1.1);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        }
-
-        .distance-slider::-moz-range-track {
-            height: 6px;
-            border-radius: 3px;
-            background: #e5e5e7;
-            border: none;
-        }
-
-        .distance-info {
-            font-size: 13px;
-            color: var(--text-secondary);
-            margin-top: 8px;
-            text-align: center;
-        }
-
         /* Search suggestions dropdown - match filter dropdown transparency */
         .search-suggestions {
             position: absolute;
@@ -664,6 +564,22 @@
             font-size: 18px;
             color: var(--text-primary);
         }
+
+        .custom-labeled-icon {
+    text-align: center;
+}
+
+.marker-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: black;
+    background: rgba(255,255,255,0.8);
+    padding: 2px 4px;
+    border-radius: 4px;
+    margin-bottom: 2px;
+    white-space: nowrap;
+}
+
 
         /* Solid buttons with better parkrun colors */
         .glass-button {
@@ -1046,19 +962,6 @@
                         <i class="fas fa-filter"></i>
                     </button>
                     <div class="filter-dropdown" id="filterDropdown">
-                        <div class="distance-filter">
-                            <div class="distance-content">
-                                <div class="distance-header">
-                                    <div class="distance-title">
-                                        <i class="fas fa-search-location"></i>
-                                        Search Distance
-                                    </div>
-                                    <div class="distance-value" id="distanceValue">9km</div>
-                                </div>
-                                <input type="range" class="distance-slider" id="distanceSlider" min="1000" max="20000" step="1000" value="9000">
-                                <div class="distance-info">1km to 20km max (to protect API credits)</div>
-                            </div>
-                        </div>
                         <div class="filter-item active" onclick="toggleFilterType('hotels')" data-type="hotels">
                             <div class="filter-toggle"></div>
                             <div class="filter-icon" style="background-image: url('/Icons/Hotel.png');"></div>
@@ -1113,28 +1016,6 @@
         let placeMarkers = [];
         let lastSelectedParkrun = null;
         let hasUrlParameters = false;
-        let searchDistanceTimeout;
-        let currentPlaceData = []; // Store all fetched places
-        let searchRadius = 9000; // Default 9km search radius
-
-        // Initialize distance slider
-        document.addEventListener('DOMContentLoaded', function() {
-            const distanceSlider = document.getElementById('distanceSlider');
-            const distanceValue = document.getElementById('distanceValue');
-
-            if (distanceSlider && distanceValue) {
-                // Update display when slider changes
-                distanceSlider.addEventListener('input', function() {
-                    const value = parseInt(this.value);
-                    searchRadius = value;
-                    distanceValue.textContent = value >= 1000 ? Math.round(value/1000) + 'km' : value + 'm';
-                    handleDistanceChange();
-                });
-
-                // Set initial value
-                distanceValue.textContent = Math.round(searchRadius/1000) + 'km';
-            }
-        });
 
         // Parse URL filters on page load - ENHANCED to handle ?junior, ?5k, ?all
         function parseUrlFilters() {
@@ -2119,6 +2000,21 @@ function updateHotelSearchButton() {
             })
             .catch(err => console.error('Error fetching cancellation data:', err));
 
+
+        function createLabeledIcon(iconUrl, label) {
+    return L.divIcon({
+        className: "custom-labeled-icon",
+        html: `
+            <div class="marker-label">${label}</div>
+            <img src="${iconUrl}" style="width:38px; height:38px;" />
+        `,
+        iconSize: [38, 48], // allow room for label
+        iconAnchor: [19, 48], // bottom center
+        popupAnchor: [0, -48]
+    });
+}
+
+        
         function createParkrunMarker(feature) {
             const coordinates = feature.geometry.coordinates;
             const eventname = normalizeEventName(feature.properties.eventname);
@@ -2158,7 +2054,11 @@ function updateHotelSearchButton() {
                 </div>
             `;
 
-            var markerIcon = isJunior ? juniorIcon : fiveKIcon;
+            var markerIcon = createLabeledIcon(
+    isJunior ? '/Icons/Junior.png' : '/Icons/5k.png',
+    eventLongName
+);
+
             
             // Check for cancellations
             const cancellationInfo = findCancellationMatch(eventLongName);
@@ -2232,81 +2132,32 @@ function updateHotelSearchButton() {
                 map.removeLayer(markerData.marker);
             });
             placeMarkers = [];
-            currentPlaceData = []; // Clear stored data
 
-            // Fetch places based on active filters using the user-defined search radius
+            // Fetch places based on active filters
             if (activeFilters.includes('cafes')) {
-                fetchTomTomPlaces(lat, lng, 'CAFE_PUB', cafeIcon, 'cafes', 20000); // Always fetch max distance
+                fetchTomTomPlaces(lat, lng, 'CAFE_PUB', cafeIcon, 'cafes');
             }
             if (activeFilters.includes('hotels')) {
-                fetchTomTomPlaces(lat, lng, 'hotel', hotelIcon, 'hotels', 20000); // Always fetch max distance
+                fetchTomTomPlaces(lat, lng, 'hotel', hotelIcon, 'hotels');
             }
             if (activeFilters.includes('camping')) {
-                fetchTomTomPlaces(lat, lng, 'camping ground', campsiteIcon, 'camping', 20000); // Always fetch max distance
+                fetchTomTomPlaces(lat, lng, 'camping ground', campsiteIcon, 'camping');
             }
         }
 
-        function fetchTomTomPlaces(lat, lng, category, icon, filterType, radius = searchRadius * 1000) {
-            const searchUrl = `https://api.tomtom.com/search/2/categorySearch/${category}.json?lat=${lat}&lon=${lng}&radius=${radius}&key=${tomTomApiKey}`;
-            const tomtomSearchUrl = `https://api.tomtom.com/search/2/categorySearch/${category}.json?lat=${lat}&lon=${lng}&radius=${searchRadius * 1000}&key=${tomTomApiKey}`;
+        function fetchTomTomPlaces(lat, lng, category, icon, filterType) {
+            const searchUrl = `https://api.tomtom.com/search/2/categorySearch/${category}.json?lat=${lat}&lon=${lng}&radius=9000&key=${tomTomApiKey}`;
 
-            fetch(tomtomSearchUrl)
+            fetch(searchUrl)
                 .then(response => response.json())
                 .then(data => {
                     if (data.results && data.results.length > 0) {
                         data.results.forEach(place => {
-                            // Store place data with distance calculation
-                            const distance = calculateDistance(lat, lng, place.position.lat, place.position.lon);
-                            const placeData = { ...place, distance, category, icon, filterType };
-                            currentPlaceData.push(placeData);
+                            createPlaceMarker(place, category, icon, filterType);
                         });
-                        // Filter and display places based on current search radius
-                        filterAndDisplayPlaces();
                     }
                 })
                 .catch(error => console.error(`Error fetching ${category} data:`, error));
-        }
-
-        // Calculate distance between two points in meters
-        function calculateDistance(lat1, lng1, lat2, lng2) {
-            const R = 6371000; // Earth's radius in meters
-            const dLat = (lat2 - lat1) * Math.PI / 180;
-            const dLng = (lng2 - lng1) * Math.PI / 180;
-            const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-                      Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
-                      Math.sin(dLng/2) * Math.sin(dLng/2);
-            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-            return R * c;
-        }
-
-        // Filter and display places based on current search radius
-        function filterAndDisplayPlaces() {
-            // Clear existing place markers
-            placeMarkers.forEach(markerData => {
-                map.removeLayer(markerData.marker);
-            });
-            placeMarkers = [];
-
-            // Filter places by distance and active filters
-            const filteredPlaces = currentPlaceData.filter(place => 
-                place.distance <= (searchRadius * 1000) && activeFilters.includes(place.filterType)
-            );
-
-            // Create markers for filtered places
-            filteredPlaces.forEach(place => {
-                createPlaceMarker(place, place.category, place.icon, place.filterType);
-            });
-        }
-
-        // Debounced function to handle slider changes
-        function handleDistanceChange() {
-            clearTimeout(searchDistanceTimeout);
-            searchDistanceTimeout = setTimeout(() => {
-                if (lastSelectedParkrun && currentPlaceData.length > 0) {
-                    // Filter existing data instead of making new API calls
-                    filterAndDisplayPlaces();
-                }
-            }, 150); // 150ms debounce
         }
 
         function createPlaceMarker(place, type, icon, filterType) {
@@ -2394,27 +2245,7 @@ function updateHotelSearchButton() {
         }
 
         // Initialize URL filters and map position
-        parseUrlFilters();
-        
-        // Initialize distance slider
-        const distanceSlider = document.getElementById('distanceSlider');
-        const distanceValue = document.getElementById('distanceValue');
-        
-        if (distanceSlider && distanceValue) {
-            distanceSlider.addEventListener('input', function() {
-                const newRadius = parseInt(this.value);
-                searchRadius = newRadius * 1000; // Convert to meters
-                distanceValue.textContent = newRadius;
-                
-                // If a parkrun is selected, refresh nearby places with new radius
-                if (lastSelectedParkrun) {
-                    findNearbyPlaces(lastSelectedParkrun.lat, lastSelectedParkrun.lng);
-                }
-            });
-            
-            // Set initial value
-            distanceValue.textContent = distanceSlider.value;
-        }
+  parseUrlFilters();
     
     if (hasValidMapCoords) {
         map.setView([mapLat, mapLon], mapZoom);
