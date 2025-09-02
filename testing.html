@@ -2088,7 +2088,10 @@ var markerIcon = createLabeledIcon(
                         </button>
                     </div>
                 `;
-                markerIcon = canceledIcon;
+                    markerIcon = createLabeledIcon(
+        '/Icons/Cancel.png',
+        feature.properties.EventShortName
+    );
             }
 
             var marker = L.marker([coordinates[1], coordinates[0]], { icon: markerIcon })
