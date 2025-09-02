@@ -163,9 +163,9 @@ async function generateHtml(event, relativePath) {
   const coords = event.geometry.coordinates || [];
   const latitude = coords[1] || 0;
   const longitude = coords[0] || 0;
-  const encodedName = encodeURIComponent(`${name} parkrun`);
+  const encodedName = encodeURIComponent(`${EventLongName}`);
   const checkinDate = getNextFridayDateISO();
-  const pageTitle = `Accommodation near ${name} parkrun`;
+  const pageTitle = `Accommodation near ${EventLongName}`;
   const parkrunDomain = getParkrunDomain(latitude, longitude);
 
   let description = event.properties.EventDescription || '';
