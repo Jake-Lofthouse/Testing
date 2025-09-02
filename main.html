@@ -565,6 +565,28 @@
             color: var(--text-primary);
         }
 
+        .custom-labeled-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.marker-label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    color: black;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 2px 6px;
+    border-radius: 6px;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+}
+
+
+
         /* Solid buttons with better parkrun colors */
         .glass-button {
             border: none;
@@ -1984,6 +2006,22 @@ function updateHotelSearchButton() {
             })
             .catch(err => console.error('Error fetching cancellation data:', err));
 
+
+        function createLabeledIcon(iconUrl, label) {
+    return L.divIcon({
+        className: "custom-labeled-icon",
+        html: `
+            <div class="marker-label">${label}</div>
+            <img src="${iconUrl}" style="width:38px; height:38px;" />
+        `,
+        iconSize: [38, 52], // slightly taller to fit text
+        iconAnchor: [19, 52], // bottom center
+        popupAnchor: [0, -52]
+    });
+}
+
+
+        
         function createParkrunMarker(feature) {
             const coordinates = feature.geometry.coordinates;
             const eventname = normalizeEventName(feature.properties.eventname);
@@ -2023,7 +2061,12 @@ function updateHotelSearchButton() {
                 </div>
             `;
 
-            var markerIcon = isJunior ? juniorIcon : fiveKIcon;
+var markerIcon = createLabeledIcon(
+    isJunior ? '/Icons/Junior.png' : '/Icons/5k.png',
+    feature.properties.EventShortName
+);
+
+
             
             // Check for cancellations
             const cancellationInfo = findCancellationMatch(eventLongName);
@@ -2045,7 +2088,10 @@ function updateHotelSearchButton() {
                         </button>
                     </div>
                 `;
-                markerIcon = canceledIcon;
+                    markerIcon = createLabeledIcon(
+        '/Icons/Cancel.png',
+        feature.properties.EventShortName
+    );
             }
 
             var marker = L.marker([coordinates[1], coordinates[0]], { icon: markerIcon })
