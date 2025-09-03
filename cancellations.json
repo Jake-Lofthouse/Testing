@@ -300,6 +300,11 @@
         "date": "2025-09-07"
     },
     {
+        "name": "Nulkaba parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-09-06"
+    },
+    {
         "name": "Onderstepoort Campus parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-06"
@@ -378,6 +383,11 @@
         "name": "Spiceball Country Park junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-07"
+    },
+    {
+        "name": "Springbok parkrun",
+        "reason": "AED unavailable",
+        "date": "2025-09-06"
     },
     {
         "name": "Springhill parkrun",
