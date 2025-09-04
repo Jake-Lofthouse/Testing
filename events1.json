@@ -5039,8 +5039,8 @@
         "geometry": {
           "type": "Point",
           "coordinates": [
-            -1.143086,
-            50.725836
+            -1.285679,
+            50.713378
           ]
         },
         "properties": {
@@ -7999,8 +7999,8 @@
         "geometry": {
           "type": "Point",
           "coordinates": [
-            -1.642492,
-            50.808103
+            -1.642374,
+            50.808363
           ]
         },
         "properties": {
@@ -46114,26 +46114,6 @@
         }
       },
       {
-        "id": 3248,
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            28.306102,
-            -25.827579
-          ]
-        },
-        "properties": {
-          "eventname": "moreletaparkgemeente",
-          "EventLongName": "Moreletapark Gemeente parkrun",
-          "EventShortName": "Moreletapark Gemeente",
-          "LocalisedEventLongName": null,
-          "countrycode": 85,
-          "seriesid": 1,
-          "EventLocation": "Moreletapark Gemeente"
-        }
-      },
-      {
         "id": 3249,
         "type": "Feature",
         "geometry": {
@@ -55091,6 +55071,46 @@
           "countrycode": 32,
           "seriesid": 1,
           "EventLocation": "Schönbusch"
+        }
+      },
+      {
+        "id": 3735,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            174.757418,
+            -36.802002
+          ]
+        },
+        "properties": {
+          "eventname": "tuffcraterreserve",
+          "EventLongName": "Tuff Crater Reserve parkrun",
+          "EventShortName": "Tuff Crater Reserve",
+          "LocalisedEventLongName": null,
+          "countrycode": 65,
+          "seriesid": 1,
+          "EventLocation": "Tuff Crater Reserve"
+        }
+      },
+      {
+        "id": 3737,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -4.209034,
+            55.864906
+          ]
+        },
+        "properties": {
+          "eventname": "alexandrapark-juniors",
+          "EventLongName": "Alexandra Park junior parkrun",
+          "EventShortName": "Alexandra Park juniors",
+          "LocalisedEventLongName": null,
+          "countrycode": 97,
+          "seriesid": 2,
+          "EventLocation": "Alexandra Park juniors"
         }
       }
     ]
