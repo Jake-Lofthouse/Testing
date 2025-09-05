@@ -130,6 +130,11 @@
         "date": "2025-09-07"
     },
     {
+        "name": "Fig Tree parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-09-06"
+    },
+    {
         "name": "Fire Service College parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-06"
@@ -305,6 +310,11 @@
         "date": "2025-09-06"
     },
     {
+        "name": "Nathan Road Sports Ground parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-09-06"
+    },
+    {
         "name": "New Earswick parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-06"
@@ -390,6 +400,11 @@
         "date": "2025-09-07"
     },
     {
+        "name": "Settlers Park parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-09-06"
+    },
+    {
         "name": "Shaw Cherry Hill Farm parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-06"
@@ -473,6 +488,11 @@
         "name": "Witton Park junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-07"
+    },
+    {
+        "name": "Wythenshawe parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-09-06"
     },
     {
         "name": "parkrun Chełm",
