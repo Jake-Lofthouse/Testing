@@ -120,6 +120,11 @@
         "date": "2025-09-06"
     },
     {
+        "name": "Eynesbury Heritage Trail junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-09-07"
+    },
+    {
         "name": "Felixstowe Prom junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-07"
@@ -437,6 +442,11 @@
     {
         "name": "Victoria Dock parkrun",
         "reason": "Course unsafe or blocked",
+        "date": "2025-09-06"
+    },
+    {
+        "name": "Victoria parkrun, Truro",
+        "reason": "Local health restrictions",
         "date": "2025-09-06"
     },
     {
