@@ -50,6 +50,11 @@
         "date": "2025-09-06"
     },
     {
+        "name": "Chalkwell Beach parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-09-06"
+    },
+    {
         "name": "Christchurch Park parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-06"
@@ -517,6 +522,11 @@
     {
         "name": "parkrun Kraków",
         "reason": "Venue unavailable",
+        "date": "2025-09-06"
+    },
+    {
+        "name": "parkrun Leszno",
+        "reason": "Shortage of volunteers",
         "date": "2025-09-06"
     },
     {
