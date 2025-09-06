@@ -20,6 +20,11 @@
         "date": "2025-09-06"
     },
     {
+        "name": "Berrinba parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-09-06"
+    },
+    {
         "name": "Billingham junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-07"
@@ -415,6 +420,11 @@
         "date": "2025-09-07"
     },
     {
+        "name": "Shirahama koen parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-09-06"
+    },
+    {
         "name": "South Manchester parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-06"
@@ -483,6 +493,11 @@
         "name": "Windmill Hill junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-07"
+    },
+    {
+        "name": "Winthrop Trailhead parkrun",
+        "reason": "Air quality",
+        "date": "2025-09-06"
     },
     {
         "name": "Witton Park junior parkrun",
