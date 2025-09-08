@@ -2,7 +2,7 @@ const fs = require('fs');
 const https = require('https');
 const path = require('path');
 
-const EVENTS_URL = 'https://raw.githubusercontent.com/ALD-Models/Testing/refs/heads/main/events1.json';
+const EVENTS_URL = 'https://raw.githubusercontent.com/Jake-Lofthouse/Testing/refs/heads/main/events1.json';
 const OUTPUT_DIR = './explore';
 const MAX_EVENTS = 999999;
 const MAX_FILES_PER_FOLDER = 999;
