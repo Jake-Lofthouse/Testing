@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Accommodation near brockenhurst parkrun</title>
+<title>Accommodation near Brockenhurst parkrun</title>
 <meta name="description" content="Find and book hotels, campsites, and cafes around brockenhurst parkrun." />
 <meta name="keywords" content="parkrun, accommodation, hotels, stay, tourist, brockenhurst" />
 <meta name="author" content="Jake Lofthouse" />
 <meta name="geo.placename" content="Brockenhurst College" />
-<meta name="geo.position" content="50.808103;-1.642492" />
+<meta name="geo.position" content="50.808363;-1.642374" />
 <meta property="og:url" content="https://www.parkrunnertourist.co.uk" />
 <meta property="og:type" content="website" />
 <meta name="robots" content="index, follow" />
@@ -537,7 +537,7 @@
   <div class="parkrun-actions">
     <a href="#" class="action-btn" onclick="openModal('courseModal', 'brockenhurst')">Course Map</a>
     <a href="#" class="action-btn" onclick="openModal('volunteerModal', 'brockenhurst')">Volunteer Roster</a>
-    <a href="https://www.google.com/maps/dir/?api=1&destination=50.808103,-1.642492" target="_blank" class="action-btn">Directions</a>
+    <a href="https://www.google.com/maps/dir/?api=1&destination=50.808363,-1.642374" target="_blank" class="action-btn">Directions</a>
   </div>
   
   
@@ -551,7 +551,7 @@
           <button class="toggle-btn" onclick="switchView('map')" id="btn-map">Map View</button>
         </div>
         <iframe id="stay22Frame" class="accommodation-iframe" scrolling="no"
-          src="https://www.stay22.com/embed/gm?aid=parkrunnertourist&lat=50.808103&lng=-1.642492&checkin=2025-09-05&maincolor=7dd856&venue=brockenhurst%20parkrun&viewmode=listview&listviewexpand=true"
+          src="https://www.stay22.com/embed/gm?aid=parkrunnertourist&lat=50.808363&lng=-1.642374&checkin=2025-09-12&maincolor=7dd856&venue=Brockenhurst%20parkrun&viewmode=listview&listviewexpand=true"
           title="Stay22 accommodation listing">
         </iframe>
       </div>
@@ -560,12 +560,12 @@
     <div class="right-column">
       <div class="iframe-container">
         <h2 class="section-title">parkrun Location</h2>
-        <iframe class="map-iframe" data-src="https://parkrunnertourist.co.uk/main?5k&lat=50.808103&lon=-1.642492&zoom=13" title="parkrun Map"></iframe>
+        <iframe class="map-iframe" data-src="https://parkrunnertourist.co.uk/main?5k&lat=50.808363&lon=-1.642374&zoom=13" title="parkrun Map"></iframe>
       </div>
       
       <div class="iframe-container">
         <h2 class="section-title">Weather This Week</h2>
-        <iframe class="weather-iframe" data-src="https://parkrunnertourist.co.uk/weather?lat=50.808103&lon=-1.642492" title="Weather forecast for brockenhurst"></iframe>
+        <iframe class="weather-iframe" data-src="https://parkrunnertourist.co.uk/weather?lat=50.808363&lon=-1.642374" title="Weather forecast for brockenhurst"></iframe>
       </div>
     </div>
   </div>
@@ -615,7 +615,7 @@
 <script>
   function switchView(mode) {
     const iframe = document.getElementById('stay22Frame');
-    const baseUrl = "https://www.stay22.com/embed/gm?aid=parkrunnertourist&lat=50.808103&lng=-1.642492&checkin=2025-09-05&maincolor=7dd856&venue=brockenhurst%20parkrun";
+    const baseUrl = "https://www.stay22.com/embed/gm?aid=parkrunnertourist&lat=50.808363&lng=-1.642374&checkin=2025-09-12&maincolor=7dd856&venue=Brockenhurst%20parkrun";
     iframe.src = baseUrl + "&viewmode=" + mode + "&listviewexpand=" + (mode === 'listview');
     document.getElementById('btn-listview').classList.toggle('active', mode === 'listview');
     document.getElementById('btn-map').classList.toggle('active', mode === 'map');
