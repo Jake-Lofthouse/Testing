@@ -25,6 +25,11 @@
         "date": "2025-09-13"
     },
     {
+        "name": "Bicester parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-09-13"
+    },
+    {
         "name": "Birchwood Trails parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-13"
@@ -220,6 +225,11 @@
         "date": "2025-09-13"
     },
     {
+        "name": "Nathalia Showgrounds parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-09-13"
+    },
+    {
         "name": "Nepean River parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-13"
@@ -231,6 +241,11 @@
     },
     {
         "name": "Newent parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-09-13"
+    },
+    {
+        "name": "Newtown parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-13"
     },
