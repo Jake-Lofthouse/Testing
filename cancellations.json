@@ -350,6 +350,11 @@
         "date": "2025-09-14"
     },
     {
+        "name": "Shirahama koen parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-09-13"
+    },
+    {
         "name": "Shongweni parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-13"
@@ -368,6 +373,11 @@
         "name": "Spencer Park junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-14"
+    },
+    {
+        "name": "Spring Creek parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-09-13"
     },
     {
         "name": "St Nicholas junior parkrun",
@@ -435,6 +445,11 @@
         "date": "2025-09-13"
     },
     {
+        "name": "Walton Park junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-09-14"
+    },
+    {
         "name": "Wexford Racecourse parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-13"
@@ -468,6 +483,11 @@
         "name": "Wotton Community PARC junior parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-09-14"
+    },
+    {
+        "name": "Yamaguchi Kirarahaku kinen koen parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-09-13"
     },
     {
         "name": "parkrun Szubianki, Zagórów",
