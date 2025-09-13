@@ -10,6 +10,11 @@
         "date": "2025-09-13"
     },
     {
+        "name": "Appleton Thorn parkrun",
+        "reason": "No participants",
+        "date": "2025-09-13"
+    },
+    {
         "name": "Ayr parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-13"
@@ -185,12 +190,22 @@
         "date": "2025-09-13"
     },
     {
+        "name": "Huntingdon parkrun",
+        "reason": "AED unavailable",
+        "date": "2025-09-13"
+    },
+    {
         "name": "Joe Creason parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-13"
     },
     {
         "name": "Judarskogen parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-09-13"
+    },
+    {
+        "name": "Kingston parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-13"
     },
@@ -247,6 +262,11 @@
     {
         "name": "Nathalia Showgrounds parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-09-13"
+    },
+    {
+        "name": "Naturlehrpfad parkrun, Wetzlar",
+        "reason": "Course unsafe or blocked",
         "date": "2025-09-13"
     },
     {
@@ -385,6 +405,11 @@
         "date": "2025-09-14"
     },
     {
+        "name": "Stockley Country parkrun",
+        "reason": "AED unavailable",
+        "date": "2025-09-13"
+    },
+    {
         "name": "Stockton parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-09-13"
@@ -421,6 +446,11 @@
     },
     {
         "name": "The Pastures parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-09-13"
+    },
+    {
+        "name": "The Spinney parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-13"
     },
