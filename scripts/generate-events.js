@@ -919,7 +919,7 @@ function generateSitemap(eventPaths) {
       <loc>${BASE_URL}/${eventPath}</loc>
       <lastmod>${today}</lastmod>
       <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
+      <priority>0.8</priority>
     </url>`
   ).join('\n');
 
