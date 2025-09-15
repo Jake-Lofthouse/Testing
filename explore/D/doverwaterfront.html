@@ -551,7 +551,7 @@
           <button class="toggle-btn" onclick="switchView('map')" id="btn-map">Map View</button>
         </div>
         <iframe id="stay22Frame" class="accommodation-iframe" scrolling="no"
-          src="https://www.stay22.com/embed/gm?aid=parkrunnertourist&lat=51.119994&lng=1.313027&checkin=2025-09-12&maincolor=7dd856&venue=Dover%20Waterfront%20parkrun&viewmode=listview&listviewexpand=true"
+          src="https://www.stay22.com/embed/gm?aid=parkrunnertourist&lat=51.119994&lng=1.313027&checkin=2025-09-19&maincolor=7dd856&venue=Dover%20Waterfront%20parkrun&viewmode=listview&listviewexpand=true"
           title="Stay22 accommodation listing">
         </iframe>
       </div>
@@ -615,7 +615,7 @@
 <script>
   function switchView(mode) {
     const iframe = document.getElementById('stay22Frame');
-    const baseUrl = "https://www.stay22.com/embed/gm?aid=parkrunnertourist&lat=51.119994&lng=1.313027&checkin=2025-09-12&maincolor=7dd856&venue=Dover%20Waterfront%20parkrun";
+    const baseUrl = "https://www.stay22.com/embed/gm?aid=parkrunnertourist&lat=51.119994&lng=1.313027&checkin=2025-09-19&maincolor=7dd856&venue=Dover%20Waterfront%20parkrun";
     iframe.src = baseUrl + "&viewmode=" + mode + "&listviewexpand=" + (mode === 'listview');
     document.getElementById('btn-listview').classList.toggle('active', mode === 'listview');
     document.getElementById('btn-map').classList.toggle('active', mode === 'map');
