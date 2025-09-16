@@ -255,6 +255,11 @@
         "date": "2025-09-20"
     },
     {
+        "name": "Root 44 parkrun",
+        "reason": "Permission issue",
+        "date": "2025-09-20"
+    },
+    {
         "name": "Saltaire junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-21"
@@ -301,6 +306,11 @@
     },
     {
         "name": "Yodogawa kasenkoen Hirakata chiku parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-09-20"
+    },
+    {
+        "name": "parkrun Jabłonna",
         "reason": "Venue unavailable",
         "date": "2025-09-20"
     },
