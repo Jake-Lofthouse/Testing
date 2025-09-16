@@ -135,6 +135,11 @@
         "date": "2025-09-20"
     },
     {
+        "name": "Holyrood parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-09-20"
+    },
+    {
         "name": "Horsforth Hall junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-21"
@@ -307,6 +312,11 @@
     {
         "name": "Yodogawa kasenkoen Hirakata chiku parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-09-20"
+    },
+    {
+        "name": "parkrun Dzierzgoń",
+        "reason": "Shortage of volunteers",
         "date": "2025-09-20"
     },
     {
