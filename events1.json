@@ -7139,8 +7139,8 @@
         "geometry": {
           "type": "Point",
           "coordinates": [
-            151.065488,
-            -33.819767
+            151.051352,
+            -33.821485
           ]
         },
         "properties": {
@@ -7150,7 +7150,7 @@
           "LocalisedEventLongName": null,
           "countrycode": 3,
           "seriesid": 1,
-          "EventLocation": "George Kendell Riverside Park"
+          "EventLocation": "Eric Primrose Reserve"
         }
       },
       {
@@ -29199,8 +29199,8 @@
         "geometry": {
           "type": "Point",
           "coordinates": [
-            -74.575724,
-            40.509927
+            -74.530322,
+            40.558923
           ]
         },
         "properties": {
@@ -35211,26 +35211,6 @@
           "countrycode": 46,
           "seriesid": 1,
           "EventLocation": ""
-        }
-      },
-      {
-        "id": 2498,
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -122.105993,
-            37.451055
-          ]
-        },
-        "properties": {
-          "eventname": "byxbee",
-          "EventLongName": "Byxbee parkrun",
-          "EventShortName": "Byxbee",
-          "LocalisedEventLongName": null,
-          "countrycode": 98,
-          "seriesid": 1,
-          "EventLocation": "Byxbee Park"
         }
       },
       {
@@ -55094,6 +55074,26 @@
         }
       },
       {
+        "id": 3733,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -5.936382,
+            54.552815
+          ]
+        },
+        "properties": {
+          "eventname": "belvoirforest",
+          "EventLongName": "Belvoir Forest parkrun",
+          "EventShortName": "Belvoir Forest",
+          "LocalisedEventLongName": null,
+          "countrycode": 97,
+          "seriesid": 1,
+          "EventLocation": "Belvoir Forest"
+        }
+      },
+      {
         "id": 3734,
         "type": "Feature",
         "geometry": {
@@ -55251,6 +55251,146 @@
           "countrycode": 14,
           "seriesid": 1,
           "EventLocation": "Budapest Park"
+        }
+      },
+      {
+        "id": 3746,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            130.823615,
+            32.786819
+          ]
+        },
+        "properties": {
+          "eventname": "mashikimachisogoundokoen",
+          "EventLongName": "Mashikimachi sogoundo koen parkrun",
+          "EventShortName": "Mashikimachi sogoundo koen",
+          "LocalisedEventLongName": "益城町総合運動公園parkrun",
+          "countrycode": 46,
+          "seriesid": 1,
+          "EventLocation": "Mashikimachi sogoundo koen"
+        }
+      },
+      {
+        "id": 3749,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            135.566676,
+            34.75476
+          ]
+        },
+        "properties": {
+          "eventname": "yodogawakasenkoenyagumochiku",
+          "EventLongName": "Yodogawa kasenkoen Yagumo chiku parkrun",
+          "EventShortName": "Yodogawa kasenkoen Yagumo chiku",
+          "LocalisedEventLongName": "淀川河川公園八雲地区parkrun",
+          "countrycode": 46,
+          "seriesid": 1,
+          "EventLocation": "Yodogawa kasenkoen Yagumo chiku"
+        }
+      },
+      {
+        "id": 3750,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            6.637494,
+            51.362075
+          ]
+        },
+        "properties": {
+          "eventname": "uerdingerstadtpark",
+          "EventLongName": "Uerdinger Stadtpark parkrun",
+          "EventShortName": "Uerdinger Stadtpark",
+          "LocalisedEventLongName": null,
+          "countrycode": 32,
+          "seriesid": 1,
+          "EventLocation": "Uerdinger Stadtpark"
+        }
+      },
+      {
+        "id": 3751,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -1.794469,
+            51.560614
+          ]
+        },
+        "properties": {
+          "eventname": "gwrpark-juniors",
+          "EventLongName": "GWR Park junior parkrun",
+          "EventShortName": "GWR Park juniors",
+          "LocalisedEventLongName": null,
+          "countrycode": 97,
+          "seriesid": 2,
+          "EventLocation": "GWR Park juniors"
+        }
+      },
+      {
+        "id": 3752,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -4.40663,
+            52.889533
+          ]
+        },
+        "properties": {
+          "eventname": "ceirgogledd-juniors",
+          "EventLongName": "Cei’r Gogledd junior parkrun",
+          "EventShortName": "Cei’r Gogledd juniors",
+          "LocalisedEventLongName": null,
+          "countrycode": 97,
+          "seriesid": 2,
+          "EventLocation": "Cei’r Gogledd juniors"
+        }
+      },
+      {
+        "id": 3757,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -122.10633,
+            37.459396
+          ]
+        },
+        "properties": {
+          "eventname": "baylandsnaturepreserve",
+          "EventLongName": "Baylands Nature Preserve parkrun",
+          "EventShortName": "Baylands Nature Preserve",
+          "LocalisedEventLongName": null,
+          "countrycode": 98,
+          "seriesid": 1,
+          "EventLocation": "Baylands Nature Preserve"
+        }
+      },
+      {
+        "id": 3759,
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            30.486299,
+            -25.103554
+          ]
+        },
+        "properties": {
+          "eventname": "gustavklingbielnaturereserve",
+          "EventLongName": "Gustav Klingbiel Nature Reserve parkrun",
+          "EventShortName": "Gustav Klingbiel Nature Reserve",
+          "LocalisedEventLongName": null,
+          "countrycode": 85,
+          "seriesid": 1,
+          "EventLocation": "Gustav Klingbiel Nature Reserve"
         }
       }
     ]
