@@ -125,6 +125,11 @@
         "date": "2025-09-20"
     },
     {
+        "name": "Hanley parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-09-20"
+    },
+    {
         "name": "Hasenheide parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-09-20"
@@ -132,6 +137,11 @@
     {
         "name": "Havelkanal parkrun",
         "reason": "Permission issue",
+        "date": "2025-09-20"
+    },
+    {
+        "name": "Hoblers Bridge Reserve parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-09-20"
     },
     {
@@ -151,6 +161,11 @@
     },
     {
         "name": "Hoërskool Ben Viljoen parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-09-20"
+    },
+    {
+        "name": "Kitanagase Mirai Fureai Sogokoen parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-20"
     },
