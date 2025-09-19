@@ -1,5 +1,10 @@
 [
     {
+        "name": "Albert Park junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-09-21"
+    },
+    {
         "name": "Battersea junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-21"
@@ -175,6 +180,11 @@
         "date": "2025-09-20"
     },
     {
+        "name": "Mallards Pike parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-09-20"
+    },
+    {
         "name": "Mapule Sindane School parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-09-20"
@@ -295,12 +305,22 @@
         "date": "2025-09-21"
     },
     {
+        "name": "St Mary’s Campus junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-09-21"
+    },
+    {
         "name": "St Nicholas junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-21"
     },
     {
         "name": "Tampere parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-09-20"
+    },
+    {
+        "name": "The Grange parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-20"
     },
