@@ -60,6 +60,11 @@
         "date": "2025-09-21"
     },
     {
+        "name": "Castle Playing Fields junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-09-21"
+    },
+    {
         "name": "Chelmsford junior parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-09-21"
@@ -175,6 +180,11 @@
         "date": "2025-09-20"
     },
     {
+        "name": "Lake Pacawa parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-09-20"
+    },
+    {
         "name": "Lukens parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-20"
@@ -258,6 +268,11 @@
         "name": "Pokkinen parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-20"
+    },
+    {
+        "name": "Ramsbottom junior parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-09-21"
     },
     {
         "name": "Redcar junior parkrun",
