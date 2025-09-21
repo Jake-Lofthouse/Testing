@@ -335,6 +335,11 @@
         "date": "2025-09-20"
     },
     {
+        "name": "The Glen parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-09-20"
+    },
+    {
         "name": "The Grange parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-20"
@@ -353,6 +358,11 @@
         "name": "Walvis Bay parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-20"
+    },
+    {
+        "name": "Warrington junior parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-09-21"
     },
     {
         "name": "White Rock parkrun",
