@@ -25,6 +25,11 @@
         "date": "2025-09-27"
     },
     {
+        "name": "Cambourne junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-09-28"
+    },
+    {
         "name": "Canyon Rim Trail parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-27"
@@ -105,8 +110,18 @@
         "date": "2025-09-27"
     },
     {
+        "name": "Hanley parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-09-27"
+    },
+    {
         "name": "Hanworth parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-09-27"
+    },
+    {
+        "name": "Hoedspruit parkrun",
+        "reason": "Venue unavailable",
         "date": "2025-09-27"
     },
     {
