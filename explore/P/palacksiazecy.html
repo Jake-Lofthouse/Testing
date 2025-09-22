@@ -551,7 +551,7 @@
           <button class="toggle-btn" onclick="switchView('map')" id="btn-map">Map View</button>
         </div>
         <iframe id="stay22Frame" class="accommodation-iframe" scrolling="no"
-          src="https://www.stay22.com/embed/gm?aid=parkrunnertourist&lat=51.612815&lng=15.324597&checkin=2025-09-19&maincolor=7dd856&venue=parkrun%20Pa%C5%82ac%20Ksi%C4%85%C5%BC%C4%99cy&viewmode=listview&listviewexpand=true"
+          src="https://www.stay22.com/embed/gm?aid=parkrunnertourist&lat=51.612815&lng=15.324597&checkin=2025-09-26&maincolor=7dd856&venue=parkrun%20Pa%C5%82ac%20Ksi%C4%85%C5%BC%C4%99cy&viewmode=listview&listviewexpand=true"
           title="Stay22 accommodation listing">
         </iframe>
       </div>
@@ -615,7 +615,7 @@
 <script>
   function switchView(mode) {
     const iframe = document.getElementById('stay22Frame');
-    const baseUrl = "https://www.stay22.com/embed/gm?aid=parkrunnertourist&lat=51.612815&lng=15.324597&checkin=2025-09-19&maincolor=7dd856&venue=parkrun%20Pa%C5%82ac%20Ksi%C4%85%C5%BC%C4%99cy";
+    const baseUrl = "https://www.stay22.com/embed/gm?aid=parkrunnertourist&lat=51.612815&lng=15.324597&checkin=2025-09-26&maincolor=7dd856&venue=parkrun%20Pa%C5%82ac%20Ksi%C4%85%C5%BC%C4%99cy";
     iframe.src = baseUrl + "&viewmode=" + mode + "&listviewexpand=" + (mode === 'listview');
     document.getElementById('btn-listview').classList.toggle('active', mode === 'listview');
     document.getElementById('btn-map').classList.toggle('active', mode === 'map');
