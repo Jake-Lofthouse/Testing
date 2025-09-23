@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -31,125 +31,201 @@
   </script>
 
   <style>
-        :root {
-            --primary: #6366f1;
-            --primary-dark: #4f46e5;
-            --background: #0f172a;
-            --text: #f8fafc;
-            --card-bg: rgba(255, 255, 255, 0.03);
-            --gradient: linear-gradient(135deg, #6366f1 0%, #2563eb 100%);
-        }
+    :root {
+      --primary: #6366f1;
+      --primary-dark: #4f46e5;
+      --background: #0f172a;
+      --text: #f8fafc;
+      --card-bg: rgba(255, 255, 255, 0.03);
+      --gradient: linear-gradient(135deg, #6366f1 0%, #2563eb 100%);
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.6;
-            background-color: var(--background);
-            color: var(--text);
-            overflow-x: hidden;
-        }
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: var(--background); }
+    ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 5px; }
 
-        .background-pattern {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                radial-gradient(circle at 25px 25px, rgba(255, 255, 255, 0.2) 2%, transparent 0%),
-                radial-gradient(circle at 75px 75px, rgba(255, 255, 255, 0.2) 2%, transparent 0%);
-            background-size: 100px 100px;
-            pointer-events: none;
-            z-index: -1;
-            opacity: 0.1;
-        }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      background-color: var(--background);
+      color: var(--text);
+      overflow-x: hidden;
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
+    .background-pattern {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-image: 
+        radial-gradient(circle at 25px 25px, rgba(255, 255, 255, 0.2) 2%, transparent 0%),
+        radial-gradient(circle at 75px 75px, rgba(255, 255, 255, 0.2) 2%, transparent 0%);
+      background-size: 100px 100px;
+      pointer-events: none;
+      z-index: -1;
+      opacity: 0.1;
+    }
 
-        .hero {
-            min-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            padding: 4rem 2rem;
-        }
+    .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--gradient);
-            opacity: 0.1;
-            transform: skewY(-6deg);
-            transform-origin: top left;
-        }
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      padding: 4rem 2rem;
+    }
 
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: var(--gradient);
+      opacity: 0.1;
+      transform: skewY(-6deg);
+      transform-origin: top left;
+    }
 
-        .profile-img {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 1.5rem;
-            border: 3px solid var(--primary);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-            transition: transform 0.3s ease;
-        }
+    .hero-content { position: relative; z-index: 1; }
 
-        .profile-img:hover {
-            transform: scale(1.05);
-        }
+    .profile-img {
+      width: 160px; height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1.5rem;
+      border: 3px solid var(--primary);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease;
+    }
+    .profile-img:hover { transform: scale(1.05); }
 
-        h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeIn 1s ease-out;
+    }
 
-        .subtitle {
-            font-size: 1.5rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 1.2rem;
-        }
+    .subtitle {
+      font-size: 1.5rem;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 1.2rem;
+      animation: fadeIn 1s ease-out 0.2s backwards;
+    }
 
-        .highlight {
-            display: inline-block;
-            background: rgba(99, 102, 241, 0.1);
-            padding: 0.25rem 0.75rem;
-            border-radius: 4px;
-            font-weight: 500;
-            color: var(--primary);
-            border: 1px solid rgba(99, 102, 241, 0.2);
-        }
+    .highlight {
+      display: inline-block;
+      background: rgba(99, 102, 241, 0.1);
+      padding: 0.25rem 0.75rem;
+      border-radius: 4px;
+      font-weight: 500;
+      color: var(--primary);
+      border: 1px solid rgba(99, 102, 241, 0.2);
+    }
 
-        /* (rest of your CSS unchanged) */
+    .section { margin-bottom: 5rem; animation: fadeIn 1s ease-out; }
+
+    h2 {
+      color: var(--primary);
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      position: relative;
+    }
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: var(--gradient);
+      border-radius: 2px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 0;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .project-content { padding: 1.5rem; }
+
+    .project-card h3 { color: var(--primary); margin-bottom: 1rem; font-size: 1.5rem; }
+
+    .project-card a {
+      color: var(--primary);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      margin-top: 1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    .project-card a:hover { color: var(--primary-dark); }
+
+    .project-links { display: flex; gap: 1rem; margin-top: 1rem; }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .skill-item {
+      background: var(--card-bg);
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .skill-item:hover { transform: translateY(-3px); }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 1rem; }
+      h1 { font-size: 2.5rem; }
+      .hero { min-height: 60vh; }
+    }
   </style>
 </head>
 <body>
   <div class="background-pattern"></div>
-  
+
   <section class="hero">
     <div class="hero-content">
       <img src="https://avatars.githubusercontent.com/u/79934911?s=400&u=f5220f3c3f426cd755b268f3f1fe240b1b12ae1a&v=4" alt="Jake Lofthouse Profile Picture" class="profile-img">
@@ -169,7 +245,64 @@
       </p>
     </section>
 
-    <!-- (your project and skills sections unchanged) -->
+    <section class="section">
+  <h2>Featured Projects</h2>
+  <div class="project-grid">
+    <div class="project-card">
+      <img src="https://raw.githubusercontent.com/ALD-Models/Testing/refs/heads/main/Images/Feature.jpg" alt="parkrunner tourist App" class="project-image">
+      <div class="project-content">
+        <h3>parkrunner tourist</h3>
+        <p>An innovative app helping parkrun enthusiasts find accommodation near parkrun events, making tourism easier for the parkrun community.</p>
+        <div class="project-links">
+          <a href="https://parkrunnertourist.co.uk" target="_blank">Visit Website →</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="project-card">
+      <img src="https://raw.githubusercontent.com/ALD-Models/Website/refs/heads/main/TaggyFeature.png" alt="Taggy App" class="project-image">
+      <div class="project-content">
+        <h3>Taggy</h3>
+        <p>Create dynamic NFC Tags and QR Codes that adapt to your business needs, and track business progress.</p>
+        <div class="project-links">
+          <a href="https://taggy.digital/" target="_blank">Visit Website →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-content">
+        <h3>parkrun Token Generator</h3>
+        <p>Quickly create and print replacement or missing finish tokens with ease.</p>
+        <a href="https://Jake-lofthouse.github.io/parkrun-token-generator/" target="_blank">Visit Website →</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="https://repository-images.githubusercontent.com/807147560/6e3c7cda-74e1-4310-9b37-19f87c01c92e" alt="Prusa ESP32 Cam Integration" class="project-image">
+      <div class="project-content">
+        <h3>Prusa ESP32 Cam Web Upload</h3>
+        <p>Streamline the process of uploading the Prusa CAM firmware to the ESP32-CAM module—now made effortless through a simple website!</p>
+        <a href="https://Jake-lofthouse.github.io/Prusa-ESP32-Cam-Web-Upload/" target="_blank">Visit Website →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="section">
+      <h2>Technical Expertise</h2>
+      <div class="skills-grid">
+        <div class="skill-item">Arduino Development</div>
+        <div class="skill-item">Mobile App Development</div>
+        <div class="skill-item">Hardware Integration</div>
+        <div class="skill-item">ESP32 Programming</div>
+        <div class="skill-item">Web Development</div>
+        <div class="skill-item">API Integration</div>
+        <div class="skill-item">UI/UX Design</div>
+        <div class="skill-item">Version Control</div>
+      </div>
+    </section>
   </div>
 
   <!-- Buy Me a Coffee Widget -->
@@ -190,7 +323,6 @@
     const birthday = new Date("2008-08-12"); // YYYY-MM-DD
     const age = calculateAge(birthday);
 
-    // Update visible spots
     document.getElementById("age").textContent = age;
     document.getElementById("age-about").textContent = age;
 
