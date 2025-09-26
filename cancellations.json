@@ -60,6 +60,11 @@
         "date": "2025-09-27"
     },
     {
+        "name": "Coober Pedy Oval parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-09-27"
+    },
+    {
         "name": "Crawfordsburn Country parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-09-27"
@@ -272,6 +277,11 @@
     {
         "name": "Root 44 parkrun",
         "reason": "Permission issue",
+        "date": "2025-09-27"
+    },
+    {
+        "name": "Ross-on-Wye parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-09-27"
     },
     {
