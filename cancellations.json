@@ -135,6 +135,16 @@
         "date": "2025-09-27"
     },
     {
+        "name": "Harlow parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-09-27"
+    },
+    {
+        "name": "Henley-on-Thames parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-09-27"
+    },
+    {
         "name": "Hoedspruit parkrun",
         "reason": "Venue unavailable",
         "date": "2025-09-27"
@@ -182,6 +192,11 @@
     {
         "name": "Market Rasen Racecourse parkrun",
         "reason": "Horse racing event taking place.",
+        "date": "2025-09-27"
+    },
+    {
+        "name": "Millennium parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-09-27"
     },
     {
@@ -305,6 +320,16 @@
         "date": "2025-09-27"
     },
     {
+        "name": "Terra Nova parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-09-27"
+    },
+    {
+        "name": "The Entrance parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-09-27"
+    },
+    {
         "name": "The Glen parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-09-27"
@@ -350,12 +375,32 @@
         "date": "2025-09-27"
     },
     {
+        "name": "White Rock parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-09-27"
+    },
+    {
         "name": "Whitfords Nodes parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-09-27"
     },
     {
+        "name": "Widnes junior parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-09-28"
+    },
+    {
         "name": "parkrun Gdynia",
+        "reason": "Venue unavailable",
+        "date": "2025-09-27"
+    },
+    {
+        "name": "parkrun Grodzisk Mazowiecki",
+        "reason": "Shortage of volunteers",
+        "date": "2025-09-27"
+    },
+    {
+        "name": "parkrun Szczecinek",
         "reason": "Venue unavailable",
         "date": "2025-09-27"
     }
