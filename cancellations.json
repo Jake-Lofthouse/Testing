@@ -10,6 +10,11 @@
         "date": "2025-09-27"
     },
     {
+        "name": "Appleton Thorn parkrun",
+        "reason": "Local health restrictions",
+        "date": "2025-09-27"
+    },
+    {
         "name": "Bangor parkrun, Northern Ireland",
         "reason": "Venue unavailable",
         "date": "2025-09-27"
@@ -118,6 +123,11 @@
         "name": "Eynesbury Heritage Trail junior parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-09-28"
+    },
+    {
+        "name": "Favorita parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-09-27"
     },
     {
         "name": "Forest Rec junior parkrun",
@@ -421,6 +431,11 @@
     },
     {
         "name": "parkrun Grodzisk Mazowiecki",
+        "reason": "Shortage of volunteers",
+        "date": "2025-09-27"
+    },
+    {
+        "name": "parkrun Lasek Miejski",
         "reason": "Shortage of volunteers",
         "date": "2025-09-27"
     },
