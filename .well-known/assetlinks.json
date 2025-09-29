@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "appinventor.ai_jlofty8.parkrunner_tourist",
+      "sha256_cert_fingerprints": [
+        "D5:5A:7E:06:EE:E0:31:A7:E4:3C:94:58:F6:B9:F6:DD:05:BC:3E:3B:1A:07:68:E9:7C:10:CB:B5:D6:83:30:79"
+      ]
+    }
+  }
+]
