@@ -30,6 +30,11 @@
         "date": "2025-10-05"
     },
     {
+        "name": "Castleblayney parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-10-04"
+    },
+    {
         "name": "Chaffey Park parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-10-04"
@@ -87,6 +92,11 @@
     {
         "name": "Futakotamagawa parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-10-04"
+    },
+    {
+        "name": "Harrismith parkrun",
+        "reason": "Event Closed",
         "date": "2025-10-04"
     },
     {
@@ -192,6 +202,11 @@
     {
         "name": "Root 44 parkrun",
         "reason": "Permission issue",
+        "date": "2025-10-04"
+    },
+    {
+        "name": "Settlers Park parkrun",
+        "reason": "Shortage of volunteers",
         "date": "2025-10-04"
     },
     {
