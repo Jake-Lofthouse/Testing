@@ -14,7 +14,7 @@
       height: 100%;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       overflow: hidden;
-      background: #f0f0f0f0;
+      background: #f0f0f0;
       color: #333;
     }
     .container {
@@ -45,7 +45,11 @@
       opacity: 1;
     }
     .slide img {
-      max-width: 80%;
+      max-width: 90%;
+      max-height: 60vh;   /* prevents images from being too tall */
+      height: auto;
+      width: auto;
+      object-fit: contain; /* keeps aspect ratio */
       border-radius: 16px;
       margin-bottom: 20px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.3);
@@ -129,7 +133,7 @@
       <p>Tap the advanced hotel button to open your browser and view more in-depth hotel prices, book directly, and support the app.</p>
     </div>
     <div class="slide">
-      <img src="/Images/Instruct/S3.png" />
+      <img src="/Images/Instruct/S3.png" alt="Step 3" />
       <h2>Step 3: Choose Your Map Pins</h2>
       <p>Select what events you want to show on the map to personalise your experience.</p>
       <div class="choice-btns">
@@ -203,3 +207,4 @@
   </script>
 </body>
 </html>
+
