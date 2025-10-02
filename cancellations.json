@@ -150,6 +150,11 @@
         "date": "2025-10-03"
     },
     {
+        "name": "New Earswick parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-10-04"
+    },
+    {
         "name": "Offenthal parkrun",
         "reason": "Venue unavailable",
         "date": "2025-10-04"
@@ -202,6 +207,11 @@
     {
         "name": "Root 44 parkrun",
         "reason": "Permission issue",
+        "date": "2025-10-04"
+    },
+    {
+        "name": "Ross-on-Wye parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-10-04"
     },
     {
