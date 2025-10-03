@@ -5,6 +5,11 @@
         "date": "2025-10-04"
     },
     {
+        "name": "Auburn Botanic Gardens parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-10-04"
+    },
+    {
         "name": "Birchwood Trails parkrun",
         "reason": "Venue unavailable",
         "date": "2025-10-04"
@@ -100,6 +105,11 @@
         "date": "2025-10-04"
     },
     {
+        "name": "Harlow parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-10-04"
+    },
+    {
         "name": "Harrismith parkrun",
         "reason": "Event Closed",
         "date": "2025-10-04"
@@ -137,6 +147,11 @@
     {
         "name": "Millennium parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-10-04"
+    },
+    {
+        "name": "Morrinsville Recreation Ground parkrun",
+        "reason": "Venue unavailable",
         "date": "2025-10-04"
     },
     {
