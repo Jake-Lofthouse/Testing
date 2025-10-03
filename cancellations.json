@@ -95,6 +95,11 @@
         "date": "2025-10-04"
     },
     {
+        "name": "Great Yarmouth North Beach parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-10-04"
+    },
+    {
         "name": "Harrismith parkrun",
         "reason": "Event Closed",
         "date": "2025-10-04"
@@ -107,6 +112,11 @@
     {
         "name": "Hoërskool Ben Viljoen parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-10-04"
+    },
+    {
+        "name": "Innesfree Park parkrun",
+        "reason": "Venue unavailable",
         "date": "2025-10-04"
     },
     {
@@ -205,6 +215,11 @@
         "date": "2025-10-04"
     },
     {
+        "name": "Roosevelt Island DC parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-10-04"
+    },
+    {
         "name": "Root 44 parkrun",
         "reason": "Permission issue",
         "date": "2025-10-04"
@@ -237,6 +252,16 @@
     {
         "name": "Tsujido kaihin koen parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-10-04"
+    },
+    {
+        "name": "Vaal Marina parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-10-04"
+    },
+    {
+        "name": "Victoria parkrun, Truro",
+        "reason": "Course unsafe or blocked",
         "date": "2025-10-04"
     },
     {
