@@ -202,194 +202,194 @@
         </div>
     </div>
 
-    <script>
-        const apiKey = "363c7db4a209fe68a8f4cf01c380c328";
+<script>
 
-        // Disable right-click, text selection, and touch-hold actions
-        document.addEventListener('contextmenu', e => e.preventDefault());
-        document.addEventListener('selectstart', e => e.preventDefault());
-        document.addEventListener('touchstart', e => e.preventDefault(), { passive: false });
+    // Disable right-click, text selection, and touch-hold actions
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('selectstart', e => e.preventDefault());
+    document.addEventListener('touchstart', e => e.preventDefault(), { passive: false });
 
-        // Get parameters from URL
-        const params = new URLSearchParams(window.location.search);
-        const latitude = params.get('lat') || 51.5074; // Default to London
-        const longitude = params.get('lon') || -0.1278; // Default to London
-        const isJunior = params.has('junior'); // Check if junior parameter exists
+    // Get parameters from URL
+    const params = new URLSearchParams(window.location.search);
+    const latitude = params.get('lat') || 51.5074; // Default to London
+    const longitude = params.get('lon') || -0.1278; // Default to London
+    const isJunior = params.has('junior'); // Check if junior parameter exists
 
-        // Function to get the upcoming Saturday or Sunday at 9 AM (in local time based on coordinates)
-        function getNextWeekendDay() {
-            const today = new Date();
-            const dayOfWeek = today.getDay();
-            
-            // Determine target day (0 = Sunday, 6 = Saturday)
-            const targetDay = isJunior ? 0 : 6; // Sunday for junior, Saturday otherwise
-            
-            // Calculate days until target day
-            let daysUntilTarget = (targetDay - dayOfWeek + 7) % 7;
-            if (daysUntilTarget === 0) {
-                // If today is the target day, get next week's day
-                daysUntilTarget = 7;
-            }
-            
-            // Create date for the target day
-            const targetDate = new Date(today.getTime() + daysUntilTarget * 24 * 60 * 60 * 1000);
-            targetDate.setHours(9, 0, 0, 0); // Set to 9 AM local time
-            
-            return targetDate;
+    // Function to get the upcoming Saturday or Sunday at 9 AM (in local time based on coordinates)
+    function getNextWeekendDay() {
+        const today = new Date();
+        const dayOfWeek = today.getDay();
+        
+        // Determine target day (0 = Sunday, 6 = Saturday)
+        const targetDay = isJunior ? 0 : 6; // Sunday for junior, Saturday otherwise
+        
+        // Calculate days until target day
+        let daysUntilTarget = (targetDay - dayOfWeek + 7) % 7;
+        if (daysUntilTarget === 0) {
+            // If today is the target day, get next week's day
+            daysUntilTarget = 7;
         }
+        
+        // Create date for the target day
+        const targetDate = new Date(today.getTime() + daysUntilTarget * 24 * 60 * 60 * 1000);
+        targetDate.setHours(9, 0, 0, 0); // Set to 9 AM local time
+        
+        return targetDate;
+    }
 
-        // Format date to display with local time based on coordinates
-        function formatDate(date) {
-            // Get container dimensions to adapt content
-            const width = window.innerWidth || document.documentElement.clientWidth;
-            
-            const dayName = isJunior ? "Sun" : "Sat";
-            const day = date.getDate();
-            
-            // Ultra compact format for narrow containers
-            if (width < 60) {
-                return dayName;
-            } else if (width < 100) {
-                // Compact format for small containers
-                return `${dayName} ${day}`;
-            } else {
-                // Standard format
-                return `${dayName} ${day}, 9AM`;
-            }
+    // Format date to display with local time based on coordinates
+    function formatDate(date) {
+        // Get container dimensions to adapt content
+        const width = window.innerWidth || document.documentElement.clientWidth;
+        
+        const dayName = isJunior ? "Sun" : "Sat";
+        const day = date.getDate();
+        
+        // Ultra compact format for narrow containers
+        if (width < 60) {
+            return dayName;
+        } else if (width < 100) {
+            // Compact format for small containers
+            return `${dayName} ${day}`;
+        } else {
+            // Standard format
+            return `${dayName} ${day}, 9AM`;
         }
+    }
 
-        // Get weather icon based on description
-        function getWeatherIcon(description) {
-            if (description.includes("clear")) return "☀️";
-            if (description.includes("cloud")) return "☁️";
-            if (description.includes("rain")) return "🌧️";
-            if (description.includes("snow")) return "❄️";
-            if (description.includes("thunder")) return "⛈️";
-            if (description.includes("mist") || description.includes("fog")) return "🌫️";
-            return "🌤️";
-        }
+    // Get weather icon based on description
+    function getWeatherIcon(description) {
+        if (description.includes("clear")) return "☀️";
+        if (description.includes("cloud")) return "☁️";
+        if (description.includes("rain")) return "🌧️";
+        if (description.includes("snow")) return "❄️";
+        if (description.includes("thunder")) return "⛈️";
+        if (description.includes("mist") || description.includes("fog")) return "🌫️";
+        return "🌤️";
+    }
 
-        // Function to truncate text if needed
-        function truncateText(text, maxLength) {
-            if (text.length <= maxLength) return text;
-            return text.substring(0, maxLength - 1) + '…';
-        }
+    // Function to truncate text if needed
+    function truncateText(text, maxLength) {
+        if (text.length <= maxLength) return text;
+        return text.substring(0, maxLength - 1) + '…';
+    }
 
-        // Function to adapt content based on container size
-        function adaptContentToSize() {
-            const width = window.innerWidth || document.documentElement.clientWidth;
-            const height = window.innerHeight || document.documentElement.clientHeight;
-            
-            // Update date format based on current size
-            const dateContainer = document.getElementById('date-container');
-            if (dateContainer.firstChild) {
-                const targetDate = getNextWeekendDay();
-                dateContainer.innerHTML = `<div class="date-info">${formatDate(targetDate)}</div>`;
-            }
-            
-            // Adjust description text length based on width
-            const descriptionEl = document.querySelector('.description');
-            if (descriptionEl) {
-                const originalText = descriptionEl.getAttribute('data-original-text');
-                if (originalText) {
-                    let maxLength = 20; // Default
-                    
-                    if (width < 80) maxLength = 10;
-                    else if (width < 120) maxLength = 15;
-                    
-                    descriptionEl.textContent = truncateText(originalText, maxLength);
-                }
-            }
-        }
-
-        async function getWeatherForWeekend() {
+    // Function to adapt content based on container size
+    function adaptContentToSize() {
+        const width = window.innerWidth || document.documentElement.clientWidth;
+        const height = window.innerHeight || document.documentElement.clientHeight;
+        
+        // Update date format based on current size
+        const dateContainer = document.getElementById('date-container');
+        if (dateContainer.firstChild) {
             const targetDate = getNextWeekendDay();
-            const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+            dateContainer.innerHTML = `<div class="date-info">${formatDate(targetDate)}</div>`;
+        }
+        
+        // Adjust description text length based on width
+        const descriptionEl = document.querySelector('.description');
+        if (descriptionEl) {
+            const originalText = descriptionEl.getAttribute('data-original-text');
+            if (originalText) {
+                let maxLength = 20; // Default
+                
+                if (width < 80) maxLength = 10;
+                else if (width < 120) maxLength = 15;
+                
+                descriptionEl.textContent = truncateText(originalText, maxLength);
+            }
+        }
+    }
+
+    async function getWeatherForWeekend() {
+        const targetDate = getNextWeekendDay();
+        // Updated: Proxy call (type=weather; key injected server-side)
+        const url = `https://api.parkrunnertourist.co.uk/api/proxy?type=weather&lat=${latitude}&lon=${longitude}`;
+        
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+
+            // Find the closest forecast to 9 AM on the target day
+            // Convert target date to timestamp for comparison
+            const targetTimestamp = Math.floor(targetDate.getTime() / 1000);
             
-            try {
-                const response = await fetch(url);
-                const data = await response.json();
-
-                // Find the closest forecast to 9 AM on the target day
-                // Convert target date to timestamp for comparison
-                const targetTimestamp = Math.floor(targetDate.getTime() / 1000);
-                
-                // Find forecast with closest timestamp
-                let closestForecast = null;
-                let closestDiff = Infinity;
-                
-                for (const forecast of data.list) {
-                    const diff = Math.abs(forecast.dt - targetTimestamp);
-                    if (diff < closestDiff) {
-                        closestDiff = diff;
-                        closestForecast = forecast;
-                    }
+            // Find forecast with closest timestamp
+            let closestForecast = null;
+            let closestDiff = Infinity;
+            
+            for (const forecast of data.list) {
+                const diff = Math.abs(forecast.dt - targetTimestamp);
+                if (diff < closestDiff) {
+                    closestDiff = diff;
+                    closestForecast = forecast;
                 }
+            }
 
-                // Update the HTML with the weather data
-                if (closestForecast) {
-                    const temp = Math.round(closestForecast.main.temp);
-                    const weatherDescription = closestForecast.weather[0].description;
-                    const weatherElement = document.getElementById('weather');
-                    const weatherIcon = getWeatherIcon(weatherDescription);
-                    const formattedDate = formatDate(targetDate);
-                    
-                    // Get container dimensions to adapt content
-                    const width = window.innerWidth || document.documentElement.clientWidth;
-                    
-                    // Always show icon and temperature
-                    let html = `<div class="weather-icon">${weatherIcon}</div>
-                               <div class="temp">${temp}°C</div>`;
-                    
-                    // Add description with data attribute for original text
-                    if (width > 50) {
-                        const maxLength = width < 80 ? 10 : (width < 120 ? 15 : 20);
-                        html += `<div class="description" data-original-text="${weatherDescription}">
-                                ${truncateText(weatherDescription, maxLength)}</div>`;
-                    }
-                    
-                    weatherElement.innerHTML = html;
-                    
-                    // Update date in footer
-                    document.getElementById('date-container').innerHTML = `<div class="date-info">${formattedDate}</div>`;
+            // Update the HTML with the weather data
+            if (closestForecast) {
+                const temp = Math.round(closestForecast.main.temp);
+                const weatherDescription = closestForecast.weather[0].description;
+                const weatherElement = document.getElementById('weather');
+                const weatherIcon = getWeatherIcon(weatherDescription);
+                const formattedDate = formatDate(targetDate);
+                
+                // Get container dimensions to adapt content
+                const width = window.innerWidth || document.documentElement.clientWidth;
+                
+                // Always show icon and temperature
+                let html = `<div class="weather-icon">${weatherIcon}</div>
+                           <div class="temp">${temp}°C</div>`;
+                
+                // Add description with data attribute for original text
+                if (width > 50) {
+                    const maxLength = width < 80 ? 10 : (width < 120 ? 15 : 20);
+                    html += `<div class="description" data-original-text="${weatherDescription}">
+                            ${truncateText(weatherDescription, maxLength)}</div>`;
+                }
+                
+                weatherElement.innerHTML = html;
+                
+                // Update date in footer
+                document.getElementById('date-container').innerHTML = `<div class="date-info">${formattedDate}</div>`;
 
-                    // Change background based on weather condition
-                    const body = document.body;
-                    if (weatherDescription.includes("clear")) {
-                        body.style.backgroundImage = 'url("https://media.istockphoto.com/id/1007768414/photo/blue-sky-with-bright-sun-and-clouds.jpg?s=612x612&w=0&k=20&c=MGd2-v42lNF7Ie6TtsYoKnohdCfOPFSPQt5XOz4uOy4=")';
-                    } else if (weatherDescription.includes("cloud")) {
-                        body.style.backgroundImage = 'url("https://s.err.ee/photo/crop/2024/07/09/2467729h04e7t2.jpg")';
-                    } else if (weatherDescription.includes("rain")) {
-                        body.style.backgroundImage = 'url("https://img.freepik.com/free-photo/weather-effects-composition_23-2149853295.jpg")';
-                    } else if (weatherDescription.includes("snow")) {
-                        body.style.backgroundImage = 'url("https://wjla.com/resources/media/be94f27f-c70a-4e6c-b3cc-9a448da929b8-large16x9_SnowfallsinEllicottCityVeronicaJohnson.JPG?1637506983305")';
-                    } else {
-                        body.style.backgroundColor = '#3b5998';
-                    }
+                // Change background based on weather condition
+                const body = document.body;
+                if (weatherDescription.includes("clear")) {
+                    body.style.backgroundImage = 'url("https://media.istockphoto.com/id/1007768414/photo/blue-sky-with-bright-sun-and-clouds.jpg?s=612x612&w=0&k=20&c=MGd2-v42lNF7Ie6TtsYoKnohdCfOPFSPQt5XOz4uOy4=")';
+                } else if (weatherDescription.includes("cloud")) {
+                    body.style.backgroundImage = 'url("https://s.err.ee/photo/crop/2024/07/09/2467729h04e7t2.jpg")';
+                } else if (weatherDescription.includes("rain")) {
+                    body.style.backgroundImage = 'url("https://img.freepik.com/free-photo/weather-effects-composition_23-2149853295.jpg")';
+                } else if (weatherDescription.includes("snow")) {
+                    body.style.backgroundImage = 'url("https://wjla.com/resources/media/be94f27f-c70a-4e6c-b3cc-9a448da929b8-large16x9_SnowfallsinEllicottCityVeronicaJohnson.JPG?1637506983305")';
                 } else {
-                    document.getElementById('weather').innerHTML = `
-                        <div class="weather-icon">📅</div>
-                        <div class="temp">--°C</div>
-                    `;
-                    document.getElementById('date-container').innerHTML = `<div class="date-info">${formatDate(targetDate)}</div>`;
+                    body.style.backgroundColor = '#3b5998';
                 }
-            } catch (error) {
+            } else {
                 document.getElementById('weather').innerHTML = `
-                    <div class="weather-icon">⚠️</div>
+                    <div class="weather-icon">📅</div>
                     <div class="temp">--°C</div>
                 `;
-                document.getElementById('date-container').innerHTML = '';
+                document.getElementById('date-container').innerHTML = `<div class="date-info">${formatDate(targetDate)}</div>`;
             }
+        } catch (error) {
+            document.getElementById('weather').innerHTML = `
+                <div class="weather-icon">⚠️</div>
+                <div class="temp">--°C</div>
+            `;
+            document.getElementById('date-container').innerHTML = '';
         }
+    }
 
-        // Call the function when the page loads
-        getWeatherForWeekend();
-        
-        // Update content on resize to adapt to container changes
-        window.addEventListener('resize', function() {
-            adaptContentToSize();
-        });
-    </script>
+    // Call the function when the page loads
+    getWeatherForWeekend();
+    
+    // Update content on resize to adapt to container changes
+    window.addEventListener('resize', function() {
+        adaptContentToSize();
+    });
+</script>
 
 </body>
 </html>
