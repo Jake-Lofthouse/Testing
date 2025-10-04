@@ -20,8 +20,18 @@
         "date": "2025-10-04"
     },
     {
+        "name": "Ballinamore Greenway parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-10-04"
+    },
+    {
         "name": "Beacon parkrun",
         "reason": "Shortage of volunteers",
+        "date": "2025-10-04"
+    },
+    {
+        "name": "Bedworth parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-10-04"
     },
     {
@@ -90,6 +100,11 @@
         "date": "2025-10-04"
     },
     {
+        "name": "Cockermouth Greenway parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-10-04"
+    },
+    {
         "name": "Con Smith parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-10-04"
@@ -101,6 +116,11 @@
     },
     {
         "name": "Crinan Canal parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-10-04"
+    },
+    {
+        "name": "Cycle Route 43 parkrun, Ystalyfera",
         "reason": "Course unsafe or blocked",
         "date": "2025-10-04"
     },
@@ -145,6 +165,16 @@
         "date": "2025-10-04"
     },
     {
+        "name": "Flatts Lane parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-10-04"
+    },
+    {
+        "name": "Fletcher Moss parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-10-04"
+    },
+    {
         "name": "Ford parkrun",
         "reason": "Venue unavailable",
         "date": "2025-10-04"
@@ -155,8 +185,18 @@
         "date": "2025-10-05"
     },
     {
+        "name": "Forfar Loch parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-10-04"
+    },
+    {
         "name": "Futakotamagawa parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-10-04"
+    },
+    {
+        "name": "Ganavan Sands parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-10-04"
     },
     {
@@ -195,6 +235,11 @@
         "date": "2025-10-04"
     },
     {
+        "name": "Hyde parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-10-04"
+    },
+    {
         "name": "Innesfree Park parkrun",
         "reason": "Venue unavailable",
         "date": "2025-10-04"
@@ -215,7 +260,27 @@
         "date": "2025-10-04"
     },
     {
+        "name": "Lees Road parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-10-04"
+    },
+    {
+        "name": "Limerick parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-10-04"
+    },
+    {
+        "name": "Llanishen Park parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-10-04"
+    },
+    {
         "name": "Longford parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-10-04"
+    },
+    {
+        "name": "Lough Key parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-10-04"
     },
@@ -335,6 +400,11 @@
         "date": "2025-10-05"
     },
     {
+        "name": "Plean parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-10-04"
+    },
+    {
         "name": "Pontypridd parkrun",
         "reason": "Venue unavailable",
         "date": "2025-10-04"
@@ -375,6 +445,11 @@
         "date": "2025-10-04"
     },
     {
+        "name": "Sedgefield parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-10-04"
+    },
+    {
         "name": "Settlers Park parkrun",
         "reason": "Shortage of volunteers",
         "date": "2025-10-04"
@@ -390,14 +465,29 @@
         "date": "2025-10-04"
     },
     {
+        "name": "Stavanger parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-10-04"
+    },
+    {
         "name": "Stormont parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-10-04"
+    },
+    {
+        "name": "Telford parkrun",
+        "reason": "Course unsafe or blocked",
         "date": "2025-10-04"
     },
     {
         "name": "The Waterfront junior parkrun",
         "reason": "Venue unavailable",
         "date": "2025-10-05"
+    },
+    {
+        "name": "Tollcross parkrun, Glasgow",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-10-04"
     },
     {
         "name": "Tsujido kaihin koen parkrun",
@@ -425,6 +515,11 @@
         "date": "2025-10-04"
     },
     {
+        "name": "Whitehaven parkrun",
+        "reason": "Course unsafe or blocked",
+        "date": "2025-10-04"
+    },
+    {
         "name": "Whitfords Nodes parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-10-04"
@@ -432,6 +527,11 @@
     {
         "name": "Wollaton Hall parkrun",
         "reason": "Venue unavailable",
+        "date": "2025-10-04"
+    },
+    {
+        "name": "Y Promenâd parkrun, Aberhonddu",
+        "reason": "Course unsafe or blocked",
         "date": "2025-10-04"
     },
     {
