@@ -2135,43 +2135,7 @@ var markerIcon = createLabeledIcon(
             map.addLayer(markers);
         }
 
-        const tomTomApiKey = 'dAvRoz8Z1SA4K6JM5l6XnJMGPwc7GQmG';
-
-        function findNearbyPlaces(lat, lng) {
-    // Clear existing place markers
-    placeMarkers.forEach(markerData => {
-        map.removeLayer(markerData.marker);
-    });
-    placeMarkers = [];
-
-    // Fetch places based on active filters
-    if (activeFilters.includes('cafes')) {
-        fetchTomTomPlaces(lat, lng, 'CAFE_PUB', cafeIcon, 'cafes');
-    }
-    if (activeFilters.includes('hotels')) {
-        fetchTomTomPlaces(lat, lng, 'HOTEL_MOTEL', hotelIcon, 'hotels');  // Changed from 'hotel'
-    }
-    if (activeFilters.includes('camping')) {
-        fetchTomTomPlaces(lat, lng, 'CAMPING_GROUND', campsiteIcon, 'camping');  // Changed from 'camping ground'
-    }
-}
-
-        ffunction fetchTomTomPlaces(lat, lng, category, icon, filterType) {
-    const searchUrl = `https://api.parkrunnertourist.co.uk/api/proxy?lat=${lat}&lon=${lng}&category=${category}&radius=9000`;  // Proxy call—no key!
-
-    fetch(searchUrl)
-        .then(response => response.json())
-        .then(data => {
-            if (data.results && data.results.length > 0) {
-                data.results.forEach(place => {
-                    createPlaceMarker(place, category, icon, filterType);
-                });
-            }
-        })
-        .catch(error => console.error(`Error fetching ${category} data:`, error));
-}
-
-        function createPlaceMarker(place, type, icon, filterType) {
+         function createPlaceMarker(place, type, icon, filterType) {
             const lat = place.position.lat;
             const lon = place.position.lon;
             const name = place.poi?.name || "No Name Available";
@@ -2225,6 +2189,46 @@ var markerIcon = createLabeledIcon(
                 marker.addTo(map);
             }
         }
+
+        
+function fetchTomTomPlaces(lat, lng, category, icon, filterType) {
+    const searchUrl = `https://api.tomtom.com/search/2/categorySearch/${category}.json?lat=${lat}&lon=${lng}&radius=9000&key=${tomTomApiKey}`;
+
+    fetch(searchUrl)
+        .then(response => response.json())
+        .then(data => {
+            if (data.results && data.results.length > 0) {
+                data.results.forEach(place => {
+                    createPlaceMarker(place, category, icon, filterType);
+                });
+            }
+        })
+        .catch(error => console.error(`Error fetching ${category} data:`, error));
+}
+
+
+        function findNearbyPlaces(lat, lng) {
+    // Clear existing place markers
+    placeMarkers.forEach(markerData => {
+        map.removeLayer(markerData.marker);
+    });
+    placeMarkers = [];
+    const PROXY_URL = 'https://api.parkrunnertourist.co.uk/api/proxy';
+
+    // Fetch places based on active filters
+    if (activeFilters.includes('cafes')) {
+        fetchTomTomPlaces(lat, lng, 'CAFE_PUB', cafeIcon, 'cafes');
+    }
+    if (activeFilters.includes('hotels')) {
+        fetchTomTomPlaces(lat, lng, 'HOTEL_MOTEL', hotelIcon, 'hotels');  // Changed from 'hotel'
+    }
+    if (activeFilters.includes('camping')) {
+        fetchTomTomPlaces(lat, lng, 'CAMPING_GROUND', campsiteIcon, 'camping');  // Changed from 'camping ground'
+    }
+}
+
+
+       
 
  fetch('/events1.json')
         .then(response => response.json())
