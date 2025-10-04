@@ -2192,7 +2192,7 @@ var markerIcon = createLabeledIcon(
 
         
 function fetchTomTomPlaces(lat, lng, category, icon, filterType) {
-    const searchUrl = `https://api.tomtom.com/search/2/categorySearch/${category}.json?lat=${lat}&lon=${lng}&radius=9000&key=${tomTomApiKey}`;
+    const searchUrl = `https://api.parkrunnertourist.co.uk/api/proxy?lat=${lat}&lon=${lng}&category=${category}&radius=9000`;
 
     fetch(searchUrl)
         .then(response => response.json())
