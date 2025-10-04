@@ -205,6 +205,11 @@
         "date": "2025-10-04"
     },
     {
+        "name": "Kralinbergh parkrun",
+        "reason": "Shortage of volunteers",
+        "date": "2025-10-04"
+    },
+    {
         "name": "Laytown Beach parkrun",
         "reason": "Course unsafe or blocked",
         "date": "2025-10-04"
@@ -261,6 +266,11 @@
     },
     {
         "name": "New Earswick parkrun",
+        "reason": "Venue unavailable",
+        "date": "2025-10-04"
+    },
+    {
+        "name": "Noel Booth Community parkrun",
         "reason": "Venue unavailable",
         "date": "2025-10-04"
     },
